@@ -1,0 +1,1114 @@
+{
+	"ID": "20210708002440-o3pj8iv",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210708002440-o3pj8iv",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210708002440-uw0rn9x",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708002440-uw0rn9x"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "简介"
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-vz5si1o",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708002440-vz5si1o"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 Spring Test 和 Spring Boot 特性来测试。将从一个应用程序上下文成功加载的简单测试开始，然后使用 Spring 的 MockMvc继续测试web层。"
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-u2h7j1k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708002440-u2h7j1k"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "项目搭建就不再赘述，web项目即可。"
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-6500w5o",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eG1s",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708002440-6500w5o"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003c?xml version=\"1.0\" encoding=\"UTF-8\"?\u003e\n\u003cproject xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n\txsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\"\u003e\n\t\u003cmodelVersion\u003e4.0.0\u003c/modelVersion\u003e\n\t\u003cparent\u003e\n\t\t\u003cgroupId\u003eorg.springframework.boot\u003c/groupId\u003e\n\t\t\u003cartifactId\u003espring-boot-starter-parent\u003c/artifactId\u003e\n\t\t\u003cversion\u003e2.2.2.RELEASE\u003c/version\u003e\n\t\t\u003crelativePath/\u003e \u003c!-- lookup parent from repository --\u003e\n\t\u003c/parent\u003e\n\t\u003cgroupId\u003ecom.example\u003c/groupId\u003e\n\t\u003cartifactId\u003etesting-web\u003c/artifactId\u003e\n\t\u003cversion\u003e0.0.1-SNAPSHOT\u003c/version\u003e\n\t\u003cname\u003etesting-web\u003c/name\u003e\n\t\u003cdescription\u003eDemo project for Spring Boot\u003c/description\u003e\n\n\t\u003cproperties\u003e\n\t\t\u003cjava.version\u003e1.8\u003c/java.version\u003e\n\t\u003c/properties\u003e\n\n\t\u003cdependencies\u003e\n\t\t\u003cdependency\u003e\n\t\t\t\u003cgroupId\u003eorg.springframework.boot\u003c/groupId\u003e\n\t\t\t\u003cartifactId\u003espring-boot-starter-web\u003c/artifactId\u003e\n\t\t\u003c/dependency\u003e\n\n\t\t\u003cdependency\u003e\n\t\t\t\u003cgroupId\u003eorg.springframework.boot\u003c/groupId\u003e\n\t\t\t\u003cartifactId\u003espring-boot-starter-test\u003c/artifactId\u003e\n\t\t\t\u003cscope\u003etest\u003c/scope\u003e\n\t\t\t\u003cexclusions\u003e\n\t\t\t\t\u003cexclusion\u003e\n\t\t\t\t\t\u003cgroupId\u003eorg.junit.vintage\u003c/groupId\u003e\n\t\t\t\t\t\u003cartifactId\u003ejunit-vintage-engine\u003c/artifactId\u003e\n\t\t\t\t\u003c/exclusion\u003e\n\t\t\t\u003c/exclusions\u003e\n\t\t\u003c/dependency\u003e\n\t\u003c/dependencies\u003e\n\n\t\u003cbuild\u003e\n\t\t\u003cplugins\u003e\n\t\t\t\u003cplugin\u003e\n\t\t\t\t\u003cgroupId\u003eorg.springframework.boot\u003c/groupId\u003e\n\t\t\t\t\u003cartifactId\u003espring-boot-maven-plugin\u003c/artifactId\u003e\n\t\t\t\u003c/plugin\u003e\n\t\t\u003c/plugins\u003e\n\t\u003c/build\u003e\n\n\u003c/project\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-15ny7bw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708002440-15ny7bw"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "被测试Controller"
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-eybnzng",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708002440-eybnzng"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@RestController\npublic class HelloController {\n\n    @GetMapping(\"/hello\")\n    public String hello() {\n        return \"Hello World\";\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-nlzs044",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708002440-nlzs044"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "测试用例"
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-rk2w7pn",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708002440-rk2w7pn"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)\n@Slf4j\npublic class HttpRequestTest {\n\n    @LocalServerPort\n    private int port;\n\n    @Autowired\n    private TestRestTemplate restTemplate;\n\n    @Test\n    public void greetingShouldReturnDefaultMessage() throws Exception {\n        String s = restTemplate.getForObject(\"http://localhost:\" + port + \"/hello\", String.class);\n        assertThat(s).contains(\"Hello World\");\n        log.info(port+\"\");\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-ke73pri",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708002440-ke73pri"
+			},
+			"Children": [
+				{
+					"ID": "20210708002440-df7bcnw",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708002440-df7bcnw"
+					},
+					"Children": [
+						{
+							"ID": "20210708002440-sx3p6iu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708002440-sx3p6iu"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "@SpringBootTest"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "注释告诉Spring Boot"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "查找一个主要的配置类"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（例如，一个带有"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "@SpringBootApplication"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的类），然后使用该类来"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "启动Spring应用程序上下文"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。您可以在IDE或命令行中运行此测试（通过运行"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "./mvnw"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "测试或"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "./gradlew"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "测试）。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708002440-akh97ih",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708002440-akh97ih"
+					},
+					"Children": [
+						{
+							"ID": "20210708002440-vv6gji5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708002440-vv6gji5"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "注意，使用"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "webEnvironment=RANDOM_PORT"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "启动服务器时使用了一个随机端口（这对于"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "避免测试环境中的冲突"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "非常有用），并使用"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "@LocalServerPort"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "注入了该端口。另外，请注意Spring Boot已经自动为您提供了一个"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "TestRestTemplate"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。你所要做的就是通过"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "@Autowired"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "注入它。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-3b3d28x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708002440-3b3d28x"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "另一种有用的方法是根本不启动服务器，只启动完整的Spring应用程序上下文，只测试其下的层。示例Spring在这一层处理传入的HTTP请求并将其传递给控制器，这样，几乎使用了整个堆栈，代码调用的方式与处理实际HTTP请求的方式完全相同，但是不需要启动服务器。为此，使用Spring的MockMvc，并通过在测试用例上使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "@AutoConfigureMockMvc"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "注释请求将其注入。"
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-tluqro1",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708002440-tluqro1"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@SpringBootTest\n@AutoConfigureMockMvc// 注入MockMvc\n@Slf4j\npublic class DemoApplicationTests {\n\n\t@Autowired\n\tprivate MockMvc mockMvc;\n\n\t@Test\n    public void testHello() throws Exception {\n        ResultActions resultActions = mockMvc.perform(get(\"/hello\").contentType(MediaType.APPLICATION_JSON))\n                .andDo(print())\n                .andExpect(status().isOk())\n                .andExpect(content().string(\"Hello World\"));\n        String contentAsString = resultActions.andReturn().getResponse().getContentAsString();\n        log.info(contentAsString);\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-sys6bvk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708002440-sys6bvk"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们还可以使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "@WebMvcTest"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "将测试范围缩小到web层"
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-uunogfc",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708002440-uunogfc"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@WebMvcTest\n@Slf4j\npublic class HelloControllerTest {\n\n    @Autowired\n    private MockMvc mockMvc;\n\n    @Test\n    public void testHello() throws Exception {\n        ResultActions resultActions = mockMvc.perform(get(\"/hello\").contentType(MediaType.APPLICATION_JSON))\n                .andDo(print())\n                .andExpect(status().isOk())\n                .andExpect(content().string(\"Hello World\"));\n        String contentAsString = resultActions.andReturn().getResponse().getContentAsString();\n        log.info(contentAsString);\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-32qgz1t",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708002440-32qgz1t"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "测试断言与前一种情况相同。但是，在这个测试中，Spring Boot只实例化web层，而不是整个上下文。在具有多个控制器的应用程序中，您甚至可以通过使用来请求仅实例化一个控制器。"
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-d9f7bhq",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708002440-d9f7bhq"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@WebMvcTest\n@Slf4j\npublic class HelloControllerTest {\n  \n    private final HelloService service;\n\n\tpublic HelloService(HelloService service) {\n\t\tthis.service = service;\n\t}\n\n    @Autowired\n    private MockMvc mockMvc;\n\n    @Test\n    public void testHello() throws Exception {\n        ResultActions resultActions = mockMvc.perform(get(\"/hello\").contentType(MediaType.APPLICATION_JSON))\n                .andDo(print())\n                .andExpect(status().isOk())\n                .andExpect(content().string(\"Hello World\"));\n        String contentAsString = resultActions.andReturn().getResponse().getContentAsString();\n        log.info(contentAsString);\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-r4ihngn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708002440-r4ihngn"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Spring自动将服务依赖项注入控制器（构造器自动注入，详细查看Spring章节）"
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-y8puyiz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708002440-y8puyiz"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们可以使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "@MockBean"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "HelloService"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "创建和注入一个"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "mock"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "（如果不这样做，应用程序上下文将无法启动）"
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-8w98mkw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708002440-8w98mkw"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@WebMvcTest\n@Slf4j\npublic class HelloControllerTest {\n  \n    @MockBean\n    private HelloService service;\n\n    @Autowired\n    private MockMvc mockMvc;\n\n    @Test\n    public void testHello() throws Exception {\n        ResultActions resultActions = mockMvc.perform(get(\"/hello\").contentType(MediaType.APPLICATION_JSON))\n                .andDo(print())\n                .andExpect(status().isOk())\n                .andExpect(content().string(\"Hello World\"));\n        String contentAsString = resultActions.andReturn().getResponse().getContentAsString();\n        log.info(contentAsString);\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-wxafmvl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708002440-wxafmvl"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "总结"
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-1v8gfzf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708002440-1v8gfzf"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "@SpringBootTest"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-k1m20sl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708002440-k1m20sl"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注释告诉Spring Boot"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "查找一个主要的配置类"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "（例如，一个带有"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "@SpringBootApplication"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的类），然后使用该类来"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "启动Spring应用程序上下文"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-is6jfh4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708002440-is6jfh4"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "@WebMvcTest"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-9xemusa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708002440-9xemusa"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "仅用于测试控制器层，您需要使用模拟对象提供所需的剩余依赖项。"
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-iey0akw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708002440-iey0akw"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "@DataJpaTest"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-0pg0fx6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708002440-0pg0fx6"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "for testing the repository layer"
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-po4x3qh",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708002440-po4x3qh"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "@RestClientTests"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-qn9774i",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708002440-qn9774i"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "for testing REST clients"
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-1oxi22u",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708002440-1oxi22u"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "@JsonTest"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708002440-xu704f5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708002440-xu704f5"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "for testing the JSON marshalling and unmarshalling"
+				}
+			]
+		}
+	]
+}
