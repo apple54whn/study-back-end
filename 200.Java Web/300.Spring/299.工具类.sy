@@ -1,0 +1,118 @@
+{
+	"ID": "20210707233138-ql211my",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210707233138-ql211my",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210707233138-thg9zba",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233138-thg9zba"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "StopWatch"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-3id5ibd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233138-3id5ibd"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Spring 提供的计时工具类，线程不安全，仅用作开发阶段测试。使用如下"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-3aht7s4",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233138-3aht7s4"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "StopWatch stopWatch = new StopWatch(\"计时1\");\n\nstopWatch.start(\"任务1\");\nStringJoiner sj = new StringJoiner(\":\", \"[\", \"]\");\nsj.add(\"George\").add(\"Sally\").add(\"Fred\");\nString desiredString = sj.toString();\nSystem.out.println(desiredString);\nstopWatch.stop();\n\nstopWatch.start(\"任务2\");\nList\u003cInteger\u003e numbers = Arrays.asList(1, 2, 3, 4);\nString commaSeparatedNumbers = numbers.stream()\n    .map(i -\u003e i.toString())\n    .collect(Collectors.joining(\", \"));\nSystem.out.println(commaSeparatedNumbers);\nstopWatch.stop();\n\nSystem.out.println(stopWatch.prettyPrint());// 美化后输出\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-ildv34p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233138-ildv34p"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "输出如下"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-t5s5f4f",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233138-t5s5f4f"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "StopWatch '计时1': running time = 627100 ns\n---------------------------------------------\nns         %     Task name\n---------------------------------------------\n000140900  022%  任务1\n000486200  078%  任务2\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		}
+	]
+}

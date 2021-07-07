@@ -1,0 +1,6404 @@
+{
+	"ID": "20210707224540-3aouv33",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210707224540-3aouv33",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210707224540-mw2r3qk",
+			"Type": "NodeThematicBreak",
+			"Properties": {
+				"id": "20210707224540-mw2r3qk"
+			}
+		},
+		{
+			"ID": "20210707224540-yr4x2su",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-yr4x2su"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "title: Monitor \u0026 synchronized 原理"
+				},
+				{
+					"Type": "NodeSoftBreak",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "date: 2021-02-19 23:20:57"
+				},
+				{
+					"Type": "NodeSoftBreak",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "permalink: /pages/55e20e/"
+				},
+				{
+					"Type": "NodeSoftBreak",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "categories:"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-u3hsvic",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"MarkerOffset": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707224540-u3hsvic"
+			},
+			"Children": [
+				{
+					"ID": "20210707224540-nbjpzwi",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"MarkerOffset": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-nbjpzwi"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-w1zxr2b",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-w1zxr2b"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "CoreJava"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-umunjsu",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"MarkerOffset": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-umunjsu"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-orstjuo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-orstjuo"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "多线程"
+								},
+								{
+									"Type": "NodeSoftBreak",
+									"Data": "\n"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "tags:"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-7hyz1ta",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"MarkerOffset": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-7hyz1ta"
+					}
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-rxwmb0y",
+			"Type": "NodeThematicBreak",
+			"Properties": {
+				"id": "20210707224540-rxwmb0y"
+			}
+		},
+		{
+			"ID": "20210707224540-6u801pi",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20210707224540-6u801pi"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "# "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Monitor \u0026 synchronized 原理"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-pxcg2ft",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707224540-pxcg2ft"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Monitor—管程/监视器 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-i7wpq6t",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707224540-i7wpq6t"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Java 对象头形式 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-y0fm4af",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-y0fm4af"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "::: tip 参考资料"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-flygcp3",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707224540-flygcp3"
+			},
+			"Children": [
+				{
+					"ID": "20210707224540-8ywcgxz",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-8ywcgxz"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-g1b9x7p",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-g1b9x7p"
+							},
+							"Children": [
+								{
+									"Type": "NodeLink",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket",
+											"Data": "["
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "简书"
+										},
+										{
+											"Type": "NodeCloseBracket",
+											"Data": "]"
+										},
+										{
+											"Type": "NodeOpenParen",
+											"Data": "("
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://www.jianshu.com/p/3d38cba67f8b"
+										},
+										{
+											"Type": "NodeCloseParen",
+											"Data": ")"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-q27xx2a",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-q27xx2a"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-1bsg17j",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-1bsg17j"
+							},
+							"Children": [
+								{
+									"Type": "NodeLink",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket",
+											"Data": "["
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "markOop.hpp"
+										},
+										{
+											"Type": "NodeCloseBracket",
+											"Data": "]"
+										},
+										{
+											"Type": "NodeOpenParen",
+											"Data": "("
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://link.jianshu.com/?t=https%3A%2F%2Fgithub.com%2Fdmlloyd%2Fopenjdk%2Fblob%2Fjdk%2Fjdk%2Fsrc%2Fhotspot%2Fshare%2Foops%2FmarkOop.hpp"
+										},
+										{
+											"Type": "NodeCloseParen",
+											"Data": ")"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-eglgeto",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-eglgeto"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-dlz3sug",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-dlz3sug"
+							},
+							"Children": [
+								{
+									"Type": "NodeLink",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket",
+											"Data": "["
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "CompressedOops"
+										},
+										{
+											"Type": "NodeCloseBracket",
+											"Data": "]"
+										},
+										{
+											"Type": "NodeOpenParen",
+											"Data": "("
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://link.jianshu.com/?t=https%3A%2F%2Fwiki.openjdk.java.net%2Fdisplay%2FHotSpot%2FCompressedOops"
+										},
+										{
+											"Type": "NodeCloseParen",
+											"Data": ")"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-cglkyzt",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-cglkyzt"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-clvrauo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-clvrauo"
+							},
+							"Children": [
+								{
+									"Type": "NodeLink",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket",
+											"Data": "["
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "JVM 优化之压缩普通对象指针"
+										},
+										{
+											"Type": "NodeCloseBracket",
+											"Data": "]"
+										},
+										{
+											"Type": "NodeOpenParen",
+											"Data": "("
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://link.jianshu.com/?t=http%3A%2F%2Fwww.iteye.com%2Ftopic%2F470404"
+										},
+										{
+											"Type": "NodeCloseParen",
+											"Data": ")"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-xb15jvu",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-xb15jvu"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-irvpmsz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-irvpmsz"
+							},
+							"Children": [
+								{
+									"Type": "NodeLink",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket",
+											"Data": "["
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "What is in java object header"
+										},
+										{
+											"Type": "NodeCloseBracket",
+											"Data": "]"
+										},
+										{
+											"Type": "NodeOpenParen",
+											"Data": "("
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://link.jianshu.com/?t=https%3A%2F%2Fstackoverflow.com%2Fquestions%2F26357186%2Fwhat-is-in-java-object-header"
+										},
+										{
+											"Type": "NodeCloseParen",
+											"Data": ")"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-0r4kgvh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-0r4kgvh"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": ":::"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-700s00g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-700s00g"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "由于 Java 面向对象的思想，在 JVM 中需要大量存储对象，存储时为了实现一些额外的功能，需要在对象中添加一些标记字段用于增强对象功能，这些标记字段组成了对象头。"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-um6qnhz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-um6qnhz"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "JVM 中对象头的方式有以下两种，以 32 位虚拟机为例"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-rs4u9yt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-rs4u9yt"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "普通对象（包括 2 个部分）："
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-bi3w6gf",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-bi3w6gf"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "|--------------------------------------------------------------|\n|                     Object Header (64 bits)                  |\n|------------------------------------|-------------------------|\n|        Mark Word (32 bits)         |    Klass Word (32 bits) |\n|------------------------------------|-------------------------|\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-oirrqoi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-oirrqoi"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "由此可得出，int 占用 4 字节，Integer 占用 4+8 = 12 字节"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-r7bsjim",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-r7bsjim"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "数组对象（包括 3 个部分）"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-wslg5ka",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-wslg5ka"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "|---------------------------------------------------------------------------------|\n|                                 Object Header (96 bits)                         |\n|--------------------------------|-----------------------|------------------------|\n|        Mark Word(32bits)       |    Klass Word(32bits) |  array length(32bits)  |\n|--------------------------------|-----------------------|------------------------|\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-4f6nzvj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210707224540-4f6nzvj"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Mark Word 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-7su974c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-7su974c"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这部分主要用来存储对象自身的运行时数据，如 hashcode、gc 分代年龄等。"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "mark word"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的位长度为 JVM 的一个 Word 大小，也就是说 32 位 JVM 的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Mark word"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "为 32 位，64 位 JVM 为 64 位。"
+				},
+				{
+					"Type": "NodeSoftBreak",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "为了让一个字大小存储更多的信息，JVM 将字的最低两个位设置为标记位，不同标记位下的 Mark Word 示意如下："
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-0t4dfah",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-0t4dfah"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "|-------------------------------------------------------|--------------------|\n|                  Mark Word (32 bits)                  |       State        |\n|-------------------------------------------------------|--------------------|\n| identity_hashcode:25 | age:4 | biased_lock:1 | lock:2 |       Normal       |\n|-------------------------------------------------------|--------------------|\n|  thread:23 | epoch:2 | age:4 | biased_lock:1 | lock:2 |       Biased       |\n|-------------------------------------------------------|--------------------|\n|               ptr_to_lock_record:30          | lock:2 | Lightweight Locked |\n|-------------------------------------------------------|--------------------|\n|               ptr_to_heavyweight_monitor:30  | lock:2 | Heavyweight Locked |\n|-------------------------------------------------------|--------------------|\n|                                              | lock:2 |    Marked for GC   |\n|-------------------------------------------------------|--------------------|\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-51iu5z0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-51iu5z0"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "lock"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ":2 位的锁状态标记位，由于希望用尽可能少的二进制位表示尽可能多的信息，所以设置了 lock 标记。该标记的值不同，整个 mark word 表示的含义不同。"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-nvk6ef5",
+			"Type": "NodeTable",
+			"Data": "| biased_lock | lock |   状态   |\n| :---------: | :--: | :------: |\n|      0      |  01  |   无锁   |\n|      1      |  01  |  偏向锁  |\n|      0      |  00  | 轻量级锁 |\n|      0      |  10  | 重量级锁 |\n|      0      |  11  | GC 标记  |",
+			"TableAligns": [
+				2,
+				2,
+				2
+			],
+			"Properties": {
+				"id": "20210707224540-nvk6ef5"
+			},
+			"Children": [
+				{
+					"Type": "NodeTableHead",
+					"Children": [
+						{
+							"Type": "NodeTableRow",
+							"Children": [
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 2,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "biased_lock"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 2,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "lock"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 2,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "状态"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						2,
+						2,
+						2
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "0"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "01"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "无锁"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						2,
+						2,
+						2
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "1"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "01"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "偏向锁"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						2,
+						2,
+						2
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "0"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "00"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "轻量级锁"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						2,
+						2,
+						2
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "0"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "重量级锁"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						2,
+						2,
+						2
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "0"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "11"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "GC 标记"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-1jufz2t",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-1jufz2t"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "biased_lock"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：对象是否启用偏向锁标记，只占 1 个二进制位。为 1 时表示对象启用偏向锁，为 0 时表示对象没有偏向锁。"
+				},
+				{
+					"Type": "NodeSoftBreak",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "age"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：4 位的 Java 对象年龄。在 GC 中，如果对象在 Survivor 区复制一次，年龄增加 1。当对象达到设定的阈值时，将会晋升到老年代。默认情况下，并行 GC 的年龄阈值为 15，并发 GC 的年龄阈值为 6。由于 age 只有 4 位，所以最大值为 15，这就是"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-XX:MaxTenuringThreshold"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "选项最大值为 15 的原因。"
+				},
+				{
+					"Type": "NodeSoftBreak",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "identity_hashcode"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：25 位的对象标识 Hash 码，采用延迟加载技术。调用方法"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "System.identityHashCode()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "计算，并会将结果写到该对象头中。当对象被锁定时，该值会移动到管程 Monitor 中。"
+				},
+				{
+					"Type": "NodeSoftBreak",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "thread"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：持有偏向锁的线程 ID。"
+				},
+				{
+					"Type": "NodeSoftBreak",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "epoch"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：偏向时间戳。"
+				},
+				{
+					"Type": "NodeSoftBreak",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "ptr_to_lock_record"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：指向栈中锁记录的指针。"
+				},
+				{
+					"Type": "NodeSoftBreak",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "ptr_to_heavyweight_monitor"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：指向管程 Monitor 的指针。"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-i08g9mx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-i08g9mx"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "64 位下的标记字与 32 位的相似："
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-x70f9vq",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-x70f9vq"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "|------------------------------------------------------------------------------|--------------------|\n|                                  Mark Word (64 bits)                         |       State        |\n|------------------------------------------------------------------------------|--------------------|\n| unused:25 | identity_hashcode:31 | unused:1 | age:4 | biased_lock:1 | lock:2 |       Normal       |\n|------------------------------------------------------------------------------|--------------------|\n| thread:54 |       epoch:2        | unused:1 | age:4 | biased_lock:1 | lock:2 |       Biased       |\n|------------------------------------------------------------------------------|--------------------|\n|                       ptr_to_lock_record:62                         | lock:2 | Lightweight Locked |\n|------------------------------------------------------------------------------|--------------------|\n|                     ptr_to_heavyweight_monitor:62                   | lock:2 | Heavyweight Locked |\n|------------------------------------------------------------------------------|--------------------|\n|                                                                     | lock:2 |    Marked for GC   |\n|------------------------------------------------------------------------------|--------------------|\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-1zc1yye",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210707224540-1zc1yye"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Klass Word"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-wmcgfhe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-wmcgfhe"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这一部分用于"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "存储对象的类型指针"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，该指针"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "指向它的类元数据"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "JVM 通过这个指针确定对象是哪个类的实例"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。该指针的位长度为 JVM 的一个字大小，即 32 位的 JVM 为 32 位，64 位的 JVM 为 64 位。"
+				},
+				{
+					"Type": "NodeSoftBreak",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "如果应用的对象过多，使用 64 位的指针将浪费大量内存，统计而言，64 位的 JVM 将会比 32 位的 JVM 多耗费 50%的内存。为了节约内存可以使用选项"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "+UseCompressedOops"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "开启指针压缩，其中，oop 即 ordinary object pointer 普通对象指针。开启该选项后，下列指针将压缩至 32 位："
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-kiashv3",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Tight": true,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 4,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210707224540-kiashv3"
+			},
+			"Children": [
+				{
+					"ID": "20210707224540-lm0ugt8",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 4,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210707224540-lm0ugt8"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-ivfeo0r",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-ivfeo0r"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "每个 Class 的属性指针（即静态变量）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-mrspx43",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 4,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210707224540-mrspx43"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-4q1ztou",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-4q1ztou"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "每个对象的属性指针（即对象变量）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-2wx1kxw",
+					"Type": "NodeListItem",
+					"Data": "3",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 3,
+						"Delimiter": 46,
+						"Padding": 4,
+						"Marker": "Mw==",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20210707224540-2wx1kxw"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-egljusp",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-egljusp"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "普通对象数组的每个元素指针"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-tabyi1g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-tabyi1g"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当然，也不是所有的指针都会压缩，一些特殊类型的指针 JVM 不会优化，比如指向 PermGen 的 Class 对象指针(JDK8 中指向元空间的 Class 对象指针)、本地变量、堆栈元素、入参、返回值和 NULL 指针等。"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-v1gx2sw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210707224540-v1gx2sw"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "array length"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-4x5qtx1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-4x5qtx1"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果对象是一个数组，那么对象头还需要有额外的空间用于存储数组的长度，这部分数据的长度也随着 JVM 架构的不同而不同：32 位的 JVM 上，长度为 32 位；64 位 JVM 则为 64 位。64 位 JVM 如果开启"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "+UseCompressedOops"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "选项，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "该区域长度也将由 64 位压缩至 32 位"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-rvhx33q",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707224540-rvhx33q"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Monitor 工作原理 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-8vusd9d",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-8vusd9d"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Monitor 被翻译为"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "监视器"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "或"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "管程"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，OS 中的概念。每个 Java 对象（此时可以称为"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "锁对象"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "）都可以关联一个 Monitor 对象，如果使用 synchronized 给对象上锁（重量级）之后，该对象头的 Mark Word 中就被设置指向 Monitor 对象的指针"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-v0rfajl",
+			"Type": "NodeIFrame",
+			"Data": "\u003ciframe id=\"embed_dom\" name=\"embed_dom\" frameborder=\"0\" style=\"display:block;width:100%; height:645px;\" src=\"https://www.processon.com/embed/602e422c07912934224cfe8d\"\u003e\u003c/iframe\u003e",
+			"Properties": {
+				"id": "20210707224540-v0rfajl"
+			}
+		},
+		{
+			"ID": "20210707224540-c7qu7bn",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707224540-c7qu7bn"
+			},
+			"Children": [
+				{
+					"ID": "20210707224540-1fw2zd6",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-1fw2zd6"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-9dtigq0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-9dtigq0"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "刚开始 Monitor 中 Owner 为 null"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-f55fjas",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-f55fjas"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-zpitp8u",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-zpitp8u"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当 Thread-2 执行 synchronized(obj) 就会将 Monitor 的所有者 Owner 置为 Thread-2，Monitor 中只能有一个 Owner"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-hc3moqc",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-hc3moqc"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-7n2by75",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-7n2by75"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在 Thread-2 上锁的过程中，如果 Thread-3，Thread-4，Thread-5 也来执行 synchronized(obj)，就会进入 EntryList BLOCKED"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-ubktlz6",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-ubktlz6"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-it5lp84",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-it5lp84"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Thread-2 执行完同步代码块的内容，然后唤醒 EntryList 中等待的线程来竞争锁，竞争的时是非公平的"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-tjj1p9d",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-tjj1p9d"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-1o5415v",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-1o5415v"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "图中 WaitSet 中的 Thread-0，Thread-1 是之前获得过锁，但条件不满足进入 WAITING 状态的线程，后面讲 wait-notify 时会分析"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-u5eidsv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-u5eidsv"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "::: tip 注意"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-cyc0g9q",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707224540-cyc0g9q"
+			},
+			"Children": [
+				{
+					"ID": "20210707224540-od22wqr",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-od22wqr"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-5w39byh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-5w39byh"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "synchronized 必须是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "进入同一个对象（同一把锁）的 monitor"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 才有上述的效果。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-jcgjj5x",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-jcgjj5x"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-4gltum0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-4gltum0"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "不加 synchronized 的对象不会关联监视器，不遵从以上规则"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-osi9klh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-osi9klh"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": ":::"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-in7fa34",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707224540-in7fa34"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "synchronized 字节码 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-brbvms1",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-brbvms1"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Test {\n    static final Object lock = new Object();\n    static int counter = 0;\n    public static void main(String[] args) {\n        synchronized (lock) {\n            counter++;\n        }\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-gfw90nb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-gfw90nb"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其对应的字节码如下："
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-2dua7lv",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-2dua7lv"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public static void main(java.lang.String[]);\n\tdescriptor: ([Ljava/lang/String;)V\n\tflags: ACC_PUBLIC, ACC_STATIC\n\tCode:\n\t\tstack=2, locals=3, args_size=1\n\t\t\t0: getstatic #2 // \u003c- lock引用 （synchronized开始）\n            3: dup // 复制一份\n            4: astore_1 // lock引用 -\u003e slot 1。保存到slot1变量槽中，为了解锁\n            5: monitorenter // 将 lock对象 MarkWord 置为 Monitor 指针，这里底层是c调用。这里就是synchronized代码了\n            6: getstatic #3 // \u003c- i\n            9: iconst_1 // 准备常数 1\n            10: iadd // +1\n            11: putstatic #3 // -\u003e i\n            14: aload_1 // \u003c- lock引用。拿到该引用\n            15: monitorexit // 将 lock对象 MarkWord 重置, 唤醒 EntryList\n            16: goto 24\n            // 锁中异常，将锁释放\n            19: astore_2 // e -\u003e slot 2\n            20: aload_1 // \u003c- lock引用\n            21: monitorexit // 将 lock对象 MarkWord 重置(有hashcode等等), 唤醒 EntryList\n            22: aload_2 // \u003c- slot 2 (e)\n            23: athrow // throw e\n            // 锁中异常，将锁释放\n            24: return\n        Exception table:\n\t\t\tfrom to target type\n\t\t\t6 16 19 any\n\t\t\t19 22 19 any\n\t\tLineNumberTable:\n\t\t\tline 8: 0\n\t\t\tline 9: 6\n\t\t\tline 10: 14\n\t\t\tline 11: 24\n\t\tLocalVariableTable:\n\t\t\tStart Length Slot Name Signature\n\t\t\t0 25 0 args [Ljava/lang/String;\n\t\tStackMapTable: number_of_entries = 2\n\t\t\tframe_type = 255 /* full_frame */\n\t\t\t\toffset_delta = 19\n\t\t\t\tlocals = [ class \"[Ljava/lang/String;\", class java/lang/Object ]\n\t\t\t\tstack = [ class java/lang/Throwable ]\n\t\t\tframe_type = 250 /* chop */\n\t\t\t\toffset_delta = 4\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-lbhto1x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-lbhto1x"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "::: tip 注意"
+				},
+				{
+					"Type": "NodeSoftBreak",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "方法级别的 synchronized 不会在字节码指令中有所体现"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-e23h2o8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-e23h2o8"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": ":::"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-1fq8mcp",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707224540-1fq8mcp"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "小故事"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-51ncmac",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-51ncmac"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "JDK 从 6 开始对锁进行了改进"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-a5gj3a1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-a5gj3a1"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "故事角色"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-x3htmtw",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707224540-x3htmtw"
+			},
+			"Children": [
+				{
+					"ID": "20210707224540-8rkkge9",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-8rkkge9"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-916zn0k",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-916zn0k"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "老王 - JVM"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-ydjivv1",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-ydjivv1"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-0kvme9c",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-0kvme9c"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "小南 - 线程"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-zx4s7li",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-zx4s7li"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-qlbu1rn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-qlbu1rn"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "小女 - 线程"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-j6xk1hg",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-j6xk1hg"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-oxfs0ky",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-oxfs0ky"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "房间 - 对象"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-5sgnu6v",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-5sgnu6v"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-d6c3mhj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-d6c3mhj"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "房间门上 - 防盗锁 - Monitor"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-be40ehm",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-be40ehm"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-9ralek3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-9ralek3"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "房间门上 - 小南书包 - 轻量级锁"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-ow6ejgy",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-ow6ejgy"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-oggkftm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-oggkftm"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "房间门上 - 刻上小南大名 - 偏向锁"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-i7gaydr",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-i7gaydr"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-fqx6z64",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-fqx6z64"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "批量重刻名 - 一个类的偏向锁撤销到达 20 阈值"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-oisde0e",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-oisde0e"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-xbf4szy",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-xbf4szy"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "不能刻名字 - 批量撤销该类对象的偏向锁，设置该类不可偏向"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-62q78nj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707224540-62q78nj"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "synchronized 原理—轻量级锁 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-5rqxj4v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-5rqxj4v"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "轻量级锁的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "使用场景"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：如果一个对象虽然有多线程要加锁，但"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "加锁的时间是错开的（也就是没有竞争）"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，那么可以使用轻量级锁来优化。"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-c486cza",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-c486cza"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "轻量级锁对使用者是透明的，即语法仍然是 synchronized"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-w9p8v9k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-w9p8v9k"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "假设有两个方法同步块，利用同一个对象加锁"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-0cd52sx",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-0cd52sx"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "static final Object obj = new Object();\npublic static void method1() {\n    synchronized( obj ) {\n        // 同步块 A\n        method2();\n    }\n}\npublic static void method2() {\n    synchronized( obj ) {\n        // 同步块 B\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-ofjciux",
+			"Type": "NodeIFrame",
+			"Data": "\u003ciframe id=\"embed_dom\" name=\"embed_dom\" frameborder=\"0\" style=\"display:block;width:100%; height:1545px;\" src=\"https://www.processon.com/embed/602e5a0ef346fb64f569accc\"\u003e\u003c/iframe\u003e",
+			"Properties": {
+				"id": "20210707224540-ofjciux"
+			}
+		},
+		{
+			"ID": "20210707224540-d5g77s9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707224540-d5g77s9"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "synchronized 原理—锁膨胀 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-q5qlook",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-q5qlook"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果在尝试加轻量级锁的过程中，CAS 操作无法成功，这时一种情况就是有其它线程为此对象加上了轻量级锁（有竞争），这时需要进行锁膨胀，将轻量级锁变为重量级锁（让解锁操作接下来的解锁操作进入到重量级锁的解锁）。"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-hpgbjw0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-hpgbjw0"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Test {\n    static Object obj = new Object();\n    public static void method1() {\n        synchronized( obj ) {\n            // 同步块\n        }\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-v5tp4r1",
+			"Type": "NodeIFrame",
+			"Data": "\u003ciframe id=\"embed_dom\" name=\"embed_dom\" frameborder=\"0\" style=\"display:block;width:100%; height:745px;\" src=\"https://www.processon.com/embed/602e8eaa07912934224d5784\"\u003e\u003c/iframe\u003e",
+			"Properties": {
+				"id": "20210707224540-v5tp4r1"
+			}
+		},
+		{
+			"ID": "20210707224540-z6ajt00",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707224540-z6ajt00"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "synchronized 原理—自旋优化（优化重量级锁） 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-u933zlh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-u933zlh"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "重量级锁竞争"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的时候，还可以使用自旋来进行优化，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "如果当前线程自旋成功（即这时候持锁线程已经退出了同步块，释放了锁），这时当前线程就可以避免阻塞，避免线程上下文切换"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-05vrpb3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-05vrpb3"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "::: tip 线程切换"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-the3a8x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-the3a8x"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "线程的阻塞唤醒需要从用户态切换到内核态，然后内核态切换 tcb，切到另一个线程的内核态，再从内核态进入用户态，这是一个重量级的操作"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-pnrsj8m",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-pnrsj8m"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": ":::"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-ktbqumt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-ktbqumt"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "自旋重试成功的情况："
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-bimkane",
+			"Type": "NodeTable",
+			"Data": "| 线程 1（core1 上）       | 对象 Mark              | 线程 2（core2 上）       |\n| ------------------------ | ---------------------- | ------------------------ |\n| -                        | 10（重量锁）           | -                        |\n| 访问同步块，获取 monitor | 10（重量锁）重量锁指针 | -                        |\n| 成功（加锁）             | 10（重量锁）重量锁指针 | -                        |\n| 执行同步块               | 10（重量锁）重量锁指针 | -                        |\n| 执行同步块               | 10（重量锁）重量锁指针 | 访问同步块，获取 monitor |\n| 执行同步块               | 10（重量锁）重量锁指针 | 自旋重试                 |\n| 执行完毕                 | 10（重量锁）重量锁指针 | 自旋重试                 |\n| 成功（解锁）             | 01（无锁）             | 自旋重试                 |\n| -                        | 10（重量锁）重量锁指针 | 成功（加锁）             |\n| -                        | 10（重量锁）重量锁指针 | 执行同步块               |\n| -                        | ...                    | ...                      |",
+			"TableAligns": [
+				0,
+				0,
+				0
+			],
+			"Properties": {
+				"id": "20210707224540-bimkane"
+			},
+			"Children": [
+				{
+					"Type": "NodeTableHead",
+					"Children": [
+						{
+							"Type": "NodeTableRow",
+							"Children": [
+								{
+									"Type": "NodeTableCell",
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "线程 1（core1 上）"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "对象 Mark"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "线程 2（core2 上）"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "访问同步块，获取 monitor"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "成功（加锁）"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行同步块"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行同步块"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "访问同步块，获取 monitor"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行同步块"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "自旋重试"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行完毕"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "自旋重试"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "成功（解锁）"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "01（无锁）"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "自旋重试"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "成功（加锁）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行同步块"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "..."
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "..."
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-umvtcv5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-umvtcv5"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "自旋重试失败的情况："
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-69njzjl",
+			"Type": "NodeTable",
+			"Data": "| 线程 1（core1 上）       | 对象 Mark              | 线程 2（core2 上）       |\n| ------------------------ | ---------------------- | ------------------------ |\n| -                        | 10（重量锁）           | -                        |\n| 访问同步块，获取 monitor | 10（重量锁）重量锁指针 | -                        |\n| 成功（加锁）             | 10（重量锁）重量锁指针 | -                        |\n| 执行同步块               | 10（重量锁）重量锁指针 | -                        |\n| 执行同步块               | 10（重量锁）重量锁指针 | 访问同步块，获取 monitor |\n| 执行同步块               | 10（重量锁）重量锁指针 | 自旋重试                 |\n| 执行同步块               | 10（重量锁）重量锁指针 | 自旋重试                 |\n| 执行同步块               | 10（重量锁）重量锁指针 | 自旋重试                 |\n| 执行同步块               | 10（重量锁）重量锁指针 | 阻塞                     |\n| -                        | ...                    | ...                      |",
+			"TableAligns": [
+				0,
+				0,
+				0
+			],
+			"Properties": {
+				"id": "20210707224540-69njzjl"
+			},
+			"Children": [
+				{
+					"Type": "NodeTableHead",
+					"Children": [
+						{
+							"Type": "NodeTableRow",
+							"Children": [
+								{
+									"Type": "NodeTableCell",
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "线程 1（core1 上）"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "对象 Mark"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "线程 2（core2 上）"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "访问同步块，获取 monitor"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "成功（加锁）"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行同步块"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行同步块"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "访问同步块，获取 monitor"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行同步块"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "自旋重试"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行同步块"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "自旋重试"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行同步块"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "自旋重试"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行同步块"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "阻塞"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "..."
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "..."
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-mja49hk",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707224540-mja49hk"
+			},
+			"Children": [
+				{
+					"ID": "20210707224540-yj7nelk",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-yj7nelk"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-1az1tc2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-1az1tc2"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "自旋会占用 CPU 时间"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，单核 CPU 自旋就是浪费，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "多核 CPU 自旋才能发挥优势"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-d5yg43u",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-d5yg43u"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-d7r8lxs",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-d7r8lxs"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在 Java 6 之后自旋锁是自适应的，比如对象刚刚的一次自旋操作成功过，那么认为这次自旋成功的可能性会高，就多自旋几次；反之，就少自旋甚至不自旋，总之，比较智能。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-wmvuy8j",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-wmvuy8j"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-mrqa693",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-mrqa693"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Java 7 之后不能控制是否开启自旋功能"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-7kwp183",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707224540-7kwp183"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "synchronized 原理—偏向锁（优化轻量级锁 CAS） 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-2akr3sf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707224540-2akr3sf"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "优化轻量级锁 CAS 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-dobec8k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-dobec8k"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "轻量级锁在没有竞争时（就自己这个线程），每次重入仍然需要执行 CAS 操作（还需再次记录 lock record）。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-7898se0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-7898se0"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Java 6 中引入了偏向锁来做进一步优化："
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "只有第一次使用 CAS 时就将线程 ID 设置到对象的 Mark Word 头"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，之后发现这个线程 ID 是自己的就表示没有竞争，不用重新 CAS。以后只要不发生竞争，这个对象就归该线程所有"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-7jod1ja",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-7jod1ja"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "例如："
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-ck92t0z",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-ck92t0z"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Test {\n    static final Object obj = new Object();\n    public static void m1() {\n        synchronized( obj ) {\n            // 同步块 A\n            m2();\n        }\n    }\n    public static void m2() {\n        synchronized( obj ) {\n            // 同步块 B\n            m3();\n        }\n    }\n    public static void m3() {\n        synchronized( obj ) {\n        }\n        // 同步块 C\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-7unuu72",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "bWVybWFpZA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-7unuu72"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "bWVybWFpZA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "flowchart TB\n    subgraph 轻量级锁\n    m1(\"m1内调用synchronized(obj)\") -.生成锁记录.-\u003e m1\n    m1-- 用 锁记录 替换 Mark Word --\u003eobj(对象)\n    m2(\"m2内调用synchronized(obj)\") -.生成锁记录.-\u003e m2\n    m2-- 用 锁记录 替换 Mark Word --\u003eobj(对象)\n    m3(\"m3内调用synchronized(obj)\") -.生成锁记录.-\u003e m3\n    m3-- 用 锁记录 替换 Mark Word --\u003eobj(对象)\n   \tend\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-g0c6t0x",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "bWVybWFpZA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-g0c6t0x"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "bWVybWFpZA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "flowchart TB\n    subgraph 轻量级锁\n    m1(\"m1内调用synchronized(obj)\")\n    m1-- 用 ThreadId 替换  Mark Word --\u003eobj(对象)\n    m2(\"m2内调用synchronized(obj)\")\n    m2-- 检查 ThreadId 是否是自己 --\u003eobj(对象)\n    m3(\"m3内调用synchronized(obj)\")\n    m3-- 检查 ThreadId 是否是自己 --\u003eobj(对象)\n   \tend\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-xgpuj6b",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707224540-xgpuj6b"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "偏向状态"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-16qzl8c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-16qzl8c"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "回忆一下对象头格式"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-h0rzmfm",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-h0rzmfm"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "|------------------------------------------------------------------------------|--------------------|\n|                                  Mark Word (64 bits)                         |       State        |\n|------------------------------------------------------------------------------|--------------------|\n| unused:25 | identity_hashcode:31 | unused:1 | age:4 | biased_lock:1 | lock:2 |       Normal       |\n|------------------------------------------------------------------------------|--------------------|\n| thread:54 |       epoch:2        | unused:1 | age:4 | biased_lock:1 | lock:2 |       Biased       |\n|------------------------------------------------------------------------------|--------------------|\n|                       ptr_to_lock_record:62                         | lock:2 | Lightweight Locked |\n|------------------------------------------------------------------------------|--------------------|\n|                     ptr_to_heavyweight_monitor:62                   | lock:2 | Heavyweight Locked |\n|------------------------------------------------------------------------------|--------------------|\n|                                                                     | lock:2 |    Marked for GC   |\n|------------------------------------------------------------------------------|--------------------|\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-bo9iazx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-bo9iazx"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "一个对象创建时："
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-aaj9qmm",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707224540-aaj9qmm"
+			},
+			"Children": [
+				{
+					"ID": "20210707224540-qurigxr",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-qurigxr"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-fmcvgn8",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-fmcvgn8"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果开启了偏向锁（默认开启），那么"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "对象创建后，markword 值为 0x05 即最后 3 位为 101"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，这时它的 thread、epoch、age 都为 0，加锁时才会改变"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-1ed9n37",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-1ed9n37"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-s4m89jn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-s4m89jn"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "偏向锁是默认是延迟的"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，不会在程序启动时立即生效，如果想避免延迟，可以加 VM 参数"
+								}
+							]
+						},
+						{
+							"ID": "20210707224540-irsya5x",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-irsya5x"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "-XX:BiasedLockingStartupDelay=0"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 来禁用延迟"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-hdy5r2u",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-hdy5r2u"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-h6wowzb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-h6wowzb"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果没有开启偏向锁，那么对象创建后，Mark Word 值为 0x01 即最后 3 位为 001，这时它的 hashcode、age 都为 0，第一次用到 hashcode 时才会赋值"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-uslnpyx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-uslnpyx"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "查看 Java 对象头需要借助 openjdk 提供的工具"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-m1ssn7k",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eG1s",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-m1ssn7k"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003c!-- https://mvnrepository.com/artifact/org.openjdk.jol/jol-core --\u003e\n\u003cdependency\u003e\n    \u003cgroupId\u003eorg.openjdk.jol\u003c/groupId\u003e\n    \u003cartifactId\u003ejol-core\u003c/artifactId\u003e\n    \u003cversion\u003e0.14\u003c/version\u003e\n    \u003cscope\u003eprovided\u003c/scope\u003e\n\u003c/dependency\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-hvuhfyq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707224540-hvuhfyq"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "测试延迟性"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-ejdiqvu",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-ejdiqvu"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Slf4j(topic = \"TestBiasedLock\")\npublic class TestBiasedLock {\n\n    public static void main(String[] args) throws InterruptedException {\n        test1();\n    }\n\n    /**\n     * 测试101\n     */\n    private static void test1(){\n        log.debug(ClassLayout.parseInstance(new Dog()).toPrintable());\n\n        // 偏向锁是默认是延迟的，不会在程序启动时立即生效。VM参数可以解决-XX:BiasedLockingStartupDelay=0\n        // 或睡一会。TimeUnit.SECONDS.sleep(5);\n        log.debug(ClassLayout.parseInstance(new Dog()).toPrintable());\n    }\n}\n\nclass Dog {\n\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-e0yey13",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-e0yey13"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "结果如下（从左往右，从上到下都是倒排的）："
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-vxkwbfm",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-vxkwbfm"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "21:21:16.604 [main] DEBUG TestBiasedLock - _999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           05 00 00 00 (00000101 00000000 00000000 00000000) (5)\n      4     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)\n      8     4        (object header)                           22 dc 00 f8 (00100010 11011100 00000000 11111000) (-134161374)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-9bb8te8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707224540-9bb8te8"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "测试加锁"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-i8oxcl2",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-i8oxcl2"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Slf4j(topic = \"TestBiasedLock\")\npublic class TestBiasedLock {\n\n    public static void main(String[] args) throws InterruptedException {\n        test2();\n    }\n\n    private static void test2() {\n        Dog d = new Dog();\n        ClassLayout classLayout = ClassLayout.parseInstance(d);\n        new Thread(() -\u003e {\n            log.debug(\"synchronized 加锁前\\n{}\", classLayout.toPrintable());\n            synchronized (d) {\n                log.debug(\"synchronized 加锁中\\n{}\", classLayout.toPrintable());\n            }\n            log.debug(\"synchronized 加锁后\\n{}\",classLayout.toPrintable());\n        }, \"t1\").start();\n    }\n}\n\nclass Dog {\n\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-hp8g11h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-hp8g11h"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "结果如下（从左往右，从上到下都是倒排的，同一字节中是按照正常顺序排列）："
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-6c9ytkn",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-6c9ytkn"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "21:22:16.638 [t1] DEBUG TestBiasedLock - synchronized 加锁前\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           05 00 00 00 (00000101 00000000 00000000 00000000) (5)\n      4     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)\n      8     4        (object header)                           22 dc 00 f8 (00100010 11011100 00000000 11111000) (-134161374)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n21:22:16.643 [t1] DEBUG TestBiasedLock - synchronized 加锁中\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           05 b8 19 86 (00000101 10111000 00011001 10000110) (-2045134843)\n      4     4        (object header)                           a4 7f 00 00 (10100100 01111111 00000000 00000000) (32676)\n      8     4        (object header)                           22 dc 00 f8 (00100010 11011100 00000000 11111000) (-134161374)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n21:22:16.644 [t1] DEBUG TestBiasedLock - synchronized 加锁后\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           05 b8 19 86 (00000101 10111000 00011001 10000110) (-2045134843)\n      4     4        (object header)                           a4 7f 00 00 (10100100 01111111 00000000 00000000) (32676)\n      8     4        (object header)                           22 dc 00 f8 (00100010 11011100 00000000 11111000) (-134161374)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-lyn1uky",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-lyn1uky"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其中 00000000 00000000 01111111 10100100 10000110 00011001 100111 是线程 id（OS 分配的，和 Java 不一样）。只有第二次及之后才有。处于偏向锁的对象解锁后，线程 id 仍存储于对象头中"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-19kjvdv",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707224540-19kjvdv"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "禁用偏向锁"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-zk61d3l",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-zk61d3l"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "偏向锁适用于，竞争非常少的情况。当应用是一个多线程非常多的，此时应该禁用掉"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-1jqwrqn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-1jqwrqn"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "添加 VM 参数 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-XX:-UseBiasedLocking"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 禁用偏向锁。因为变量前是 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 所以关闭了，若是"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "+"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "则开启"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-rw5kbke",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-rw5kbke"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "结果如下（从左往右，从上到下都是倒排的，同一字节中是按照正常顺序排列）："
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-wh60epk",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-wh60epk"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "01:57:17.769 [t1] DEBUG TestBiasedLock - synchronized 加锁前\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           01 00 00 00 (00000001 00000000 00000000 00000000) (1)\n      4     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)\n      8     4        (object header)                           22 dc 00 f8 (00100010 11011100 00000000 11111000) (-134161374)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n01:57:17.775 [t1] DEBUG TestBiasedLock - synchronized 加锁中\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           00 b9 6d 06 (00000000 10111001 01101101 00000110) (107854080)\n      4     4        (object header)                           00 70 00 00 (00000000 01110000 00000000 00000000) (28672)\n      8     4        (object header)                           22 dc 00 f8 (00100010 11011100 00000000 11111000) (-134161374)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n01:57:17.776 [t1] DEBUG TestBiasedLock - synchronized 加锁后\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           01 00 00 00 (00000001 00000000 00000000 00000000) (1)\n      4     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)\n      8     4        (object header)                           22 dc 00 f8 (00100010 11011100 00000000 11111000) (-134161374)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-r7b23yj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-r7b23yj"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以看到，加锁中最后为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "000"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "即轻量锁。加锁前后为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "001"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "即无锁（"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "除了偏向锁其他锁执行完后都是"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"CodeMarkerLen": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker",
+									"Data": "`"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "001"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker",
+									"Data": "`"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "无锁状态"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "）"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-29k1dj4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707224540-29k1dj4"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "撤销偏向锁—锁对象调用 hashCode"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-mrg1zm0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-mrg1zm0"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "调用了对象的 hashCode，但"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "偏向锁的对象 MarkWord 中存储的是线程 id"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，如果调用 hashCode 会导致偏向锁被撤销（不够存线程 ID），"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "升级为轻量锁"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-9tv0upf",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707224540-9tv0upf"
+			},
+			"Children": [
+				{
+					"ID": "20210707224540-aaer7fi",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-aaer7fi"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-5oflhmb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-5oflhmb"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "轻量级锁的 hashCode 会在无锁 CAS 转为轻量锁时记录到锁记录中"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-q6v483d",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-q6v483d"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-xim80hh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-xim80hh"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "重量级锁会在 Monitor 中记录 hashCode"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-juo13sy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-juo13sy"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "测试在调用 hashCode 后使用偏向锁，记得去掉 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-XX:-UseBiasedLocking"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，加上"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-mjop5v4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-mjop5v4"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-XX:BiasedLockingStartupDelay=0"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-gfht836",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-gfht836"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Slf4j(topic = \"TestBiasedLock\")\npublic class TestBiasedLock {\n\n    public static void main(String[] args) throws InterruptedException {\n        test2();\n    }\n\n    private static void test2() {\n        Dog d = new Dog();\n        d.hashCode();\n        ClassLayout classLayout = ClassLayout.parseInstance(d);\n        new Thread(() -\u003e {\n            log.debug(\"synchronized 加锁前\\n{}\", classLayout.toPrintable());\n            synchronized (d) {\n                log.debug(\"synchronized 加锁中\\n{}\", classLayout.toPrintable());\n            }\n            log.debug(\"synchronized 加锁后\\n{}\",classLayout.toPrintable());\n        }, \"t1\").start();\n    }\n}\n\nclass Dog {\n\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-18bwgon",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-18bwgon"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "结果如下（从左往右，从上到下都是倒排的，同一字节中是按照正常顺序排列）："
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-i2pq7yt",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-i2pq7yt"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "21:25:59.886 [t1] DEBUG TestBiasedLock - synchronized 加锁前\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           01 18 94 ad (00000001 00011000 10010100 10101101) (-1382803455)\n      4     4        (object header)                           20 00 00 00 (00100000 00000000 00000000 00000000) (32)\n      8     4        (object header)                           22 de 00 f8 (00100010 11011110 00000000 11111000) (-134160862)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n21:25:59.890 [t1] DEBUG TestBiasedLock - synchronized 加锁中\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           00 b9 c5 03 (00000000 10111001 11000101 00000011) (63289600)\n      4     4        (object header)                           00 70 00 00 (00000000 01110000 00000000 00000000) (28672)\n      8     4        (object header)                           22 de 00 f8 (00100010 11011110 00000000 11111000) (-134160862)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n21:25:59.890 [t1] DEBUG TestBiasedLock - synchronized 加锁后\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           01 18 94 ad (00000001 00011000 10010100 10101101) (-1382803455)\n      4     4        (object header)                           20 00 00 00 (00100000 00000000 00000000 00000000) (32)\n      8     4        (object header)                           22 de 00 f8 (00100010 11011110 00000000 11111000) (-134160862)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-0kjtgps",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-0kjtgps"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "加锁前后都是"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "001"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "即无锁，加锁中为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "000"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "轻量锁，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "轻量锁执行完后都是"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"CodeMarkerLen": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker",
+									"Data": "`"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "001"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker",
+									"Data": "`"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "无锁状态"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-504ooo0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707224540-504ooo0"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "撤销偏向锁—锁竞争—其他线程使用锁 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-hl44l72",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-hl44l72"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当有"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "其它线程使用偏向锁对象"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "时，会"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "将偏向锁升级为轻量级锁"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。因为偏向锁本来是让该线程一直使用的，但是发生竞争，需"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "升级为轻量锁"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-kgfokfe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-kgfokfe"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "需要控制线程交替执行！"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-l7obmjd",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-l7obmjd"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Slf4j(topic = \"TestBiasedLock\")\npublic class TestBiasedLock {\n\n    public static void main(String[] args) {\n        test3();\n    }\n\n    /**\n     * 其他线程使用对象 撤销偏向锁\n     */\n    private static void test3() {\n        Dog d = new Dog();\n        ClassLayout classLayout = ClassLayout.parseInstance(d);\n        Thread t1 = new Thread(() -\u003e {\n            log.debug(\"t1 synchronized 加锁前\\n{}\", classLayout.toPrintable());\n            synchronized (d) {\n                log.debug(\"t1 synchronized 加锁中\\n{}\", classLayout.toPrintable());\n            }\n            log.debug(\"t1 synchronized 加锁后\\n{}\", classLayout.toPrintable());\n\n            // 这里和 wait、notify 撤销偏向锁不一样哦，因为锁对象都不一样！\n            // t1 执行完再唤醒 t2（用同一把锁）。此时wait、notify不是重量锁\n            synchronized (TestBiasedLock.class) {\n                TestBiasedLock.class.notify();\n            }\n\n        }, \"t1\");\n        t1.start();\n\n        // 结果是要让t2先执行哦，可以放到t1前\n        Thread t2 = new Thread(() -\u003e {\n            // 这里和 wait、notify 撤销偏向锁不一样哦，因为锁对象都不一样！\n            // 等待唤醒\n            synchronized (TestBiasedLock.class) {\n                try {\n                    TestBiasedLock.class.wait();\n                } catch (InterruptedException e) {\n                    e.printStackTrace();\n                }\n            }\n\n            log.debug(\"t2 synchronized 加锁前\\n{}\", classLayout.toPrintable());\n            synchronized (d) {\n                log.debug(\"t2 synchronized 加锁中\\n{}\", classLayout.toPrintable());\n            }\n            log.debug(\"t2 synchronized 加锁后\\n{}\", classLayout.toPrintable());\n        }, \"t2\");\n        t2.start();\n    }\n}\n\nclass Dog {\n\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-5j66aku",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-5j66aku"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "结果如下（从左往右，从上到下都是倒排的，同一字节中是按照正常顺序排列）："
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-4bhd962",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-4bhd962"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "21:20:40.564 [t1] DEBUG TestBiasedLock - t1 synchronized 加锁前\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           05 00 00 00 (00000101 00000000 00000000 00000000) (5)\n      4     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)\n      8     4        (object header)                           22 dc 00 f8 (00100010 11011100 00000000 11111000) (-134161374)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n21:20:40.569 [t1] DEBUG TestBiasedLock - t1 synchronized 加锁中\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           05 08 17 cc (00000101 00001000 00010111 11001100) (-870905851)\n      4     4        (object header)                           cf 7f 00 00 (11001111 01111111 00000000 00000000) (32719)\n      8     4        (object header)                           22 dc 00 f8 (00100010 11011100 00000000 11111000) (-134161374)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n21:20:40.570 [t1] DEBUG TestBiasedLock - t1 synchronized 加锁后\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           05 08 17 cc (00000101 00001000 00010111 11001100) (-870905851)\n      4     4        (object header)                           cf 7f 00 00 (11001111 01111111 00000000 00000000) (32719)\n      8     4        (object header)                           22 dc 00 f8 (00100010 11011100 00000000 11111000) (-134161374)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-rovc6id",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-rovc6id"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "由上面状态 101、101、101、101、000、001 改变可以得出 t1 线程都是偏向锁，t2 线程加锁前、中、后分别为偏向锁、轻量锁（竞争导致锁升级）、无锁。"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "轻量锁执行完后都是"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"CodeMarkerLen": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker",
+									"Data": "`"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "001"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker",
+									"Data": "`"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "无锁状态"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-t54wz43",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707224540-t54wz43"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "撤销偏向锁—锁对象调用 wait/notify"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-etg9gnw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-etg9gnw"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "wait/notify 机制只有重量级锁才有！只要调用了就变为重量级锁"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-pa4ydl5",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-pa4ydl5"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Slf4j(topic = \"TestBiasedLock\")\npublic class TestBiasedLock {\n\n    public static void main(String[] args) {\n        test4();\n    }\n\n    /**\n     * 撤销偏向锁—锁对象调用 wait/notify\n     */\n    private static void test4() {\n        Dog d = new Dog();\n        ClassLayout classLayout = ClassLayout.parseInstance(d);\n\n        // 结果是要让t1先执行哦\n        Thread t1 = new Thread(() -\u003e {\n            log.debug(\"t1 synchronized 加锁前\\n{}\", classLayout.toPrintable());\n            synchronized (d) {\n                log.debug(\"t1 synchronized 加锁中\\n{}\", classLayout.toPrintable());\n                try {\n                    // 等待\n                    d.wait();\n                } catch (InterruptedException e) {\n                    e.printStackTrace();\n                }\n            }\n            log.debug(\"t1 synchronized 加锁后\\n{}\", classLayout.toPrintable());\n        }, \"t1\");\n        t1.start();\n\n\n        Thread t2 = new Thread(() -\u003e {\n            try {\n                TimeUnit.SECONDS.sleep(5);\n            } catch (InterruptedException e) {\n                e.printStackTrace();\n            }\n\n            synchronized (d){\n                log.debug(\"t2 notify\");\n                d.notify();\n            }\n\n        }, \"t2\");\n        t2.start();\n    }\n}\n\nclass Dog {\n\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-tb9u6q2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-tb9u6q2"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "结果如下（从左往右，从上到下都是倒排的，同一字节中是按照正常顺序排列）："
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-f552sv9",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-f552sv9"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "21:48:53.705 [t1] DEBUG TestBiasedLock - t1 synchronized 加锁前\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           05 00 00 00 (00000101 00000000 00000000 00000000) (5)\n      4     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)\n      8     4        (object header)                           22 dc 00 f8 (00100010 11011100 00000000 11111000) (-134161374)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n21:48:53.710 [t1] DEBUG TestBiasedLock - t1 synchronized 加锁中\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           05 08 83 5e (00000101 00001000 10000011 01011110) (1585645573)\n      4     4        (object header)                           f9 7f 00 00 (11111001 01111111 00000000 00000000) (32761)\n      8     4        (object header)                           22 dc 00 f8 (00100010 11011100 00000000 11111000) (-134161374)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n21:48:58.703 [t2] DEBUG TestBiasedLock - t2 notify\n21:48:58.706 [t1] DEBUG TestBiasedLock - t1 synchronized notify 后\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           fa 93 01 5e (11111010 10010011 00000001 01011110) (1577161722)\n      4     4        (object header)                           f9 7f 00 00 (11111001 01111111 00000000 00000000) (32761)\n      8     4        (object header)                           22 dc 00 f8 (00100010 11011100 00000000 11111000) (-134161374)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-4mk9hl7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-4mk9hl7"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "上面的状态：加锁前 101 偏向锁、加锁中 101 偏向锁、nofity 后 010 重量级锁（锁膨胀），"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "重量锁不会撤销标记"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、因为"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "重量级锁是根据 monitor 的 owner 来判断锁状态的"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-2ukrk2n",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707224540-2ukrk2n"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "批量重偏向—同一类的对象撤销后第 20 次"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-ht55gvs",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-ht55gvs"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "都是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "撤销"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "操作阈值"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-es3o8f9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-es3o8f9"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果对象虽然被多个线程访问，但没有竞争，这时偏向了线程 T1 的对象仍有机会重新偏向 T2，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "重偏向会重置对象的 Thread ID"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。当"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "撤销偏向锁阈值超过 20 次"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "后，jvm 会这样觉得，我是不是偏向错了呢，于是会在给这些对象加锁时"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "不会撤销锁而是重新偏向至加锁线程"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "没超过阈值前，由于锁竞争会升级为轻量级锁，最终执行完后清空 Thread ID，并将锁状态置为"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"CodeMarkerLen": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker",
+									"Data": "`"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "001"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker",
+									"Data": "`"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "即无锁状态"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-28qf40i",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-28qf40i"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Slf4j(topic = \"TestBiasedLock\")\npublic class TestBiasedLock {\n\n    public static void main(String[] args) {\n        test5();\n    }\n\n    /**\n     * 批量重偏向\n     */\n    private static void test5() {\n        Vector\u003cDog\u003e list = new Vector\u003c\u003e();\n        Thread t1 = new Thread(() -\u003e {\n            for (int i = 0; i \u003c 30; i++) {\n                Dog d = new Dog();\n                list.add(d);\n                synchronized (d) {\n                    log.debug(i + \"\\t\" + ClassLayout.parseInstance(d).toPrintable());\n                }\n            }\n            synchronized (list) {\n                list.notify();\n            }\n        }, \"t1\");\n        t1.start();\n\n        Thread t2 = new Thread(() -\u003e {\n            synchronized (list) {\n                try {\n                    list.wait();\n                } catch (InterruptedException e) {\n                    e.printStackTrace();\n                }\n            }\n            log.debug(\"===============\u003e \");\n            for (int i = 0; i \u003c 30; i++) {\n                Dog d = list.get(i);\n                log.debug(i + \"\\t\" + ClassLayout.parseInstance(d).toPrintable());\n                synchronized (d) {\n                    log.debug(i + \"\\t\" + ClassLayout.parseInstance(d).toPrintable());\n                }\n                log.debug(i + \"\\t\" + ClassLayout.parseInstance(d).toPrintable());\n            }\n        }, \"t2\");\n        t2.start();\n    }\n}\n\nclass Dog {\n\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-wohln2q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-wohln2q"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "结果如下（老师简化后的工具类）"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-3jn2hib",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-3jn2hib"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "[t1] - 0 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 1 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 2 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 3 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 4 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 5 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 6 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 7 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 8 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 9 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 10 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 11 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 12 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 13 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 14 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 15 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 16 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 17 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 18 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 19 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 20 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 21 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 22 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 23 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 24 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 25 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 26 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 27 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 28 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 29 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - ===============\u003e\n[t2] - 0 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 0 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 0 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 1 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 1 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 1 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 2 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 2 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 2 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 3 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 3 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 3 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 4 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 4 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 4 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 5 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 5 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 5 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 6 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 6 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 6 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 7 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 7 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 7 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 8 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 8 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 8 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 9 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 9 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 9 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 10 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 10 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 10 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 11 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 11 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 11 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 12 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 12 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 12 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 13 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 13 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 13 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 14 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 14 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 14 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 15 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 15 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 15 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 16 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 16 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 16 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 17 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 17 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 17 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 18 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 18 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 18 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 19 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 19 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 19 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 20 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 20 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 20 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 21 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 21 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 21 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 22 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 22 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 22 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 23 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 23 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 23 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 24 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 24 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 24 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 25 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 25 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 25 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 26 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 26 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 26 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 27 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 27 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 27 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 28 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 28 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 28 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 29 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 29 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 29 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-dmn9rwe",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707224540-dmn9rwe"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "批量撤销—同一类对象撤销后第 40 次"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-n0j9vnh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-n0j9vnh"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "都是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "撤销"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "操作阈值"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-zb6rumd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-zb6rumd"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "当撤销偏向锁阈值超过 40 次后"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，jvm 会这样觉得，自己确实偏向错了，根本就不该偏向。于是整个类的所有对象都会变为不可偏向的，新建的对象也是不可偏向的"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-xo5ym3x",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-xo5ym3x"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Slf4j(topic = \"TestBiasedLock\")\npublic class TestBiasedLock {\n\n    public static void main(String[] args) throws InterruptedException {\n        test6();\n    }\n\n    static Thread t1, t2, t3;\n\n    /**\n     * 批量撤销\n     */\n    private static void test6() throws InterruptedException {\n\n        Vector\u003cDog\u003e list = new Vector\u003c\u003e();\n        int loopNumber = 39;\n        t1 = new Thread(() -\u003e {\n            for (int i = 0; i \u003c loopNumber; i++) {\n                Dog d = new Dog();\n                list.add(d);\n                synchronized (d) {\n                    log.debug(i + \"\\t\" + ClassLayout.parseInstance(d).toPrintable());\n                }\n            }\n            LockSupport.unpark(t2);\n        }, \"t1\");\n        t1.start();\n\n        t2 = new Thread(() -\u003e {\n            LockSupport.park();\n            log.debug(\"===============\u003e \");\n            for (int i = 0; i \u003c loopNumber; i++) {\n                Dog d = list.get(i);\n                log.debug(i + \"\\t\" + ClassLayout.parseInstance(d).toPrintable());\n                synchronized (d) {\n                    log.debug(i + \"\\t\" + ClassLayout.parseInstance(d).toPrintable());\n                }\n                log.debug(i + \"\\t\" + ClassLayout.parseInstance(d).toPrintable());\n            }\n            LockSupport.unpark(t3);\n        }, \"t2\");\n        t2.start();\n\n        t3 = new Thread(() -\u003e {\n            LockSupport.park();\n            log.debug(\"===============\u003e \");\n            for (int i = 0; i \u003c loopNumber; i++) {\n                Dog d = list.get(i);\n                log.debug(i + \"\\t\" + ClassLayout.parseInstance(d).toPrintable());\n                synchronized (d) {\n                    log.debug(i + \"\\t\" + ClassLayout.parseInstance(d).toPrintable());\n                }\n                log.debug(i + \"\\t\" + ClassLayout.parseInstance(d).toPrintable());\n            }\n        }, \"t3\");\n        t3.start();\n\n        t3.join();\n        log.debug(ClassLayout.parseInstance(new Dog()).toPrintable());\n\n    }\n}\n\nclass Dog {\n\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-3gzk0h6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-3gzk0h6"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "结果如下：略"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-qlzgutj",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707224540-qlzgutj"
+			},
+			"Children": [
+				{
+					"ID": "20210707224540-jss4qm4",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-jss4qm4"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-etjjaha",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-etjjaha"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "第一次 39 个加 t1 的偏向锁"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-ogwjjp2",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-ogwjjp2"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-ss0e4c0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-ss0e4c0"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "第二次前"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "19"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "个会发生锁竞争，最终"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "撤销锁"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "变为无锁状态，第 20 个开始发生批量重偏向，最终锁状态都是指向 t2 的偏向锁"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-npsrxp6",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-npsrxp6"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-y8l5u0u",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-y8l5u0u"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "第三次前 19 个无锁变为偏向锁，没啥说的。第 20 个开始锁竞争，会"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "撤销锁"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，即 20 次"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-97jnqbm",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224540-97jnqbm"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-mpvy4oh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-mpvy4oh"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "那么这个类的对象有了 39 次锁撤销，那么第 40 次以及之后创建该对象，则该对象默认为"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "无锁状态"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-2hfr67f",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707224540-2hfr67f"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "synchronized 原理—锁消除 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-2nkrivr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-2nkrivr"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "benchmarks 项目见前面章节"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-75anb5z",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-75anb5z"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Fork(1)\n@BenchmarkMode(Mode.AverageTime)\n@Warmup(iterations=3)\n@Measurement(iterations=5)\n@OutputTimeUnit(TimeUnit.NANOSECONDS)\npublic class MyBenchmark {\n    static int x = 0;\n    @Benchmark\n    public void a() throws Exception {\n        x++;\n    }\n\n    // JIT（即时编译器）对Java字节码进行进一步优化\n    // 发现锁对象就是局部变量，不会逃离作用范围，所以去掉该锁！这里面的x变量也是局部变量，不会共享，所以去掉该锁！\n    @Benchmark\n    public void b() throws Exception {\n        Object o = new Object();\n        synchronized (o) {\n            x++;\n        }\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-1c2n3cb",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-1c2n3cb"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "java -jar benchmarks.jar\n\nBenchmark Mode Samples Score Score error Units\nc.i.MyBenchmark.a avgt 5 1.542 0.056 ns/op\nc.i.MyBenchmark.b avgt 5 1.518 0.091 ns/op\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-gde0v2h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-gde0v2h"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "禁用锁消除优化"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-o091pxs",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224540-o091pxs"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "java -XX:-EliminateLocks -jar benchmarks.jar\nBenchmark Mode Samples Score Score error Units\nc.i.MyBenchmark.a avgt 5 1.507 0.108 ns/op\nc.i.MyBenchmark.b avgt 5 16.976 1.572 ns/op\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-85yns3y",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707224540-85yns3y"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "synchronized 原理—锁粗化"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-28tib13",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-28tib13"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "对相同对象多次加锁，导致线程发生多次重入，可以使用锁粗化方式来优化，这不同于之前讲的细分锁的粒度。"
+				}
+			]
+		}
+	]
+}

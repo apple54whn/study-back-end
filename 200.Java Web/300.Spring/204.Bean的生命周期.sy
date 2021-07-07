@@ -1,0 +1,2896 @@
+{
+	"ID": "20210707233138-lg19muc",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210707233138-lg19muc",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210707233138-4tdf9du",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233138-4tdf9du"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "简介"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-l3e2c4u",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233138-l3e2c4u"
+			},
+			"Children": [
+				{
+					"ID": "20210707233138-e30a8qf",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-e30a8qf"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-7u915rb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-7u915rb"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Bean 的生命周期即是容器管理 "
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "Bean 的创建（赋值）、初始化、销毁的过程"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-fqz920g",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-fqz920g"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-8raxmue",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-8raxmue"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "可以"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "自定义初始化、销毁方法"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。容器在 Bean 进行到当前生命周期时调用定义的方法"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-qy6laax",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233138-qy6laax"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "initMethod \u0026 destroyMethod 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-u7fm800",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233138-u7fm800"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意 scope 不同时区别"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-c7u0ckq",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233138-c7u0ckq"
+			},
+			"Children": [
+				{
+					"ID": "20210707233138-g5lrhtb",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-g5lrhtb"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-5ptc3fm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-5ptc3fm"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "构造方法"
+								}
+							]
+						},
+						{
+							"ID": "20210707233138-2yfocc5",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 42,
+								"Padding": 2,
+								"Marker": "Kg==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707233138-2yfocc5"
+							},
+							"Children": [
+								{
+									"ID": "20210707233138-6xucja9",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-6xucja9"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-azrptz4",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-azrptz4"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "单实例：容器启动时创建对象触发"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233138-g7n1ih8",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-g7n1ih8"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-bmi4p2u",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-bmi4p2u"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "多实例：每次获取时创建对象触发"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-70z4pqh",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-70z4pqh"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-lvboqbc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-lvboqbc"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "initMethod"
+								}
+							]
+						},
+						{
+							"ID": "20210707233138-xzbq5ml",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 42,
+								"Padding": 2,
+								"Marker": "Kg==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707233138-xzbq5ml"
+							},
+							"Children": [
+								{
+									"ID": "20210707233138-8c10p68",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-8c10p68"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-f25a1n1",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-f25a1n1"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "单实例：容器启动，创建对象并赋值后触发"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233138-w4tmyr5",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-w4tmyr5"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-w0ktzls",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-w0ktzls"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "多实例：每次获取对象，创建对象并赋值后触发"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-uqg3vk9",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-uqg3vk9"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-z3jcbba",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-z3jcbba"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "destroyMethod"
+								}
+							]
+						},
+						{
+							"ID": "20210707233138-uwnhs2v",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 42,
+								"Padding": 2,
+								"Marker": "Kg==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707233138-uwnhs2v"
+							},
+							"Children": [
+								{
+									"ID": "20210707233138-ib2f5r0",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-ib2f5r0"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-fzjoimj",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-fzjoimj"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "单实例：关闭容器时"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233138-mfisrib",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-mfisrib"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-sv3g8nw",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-sv3g8nw"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "多实例：容器不会管理，需销毁则等到GC即可（没找到。。。）"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-brjypdg",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233138-brjypdg"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Car {\n\n    /**\n     * 单实例：容器启动时创建对象触发\n     * 多实例：每次获取时创建对象触发\n     */\n    public Car(){\n        System.out.println(\"Car Constructor...\");\n    }\n\n    /**\n     * 单实例：容器启动，创建对象并赋值后触发\n     * 多实例：每次获取对象，创建对象并赋值后触发\n     */\n    public void init(){\n        System.out.println(\"Car init...\");\n    }\n\n    /**\n     * 单实例：关闭容器时\n     * 多实例：容器不会管理，需销毁则等到GC即可\n     */\n    public void destroy(){\n        System.out.println(\"Car destroy...\");\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-ptxm424",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233138-ptxm424"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Train {\n\n    public Train(){\n        System.out.println(\"Train Constructor...\");\n    }\n\n    public void init(){\n        System.out.println(\"Train init...\");\n    }\n\n    public void destroy(){\n        System.out.println(\"Train destroy...\");\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-2swwopt",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233138-2swwopt"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Configuration\npublic class LifeCycleConfig1 {\n\n    @Bean(initMethod = \"init\",destroyMethod = \"destroy\")\n    public Car car(){\n        return new Car();\n    }\n\n    @Bean(initMethod = \"init\",destroyMethod = \"destroy\")\n    @Scope(\"prototype\")\n    public Train train(){\n        return new Train();\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-mfe5kp4",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233138-mfe5kp4"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class LifeCycleConfig1Test {\n\n    private AnnotationConfigApplicationContext context;\n\n\n    @BeforeEach\n    public void init(){\n        context = new AnnotationConfigApplicationContext(LifeCycleConfig1.class);\n        System.out.println(\"容器创建完成\");\n    }\n\n    @Test\n    public void test(){\n\n        Train train = context.getBean(Train.class);\n\n    }\n\n    @AfterEach\n    public void destroy(){\n        context.close();\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-1l01vt5",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20210707233138-1l01vt5"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e "
+				},
+				{
+					"ID": "20210707233138-7g3ophi",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210707233138-7g3ophi"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "作用和xml配置文件中的"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"CodeMarkerLen": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker",
+									"Data": "`"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "\u003cbean\u003e"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker",
+									"Data": "`"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "标签编写"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"CodeMarkerLen": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker",
+									"Data": "`"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "\u003cinit-method\u003e"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker",
+									"Data": "`"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "和"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"CodeMarkerLen": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker",
+									"Data": "`"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "\u003cdestroy-method\u003e"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker",
+									"Data": "`"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "标签实现功能一致"
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-p7l3wbv",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210707233138-p7l3wbv"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "一个是Bean创建并赋值完成后调用，一个是容器关闭（单例）或GC（多例）"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-xlfjwpf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233138-xlfjwpf"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "InitializingBean \u0026 DisposableBean 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-5i6it5m",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233138-5i6it5m"
+			},
+			"Children": [
+				{
+					"ID": "20210707233138-w4h11kl",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-w4h11kl"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-rh830vh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-rh830vh"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "通过让Bean实现"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "InitializingBean"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "接口，重写初始化方法"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "afterPropertiesSet"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。该方法在容器"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "BeanFactory"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "初始化完 Bean 所有属性，并满足"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "BeanFactoryAware"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "和"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "ApplicationContextAware"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "后调用"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-gazfyfc",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-gazfyfc"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-msqv6jm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-msqv6jm"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "实现"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "DisposableBean"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "接口，重写销毁方法"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "destroy"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。该方法在容器"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "BeanFactory"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "销毁一个 Bean 时调用"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-4orivun",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233138-4orivun"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Cat implements InitializingBean, DisposableBean {\n\n    public Cat(){\n        System.out.println(\"Cat Constructor...\");\n    }\n\n    @Override\n    public void afterPropertiesSet() throws Exception {\n        System.out.println(\"Cat afterPropertiesSet...\");\n    }\n\n    @Override\n    public void destroy() throws Exception {\n        System.out.println(\"Cat destroy...\");\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-8hs4an9",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233138-8hs4an9"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n * InitializingBean \u0026 DisposableBean\n */\n@Configuration\npublic class LifeCycleConfig2 {\n\n    @Bean// 为了控制 bean 的数量，不使用包扫描机制\n    public Cat cat(){\n        return new Cat();\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-meip06w",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233138-meip06w"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n * InitializingBean \u0026 DisposableBean\n */\npublic class LifeCycleConfig2Test {\n\n    private AnnotationConfigApplicationContext context;\n\n\n    @BeforeEach\n    public void init(){\n        context = new AnnotationConfigApplicationContext(LifeCycleConfig2.class);\n        System.out.println(\"容器创建完成\");\n    }\n\n    @Test\n    public void test(){\n\n    }\n\n    @AfterEach\n    public void destroy(){\n        context.close();\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-ad2975g",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233138-ad2975g"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "@PostConstruct \u0026 @PreDestroy 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-mh5n932",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233138-mh5n932"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "JSR250"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "定义的注解，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "只能定义在方法上"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-wq0m90x",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233138-wq0m90x"
+			},
+			"Children": [
+				{
+					"ID": "20210707233138-ee1p3zh",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-ee1p3zh"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-9938yj5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-9938yj5"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "@PostConstruct"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：在 "
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "bean 创建完成并且赋值完后"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "执行初始化方法"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-vu8u5ll",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-vu8u5ll"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-0go8m2f",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-0go8m2f"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "@PreDestroy"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "销毁bean前"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "通知我们进行清理工作。单例中需要关闭容器（使用实现类的方法，如close）"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-vcq3ra9",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233138-vcq3ra9"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class Dog {\n\n    public Dog(){\n        System.out.println(\"Dog Constructor...\");\n    }\n\n    @PostConstruct\n    public void init(){\n        System.out.println(\"Dog init...\");\n    }\n\n    @PreDestroy\n    public void destroy(){\n        System.out.println(\"Dog destroy...\");\n    }\n\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-u9bbezq",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233138-u9bbezq"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n * @PostConstruct \u0026 @PreDestroy\n */\n@Configuration\npublic class LifeCycleConfig3 {\n\n    @Bean// 为了控制 bean 的数量，不使用包扫描机制\n    public Dog dog(){\n        return new Dog();\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-a3nty0x",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233138-a3nty0x"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n * @PostConstruct \u0026 @PreDestroy\n */\npublic class LifeCycleConfig3Test {\n\n    private AnnotationConfigApplicationContext context;\n\n\n    @BeforeEach\n    public void init(){\n        context = new AnnotationConfigApplicationContext(LifeCycleConfig3.class);\n        System.out.println(\"容器创建完成\");\n    }\n\n    @Test\n    public void test(){\n\n\n    }\n\n    @AfterEach\n    public void destroy(){\n        context.close();\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-rcz24eo",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233138-rcz24eo"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "BeanPostProcessor 后置处理器 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-1izkl9w",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707233138-1izkl9w"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "简介"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-h52yowr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233138-h52yowr"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Spring 提供的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "BeanPostProcessor"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "接口：Bean 的后置处理器，在"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "所有 Bean 的初始化前后"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "进行一些处理工作，如"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "init-method"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "afterPropertiesSet"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "@PostConstruct"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "前后"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-dz3448i",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233138-dz3448i"
+			},
+			"Children": [
+				{
+					"ID": "20210707233138-gflxrn8",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-gflxrn8"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-4c6iicc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-4c6iicc"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "postProcessBeforeInitialization"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "初始化之前"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "工作"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-i4sgq4u",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-i4sgq4u"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-uoq1lmy",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-uoq1lmy"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "postProcessAfterInitialization"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "初始化之后"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "工作"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-tw38epc",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233138-tw38epc"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Component// 必须使用@Component，不能使用@Bean，否则爆红（不是自动代理的）\npublic class MyBeanPostProcessor implements BeanPostProcessor {\n    @Override\n    public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {\n        System.out.println(\"postProcessBeforeInitialization =\u003e beanName: \" \n                           + beanName + \", beanType: \" \n                           + bean.getClass());\n        return bean;\n    }\n\n    @Override\n    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {\n        System.out.println(\"postProcessAfterInitialization =\u003e beanName: \" \n                           + beanName + \", beanType: \" \n                           + bean.getClass());\n        return bean;\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-gu6m0k1",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233138-gu6m0k1"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n * BeanPostProcessor\n * 三种不同类型的 Bean，使用了不同的初始化方法\n */\n@Configuration\n@ComponentScan(basePackageClasses = {top.conanan.processor.MyBeanPostProcessor.class})\n// @ComponentScan({\"top.conanan.processor\"}) // 可以使用 basePackage 或 basePackageClasses（类型安全）\n@Import({Cat.class, Dog.class})\npublic class LifeCycleConfig4 {\n  \n    @Bean(initMethod = \"init\",destroyMethod = \"destroy\")\n    public Car car(){\n        return new Car();\n    }\n\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-xg4u45o",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233138-xg4u45o"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n * BeanPostProcessor\n */\npublic class LifeCycleConfig4Test {\n\n    private AnnotationConfigApplicationContext context;\n\n\n    @BeforeEach\n    public void init(){\n        context = new AnnotationConfigApplicationContext(LifeCycleConfig4.class);\n        System.out.println(\"容器创建完成\");\n    }\n\n    @Test\n    public void test(){\n\n\n    }\n\n    @AfterEach\n    public void destroy(){\n        context.close();\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-snjziic",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707233138-snjziic"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "工作原理"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-3lzbnqp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233138-3lzbnqp"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "DEBUG 查看调用栈"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "即可查看流程"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-miyz982",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233138-miyz982"
+			},
+			"Children": [
+				{
+					"ID": "20210707233138-a344cfp",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-a344cfp"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-ukg4rry",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-ukg4rry"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "populateBean(beanName, mbd, instanceWrapper)：给 bean 进行"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "属性赋值"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，调用 getter、setter 等"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-jol50gi",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-jol50gi"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-bq0q9j4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-bq0q9j4"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "initializeBean："
+								}
+							]
+						},
+						{
+							"ID": "20210707233138-tjksskh",
+							"Type": "NodeList",
+							"ListData": {
+								"BulletChar": 42,
+								"Padding": 2,
+								"Marker": "Kg==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707233138-tjksskh"
+							},
+							"Children": [
+								{
+									"ID": "20210707233138-bf1ci5r",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-bf1ci5r"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-nisjg1x",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-nisjg1x"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "applyBeanPostProcessorsBeforeInitialization(wrappedBean, beanName)："
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "初始化前"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												}
+											]
+										},
+										{
+											"ID": "20210707233138-ays27ar",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-ays27ar"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "遍历得到容器中所有的 BeanPostProcessor"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "；挨个执行 postProcessBeforeInitialization，一但返回 null 则 return 跳出 for 循环，不会执行后面 BeanPostProcessor 的 postProcessorsBeforeInitialization"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233138-o8ccjgs",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-o8ccjgs"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-9nb89u9",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-9nb89u9"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "invokeInitMethods(beanName, wrappedBean, mbd)："
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "执行自定义初始化"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "，对象创建好，并赋值好后，调用初始化方法"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233138-hp75l3d",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-hp75l3d"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-znfszby",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-znfszby"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "applyBeanPostProcessorsAfterInitialization(wrappedBean, beanName)："
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "初始化后"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-t4miccy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707233138-t4miccy"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "应用"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-o4lxb7a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233138-o4lxb7a"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Spring 底层对 BeanPostProcessor 的使用"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-foq95x5",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233138-foq95x5"
+			},
+			"Children": [
+				{
+					"ID": "20210707233138-wzcz11l",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-wzcz11l"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-j2pdiwg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-j2pdiwg"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "bean 赋值"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-sz8xki4",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-sz8xki4"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-008hod4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-008hod4"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "bean 校验：BeanValidationPostProcessor"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-e9lfwi2",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-e9lfwi2"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-mzq5qma",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-mzq5qma"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "注入其他组件"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-88kng8m",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-88kng8m"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-ty8m2g5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-ty8m2g5"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "@Autowired：AutowiredAnnotationBeanPostProcessor"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-bjj7lfn",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-bjj7lfn"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-ypn0wzt",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-ypn0wzt"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "生命周期注解功能（JSR250 那个）：InitDestroyAnnotationBeanPostProcessor"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-q4hqvxi",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-q4hqvxi"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-qzhz2di",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-qzhz2di"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "@Async"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-kchhprp",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-kchhprp"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-kezwybo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-kezwybo"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "注入 IoC 容器：ApplicationContextAwareProcessor"
+								}
+							]
+						},
+						{
+							"ID": "20210707233138-vtdaciv",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707233138-vtdaciv"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "public class Car implements ApplicationContextAware {\n\n    private ApplicationContext context;\n\n    /**\n     * 单实例：容器启动时创建对象触发\n     * 多实例：每次获取时创建对象触发\n     */\n    public Car(){\n        System.out.println(\"Car Constructor...\");\n    }\n\n    /**\n     * 单实例：容器启动，创建对象并赋值后触发\n     * 多实例：每次获取对象，创建对象并赋值后触发\n     */\n    public void init(){\n        System.out.println(\"Car init...\");\n    }\n\n    /**\n     * 单实例：关闭容器时\n     * 多实例：容器不会管理，需销毁则等到GC即可\n     */\n    public void destroy(){\n        System.out.println(\"Car destroy...\");\n    }\n\n    @Override\n    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {\n        this.context = applicationContext;\n    }\n}\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-g14ho6d",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233138-g14ho6d"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Bean 的生命周期控制 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-myq2ofk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233138-myq2ofk"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Bean 的生命周期顺序如下，覆盖了所有前前后后"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-k8u6lxa",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233138-k8u6lxa"
+			},
+			"Children": [
+				{
+					"ID": "20210707233138-ub5fymb",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-ub5fymb"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-0r5pmfb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-0r5pmfb"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "构造器（对象创建）：自定义无参构造器"
+								}
+							]
+						},
+						{
+							"ID": "20210707233138-h3lxor1",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 42,
+								"Padding": 2,
+								"Marker": "Kg==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707233138-h3lxor1"
+							},
+							"Children": [
+								{
+									"ID": "20210707233138-emy10d6",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-emy10d6"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-66o83o6",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-66o83o6"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "单实例：容器启动时创建对象"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233138-359jh7w",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-359jh7w"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-q2dn9mv",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-q2dn9mv"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "多实例：每次获取时创建对象"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-kx8kjt6",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-kx8kjt6"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-284wgxk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-284wgxk"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "BeanPostProcessor.postProcessBeforeInitialization：初始化前"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-o2xbec7",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-o2xbec7"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-nr5e807",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-nr5e807"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "invokeInitMethods(beanName, wrappedBean, mbd)：执行初始化，对象创建好，并赋值好后，调用初始化方法"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-88i3byk",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-88i3byk"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-wfxqxrk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-wfxqxrk"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "BeanPostProcessor.postProcessAfterInitialization：初始化后"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-25fz9ua",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-25fz9ua"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-ivsg68o",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-ivsg68o"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "销毁"
+								}
+							]
+						},
+						{
+							"ID": "20210707233138-r345m44",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 42,
+								"Padding": 2,
+								"Marker": "Kg==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707233138-r345m44"
+							},
+							"Children": [
+								{
+									"ID": "20210707233138-auwmegv",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-auwmegv"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-i2dk5nh",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-i2dk5nh"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "单实例：容器关闭（实现类方法中有）"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233138-pvnxg1x",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-pvnxg1x"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-vdwfydj",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-vdwfydj"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "多实例：容器不会管理这个 Bean，容器不会主动调用销毁方法，需GC"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-44cjam2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233138-44cjam2"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "参考"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-3xro0jb",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233138-3xro0jb"
+			},
+			"Children": [
+				{
+					"ID": "20210707233138-g04zhtc",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-g04zhtc"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-kg650bv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-kg650bv"
+							},
+							"Children": [
+								{
+									"Type": "NodeLink",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket",
+											"Data": "["
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Spring Bean的生命周期（非常详细）"
+										},
+										{
+											"Type": "NodeCloseBracket",
+											"Data": "]"
+										},
+										{
+											"Type": "NodeOpenParen",
+											"Data": "("
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://www.cnblogs.com/zrtqsk/p/3735273.html"
+										},
+										{
+											"Type": "NodeCloseParen",
+											"Data": ")"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

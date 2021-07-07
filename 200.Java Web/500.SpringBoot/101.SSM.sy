@@ -1,0 +1,2687 @@
+{
+	"ID": "20210707234309-x1mjg54",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210707234309-x1mjg54",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210707234309-xyqoec7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234309-xyqoec7"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "SSM 整合 — XML + 注解 + Maven 模块"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-w0cjf4c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-w0cjf4c"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "整合的思路："
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-61bdn27",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Tight": true,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 3,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210707234309-61bdn27"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-8wlu25g",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210707234309-8wlu25g"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-x20j9yo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-x20j9yo"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "先搭建整合的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "环境"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-opz9yik",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210707234309-opz9yik"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-wyf9eqq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-wyf9eqq"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "先把"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "Spring"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的配置搭建完成"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-r2ann3z",
+					"Type": "NodeListItem",
+					"Data": "3",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 3,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mw==",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20210707234309-r2ann3z"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-m3sd50q",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-m3sd50q"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "再使用"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "Spring整合SpringMVC"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "框架"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-05fnmtl",
+					"Type": "NodeListItem",
+					"Data": "4",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 4,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "NA==",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20210707234309-05fnmtl"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-eepni14",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-eepni14"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "最后使用"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "Spring整合MyBatis"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "框架"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-t56pchb",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-t56pchb"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "创建数据库和表结构"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-qrrz9sn",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-qrrz9sn"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "create database ssm; \nuse ssm; \ncreate table account(  \n    id int primary key auto_increment,  \n    name varchar(20),  \n    money double\n);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-chxz95r",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-chxz95r"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "创建maven_parent父工程"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-53jouv8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-53jouv8"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "会使用到工程的聚合和拆分的概念，这个技术在maven高级会讲"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-c96ozwg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-c96ozwg"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "打包方式选择"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "pom"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "（有子模块默认使用pom方式打包），只需要"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "pom.xml"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "文件，如下："
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-4l44qzw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eG1s",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-4l44qzw"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003c?xml version=\"1.0\" encoding=\"UTF-8\"?\u003e\n\u003cproject xmlns=\"http://maven.apache.org/POM/4.0.0\" \n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 \n                             http://maven.apache.org/xsd/maven-4.0.0.xsd\"\u003e\n    \u003cmodelVersion\u003e4.0.0\u003c/modelVersion\u003e\n\n    \u003cgroupId\u003ecom.itheima\u003c/groupId\u003e\n    \u003cartifactId\u003emaven\u003c/artifactId\u003e\n    \u003cversion\u003e1.0-SNAPSHOT\u003c/version\u003e\n    \u003cpackaging\u003ewar\u003c/packaging\u003e\n  \n    \u003c!--统一管理jar包版本--\u003e\n    \u003cproperties\u003e\n        \u003cproject.build.sourceEncoding\u003eUTF-8\u003c/project.build.sourceEncoding\u003e\n        \u003cmaven.compiler.source\u003e1.8\u003c/maven.compiler.source\u003e\n        \u003cmaven.compiler.target\u003e1.8\u003c/maven.compiler.target\u003e\n\n        \u003cspring.version\u003e5.1.1.RELEASE\u003c/spring.version\u003e\n        \u003cslf4j.version\u003e1.6.6\u003c/slf4j.version\u003e\n        \u003clog4j.version\u003e1.2.12\u003c/log4j.version\u003e\n        \u003cshiro.version\u003e1.2.3\u003c/shiro.version\u003e\n        \u003cmysql.version\u003e8.0.12\u003c/mysql.version\u003e\n        \u003cmybatis.version\u003e3.4.6\u003c/mybatis.version\u003e\n        \u003cspring.security.version\u003e5.1.1.RELEASE\u003c/spring.security.version\u003e\n    \u003c/properties\u003e\n\n    \u003c!-- 锁定jar包版本 --\u003e\n    \u003cdependencyManagement\u003e\n        \u003cdependencies\u003e\n            \u003cdependency\u003e\n                \u003cgroupId\u003eorg.springframework\u003c/groupId\u003e\n                \u003cartifactId\u003espring-context\u003c/artifactId\u003e\n                \u003cversion\u003e${spring.version}\u003c/version\u003e\n            \u003c/dependency\u003e\n            \u003cdependency\u003e\n                \u003cgroupId\u003eorg.springframework\u003c/groupId\u003e\n                \u003cartifactId\u003espring-web\u003c/artifactId\u003e\n                \u003cversion\u003e${spring.version}\u003c/version\u003e\n            \u003c/dependency\u003e\n            \u003cdependency\u003e\n                \u003cgroupId\u003eorg.springframework\u003c/groupId\u003e\n                \u003cartifactId\u003espring-webmvc\u003c/artifactId\u003e\n                \u003cversion\u003e${spring.version}\u003c/version\u003e\n            \u003c/dependency\u003e\n            \u003cdependency\u003e\n                \u003cgroupId\u003eorg.springframework\u003c/groupId\u003e\n                \u003cartifactId\u003espring-tx\u003c/artifactId\u003e\n                \u003cversion\u003e${spring.version}\u003c/version\u003e\n            \u003c/dependency\u003e\n            \u003cdependency\u003e\n                \u003cgroupId\u003eorg.springframework\u003c/groupId\u003e\n                \u003cartifactId\u003espring-test\u003c/artifactId\u003e\n                \u003cversion\u003e${spring.version}\u003c/version\u003e\n            \u003c/dependency\u003e\n            \u003cdependency\u003e\n                \u003cgroupId\u003eorg.mybatis\u003c/groupId\u003e\n                \u003cartifactId\u003emybatis\u003c/artifactId\u003e\n                \u003cversion\u003e${mybatis.version}\u003c/version\u003e\n            \u003c/dependency\u003e\n        \u003c/dependencies\u003e\n    \u003c/dependencyManagement\u003e\n  \n    \u003c!--项目依赖jar包--\u003e\n    \u003cdependencies\u003e\n        \u003c!-- spring --\u003e\n        \u003cdependency\u003e\n            \u003cgroupId\u003eorg.aspectj\u003c/groupId\u003e\n            \u003cartifactId\u003easpectjweaver\u003c/artifactId\u003e\n            \u003cversion\u003e1.6.8\u003c/version\u003e\n        \u003c/dependency\u003e\n\n        \u003cdependency\u003e\n            \u003cgroupId\u003eorg.springframework\u003c/groupId\u003e\n            \u003cartifactId\u003espring-aop\u003c/artifactId\u003e\n            \u003cversion\u003e${spring.version}\u003c/version\u003e\n        \u003c/dependency\u003e\n\n        \u003cdependency\u003e\n            \u003cgroupId\u003eorg.springframework\u003c/groupId\u003e\n            \u003cartifactId\u003espring-context\u003c/artifactId\u003e\n            \u003cversion\u003e${spring.version}\u003c/version\u003e\n        \u003c/dependency\u003e\n\n        \u003cdependency\u003e\n            \u003cgroupId\u003eorg.springframework\u003c/groupId\u003e\n            \u003cartifactId\u003espring-context-support\u003c/artifactId\u003e\n            \u003cversion\u003e${spring.version}\u003c/version\u003e\n        \u003c/dependency\u003e\n\n        \u003cdependency\u003e\n            \u003cgroupId\u003eorg.springframework\u003c/groupId\u003e\n            \u003cartifactId\u003espring-web\u003c/artifactId\u003e\n            \u003cversion\u003e${spring.version}\u003c/version\u003e\n        \u003c/dependency\u003e\n      \n        \u003c!--SpringMVC核心--\u003e\n        \u003cdependency\u003e\n            \u003cgroupId\u003eorg.springframework\u003c/groupId\u003e\n            \u003cartifactId\u003espring-webmvc\u003c/artifactId\u003e\n            \u003cversion\u003e${spring.version}\u003c/version\u003e\n        \u003c/dependency\u003e\n\n        \u003cdependency\u003e\n            \u003cgroupId\u003eorg.springframework\u003c/groupId\u003e\n            \u003cartifactId\u003espring-orm\u003c/artifactId\u003e\n            \u003cversion\u003e${spring.version}\u003c/version\u003e\n        \u003c/dependency\u003e\n\n        \u003cdependency\u003e\n            \u003cgroupId\u003eorg.springframework\u003c/groupId\u003e\n            \u003cartifactId\u003espring-beans\u003c/artifactId\u003e\n            \u003cversion\u003e${spring.version}\u003c/version\u003e\n        \u003c/dependency\u003e\n\n        \u003cdependency\u003e\n            \u003cgroupId\u003eorg.springframework\u003c/groupId\u003e\n            \u003cartifactId\u003espring-core\u003c/artifactId\u003e\n            \u003cversion\u003e${spring.version}\u003c/version\u003e\n        \u003c/dependency\u003e\n\n        \u003cdependency\u003e\n            \u003cgroupId\u003eorg.springframework\u003c/groupId\u003e\n            \u003cartifactId\u003espring-test\u003c/artifactId\u003e\n            \u003cversion\u003e${spring.version}\u003c/version\u003e\n        \u003c/dependency\u003e\n\n        \u003cdependency\u003e\n            \u003cgroupId\u003eorg.springframework\u003c/groupId\u003e\n            \u003cartifactId\u003espring-tx\u003c/artifactId\u003e\n            \u003cversion\u003e${spring.version}\u003c/version\u003e\n        \u003c/dependency\u003e\n\t   \n        \u003c!--使用Spring的JdbcTemplate。使用mybatis时可以不导入--\u003e\n        \u003cdependency\u003e\n            \u003cgroupId\u003eorg.springframework\u003c/groupId\u003e\n            \u003cartifactId\u003espring-jdbc\u003c/artifactId\u003e\n            \u003cversion\u003e${spring.version}\u003c/version\u003e\n        \u003c/dependency\u003e\n\n        \u003c!--JUnit测试--\u003e\n        \u003cdependency\u003e\n            \u003cgroupId\u003ejunit\u003c/groupId\u003e\n            \u003cartifactId\u003ejunit\u003c/artifactId\u003e\n            \u003cversion\u003e4.12\u003c/version\u003e\n            \u003cscope\u003etest\u003c/scope\u003e\u003c!--手动测试时需要修改scope--\u003e\n        \u003c/dependency\u003e\n\t    \u003c!--mysql连接驱动--\u003e\n        \u003cdependency\u003e\n            \u003cgroupId\u003emysql\u003c/groupId\u003e\n            \u003cartifactId\u003emysql-connector-java\u003c/artifactId\u003e\n            \u003cversion\u003e${mysql.version}\u003c/version\u003e\n        \u003c/dependency\u003e\n\t    \u003c!--servlet包--\u003e\n        \u003cdependency\u003e\n            \u003cgroupId\u003ejavax.servlet\u003c/groupId\u003e\n            \u003cartifactId\u003ejavax.servlet-api\u003c/artifactId\u003e\n            \u003cversion\u003e3.1.0\u003c/version\u003e\n            \u003cscope\u003eprovided\u003c/scope\u003e\n        \u003c/dependency\u003e\n\t\t\u003c!--jsp--\u003e\n        \u003cdependency\u003e\n            \u003cgroupId\u003ejavax.servlet.jsp\u003c/groupId\u003e\n            \u003cartifactId\u003ejsp-api\u003c/artifactId\u003e\n            \u003cversion\u003e2.0\u003c/version\u003e\n            \u003cscope\u003eprovided\u003c/scope\u003e\n        \u003c/dependency\u003e\n\t\t\u003c!--jstl--\u003e\n        \u003cdependency\u003e\n            \u003cgroupId\u003ejstl\u003c/groupId\u003e\n            \u003cartifactId\u003ejstl\u003c/artifactId\u003e\n            \u003cversion\u003e1.2\u003c/version\u003e\n        \u003c/dependency\u003e\n\n        \u003c!-- log start --\u003e\n        \u003cdependency\u003e\n            \u003cgroupId\u003elog4j\u003c/groupId\u003e\n            \u003cartifactId\u003elog4j\u003c/artifactId\u003e\n            \u003cversion\u003e${log4j.version}\u003c/version\u003e\n        \u003c/dependency\u003e\n      \n        \u003cdependency\u003e\n            \u003cgroupId\u003eorg.slf4j\u003c/groupId\u003e\n            \u003cartifactId\u003eslf4j-api\u003c/artifactId\u003e\n            \u003cversion\u003e${slf4j.version}\u003c/version\u003e\n        \u003c/dependency\u003e\n      \n        \u003cdependency\u003e\n            \u003cgroupId\u003eorg.slf4j\u003c/groupId\u003e\n            \u003cartifactId\u003eslf4j-log4j12\u003c/artifactId\u003e\n            \u003cversion\u003e${slf4j.version}\u003c/version\u003e\n        \u003c/dependency\u003e\n        \u003c!-- log end --\u003e\n      \n        \u003c!--mybatis--\u003e\n        \u003cdependency\u003e\n            \u003cgroupId\u003eorg.mybatis\u003c/groupId\u003e\n            \u003cartifactId\u003emybatis\u003c/artifactId\u003e\n            \u003cversion\u003e${mybatis.version}\u003c/version\u003e\n        \u003c/dependency\u003e\n\t    \u003c!--mybatis和spring整合包--\u003e\n        \u003cdependency\u003e\n            \u003cgroupId\u003eorg.mybatis\u003c/groupId\u003e\n            \u003cartifactId\u003emybatis-spring\u003c/artifactId\u003e\n            \u003cversion\u003e1.3.2\u003c/version\u003e\n        \u003c/dependency\u003e\n        \u003c!--Druid连接池，也可以用Spring自带的--\u003e\n        \u003cdependency\u003e\n            \u003cgroupId\u003ecom.alibaba\u003c/groupId\u003e\n            \u003cartifactId\u003edruid\u003c/artifactId\u003e\n            \u003cversion\u003e1.0.9\u003c/version\u003e\n        \u003c/dependency\u003e\n        \u003c!--c3p0连接池，也可以用Spring自带的--\u003e\n        \u003cdependency\u003e\n            \u003cgroupId\u003ecom.mchange\u003c/groupId\u003e\n            \u003cartifactId\u003ec3p0\u003c/artifactId\u003e\n            \u003cversion\u003e0.9.5.2\u003c/version\u003e\n            \u003ctype\u003ejar\u003c/type\u003e\n            \u003cscope\u003ecompile\u003c/scope\u003e\n        \u003c/dependency\u003e\n      \n        \u003cdependency\u003e\n            \u003cgroupId\u003ecom.github.pagehelper\u003c/groupId\u003e\n            \u003cartifactId\u003epagehelper\u003c/artifactId\u003e\n            \u003cversion\u003e5.1.2\u003c/version\u003e\n        \u003c/dependency\u003e\n        \u003c!--springsecurity--\u003e\n        \u003cdependency\u003e\n            \u003cgroupId\u003eorg.springframework.security\u003c/groupId\u003e\n            \u003cartifactId\u003espring-security-web\u003c/artifactId\u003e\n            \u003cversion\u003e${spring.security.version}\u003c/version\u003e\n        \u003c/dependency\u003e\n        \u003cdependency\u003e\n            \u003cgroupId\u003eorg.springframework.security\u003c/groupId\u003e\n            \u003cartifactId\u003espring-security-config\u003c/artifactId\u003e\n            \u003cversion\u003e${spring.security.version}\u003c/version\u003e\n        \u003c/dependency\u003e\n        \u003cdependency\u003e\n            \u003cgroupId\u003eorg.springframework.security\u003c/groupId\u003e\n            \u003cartifactId\u003espring-security-core\u003c/artifactId\u003e\n            \u003cversion\u003e${spring.security.version}\u003c/version\u003e\n        \u003c/dependency\u003e\n        \u003cdependency\u003e\n            \u003cgroupId\u003eorg.springframework.security\u003c/groupId\u003e\n            \u003cartifactId\u003espring-security-taglibs\u003c/artifactId\u003e\n            \u003cversion\u003e${spring.security.version}\u003c/version\u003e\n        \u003c/dependency\u003e\n    \u003c/dependencies\u003e\n  \n    \u003cbuild\u003e\n        \u003cplugins\u003e\n             \u003c!-- 设置编译版本为 1.8 --\u003e   \n            \u003cplugin\u003e     \n                \u003cgroupId\u003eorg.apache.maven.plugins\u003c/groupId\u003e     \n                \u003cartifactId\u003emaven-compiler-plugin\u003c/artifactId\u003e     \n                \u003cversion\u003e3.1\u003c/version \u003e     \n                \u003cconfiguration\u003e       \n                    \u003csource\u003e1.8\u003c/source\u003e       \n                    \u003ctarget\u003e1.8\u003c/target\u003e       \n                    \u003cencoding\u003eUTF-8\u003c/encoding\u003e     \n                \u003c/configuration\u003e   \n            \u003c/plugin\u003e  \n            \u003c!--添加tomcat7插件--\u003e\n            \u003cplugin\u003e\n                \u003cgroupId\u003eorg.apache.tomcat.maven\u003c/groupId\u003e\n                \u003cartifactId\u003etomcat7-maven-plugin\u003c/artifactId\u003e\n                \u003cversion\u003e2.2\u003c/version\u003e\n            \u003c/plugin\u003e\n        \u003c/plugins\u003e\n    \u003c/build\u003e\n  \n    \u003c!--下面为IDEA自动生成的maven插件，可以删除掉--\u003e\n    \u003cbuild\u003e \n        \u003cfinalName\u003essm\u003c/finalName\u003e\n        \u003cpluginManagement\u003e\n            \u003cplugins\u003e\n                \u003cplugin\u003e\n                    \u003cartifactId\u003emaven-clean-plugin\u003c/artifactId\u003e\n                    \u003cversion\u003e3.0.0\u003c/version\u003e\n                \u003c/plugin\u003e\n                ...还有好多\n            \u003c/plugins\u003e\n        \u003c/pluginManagement\u003e\n    \u003c/build\u003e\n\u003c/project\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-xq70tk7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-xq70tk7"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "创建maven_dao子模块"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-di91plr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-di91plr"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "打包方式为"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "jar"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "包（默认为jar方式打包），domain也可以从中脱离出来。"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "applicationContext-dao.xml"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "如下："
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-pslgq5g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-pslgq5g"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "整合MyBatis思路："
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-a60ledc",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Tight": true,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 3,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210707234309-a60ledc"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-1so3hcy",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210707234309-1so3hcy"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-u2q450m",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-u2q450m"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "数据库的连接以及数据库连接池交给spring容器来完成"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-yntgrpc",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210707234309-yntgrpc"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-cu540uk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-cu540uk"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "SqlSessionFactory对象应该放到spring容器中作为单例存在"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-jcipgw8",
+					"Type": "NodeListItem",
+					"Data": "3",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 3,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mw==",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20210707234309-jcipgw8"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-pofgz2g",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-pofgz2g"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "代理模式开发，应该从spring容器中直接获得mapper的动态代理对象"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-cchmt51",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eG1s",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-cchmt51"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003c?xml version=\"1.0\" encoding=\"UTF-8\"?\u003e\n\u003cbeans xmlns=\"http://www.springframework.org/schema/beans\"\n       xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n       xmlns:context=\"http://www.springframework.org/schema/context\"\n       xsi:schemaLocation=\"http://www.springframework.org/schema/beans\n\t\t\t    http://www.springframework.org/schema/beans/spring-beans.xsd\n\t\t\t    http://www.springframework.org/schema/context\n\t\t\t    http://www.springframework.org/schema/context/spring-context.xsd\"\u003e\n    \u003c!--组件扫描配置。不扫描由SpringMVC控制的Controller注解--\u003e\n    \u003ccontext:component-scan base-package=\"com.itheima.dao\"/\u003e\n    \u003c!--也可以用如下中配置方法\n    \u003ccontext:component-scan base-package=\"com.itheima\"\u003e\n        \u003ccontext:include-filter type=\"annotation\" expression=\"org.springframework.stereotype.Repository\"/\u003e\n        \u003ccontext:exclude-filter type=\"annotation\" expression=\"org.springframework.stereotype.Controller\"/\u003e\n    \u003c/context:component-scan\u003e --\u003e\n  \n    \u003c!-- 加载配置文件 --\u003e\n    \u003ccontext:property-placeholder location=\"classpath:jdbcConfig.properties\"/\u003e\n\n    \u003c!--配置Druid DataSource连接池，交给IoC管理--\u003e\n    \u003cbean id=\"dataSource\" class=\"com.alibaba.druid.pool.DruidDataSource\"\u003e\n        \u003cproperty name=\"driverClassName\" value=\"${jdbc.driver}\"/\u003e\n        \u003cproperty name=\"url\" value=\"${jdbc.url}\"/\u003e\n        \u003cproperty name=\"username\" value=\"${jdbc.username}\"/\u003e\n        \u003cproperty name=\"password\" value=\"${jdbc.password}\"/\u003e\n    \u003c/bean\u003e\n  \n    \u003c!-- 也可以配置c3p0连接池，交给IoC管理。 \n    \u003cbean id=\"dataSource\" class=\"com.mchange.v2.c3p0.ComboPooledDataSource\"\u003e\n        \u003cproperty name=\"driverClass\" value=\"${jdbc.driver}\" /\u003e\n        \u003cproperty name=\"jdbcUrl\" value=\"${jdbc.url}\" /\u003e\n        \u003cproperty name=\"user\" value=\"${jdbc.username}\" /\u003e\n        \u003cproperty name=\"password\" value=\"${jdbc.password}\" /\u003e\n    \u003c/bean\u003e --\u003e\n\n    \u003c!--配置SqlSession工厂，交给IoC管理--\u003e\n    \u003cbean id=\"sqlSessionFactory\" class=\"org.mybatis.spring.SqlSessionFactoryBean\"\u003e\n        \u003cproperty name=\"dataSource\" ref=\"dataSource\"/\u003e  \u003c!--注入DataSource--\u003e\n        \u003cproperty name=\"plugins\"\u003e \u003c!--PageInterceptor配置--\u003e\n            \u003carray\u003e\n                \u003cbean class=\"com.github.pagehelper.PageInterceptor\"\u003e\n                    \u003cproperty name=\"properties\"\u003e\n                        \u003cvalue\u003e\n                            helperDialect=mysql\n                            reasonable=true\n                        \u003c/value\u003e\n                    \u003c/property\u003e\n                \u003c/bean\u003e\n            \u003c/array\u003e\n        \u003c/property\u003e\n    \u003c/bean\u003e\n\n    \u003c!--扫描Mapper代理模式接口所在包--\u003e\n    \u003cbean class=\"org.mybatis.spring.mapper.MapperScannerConfigurer\"\u003e\n        \u003cproperty name=\"basePackage\" value=\"com.itheima.dao\"/\u003e\n    \u003c/bean\u003e\n\u003c/beans\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-v3bbwxp",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "cHJvcGVydGllcw==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-v3bbwxp"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "cHJvcGVydGllcw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#JdbcConfig.properties\njdbc.driver=com.mysql.cj.jdbc.Driver \njdbc.url=jdbc:mysql://localhost:3306/bxgtest?serverTimezone=GMT%2B8\u0026useSSL=false\njdbc.username=root\njdbc.password=w1111\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-7dg36v7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-7dg36v7"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "创建maven_service子模块"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-8gbklxr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-8gbklxr"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "打包方式是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "jar"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "包（默认为jar方式） ，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "applicationContext-service.xml"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "如下："
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-i9o0uo8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-i9o0uo8"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "整合思路：除了业务，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "事务"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "也应该交由Spring的声明式事务管理"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-54d129l",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eG1s",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-54d129l"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003c?xml version=\"1.0\" encoding=\"UTF-8\"?\u003e\n\u003cbeans xmlns=\"http://www.springframework.org/schema/beans\"\n       xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n       xmlns:context=\"http://www.springframework.org/schema/context\"\n       xmlns:aop=\"http://www.springframework.org/schema/aop\"\n       xmlns:tx=\"http://www.springframework.org/schema/tx\"\n       xsi:schemaLocation=\"http://www.springframework.org/schema/beans\n                           http://www.springframework.org/schema/beans/spring-beans.xsd\n                           http://www.springframework.org/schema/context\n                           http://www.springframework.org/schema/context/spring-context.xsd\n                           http://www.springframework.org/schema/aop\n                           http://www.springframework.org/schema/aop/spring-aop.xsd\n                           http://www.springframework.org/schema/tx\n                           http://www.springframework.org/schema/tx/spring-tx.xsd\"\u003e\n    \u003c!--组件扫描配置。不扫描由SpringMVC控制的Controller注解。--\u003e\n    \u003ccontext:component-scan base-package=\"com.itheima.service\"/\u003e\n\n    \u003c!--配置事务管理器--\u003e\n    \u003cbean id=\"transactionManager\" class=\"org.springframework.jdbc.datasource.DataSourceTransactionManager\"\u003e\n        \u003cproperty name=\"dataSource\" ref=\"dataSource\"/\u003e\n    \u003c/bean\u003e\n  \n    \u003c!--也可以开启对事务的注解支持--\u003e\n    \u003ctx:annotation-driven transaction-manager=\"transactionManager\"/\u003e\n\n  \n    \u003c!--以下为xml配置，暂不推荐--\u003e\n    \u003c!--配置事务通知--\u003e\n    \u003ctx:advice id=\"txAdvice\"\u003e\n        \u003ctx:attributes\u003e\n            \u003ctx:method name=\"*\" propagation=\"REQUIRED\"/\u003e \u003c!--可以不配置propagation，默认为REQUIRED--\u003e\n            \u003ctx:method name=\"find*\" propagation=\"SUPPORTS\" read-only=\"true\"/\u003e\n        \u003c/tx:attributes\u003e\n    \u003c/tx:advice\u003e\n\n    \u003c!--配置切面（切点和通知的关系）--\u003e\n    \u003caop:config\u003e\n        \u003caop:pointcut id=\"pt1\" expression=\"execution(* com.itheima.service.impl.*.*(..))\"/\u003e\n        \u003caop:advisor advice-ref=\"txAdvice\" pointcut-ref=\"pt1\"/\u003e\n    \u003c/aop:config\u003e\n\u003c/beans\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-oej5t78",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-oej5t78"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "创建maven_web子模块"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-5aklzdd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-5aklzdd"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "打包方式是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "war"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "包"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-rzc731v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-rzc731v"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "思路："
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-bwlto8q",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707234309-bwlto8q"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-3njsm5y",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-3njsm5y"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-b8pq29d",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-b8pq29d"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "web.xml"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "配置：在项目服务器启动时创建"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"CodeMarkerLen": 1,
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker",
+													"Data": "`"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "DispatcherServlet"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker",
+													"Data": "`"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "前端控制器"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的并加载"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "springmvc.xml"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "配置的容器。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-fl3cu7k",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-fl3cu7k"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-dp1wdz2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-dp1wdz2"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "web.xml"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "配置："
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"CodeMarkerLen": 1,
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker",
+													"Data": "`"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "ContextLoaderListener"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker",
+													"Data": "`"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "监听器"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，在项目服务器启动时加载所有"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "applicationContext*.xml"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的容器。"
+								}
+							]
+						},
+						{
+							"ID": "20210707234309-fmwiqma",
+							"Type": "NodeList",
+							"ListData": {
+								"BulletChar": 42,
+								"Padding": 2,
+								"Marker": "Kg==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707234309-fmwiqma"
+							},
+							"Children": [
+								{
+									"ID": "20210707234309-udawy5u",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707234309-udawy5u"
+									},
+									"Children": [
+										{
+											"ID": "20210707234309-wux9ccb",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707234309-wux9ccb"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "classpath"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "和"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "classpath*"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "都是加载类路径下的资源和依赖的jar包中的资源（先后顺序）"
+												}
+											]
+										},
+										{
+											"ID": "20210707234309-tbqql55",
+											"Type": "NodeList",
+											"ListData": {
+												"Tight": true,
+												"BulletChar": 42,
+												"Padding": 2,
+												"Marker": "Kg==",
+												"Num": -1
+											},
+											"Properties": {
+												"id": "20210707234309-tbqql55"
+											},
+											"Children": [
+												{
+													"ID": "20210707234309-g7cdks2",
+													"Type": "NodeListItem",
+													"Data": "*",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 42,
+														"Padding": 2,
+														"Marker": "Kg==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707234309-g7cdks2"
+													},
+													"Children": [
+														{
+															"ID": "20210707234309-4b4t2jy",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707234309-4b4t2jy"
+															},
+															"Children": [
+																{
+																	"Type": "NodeCodeSpan",
+																	"CodeMarkerLen": 1,
+																	"Children": [
+																		{
+																			"Type": "NodeCodeSpanOpenMarker",
+																			"Data": "`"
+																		},
+																		{
+																			"Type": "NodeCodeSpanContent",
+																			"Data": "classpath"
+																		},
+																		{
+																			"Type": "NodeCodeSpanCloseMarker",
+																			"Data": "`"
+																		}
+																	]
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "只会返回第一个匹配的资源（有误！！！）"
+																}
+															]
+														}
+													]
+												},
+												{
+													"ID": "20210707234309-470vi7e",
+													"Type": "NodeListItem",
+													"Data": "*",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 42,
+														"Padding": 2,
+														"Marker": "Kg==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707234309-470vi7e"
+													},
+													"Children": [
+														{
+															"ID": "20210707234309-a03j86z",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707234309-a03j86z"
+															},
+															"Children": [
+																{
+																	"Type": "NodeCodeSpan",
+																	"CodeMarkerLen": 1,
+																	"Children": [
+																		{
+																			"Type": "NodeCodeSpanOpenMarker",
+																			"Data": "`"
+																		},
+																		{
+																			"Type": "NodeCodeSpanContent",
+																			"Data": "classpath*"
+																		},
+																		{
+																			"Type": "NodeCodeSpanCloseMarker",
+																			"Data": "`"
+																		}
+																	]
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "会返回路径下匹配的所有资源，可以使用通配符"
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-0mlz1b7",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-0mlz1b7"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-2ndcgu0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-2ndcgu0"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "web.xml"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "配置："
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"CodeMarkerLen": 1,
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker",
+													"Data": "`"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "CharacterEncodingFilter"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker",
+													"Data": "`"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "编码过滤器"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，设置Request、Response编码"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-vafpr3h",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-vafpr3h"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-h3cvgge",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-h3cvgge"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "springmvc.xml"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "中配置处理器映射器、处理器适配器、视图解析器、释放静态资源"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-2kb6nw2",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eG1s",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-2kb6nw2"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003c?xml version=\"1.0\" encoding=\"UTF-8\"?\u003e\n\u003cweb-app xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xmlns=\"http://java.sun.com/xml/ns/javaee\"\n         xsi:schemaLocation=\"http://java.sun.com/xml/ns/javaee\n                             http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd\"\n         version=\"2.5\"\u003e\n\n \n    \u003c!-- 配置ContextLoaderListener监听器，加载所有applicationContext.xml并创建spring容器 --\u003e\n    \u003clistener\u003e\n        \u003clistener-class\u003eorg.springframework.web.context.ContextLoaderListener\u003c/listener-class\u003e\n    \u003c/listener\u003e\n    \u003c!-- 配置参数加载类路径的配置文件，不配置默认扫描WEB-INF下的applicationContext --\u003e\n    \u003ccontext-param\u003e\n        \u003cparam-name\u003econtextConfigLocation\u003c/param-name\u003e\n        \u003cparam-value\u003eclasspath*:applicationContext*.xml\u003c/param-value\u003e\n    \u003c/context-param\u003e\n\n\n    \u003c!-- 配置SpringMVC的前端控制器：服务器启动后创建，并加载springmvc.xml配置文件创建springmvc容器 --\u003e\n    \u003cservlet\u003e\n        \u003cservlet-name\u003edispatcherServlet\u003c/servlet-name\u003e\n        \u003cservlet-class\u003eorg.springframework.web.servlet.DispatcherServlet\u003c/servlet-class\u003e\n        \u003c!-- 配置初始化参数，用于读取 springmvc 的配置文件 --\u003e \n        \u003cinit-param\u003e\n            \u003cparam-name\u003econtextConfigLocation\u003c/param-name\u003e\n            \u003cparam-value\u003eclasspath:springmvc.xml\u003c/param-value\u003e\n        \u003c/init-param\u003e\n        \u003c!-- 配置 servlet 的对象的创建时间点：应用加载时创建。取值只能是非 0 正整数，表示启动顺序 --\u003e\n        \u003cload-on-startup\u003e1\u003c/load-on-startup\u003e\n    \u003c/servlet\u003e\n    \u003cservlet-mapping\u003e\n        \u003cservlet-name\u003edispatcherServlet\u003c/servlet-name\u003e\n        \u003curl-pattern\u003e/\u003c/url-pattern\u003e \n    \u003c/servlet-mapping\u003e\n  \n  \n     \u003c!--配置编码过滤器--\u003e  \n    \u003cfilter\u003e\n        \u003cfilter-name\u003echaracterEncodingFilter\u003c/filter-name\u003e\n        \u003cfilter-class\u003eorg.springframework.web.filter.CharacterEncodingFilter\u003c/filter-class\u003e\n        \u003c!-- 设置过滤器中的属性值 --\u003e \n        \u003cinit-param\u003e\n            \u003cparam-name\u003eencoding\u003c/param-name\u003e\n            \u003cparam-value\u003eUTF-8\u003c/param-value\u003e\n        \u003c/init-param\u003e \n        \u003c!-- 是否强制Request、Response编码 --\u003e   \n        \u003cinit-param\u003e \n            \u003cparam-name\u003eforceEncoding\u003c/param-name\u003e  \n            \u003cparam-value\u003etrue\u003c/param-value\u003e \n        \u003c/init-param\u003e \n    \u003c/filter\u003e\n    \u003cfilter-mapping\u003e\n        \u003cfilter-name\u003echaracterEncodingFilter\u003c/filter-name\u003e\n        \u003curl-pattern\u003e/*\u003c/url-pattern\u003e \u003c!-- 过滤所有请求 --\u003e \n    \u003c/filter-mapping\u003e\n  \n    \u003c!--RESTful开发时，处理DELETE、PUT等请求。前端提交信息需要_method--\u003e\n    \u003cfilter\u003e\n        \u003cfilter-name\u003ehiddenHttpMethodFilter\u003c/filter-name\u003e\n        \u003cfilter-class\u003eorg.springframework.web.filter.HiddenHttpMethodFilter\u003c/filter-class\u003e\n    \u003c/filter\u003e\n    \u003cfilter-mapping\u003e\n        \u003cfilter-name\u003ehiddenHttpMethodFilter\u003c/filter-name\u003e\n        \u003curl-pattern\u003e/*\u003c/url-pattern\u003e\n    \u003c/filter-mapping\u003e\n  \n    \u003c!--释放静态资源方式1：配置DefaultServlet的静态资源url，直接过滤静态资源 \n    \u003cservlet-mapping\u003e\n        \u003cservlet-name\u003edefault\u003c/servlet-name\u003e\n        \u003curl-pattern\u003e/css/*\u003c/url-pattern\u003e\n        \u003curl-pattern\u003e/img/*\u003c/url-pattern\u003e\n        \u003curl-pattern\u003e/plugins/*\u003c/url-pattern\u003e\n        \u003curl-pattern\u003e/templates/*\u003c/url-pattern\u003e\n    \u003c/servlet-mapping\u003e  --\u003e\n\u003c/web-app\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-1y9f1ge",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eG1s",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-1y9f1ge"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003c?xml version=\"1.0\" encoding=\"UTF-8\"?\u003e\n\u003cbeans xmlns=\"http://www.springframework.org/schema/beans\"\n       xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n       xmlns:context=\"http://www.springframework.org/schema/context\"\n       xmlns:mvc=\"http://www.springframework.org/schema/mvc\"\n       xsi:schemaLocation=\"http://www.springframework.org/schema/beans\n\t\t\t    http://www.springframework.org/schema/beans/spring-beans.xsd\n\t\t\t    http://www.springframework.org/schema/context\n\t\t\t    http://www.springframework.org/schema/context/spring-context.xsd\n\t\t\t    http://www.springframework.org/schema/mvc\n\t\t\t    http://www.springframework.org/schema/mvc/spring-mvc.xsd\"\u003e\n\n    \u003c!--组件扫描，只扫描controller包下的类。也可以用applicationContext中配置方法--\u003e\n    \u003ccontext:component-scan base-package=\"com.itheima.controller\"/\u003e\n\n    \u003c!--开启对SpringMVC注解的支持，替代处理器映射器、处理器适配器--\u003e\n    \u003cmvc:annotation-driven/\u003e\n  \n    \u003cbean id=\"applicationContext\" class=\"org.springframework.context.support.ClassPathXmlApplicationContext\"/\u003e\n\n    \u003c!--模板解析器--\u003e\n    \u003cbean id=\"templateResolver\" class=\"org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver\"\u003e\n        \u003cproperty name=\"applicationContext\" ref=\"applicationContext\"/\u003e\n        \u003cproperty name=\"prefix\" value=\"/templates/\"/\u003e\n        \u003cproperty name=\"suffix\" value=\".html\"/\u003e\n        \u003cproperty name=\"templateMode\" value=\"HTML\"/\u003e\n        \u003cproperty name=\"characterEncoding\" value=\"UTF-8\"/\u003e\u003c!--解决页面乱码！--\u003e\n    \u003c/bean\u003e\n    \u003c!--模板引擎--\u003e\n    \u003cbean id=\"templateEngine\" class=\"org.thymeleaf.spring5.SpringTemplateEngine\"\u003e\n        \u003cproperty name=\"templateResolver\" ref=\"templateResolver\"/\u003e\n    \u003c/bean\u003e\n    \u003c!--Thymeleaf视图解析器--\u003e\n    \u003cbean class=\"org.thymeleaf.spring5.view.ThymeleafViewResolver\"\u003e\n        \u003cproperty name=\"templateEngine\" ref=\"templateEngine\"/\u003e\n        \u003cproperty name=\"characterEncoding\" value=\"UTF-8\"/\u003e\u003c!--解决页面乱码！--\u003e\n    \u003c/bean\u003e\n\n\n    \u003c!--JSP视图解析器--\u003e\n    \u003cbean class=\"org.springframework.web.servlet.view.InternalResourceViewResolver\"\u003e\n        \u003cproperty name=\"prefix\" value=\"/WEB-INF/pages/\"/\u003e\n        \u003cproperty name=\"suffix\" value=\".jsp\"/\u003e\n    \u003c/bean\u003e\n\n    \u003c!--（推荐）释放静态资源方式3：将SpringMVC处理不了的请求交给Tomcat，静态资源就可以访问了--\u003e\n    \u003cmvc:default-servlet-handler/\u003e\n\n    \u003c!--释放静态资源方式2： location表示路径，mapping表示文件，**表示该目录下的文件以及子目录的文件 \n    \u003cmvc:resources mapping=\"/static/**\" location=\"/static/\"/\u003e   静态资源放入static目录即可只写这一句\n    \u003cmvc:resources mapping=\"/css/**\" location=\"/css/\" /\u003e\n    \u003cmvc:resources mapping=\"/images/**\" location=\"/images/\"/\u003e\n    \u003cmvc:resources mapping=\"/js/**\" location=\"/js/\" /\u003e \n    --\u003e\n  \n    \u003c!--aop注解支持--\u003e\n    \u003caop:aspectj-autoproxy proxy-target-class=\"true\"/\u003e\n\u003c/beans\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-bo6ltk5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-bo6ltk5"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "日志输出"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-92bcsp9",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "cHJvcGVydGllcw==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-92bcsp9"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "cHJvcGVydGllcw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#log4j.properties\n# Configure logging for testing: optionally with log file\nlog4j.rootLogger=WARN, stdout\n# log4j.rootLogger=WARN, stdout, logfile\n\nlog4j.appender.stdout=org.apache.log4j.ConsoleAppender\nlog4j.appender.stdout.layout=org.apache.log4j.PatternLayout\nlog4j.appender.stdout.layout.ConversionPattern=%d %p [%c] - %m%n\n\nlog4j.appender.logfile=org.apache.log4j.FileAppender\nlog4j.appender.logfile.File=target/spring.log\nlog4j.appender.logfile.layout=org.apache.log4j.PatternLayout\nlog4j.appender.logfile.layout.ConversionPattern=%d %p [%c] - %m%n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-zfnmvqo",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-zfnmvqo"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "各子模块间依赖"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-xepp8tc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-xepp8tc"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "web依赖于service；service依赖于dao（如下）"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-u6je3c4",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eG1s",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-u6je3c4"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cdependency\u003e\n    \u003cgroupId\u003ecom.itheima\u003c/groupId\u003e\n    \u003cartifactId\u003emaven_dao\u003c/artifactId\u003e\n    \u003cversion\u003e1.0-SNAPSHOT\u003c/version\u003e\n\u003c/dependency\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-dst1e3g",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-dst1e3g"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "运行项目"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-azeoswb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-azeoswb"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "方法一："
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-3wiimbm",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707234309-3wiimbm"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-tj5lhvn",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-tj5lhvn"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-sh41vdh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-sh41vdh"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在maven_web子模块的 pom.xml 中配置 tomcat 插件运行"
+								}
+							]
+						},
+						{
+							"ID": "20210707234309-0fb057c",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-0fb057c"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "运行 ssm_web 工程它会"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "从本地仓库下载依赖的 jar 包"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（需要将maven_web所依赖的所有模块发布至本地仓库，直接install父工程也行），所以当 ssm_web 依赖的 jar 包内容修改了必须及时发布到本地仓库，比如：ssm_web 依赖的 ssm_service 修改了，需要及时将ssm_service 发布到本地仓库。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-7ucxi4v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-7ucxi4v"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "方法二："
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-sijiii3",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707234309-sijiii3"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-5l66q32",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-5l66q32"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-da73hsf",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-da73hsf"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "在maven_parent父工程的 pom.xml 中配置 tomcat插件运行"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，自动聚合并执行（"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "推荐"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "）"
+								}
+							]
+						},
+						{
+							"ID": "20210707234309-wo03b07",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-wo03b07"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果子工程都在本地，采用方法2则不需要子工程修改就立即发布到本地仓库，父工程会自动聚合并使用最新代码执行。"
+								}
+							]
+						},
+						{
+							"ID": "20210707234309-8aevice",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-8aevice"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "注意：如果子工程和父工程中都配置了tomcat 插件，运行的端口和路径以子工程为准。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-mmigreh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-mmigreh"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "方法三："
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-i9tcrss",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707234309-i9tcrss"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-etlb5xw",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-etlb5xw"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-62tqpts",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-62tqpts"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用本地Tomcat部署"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-yp9m5cz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234309-yp9m5cz"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "SSM 整合 — JavaConfig"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-9ditk1j",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-9ditk1j"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "POM"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-qkxyo59",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-qkxyo59"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 Maven 创建 Web 项目，需要添加没自动添加的文件夹"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-gbh7zjp",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eG1s",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-gbh7zjp"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003c?xml version=\"1.0\" encoding=\"UTF-8\"?\u003e\n\n\u003cproject xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\"\u003e\n  \u003cmodelVersion\u003e4.0.0\u003c/modelVersion\u003e\n\n  \u003cgroupId\u003etop.conanan\u003c/groupId\u003e\n  \u003cartifactId\u003eCRM-JavaConfig\u003c/artifactId\u003e\n  \u003cversion\u003e1.0-SNAPSHOT\u003c/version\u003e\n  \u003cpackaging\u003ewar\u003c/packaging\u003e\n\n  \u003cname\u003eCRM-JavaConfig\u003c/name\u003e\n\n  \u003cproperties\u003e\n    \u003cproject.build.sourceEncoding\u003eUTF-8\u003c/project.build.sourceEncoding\u003e\n    \u003c!--根据自己的Java版本选择--\u003e\n    \u003cmaven.compiler.source\u003e1.8\u003c/maven.compiler.source\u003e\n    \u003cmaven.compiler.target\u003e1.8\u003c/maven.compiler.target\u003e\n\n    \u003c!--spring最新--\u003e\n    \u003corg.springframework.version\u003e5.2.6.RELEASE\u003c/org.springframework.version\u003e\n    \u003c!--JUnit5最新--\u003e\n    \u003cjunit.jupiter.version\u003e5.6.2\u003c/junit.jupiter.version\u003e\n    \u003c!--jackson最新--\u003e\n    \u003cjackson.version\u003e2.11.0\u003c/jackson.version\u003e\n\n\n    \u003cmysql.mysql-connector-java\u003e8.0.19\u003c/mysql.mysql-connector-java\u003e\n    \u003ccom.alibaba.druid\u003e1.1.22\u003c/com.alibaba.druid\u003e\n    \u003c!--mybatis \u0026 mybatis 整合 spring 最新版--\u003e\n    \u003corg.mybatis.version\u003e3.5.4\u003c/org.mybatis.version\u003e\n    \u003corg.mybatis.mybatis.spring.version\u003e2.0.4\u003c/org.mybatis.mybatis.spring.version\u003e\n\n\n\n  \u003c/properties\u003e\n\n  \u003cdependencies\u003e\n    \u003c!--spring--\u003e\n    \u003c!--spring-context：在基础ioc功能上提供扩展服务，此外还提供许多企业级服务的支持，如邮件服务、任务调度、JNDI定位，EJB集成、远程访问、缓存以及多种视图层框架的支持。 包括\n        spring-core: Spring 核心包。其中包括 Spring-jcl（日志）\n        spring-beans：Spring ioc基础实现，包含访问配置文件、创建和管理 bean 等。其中包括 spring-core\n        spring-aop: Spring 的 AOP 实现。一般实际使用时会添加 AspectJ 的依赖 org.aspectj:aspectjweaver\n        spring-expression：Spring 表达式？\n    --\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003eorg.springframework\u003c/groupId\u003e\n      \u003cartifactId\u003espring-context\u003c/artifactId\u003e\n      \u003cversion\u003e${org.springframework.version}\u003c/version\u003e\n    \u003c/dependency\u003e\n    \u003c!--spring-context 的扩展，用于 cache、mail、scheduling、freemarker 等。包括 spring-context --\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003eorg.springframework\u003c/groupId\u003e\n      \u003cartifactId\u003espring-context-support\u003c/artifactId\u003e\n      \u003cversion\u003e${org.springframework.version}\u003c/version\u003e\n    \u003c/dependency\u003e\n    \u003c!--包含web应用开发时用到spring框架所需要的核心类，包括自动载入WebApplicationContext特性的类--\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003eorg.springframework\u003c/groupId\u003e\n      \u003cartifactId\u003espring-web\u003c/artifactId\u003e\n      \u003cversion\u003e${org.springframework.version}\u003c/version\u003e\n    \u003c/dependency\u003e\n    \u003c!--包含spring mvc框架相关的所有类。包含国际化、标签、Theme、视图展现的FreeMarker、JasperReports、 Tiles、Velocity、XSLT相关类--\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003eorg.springframework\u003c/groupId\u003e\n      \u003cartifactId\u003espring-webmvc\u003c/artifactId\u003e\n      \u003cversion\u003e${org.springframework.version}\u003c/version\u003e\n    \u003c/dependency\u003e\n    \u003c!--spring事务--\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003eorg.springframework\u003c/groupId\u003e\n      \u003cartifactId\u003espring-tx\u003c/artifactId\u003e\n      \u003cversion\u003e${org.springframework.version}\u003c/version\u003e\n    \u003c/dependency\u003e\n\n\n    \u003c!-- AspectJ Runtime --\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003eorg.aspectj\u003c/groupId\u003e\n      \u003cartifactId\u003easpectjrt\u003c/artifactId\u003e\n      \u003cversion\u003e1.9.5\u003c/version\u003e\n    \u003c/dependency\u003e\n    \u003c!--AspectJ Weaver--\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003eorg.aspectj\u003c/groupId\u003e\n      \u003cartifactId\u003easpectjweaver\u003c/artifactId\u003e\n      \u003cversion\u003e1.9.5\u003c/version\u003e\n    \u003c/dependency\u003e\n  \n    \u003c!-- jackson --\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003ecom.fasterxml.jackson.core\u003c/groupId\u003e\n      \u003cartifactId\u003ejackson-core\u003c/artifactId\u003e\n      \u003cversion\u003e${jackson.version}\u003c/version\u003e\n    \u003c/dependency\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003ecom.fasterxml.jackson.core\u003c/groupId\u003e\n      \u003cartifactId\u003ejackson-databind\u003c/artifactId\u003e\n      \u003cversion\u003e${jackson.version}\u003c/version\u003e\n    \u003c/dependency\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003ecom.fasterxml.jackson.core\u003c/groupId\u003e\n      \u003cartifactId\u003ejackson-annotations\u003c/artifactId\u003e\n      \u003cversion\u003e${jackson.version}\u003c/version\u003e\n    \u003c/dependency\u003e\n\n\n    \u003c!--lombok--\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003eorg.projectlombok\u003c/groupId\u003e\n      \u003cartifactId\u003elombok\u003c/artifactId\u003e\n      \u003cversion\u003e1.18.12\u003c/version\u003e\n    \u003c/dependency\u003e\n\n\n\n    \u003c!-- servlet-api --\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003ejavax.servlet\u003c/groupId\u003e\n      \u003cartifactId\u003ejavax.servlet-api\u003c/artifactId\u003e\n      \u003cversion\u003e4.0.1\u003c/version\u003e\n      \u003cscope\u003eprovided\u003c/scope\u003e\n    \u003c/dependency\u003e\n    \u003c!--jsp-api--\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003ejavax.servlet.jsp\u003c/groupId\u003e\n      \u003cartifactId\u003ejavax.servlet.jsp-api\u003c/artifactId\u003e\n      \u003cversion\u003e2.3.3\u003c/version\u003e\n      \u003cscope\u003eprovided\u003c/scope\u003e\n    \u003c/dependency\u003e\n    \u003c!-- jstl --\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003ejavax.servlet.jsp.jstl\u003c/groupId\u003e\n      \u003cartifactId\u003ejstl-api\u003c/artifactId\u003e\n      \u003cversion\u003e1.2\u003c/version\u003e\n    \u003c/dependency\u003e\n\n\n\n\n    \u003c!-- common-lang --\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003ecommons-lang\u003c/groupId\u003e\n      \u003cartifactId\u003ecommons-lang\u003c/artifactId\u003e\n      \u003cversion\u003e2.6\u003c/version\u003e\n    \u003c/dependency\u003e\n\n\n\n    \u003c!-- cglib --\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003ecglib\u003c/groupId\u003e\n      \u003cartifactId\u003ecglib\u003c/artifactId\u003e\n      \u003cversion\u003e3.1\u003c/version\u003e\n    \u003c/dependency\u003e\n\n\n    \u003c!--数据库层--\u003e\n    \u003c!--根据自己的mysql版本选择（升级）--\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003emysql\u003c/groupId\u003e\n      \u003cartifactId\u003emysql-connector-java\u003c/artifactId\u003e\n      \u003cversion\u003e${mysql.mysql-connector-java}\u003c/version\u003e\n    \u003c/dependency\u003e\n    \u003c!--对JDBC的简单封装，使用 Mybatis 等其他的可以注释掉该依赖--\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003eorg.springframework\u003c/groupId\u003e\n      \u003cartifactId\u003espring-jdbc\u003c/artifactId\u003e\n      \u003cversion\u003e${org.springframework.version}\u003c/version\u003e\n    \u003c/dependency\u003e\n    \u003c!--Mybatis-Plus--\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003ecom.baomidou\u003c/groupId\u003e\n      \u003cartifactId\u003emybatis-plus\u003c/artifactId\u003e\n      \u003cversion\u003e3.3.1\u003c/version\u003e\n    \u003c/dependency\u003e\n    \u003c!--Mybatis-Plus 代码生成（还依赖模版技术）--\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003ecom.baomidou\u003c/groupId\u003e\n      \u003cartifactId\u003emybatis-plus-generator\u003c/artifactId\u003e\n      \u003cversion\u003e3.3.1\u003c/version\u003e\n    \u003c/dependency\u003e\n    \u003c!-- druid --\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003ecom.alibaba\u003c/groupId\u003e\n      \u003cartifactId\u003edruid\u003c/artifactId\u003e\n      \u003cversion\u003e${com.alibaba.druid}\u003c/version\u003e\n    \u003c/dependency\u003e\n    \u003c!--HikariCP--\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003ecom.zaxxer\u003c/groupId\u003e\n      \u003cartifactId\u003eHikariCP\u003c/artifactId\u003e\n      \u003cversion\u003e3.4.5\u003c/version\u003e\n    \u003c/dependency\u003e\n\n\n\n\n    \u003c!--log--\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003eorg.slf4j\u003c/groupId\u003e\n      \u003cartifactId\u003eslf4j-api\u003c/artifactId\u003e\n      \u003cversion\u003e1.7.30\u003c/version\u003e\n    \u003c/dependency\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003eorg.slf4j\u003c/groupId\u003e\n      \u003cartifactId\u003eslf4j-log4j12\u003c/artifactId\u003e\n      \u003cversion\u003e1.7.30\u003c/version\u003e\n    \u003c/dependency\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003elog4j\u003c/groupId\u003e\n      \u003cartifactId\u003elog4j\u003c/artifactId\u003e\n      \u003cversion\u003e1.2.17\u003c/version\u003e\n    \u003c/dependency\u003e\n    \u003c!--log--\u003e\n\n\n    \u003cdependency\u003e\n      \u003cgroupId\u003ecommons-fileupload\u003c/groupId\u003e\n      \u003cartifactId\u003ecommons-fileupload\u003c/artifactId\u003e\n      \u003cversion\u003e1.3.1\u003c/version\u003e\n    \u003c/dependency\u003e\n\n\n    \u003c!-- standard --\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003etaglibs\u003c/groupId\u003e\n      \u003cartifactId\u003estandard\u003c/artifactId\u003e\n      \u003cversion\u003e1.1.2\u003c/version\u003e\n    \u003c/dependency\u003e\n\n    \u003cdependency\u003e\n      \u003cgroupId\u003eorg.freemarker\u003c/groupId\u003e\n      \u003cartifactId\u003efreemarker\u003c/artifactId\u003e\n      \u003cversion\u003e2.3.30\u003c/version\u003e\n    \u003c/dependency\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003edom4j\u003c/groupId\u003e\n      \u003cartifactId\u003edom4j\u003c/artifactId\u003e\n      \u003cversion\u003e1.6.1\u003c/version\u003e\n    \u003c/dependency\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003enet.sourceforge.jexcelapi\u003c/groupId\u003e\n      \u003cartifactId\u003ejxl\u003c/artifactId\u003e\n      \u003cversion\u003e2.6.12\u003c/version\u003e\n    \u003c/dependency\u003e\n\n\n\n    \u003c!--对Junit等测试框架的封装，还需添加具体实现--\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003eorg.springframework\u003c/groupId\u003e\n      \u003cartifactId\u003espring-test\u003c/artifactId\u003e\n      \u003cversion\u003e${org.springframework.version}\u003c/version\u003e\n      \u003cscope\u003etest\u003c/scope\u003e\n    \u003c/dependency\u003e\n    \u003c!--junit5（升级）--\u003e\n    \u003cdependency\u003e\n      \u003cgroupId\u003eorg.junit.jupiter\u003c/groupId\u003e\n      \u003cartifactId\u003ejunit-jupiter\u003c/artifactId\u003e\n      \u003cversion\u003e${junit.jupiter.version}\u003c/version\u003e\n      \u003cscope\u003etest\u003c/scope\u003e\n    \u003c/dependency\u003e\n  \u003c/dependencies\u003e\n\n  \u003cbuild\u003e\n    \u003cfinalName\u003eCRM-XML\u003c/finalName\u003e\n    \u003cresources\u003e\n      \u003cresource\u003e\n        \u003cdirectory\u003esrc/main/java\u003c/directory\u003e\n        \u003cincludes\u003e\n          \u003cinclude\u003e**/*.properties\u003c/include\u003e\n          \u003cinclude\u003e**/*.xml\u003c/include\u003e\n        \u003c/includes\u003e\n      \u003c/resource\u003e\n      \u003cresource\u003e\n        \u003cdirectory\u003esrc/main/resources\u003c/directory\u003e\n        \u003cincludes\u003e\n          \u003cinclude\u003e**/*.*\u003c/include\u003e\n        \u003c/includes\u003e\n      \u003c/resource\u003e\n    \u003c/resources\u003e\n  \u003c/build\u003e\n\u003c/project\u003e\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-ltfimz6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-ltfimz6"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "log4j.properties"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-wq2zmto",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "cHJvcGVydGllcw==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-wq2zmto"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "cHJvcGVydGllcw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "# Global logging configuration\nlog4j.rootLogger=ERROR, stdout\n# MyBatis logging configuration...\nlog4j.logger.com._520it.p2p.mapper=TRACE\n# Console output...\nlog4j.appender.stdout=org.apache.log4j.ConsoleAppender\nlog4j.appender.stdout.layout=org.apache.log4j.PatternLayout\nlog4j.appender.stdout.layout.ConversionPattern=%5p [%t] - %m%n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-o07hu0m",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-o07hu0m"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "db.properties"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-usch4yo",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "cHJvcGVydGllcw==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-usch4yo"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "cHJvcGVydGllcw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "# 自动检测\ndb.driverClass=com.mysql.cj.jdbc.Driver\n# localhost 时可以从 jdbc:mysql://localhost:3306/crm?...省略掉 IP + Port。MySQL8 必须指定 serverTimezone\ndb.url=jdbc:mysql://localhost:3306/crm?useUnicode=true\u0026characterEncoding=UTF-8\u0026serverTimezone=GMT%2B8\u0026useSSL=true\ndb.username=root\ndb.password=123456\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-12w5uro",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-12w5uro"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "WebAppInitializer"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-mmtbmuq",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-mmtbmuq"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n * 相当于 /webapp/WEB-INF/web.xml\n *\n * DispatcherServlet是Spring MVC的核心。在这里请求会第一次接触到框架，它主要负责将请求路由到其他的组件之中。\n * 按照传统的方式,像DispatcherServlet这样的Servlet会配置在web.xml文件中，这个文件会放到应用的WAR包里面。当然，这是配置DispatcherServlet的方法之一。\n * 但是，借助于Servlet3规范和Spring3.1的功能增强，这种方式已经不是唯一的方案了，这也不是我们本文所使用的配置方法。\n * 我们会使用java将DispatcherServlet配置在Servlet容器中，而不会再使用web.xml文件。如下程序清单展示了所需的java类。\n *\n * Spring Web应用中通常存在两个应用上下文，一个是DispatcherServlet创建的应用上下文，一个是ContextLoaderListener创建的应用上下文。\n * AbstractAnnotationConfigDispatcherServletInitializer会同时创建DispatcherServlet和ContextLoaderListener（查看源码）\n */\npublic class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {\n\n    /**\n     * 返回的带有@Configuration注解的类将会用来配置ContextLoaderListener创建的应用上下文中的bean，\n     * 通常是驱动应用后端的中间层和数据库组件。\n     */\n    @Override\n    protected Class\u003c?\u003e[] getRootConfigClasses() {\n        return new Class[]{RootConfig.class};\n    }\n\n    /**\n     * 返回的带有@Configuration注解的类会用来定义DispatcherServlet应用上下文中的bean。\n     * 包含Web组件的bean，如控制器、试图解析器以及处理器映射器等。\n     */\n    @Override\n    protected Class\u003c?\u003e[] getServletConfigClasses() {\n        return new Class[]{WebConfig.class};\n    }\n\n    /**\n     * 将DispatcherServlet映射到\"/\"\n     */\n    @Override\n    protected String[] getServletMappings() {\n        return new String[]{\"/\"};\n    }\n\n\n    /**\n     * Add the given filter to the ServletContext and map it to the DispatcherServlet\n     */\n    @Override\n    protected FilterRegistration.Dynamic registerServletFilter(ServletContext servletContext, Filter filter) {\n\n        // 编码过滤器\n        CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter(StandardCharsets.UTF_8.toString(), true);\n        servletContext.addFilter(\"characterEncodingFilter\",characterEncodingFilter);\n        // 还可以这样写\n        // servletContext.setRequestCharacterEncoding(StandardCharsets.UTF_8.toString());\n        // servletContext.setResponseCharacterEncoding(StandardCharsets.UTF_8.toString());\n\n\n        // 解决 PUT 或 DELETE 请求。因为 Servlet 规范默认要求 ServletRequest.getParameter*() 系列方法只能获取 POST 请求的参数\n        FormContentFilter formContentFilter = new FormContentFilter();\n        servletContext.addFilter(\"formContentFilter\", formContentFilter);\n        // 解决 FORM 中 PUT、DELETE 等请求的过滤器（不常用）\n        HiddenHttpMethodFilter hiddenHttpMethodFilter = new HiddenHttpMethodFilter();\n        servletContext.addFilter(\"hiddenHttpMethodFilter\", hiddenHttpMethodFilter);\n\n        return super.registerServletFilter(servletContext, filter);\n    }\n\n\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-h47j99m",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-h47j99m"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "RootConfig"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-o0ox6ad",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-o0ox6ad"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n * 相当于 Spring 及其整合的如 Mybatis 等配置\n */\n@Configuration\n@ComponentScan(\n        value = \"com._520it.crm\",\n        excludeFilters = {\n                @ComponentScan.Filter(type = FilterType.ANNOTATION, value = Controller.class)\n        })\n@EnableAspectJAutoProxy// 开启 AOP\n@EnableTransactionManagement(proxyTargetClass = true)// 开启注解配置事务（@Transactional）\npublic class RootConfig {\n      \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-rzsbz7a",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-rzsbz7a"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "WebConfig"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-7vsdz73",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-7vsdz73"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n * 相当于 SpringMVC 的配置\n *\n * 我们有多种方法来配置DispatcherServlet，与之类似，启用Spring MVC组件的方法也不只一种。\n * 从前，Spring是使用XML进行配置的，可以使用\u003cmvc:annotation-driven\u003e启用注解驱动的Spring MVC。\n */\n@Configuration\n@EnableWebMvc// 启用 Spring MVC 注解驱动，替代处理器映射器、处理器适配器。\n@ComponentScan(\n        value = \"com._520it.crm.web.controller\",\n        includeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, value = Controller.class),\n        useDefaultFilters = false// 必须有！这里仅仅扫描 Controller\n)\n// extends WebMvcConfigurerAdapter 在 Spring 5.0 已经 Deprecated\npublic class WebConfig implements WebMvcConfigurer  {\n\n    /**\n     * 配置视图解析器\n     */\n    @Override\n    public void configureViewResolvers(ViewResolverRegistry registry) {\n        registry.jsp(\"WEB-INF/views/\",\".jsp\");\n    }\n\n    /**\n     * 静态资源处理。如 SpringMVC 无法处理的静态资源请求交由 Servlet 容器如 Tomcat\n     */\n    @Override\n    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {\n        configurer.enable();\n    }\n\n\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-netd537",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-netd537"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "DaoConfig"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-35gplm0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-35gplm0"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n * Dao 层主要配置：\n * 1. DataSource\n * 2. Mybatis's SqlSessionFactoryBean。其中有 DataSource 和 MapperLocations（扫描XML）\n * 3. MapperScan（扫描的是.class，不是XML）\n */\n@Configuration\n@PropertySource(\"classpath:db.properties\")\n@MapperScan(\"com._520it.crm.mapper\")// 这个不能使用 @Bean 配置，否则不能注入 DataSource 属性\npublic class DaoConfig {\n\n    // 自动检测\n    @Value(\"${db.driverClass}\")\n    public String driverClass;\n\n    @Value(\"${db.url}\")\n    public String url;\n\n    @Value(\"${db.username}\")\n    public String username;\n\n    @Value(\"${db.password}\")\n    public String password;\n\n\n    /**\n     * DruidDataSource\n     */\n    @Bean(\"druid\")\n    public DataSource druidDataSource(){\n        DruidDataSource druidDataSource = new DruidDataSource();\n        // druidDataSource.setDriverClassName(driverClass);// 自动检测\n        druidDataSource.setUrl(url);\n        druidDataSource.setUsername(username);\n        druidDataSource.setPassword(password);\n        return druidDataSource;\n    }\n\n\n    @Bean(\"hikari\")\n    @Primary\n    public DataSource hikariDataSource(){\n        HikariConfig hikariConfig = new HikariConfig();\n        hikariConfig.setDriverClassName(driverClass);\n        hikariConfig.setJdbcUrl(url);\n        hikariConfig.setUsername(username);\n        hikariConfig.setPassword(password);\n        // hikariConfig.addDataSourceProperty(\"cachePrepStmts\", \"true\");\n        // hikariConfig.addDataSourceProperty(\"prepStmtCacheSize\", \"250\");\n        // hikariConfig.addDataSourceProperty(\"prepStmtCacheSqlLimit\", \"2048\");\n\n        return new HikariDataSource(hikariConfig);\n    }\n\n\n    /**\n     * Mybatis's SqlSessionFactoryBean\n     * 若使用 Mybatis Plus 则需改为 MP 的 MybatisSqlSessionFactoryBean\n     */\n    @Bean\n    public MybatisSqlSessionFactoryBean sessionFactory(@Qualifier(\"hikari\") DataSource dataSource) throws IOException {\n        MybatisSqlSessionFactoryBean sqlSessionFactoryBean = new MybatisSqlSessionFactoryBean();\n\n        // DataSource\n        sqlSessionFactoryBean.setDataSource(dataSource);\n\n        // MapperLocations\n        // 也可以写 classpath*:com._520it.crm.mapper.*Mapper.xml，但是推荐 Ant 风格\n\n        Resource[] resources = new PathMatchingResourcePatternResolver()\n                .getResources(ResourcePatternResolver.CLASSPATH_ALL_URL_PREFIX\n                        + \"com/_520it/crm/mapper/*Mapper.xml\");\n        sqlSessionFactoryBean.setMapperLocations(resources);\n\n        // 别名\n        sqlSessionFactoryBean.setTypeAliasesPackage(\"com._520it.crm.domain\");\n\n        return sqlSessionFactoryBean;\n\n    }\n\n\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-1g23lki",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-1g23lki"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "TransactionAspect"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-rh616rv",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-rh616rv"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n * 全局事务切面\n */\n@Configuration// Spring 的组件\n@Aspect// 声明一个切面类\npublic class TransactionAspect {\n\n    /**\n     * 切点表达式\n     */\n    private static final String TRANSACTION_POINTCUT_EXPRESSION = \"execution(* com._520it.crm.service.impl.*.*(..))\";\n\n    /**\n     * TransactionManager\n     */\n    @Bean\n    public TransactionManager transactionManager(@Qualifier(\"hikari\") DataSource dataSource){\n        DataSourceTransactionManager dataSourceTransactionManager = new DataSourceTransactionManager();\n        dataSourceTransactionManager.setDataSource(dataSource);\n\n        return dataSourceTransactionManager;\n    }\n\n    /**\n     * 全局事务配置。方法名称事务拦截器（底层是 Advice）\n     */\n    @Bean(\"txAdvice\")\n    public TransactionInterceptor transactionInterceptor(TransactionManager transactionManager){\n\n        // 设置所有读操作的事务为 SUPPORTS：如果没有事务就不开启新事务\n        RuleBasedTransactionAttribute supportsTx = new RuleBasedTransactionAttribute();\n        supportsTx.setReadOnly(true);\n        supportsTx.setPropagationBehavior(TransactionDefinition.PROPAGATION_SUPPORTS);\n\n        // 设置所有写操作的事务传播行为为 REQUIRED：当前存在事务就使用当前事务，当前不存在事务就创建一个新的事务\n        RuleBasedTransactionAttribute requiredTx = new RuleBasedTransactionAttribute();\n        // 什么异常需要回滚\n        requiredTx.setRollbackRules(Collections.singletonList(new RollbackRuleAttribute(Exception.class)));\n        requiredTx.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);\n        requiredTx.setTimeout(30000);\n\n        // 方法名匹配\n        NameMatchTransactionAttributeSource source = new NameMatchTransactionAttributeSource();\n        // 读操作\n        source.addTransactionalMethod(\"get*\", supportsTx);\n        source.addTransactionalMethod(\"select*\", supportsTx);\n        source.addTransactionalMethod(\"query*\", supportsTx);\n        source.addTransactionalMethod(\"list*\", supportsTx);\n        // 写操作\n        source.addTransactionalMethod(\"*\",requiredTx);\n\n        return new TransactionInterceptor(transactionManager, source);\n    }\n\n    /**\n     * Advisor 通知器\n     */\n    @Bean\n    public Advisor txAdviceAdvisor(TransactionInterceptor txAdvice) {\n        AspectJExpressionPointcut pointcut = new AspectJExpressionPointcut();\n        pointcut.setExpression(TRANSACTION_POINTCUT_EXPRESSION);\n\n        // 切点 + 通知\n        return new DefaultPointcutAdvisor(pointcut, txAdvice);\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-46f6z36",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-46f6z36"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "参考"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-e9iiyzz",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707234309-e9iiyzz"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-o1odcxu",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-o1odcxu"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-s7b7y1o",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-s7b7y1o"
+							},
+							"Children": [
+								{
+									"Type": "NodeLink",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket",
+											"Data": "["
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "SSM框架，基于JavaConfig配置方式，不用xml配置文件"
+										},
+										{
+											"Type": "NodeCloseBracket",
+											"Data": "]"
+										},
+										{
+											"Type": "NodeOpenParen",
+											"Data": "("
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://blog.csdn.net/u012809062/article/details/73251036"
+										},
+										{
+											"Type": "NodeCloseParen",
+											"Data": ")"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-rb93l5s",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-rb93l5s"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-cs80zj8",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-cs80zj8"
+							},
+							"Children": [
+								{
+									"Type": "NodeLink",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket",
+											"Data": "["
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Java Config方式搭建SSM"
+										},
+										{
+											"Type": "NodeCloseBracket",
+											"Data": "]"
+										},
+										{
+											"Type": "NodeOpenParen",
+											"Data": "("
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://zhengtianle.github.io/2018/11/29/Java-Config%E6%96%B9%E5%BC%8F%E6%90%AD%E5%BB%BASSM/"
+										},
+										{
+											"Type": "NodeCloseParen",
+											"Data": ")"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-wc0asu7",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-wc0asu7"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-ljbh0zc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-ljbh0zc"
+							},
+							"Children": [
+								{
+									"Type": "NodeLink",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket",
+											"Data": "["
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "各种版本的SSM整合"
+										},
+										{
+											"Type": "NodeCloseBracket",
+											"Data": "]"
+										},
+										{
+											"Type": "NodeOpenParen",
+											"Data": "("
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://my.oschina.net/mondayer/blog/3032753"
+										},
+										{
+											"Type": "NodeCloseParen",
+											"Data": ")"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-odio3yk",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-odio3yk"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-5lvjghy",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-5lvjghy"
+							},
+							"Children": [
+								{
+									"Type": "NodeLink",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket",
+											"Data": "["
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "SpringMVC Junit4 测试 \"No ServletContext set\""
+										},
+										{
+											"Type": "NodeCloseBracket",
+											"Data": "]"
+										},
+										{
+											"Type": "NodeOpenParen",
+											"Data": "("
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://ask.csdn.net/questions/698500"
+										},
+										{
+											"Type": "NodeCloseParen",
+											"Data": ")"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-qogdxld",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-qogdxld"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-kyo47hv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-kyo47hv"
+							},
+							"Children": [
+								{
+									"Type": "NodeLink",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket",
+											"Data": "["
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Spring Boot で TransactionManager に tx:advice の設定を反映する ( Java Config 版 )"
+										},
+										{
+											"Type": "NodeCloseBracket",
+											"Data": "]"
+										},
+										{
+											"Type": "NodeOpenParen",
+											"Data": "("
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://qiita.com/ksby/items/c063f6ba80a004d34171"
+										},
+										{
+											"Type": "NodeCloseParen",
+											"Data": ")"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,1352 @@
+{
+	"ID": "20210707214420-c07lqav",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210707214420-c07lqav",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210707214420-0cvvgb0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707214420-0cvvgb0"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "包装类型转换"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-lgx2a1l",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707214420-lgx2a1l"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "Object o1 = true ? new Integer(1) : new Double(2.0);\nSystem.out.println(o1);// 1.0\n// 编译时类型提升为Double，所以是1.0\n\nObject o2; \nif (true)\n  o2 = new Integer(1); \nelse\n  o2 = new Double(2.0); \nSystem.out.println(o2);// 1\n\npublic void method1() {\n  Integer i = new Integer(1); \n  Integer j = new Integer(1); \n  System.out.println(i == j);// false\n  Integer m = 1;\n  Integer n = 1; \n  System.out.println(m == n);// true\n  Integer x = 128;\n  Integer y = 128; \n  System.out.println(x == y);// false\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-zm6l947",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707214420-zm6l947"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "String、StringBuffer、StringBuilder区别及底层"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-112rv5g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-112rv5g"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "见笔记"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-33i7e0e",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707214420-33i7e0e"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "String 练习1—值传递"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-ceqgh0e",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707214420-ceqgh0e"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "String str = new String(\"good\");\nchar[] ch = {'t', 'e', 's', 't'};\n\npublic void change(String str, char ch[]) {\n    str = \"test ok\";\n    ch[0] = 'b';\n}\n\npublic static void main(String[] args) {\n    StringTest ex = new StringTest();\n    ex.change(ex.str, ex.ch);\n    \n    System.out.print(ex.str);//good\n    System.out.println(ex.ch);//best\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-tul1ywb",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707214420-tul1ywb"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "String 练习2"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-zsgeu0m",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-zsgeu0m"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "String s = new String(\"hello\")"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "和"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "String s = \"hello\""
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "前者最多创建两对象，后者最多创建一个对象"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-vdlpxho",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707214420-vdlpxho"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "String 练习3"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-52jx0qd",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 4,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214420-52jx0qd"
+			},
+			"Children": [
+				{
+					"ID": "20210707214420-mcd5rlb",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-mcd5rlb"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-sizqeob",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-sizqeob"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当对字符串重新赋值时，需要"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "重写指定内存区域赋值"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，不能使用原有的value进行赋值"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-0kxv23x",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-0kxv23x"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-g2hcbjr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-g2hcbjr"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当执行"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "concat"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "substring"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "replace"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "等操作都"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "需要重新指定内存区域赋值"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（与常量池无关）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-6lro1td",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-6lro1td"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-ok07vbw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-ok07vbw"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "字符串的"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "+"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "运算，若是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "存在变量相加，先开空间再拼接，结果在堆中"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "；"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "只有常量则先拼接（类似字面量赋值），然后在常量池中找"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，有就返回，没有就创建并放入常量池。如果拼接的结果调用"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "intern()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "方法，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "返回值就在常量池中"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。字符串常量池中不会存储相同内容的字符串。"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-drhuqd2",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-drhuqd2"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "String str1 = \"hello\";\nString str2 = \"hello\";\nchar[] charArray = {'h', 'e', 'l', 'l', 'o'};\nString str3 = new String(charArray);\nString str4 = \"world\";\nString str5 = \"helloworld\";\n\nSystem.out.println(str1 == str2);//true\nSystem.out.println(str1 == str3);//false，同理str2!=str3\nSystem.out.println(str5 == str1 + str4);//false\nSystem.out.println(str5 == \"hello\" + \"world\");//true\nSystem.out.println(str5 == str1 + \"world\");//false\nSystem.out.println(str5 == (str1 + \"world\").intern());//true\nSystem.out.println(str3.equals(str1));//true\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-gmmsjt0",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-gmmsjt0"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-vufbnwx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-vufbnwx"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "通过"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "字面量直接赋值"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的定义字符串的会"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "放入堆内存的字符串常量池"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "中；但是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"CodeMarkerLen": 1,
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker",
+													"Data": "`"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "new String"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker",
+													"Data": "`"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "方式定义的不会放入"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-vlwm0nc",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-vlwm0nc"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-ansv3j7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-ansv3j7"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "特别的，注意"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "对象中的属性"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-pd36znq",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-pd36znq"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "Person t1 = new Person(\"tom\", 1);\nt1.setName(\"hh\");\nt1.name = \"xx\";\nPerson t2 = new Person(\"tom\", 1);\nt2.setName(\"hh\");\nt2.name = \"xx\";\nSystem.out.println(t1.name == t2.name);// true，值在常量池中！\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-ig2s1he",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707214420-ig2s1he"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "String 常见算法题"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-ktebz86",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-ktebz86"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "答案见doc"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-sbot6si",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214420-sbot6si"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "模拟一个trim方法，去除字符串两端的空格"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-u9vobgy",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707214420-u9vobgy"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public String myTrim(String str) {\n    if (str != null) {\n        int start = 0;// 用于记录从前往后首次索引位置不是空格的位置的索引\n        int end = str.length() - 1;// 用于记录从后往前首次索引位置不是空格的位置的索引\n\n        while (start \u003c end \u0026\u0026 str.charAt(start) == ' ') {\n            start++;\n        }\n\n        while (start \u003c end \u0026\u0026 str.charAt(end) == ' ') {\n            end--;\n        }\n        if (str.charAt(start) == ' ') {\n            return \"\";\n        }\n\n        return str.substring(start, end + 1);\n    }\n    return null;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-zwsv6ql",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214420-zwsv6ql"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "将一个字符串进行反转，将字符串中指定部分进行反转"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-6smgivv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-6smgivv"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "比如“abcdefg”反转为”abfedcg”"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-v92zcd3",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707214420-v92zcd3"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "// 方式一：\npublic String reverse1(String str, int start, int end) {// start:2,end:5\n    if (str != null) {\n        // 1.\n        char[] charArray = str.toCharArray();\n        // 2.\n        for (int i = start, j = end; i \u003c j; i++, j--) {\n            char temp = charArray[i];\n            charArray[i] = charArray[j];\n            charArray[j] = temp;\n        }\n        // 3.\n        return new String(charArray);\n\n    }\n    return null;\n\n}\n\n\n//方式二：使用String的拼接\npublic String reverse1(String str,int startIndex,int endIndex){\n    if(str != null){\n        //第1部分\n        String reverseStr = str.substring(0,startIndex);\n        //第2部分\n        for(int i = endIndex;i \u003e= startIndex;i--){\n            reverseStr += str.charAt(i);\n        }\n        //第3部分\n        reverseStr += str.substring(endIndex + 1);\n\n        return reverseStr;\n\n    }\n    return null;\n}\n\n//方式三：使用StringBuffer/StringBuilder替换String\npublic static String reverse2(String str, int startIndex, int endIndex) {\n    if (str != null) {\n        StringBuilder builder = new StringBuilder(str.length());\n\n        //第1部分\n        builder.append(str.substring(0, startIndex));\n        //第2部分\n        //builder.append(new StringBuilder(str.substring(startIndex, endIndex + 1)).reverse());\n        for (int i = endIndex; i \u003e= startIndex; i--) {\n\n            builder.append(str.charAt(i));\n        }\n        //第3部分\n        builder.append(str.substring(endIndex + 1));\n\n        return builder.toString();\n    }\n    return null;\n\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-zyxiprz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214420-zyxiprz"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "获取一个字符串在另一个字符串中出现的次数"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-uvwwzji",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-uvwwzji"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "比如:获取“ ab”在 “abkkcadkabkebfkabkskab” 中出现的次数"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-if1sc7m",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707214420-if1sc7m"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public int getCount(String mainStr, String subStr) {\n    if (mainStr.length() \u003e= subStr.length()) {\n        int count = 0;\n        int index = 0;\n        // while((index = mainStr.indexOf(subStr)) != -1){\n        // count++;\n        // mainStr = mainStr.substring(index + subStr.length());\n        // }\n        // 改进：\n        while ((index = mainStr.indexOf(subStr, index)) != -1) {\n            index += subStr.length();\n            count++;\n        }\n\n        return count;\n    } else {\n        return 0;\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-4uxpku1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214420-4uxpku1"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "获取两个字符串中最大相同子串"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-k0q82u8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-k0q82u8"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "比如：str1 = \"abcwerthelloyuiodef“;str2 = \"cvhellobnm\"。"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-3xn2elp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-3xn2elp"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "提示：将短的那个串进行长度依次递减的子串与较长的串比较。"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-huuqezi",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707214420-huuqezi"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "// 如果只存在一个最大长度的相同子串\npublic String getMaxSameSubString(String str1, String str2) {\n    if (str1 != null \u0026\u0026 str2 != null) {\n        String maxStr = (str1.length() \u003e str2.length()) ? str1 : str2;\n        String minStr = (str1.length() \u003e str2.length()) ? str2 : str1;\n\n        int len = minStr.length();\n\n        for (int i = 0; i \u003c len; i++) {// 0 1 2 3 4 此层循环决定要去几个字符\n\n            for (int x = 0, y = len - i; y \u003c= len; x++, y++) {\n\n                if (maxStr.contains(minStr.substring(x, y))) {\n\n                    return minStr.substring(x, y);\n                }\n            }\n        }\n    }\n    return null;\n}\n\n// 如果存在多个长度相同的最大相同子串\n// 此时先返回String[]，后面可以用集合中的ArrayList替换，较方便\npublic String[] getMaxSameSubString1(String str1, String str2) {\n    if (str1 != null \u0026\u0026 str2 != null) {\n        StringBuffer sBuffer = new StringBuffer();\n        String maxString = (str1.length() \u003e str2.length()) ? str1 : str2;\n        String minString = (str1.length() \u003e str2.length()) ? str2 : str1;\n\n        int len = minString.length();\n        for (int i = 0; i \u003c len; i++) {\n            for (int x = 0, y = len - i; y \u003c= len; x++, y++) {\n                String subString = minString.substring(x, y);\n                if (maxString.contains(subString)) {\n                    sBuffer.append(subString + \",\");\n                }\n            }\n            System.out.println(sBuffer);\n            if (sBuffer.length() != 0) {\n                break;\n            }\n        }\n        String[] split = sBuffer.toString().replaceAll(\",$\", \"\").split(\"\\\\,\");\n        return split;\n    }\n    return null;\n}\n\n// 如果存在多个长度相同的最大相同子串：使用ArrayList\npublic List\u003cString\u003e getMaxSameSubString1(String str1, String str2) {\n    if (str1 != null \u0026\u0026 str2 != null) {\n        List\u003cString\u003e list = new ArrayList\u003cString\u003e();\n        String maxString = (str1.length() \u003e str2.length()) ? str1 : str2;\n        String minString = (str1.length() \u003e str2.length()) ? str2 : str1;\n\n        int len = minString.length();\n        for (int i = 0; i \u003c len; i++) {\n            for (int x = 0, y = len - i; y \u003c= len; x++, y++) {\n                String subString = minString.substring(x, y);\n                if (maxString.contains(subString)) {\n                    list.add(subString);\n                }\n            }\n            if (list.size() != 0) {\n                break;\n            }\n        }\n        return list;\n    }\n\n    return null;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-nb5br0o",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214420-nb5br0o"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "对字符串中字符进行自然顺序排序"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-t7s0dhf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-t7s0dhf"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "提示:"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-sgk3epe",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 42,
+				"Padding": 4,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214420-sgk3epe"
+			},
+			"Children": [
+				{
+					"ID": "20210707214420-wc23wzw",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-wc23wzw"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-onlcfyr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-onlcfyr"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "字符串变成字符数组。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-18ly399",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-18ly399"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-fist7ub",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-fist7ub"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "对数组排序，选择，冒泡，Arrays.sort();"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-ttwg5af",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-ttwg5af"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-5ggv4ga",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-5ggv4ga"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "将排序后的数组变成字符串。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-r6z0uww",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707214420-r6z0uww"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public void testSort() {\n    String str = \"abcwerthelloyuiodef\";\n    char[] arr = str.toCharArray();\n    Arrays.sort(arr);\n\n    String newStr = new String(arr);\n    System.out.println(newStr);\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-4avlri8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707214420-4avlri8"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "StringBuilder常见面试题"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-xfyjvm6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214420-xfyjvm6"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "程序输出1"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-sqr2ssi",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707214420-sqr2ssi"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "String str = null;\nStringBuffer sb = new StringBuffer();\nsb.append(str);// 若String为null，则append后当做字符串\"null\"添加了\nSystem.out.println(sb.length());// 4，因为把null当字符串添加了\nSystem.out.println(sb);//null\nStringBuffer sb1 = new StringBuffer(str);//NullPointerException，底层会获取str的长度进行容量初始化\nSystem.out.println(sb1);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-66dkuui",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214420-66dkuui"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "程序输出2"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-q4l7igq",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707214420-q4l7igq"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "String a = \"123\";\nString b = \"123\";\nString c = new String(\"123\");\nString d = new String(\"123\");\n\nSystem.out.println(a.equals(b));// true\nSystem.out.println(a == b);// true\nSystem.out.println(c.equals(d));//true\nSystem.out.println(c == d);//false\nSystem.out.println(a.equals(c));//true\nSystem.out.println(a == c);//false\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		}
+	]
+}

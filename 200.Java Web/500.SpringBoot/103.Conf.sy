@@ -1,0 +1,4657 @@
+{
+	"ID": "20210707234309-ujoejl8",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210707234309-ujoejl8",
+		"type": "doc",
+		"updated": "20210707234532"
+	},
+	"Children": [
+		{
+			"ID": "20210707234309-49ztnit",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-49ztnit"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "SpringBoot 是基于约定的，所以很多配置都有默认值，但如果想使用自己的配置替换默认配置的话就可以使用配置文件配置，SpringBoot 默认会从 Resources 目录下加载"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "application*.properties"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "或"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "application*.yml"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "（"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "application*.yaml"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "）文件"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-rvgkvb1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-rvgkvb1"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "此处不再介绍 properties 配置文件（键值对形式），仅介绍 yml 配置文件"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-vwpilxd",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234309-vwpilxd"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "YAML 简介"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-p6uqnmi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-p6uqnmi"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "YML 文件格式是 YAML (YAML Aint Markup Language)编写的文件格式，YAML 是一种直观的能够被电脑识别的的数据数据序列化格式，并且容易被人类阅读，容易和脚本语言交互的，可以被支持 YAML 库的不同的编程语言程序导入，比如： C/C++, Ruby, Python, Java, Perl, C#, PHP 等。YML 文件是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "以数据为核心"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的，比传统的 xml 方式更加简洁。"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-5g7lxye",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-5g7lxye"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "YML 文件的扩展名可以使用.yml 或者.yaml。"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-480g12x",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234309-480g12x"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "YAML 语法"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-487so99",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-487so99"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "基本语法："
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-pyoj3iz",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707234309-pyoj3iz"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-c0ttlzd",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-c0ttlzd"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-bk1i4xd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-bk1i4xd"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"CodeMarkerLen": 1,
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker",
+													"Data": "`"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "k:(空格)v"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker",
+													"Data": "`"
+												}
+											]
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：表示一对键值对（空格必须有）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-q0906ug",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-q0906ug"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-sqe2ipk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-sqe2ipk"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "以"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "空格"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "缩进"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "来控制层级关系；只要是左对齐（相同空格缩进）的一列数据，都是同一个层级的；属性和值也是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "大小写敏感"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-t2bn6z0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-t2bn6z0"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "配置字面量数据"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-ld28eoo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-ld28eoo"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "普通的值（"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "数字，字符串，布尔"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "）"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-zawef1q",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707234309-zawef1q"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-rur8t6n",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-rur8t6n"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-has2j3h",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-has2j3h"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "k: v"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：字面量"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "直接来写"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "；"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "字符串默认不用加上单引号或者双引号"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "；"
+								}
+							]
+						},
+						{
+							"ID": "20210707234309-wsc1gul",
+							"Type": "NodeList",
+							"ListData": {
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707234309-wsc1gul"
+							},
+							"Children": [
+								{
+									"ID": "20210707234309-fg8r2db",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707234309-fg8r2db"
+									},
+									"Children": [
+										{
+											"ID": "20210707234309-bh0t8sc",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707234309-bh0t8sc"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "\"\""
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "："
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "双引号"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "；"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "不会转义"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "字符串里面的特殊字符；特殊字符会作为本身想表示的意思"
+												}
+											]
+										},
+										{
+											"ID": "20210707234309-2typw3o",
+											"Type": "NodeList",
+											"ListData": {
+												"Tight": true,
+												"BulletChar": 45,
+												"Padding": 2,
+												"Marker": "LQ==",
+												"Num": -1
+											},
+											"Properties": {
+												"id": "20210707234309-2typw3o"
+											},
+											"Children": [
+												{
+													"ID": "20210707234309-vohvstv",
+													"Type": "NodeListItem",
+													"Data": "-",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 45,
+														"Padding": 2,
+														"Marker": "LQ==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707234309-vohvstv"
+													},
+													"Children": [
+														{
+															"ID": "20210707234309-i0cx6np",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707234309-i0cx6np"
+															},
+															"Children": [
+																{
+																	"Type": "NodeText",
+																	"Data": "name: \"zhangsan \\n lisi\"：输出；zhangsan 换行 lisi"
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707234309-3k3s996",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707234309-3k3s996"
+									},
+									"Children": [
+										{
+											"ID": "20210707234309-xxaippj",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707234309-xxaippj"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "''"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "："
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "单引号"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "；"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "会转义"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "特殊字符，特殊字符最终只是一个普通的字符串数据"
+												}
+											]
+										},
+										{
+											"ID": "20210707234309-vrdkljl",
+											"Type": "NodeList",
+											"ListData": {
+												"Tight": true,
+												"BulletChar": 45,
+												"Padding": 2,
+												"Marker": "LQ==",
+												"Num": -1
+											},
+											"Properties": {
+												"id": "20210707234309-vrdkljl"
+											},
+											"Children": [
+												{
+													"ID": "20210707234309-e9p4gfz",
+													"Type": "NodeListItem",
+													"Data": "-",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 45,
+														"Padding": 2,
+														"Marker": "LQ==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707234309-e9p4gfz"
+													},
+													"Children": [
+														{
+															"ID": "20210707234309-dxd67r9",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707234309-dxd67r9"
+															},
+															"Children": [
+																{
+																	"Type": "NodeText",
+																	"Data": "name: ‘zhangsan \\n lisi’：输出；zhangsan \\n lisi"
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-g6ruqrp",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eW1s",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-g6ruqrp"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eW1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "name: zhangsan\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-wo9662u",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-wo9662u"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "配置对象、Map 数据"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-gyhnvod",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eW1s",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-gyhnvod"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eW1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "teacher:\n  name: zhangsan\n  age: 38\n\nstudent: { name: lisi, age: 18 }\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-vz3vvfh",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-vz3vvfh"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "配置数组（List、Set）数据"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-8y35q89",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eWFtbA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-8y35q89"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eWFtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "city:\n  - beijing\n  - shanghai\n\nprovince: [shangxi, hebei, guangdong]\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-sqcuozk",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eWFtbA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-sqcuozk"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eWFtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#元素是对象形式\ndog:\n  - name: wangcai\n    age: 3\n  - name: goudan\n    age: 5\n\ncat: [{ name: xiaobai, age: 1 }, { name: xiaolv, age: 2 }]\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-pfxsx9d",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-pfxsx9d"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "【注意】：value 与之间的 - 之间存在一个"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "空格"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-dav335x",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234309-dav335x"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "配置文件值注入"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-wmwmouj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-wmwmouj"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "参考@Configration 或值注入章节"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-lbu9k0h",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234309-lbu9k0h"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "配置文件占位符"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-nzopsh5",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707234309-nzopsh5"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-4h7u7yj",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-4h7u7yj"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-rzyn6x5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-rzyn6x5"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "随机数"
+								}
+							]
+						},
+						{
+							"ID": "20210707234309-blnex64",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "eWFtbA==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707234309-blnex64"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "eWFtbA=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "${random.value}\n${random.int}\n${random.long}\n${random.int(10)}\n${random.int[1024,65536]}\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-umxuqro",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-umxuqro"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-lix8jzd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-lix8jzd"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "占位符获取之前配置的值"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，如果没有可以使用"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": ":"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "指定"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "默认值"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707234309-pudnevd",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "cHJvcGVydGllcw==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707234309-pudnevd"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "cHJvcGVydGllcw=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "person.last-name=张三${random.uuid}\nperson.age=${random.int}\n# 没有取到:后面是默认值\nperson.dog.name=${person.hello:hello}_dog\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-8e5nqiq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234309-8e5nqiq"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Profile"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-mth715q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-mth715q"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Profile 是 Spring 对"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "不同环境（开发、测试、上线等）提供不同配置功能"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的支持，可以通过激活、 指定参数等方式快速切换环境"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-6khs3z7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-6khs3z7"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "多 Profile 文件"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-k0cea47",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707234309-k0cea47"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-iy01g38",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-iy01g38"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-fhekxw1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-fhekxw1"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "我们在主配置文件编写的时候，文件名可以是 application-{profile}.properties/yml，{profile}名任起"
+								}
+							]
+						},
+						{
+							"ID": "20210707234309-brcobjk",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707234309-brcobjk"
+							},
+							"Children": [
+								{
+									"ID": "20210707234309-3sv2zk7",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707234309-3sv2zk7"
+									},
+									"Children": [
+										{
+											"ID": "20210707234309-4nnaogt",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707234309-4nnaogt"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "默认使用 application.properties 的配置；"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-ey6kugy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-ey6kugy"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "yml 支持多文档块方式"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-lmzted5",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eWFtbA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-lmzted5"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eWFtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "server:\n  port: 8081\nspring:\n  profiles:\n    active: pro #指定激活哪个环境，不设置则为这个默认的\n\n---\nserver:\n  port: 8083\nspring:\n  profiles: dev #指定属于哪个环境\n\n---\nserver:\n  port: 8084\nspring:\n  profiles: pro #指定属于哪个环境\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-htkwxum",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707234309-htkwxum"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-w5hf7sl",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-w5hf7sl"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-sikgicx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-sikgicx"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "若文档块都没有指定环境，则"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "默认使用最后一个"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-nebcil8",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-nebcil8"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-xt7thl1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-xt7thl1"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "若"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "某个文档块没有指定环境，则默认使用那个"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "一般第一个不指定环境"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-yykcgbg",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-yykcgbg"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "激活指定 profile"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-hn8mxdl",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707234309-hn8mxdl"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-nbhns36",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-nbhns36"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-2gazs16",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-2gazs16"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "默认配置文件中指定"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " spring.profiles."
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "active"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "=dev"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-47tozt9",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-47tozt9"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-7nuobc3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-7nuobc3"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "命令行参数"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707234309-gphmy0x",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c2hlbGw=",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707234309-gphmy0x"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c2hlbGw="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "java -jar spring-boot-02-config-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-6pshuu8",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-6pshuu8"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-v0d1fao",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-v0d1fao"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "虚拟机参数"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707234309-phpfp4x",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707234309-phpfp4x"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "-Dspring.profiles.active=dev\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-2445s7k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-2445s7k"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在 IDEA 中也可以配置，以下三者任选其一，但权限 Program arguments \u003e Active profiles \u003e VM options"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-cbzhr3n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-cbzhr3n",
+				"updated": "20210707234532"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "active_profile.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "./assets/active_profile-20210707234532-pe80w8i.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-ej4ie6e",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234309-ej4ie6e"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "配置文件加载位置及顺序"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-ef1j6sy",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20210707234309-ef1j6sy"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e "
+				},
+				{
+					"ID": "20210707234309-vwh9074",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210707234309-vwh9074"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "起步依赖里好像不是这样？？？"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-jujunp9",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707234309-jujunp9"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-inr8yc3",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-inr8yc3"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-kt0eym0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-kt0eym0"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Spring Boot 启动会扫描以下位置的 application.properties/yml 文件作为 Spring boot 的默认配置文件"
+								}
+							]
+						},
+						{
+							"ID": "20210707234309-p25iu8y",
+							"Type": "NodeList",
+							"ListData": {
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707234309-p25iu8y"
+							},
+							"Children": [
+								{
+									"ID": "20210707234309-qwnayva",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707234309-qwnayva"
+									},
+									"Children": [
+										{
+											"ID": "20210707234309-tvsysqn",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707234309-tvsysqn"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "–file:./config/ ——项目目录下的 config"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707234309-6vu4za5",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707234309-6vu4za5"
+									},
+									"Children": [
+										{
+											"ID": "20210707234309-96ltdcm",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707234309-96ltdcm"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "–file:./ ——项目目录下"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707234309-dqo4gdv",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707234309-dqo4gdv"
+									},
+									"Children": [
+										{
+											"ID": "20210707234309-8m6ob3u",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707234309-8m6ob3u"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "–classpath:/config/ ——resources 目录下的 config"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707234309-psag3ay",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707234309-psag3ay"
+									},
+									"Children": [
+										{
+											"ID": "20210707234309-xd5mci1",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707234309-xd5mci1"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "–classpath:/ ——resources 目录下"
+												}
+											]
+										},
+										{
+											"ID": "20210707234309-h16asu7",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707234309-h16asu7"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "优先级由高到底"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "，"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "高"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "优先级的配置会"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "覆盖低"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "优先级的配置；SpringBoot 会从这四个位置全部加载主配置文件；"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "互补配置"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "；"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-powxmtr",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-powxmtr"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-94u6ee5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-94u6ee5"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "我们还可以通过"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "spring.config.location"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "来"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "改变默认的配置文件位置"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707234309-67hugad",
+							"Type": "NodeList",
+							"ListData": {
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707234309-67hugad"
+							},
+							"Children": [
+								{
+									"ID": "20210707234309-rosiysu",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707234309-rosiysu"
+									},
+									"Children": [
+										{
+											"ID": "20210707234309-0omgt1v",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707234309-0omgt1v"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "用于运维时，"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "项目打包好以后，我们可以使用命令行参数的形式，启动项目的时候来指定配置文件的新位置；指定配置文件和默认加载的这些配置文件共同起作用形成互补配置；"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												}
+											]
+										},
+										{
+											"ID": "20210707234309-d2ef0cu",
+											"Type": "NodeCodeBlock",
+											"IsFencedCodeBlock": true,
+											"CodeBlockFenceChar": 96,
+											"CodeBlockFenceLen": 3,
+											"CodeBlockOpenFence": "YGBg",
+											"CodeBlockInfo": "c2hlbGw=",
+											"CodeBlockCloseFence": "YGBg",
+											"Properties": {
+												"id": "20210707234309-d2ef0cu"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeBlockFenceOpenMarker",
+													"Data": "```",
+													"CodeBlockFenceLen": 3
+												},
+												{
+													"Type": "NodeCodeBlockFenceInfoMarker",
+													"CodeBlockInfo": "c2hlbGw="
+												},
+												{
+													"Type": "NodeCodeBlockCode",
+													"Data": "java -jar spring-boot-02-config-02-0.0.1-SNAPSHOT.jar --spring.config.location=G:/application.properties\n\n"
+												},
+												{
+													"Type": "NodeCodeBlockFenceCloseMarker",
+													"Data": "```",
+													"CodeBlockFenceLen": 3
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-kmgcz92",
+			"Type": "NodeThematicBreak",
+			"Properties": {
+				"id": "20210707234309-kmgcz92"
+			}
+		},
+		{
+			"ID": "20210707234309-gjum4f5",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20210707234309-gjum4f5"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e "
+				},
+				{
+					"ID": "20210707234309-yvoefih",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210707234309-yvoefih"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "所有支持的配置加载来源"
+						},
+						{
+							"Type": "NodeLink",
+							"Children": [
+								{
+									"Type": "NodeOpenBracket",
+									"Data": "["
+								},
+								{
+									"Type": "NodeLinkText",
+									"Data": "查看这里"
+								},
+								{
+									"Type": "NodeCloseBracket",
+									"Data": "]"
+								},
+								{
+									"Type": "NodeOpenParen",
+									"Data": "("
+								},
+								{
+									"Type": "NodeLinkDest",
+									"Data": "https://docs.spring.io/spring-boot/docs/2.0.6.RELEASE/reference/htmlsingle/#boot-features-external-config"
+								},
+								{
+									"Type": "NodeCloseParen",
+									"Data": ")"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "第 24 节 Externalized Configuration"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-9ifpy7j",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-9ifpy7j"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "SpringBoot 也可以从以下位置加载配置； 优先级从高到低；高优先级的配置覆盖低优先级的配置，所有的配置会形成互补配置"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-ld9cwey",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 3,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210707234309-ld9cwey"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-8eyz0h2",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210707234309-8eyz0h2"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-nzeuxzx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-nzeuxzx"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "命令行参数"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：所有的配置都可以在命令行上进行指定。多个配置用空格分开； --配置项=值"
+								}
+							]
+						},
+						{
+							"ID": "20210707234309-zll5940",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c2hlbGw=",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707234309-zll5940"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c2hlbGw="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "java -jar spring-boot-02-config-02-0.0.1-SNAPSHOT.jar --server.port=8087 --server.context-path=/abc\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-tz3dxot",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210707234309-tz3dxot"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-ufyky1x",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-ufyky1x"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "来自 java:comp/env 的 JNDI 属性"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-tu75id7",
+					"Type": "NodeListItem",
+					"Data": "3",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 3,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mw==",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20210707234309-tu75id7"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-n1nuv3j",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-n1nuv3j"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Java 系统属性（System.getProperties()）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-kfu2riw",
+					"Type": "NodeListItem",
+					"Data": "4",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 4,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "NA==",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20210707234309-kfu2riw"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-78sak8q",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-78sak8q"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "操作系统环境变量"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-dma633h",
+					"Type": "NodeListItem",
+					"Data": "5",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 5,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "NQ==",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20210707234309-dma633h"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-fv768ob",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-fv768ob"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "RandomValuePropertySource 配置的 random."
+								},
+								{
+									"Type": "NodeBackslash",
+									"Children": [
+										{
+											"Type": "NodeBackslashContent",
+											"Data": "*"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "属性值"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-8qx3wx6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-8qx3wx6"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "由 jar 包外向 jar 包内进行寻找"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-c0kqjsg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-c0kqjsg"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "优先加载带 profile"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-osq8oq4",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Tight": true,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 3,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210707234309-osq8oq4"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-y42r2no",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210707234309-y42r2no"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-9lx1og1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-9lx1og1"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "jar 包外部的 application-{profile}.properties 或 application.yml(带 spring.profile)配置文件"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-3yek41i",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210707234309-3yek41i"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-nxel092",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-nxel092"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "jar 包内部的 application-{profile}.properties 或 application.yml(带 spring.profile)配置文件"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-nxaopeo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-nxaopeo"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "再来加载不带 profile"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-iom2wg2",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Tight": true,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 3,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210707234309-iom2wg2"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-y37s7ez",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210707234309-y37s7ez"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-7k80k8a",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-7k80k8a"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "jar 包外部的 application.properties 或 application.yml(不带 spring.profile)配置文件"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-uwfqxe5",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210707234309-uwfqxe5"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-e05q3av",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-e05q3av"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "jar 包内部的 application.properties 或 application.yml(不带 spring.profile)配置文件"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-j5nysla",
+					"Type": "NodeListItem",
+					"Data": "3",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 3,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mw==",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20210707234309-j5nysla"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-1n4u2l2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-1n4u2l2"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "@Configuration 注解类上的@PropertySource"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-ezfd914",
+					"Type": "NodeListItem",
+					"Data": "4",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 4,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "NA==",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20210707234309-ezfd914"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-203u5z2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-203u5z2"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "通过 SpringApplication.setDefaultProperties 指定的默认属性"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-wtddx8v",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234309-wtddx8v"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "常用配置"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-jktka1k",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-jktka1k"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "IDEA 热部署"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-ycce56m",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-ycce56m"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "热部署的原理是，检测到 target 下的 class 文件发生变化后自动重启，所以需要对修改的文件进行编译，否则无效"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-v9e9ck2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-v9e9ck2"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "热部署失效：原因是因为 Intellij IEDA 默认情况下不会自动编译，需要对 IDEA 进行自动编译的设置"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-nam3ud4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-nam3ud4",
+				"updated": "20210707234606"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "1548621994782.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "./assets/1548621994782-20210707234606-ktpwg1m.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-5eo2kca",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-5eo2kca"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Shift + Ctrl + Alt + /"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " （Mac："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Shift + Command + Alt + /"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "），选择 Registry..."
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-im9o6pi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-im9o6pi",
+				"updated": "20210707234627"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "1548622068044.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "./assets/1548622068044-20210707234626-3pgwn6f.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-strjm95",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-strjm95"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "但是还是推荐使用 Jrebel！！！"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-0e7xvym",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-0e7xvym"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Banner"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-d27n70t",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-d27n70t"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在 Spring Boot 启动的时候会有一个默认的启动图案"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-aajiq6h",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-aajiq6h"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "  .   ____          _            __ _ _\n /\\\\ / ___'_ __ _ _(_)_ __  __ _ \\ \\ \\ \\\n( ( )\\___ | '_ | '_| | '_ \\/ _` | \\ \\ \\ \\\n \\\\/  ___)| |_)| | | | | || (_| |  ) ) ) )\n  '  |____| .__|_| |_|_| |_\\__, | / / / /\n =========|_|==============|___/=/_/_/_/\n :: Spring Boot ::        (v2.2.2.RELEASE)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-yl1114y",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-yl1114y"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们在 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "src/main/resources"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 目录下新建一个 banner.txt，通过"
+				},
+				{
+					"Type": "NodeLink",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "网站"
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "http://patorjk.com/software/taag"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "生成字符串，将网站生成的字符复制到文件中。甚至可以直接放入图片，名称改为 banner 即可。[banner]有旗帜，横幅、口号的意思。详细查看"
+				},
+				{
+					"Type": "NodeLink",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "官方文档"
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://docs.spring.io/spring-boot/docs/2.2.2.RELEASE/reference/htmlsingle/#boot-features-banner"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-1byk3eu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-1byk3eu"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "常用属性设置："
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-dg7ot12",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707234309-dg7ot12"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-oj2a2rc",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-oj2a2rc"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-o8xbbcr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-o8xbbcr"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "${AnsiColor.BRIGHT_RED}"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：设置控制台中输出内容的颜色"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-x84ar7v",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-x84ar7v"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-zkj9t70",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-zkj9t70"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "${application.version}"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：用来获取 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "MANIFEST.MF"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 文件中的版本号"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-q1juk1b",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-q1juk1b"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-kwfu4ek",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-kwfu4ek"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "${application.formatted-version}"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：格式化后的 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "${application.version}"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 版本信息"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-wybe3wi",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-wybe3wi"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-uohim87",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-uohim87"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "${spring-boot.version}"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：Spring Boot 的版本号"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-j2sdmz5",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-j2sdmz5"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-pfal4dl",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-pfal4dl"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "${spring-boot.formatted-version}"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：格式化后的 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "${spring-boot.version}"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 版本信息"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-32q9qco",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-32q9qco"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-hgijqd2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-hgijqd2"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "......"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-ch35hbj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-ch35hbj"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "项目名"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-n6joj0a",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eWFtbA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-n6joj0a"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eWFtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "spring:\n  application:\n    name: study-spring-boot # 名称，不知道在哪显示\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-9sse7qe",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-9sse7qe"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "端口、上下文"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-jkcwxhp",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eWFtbA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-jkcwxhp"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eWFtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "server:\n  port: 80 # 端口\n  servlet:\n    context-path: /conanan #上下文，之后访问需要带/conanan\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-8ux7tin",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-8ux7tin"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "日志"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-rezhqlv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-rezhqlv"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Spring Boot 默认继承 Logback"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-lcf6e0z",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eWFtbA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-lcf6e0z"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eWFtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "logging:\n  file:\n    name: ../logs/study-spring-boot.log # 相对项目路径。path属性设置有问题，没用\n  level:\n    root: warn\n    org.springframework.web: debug\n    org.hibernate: error\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-3ugwcjc",
+			"Type": "NodeTable",
+			"Data": "| `logging.file.name` | `logging.file.path` | Example    | Description                                                                                                          |\n| :------------------ | :------------------ | :--------- | :------------------------------------------------------------------------------------------------------------------- |\n| _(none)_            | _(none)_            |            | Console only logging.                                                                                                |\n| Specific file       | _(none)_            | `my.log`   | Writes to the specified log file. Names can be an exact location or relative to the current directory.               |\n| _(none)_            | Specific directory  | `/var/log` | Writes `spring.log` to the specified directory. Names can be an exact location or relative to the current directory. |",
+			"TableAligns": [
+				1,
+				1,
+				1,
+				1
+			],
+			"Properties": {
+				"id": "20210707234309-3ugwcjc"
+			},
+			"Children": [
+				{
+					"Type": "NodeTableHead",
+					"Children": [
+						{
+							"Type": "NodeTableRow",
+							"Children": [
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpan",
+											"CodeMarkerLen": 1,
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker",
+													"Data": "`"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "logging.file.name"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker",
+													"Data": "`"
+												}
+											]
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpan",
+											"CodeMarkerLen": 1,
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker",
+													"Data": "`"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "logging.file.path"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker",
+													"Data": "`"
+												}
+											]
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "Example"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "Description"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1,
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeEmphasis",
+									"Children": [
+										{
+											"Type": "NodeEmU8eOpenMarker",
+											"Data": "_"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "(none)"
+										},
+										{
+											"Type": "NodeEmU8eCloseMarker",
+											"Data": "_"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeEmphasis",
+									"Children": [
+										{
+											"Type": "NodeEmU8eOpenMarker",
+											"Data": "_"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "(none)"
+										},
+										{
+											"Type": "NodeEmU8eCloseMarker",
+											"Data": "_"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Console only logging."
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1,
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Specific file"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeEmphasis",
+									"Children": [
+										{
+											"Type": "NodeEmU8eOpenMarker",
+											"Data": "_"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "(none)"
+										},
+										{
+											"Type": "NodeEmU8eCloseMarker",
+											"Data": "_"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "my.log"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Writes to the specified log file. Names can be an exact location or relative to the current directory."
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1,
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeEmphasis",
+									"Children": [
+										{
+											"Type": "NodeEmU8eOpenMarker",
+											"Data": "_"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "(none)"
+										},
+										{
+											"Type": "NodeEmU8eCloseMarker",
+											"Data": "_"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Specific directory"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "/var/log"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Writes "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "spring.log"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " to the specified directory. Names can be an exact location or relative to the current directory."
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-ck14gwr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-ck14gwr"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Log files rotate(转化) when they reach 10 MB and, as with console output, "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ERROR"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "-level, "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "WARN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "-level, and "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "INFO"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "-level messages are logged by default. Size limits can be changed using the "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "logging.file.max-size"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " property. Previously rotated files are archived indefinitely unless the "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "logging.file.max-history"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " property has been set. The total size of log archives can be capped using "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "logging.file.total-size-cap"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ". When the total size of log archives exceeds that threshold, backups will be deleted. To force log archive cleanup on application startup, use the "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "logging.file.clean-history-on-start"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " property."
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-nu1e0lg",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-nu1e0lg"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "关闭特定的自动配置"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-c5hj42u",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-c5hj42u"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "关闭特定的自动配置使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "@SpringBootApplication"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 注解的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "exclude"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 参数即可，这里以关闭数据源的自动配置为例"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-h367mq8",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-h367mq8"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-6hfvdep",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-6hfvdep"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "自定义 Parent"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-7ndrggl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-7ndrggl"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "若需要使用自定义的 parent，不使用官方提供的，可以按如下配置（仅作为示例）："
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-1i3bmqg",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eG1s",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-1i3bmqg"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003c?xml version=\"1.0\" encoding=\"UTF-8\"?\u003e\n\u003cproject xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n\txsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\"\u003e\n\t\u003cmodelVersion\u003e4.0.0\u003c/modelVersion\u003e\n\n\t\u003cgroupId\u003egeektime.demo\u003c/groupId\u003e\n\t\u003cartifactId\u003ehelloworld\u003c/artifactId\u003e\n\t\u003cversion\u003e0.0.1-SNAPSHOT\u003c/version\u003e\n\t\u003cname\u003eHelloWorld\u003c/name\u003e\n\t\u003cdescription\u003eDemo project for Spring Boot\u003c/description\u003e\n\n\t\u003cproperties\u003e\n\t\t\u003cjava.version\u003e1.8\u003c/java.version\u003e\n\t\u003c/properties\u003e\n\n\t\u003cdependencyManagement\u003e\n\t\t\u003cdependencies\u003e\n\t\t\t\u003cdependency\u003e\n\t\t\t\t\u003cgroupId\u003eorg.springframework.boot\u003c/groupId\u003e\n\t\t\t\t\u003cartifactId\u003espring-boot-dependencies\u003c/artifactId\u003e\n\t\t\t\t\u003cversion\u003e2.1.1.RELEASE\u003c/version\u003e\n\t\t\t\t\u003ctype\u003epom\u003c/type\u003e\n\t\t\t\t\u003cscope\u003eimport\u003c/scope\u003e\n\t\t\t\u003c/dependency\u003e\n\t\t\u003c/dependencies\u003e\n\t\u003c/dependencyManagement\u003e\n\n\t\u003cdependencies\u003e\n\t\t\u003cdependency\u003e\n\t\t\t\u003cgroupId\u003eorg.springframework.boot\u003c/groupId\u003e\n\t\t\t\u003cartifactId\u003espring-boot-starter-web\u003c/artifactId\u003e\n\t\t\u003c/dependency\u003e\n\n\t\t\u003cdependency\u003e\n\t\t\t\u003cgroupId\u003eorg.springframework.boot\u003c/groupId\u003e\n\t\t\t\u003cartifactId\u003espring-boot-starter-test\u003c/artifactId\u003e\n\t\t\t\u003cscope\u003etest\u003c/scope\u003e\n\t\t\u003c/dependency\u003e\n\t\u003c/dependencies\u003e\n\n\t\u003cbuild\u003e\n\t\t\u003cplugins\u003e\n\t\t\t\u003cplugin\u003e\n\t\t\t\t\u003cgroupId\u003eorg.springframework.boot\u003c/groupId\u003e\n\t\t\t\t\u003cartifactId\u003espring-boot-maven-plugin\u003c/artifactId\u003e\n\t\t\t\t\u003cversion\u003e2.1.1.RELEASE\u003c/version\u003e\n\t\t\t\t\u003cexecutions\u003e\n\t\t\t\t\t\u003cexecution\u003e\n\t\t\t\t\t\t\u003cgoals\u003e\n\t\t\t\t\t\t\t\u003cgoal\u003erepackage\u003c/goal\u003e\n\t\t\t\t\t\t\u003c/goals\u003e\n\t\t\t\t\t\u003c/execution\u003e\n\t\t\t\t\u003c/executions\u003e\n\t\t\t\u003c/plugin\u003e\n\t\t\u003c/plugins\u003e\n\t\u003c/build\u003e\n\u003c/project\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		}
+	]
+}

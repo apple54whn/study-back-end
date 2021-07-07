@@ -1,0 +1,6558 @@
+{
+	"ID": "20210707214420-elw6sld",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210707214420-elw6sld",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210707214420-oto35z4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-oto35z4"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Stream 是 Java8 中处理集合的关键抽象概念，它可以指定你希望对集合进行的操作，可以执行非常复杂的查找、过滤和映射数据等操作。 使用 Stream API "
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "对集合数据进行操作"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，就"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "类似于使用 SQL"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 执行的数据库查询。 也可以使用 Stream API 来"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "并行执行操作"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。简言之，Stream API 提供了一种高效且易于使用的处理数据的方式。"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-ae8acdp",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707214420-ae8acdp"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "为什么要使用 Stream API"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-ldb2p1a",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214420-ldb2p1a"
+			},
+			"Children": [
+				{
+					"ID": "20210707214420-pv01cuv",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-pv01cuv"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-gejxw8v",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-gejxw8v"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "实际开发中，项目中多数数据源都来自于 Mysql，Oracle 等。但现在数据源可以更多了，有 MongDB，Radis 等，而这些 NoSQL 的数据就需要 Java 层面去处理。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-3sg0f2u",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-3sg0f2u"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-3mg11js",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-3mg11js"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Stream 和 Collection 集合的区别：Collection 是一种"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "静态的内存数据结构"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，而 Stream 是有关"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "计算"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的。前者是主要面向内存，存储在内存中， 后者主要是面向 CPU，通过 CPU 实现计算。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-kemuert",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20210707214420-kemuert"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e "
+				},
+				{
+					"ID": "20210707214420-bqo1une",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210707214420-bqo1une"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "Java 8 的 Lambda 让我们可以更加专注于做什么（What），而不是怎么做（How），这点此前已经结合内部类进行了对比说明。结合集合中遍历操作，可以发现循环遍历的弊端："
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-dd9uq9h",
+					"Type": "NodeList",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-dd9uq9h"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-8cr25t0",
+							"Type": "NodeListItem",
+							"Data": "-",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707214420-8cr25t0"
+							},
+							"Children": [
+								{
+									"ID": "20210707214420-85l5ua5",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20210707214420-85l5ua5"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "for 循环的语法就是“怎么做”"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-okdxqsa",
+							"Type": "NodeListItem",
+							"Data": "-",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707214420-okdxqsa"
+							},
+							"Children": [
+								{
+									"ID": "20210707214420-xchoffi",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20210707214420-xchoffi"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "for 循环的循环体才是“做什么”"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-vvk3b3q",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210707214420-vvk3b3q"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "如果希望对集合中的元素进行筛选过滤："
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-xmylqji",
+					"Type": "NodeList",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-xmylqji"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-4wixv68",
+							"Type": "NodeListItem",
+							"Data": "-",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707214420-4wixv68"
+							},
+							"Children": [
+								{
+									"ID": "20210707214420-evipkkd",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20210707214420-evipkkd"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "将集合 A 根据条件一过滤为子集 B；"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-l9nl9ov",
+							"Type": "NodeListItem",
+							"Data": "-",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707214420-l9nl9ov"
+							},
+							"Children": [
+								{
+									"ID": "20210707214420-hv4lmd4",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20210707214420-hv4lmd4"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "然后再根据条件二过滤为子集 C。"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-vusplkt",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210707214420-vusplkt"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "使用线性循环就意味着只能遍历一次，那么需多次循环来解决；并且循环是做事情的方式，而不是目的。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-4f2mr2m",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707214420-4f2mr2m"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "//筛选以张开始，长度为3，遍历打印\nlist.stream()\n    .filter(s-\u003es.startsWith(\"张\"))\n    .filter(s-\u003es.length()==3)\n    .forEach(s -\u003e System.out.println(s));\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-z9le218",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707214420-z9le218"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "流式思想概述"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-co4tta5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-co4tta5"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "整体来看，流式思想类似于工厂车间的“"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "生产流水线"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "”。当需要"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "对多个元素进行操作（特别是多步操作）"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的时候，考虑到性能及便利性，我们应该"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "首先拼好一个“模型”步骤方案"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，然后再按照方案去"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "执行"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "它。"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-izijg0n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-izijg0n"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这张图中展示了过滤、映射、跳过、计数等多步操作，这是一种"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "集合元素的处理方案"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，而方案就是一种“"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "函数模型"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "”。图中的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "每一个方框都是一个“流”"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，调用指定的方法，可以"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "从一个流模型转换为另一个流模型"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。而右侧的数字 3 是终结果。"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-ptp0067",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-ptp0067"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这里的 filter 、 map 、 skip 都是在"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "对函数模型进行操作"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "集合元素并没有真正被处理"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "只有当终结方法 count 执行"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的时候，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "整个模型才会按照指定策略执行操作"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。而这得益于"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Lambda 的延迟执行特性"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-03x73wq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-03x73wq"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Children": [
+						{
+							"Type": "NodeBang",
+							"Data": "!"
+						},
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20210106232235809"
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "../assets/image-20210106232235809.png"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-vzzuikt",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214420-vzzuikt"
+			},
+			"Children": [
+				{
+					"ID": "20210707214420-p133aqn",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-p133aqn"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-0omex37",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-0omex37"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Stream 流其实是一个"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "集合元素的函数模型"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，它并不是集合，也不是数据结构。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-gry2m22",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-gry2m22"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-bdroxsz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-bdroxsz"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "和以前的 Collection 操作不同， Stream 操作还有几个基础的特征："
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-lnbem38",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707214420-lnbem38"
+							},
+							"Children": [
+								{
+									"ID": "20210707214420-uegjzue",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214420-uegjzue"
+									},
+									"Children": [
+										{
+											"ID": "20210707214420-6kz84kw",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214420-6kz84kw"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "其本身并不存储任何元素（或其地址值）"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "，而是按需计算。"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214420-ebywj51",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214420-ebywj51"
+									},
+									"Children": [
+										{
+											"ID": "20210707214420-l7ezajk",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214420-l7ezajk"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "Pipelining"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "：中间操作都会"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "返回流对象本身"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "，且不改变原对象。 这样多个操作可以"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "串联成一个管道"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "， 如同流式风格（ﬂuent style）。 并可以对操作进行优化， 比如"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "延迟执行"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "（laziness）和"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "短路"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "（short-circuiting）。"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214420-mwmszvs",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214420-mwmszvs"
+									},
+									"Children": [
+										{
+											"ID": "20210707214420-jislewy",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214420-jislewy"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "内部迭代"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "：以前对集合遍历都是通过 Iterator 或者增强 for 的方式，显式的在集合外部进行迭代， 这叫做外部迭代。 "
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "Stream 提供了内部迭代的方式，流可以直接调用遍历方法"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "。"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-c2icnrv",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707214420-c2icnrv"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Stream 的操作三个步骤"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-28d3kwc",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Tight": true,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 4,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210707214420-28d3kwc"
+			},
+			"Children": [
+				{
+					"ID": "20210707214420-tu5qu40",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 4,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210707214420-tu5qu40"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-oo7e8xx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-oo7e8xx"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "创建 Stream："
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "从一个数据源（如集合、数组），获取一个流"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-c8sje60",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 4,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210707214420-c8sje60"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-o3fh4nm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-o3fh4nm"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "中间操作：一个中间操作链，对数据源的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "数据进行处理"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-8zxc2e6",
+					"Type": "NodeListItem",
+					"Data": "3",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 3,
+						"Delimiter": 46,
+						"Padding": 4,
+						"Marker": "Mw==",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20210707214420-8zxc2e6"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-8xv01h5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-8xv01h5"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "终止操作（终端操作）"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：一旦执行终止操作，就执行中间操作链，并产生结果，之后 Stream 不能再被使用"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-prm95dw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707214420-prm95dw"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "创建 Stream 的方法"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-b5kmc0z",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214420-b5kmc0z"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Stream.of"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-psqe485",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-psqe485"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Stream"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "类的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "静态方法"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "of()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，通过显示值创建一个流。它可以接收任意数量的参数。"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-2swd9iq",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214420-2swd9iq"
+			},
+			"Children": [
+				{
+					"ID": "20210707214420-uz07chh",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-uz07chh"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-ymm5yvr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-ymm5yvr"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "public static\u003cT\u003e Stream\u003cT\u003e of(T... values)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "： 返回一个流"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-jjq1d0c",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214420-jjq1d0c"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Stream.iterate/generate"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-ou4xvmc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-ou4xvmc"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Stream"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "类的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "静态方法"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "创建"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "无限流"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "（了解）"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-zccqyfl",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214420-zccqyfl"
+			},
+			"Children": [
+				{
+					"ID": "20210707214420-n959kbg",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-n959kbg"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-fm1op78",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-fm1op78"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "迭代"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "public static\u003cT\u003e Stream\u003cT\u003e iterate(final T seed, final UnaryOperator\u003cT\u003e f)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-gniu2vo",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-gniu2vo"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "Stream\u003cInteger\u003e stream = Stream.iterate(0, x -\u003e x + 2);\nstream.limit(10).forEach(System.out::println);// 遍历前10个\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-fc9qx0x",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-fc9qx0x"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-amzxgsz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-amzxgsz"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "生成"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "public static\u003cT\u003e Stream\u003cT\u003e generate(Supplier\u003cT\u003e s)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-iam95j8",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-iam95j8"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "Stream\u003cDouble\u003e stream1 = Stream.generate(Math::random);\nstream1.limit(10).forEach(System.out::println);// 生成随机数10个\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-ypitc6t",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214420-ypitc6t"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Arrays.stream 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-hcflaki",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-hcflaki"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Java8 中的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Arrays"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "静态方法"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "stream()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 可以获取数组流"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-e9gt96v",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214420-e9gt96v"
+			},
+			"Children": [
+				{
+					"ID": "20210707214420-j2kc5h9",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-j2kc5h9"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-o2cre7m",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-o2cre7m"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "static \u003cT\u003e Stream\u003cT\u003e stream(T[] array)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：返回一个流"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-85vpf0q",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-85vpf0q"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "重载形式，能够处理对应基本类型的数组："
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-jkiq602",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707214420-jkiq602"
+							},
+							"Children": [
+								{
+									"ID": "20210707214420-kz8971k",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214420-kz8971k"
+									},
+									"Children": [
+										{
+											"ID": "20210707214420-v24m4wt",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214420-v24m4wt"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "public static IntStream stream(int[] array)"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214420-eb0n7ym",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214420-eb0n7ym"
+									},
+									"Children": [
+										{
+											"ID": "20210707214420-9gtsjyl",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214420-9gtsjyl"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "public static LongStream stream(long[] array)"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214420-3l46681",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214420-3l46681"
+									},
+									"Children": [
+										{
+											"ID": "20210707214420-0x5o2iv",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214420-0x5o2iv"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "public static DoubleStream stream(double[] array)"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-hp4f8v7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214420-hp4f8v7"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "collection.stream 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-fk4st2z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-fk4st2z"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Java8 中的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Collection"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 接口被扩展，提供了两个获取流的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "普通成员方法"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-kxewyo4",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214420-kxewyo4"
+			},
+			"Children": [
+				{
+					"ID": "20210707214420-6u66dse",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-6u66dse"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-8c594vh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-8c594vh"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "default Stream\u003cE\u003e stream()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：返回一个顺序流"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-ggjni0c",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-ggjni0c"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-wn6keot",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-wn6keot"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "default Stream\u003cE\u003e parallelStream()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：返回一个并行流；"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "stream.parallel()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "也可以获取并行流"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-ilty9j3",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707214420-ilty9j3"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Stream 的中间操作"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-8biqr47",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-8biqr47"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Stream 属于管道流"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "只能被使用一次"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，数据从上一个 Stream 传到下一个 Stream 上，上一个 Stream 已经关闭。多个中间操作可以连接起来形成一个流水线，除非流水线上触发终止操作，否则中间操作不会执行任何的处理，而在终止操作时一次性全部处理，称为“"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "惰性求值（延迟方法）"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "”。"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-viyn5g4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214420-viyn5g4"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "筛选与切片"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-ox5nhpt",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214420-ox5nhpt"
+			},
+			"Children": [
+				{
+					"ID": "20210707214420-frc6u1u",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-frc6u1u"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-e5rnvmy",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-e5rnvmy"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "filter(Predicate p)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-c4nv1x4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-c4nv1x4"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "接收 Lambda， 从流中"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "排除过滤某些元素"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-ktoxh52",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-ktoxh52"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-6v6n3ur",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-6v6n3ur"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "limit(long maxSize)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-i60w0y5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-i60w0y5"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "截断流"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，使其元素不超过给定数量，截取前 maxSize 个"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-yljfape",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-yljfape"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-scu3osg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-scu3osg"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "skip(long n)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-tdflg72",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-tdflg72"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "返回一个"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "扔掉了前 n 个元素的流"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。若流中元素不足 n 个，则返回一个空流。与 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "limit(n)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 互补"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-j5fec2v",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-j5fec2v"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-tepmd6i",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-tepmd6i"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "distinct()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-hccvbin",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-hccvbin"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "筛选，通过流所生成元素的 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "hashCode()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 和 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "equals()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " "
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "去除重复元素"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-x6mxh2l",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-x6mxh2l"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "@Test\npublic void test1(){\n    List\u003cEmployee\u003e list = EmployeeData.getEmployees();\n    //filter(Predicate p)——接收 Lambda ， 从流中排除某些元素。\n    // 每次都需要重新获取 Stream\n\n    //练习：查询员工表中薪资大于7000的员工信息\n    list.stream();.filter(e -\u003e e.getSalary() \u003e 7000).forEach(System.out::println);\n\n    //limit(n)——截断流，使其元素不超过给定数量。\n    list.stream().limit(3).forEach(System.out::println);\n\n    //skip(n) —— 跳过元素，返回一个扔掉了前 n 个元素的流。若流中元素不足 n 个，则返回一个空流。与 limit(n) 互补\n    list.stream().skip(3).forEach(System.out::println);\n\n    //distinct()——筛选，通过流所生成元素的 hashCode() 和 equals() 去除重复元素\n    list.add(new Employee(1010,\"刘强东\",40,8000));\n    list.add(new Employee(1010,\"刘强东\",41,8000));\n    list.add(new Employee(1010,\"刘强东\",40,8000));\n    list.add(new Employee(1010,\"刘强东\",40,8000));\n    list.add(new Employee(1010,\"刘强东\",40,8000));\n    list.stream().distinct().forEach(System.out::println);\n}\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-44r5kes",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214420-44r5kes"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "映射"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-p287wcg",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214420-p287wcg"
+			},
+			"Children": [
+				{
+					"ID": "20210707214420-tevv42s",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-tevv42s"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-6r3t5ze",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-6r3t5ze"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "map(Function f)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeSoftBreak",
+									"Data": "\n"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "接收一个函数作为参数，该函数会被应用到每个元素上，并将其映射成一个新的元素。"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-ncqbcul",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-ncqbcul"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "mapToDouble(ToDoubleFunction f)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeSoftBreak",
+									"Data": "\n"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "接收一个函数作为参数，该函数会被应用到每个元素上，产生一个新的 DoubleStream。"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-9g7srts",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-9g7srts"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "mapToInt(ToIntFunction f)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeSoftBreak",
+									"Data": "\n"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "接收一个函数作为参数，该函数会被应用到每个元素上，产生一个新的 IntStream。"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-be9fn4n",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-be9fn4n"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "mapToLong(ToLongFunction f)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeSoftBreak",
+									"Data": "\n"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "接收一个函数作为参数，该函数会被应用到每个元素上，产生一个新的 LongStream。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-xqgkzwx",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-xqgkzwx"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-brn9y49",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-brn9y49"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "flatMap(Function f)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeSoftBreak",
+									"Data": "\n"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "接收一个函数作为参数，将流中的每个值都换成另一个流，然后把所有流连接成一个流，类似 List 中的 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "addAll()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 方法"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-112x34v",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-112x34v"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "@Test\npublic void test2(){\n    // map(Function f)——接收一个函数作为参数，将元素转换成其他形式或提取信息，该函数会被应用到每个元素上，并将其映射成一个新的元素。\n    List\u003cString\u003e list = Arrays.asList(\"aa\", \"bb\", \"cc\", \"dd\");\n    list.stream().map(str -\u003e str.toUpperCase()).forEach(System.out::println);\n\n    // 练习1：获取员工姓名长度大于3的员工的姓名。\n    List\u003cEmployee\u003e employees = EmployeeData.getEmployees();\n    Stream\u003cString\u003e namesStream = employees.stream().map(Employee::getName);\n    namesStream.filter(name -\u003e name.length() \u003e 3).forEach(System.out::println);\n    // -----------------------------------------------------\n    //练习2：\n    Stream\u003cStream\u003cCharacter\u003e\u003e streamStream = list.stream().map(StreamAPITest1::fromStringToStream);\n    streamStream.forEach(s -\u003e{\n        s.forEach(System.out::println);\n    });\n\n    // flatMap(Function f)——接收一个函数作为参数，将流中的每个值都换成另一个流，然后把所有流连接成一个流。\n    Stream\u003cCharacter\u003e characterStream = list.stream().flatMap(StreamAPITest1::fromStringToStream);\n    characterStream.forEach(System.out::println);\n}\n\n//将字符串中的多个字符构成的集合转换为对应的Stream的实例\npublic static Stream\u003cCharacter\u003e fromStringToStream(String str){//aa\n    ArrayList\u003cCharacter\u003e list = new ArrayList\u003c\u003e();\n    for(Character c : str.toCharArray()){\n        list.add(c);\n    }\n    return list.stream();\n}\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-tm7ajk9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214420-tm7ajk9"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "排序"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-8wtnpix",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214420-8wtnpix"
+			},
+			"Children": [
+				{
+					"ID": "20210707214420-3ttu9o0",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-3ttu9o0"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-d3azuxc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-d3azuxc"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "sorted()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeSoftBreak",
+									"Data": "\n"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "产生一个新流，按自然顺序排序"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-x2ird9f",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-x2ird9f"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-zfci66m",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-zfci66m"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "sorted(Comparator com)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeSoftBreak",
+									"Data": "\n"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "产生一个新流，按比较器顺序排序"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-20w1o9k",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707214420-20w1o9k"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Stream 的终止操作"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-zvlkv81",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-zvlkv81"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "终端操作会从流的流水线生成结果。其结果可以是任何不是流的值，例如：List、Integer，甚至是 void 。流进行了终止操作后，不能再次使用。"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-5ewqs0v",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214420-5ewqs0v"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "匹配与查找"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-3wohoo6",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214420-3wohoo6"
+			},
+			"Children": [
+				{
+					"ID": "20210707214420-c54izva",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-c54izva"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-76dsbba",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-76dsbba"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "boolean allMatch(Predicate p)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeSoftBreak",
+									"Data": "\n"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "检查是否匹配所有元素"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-gst2sq0",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-gst2sq0"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-lcxh6m7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-lcxh6m7"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "boolean anyMatch(Predicate p)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeSoftBreak",
+									"Data": "\n"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "检查是否至少匹配一个元素"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-hnhatqo",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-hnhatqo"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-lqr1ppm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-lqr1ppm"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "boolean noneMatch(Predicate p)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeSoftBreak",
+									"Data": "\n"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "检查是否没有匹配所有元素"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-2g86991",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-2g86991"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-woliioq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-woliioq"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Optional\u003cT\u003e findFirst()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeSoftBreak",
+									"Data": "\n"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "返回第一个元素"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-2pgt3ls",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-2pgt3ls"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-sxa510s",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-sxa510s"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Optional\u003cT\u003e findAny()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeSoftBreak",
+									"Data": "\n"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "返回当前流中的任意元素"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-cpy9f1e",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-cpy9f1e"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-bh59cea",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-bh59cea"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "long count()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeSoftBreak",
+									"Data": "\n"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "返回流中元素总数"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-4afypx9",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-4afypx9"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-fkl811a",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-fkl811a"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Optional\u003cT\u003e max(Comparator c)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeSoftBreak",
+									"Data": "\n"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "返回流中最大值"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-50lj4xs",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-50lj4xs"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-vtewab7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-vtewab7"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Optional\u003cT\u003e min(Comparator c)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeSoftBreak",
+									"Data": "\n"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "返回流中最小值"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-mxn45wd",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-mxn45wd"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-wqqfth3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-wqqfth3"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "void forEach(Consumer c)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeSoftBreak",
+									"Data": "\n"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "内部迭代"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "(使用 Collection 接口需要用户去做迭代称为外部迭代。相反 Stream API 使用内部迭代——它帮你把迭代做了)"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-mg8uurm",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-mg8uurm"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "@Test\npublic void test1(){\n  List\u003cEmployee\u003e employees = EmployeeData.getEmployees();\n\n  // allMatch(Predicate p)——检查是否匹配所有元素。\n  // 练习：是否所有的员工的年龄都大于18\n  boolean allMatch = employees.stream().allMatch(e -\u003e e.getAge() \u003e 18);\n  System.out.println(allMatch);\n\n  // anyMatch(Predicate p)——检查是否至少匹配一个元素。\n  // 练习：是否存在员工的工资大于 10000\n  boolean anyMatch = employees.stream().anyMatch(e -\u003e e.getSalary() \u003e 10000);\n  System.out.println(anyMatch);\n\n  // noneMatch(Predicate p)——检查是否没有匹配的元素。\n  // 练习：是否存在员工姓“雷”\n  boolean noneMatch = employees.stream().noneMatch(e -\u003e e.getName().startsWith(\"雷\"));\n  System.out.println(noneMatch);\n\n  // findFirst——返回第一个元素\n  Optional\u003cEmployee\u003e employee = employees.stream().findFirst();\n  System.out.println(employee);\n\n  // findAny——返回当前流中的任意元素\n  Optional\u003cEmployee\u003e employee1 = employees.parallelStream().findAny();\n  System.out.println(employee1);\n}\n\n@Test\npublic void test2(){\n  List\u003cEmployee\u003e employees = EmployeeData.getEmployees();\n\n  // count——返回流中元素的总个数\n  long count = employees.stream().filter(e -\u003e e.getSalary() \u003e 5000).count();\n  System.out.println(count);\n\n  // max(Comparator c)——返回流中最大值\n  // 练习：返回最高的工资：\n  Stream\u003cDouble\u003e salaryStream = employees.stream().map(e -\u003e e.getSalary());\n  Optional\u003cDouble\u003e maxSalary = salaryStream.max(Double::compare);\n  System.out.println(maxSalary);\n\n  // min(Comparator c)——返回流中最小值\n  // 练习：返回最低工资的员工\n  Optional\u003cEmployee\u003e employee = employees.stream().min((e1, e2) -\u003e Double.compare(e1.getSalary(), e2.getSalary()));\n  System.out.println(employee);\n\n  // forEach(Consumer c)——内部迭代\n  employees.stream().forEach(System.out::println);\n\n  //使用集合的遍历操作\n  employees.forEach(System.out::println);\n}\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-nw9nhnp",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214420-nw9nhnp"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "归约"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-x791bst",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214420-x791bst"
+			},
+			"Children": [
+				{
+					"ID": "20210707214420-6tfrdz9",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-6tfrdz9"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-5ta6g14",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-5ta6g14"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "reduce(T iden, BinaryOperator b)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeSoftBreak",
+									"Data": "\n"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "可以将流中元素反复结合起来，得到一个值，返回 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "T"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "iden"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "为初始值"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-bdr0frd",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-bdr0frd"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-mdxy1zf",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-mdxy1zf"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "reduce(BinaryOperator b)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeSoftBreak",
+									"Data": "\n"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "可以将流中元素反复结合起来，得到一个值。返回 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Optional\u003cT\u003e"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-6y9g7rx",
+							"Type": "NodeBlockquote",
+							"Properties": {
+								"id": "20210707214420-6y9g7rx"
+							},
+							"Children": [
+								{
+									"Type": "NodeBlockquoteMarker",
+									"Data": "\u003e "
+								},
+								{
+									"ID": "20210707214420-o9fnfgz",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20210707214420-o9fnfgz"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "map 和 reduce 的连接通常称为 map-reduce 模式，因 Google 用它来进行网络搜索而出名。"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-1fq3yjh",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-1fq3yjh"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "@Test\npublic void test3(){\n    // reduce(T identity, BinaryOperator)——可以将流中元素反复结合起来，得到一个值。返回 T\n\n    // 练习1：计算1-10的自然数的和\n    List\u003cInteger\u003e list = Arrays.asList(1,2,3,4,5,6,7,8,9,10);\n    Integer sum = list.stream().reduce(0, Integer::sum);// 0 为初始值\n    System.out.println(sum);// 55\n\n    // reduce(BinaryOperator) ——可以将流中元素反复结合起来，得到一个值。返回 Optional\u003cT\u003e\n    // 练习2：计算公司所有员工工资的总和\n    List\u003cEmployee\u003e employees = EmployeeData.getEmployees();\n    Stream\u003cDouble\u003e salaryStream = employees.stream().map(Employee::getSalary);\n    Optional\u003cDouble\u003e sumMoney = salaryStream.reduce(Double::sum);\n    // Optional\u003cDouble\u003e sumMoney = salaryStream.reduce((d1,d2) -\u003e d1 + d2);\n    System.out.println(sumMoney.get());\n}\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-7f7mddp",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214420-7f7mddp"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "收集"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-oi0zlip",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214420-oi0zlip"
+			},
+			"Children": [
+				{
+					"ID": "20210707214420-5plvjh6",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-5plvjh6"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-xao7cs7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-xao7cs7"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "collect(Collector c)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeSoftBreak",
+									"Data": "\n"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "将流转换为其他形式。接收一个 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Collector"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 接口的实现，用于给"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Stream"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "中元素做汇总的方法。Collector 接口中方法的实现决定了如何对流执行收集的操作(如收集到 List、Set、 Map)。另外，"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Collectors"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 实用类提供了很多静态方法，可以方便地创建常见收集器实例， 具体方法与实例如下表:"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-ubex78q",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-ubex78q"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-yyddcdd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-yyddcdd"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "static List\u003cT\u003e toList"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-9wg4807",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-9wg4807"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "把流中元素收集到 List"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-f1qvmuy",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-f1qvmuy"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "List\u003cEmployee\u003e emps= list.stream().collect(Collectors.toList());\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-7cm3c3q",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-7cm3c3q"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-694zibi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-694zibi"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "static Set\u003cT\u003e toSet"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-vhjxy4d",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-vhjxy4d"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "把流中元素收集到 Set"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-bhkigpn",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-bhkigpn"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "Set\u003cEmployee\u003e emps= list.stream().collect(Collectors.toSet());\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-2u9ltnl",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-2u9ltnl"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-64bxgdt",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-64bxgdt"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "static Collection\u003cT\u003e toCollection"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-xjlpc1r",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-xjlpc1r"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "把流中元素收集到创建的集合"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-v7k26ji",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-v7k26ji"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "Collection\u003cEmployee\u003e emps =list.stream().collect(Collectors.toCollection(ArrayList::new));\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-v112jcz",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-v112jcz"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-8blx2ji",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-8blx2ji"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Object[] toArray()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-m8wrfiy",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-m8wrfiy"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "转为数组"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，返回包含此流的元素的数组"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-usfiug6",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-usfiug6"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "//略\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-7tz6gkx",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-7tz6gkx"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-0c4qcj9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-0c4qcj9"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "\u003cA\u003e A[] toArray(IntFunction\u003cA[]\u003e generator)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-nvdp0su",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-nvdp0su"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "通过"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "方法引用指定创建数组"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "类型如"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "String[]::new"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-wznhhek",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-wznhhek"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "// 略\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-5o13au7",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-5o13au7"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-4jcqlyc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-4jcqlyc"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "static \u003cT\u003e Stream\u003cT\u003e concat(Stream\u003c? extends T\u003e a, Stream\u003c? extends T\u003e b)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-b6a6cir",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-b6a6cir"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "合并流"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-l5fhufg",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-l5fhufg"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "Stream\u003cString\u003e one2 = one.stream().filter(name -\u003e name.length() == 3).limit(3);\nStream\u003cString\u003e two2 = two.stream().filter(name -\u003e name.startsWith(\"张\")).skip(2);\nStream.concat(one2, two2).map(name -\u003e new Person(name)).forEach(name -\u003e System.out.println(name));\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-rwscpkg",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-rwscpkg"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-yj9tqe8",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-yj9tqe8"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Long counting"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-a21e2x2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-a21e2x2"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "计算流中元素的个数"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-t7tvk9k",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-t7tvk9k"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "long count = list.stream().collect(Collectors.counting());\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-hnn6d63",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-hnn6d63"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-tqznkqy",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-tqznkqy"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Integer summingInt"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-2c8gnx6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-2c8gnx6"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "对流中元素的整数属性求和"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-5wmvfo8",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-5wmvfo8"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "int total=list.stream().collect(Collectors.summingInt(Employee::getSalary));\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-e8on52h",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-e8on52h"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-0golb2t",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-0golb2t"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Double averagingInt"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-0clyp59",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-0clyp59"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "计算流中元素 Integer 属性的平均值"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-isu8w60",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-isu8w60"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "double avg = list.stream().collect(Collectors.averagingInt(Employee::getSalary));\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-676dnte",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-676dnte"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-y8bd5gz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-y8bd5gz"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "IntSummaryStatistics summarizingInt"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-8cdkrhw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-8cdkrhw"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "收集流中 Integer 属性的统计值。如平均值"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-vt5dpoy",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-vt5dpoy"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "int SummaryStatisticsiss= list.stream().collect(Collectors.summarizingInt(Employee::getSalary));\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-romsq22",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-romsq22"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-8k4obsg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-8k4obsg"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "String joining([CharSequence delimiter])"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-psza877",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-psza877"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "连接流中每个字符串"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-i7p63nv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-i7p63nv"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "注意，使用"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "delimiter"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "时要确定"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "map"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "中数据类型"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-h47hlxn",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-h47hlxn"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "String str= list.stream().map(Employee::getName).collect(Collectors.joining());\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-sjgeyh6",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-sjgeyh6"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-y8fgkqm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-y8fgkqm"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Optional\u003cT\u003e maxBy"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-mhextx0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-mhextx0"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "根据比较器选择最大值"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-ivh7lfi",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-ivh7lfi"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "Optional\u003cEmp\u003emax= list.stream().collect(Collectors.maxBy(comparingInt(Employee::getSalary)));\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-72filx2",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-72filx2"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-k94t5r0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-k94t5r0"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Optional\u003cT\u003e minBy"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-ge4h679",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-ge4h679"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "根据比较器选择最小值"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-nfv7qel",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-nfv7qel"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "Optional\u003cEmp\u003e min = list.stream().collect(Collectors.minBy(comparingInt(Employee::getSalary)));\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-5htxi4f",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-5htxi4f"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-yqsbjua",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-yqsbjua"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "归约产生的类型 reducing"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-auyrmza",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-auyrmza"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "从一个作为累加器的初始值开始， 利用 BinaryOperator 与流中元素逐个结合，从而归约成单个值"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-o3prmed",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-o3prmed"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "int total=list.stream().collect(Collectors.reducing(0, Employee::getSalar, Integer::sum));\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-v0p36ka",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-v0p36ka"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-83qls1z",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-83qls1z"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "转换函数返回的类型 collectingAndThen"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-7adiyyj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-7adiyyj"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "包裹另一个收集器，对其结果转换函数"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-d61lbvb",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-d61lbvb"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "int how= list.stream().collect(Collectors.collectingAndThen(Collectors.toList(), List::size));\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-vvlybc5",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-vvlybc5"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-hcz8zka",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-hcz8zka"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Map\u003cK, List\u003cT\u003e\u003e groupingBy"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-gj7fyjm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-gj7fyjm"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "根据某属性值对流分组，属性为 K 结果为 V"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-4449a6k",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-4449a6k"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "Map\u003cEmp.Status, List\u003cEmp\u003e\u003e map= list.stream() .collect(Collectors.groupingBy(Employee::getStatus));\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-kjfjr1f",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-kjfjr1f"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-paxg96v",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-paxg96v"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Map\u003cBoolean, List\u003cT\u003e\u003e partitioningBy"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-7vnq6b1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-7vnq6b1"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "根据 true 或 false 进行分区"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-i8fuaz1",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-i8fuaz1"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "Map\u003cBoolean,List\u003cEmp\u003e\u003e vd = list.stream().collect(Collectors.partitioningBy(Employee::getManage));\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-19f864b",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-19f864b"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "@Test\npublic void test4(){\n  // collect(Collector c)——将流转换为其他形式。接收一个 Collector接口的实现，用于给Stream中元素做汇总的方法\n  // 练习1：查找工资大于6000的员工，结果返回为一个List或Set\n\n  List\u003cEmployee\u003e employees = EmployeeData.getEmployees();\n  List\u003cEmployee\u003e employeeList = employees.stream().filter(e -\u003e e.getSalary() \u003e6000).collect(Collectors.toList());\n\n  employeeList.forEach(System.out::println);\n  System.out.println();\n  Set\u003cEmployee\u003e employeeSet = employees.stream().filter(e -\u003e e.getSalary() \u003e 6000).collect(Collectors.toSet());\n\n  employeeSet.forEach(System.out::println);\n}\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-6yinms2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707214420-6yinms2"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "习题"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-1luawdj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214420-1luawdj"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "返回一个由每个数的平方 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-9p8pbzv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-9p8pbzv"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "给定一个数字列表，如何返回一个由每个数的平方构成的列表呢？"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-1q9snwd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-1q9snwd"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "例如，给定【1，2，3，4，5】， 应该返回【1，4，9，16，25】。"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-rzeop50",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707214420-rzeop50"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Test\nvoid test1() {\n    // ArrayList\u003cInteger\u003e list = new ArrayList\u003c\u003e(Arrays.asList(1, 2, 3, 4, 5));\n    List\u003cInteger\u003e list = Arrays.asList(1, 2, 3, 4, 5);\n\n    // 长度不变，所以可以操作 Arrays.asList 生成的\n    List\u003cInteger\u003e list2 = list.stream().map(i -\u003e i * i).collect(Collectors.toList());\n    System.out.println(list2);\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-iqvonge",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214420-iqvonge"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "reduce \u0026 BinaryOperator🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-qn2mz7m",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-qn2mz7m"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "怎样用 map 和 reduce 方法数一数流中有多少个 Employee 呢？"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-s3ev798",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707214420-s3ev798"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "List\u003cEmployee\u003e emps = Arrays.asList(\n    new Employee(102, \"李四\", 59, 6666.66, Status.BUSY),\n    new Employee(101, \"张三\", 18, 9999.99, Status.FREE),\n    new Employee(103, \"王五\", 28, 3333.33, Status.VOCATION),\n    new Employee(104, \"赵六\", 8, 7777.77, Status.BUSY),\n    new Employee(104, \"赵六\", 8, 7777.77, Status.FREE),\n    new Employee(104, \"赵六\", 8, 7777.77, Status.FREE),\n    new Employee(105, \"田七\", 38, 5555.55, Status.BUSY)\n);\n\n@Test\nvoid test2() {\n    long count = emps.stream().count();\n    System.out.println(count);\n\n    // BinaryOperator 函数式接口使用，T apply(T t1, T t2)\n    Integer count2 = emps.stream().map(i -\u003e 1).reduce(Integer::sum).get();\n    System.out.println(count2);\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-21sjp2b",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214420-21sjp2b"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "交易操作 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-8ly77xf",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707214420-8ly77xf"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n * 交易员类\n */\n\n@Data\n@NoArgsConstructor\n@AllArgsConstructor\npublic class Trader {\n    private String name;\n    private String city;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-38ikmrv",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707214420-38ikmrv"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n * 交易类\n */\n@Data\n@NoArgsConstructor\n@AllArgsConstructor\npublic class Transaction {\n    private Trader trader;\n    private int year;\n    private int value;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-bnmxggd",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 4,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210707214420-bnmxggd"
+			},
+			"Children": [
+				{
+					"ID": "20210707214420-if2iro1",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 4,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210707214420-if2iro1"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-k8czyfm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-k8czyfm"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "找出 2011 年发生的所有交易， 并按交易额排序（从低到高）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-obijl79",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 4,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210707214420-obijl79"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-dfpr1ub",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-dfpr1ub"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "交易员都在哪些不同的城市工作过"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-va97zp8",
+					"Type": "NodeListItem",
+					"Data": "3",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 3,
+						"Delimiter": 46,
+						"Padding": 4,
+						"Marker": "Mw==",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20210707214420-va97zp8"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-bbe1r8f",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-bbe1r8f"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "查找所有来自剑桥的交易员，并按姓名排序"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-v5oqiet",
+					"Type": "NodeListItem",
+					"Data": "4",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 4,
+						"Delimiter": 46,
+						"Padding": 4,
+						"Marker": "NA==",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20210707214420-v5oqiet"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-j0h6m0e",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-j0h6m0e"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "返回所有交易员的姓名字符串，按字母顺序排序"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-mab9m8u",
+					"Type": "NodeListItem",
+					"Data": "5",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 5,
+						"Delimiter": 46,
+						"Padding": 4,
+						"Marker": "NQ==",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20210707214420-mab9m8u"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-ps03nua",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-ps03nua"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "有没有交易员是在米兰工作的"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-l3fuorw",
+					"Type": "NodeListItem",
+					"Data": "6",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 6,
+						"Delimiter": 46,
+						"Padding": 4,
+						"Marker": "Ng==",
+						"Num": 6
+					},
+					"Properties": {
+						"id": "20210707214420-l3fuorw"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-hg8poqa",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-hg8poqa"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "打印生活在剑桥的交易员的所有交易额"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-mokovx3",
+					"Type": "NodeListItem",
+					"Data": "7",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 7,
+						"Delimiter": 46,
+						"Padding": 4,
+						"Marker": "Nw==",
+						"Num": 7
+					},
+					"Properties": {
+						"id": "20210707214420-mokovx3"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-zjxdmpi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-zjxdmpi"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "所有交易中，最高的交易额是多少"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-7b1ot73",
+					"Type": "NodeListItem",
+					"Data": "8",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 8,
+						"Delimiter": 46,
+						"Padding": 4,
+						"Marker": "OA==",
+						"Num": 8
+					},
+					"Properties": {
+						"id": "20210707214420-7b1ot73"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-cjpl2ie",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-cjpl2ie"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "找到交易额最小的交易"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-am67ls5",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707214420-am67ls5"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class TransactionTest {\n\n    List\u003cTransaction\u003e transactions;\n\n    @BeforeEach\n    void setUp() {\n        Trader raoul = new Trader(\"Raoul\", \"Cambridge\");\n        Trader mario = new Trader(\"Mario\", \"Milan\");\n        Trader alan = new Trader(\"Alan\", \"Cambridge\");\n        Trader brian = new Trader(\"Brian\", \"Cambridge\");\n\n        transactions = Arrays.asList(\n                new Transaction(brian, 2011, 300),\n                new Transaction(raoul, 2012, 1000),\n                new Transaction(raoul, 2011, 400),\n                new Transaction(mario, 2012, 710),\n                new Transaction(mario, 2012, 700),\n                new Transaction(alan, 2012, 950)\n        );\n    }\n\n    /**\n     * 找出2011年发生的所有交易，并按交易额排序（从低到高）\n     */\n    @Test\n    void test1() {\n        transactions\n                .stream()\n                .filter(transaction -\u003e transaction.getYear() == 2011)\n                .sorted(Comparator.comparingInt(Transaction::getValue))\n                .forEach(System.out::println);\n    }\n\n    /**\n     * 交易员都在哪些不同的城市工作过\n     */\n    @Test\n    void test2() {\n        transactions\n                .stream()\n                .map(transaction -\u003e transaction.getTrader().getCity())\n                .distinct()\n                .forEach(System.out::println);\n    }\n\n    /**\n     * 查找所有来自剑桥的交易员，并按姓名排序\n     */\n    @Test\n    void test3() {\n        transactions\n                .stream()\n                .filter(transaction -\u003e \"Cambridge\".equals(transaction.getTrader().getCity()))\n                .map(transaction -\u003e transaction.getTrader().getName())\n                .distinct()\n                .sorted(String::compareTo)\n                .forEach(System.out::println);\n    }\n\n    /**\n     * 返回所有交易员的姓名字符串，按字母顺序排序\n     */\n    @Test\n    void test4() {\n        transactions\n                .stream()\n                .map(transaction -\u003e transaction.getTrader().getName())\n                .distinct()\n                .sorted(String::compareTo)\n                .forEach(System.out::print);\n        // AlanBrianMarioRaoul\n        System.out.println();\n\n\n        String reduce = transactions\n                .stream()\n                .map(transaction -\u003e transaction.getTrader().getName())\n                .distinct()\n                .sorted(String::compareTo)\n                .reduce(\"\", String::concat);\n        System.out.println(reduce);\n        // AlanBrianMarioRaoul\n\n        // 这个只是练习了下 flatMap 转换为流\n        transactions.stream()\n                .map((t) -\u003e t.getTrader().getName())\n                .flatMap(TransactionTest::filterCharacter)\n                // .sorted(String::compareToIgnoreCase)\n                .forEach(System.out::print);\n        // BrianRaoulRaoulMarioMarioAlan\n\n    }\n\n    private static Stream\u003cString\u003e filterCharacter(String str){\n        List\u003cString\u003e list = new ArrayList\u003c\u003e();\n\n        for (Character ch : str.toCharArray()) {\n            list.add(ch.toString());\n        }\n\n        return list.stream();\n    }\n\n    /**\n     * 有没有交易员是在米兰工作的\n     */\n    @Test\n    void test5() {\n        boolean b = transactions\n                .stream()\n                .anyMatch(transaction -\u003e \"Milan\".equals(transaction.getTrader().getCity()));\n        System.out.println(b);\n    }\n\n\n    /**\n     * 打印生活在剑桥的交易员的所有交易额\n     */\n    @Test\n    void test6() {\n        Optional\u003cInteger\u003e reduce = transactions\n                .stream()\n                .filter(transaction -\u003e \"Cambridge\".equals(transaction.getTrader().getCity()))\n                .map(Transaction::getValue)\n                .reduce(Integer::sum);\n\n        System.out.println(reduce.orElse(0));\n    }\n\n    /**\n     * 所有交易中，最高的交易额是多少\n     */\n    @Test\n    void test7() {\n        Optional\u003cInteger\u003e max = transactions\n                .stream()\n                .map(Transaction::getValue)\n                .max(Comparator.naturalOrder());// 自然排序\n                // .min(Comparator.reverseOrder());// 逆序\n                // .max(Integer::compare);\n                // .max(Integer::compareTo);\n                // .max(Comparator.comparingInt(o -\u003e o));\n        System.out.println(max.orElse(0));\n    }\n\n    /**\n     * 找到交易额最小的交易\n     */\n    @Test\n    void test8() {\n        Optional\u003cTransaction\u003e min = transactions\n                .stream()\n                .min(Comparator.comparingInt(Transaction::getValue));\n        System.out.println(min.orElse(null));\n\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		}
+	]
+}

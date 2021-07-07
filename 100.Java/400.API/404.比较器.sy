@@ -1,0 +1,1863 @@
+{
+	"ID": "20210707214420-l2jl6yy",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210707214420-l2jl6yy",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210707214420-zbfkc9q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-zbfkc9q"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在Java中经常会涉及到对象数组的排序问题，那么就涉及到"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "对象之间的比较"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "问题，Java实现对象排序的方式有两种："
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-hwx8wnb",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 42,
+				"Padding": 4,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214420-hwx8wnb"
+			},
+			"Children": [
+				{
+					"ID": "20210707214420-6hvor7g",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-6hvor7g"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-j6mp8zs",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-j6mp8zs"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "自然排序："
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "java.lang.Comparable"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-k7d03wz",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-k7d03wz"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-gx0zasa",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-gx0zasa"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "比较器排序："
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "java.util.Comparator"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-ahz535d",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707214420-ahz535d"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Comparable—compareTo"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-ad56ek6",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 4,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214420-ad56ek6"
+			},
+			"Children": [
+				{
+					"ID": "20210707214420-2et4yb9",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-2et4yb9"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-qeo6izh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-qeo6izh"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Comparable"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "接口"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "强行对实现它的每个类的对象进行整体排序"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。这种排序被称为类的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "自然排序"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-g6z8kmv",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-g6z8kmv"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-u46bp19",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-u46bp19"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "实现"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Comparable"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 的类必须重写"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": " compareTo(Object obj)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 方法，两个对象通过该方法的返回值来比较大小。"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-5jshtez",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 42,
+								"Padding": 4,
+								"Marker": "Kg==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707214420-5jshtez"
+							},
+							"Children": [
+								{
+									"ID": "20210707214420-005ruuj",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 4,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214420-005ruuj"
+									},
+									"Children": [
+										{
+											"ID": "20210707214420-dlwgmys",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214420-dlwgmys"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "如果当前对象this大于形参对象obj，则返回正整数"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214420-e2sm6xj",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 4,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214420-e2sm6xj"
+									},
+									"Children": [
+										{
+											"ID": "20210707214420-o066692",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214420-o066692"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "如果当前对象this小于形参对象obj，则返回负整数"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214420-koqbei6",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 4,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214420-koqbei6"
+									},
+									"Children": [
+										{
+											"ID": "20210707214420-z2voy60",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214420-z2voy60"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "如果当前对象this等于形参对象obj，则返回零。"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-495kk8k",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-495kk8k"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-8u0naff",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-8u0naff"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "实现"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Comparable"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "接口的对象列表(和数组)可以通过 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Collections.sort"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 或 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Arrays.sort"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "进行自动排序。实现此接口的对象可以用作有序映射中的键或有序集合中的元素，无需指定比较器。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-pca50k9",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-pca50k9"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-s4sa9bq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-s4sa9bq"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "对于类 C 的每一个 e1 和 e2 来说，当且仅当 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "e1.compareTo(e2) == 0"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 与 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "e1.equals(e2)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 具有相同的 boolean 值时，类 C 的自然排序才叫做与 equals 一致。建议（虽然不是必需的）"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "最好使自然排序与 equals 一致"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-2aykksj",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-2aykksj"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-lwyjtga",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-lwyjtga"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Comparable"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 的典型实现（"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "默认都是从小到大排列"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的）："
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-xsr4x1f",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 42,
+								"Padding": 4,
+								"Marker": "Kg==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707214420-xsr4x1f"
+							},
+							"Children": [
+								{
+									"ID": "20210707214420-bctvez9",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 4,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214420-bctvez9"
+									},
+									"Children": [
+										{
+											"ID": "20210707214420-l4zipjj",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214420-l4zipjj"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "8种包装类"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "：按照对应的数值大小进行比较。都实现了"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "compareTo()"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "（底层调用后者），提供了"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "compare()"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "。其中："
+												}
+											]
+										},
+										{
+											"ID": "20210707214420-z75stqn",
+											"Type": "NodeList",
+											"ListData": {
+												"Tight": true,
+												"BulletChar": 42,
+												"Padding": 4,
+												"Marker": "Kg==",
+												"Num": -1
+											},
+											"Properties": {
+												"id": "20210707214420-z75stqn"
+											},
+											"Children": [
+												{
+													"ID": "20210707214420-8hfglrf",
+													"Type": "NodeListItem",
+													"Data": "*",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 42,
+														"Padding": 4,
+														"Marker": "Kg==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707214420-8hfglrf"
+													},
+													"Children": [
+														{
+															"ID": "20210707214420-4j4lwut",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707214420-4j4lwut"
+															},
+															"Children": [
+																{
+																	"Type": "NodeCodeSpan",
+																	"CodeMarkerLen": 1,
+																	"Children": [
+																		{
+																			"Type": "NodeCodeSpanOpenMarker",
+																			"Data": "`"
+																		},
+																		{
+																			"Type": "NodeCodeSpanContent",
+																			"Data": "Character"
+																		},
+																		{
+																			"Type": "NodeCodeSpanCloseMarker",
+																			"Data": "`"
+																		}
+																	]
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "按照字符的"
+																},
+																{
+																	"Type": "NodeCodeSpan",
+																	"CodeMarkerLen": 1,
+																	"Children": [
+																		{
+																			"Type": "NodeCodeSpanOpenMarker",
+																			"Data": "`"
+																		},
+																		{
+																			"Type": "NodeCodeSpanContent",
+																			"Data": "Unicode"
+																		},
+																		{
+																			"Type": "NodeCodeSpanCloseMarker",
+																			"Data": "`"
+																		}
+																	]
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "值来进行比较。"
+																}
+															]
+														}
+													]
+												},
+												{
+													"ID": "20210707214420-xfkl7c8",
+													"Type": "NodeListItem",
+													"Data": "*",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 42,
+														"Padding": 4,
+														"Marker": "Kg==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707214420-xfkl7c8"
+													},
+													"Children": [
+														{
+															"ID": "20210707214420-otputx7",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707214420-otputx7"
+															},
+															"Children": [
+																{
+																	"Type": "NodeCodeSpan",
+																	"CodeMarkerLen": 1,
+																	"Children": [
+																		{
+																			"Type": "NodeCodeSpanOpenMarker",
+																			"Data": "`"
+																		},
+																		{
+																			"Type": "NodeCodeSpanContent",
+																			"Data": "Boolean"
+																		},
+																		{
+																			"Type": "NodeCodeSpanCloseMarker",
+																			"Data": "`"
+																		}
+																	]
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "中"
+																},
+																{
+																	"Type": "NodeCodeSpan",
+																	"CodeMarkerLen": 1,
+																	"Children": [
+																		{
+																			"Type": "NodeCodeSpanOpenMarker",
+																			"Data": "`"
+																		},
+																		{
+																			"Type": "NodeCodeSpanContent",
+																			"Data": "true"
+																		},
+																		{
+																			"Type": "NodeCodeSpanCloseMarker",
+																			"Data": "`"
+																		}
+																	]
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "对应的包装类实例大于"
+																},
+																{
+																	"Type": "NodeCodeSpan",
+																	"CodeMarkerLen": 1,
+																	"Children": [
+																		{
+																			"Type": "NodeCodeSpanOpenMarker",
+																			"Data": "`"
+																		},
+																		{
+																			"Type": "NodeCodeSpanContent",
+																			"Data": "false"
+																		},
+																		{
+																			"Type": "NodeCodeSpanCloseMarker",
+																			"Data": "`"
+																		}
+																	]
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "对应的包装类实例。"
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214420-i7r323y",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 4,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214420-i7r323y"
+									},
+									"Children": [
+										{
+											"ID": "20210707214420-0bm99b3",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214420-0bm99b3"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "String"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "：按照字符串中字符的Unicode值进行比较。实现了"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "compareTo()"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214420-tz04je2",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 4,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214420-tz04je2"
+									},
+									"Children": [
+										{
+											"ID": "20210707214420-tgszn0z",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214420-tgszn0z"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "Date"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "、"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "*Date/Time"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "等：后面的日期时间比前面的日期时间大。实现了"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "compareTo()"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214420-1ymt099",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 4,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214420-1ymt099"
+									},
+									"Children": [
+										{
+											"ID": "20210707214420-8a02bea",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214420-8a02bea"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "BigInteger"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "、"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "BigDecimal"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "，实现了"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "compareTo()"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-7hcpuz1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707214420-7hcpuz1"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Comparator—compare"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-bvpqbic",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 4,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214420-bvpqbic"
+			},
+			"Children": [
+				{
+					"ID": "20210707214420-br2bbz3",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-br2bbz3"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-a3rlea8",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-a3rlea8"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当元素的类型没有实现"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "java.lang.Comparable"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "接口而又"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "不方便修改代码"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "， 或者实现了"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "java.lang.Comparable"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "接口的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "排序规则不适合当前的操作"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，那 么可以使用 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Comparator"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 的对象来排序，强行对多个对象进行整体排序的比较。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-1r9ly3j",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-1r9ly3j"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-ywb86m0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-ywb86m0"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "重写"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "compare(Object o1,Object o2)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "方法，比较o1和o2的大小"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-k4qdo2j",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 42,
+								"Padding": 4,
+								"Marker": "Kg==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707214420-k4qdo2j"
+							},
+							"Children": [
+								{
+									"ID": "20210707214420-sg8738d",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 4,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214420-sg8738d"
+									},
+									"Children": [
+										{
+											"ID": "20210707214420-09hya06",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214420-09hya06"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "如果方法返回正整数，则表示o1大于o2"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214420-gv3tq55",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 4,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214420-gv3tq55"
+									},
+									"Children": [
+										{
+											"ID": "20210707214420-zu77wdg",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214420-zu77wdg"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "如果返回0，表示相等"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214420-41xcbi6",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 4,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214420-41xcbi6"
+									},
+									"Children": [
+										{
+											"ID": "20210707214420-39w3xbq",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214420-39w3xbq"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "返回负整数，表示 o1小于o2。"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-99d205r",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-99d205r"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-dvlmv1q",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-dvlmv1q"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "可以将 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Comparator"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " "
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "传递给 "
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"CodeMarkerLen": 1,
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker",
+													"Data": "`"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "sort"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker",
+													"Data": "`"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": " 方法"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（如"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Collections.sort"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 或 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Arrays.sort"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "）， 实现精确控制排序。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-2cs431f",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-2cs431f"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-id71d0b",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-id71d0b"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "还可以使用 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Comparator"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 来控制某些数据结构（如有序set或有序map）的顺序，或者为那些没有自然顺序的对象 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "container"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 提供排序。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-g18mhtt",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-g18mhtt"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-keqkb1f",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-keqkb1f"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "方法（结合 Lambda 使用）"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-oopzc9s",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214420-oopzc9s"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "TreeSet\u003cPerson\u003e people = new TreeSet(\n    Comparator.comparingInt(Person::getAge).thenComparing(Person::getName).reversed()\n);\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

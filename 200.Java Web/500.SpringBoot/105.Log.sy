@@ -1,0 +1,5260 @@
+{
+	"ID": "20210707234310-8i3pkmc",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210707234310-8i3pkmc",
+		"type": "doc",
+		"updated": "20210707235112"
+	},
+	"Children": [
+		{
+			"ID": "20210707234310-3pgrudy",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20210707234310-3pgrudy"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e "
+				},
+				{
+					"ID": "20210707234310-940st98",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210707234310-940st98"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "也可查看 Spring Boot 官方文档"
+						},
+						{
+							"Type": "NodeLink",
+							"Children": [
+								{
+									"Type": "NodeOpenBracket",
+									"Data": "["
+								},
+								{
+									"Type": "NodeLinkText",
+									"Data": "日志篇"
+								},
+								{
+									"Type": "NodeCloseBracket",
+									"Data": "]"
+								},
+								{
+									"Type": "NodeOpenParen",
+									"Data": "("
+								},
+								{
+									"Type": "NodeLinkDest",
+									"Data": "https://docs.spring.io/spring-boot/docs/2.2.2.RELEASE/reference/htmlsingle/#boot-features-logging"
+								},
+								{
+									"Type": "NodeCloseParen",
+									"Data": ")"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-4j3k7vb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-4j3k7vb"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Spring Boot 对所有内部日志使用通用日志记录，但保留底层日志实现的开放。为 JUL、Log4J2 和 Logback 提供了默认配置。在每种情况下，日志记录器都预先配置为使用控制台输出，并提供可选的文件输出。"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-54g5u36",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-54g5u36"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "默认情况下，如果使用“Starters”， 则 Logback 将被用来日志记录。还包括适当的 Logback 路由，以确保使用 Java Util Logging, Commons Logging, Log4J 或 SLF4J 的依赖库都能正常工作。"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-1u7wbj9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234310-1u7wbj9"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "日志框架"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-4iz8oi9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-4iz8oi9"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "借鉴 JDBC 设计模式，写一个统一的日志抽象接口层即"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "日志门面"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，给项目中导入具体的日志实现就行了。我们之前的日志框架都是实现的抽象层；市面上的日志框架如下："
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-2cdp5v8",
+			"Type": "NodeTable",
+			"Data": "|                  门面                   |\n| :-------------------------------------: |\n|     JCL（Jakarta Commons Logging）      |\n| SLF4j（Simple Logging Facade for Java） |",
+			"TableAligns": [
+				2
+			],
+			"Properties": {
+				"id": "20210707234310-2cdp5v8"
+			},
+			"Children": [
+				{
+					"Type": "NodeTableHead",
+					"Children": [
+						{
+							"Type": "NodeTableRow",
+							"Children": [
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 2,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "门面"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						2
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "JCL（Jakarta Commons Logging）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						2
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "SLF4j（Simple Logging Facade for Java）"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-j4kt1rk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-j4kt1rk"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "写了一个统一的接口层；日志门面（日志的一个抽象层）；logging-abstract.jar；"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-daafh91",
+			"Type": "NodeTable",
+			"Data": "|         日志实现         |\n| :----------------------: |\n|          Log4j           |\n| JUL（java.util.logging） |\n|       **Logback**        |\n|          Log4j2          |",
+			"TableAligns": [
+				2
+			],
+			"Properties": {
+				"id": "20210707234310-daafh91"
+			},
+			"Children": [
+				{
+					"Type": "NodeTableHead",
+					"Children": [
+						{
+							"Type": "NodeTableRow",
+							"Children": [
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 2,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "日志实现"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						2
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Log4j"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						2
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "JUL（java.util.logging）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						2
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "Logback"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						2
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Log4j2"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-3lt56xk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-3lt56xk"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "SpringBoot 默认选用 SLF4j 和 logback"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-8oj4v93",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234310-8oj4v93"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "日志格式"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-k5o09kr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-k5o09kr"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Spring Boot 的默认日志输出类似于下面的示例"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-s5pyzkx",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234310-s5pyzkx"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "2020-01-12 00:42:19.350 ERROR 6565 --- [           main] c.e.studylog.StudyLogApplicationTests    : error\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-47wt637",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-47wt637"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "输出下列项目："
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-4cbwamw",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707234310-4cbwamw"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-3zjbb79",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-3zjbb79"
+					},
+					"Children": [
+						{
+							"ID": "20210707234310-evlijzv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234310-evlijzv"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "日期和时间：毫秒精度，容易排序"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-wpotuxw",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-wpotuxw"
+					},
+					"Children": [
+						{
+							"ID": "20210707234310-tgfz4j6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234310-tgfz4j6"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "日志级别："
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "ERROR"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "WARN"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "INFO"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "DEBUG"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "TRACE"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。Logback 没有 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "FATAL"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 级别，它被映射到 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "ERROR"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "级别"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-u3qri95",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-u3qri95"
+					},
+					"Children": [
+						{
+							"ID": "20210707234310-kq8wzaq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234310-kq8wzaq"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "进程 ID"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-qycq10v",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-qycq10v"
+					},
+					"Children": [
+						{
+							"ID": "20210707234310-e7c6vrv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234310-e7c6vrv"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "分隔符 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "---"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 以区分实际日志消息的开始"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-ri705g5",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-ri705g5"
+					},
+					"Children": [
+						{
+							"ID": "20210707234310-l40yccz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234310-l40yccz"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "线程名：用方括号括起来（对于控制台输出可能会被截断）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-6g8tqpb",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-6g8tqpb"
+					},
+					"Children": [
+						{
+							"ID": "20210707234310-tvzt7wu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234310-tvzt7wu"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "记录器名称：一般是全限定类名（通常缩写）。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-xodswfm",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-xodswfm"
+					},
+					"Children": [
+						{
+							"ID": "20210707234310-7311ing",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234310-7311ing"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "日志信息"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-o0hsspr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234310-o0hsspr"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "控制台输出 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-xdyibeb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-xdyibeb"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "默认的日志配置在消息写入时将消息回显到控制台。默认情况下，会记录 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ERROR"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "WARN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "INFO"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-uajt5g8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-uajt5g8"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以通过使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "--debug"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "标志启动应用程序来启用调试模式。还可以在 application.yaml 中指定 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "debug=true"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-fcippn9",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234310-fcippn9"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "java -jar myapp.jar --debug\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-3rn2a9i",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-3rn2a9i"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "启用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "debug"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "模式后，将配置一些核心记录器（嵌入式容器，Hibernate 和 Spring Boot）以输出更多信息。 启用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "debug"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "模式不会将您的应用程序配置为记录所有具有"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "DEBUG"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "级别的消息。或者，您可以通过使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "--trace"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "标志（或 application.yaml 中的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "trace = true"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "）启动应用程序来启用“跟踪”模式。 这样做可以为某些核心记录器（嵌入式容器，Hibernate 模式生成以及整个 Spring 产品组合）启用跟踪记录。"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-1sxlnu0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234310-1sxlnu0"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "彩色编码输出"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-olrjdlx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-olrjdlx"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果你的终端支持 ANSI，颜色输出用于帮助可读性。你可以设置"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "spring.output.ansi.enabled"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 启用到受支持的值来覆盖自动检测。颜色编码是通过使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "%clr"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "转换字来配置的。在其最简单的形式中，转换器根据日志级别对输出进行着色，如下面的示例所示"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-oqb2pwe",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234310-oqb2pwe"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "%clr(%5p)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-dkfwfjp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-dkfwfjp"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "下表描述了日志级别到颜色的映射："
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-acxmqoh",
+			"Type": "NodeTable",
+			"Data": "| Level   | Color  |\n| :------ | :----- |\n| `FATAL` | Red    |\n| `ERROR` | Red    |\n| `WARN`  | Yellow |\n| `INFO`  | Green  |\n| `DEBUG` | Green  |\n| `TRACE` | Green  |",
+			"TableAligns": [
+				1,
+				1
+			],
+			"Properties": {
+				"id": "20210707234310-acxmqoh"
+			},
+			"Children": [
+				{
+					"Type": "NodeTableHead",
+					"Children": [
+						{
+							"Type": "NodeTableRow",
+							"Children": [
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "Level"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "Color"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "FATAL"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Red"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "ERROR"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Red"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "WARN"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Yellow"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "INFO"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Green"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "DEBUG"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Green"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "TRACE"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Green"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-ecnjjtk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-ecnjjtk"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "另外，您可以通过将其提供为转换的选项来指定应使用的颜色或样式。 例如，要使文本变黄，请使用以下设置："
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-gynl2yz",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234310-gynl2yz"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){yellow}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-2vb7v2l",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-2vb7v2l"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "支持以下颜色和样式："
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-77t11v6",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707234310-77t11v6"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-x6drd4p",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-x6drd4p"
+					},
+					"Children": [
+						{
+							"ID": "20210707234310-av81g7i",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234310-av81g7i"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "blue"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-nihsef4",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-nihsef4"
+					},
+					"Children": [
+						{
+							"ID": "20210707234310-pujpk3s",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234310-pujpk3s"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "cyan"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-o115bw3",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-o115bw3"
+					},
+					"Children": [
+						{
+							"ID": "20210707234310-b02lwdk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234310-b02lwdk"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "faint"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-djdxxo7",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-djdxxo7"
+					},
+					"Children": [
+						{
+							"ID": "20210707234310-tn87gmp",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234310-tn87gmp"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "green"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-a2igpli",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-a2igpli"
+					},
+					"Children": [
+						{
+							"ID": "20210707234310-c18r13b",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234310-c18r13b"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "magenta"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-d31ybvm",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-d31ybvm"
+					},
+					"Children": [
+						{
+							"ID": "20210707234310-tcf73p8",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234310-tcf73p8"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "red"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-wcewyk4",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-wcewyk4"
+					},
+					"Children": [
+						{
+							"ID": "20210707234310-0lcfo74",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234310-0lcfo74"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "yellow"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-4x1u6qd",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234310-4x1u6qd"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "文件输出 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-2bu5dem",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-2bu5dem"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "默认"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "情况下，Spring Boot "
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "仅记录到控制台，不写日志文件"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。 如果除了控制台输出外还想写日志文件，则需要在 application.yaml 中设置"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "logging.file.name"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 或"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "logging.file.path"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "属性。"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-uigp9sr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-uigp9sr"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "下表显示了如何结合使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "logging.*"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 属性："
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-rtg04wt",
+			"Type": "NodeTable",
+			"Data": "| `logging.file.name`🔥 | `logging.file.path` | Example    | Description                                                                          |\n| :-------------------- | :------------------ | :--------- | :----------------------------------------------------------------------------------- |\n| _(none)_              | _(none)_            |            | 仅在控制台输出                                                                       |\n| Specific file         | _(none)_            | `my.log`   | 写入指定的日志文件。名称可以是**绝对位置**，也可以是**相对于当前目录的位置**         |\n| _(none)_              | Specific directory  | `/var/log` | 将`spring.log`写入指定目录。名称可以是**绝对位置**，也可以是**相对于当前目录的位置** |",
+			"TableAligns": [
+				1,
+				1,
+				1,
+				1
+			],
+			"Properties": {
+				"id": "20210707234310-rtg04wt"
+			},
+			"Children": [
+				{
+					"Type": "NodeTableHead",
+					"Children": [
+						{
+							"Type": "NodeTableRow",
+							"Children": [
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpan",
+											"CodeMarkerLen": 1,
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker",
+													"Data": "`"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "logging.file.name"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker",
+													"Data": "`"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "🔥"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpan",
+											"CodeMarkerLen": 1,
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker",
+													"Data": "`"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "logging.file.path"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker",
+													"Data": "`"
+												}
+											]
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "Example"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "Description"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1,
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeEmphasis",
+									"Children": [
+										{
+											"Type": "NodeEmU8eOpenMarker",
+											"Data": "_"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "(none)"
+										},
+										{
+											"Type": "NodeEmU8eCloseMarker",
+											"Data": "_"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeEmphasis",
+									"Children": [
+										{
+											"Type": "NodeEmU8eOpenMarker",
+											"Data": "_"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "(none)"
+										},
+										{
+											"Type": "NodeEmU8eCloseMarker",
+											"Data": "_"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "仅在控制台输出"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1,
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Specific file"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeEmphasis",
+									"Children": [
+										{
+											"Type": "NodeEmU8eOpenMarker",
+											"Data": "_"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "(none)"
+										},
+										{
+											"Type": "NodeEmU8eCloseMarker",
+											"Data": "_"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "my.log"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "写入指定的日志文件。名称可以是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "绝对位置"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，也可以是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "相对于当前目录的位置"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1,
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeEmphasis",
+									"Children": [
+										{
+											"Type": "NodeEmU8eOpenMarker",
+											"Data": "_"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "(none)"
+										},
+										{
+											"Type": "NodeEmU8eCloseMarker",
+											"Data": "_"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Specific directory"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "/var/log"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "将"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "spring.log"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "写入指定目录。名称可以是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "绝对位置"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，也可以是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "相对于当前目录的位置"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-1s5u3re",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-1s5u3re"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "日志文件达到 10 MB 时会压缩，并且与控制台输出一样，默认情况下会记录"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ERROR"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "级别，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "WARN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "级别和"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "INFO"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "级别的消息。"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-1219etj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-1219etj"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "logging.file.max-size"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "属性"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "更改大小限制"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。 除非已设置"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "logging.file.max-history"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "属性，否则以前压缩的文件将无限期存档。"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-l6ooh2p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-l6ooh2p"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "logging.file.total-size-cap"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "限制"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "日志归档文件的总大小"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。 当日志归档的总大小超过该阈值时，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "将删除备份"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。 要在应用"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "程序启动时强制清除日志归档文件"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，请使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "logging.file.clean-history-on-start"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "属性。"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-80lnjz7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-80lnjz7"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "日志属性独立于实际的日志基础架构。因此特定的配置（如"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "logback.configurationFile"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ）不是由 spring Boot 管理的。"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-dwsojd5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234310-dwsojd5"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "自定义日志配置 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-bw64vv5",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20210707234310-bw64vv5"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e "
+				},
+				{
+					"ID": "20210707234310-ftytmix",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210707234310-ftytmix"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "其实使用的比较少，因为其功能比较少。一般直接导入具体实现框架的配置"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-o9ul6q6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-o9ul6q6"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "通过在类路径中包括适当的库来激活各种日志记录系统"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，并可以通过在类路径的根目录中或在以下 Spring Environment 属性指定的位置中提供适当的配置文件来进一步自定义日志文件：logging.config。为了方便自定义，将一些其他属性从 Spring Environment 转移到 System 属性，见"
+				},
+				{
+					"Type": "NodeLink",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "文档"
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://docs.spring.io/spring-boot/docs/2.2.2.RELEASE/reference/htmlsingle/#boot-features-custom-log-configuration"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-7r8njdv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-7r8njdv"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "给"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "类路径"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "下放上"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "每个日志框架自己的配置文件"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "即可；SpringBoot 就不使用他默认配置的了。根据您的日志记录系统，将加载以下文件："
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-a7a9ed5",
+			"Type": "NodeTable",
+			"Data": "| Logging System          | Customization                                                                     |\n| :---------------------- | :-------------------------------------------------------------------------------- |\n| Logback                 | `logback-spring.xml`, `logback-spring.groovy`, `logback.xml`, or `logback.groovy` |\n| Log4j2                  | `log4j2-spring.xml` or `log4j2.xml`                                               |\n| JDK (Java Util Logging) | `logging.properties`                                                              |",
+			"TableAligns": [
+				1,
+				1
+			],
+			"Properties": {
+				"id": "20210707234310-a7a9ed5"
+			},
+			"Children": [
+				{
+					"Type": "NodeTableHead",
+					"Children": [
+						{
+							"Type": "NodeTableRow",
+							"Children": [
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "Logging System"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "Customization"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Logback"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "logback-spring.xml"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ", "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "logback-spring.groovy"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ", "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "logback.xml"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ", or "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "logback.groovy"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Log4j2"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "log4j2-spring.xml"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " or "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "log4j2.xml"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "JDK (Java Util Logging)"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "logging.properties"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-trxthb4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-trxthb4"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果可能，我们建议您在日志配置中使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-spring"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "变体（例如，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "logback-spring.xml"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "而不是"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "logback.xml"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "）。 如果使用标准配置位置，Spring 将无法完全控制日志初始化。"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-2lpe894",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707234310-2lpe894"
+			},
+			"Children": [
+				{
+					"ID": "20210707234310-5dvsnn1",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234310-5dvsnn1"
+					},
+					"Children": [
+						{
+							"ID": "20210707234310-brqz8dj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234310-brqz8dj"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "logback-spring.xml"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "："
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "推荐！"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "日志框架就不直接加载日志的配置项，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "由 SpringBoot 解析日志配置"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，可以使用 SpringBoot 的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "高级 Profile 功能"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707234310-kawotjm",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "eG1s",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707234310-kawotjm"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "eG1s"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "\u003cspringProfile name=\"staging\"\u003e\n    \u003c!-- configuration to be enabled when the \"staging\" profile is active --\u003e\n  \t可以指定某段配置只在某个环境下生效\n\u003c/springProfile\u003e\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210707234310-mjxotdm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234310-mjxotdm"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如下："
+								}
+							]
+						},
+						{
+							"ID": "20210707234310-1wk44h7",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "eG1s",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707234310-1wk44h7"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "eG1s"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "\u003cappender name=\"stdout\" class=\"ch.qos.logback.core.ConsoleAppender\"\u003e\n    \u003clayout class=\"ch.qos.logback.classic.PatternLayout\"\u003e\n        \u003cspringProfile name=\"dev\"\u003e\n            \u003cpattern\u003e%d{yyyy-MM-dd HH:mm:ss.SSS} ----\u003e [%thread] ---\u003e %-5level %logger{50} - %msg%n\u003c/pattern\u003e\n        \u003c/springProfile\u003e\n        \u003cspringProfile name=\"!dev\"\u003e\n            \u003cpattern\u003e%d{yyyy-MM-dd HH:mm:ss.SSS} ==== [%thread] ==== %-5level %logger{50} - %msg%n\u003c/pattern\u003e\n        \u003c/springProfile\u003e\n    \u003c/layout\u003e\n\u003c/appender\u003e\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210707234310-dr3409w",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234310-dr3409w"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果使用 logback.xml 作为日志配置文件，还要使用 profile 功能，会有以下错误"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "no applicable action for [springProfile]"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-mb2ukhh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-mb2ukhh"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "具体各实现的配置文件自己找"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-anpokds",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234310-anpokds"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "日志等级"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-4w10lb8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-4w10lb8"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "所有被支持的日志系统都可以通过使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "logging.level.\u003clogger-name\u003e=\u003clevel\u003e"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "（其中 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "level"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 是 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "TRACE"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ", "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "DEBUG"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ", "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "INFO"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ", "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "WARN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ", "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ERROR"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ", "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "FATAL"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ", 或 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "OFF"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "）在 Spring "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Environment"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中（例如，在 application.yaml 中）设置日志记录器级别。可以使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "logging.level.root"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "配置"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "root"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "记录器。"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-c7nv2oq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-c7nv2oq"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "以下示例显示了 application.yaml 中的日志记录设置："
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-fftohyw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eWFtbA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234310-fftohyw"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eWFtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "logging:\nlevel:\nroot: warn\norg.springframework.web: debug\norg.hibernate: error\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-ynjnqus",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-ynjnqus"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "也可以使用环境变量设置日志记录级别。 例如，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB = DEBUG"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "会将"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "org.springframework.web"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "设置为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "DEBUG"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-cuqgiy3",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234310-cuqgiy3"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "日志组"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-fhecl5f",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-fhecl5f"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "能够将相关记录器分组在一起通常是很有用的，以便可以同时配置它们。 例如，您可能通常会更改所有与 Tomcat 相关的记录器的记录级别，但是您不容易记住顶层软件包。"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-1ptlomz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-1ptlomz"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为了解决这个问题，Spring Boot 允许您在 Spring Environment 中定义日志记录组。 例如，以下是通过将“tomcat”组添加到 application.yaml 来定义它的方法："
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-lkc20tv",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eWFtbA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234310-lkc20tv"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eWFtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "logging:\ngroup:\ntomcat: org.apache.catalina, org.apache.coyote, org.apache.tomcat\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-2up2emr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-2up2emr"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "一旦定义后，您可以使用一行更改该组中所有记录器的级别："
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-l22uitm",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eWFtbA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234310-l22uitm"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eWFtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "logging:\nlevel:\ntomcat: TRACE\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-w2vc737",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-w2vc737"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Spring Boot 包含以下预定义的日志记录组，它们可以直接使用："
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-1icrdc9",
+			"Type": "NodeTable",
+			"Data": "| Name | Loggers                                                                                                                                                                                                                     |\n| :--- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| web  | `org.springframework.core.codec`\u003cbr/\u003e`org.springframework.http`\u003cbr/\u003e`org.springframework.web`\u003cbr/\u003e`org.springframework.boot.actuate.endpoint.web`\u003cbr/\u003e`org.springframework.boot.web.servlet.ServletContextInitializerBeans` |\n| sql  | `org.springframework.jdbc.core`\u003cbr/\u003e`org.hibernate.SQL`\u003cbr/\u003e`org.jooq.tools.LoggerListener`                                                                                                                                 |",
+			"TableAligns": [
+				1,
+				1
+			],
+			"Properties": {
+				"id": "20210707234310-1icrdc9"
+			},
+			"Children": [
+				{
+					"Type": "NodeTableHead",
+					"Children": [
+						{
+							"Type": "NodeTableRow",
+							"Children": [
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "Name"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "Loggers"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "web"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "org.springframework.core.codec"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "\u003cbr/\u003e"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "org.springframework.http"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "\u003cbr/\u003e"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "org.springframework.web"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "\u003cbr/\u003e"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "org.springframework.boot.actuate.endpoint.web"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "\u003cbr/\u003e"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "org.springframework.boot.web.servlet.ServletContextInitializerBeans"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "sql"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "org.springframework.jdbc.core"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "\u003cbr/\u003e"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "org.hibernate.SQL"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "\u003cbr/\u003e"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "org.jooq.tools.LoggerListener"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-3jz0i7w",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234310-3jz0i7w"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "统一日志框架"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-5ioyyca",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707234310-5ioyyca"
+			},
+			"Children": [
+				{
+					"ID": "20210707234310-k45x6vm",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234310-k45x6vm"
+					},
+					"Children": [
+						{
+							"ID": "20210707234310-z0q1wwt",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234310-z0q1wwt"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "a 系统（slf4j+logback）: Spring（commons-logging）、Hibernate（jboss-logging）、MyBatis、xxxx"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234310-kf4homb",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234310-kf4homb"
+					},
+					"Children": [
+						{
+							"ID": "20210707234310-4cmawzw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234310-4cmawzw"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "统一日志记录"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，即"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "如何让系统中所有的日志都统一到 slf4j？"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707234310-vspjchm",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707234310-vspjchm"
+							},
+							"Children": [
+								{
+									"ID": "20210707234310-3vuy13b",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707234310-3vuy13b"
+									},
+									"Children": [
+										{
+											"ID": "20210707234310-iog9ulj",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707234310-iog9ulj"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "将系统中其他日志框架先排除出去；"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707234310-6ov1gag",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707234310-6ov1gag"
+									},
+									"Children": [
+										{
+											"ID": "20210707234310-nh0cpsc",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707234310-nh0cpsc"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "用桥接器来替换原有的日志框架；"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707234310-x9tya4e",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707234310-x9tya4e"
+									},
+									"Children": [
+										{
+											"ID": "20210707234310-dob4u9m",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707234310-dob4u9m"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "我们导入 slf4j 其他的实现"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-fkwin0a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-fkwin0a",
+				"updated": "20210707235010"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "legacy-8806586.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/legacy-8806586-20210707235010-3b7dxw0.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-o01si8u",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234310-o01si8u"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "SLF4j + logback🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-s4oowwz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234310-s4oowwz"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Java 项目使用"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-2rj9kui",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707234310-2rj9kui"
+			},
+			"Children": [
+				{
+					"ID": "20210707234310-gx01lwx",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234310-gx01lwx"
+					},
+					"Children": [
+						{
+							"ID": "20210707234310-zrsiw4q",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234310-zrsiw4q"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "给系统里面导入 SLF4j 的 jar 和 logback 的实现 jar"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234310-9okc40q",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234310-9okc40q"
+					},
+					"Children": [
+						{
+							"ID": "20210707234310-9zodupe",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234310-9zodupe"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "每一个日志的实现框架都有自己的配置文件。使用 slf4j"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "配置文件还是做成日志实现框架自己本身的配置文件；"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-58dilqz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234310-58dilqz"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Spring Boot 使用"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-s457500",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-s457500"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "默认"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "spring-boot-starter"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "以及依赖此的 starter 都会自动导入"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "spring-boot-starter-logging"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-ibz4uxc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-ibz4uxc"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "SpringBoot 能自动适配所有的日志，而且底层使用 slf4j+logback 的方式记录日志。其底层依赖关系如下"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "（Spring Boot 2.0 后）："
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-qtx96nw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-qtx96nw",
+				"updated": "20210707235037"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20200112165900399.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20200112165900399-20210707235036-ol59eof.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-s3ag8aj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-s3ag8aj",
+				"updated": "20210707235054"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "dependency.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/dependency-20210707235054-9b5s6wc.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-bwqehjz",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234310-bwqehjz"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "//记录器\nLogger logger = LoggerFactory.getLogger(getClass());\n\n@Test\npublic void contextLoads() {\n\n    //日志的级别；由低到高\n      trace\u003cdebug\u003cinfo\u003cwarn\u003cerror\n    //可以调整输出的日志级别；日志就只会在这个级别以以后的高级别生效\n    logger.trace(\"系统详细信息, 主要开发人员用, 一般来说线上系统可以认为是临时输出, 而且随时可以通过开关将其关闭\");\n    logger.debug(\"主要给开发人员看,开发环境中使用\");\n    //SpringBoot默认给我们使用的是info级别的，没有指定级别的就用SpringBoot默认规定的级别；root级别\n    logger.info(\"重要的业务逻辑处理完成. 在理想情况下, INFO的日志信息要能让高级用户和系统管理员理解, 并从日志信息中能知道系统当前的运行状态\");\n    logger.warn(\"系统能继续运行, 但是必须引起关注\");\n    logger.error(\"系统发生了严重的错误, 必须马上进行处理, 否则系统将无法继续运行\");\n\n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-qhpq6cf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-qhpq6cf"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "SpringBoot 修改日志的默认配置"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-zz1yxt0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eWFtbA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234310-zz1yxt0"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eWFtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#指定某个包的日志记录级别\nlogging:\n\tlevel:\n\t\ttop.conanan: trace\n\n# 可以指定完整的路径，也可以相对路径\nlogging:\n\tfile: ../log/springboot.log\n\n# 在当前磁盘的根路径下创建spring文件夹和里面的log文件夹；使用 spring.log 作为默认文件\nlogging:\n\tpath: /spring/log\n\n# 在控制台输出的日志的格式\nlogging:\n\tpattern:\n\t\tconsole: %d{yyyy-MM-dd} [%thread] %-5level %logger{50} - %msg%n\n# 指定文件中日志输出的格式\nlogging:\n\tpattern:\n\t\tfile: %d{yyyy-MM-dd} === [%thread] === %-5level === %logger{50} ==== %msg%n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-piay7n4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-piay7n4"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "具体 logback 文件自己找"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-iy1grl8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234310-iy1grl8"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "SLF4j + Log4j2🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-ogct1sj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-ogct1sj"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以按照 slf4j 的日志适配图，进行相关的切换"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-81x4wsd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-81x4wsd",
+				"updated": "20210707235112"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "concrete-bindings-8806586.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/concrete-bindings-8806586-20210707235112-dp01nji.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-9pu50xp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-9pu50xp"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "切换为 log4j2🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-78mimni",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eG1s",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234310-78mimni"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cdependency\u003e\n    \u003cgroupId\u003eorg.springframework.boot\u003c/groupId\u003e\n    \u003cartifactId\u003espring-boot-starter-web\u003c/artifactId\u003e\n    \u003cexclusions\u003e\n      \u003c!-- 排除 logback --\u003e\n        \u003cexclusion\u003e\n            \u003cartifactId\u003espring-boot-starter-logging\u003c/artifactId\u003e\n            \u003cgroupId\u003eorg.springframework.boot\u003c/groupId\u003e\n        \u003c/exclusion\u003e\n    \u003c/exclusions\u003e\n\u003c/dependency\u003e\n\n\u003cdependency\u003e\n    \u003cgroupId\u003eorg.springframework.boot\u003c/groupId\u003e\n    \u003cartifactId\u003espring-boot-starter-log4j2\u003c/artifactId\u003e\n\u003c/dependency\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234310-ic5ernr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234310-ic5ernr"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其他获取 Logger 方式还是一样"
+				}
+			]
+		}
+	]
+}

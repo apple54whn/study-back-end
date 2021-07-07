@@ -1,0 +1,3636 @@
+{
+	"ID": "20210707224346-ov37cvw",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210707224346-ov37cvw",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210707224346-fz6a930",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707224346-fz6a930"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "为什么要有泛型"
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-ipilkk3",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707224346-ipilkk3"
+			},
+			"Children": [
+				{
+					"ID": "20210707224346-c49evfl",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224346-c49evfl"
+					},
+					"Children": [
+						{
+							"ID": "20210707224346-elg3udr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-elg3udr"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "泛型：类似标签。例如：中药店，每个抽屉外面贴着标签；垃圾分类！"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224346-exly71u",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224346-exly71u"
+					},
+					"Children": [
+						{
+							"ID": "20210707224346-9sqocr2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-9sqocr2"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "泛型的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "设计背景"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "："
+								}
+							]
+						},
+						{
+							"ID": "20210707224346-r60i3sa",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-r60i3sa"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "集合容器类在设计阶段、声明阶段不能确定这个容器到底实际存的是什么类型的对象，所以在 JDK1.5 之前只能把元素类型设计为"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Object"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，JDK1.5 之后使用泛型来解决。因为这个时候除了元素的类型不确定，其他的部分是确定的，例如关于这个元素如何保存，如何管理等是确定的，因此此时把"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "元素的类型设计成一个参数"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，这个"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "类型参数叫做泛型"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Collection\u003cE\u003e"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "List\u003cE\u003e"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "ArrayList\u003cE\u003e"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 这个"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "\u003cE\u003e"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "就是类型参数，即泛型。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224346-q1y2s3x",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224346-q1y2s3x"
+					},
+					"Children": [
+						{
+							"ID": "20210707224346-r27rod9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-r27rod9"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "泛型的概念：所谓泛型，就是允许在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "定义类、接口时通过一个标识表示类中某个属性的类型或者是某个方法的返回值及参数类型"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。这个类型参数将在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "使用时"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（例如， 继承或实现这个接口，用这个类型声明变量、创建对象时）"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "确定"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（即传入实际的类型参数，也称为类型实参）。"
+								}
+							]
+						},
+						{
+							"ID": "20210707224346-jq6v0a7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-jq6v0a7"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "从 JDK1.5 以后，Java 引入了“参数化类型(Parameterized type)”的概念， 允许我们在创建集合时再指定集合元素的类型，正如："
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "List\u003cString\u003e"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，这表明该"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "List"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "只能保存字符串类型的对象。JDK1.5 改写了集合框架中的全部接口和类，为这些接口、类增加了泛型支持， 从而可以在声明集合变量、创建集合对象时传入类型实参。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224346-bxijjws",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224346-bxijjws"
+					},
+					"Children": [
+						{
+							"ID": "20210707224346-vj0eb56",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-vj0eb56"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "那么为什么要有泛型？泛型的好处？"
+								}
+							]
+						},
+						{
+							"ID": "20210707224346-r465tu3",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707224346-r465tu3"
+							},
+							"Children": [
+								{
+									"ID": "20210707224346-k6re4do",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707224346-k6re4do"
+									},
+									"Children": [
+										{
+											"ID": "20210707224346-ctqvd24",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707224346-ctqvd24"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "解决元素"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "存储"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "的"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "类型不安全"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "问题，好比商品、药品标签，不会弄错。在设计 API 时可以指定类或方法支持泛型，这样使用 API 的时候也变得更为简洁，并得到了"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "编译时期的语法检查"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "。"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707224346-q4b8pop",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707224346-q4b8pop"
+									},
+									"Children": [
+										{
+											"ID": "20210707224346-4a1zjoo",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707224346-4a1zjoo"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "解决"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "获取"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "数据元素时，需要"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "类型强制转换"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "的问题，有可能强转引发"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "运行时"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "ClassCastException"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "。不用每回拿商品、药品都要辨别。"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-5tg4hzd",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20210707224346-5tg4hzd"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e "
+				},
+				{
+					"ID": "20210707224346-k5auks4",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210707224346-k5auks4"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "TIPS：泛型是数据类型的一部分，我们将类名与泛型合并一起看做数据类型。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-g9jygdj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707224346-g9jygdj"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "集合中使用泛型"
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-rszgavn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224346-rszgavn"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "略 👻"
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-qwfz4w5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707224346-qwfz4w5"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "自定义泛型 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-buiuqe6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224346-buiuqe6"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意："
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-vgqf7f7",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707224346-vgqf7f7"
+			},
+			"Children": [
+				{
+					"ID": "20210707224346-ydawzgq",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224346-ydawzgq"
+					},
+					"Children": [
+						{
+							"ID": "20210707224346-zduwhkg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-zduwhkg"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "泛型类可能有多个参数，此时应将多个参数一起放在尖括号内。比如"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "\u003cE1,E2,E3\u003e"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224346-uozi29t",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224346-uozi29t"
+					},
+					"Children": [
+						{
+							"ID": "20210707224346-1623rmr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-1623rmr"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "E"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "或其他只能是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "类"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，不能用基本数据类型填充，但可以使用"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "包装类"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "填充。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224346-8fbkmek",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224346-8fbkmek"
+					},
+					"Children": [
+						{
+							"ID": "20210707224346-plud4cb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-plud4cb"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "构造器不用带"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "E"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "或其他"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224346-0c8f5h2",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224346-0c8f5h2"
+					},
+					"Children": [
+						{
+							"ID": "20210707224346-l4d33ej",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-l4d33ej"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "泛型不同的引用不能相互赋值"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224346-w26h63p",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224346-w26h63p"
+					},
+					"Children": [
+						{
+							"ID": "20210707224346-0kcgxhl",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-0kcgxhl"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在类/接口上声明的泛型，在本类或本接口中即代表某种类型，可以作为"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "非静态属性的类型、非静态方法的参数类型、非静态方法的返回值类型"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。但"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "在静态方法中不能使用类（使用类！）的泛型"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。因为类泛型是在创建对象时确定，晚于 static"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224346-rut0vib",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224346-rut0vib"
+					},
+					"Children": [
+						{
+							"ID": "20210707224346-pyqh8ob",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-pyqh8ob"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "异常类不能是泛型的；不能在 try-catch 中使用泛型定义"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224346-xenf777",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224346-xenf777"
+					},
+					"Children": [
+						{
+							"ID": "20210707224346-x2krf1j",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-x2krf1j"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "不能使用"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "new E[]"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。但是可以"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "E[] elements = (E[])new Object[capacity]"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，参考"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "ArrayList"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "源码中声明"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Object[] elementData"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，而非泛型参数类型数组"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224346-64xg2dh",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224346-64xg2dh"
+					},
+					"Children": [
+						{
+							"ID": "20210707224346-6rms042",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-6rms042"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "父类有泛型，子类可以选择保留泛型也可以选择指定泛型类型"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707224346-vf02m23",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707224346-vf02m23"
+							},
+							"Children": [
+								{
+									"ID": "20210707224346-uyx0z5s",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707224346-uyx0z5s"
+									},
+									"Children": [
+										{
+											"ID": "20210707224346-v9nntyj",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707224346-v9nntyj"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "子类不保留父类的泛型：按需实现"
+												}
+											]
+										},
+										{
+											"ID": "20210707224346-4f0504f",
+											"Type": "NodeList",
+											"ListData": {
+												"Tight": true,
+												"BulletChar": 45,
+												"Padding": 2,
+												"Marker": "LQ==",
+												"Num": -1
+											},
+											"Properties": {
+												"id": "20210707224346-4f0504f"
+											},
+											"Children": [
+												{
+													"ID": "20210707224346-bscs72i",
+													"Type": "NodeListItem",
+													"Data": "-",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 45,
+														"Padding": 2,
+														"Marker": "LQ==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707224346-bscs72i"
+													},
+													"Children": [
+														{
+															"ID": "20210707224346-7f00tfl",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707224346-7f00tfl"
+															},
+															"Children": [
+																{
+																	"Type": "NodeText",
+																	"Data": "没有类型擦除"
+																}
+															]
+														}
+													]
+												},
+												{
+													"ID": "20210707224346-i7ur3ul",
+													"Type": "NodeListItem",
+													"Data": "-",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 45,
+														"Padding": 2,
+														"Marker": "LQ==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707224346-i7ur3ul"
+													},
+													"Children": [
+														{
+															"ID": "20210707224346-xbij2i6",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707224346-xbij2i6"
+															},
+															"Children": [
+																{
+																	"Type": "NodeText",
+																	"Data": "具体类型"
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707224346-4tht4fm",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707224346-4tht4fm"
+									},
+									"Children": [
+										{
+											"ID": "20210707224346-onyk9t1",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707224346-onyk9t1"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "子类保留父类的泛型：泛型子类"
+												}
+											]
+										},
+										{
+											"ID": "20210707224346-nkcvq9u",
+											"Type": "NodeList",
+											"ListData": {
+												"Tight": true,
+												"BulletChar": 45,
+												"Padding": 2,
+												"Marker": "LQ==",
+												"Num": -1
+											},
+											"Properties": {
+												"id": "20210707224346-nkcvq9u"
+											},
+											"Children": [
+												{
+													"ID": "20210707224346-wbx63nl",
+													"Type": "NodeListItem",
+													"Data": "-",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 45,
+														"Padding": 2,
+														"Marker": "LQ==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707224346-wbx63nl"
+													},
+													"Children": [
+														{
+															"ID": "20210707224346-bftfqy7",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707224346-bftfqy7"
+															},
+															"Children": [
+																{
+																	"Type": "NodeText",
+																	"Data": "全部保留"
+																}
+															]
+														}
+													]
+												},
+												{
+													"ID": "20210707224346-6v2kipk",
+													"Type": "NodeListItem",
+													"Data": "-",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 45,
+														"Padding": 2,
+														"Marker": "LQ==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707224346-6v2kipk"
+													},
+													"Children": [
+														{
+															"ID": "20210707224346-gvqaxg8",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707224346-gvqaxg8"
+															},
+															"Children": [
+																{
+																	"Type": "NodeText",
+																	"Data": "部分保留"
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707224346-92md2vz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-92md2vz"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "结论：子类必须是“富二代”，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "子类除了指定或保留父类的泛型，还可以增加自己的泛型"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707224346-kfq24of",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707224346-kfq24of"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "class Father\u003cT1, T2\u003e {}\n\n// 子类不保留父类的泛型\n// 1)没有类型 擦除\nclass Son1 extends Father {/*等价于class Son extends Father\u003cObject,Object\u003e{}*/}\n// 2)具体类型\nclass Son2 extends Father\u003cInteger, String\u003e { }\n\n// 子类保留父类的泛型\n// 1)全部保留\nclass Son3\u003cT1, T2\u003e extends Father\u003cT1, T2\u003e { }\n// 2)部分保留\nclass Son4\u003cT2\u003e extends Father\u003cInteger, T2\u003e { }\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210707224346-8h1md6o",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707224346-8h1md6o"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "class Father\u003cT1, T2\u003e {}\n// 子类不保留父类的泛型\n// 1)没有类型 擦除\nclass Son\u003cA, B\u003e extends Father{/*等价于class Son extends Father\u003cObject,Object\u003e{ }*/}\n// 2)具体类型\nclass Son2\u003cA, B\u003e extends Father\u003cInteger, String\u003e { }\n\n// 子类保留父类的泛型\n// 1)全部保留\nclass Son3\u003cT1, T2, A, B\u003e extends Father\u003cT1, T2\u003e { }\n// 2)部分保留\nclass Son4\u003cT2, A, B\u003e extends Father\u003cInteger, T2\u003e { }\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-p7cytqb",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707224346-p7cytqb"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "自定义泛型类"
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-9woo0ec",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707224346-9woo0ec"
+			},
+			"Children": [
+				{
+					"ID": "20210707224346-v201zry",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224346-v201zry"
+					},
+					"Children": [
+						{
+							"ID": "20210707224346-0adofge",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-0adofge"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "创建对象时"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "就确定泛型的类型。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-vjwiav2",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224346-vjwiav2"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class MyGenericClass\u003cE\u003e {//没有E类型，在这里代表 未知的一种数据类型 未来传递什么就是什么类型\n    private E e;\n\n    public MyGenericClass() {\n    }\n\n    public MyGenericClass(E e) {\n        this.e = e;\n    }\n\n    public void setE(E e) {\n        this.e = e;\n    }\n\n    public E getE() {\n        return e;\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-pdr9oc5",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224346-pdr9oc5"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "MyGenericClass\u003cString\u003e my = new MyGenericClass\u003c\u003e(); //创建对象时就确定泛型的类型\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-3axqno1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707224346-3axqno1"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "自定义泛型接口"
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-gu60sew",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707224346-gu60sew"
+			},
+			"Children": [
+				{
+					"ID": "20210707224346-hv0sl1v",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224346-hv0sl1v"
+					},
+					"Children": [
+						{
+							"ID": "20210707224346-s0giisq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-s0giisq"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "实现接口时"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "确定泛型的类型；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224346-zzvvvzy",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224346-zzvvvzy"
+					},
+					"Children": [
+						{
+							"ID": "20210707224346-d1ymzuk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-d1ymzuk"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "始终不确定泛型，直到"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "创建对象时"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "确定泛型的类型"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-cmgpkgk",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224346-cmgpkgk"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public interface MyGenericInterface\u003cE\u003e{\n\n  public abstract void add(E e);\n\n\tpublic abstract E getE();\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-f508py5",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224346-f508py5"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class MyImp1 implements MyGenericInterface\u003cString\u003e { //实现接口时确定泛型的类型\n    @Override\n    public void add(String e) { /*省略...*/ }\n\n    @Override\n    public String getE() { /*省略...*/ }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-d0afupt",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224346-d0afupt"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class MyImp2\u003cE\u003e implements MyGenericInterface\u003cE\u003e { //始终不确定泛型\n    @Override\n    public void add(E e) { /*省略...*/ }\n\n\t@Override\n    public E getE() { /*省略...*/ }\n}\nMyImp2\u003cString\u003e  my = new MyImp2\u003c\u003e();  //直到创建对象时确定泛型的类型\nmy.add(\"aa\");\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-sk50z9w",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707224346-sk50z9w"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "自定义泛型方法 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-s54fcxo",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707224346-s54fcxo"
+			},
+			"Children": [
+				{
+					"ID": "20210707224346-1p40pe2",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224346-1p40pe2"
+					},
+					"Children": [
+						{
+							"ID": "20210707224346-hw94ddx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-hw94ddx"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "方法可以被泛型化，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "无论方法所属的类是否为泛型类"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224346-1yotf8d",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224346-1yotf8d"
+					},
+					"Children": [
+						{
+							"ID": "20210707224346-w0sftat",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-w0sftat"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在泛型方法中可以定义泛型参数，在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "调用方法传递数据时"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "确定泛型的类型"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224346-j6ct68t",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224346-j6ct68t"
+					},
+					"Children": [
+						{
+							"ID": "20210707224346-7m83e27",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-7m83e27"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "泛型方法可以声明为静态的（不同于使用类的泛型）"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。原因：泛型参数是在调用方法时确定的。并非在实例化类时确定"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-90t2jgy",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224346-90t2jgy"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "// 修饰符 \u003c代表泛型的变量\u003e 返回值类型 方法名(参数){  } //格式\npublic class LinearSearch {\n\n    /**\n     * @param data   要查找的数据集\n     * @param target 目标数据\n     * @return index\n     */\n    public static \u003cE\u003e int search(E[] data, E target) {\n        for (int i = 0; i \u003c data.length; i++) {\n            // 对象类型笔记使用 equal，除非就是比较地址值。若是自定义的类比较，需要自己重写 equals 方法\n            if (data[i].equals(target))\n                return i;\n        }\n        return -1;\n    }\n\n\n    public static void main(String[] args) {\n        Integer[] arr = {1, 3, 2, 5, 7, 4, 3, 11};\n        //调用方法传递数据时确定泛型的类型\n        int search = LinearSearch.search(arr, 3);\n        System.out.println(search);\n\n\n        String[] strArr = {\"conanan\", \"conan\", \"zhangsan\"};\n        //调用方法传递数据时确定泛型的类型\n        int conan = LinearSearch.search(strArr, \"conan\");\n        System.out.println(conan);\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-rn282cs",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707224346-rn282cs"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "泛型在继承方面的体现"
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-j3fly70",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707224346-j3fly70"
+			},
+			"Children": [
+				{
+					"ID": "20210707224346-38pepbb",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224346-38pepbb"
+					},
+					"Children": [
+						{
+							"ID": "20210707224346-fbzgpyl",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-fbzgpyl"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "B"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 是 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "A"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 的一个子类型（子类或者子接口），而 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "G"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 是具有泛型声明的类或接口，"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "G\u003cB\u003e"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "并不是"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "G\u003cA\u003e"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的子类型"
+								}
+							]
+						},
+						{
+							"ID": "20210707224346-ds2hrx4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-ds2hrx4"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "类"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "A"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "是类"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "B"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的父类，"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "A\u003cG\u003e"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "是"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "B\u003cG\u003e"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的父类"
+								}
+							]
+						},
+						{
+							"ID": "20210707224346-sb3ks2k",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707224346-sb3ks2k"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "List\u003cObject\u003e list1 = null;\nList\u003cString\u003e list2 = null;\nlist1 = list2; // 编译失败。add 时数据不安全\n\nObject a = null;\nString b = null;\na = b;// 成功\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-q24oy7r",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707224346-q24oy7r"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "泛型通配符"
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-bjc7wvr",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707224346-bjc7wvr"
+			},
+			"Children": [
+				{
+					"ID": "20210707224346-sl7ke42",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224346-sl7ke42"
+					},
+					"Children": [
+						{
+							"ID": "20210707224346-r9fco9o",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-r9fco9o"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "使用泛型类或者接口"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "时，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "传递的数据中"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "泛型类型不确定"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，可以通过通配符"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "?"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "表示。但是一旦使用泛型的通配符后，只能使用"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Object"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "类中的共性方法。集合中元素自身方法无法使用，此时"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "只能读取数据，不能添加数据（除了 null ）"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224346-itl5ra4",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224346-itl5ra4"
+					},
+					"Children": [
+						{
+							"ID": "20210707224346-ka7r3uf",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-ka7r3uf"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "类"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "A"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "是类"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "B"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的父类，"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "G\u003cA\u003e"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "和"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "G\u003cB\u003e"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "是没有关系的，二者共同的父类"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224346-eq8668b",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224346-eq8668b"
+					},
+					"Children": [
+						{
+							"ID": "20210707224346-xfcglb2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-xfcglb2"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用方式：不能创建对象时使用，只能"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "作为方法的参数使用"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707224346-bu25bxa",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707224346-bu25bxa"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "public static void main(String[] args) {\n  Collection\u003cIntger\u003e list1 = new ArrayList\u003cInteger\u003e();\n  getElement(list1);\n  Collection\u003cString\u003e list2 = new ArrayList\u003cString\u003e();\n  getElement(list2);\n}\npublic static void getElement(Collection\u003c?\u003e coll){}//？代表可以接收任意类型\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224346-pv9r6wn",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224346-pv9r6wn"
+					},
+					"Children": [
+						{
+							"ID": "20210707224346-hq5gtde",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-hq5gtde"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "注意"
+								}
+							]
+						},
+						{
+							"ID": "20210707224346-yby0nk2",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707224346-yby0nk2"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "//注意点1:编译错误:不能用在泛型方法声明上，返回值类型前面\u003c\u003e不能使用?\npublic static \u003c?\u003e void test(ArrayList\u003c?\u003e list){\n}\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210707224346-w7ei4y8",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707224346-w7ei4y8"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "//注意点2:编译错误:不能用在泛型类的声明上\nclass GenericTypeClass\u003c?\u003e{\n}\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210707224346-nlb73dm",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707224346-nlb73dm"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "//注意点3:编译错误:不能用在创建对象上，右边属于创建集合对象\nArrayList\u003c?\u003e list2 = new ArrayList\u003c?\u003e();\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-il32se8",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707224346-il32se8"
+			},
+			"Children": [
+				{
+					"ID": "20210707224346-33ho1eg",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707224346-33ho1eg"
+					},
+					"Children": [
+						{
+							"ID": "20210707224346-0pdh8fw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224346-0pdh8fw"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "通配符高级使用——受限泛型"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707224346-acafwnr",
+							"Type": "NodeList",
+							"ListData": {
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707224346-acafwnr"
+							},
+							"Children": [
+								{
+									"ID": "20210707224346-lb9jjsp",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707224346-lb9jjsp"
+									},
+									"Children": [
+										{
+											"ID": "20210707224346-42ht260",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707224346-42ht260"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "之前设置泛型的时候，实际上是可以任意设置的，只要是类就可以设置。但是在 JAVA 的泛型中可以指定一个泛型的"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "上限"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "和"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "下限"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "。"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707224346-zoamxpb",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707224346-zoamxpb"
+									},
+									"Children": [
+										{
+											"ID": "20210707224346-ko00ktu",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707224346-ko00ktu"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "泛型的上限"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "："
+												}
+											]
+										},
+										{
+											"ID": "20210707224346-9u4iefx",
+											"Type": "NodeList",
+											"ListData": {
+												"Tight": true,
+												"BulletChar": 45,
+												"Padding": 2,
+												"Marker": "LQ==",
+												"Num": -1
+											},
+											"Properties": {
+												"id": "20210707224346-9u4iefx"
+											},
+											"Children": [
+												{
+													"ID": "20210707224346-efpblhv",
+													"Type": "NodeListItem",
+													"Data": "-",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 45,
+														"Padding": 2,
+														"Marker": "LQ==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707224346-efpblhv"
+													},
+													"Children": [
+														{
+															"ID": "20210707224346-dl3jflx",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707224346-dl3jflx"
+															},
+															"Children": [
+																{
+																	"Type": "NodeStrong",
+																	"Children": [
+																		{
+																			"Type": "NodeStrongA6kOpenMarker",
+																			"Data": "**"
+																		},
+																		{
+																			"Type": "NodeText",
+																			"Data": "格式"
+																		},
+																		{
+																			"Type": "NodeStrongA6kCloseMarker",
+																			"Data": "**"
+																		}
+																	]
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "： "
+																},
+																{
+																	"Type": "NodeCodeSpan",
+																	"CodeMarkerLen": 1,
+																	"Children": [
+																		{
+																			"Type": "NodeCodeSpanOpenMarker",
+																			"Data": "`"
+																		},
+																		{
+																			"Type": "NodeCodeSpanContent",
+																			"Data": "类型名称 \u003c? extends 类 \u003e 对象名称"
+																		},
+																		{
+																			"Type": "NodeCodeSpanCloseMarker",
+																			"Data": "`"
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													"ID": "20210707224346-e7j4twb",
+													"Type": "NodeListItem",
+													"Data": "-",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 45,
+														"Padding": 2,
+														"Marker": "LQ==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707224346-e7j4twb"
+													},
+													"Children": [
+														{
+															"ID": "20210707224346-iarqncr",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707224346-iarqncr"
+															},
+															"Children": [
+																{
+																	"Type": "NodeStrong",
+																	"Children": [
+																		{
+																			"Type": "NodeStrongA6kOpenMarker",
+																			"Data": "**"
+																		},
+																		{
+																			"Type": "NodeText",
+																			"Data": "意义"
+																		},
+																		{
+																			"Type": "NodeStrongA6kCloseMarker",
+																			"Data": "**"
+																		}
+																	]
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "：只能接收该类型及其子类"
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"ID": "20210707224346-t4afkf9",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707224346-t4afkf9"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "泛型的下限"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "："
+												}
+											]
+										},
+										{
+											"ID": "20210707224346-csjhuuc",
+											"Type": "NodeList",
+											"ListData": {
+												"Tight": true,
+												"BulletChar": 45,
+												"Padding": 2,
+												"Marker": "LQ==",
+												"Num": -1
+											},
+											"Properties": {
+												"id": "20210707224346-csjhuuc"
+											},
+											"Children": [
+												{
+													"ID": "20210707224346-aj3bef8",
+													"Type": "NodeListItem",
+													"Data": "-",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 45,
+														"Padding": 2,
+														"Marker": "LQ==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707224346-aj3bef8"
+													},
+													"Children": [
+														{
+															"ID": "20210707224346-oy9ej9o",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707224346-oy9ej9o"
+															},
+															"Children": [
+																{
+																	"Type": "NodeStrong",
+																	"Children": [
+																		{
+																			"Type": "NodeStrongA6kOpenMarker",
+																			"Data": "**"
+																		},
+																		{
+																			"Type": "NodeText",
+																			"Data": "格式"
+																		},
+																		{
+																			"Type": "NodeStrongA6kCloseMarker",
+																			"Data": "**"
+																		}
+																	]
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "： "
+																},
+																{
+																	"Type": "NodeCodeSpan",
+																	"CodeMarkerLen": 1,
+																	"Children": [
+																		{
+																			"Type": "NodeCodeSpanOpenMarker",
+																			"Data": "`"
+																		},
+																		{
+																			"Type": "NodeCodeSpanContent",
+																			"Data": "类型名称 \u003c? super 类 \u003e 对象名称"
+																		},
+																		{
+																			"Type": "NodeCodeSpanCloseMarker",
+																			"Data": "`"
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													"ID": "20210707224346-0c59opt",
+													"Type": "NodeListItem",
+													"Data": "-",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 45,
+														"Padding": 2,
+														"Marker": "LQ==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707224346-0c59opt"
+													},
+													"Children": [
+														{
+															"ID": "20210707224346-owberx5",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707224346-owberx5"
+															},
+															"Children": [
+																{
+																	"Type": "NodeStrong",
+																	"Children": [
+																		{
+																			"Type": "NodeStrongA6kOpenMarker",
+																			"Data": "**"
+																		},
+																		{
+																			"Type": "NodeText",
+																			"Data": "意义"
+																		},
+																		{
+																			"Type": "NodeStrongA6kCloseMarker",
+																			"Data": "**"
+																		}
+																	]
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "：只能接收该类型及其父类型"
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"ID": "20210707224346-ywxmpsj",
+											"Type": "NodeCodeBlock",
+											"IsFencedCodeBlock": true,
+											"CodeBlockFenceChar": 96,
+											"CodeBlockFenceLen": 3,
+											"CodeBlockOpenFence": "YGBg",
+											"CodeBlockInfo": "amF2YQ==",
+											"CodeBlockCloseFence": "YGBg",
+											"Properties": {
+												"id": "20210707224346-ywxmpsj"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeBlockFenceOpenMarker",
+													"Data": "```",
+													"CodeBlockFenceLen": 3
+												},
+												{
+													"Type": "NodeCodeBlockFenceInfoMarker",
+													"CodeBlockInfo": "amF2YQ=="
+												},
+												{
+													"Type": "NodeCodeBlockCode",
+													"Data": "//现已知Object类，String 类，Number类，Integer类，其中Number是Integer的父类\npublic static void main(String[] args) {\n    Collection\u003cInteger\u003e list1 = new ArrayList\u003cInteger\u003e();\n    Collection\u003cString\u003e list2 = new ArrayList\u003cString\u003e();\n    Collection\u003cNumber\u003e list3 = new ArrayList\u003cNumber\u003e();\n    Collection\u003cObject\u003e list4 = new ArrayList\u003cObject\u003e();\n\n    getElement1(list1);\n    getElement1(list2);//报错\n    getElement1(list3);\n    getElement1(list4);//报错\n\n    getElement2(list1);//报错\n    getElement2(list2);//报错\n    getElement2(list3);\n    getElement2(list4);\n\n}\npublic static void getElement1(Collection\u003c? extends Number\u003e coll){}\npublic static void getElement2(Collection\u003c? super Number\u003e coll){}\n"
+												},
+												{
+													"Type": "NodeCodeBlockFenceCloseMarker",
+													"Data": "```",
+													"CodeBlockFenceLen": 3
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-g5h8itc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707224346-g5h8itc"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "用处"
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-xs99n99",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210707224346-xs99n99"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Mybatis-Plus 的通用 Mapper"
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-2npph1q",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224346-2npph1q"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public interface BaseMapper\u003cT\u003e extends Mapper\u003cT\u003e {\n\n    /**\n     * 插入一条记录\n     *\n     * @param entity 实体对象\n     */\n    int insert(T entity);\n\n  \t//......\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-c6f2v7l",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224346-c6f2v7l"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class UserDao implements BaseMapper\u003cUser\u003e {\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		}
+	]
+}

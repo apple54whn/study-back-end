@@ -1,0 +1,5062 @@
+{
+	"ID": "20210707233138-3k8xhcp",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210707233138-3k8xhcp",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210707233138-j5l7fy9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233138-j5l7fy9"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "引入——重复编码"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-1ipju6o",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233138-1ipju6o"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "之前使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "DBUtils"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "做的增删改查例子中，客户的业务层实现类存在的问题："
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "事务被自动控制了"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。换言之，我们使用了 connection 对象的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "setAutoCommit(true)"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "  此方式控制事务，如果我们每次都执行一条 sql 语句，没有问题，但是如果业务方法一次要执行多条 sql 语句，这种方式就无法实现功能了。"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-mdv5yj9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233138-mdv5yj9"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "日志记录需要给每个方法都添加记录的方法。。。"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-qpu4kjb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233138-qpu4kjb"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "权限控制需要给每个方法都添加权限校验。。。"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-y9t5juw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233138-y9t5juw"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "……"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-ugunikf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233138-ugunikf"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "AOP 介绍及相关术语"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-wjl2t6h",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707233138-wjl2t6h"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "AOP 面向切面编程"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-n71qyfk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233138-n71qyfk"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "AOP(Aspect Oriented Programming)："
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "面向切面编程"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-nuljaa5",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233138-nuljaa5"
+			},
+			"Children": [
+				{
+					"ID": "20210707233138-vgigpvz",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-vgigpvz"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-vu6wx40",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-vu6wx40"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "作用："
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "在程序运行期间，不修改源码对已有方法进行增强"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-tldx5cm",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-tldx5cm"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-7wchglj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-7wchglj"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "优势："
+								}
+							]
+						},
+						{
+							"ID": "20210707233138-1zdhj8a",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 42,
+								"Padding": 2,
+								"Marker": "Kg==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707233138-1zdhj8a"
+							},
+							"Children": [
+								{
+									"ID": "20210707233138-4oswsmt",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-4oswsmt"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-1a8uw5n",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-1a8uw5n"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "减少重复代码"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233138-zaffc80",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-zaffc80"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-5rrx380",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-5rrx380"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "提高开发效率"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233138-0xvaiuv",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-0xvaiuv"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-qtanxqz",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-qtanxqz"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "维护方便"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-8wa1bin",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-8wa1bin"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-8yvdzs4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-8yvdzs4"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "实现方式："
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "动态代理"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-8wzztll",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707233138-8wzztll"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "AOP 相关术语"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-7osg20v",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233138-7osg20v"
+			},
+			"Children": [
+				{
+					"ID": "20210707233138-yx6h9mb",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-yx6h9mb"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-qzvp9n0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-qzvp9n0"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Joinpoint(连接点)：所谓连接点是指那些被拦截到的点。在 spring 中这些点指的是方法，因为 spring 只支持方法类型的连接点。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-hhwt1f4",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-hhwt1f4"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-7trj67o",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-7trj67o"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Pointcut("
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "切入点"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ")：所谓切入点是指我们要对哪些 Joinpoint 进行拦截的定义。即"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "被增强的连接点"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-akhvoxr",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-akhvoxr"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-2hp5dhc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-2hp5dhc"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Advice("
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "通知"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "/增强):   所谓通知是指拦截到 Joinpoint 之后所"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "要做的事情"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "就是通知。"
+								}
+							]
+						},
+						{
+							"ID": "20210707233138-csl82ji",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 42,
+								"Padding": 2,
+								"Marker": "Kg==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707233138-csl82ji"
+							},
+							"Children": [
+								{
+									"ID": "20210707233138-sucs1r4",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-sucs1r4"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-9h2cpy7",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-9h2cpy7"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "通知的类型：前置通知、后置通知、异常通知、最终通知、环绕通知。 根据"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "method.invoke"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "之前、之后、catch中、finally中，以及实现类重写的"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "invoke"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "方法在执行（环绕通知中有明确的切入点方法调用）"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-k5dajt0",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-k5dajt0"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-eykvlbi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-eykvlbi"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Introduction(引介):   引介是一种特殊的通知在不修改类代码的前提下, Introduction 可以在运行期为类动态地添加一些方法或 Field"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-p8gkone",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-p8gkone"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-qnsatpc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-qnsatpc"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Target(目标对象):   代理的目标对象"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-846uyxj",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-846uyxj"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-j38jqu1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-j38jqu1"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Weaving(织入):   是指把增强应用到目标对象来创建新的代理对象的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "过程"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。spring 采用动态代理织入，而 AspectJ 采用编译期织入和类装载期织入。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-tnq9qyu",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-tnq9qyu"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-u7cu7t5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-u7cu7t5"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Proxy（代理）：一个类被 AOP 织入增强后，就产生一个结果代理类"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-wdyhglb",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-wdyhglb"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-j14ekbo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-j14ekbo"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Aspect("
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "切面"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "):   是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "切入点和通知（引介）的结合"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-au20g68",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707233138-au20g68"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "学习 AOP 要明确的事"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-tmjy6hs",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233138-tmjy6hs"
+			},
+			"Children": [
+				{
+					"ID": "20210707233138-fp3q7pm",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-fp3q7pm"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-3nl0ymd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-3nl0ymd"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "开发阶段（我们做的）"
+								}
+							]
+						},
+						{
+							"ID": "20210707233138-97tg6wy",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 42,
+								"Padding": 2,
+								"Marker": "Kg==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707233138-97tg6wy"
+							},
+							"Children": [
+								{
+									"ID": "20210707233138-ml7zoyn",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-ml7zoyn"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-mpn56xw",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-mpn56xw"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "编写核心业务代码（开发主线）：大部分程序员来做，要求熟悉业务需求。"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233138-oti42fs",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-oti42fs"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-fthv3cl",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-fthv3cl"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "把公用代码抽取出来，制作成通知。（开发阶段最后再做）：AOP 编程人员来做。"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233138-tcr7clh",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-tcr7clh"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-n80mb41",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-n80mb41"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "在配置文件中，声明切入点与通知间的关系，即切面。：AOP 编程人员来做"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-6s5gj40",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-6s5gj40"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-vvqtbgz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-vvqtbgz"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "运行阶段（Spring框架完成的）"
+								}
+							]
+						},
+						{
+							"ID": "20210707233138-dzkvh5f",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 42,
+								"Padding": 2,
+								"Marker": "Kg==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707233138-dzkvh5f"
+							},
+							"Children": [
+								{
+									"ID": "20210707233138-6hebhnu",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-6hebhnu"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-15vcwvy",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-15vcwvy"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "Spring 框架监控切入点方法的执行。一旦监控到切入点方法被运行，使用代理机制，动态创建目标对象的代理对象，根据通知类别，在代理对象的对应位置，将通知对应的功能织入，完成完整的代码逻辑运行。"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-7ku1ews",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233138-7ku1ews"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "@EnableAspectJAutoProxy"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-izrhfqh",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233138-izrhfqh"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Configuration \n@ComponentScan(basePackages=\"com.itheima\") \n@EnableAspectJAutoProxy \npublic class SpringConfiguration {\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-h2dl8s2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233138-h2dl8s2"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "@Aspect"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-n0dvv32",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233138-n0dvv32"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "添加"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"CodeMarkerLen": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker",
+									"Data": "`"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "@Component"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker",
+									"Data": "`"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "、"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"CodeMarkerLen": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker",
+									"Data": "`"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "@Aspect"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker",
+									"Data": "`"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "注解，配置切面（切点、通知）"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-2wzys20",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233138-2wzys20"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n * 用于记录日志的工具类，它里面提供了公共的代码\n */\n@Component(\"logger\")\n@Aspect//表示当前类是一个切面类\npublic class Logger {\n\n    @Pointcut(\"execution(* com.itheima.service.impl.*.*(..))\")\n    private void pt1(){}\n\n    //如下注解中，value和pointCut含义一样\n    //以下通知的方法的参数列表中，JoinPoint必须出现在参数列表的第一位\n  \n    //前置通知\n    @Before(\"pt1()\")\n    public  void beforePrintLog(JoinPoint joinPoint){\n        Object[] args = joinPoint.getArgs();\n        System.out.println(\"\"+joinPoint.getSignature().getName()+\"@Before:参数列表是：{\"+Arrays.asList(args)+\"}\");\n    }\n    //后置通知\n    @AfterReturning(value=\"pt1()\",,returning=\"result\")\n    public  void afterReturningPrintLog(JoinPoint joinPoint,Object result){\n       System.out.println(joinPoint.getSignature().getName()+\"==@AfterReturning:运行结果：{\"+result+\"}\");\n    }\n    //异常通知\n    @AfterThrowing(value=\"pt1()\",throwing=\"throwing\")\n    public  void afterThrowingPrintLog(JoinPoint joinPoint,Throwable t){\n        System.out.println(joinPoint.getSignature().getName()+\"异常。。。异常信息：{\"+t+\"});\n    }\n    //最终通知\n    @After(\"pt1()\")\n    public  void afterPrintLog(JoinPoint joinPoint){\n        System.out.println(\"joinPoint.getSignature().getName()+\"结束。。。@After\");\n    }\n \n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-8ue5ec0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233138-8ue5ec0"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/** 省略上面代码 **/\n/**\n     * 环绕通知\n     * 问题：\n     *      当我们配置了环绕通知之后，切入点方法没有执行，而通知方法执行了。\n     * 分析：\n     *      通过对比动态代理中的环绕通知代码，发现动态代理的环绕通知有明确的切入点方法调用，而我们的代码中没有。\n     * 解决：\n     *  Spring框架为我们提供了一个接口：ProceedingJoinPoint。该接口有一个方法proceed()，此方法就相当于明确调用切入点方法。\n     *  该接口可以作为环绕通知的方法参数，在程序执行时，spring框架会为我们提供该接口的实现类供我们使用。\n     *\n     * spring中的环绕通知：\n     *      它是spring框架为我们提供的一种可以在代码中手动控制增强方法何时执行的方式。\n     */\n//若是外部类引用切点，则需要全类名+方法（但好像没意义，就两行代码）\n@Around(value=\"pt1()\") \npublic Object aroundPringLog(ProceedingJoinPoint pjp){\n    Object rtValue = null;\n    try{\n        Object[] args = pjp.getArgs();//得到方法执行所需的参数\n\n        System.out.println(\"Logger类中的aroundPringLog方法开始记录日志了。。。前置\");\n\n        rtValue = pjp.proceed(args);//明确调用业务层方法（切入点方法）\n\n        System.out.println(\"Logger类中的aroundPringLog方法开始记录日志了。。。后置\");\n\n        return rtValue;\n    }catch (Throwable t){ //只能catch Throwable \n        System.out.println(\"Logger类中的aroundPringLog方法开始记录日志了。。。异常\");\n        throw new RuntimeException(t);\n    }finally {\n        System.out.println(\"Logger类中的aroundPringLog方法开始记录日志了。。。最终\");\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-eou6v1u",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233138-eou6v1u"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意：基于配置的AOP，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "最终通知会在后置通知或异常通知之前执行"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。环绕通知没有此问题，推荐使用"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-szxdx4c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233138-szxdx4c"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ProceedingJoinPoint"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "接口继承了"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "JoinPoint"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "接口。比它多了"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "proceed"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的无参和有参方法，用于执行JointPoint（连接点）"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-lxycyv3",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233138-lxycyv3"
+			},
+			"Children": [
+				{
+					"ID": "20210707233138-c1g87lm",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-c1g87lm"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-h91lpi6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-h91lpi6"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Signature getSignature()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：获取签名，即方法的签名"
+								}
+							]
+						},
+						{
+							"ID": "20210707233138-g1qaq0c",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 42,
+								"Padding": 2,
+								"Marker": "Kg==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707233138-g1qaq0c"
+							},
+							"Children": [
+								{
+									"ID": "20210707233138-ftmpxvh",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-ftmpxvh"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-g5b2wk8",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-g5b2wk8"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "String getName()"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "：获取方法的名称"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-5h8lsbk",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-5h8lsbk"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-827sd4m",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-827sd4m"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Object[] getArgs()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：获取实际参数列表"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-ur4tho9",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-ur4tho9"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-cijsibg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-cijsibg"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Object getTarget()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：获取目标对象（被代理对象？）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-kguua14",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233138-kguua14"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-q90c9n1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-q90c9n1"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Object getThis()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：获取代理对象"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-8oc8f8o",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233138-8oc8f8o"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "一般配置步骤"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-c7t80xu",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 3,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210707233138-c7t80xu"
+			},
+			"Children": [
+				{
+					"ID": "20210707233138-a8p965d",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210707233138-a8p965d"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-4rxlsvy",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-4rxlsvy"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "抽取公共代码制作成通知"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-r57j7gu",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210707233138-r57j7gu"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-nugyalo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-nugyalo"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "JavaConfig 配置如上"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-adopaw8",
+					"Type": "NodeListItem",
+					"Data": "3",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 3,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mw==",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20210707233138-adopaw8"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-me52gj4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-me52gj4"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "切入点表达式"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的写法：关键字："
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "execution(表达式)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707233138-hz36c2m",
+							"Type": "NodeList",
+							"ListData": {
+								"BulletChar": 42,
+								"Padding": 2,
+								"Marker": "Kg==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707233138-hz36c2m"
+							},
+							"Children": [
+								{
+									"ID": "20210707233138-mw3eer0",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-mw3eer0"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-6cxw57d",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-6cxw57d"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "表达式"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "访问修饰符  返回值  包名.包名.包名...类名.方法名(参数列表)"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233138-putb82x",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-putb82x"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-z7tjlrf",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-z7tjlrf"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "标准写法"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "public void com.itheima.service.impl.AccountServiceImpl.saveAccount()"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233138-pr0oujp",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-pr0oujp"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-w1e04vp",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-w1e04vp"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "访问修饰符可以省略"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "void com.itheima.service.impl.AccountServiceImpl.saveAccount()"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233138-y3pcf85",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-y3pcf85"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-psxxcow",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-psxxcow"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "返回值可以使用通配符，表示任意返回值"
+												}
+											]
+										},
+										{
+											"ID": "20210707233138-yedat6e",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-yedat6e"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "* com.itheima.service.impl.AccountServiceImpl.saveAccount()"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233138-kr84fka",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-kr84fka"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-jlysobf",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-jlysobf"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "包名可以使用通配符，表示任意包。但是有几级包，就需要写几个"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "*."
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												}
+											]
+										},
+										{
+											"ID": "20210707233138-vokiplo",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-vokiplo"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "* *.*.*.*.AccountServiceImpl.saveAccount()"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233138-1hquxbo",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-1hquxbo"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-e5iyzui",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-e5iyzui"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "包名可以使用"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "*.."
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "表示当前包及其子包"
+												},
+												{
+													"Type": "NodeSoftBreak",
+													"Data": "\n"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "* *..AccountServiceImpl.saveAccount()"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233138-f8bgrk7",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-f8bgrk7"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-df6kbal",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-df6kbal"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "类名和方法名都可以使用"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "*"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "来实现通配"
+												}
+											]
+										},
+										{
+											"ID": "20210707233138-0djn6hs",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-0djn6hs"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "* *..*.*()"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233138-dn5ge4h",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-dn5ge4h"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-s9mdfhj",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-s9mdfhj"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "参数列表："
+												}
+											]
+										},
+										{
+											"ID": "20210707233138-uw8knrq",
+											"Type": "NodeList",
+											"ListData": {
+												"BulletChar": 42,
+												"Padding": 2,
+												"Marker": "Kg==",
+												"Num": -1
+											},
+											"Properties": {
+												"id": "20210707233138-uw8knrq"
+											},
+											"Children": [
+												{
+													"ID": "20210707233138-lm577sb",
+													"Type": "NodeListItem",
+													"Data": "*",
+													"ListData": {
+														"BulletChar": 42,
+														"Padding": 2,
+														"Marker": "Kg==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707233138-lm577sb"
+													},
+													"Children": [
+														{
+															"ID": "20210707233138-zv1tgi3",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707233138-zv1tgi3"
+															},
+															"Children": [
+																{
+																	"Type": "NodeText",
+																	"Data": "可以直接写数据类型："
+																}
+															]
+														},
+														{
+															"ID": "20210707233138-8zb5m9e",
+															"Type": "NodeList",
+															"ListData": {
+																"Tight": true,
+																"BulletChar": 42,
+																"Padding": 2,
+																"Marker": "Kg==",
+																"Num": -1
+															},
+															"Properties": {
+																"id": "20210707233138-8zb5m9e"
+															},
+															"Children": [
+																{
+																	"ID": "20210707233138-6oacmxq",
+																	"Type": "NodeListItem",
+																	"Data": "*",
+																	"ListData": {
+																		"Tight": true,
+																		"BulletChar": 42,
+																		"Padding": 2,
+																		"Marker": "Kg==",
+																		"Num": -1
+																	},
+																	"Properties": {
+																		"id": "20210707233138-6oacmxq"
+																	},
+																	"Children": [
+																		{
+																			"ID": "20210707233138-yv94bhk",
+																			"Type": "NodeParagraph",
+																			"Properties": {
+																				"id": "20210707233138-yv94bhk"
+																			},
+																			"Children": [
+																				{
+																					"Type": "NodeText",
+																					"Data": "基本类型直接写名称           int"
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	"ID": "20210707233138-jx6xacs",
+																	"Type": "NodeListItem",
+																	"Data": "*",
+																	"ListData": {
+																		"Tight": true,
+																		"BulletChar": 42,
+																		"Padding": 2,
+																		"Marker": "Kg==",
+																		"Num": -1
+																	},
+																	"Properties": {
+																		"id": "20210707233138-jx6xacs"
+																	},
+																	"Children": [
+																		{
+																			"ID": "20210707233138-g3vgz7v",
+																			"Type": "NodeParagraph",
+																			"Properties": {
+																				"id": "20210707233138-g3vgz7v"
+																			},
+																			"Children": [
+																				{
+																					"Type": "NodeText",
+																					"Data": "引用类型写包名.类名的方式   java.lang.String"
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													"ID": "20210707233138-kuo3jro",
+													"Type": "NodeListItem",
+													"Data": "*",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 42,
+														"Padding": 2,
+														"Marker": "Kg==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707233138-kuo3jro"
+													},
+													"Children": [
+														{
+															"ID": "20210707233138-pmkbdc0",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707233138-pmkbdc0"
+															},
+															"Children": [
+																{
+																	"Type": "NodeText",
+																	"Data": "可以使用通配符表示任意类型，但是必须有参数"
+																}
+															]
+														}
+													]
+												},
+												{
+													"ID": "20210707233138-av5bt1w",
+													"Type": "NodeListItem",
+													"Data": "*",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 42,
+														"Padding": 2,
+														"Marker": "Kg==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707233138-av5bt1w"
+													},
+													"Children": [
+														{
+															"ID": "20210707233138-mhnyotq",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707233138-mhnyotq"
+															},
+															"Children": [
+																{
+																	"Type": "NodeText",
+																	"Data": "可以使用..表示有无参数均可，有参数可以是任意类型"
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233138-tzkvuup",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-tzkvuup"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-wicbip3",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-wicbip3"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "全通配写法："
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "* *..*.*(..)"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233138-rethts6",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233138-rethts6"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-wmykbs7",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-wmykbs7"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "实际开发中切入点表达式的通常写法"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "："
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "切到业务层实现类下的所有方法"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												}
+											]
+										},
+										{
+											"ID": "20210707233138-078wk9l",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-078wk9l"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "* com.itheima.service.impl.*.*(..)"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-3cs8yuc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233138-3cs8yuc"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "xml 配置（旧）"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-k0u1i1w",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 3,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210707233138-k0u1i1w"
+			},
+			"Children": [
+				{
+					"ID": "20210707233138-7tf2fhy",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210707233138-7tf2fhy"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-vvtn34g",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-vvtn34g"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在spirng-config.xml中添加AOP约束。在指南中搜索"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "xmlns:aop"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "即可"
+								}
+							]
+						},
+						{
+							"ID": "20210707233138-aq5dzli",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "eG1s",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707233138-aq5dzli"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "eG1s"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "\u003c?xml version=\"1.0\" encoding=\"UTF-8\"?\u003e\n\u003cbeans xmlns=\"http://www.springframework.org/schema/beans\"\n    xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n    xmlns:aop=\"http://www.springframework.org/schema/aop\"\n    xsi:schemaLocation=\"http://www.springframework.org/schema/beans\n        http://www.springframework.org/schema/beans/spring-beans.xsd\n        http://www.springframework.org/schema/aop\n        http://www.springframework.org/schema/aop/spring-aop.xsd\"\u003e\n\u003c/beans\u003e\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-lqlwaaq",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210707233138-lqlwaaq"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-3s1u0pt",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-3s1u0pt"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "配置 spring 的 ioc"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-0vfl1g2",
+					"Type": "NodeListItem",
+					"Data": "3",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 3,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mw==",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20210707233138-0vfl1g2"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-mp48eew",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-mp48eew"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "抽取公共代码制作成通知"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233138-s2i7b4e",
+					"Type": "NodeListItem",
+					"Data": "4",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 4,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "NA==",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20210707233138-s2i7b4e"
+					},
+					"Children": [
+						{
+							"ID": "20210707233138-c2uhrs1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233138-c2uhrs1"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "spring中基于XML的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "AOP配置"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "步骤"
+								}
+							]
+						},
+						{
+							"ID": "20210707233138-7evzqrk",
+							"Type": "NodeList",
+							"ListData": {
+								"Typ": 1,
+								"Start": 1,
+								"Delimiter": 46,
+								"Padding": 3,
+								"Marker": "MQ==",
+								"Num": 1
+							},
+							"Properties": {
+								"id": "20210707233138-7evzqrk"
+							},
+							"Children": [
+								{
+									"ID": "20210707233138-uuiwv7b",
+									"Type": "NodeListItem",
+									"Data": "1",
+									"ListData": {
+										"Typ": 1,
+										"Start": 1,
+										"Delimiter": 46,
+										"Padding": 3,
+										"Marker": "MQ==",
+										"Num": 1
+									},
+									"Properties": {
+										"id": "20210707233138-uuiwv7b"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-cfwzrcb",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-cfwzrcb"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "把"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "通知Bean也交给spring来管理"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233138-p0uypdb",
+									"Type": "NodeListItem",
+									"Data": "2",
+									"ListData": {
+										"Typ": 1,
+										"Tight": true,
+										"Start": 2,
+										"Delimiter": 46,
+										"Padding": 3,
+										"Marker": "Mg==",
+										"Num": 2
+									},
+									"Properties": {
+										"id": "20210707233138-p0uypdb"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-adwhc1i",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-adwhc1i"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "使用"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "aop:config"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "标签表明开始"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "AOP的配置"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233138-427f8yj",
+									"Type": "NodeListItem",
+									"Data": "3",
+									"ListData": {
+										"Typ": 1,
+										"Tight": true,
+										"Start": 3,
+										"Delimiter": 46,
+										"Padding": 3,
+										"Marker": "Mw==",
+										"Num": 3
+									},
+									"Properties": {
+										"id": "20210707233138-427f8yj"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-dtuhjgv",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-dtuhjgv"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "使用"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "aop:aspect"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "标签表明配置"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "切面"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												}
+											]
+										},
+										{
+											"ID": "20210707233138-qkqxw77",
+											"Type": "NodeList",
+											"ListData": {
+												"Tight": true,
+												"BulletChar": 45,
+												"Padding": 2,
+												"Marker": "LQ==",
+												"Num": -1
+											},
+											"Properties": {
+												"id": "20210707233138-qkqxw77"
+											},
+											"Children": [
+												{
+													"ID": "20210707233138-2auhdon",
+													"Type": "NodeListItem",
+													"Data": "-",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 45,
+														"Padding": 2,
+														"Marker": "LQ==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707233138-2auhdon"
+													},
+													"Children": [
+														{
+															"ID": "20210707233138-9i1z0vx",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707233138-9i1z0vx"
+															},
+															"Children": [
+																{
+																	"Type": "NodeCodeSpan",
+																	"CodeMarkerLen": 1,
+																	"Children": [
+																		{
+																			"Type": "NodeCodeSpanOpenMarker",
+																			"Data": "`"
+																		},
+																		{
+																			"Type": "NodeCodeSpanContent",
+																			"Data": "id"
+																		},
+																		{
+																			"Type": "NodeCodeSpanCloseMarker",
+																			"Data": "`"
+																		}
+																	]
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "属性：是给切面提供一个唯一标识"
+																}
+															]
+														}
+													]
+												},
+												{
+													"ID": "20210707233138-p6iiteq",
+													"Type": "NodeListItem",
+													"Data": "-",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 45,
+														"Padding": 2,
+														"Marker": "LQ==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707233138-p6iiteq"
+													},
+													"Children": [
+														{
+															"ID": "20210707233138-3fd57rs",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707233138-3fd57rs"
+															},
+															"Children": [
+																{
+																	"Type": "NodeCodeSpan",
+																	"CodeMarkerLen": 1,
+																	"Children": [
+																		{
+																			"Type": "NodeCodeSpanOpenMarker",
+																			"Data": "`"
+																		},
+																		{
+																			"Type": "NodeCodeSpanContent",
+																			"Data": "ref"
+																		},
+																		{
+																			"Type": "NodeCodeSpanCloseMarker",
+																			"Data": "`"
+																		}
+																	]
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "属性：是指定通知类bean的Id"
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233138-vh2f33c",
+									"Type": "NodeListItem",
+									"Data": "4",
+									"ListData": {
+										"Typ": 1,
+										"Tight": true,
+										"Start": 4,
+										"Delimiter": 46,
+										"Padding": 3,
+										"Marker": "NA==",
+										"Num": 4
+									},
+									"Properties": {
+										"id": "20210707233138-vh2f33c"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-bo2738i",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-bo2738i"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "在"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "aop:aspect"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "标签的内部使用对应标签来配置"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "通知的类型"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "。示例是让printLog方法在切入点方法执行之前之前"
+												}
+											]
+										},
+										{
+											"ID": "20210707233138-e3xf568",
+											"Type": "NodeList",
+											"ListData": {
+												"BulletChar": 45,
+												"Padding": 2,
+												"Marker": "LQ==",
+												"Num": -1
+											},
+											"Properties": {
+												"id": "20210707233138-e3xf568"
+											},
+											"Children": [
+												{
+													"ID": "20210707233138-oaspcub",
+													"Type": "NodeListItem",
+													"Data": "-",
+													"ListData": {
+														"BulletChar": 45,
+														"Padding": 2,
+														"Marker": "LQ==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707233138-oaspcub"
+													},
+													"Children": [
+														{
+															"ID": "20210707233138-y18dmxr",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707233138-y18dmxr"
+															},
+															"Children": [
+																{
+																	"Type": "NodeCodeSpan",
+																	"CodeMarkerLen": 1,
+																	"Children": [
+																		{
+																			"Type": "NodeCodeSpanOpenMarker",
+																			"Data": "`"
+																		},
+																		{
+																			"Type": "NodeCodeSpanContent",
+																			"Data": "aop:before"
+																		},
+																		{
+																			"Type": "NodeCodeSpanCloseMarker",
+																			"Data": "`"
+																		}
+																	]
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "：表示配置前置通知。其他通知类似"
+																}
+															]
+														},
+														{
+															"ID": "20210707233138-kmpymas",
+															"Type": "NodeList",
+															"ListData": {
+																"Tight": true,
+																"BulletChar": 45,
+																"Padding": 2,
+																"Marker": "LQ==",
+																"Num": -1
+															},
+															"Properties": {
+																"id": "20210707233138-kmpymas"
+															},
+															"Children": [
+																{
+																	"ID": "20210707233138-9y0c44o",
+																	"Type": "NodeListItem",
+																	"Data": "-",
+																	"ListData": {
+																		"Tight": true,
+																		"BulletChar": 45,
+																		"Padding": 2,
+																		"Marker": "LQ==",
+																		"Num": -1
+																	},
+																	"Properties": {
+																		"id": "20210707233138-9y0c44o"
+																	},
+																	"Children": [
+																		{
+																			"ID": "20210707233138-a0mv5zd",
+																			"Type": "NodeParagraph",
+																			"Properties": {
+																				"id": "20210707233138-a0mv5zd"
+																			},
+																			"Children": [
+																				{
+																					"Type": "NodeCodeSpan",
+																					"CodeMarkerLen": 1,
+																					"Children": [
+																						{
+																							"Type": "NodeCodeSpanOpenMarker",
+																							"Data": "`"
+																						},
+																						{
+																							"Type": "NodeCodeSpanContent",
+																							"Data": "method"
+																						},
+																						{
+																							"Type": "NodeCodeSpanCloseMarker",
+																							"Data": "`"
+																						}
+																					]
+																				},
+																				{
+																					"Type": "NodeText",
+																					"Data": "属性：用于指定Logger类中"
+																				},
+																				{
+																					"Type": "NodeStrong",
+																					"Children": [
+																						{
+																							"Type": "NodeStrongA6kOpenMarker",
+																							"Data": "**"
+																						},
+																						{
+																							"Type": "NodeText",
+																							"Data": "哪个方法是前置通知"
+																						},
+																						{
+																							"Type": "NodeStrongA6kCloseMarker",
+																							"Data": "**"
+																						}
+																					]
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	"ID": "20210707233138-6mki48g",
+																	"Type": "NodeListItem",
+																	"Data": "-",
+																	"ListData": {
+																		"Tight": true,
+																		"BulletChar": 45,
+																		"Padding": 2,
+																		"Marker": "LQ==",
+																		"Num": -1
+																	},
+																	"Properties": {
+																		"id": "20210707233138-6mki48g"
+																	},
+																	"Children": [
+																		{
+																			"ID": "20210707233138-d7wfenx",
+																			"Type": "NodeParagraph",
+																			"Properties": {
+																				"id": "20210707233138-d7wfenx"
+																			},
+																			"Children": [
+																				{
+																					"Type": "NodeCodeSpan",
+																					"CodeMarkerLen": 1,
+																					"Children": [
+																						{
+																							"Type": "NodeCodeSpanOpenMarker",
+																							"Data": "`"
+																						},
+																						{
+																							"Type": "NodeCodeSpanContent",
+																							"Data": "pointcut"
+																						},
+																						{
+																							"Type": "NodeCodeSpanCloseMarker",
+																							"Data": "`"
+																						}
+																					]
+																				},
+																				{
+																					"Type": "NodeText",
+																					"Data": "属性：用于指定切入点表达式，该表达式的含义指的是对业务层中"
+																				},
+																				{
+																					"Type": "NodeStrong",
+																					"Children": [
+																						{
+																							"Type": "NodeStrongA6kOpenMarker",
+																							"Data": "**"
+																						},
+																						{
+																							"Type": "NodeText",
+																							"Data": "哪些方法增强"
+																						},
+																						{
+																							"Type": "NodeStrongA6kCloseMarker",
+																							"Data": "**"
+																						}
+																					]
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	"ID": "20210707233138-gmvsjpg",
+																	"Type": "NodeListItem",
+																	"Data": "-",
+																	"ListData": {
+																		"Tight": true,
+																		"BulletChar": 45,
+																		"Padding": 2,
+																		"Marker": "LQ==",
+																		"Num": -1
+																	},
+																	"Properties": {
+																		"id": "20210707233138-gmvsjpg"
+																	},
+																	"Children": [
+																		{
+																			"ID": "20210707233138-eo8zbco",
+																			"Type": "NodeParagraph",
+																			"Properties": {
+																				"id": "20210707233138-eo8zbco"
+																			},
+																			"Children": [
+																				{
+																					"Type": "NodeCodeSpan",
+																					"CodeMarkerLen": 1,
+																					"Children": [
+																						{
+																							"Type": "NodeCodeSpanOpenMarker",
+																							"Data": "`"
+																						},
+																						{
+																							"Type": "NodeCodeSpanContent",
+																							"Data": "ponitcut-ref"
+																						},
+																						{
+																							"Type": "NodeCodeSpanCloseMarker",
+																							"Data": "`"
+																						}
+																					]
+																				},
+																				{
+																					"Type": "NodeText",
+																					"Data": "属性：用于指定切入点的表达式的引用"
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233138-6nkh3cu",
+									"Type": "NodeListItem",
+									"Data": "5",
+									"ListData": {
+										"Typ": 1,
+										"Tight": true,
+										"Start": 5,
+										"Delimiter": 46,
+										"Padding": 3,
+										"Marker": "NQ==",
+										"Num": 5
+									},
+									"Properties": {
+										"id": "20210707233138-6nkh3cu"
+									},
+									"Children": [
+										{
+											"ID": "20210707233138-qmlth2l",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233138-qmlth2l"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "切入点表达式"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "的写法：关键字："
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "execution(表达式)"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												}
+											]
+										},
+										{
+											"ID": "20210707233138-zijsn41",
+											"Type": "NodeList",
+											"ListData": {
+												"BulletChar": 42,
+												"Padding": 2,
+												"Marker": "Kg==",
+												"Num": -1
+											},
+											"Properties": {
+												"id": "20210707233138-zijsn41"
+											},
+											"Children": [
+												{
+													"ID": "20210707233138-5sy5ilm",
+													"Type": "NodeListItem",
+													"Data": "*",
+													"ListData": {
+														"BulletChar": 42,
+														"Padding": 2,
+														"Marker": "Kg==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707233138-5sy5ilm"
+													},
+													"Children": [
+														{
+															"ID": "20210707233138-oaijgpa",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707233138-oaijgpa"
+															},
+															"Children": [
+																{
+																	"Type": "NodeText",
+																	"Data": "表达式"
+																},
+																{
+																	"Type": "NodeCodeSpan",
+																	"CodeMarkerLen": 1,
+																	"Children": [
+																		{
+																			"Type": "NodeCodeSpanOpenMarker",
+																			"Data": "`"
+																		},
+																		{
+																			"Type": "NodeCodeSpanContent",
+																			"Data": "访问修饰符  返回值  包名.包名.包名...类名.方法名(参数列表)"
+																		},
+																		{
+																			"Type": "NodeCodeSpanCloseMarker",
+																			"Data": "`"
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													"ID": "20210707233138-zagp15c",
+													"Type": "NodeListItem",
+													"Data": "*",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 42,
+														"Padding": 2,
+														"Marker": "Kg==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707233138-zagp15c"
+													},
+													"Children": [
+														{
+															"ID": "20210707233138-eatob2t",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707233138-eatob2t"
+															},
+															"Children": [
+																{
+																	"Type": "NodeText",
+																	"Data": "标准写法"
+																},
+																{
+																	"Type": "NodeCodeSpan",
+																	"CodeMarkerLen": 1,
+																	"Children": [
+																		{
+																			"Type": "NodeCodeSpanOpenMarker",
+																			"Data": "`"
+																		},
+																		{
+																			"Type": "NodeCodeSpanContent",
+																			"Data": "public void com.itheima.service.impl.AccountServiceImpl.saveAccount()"
+																		},
+																		{
+																			"Type": "NodeCodeSpanCloseMarker",
+																			"Data": "`"
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													"ID": "20210707233138-iqxt6ip",
+													"Type": "NodeListItem",
+													"Data": "*",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 42,
+														"Padding": 2,
+														"Marker": "Kg==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707233138-iqxt6ip"
+													},
+													"Children": [
+														{
+															"ID": "20210707233138-f1ispsh",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707233138-f1ispsh"
+															},
+															"Children": [
+																{
+																	"Type": "NodeText",
+																	"Data": "访问修饰符可以省略"
+																},
+																{
+																	"Type": "NodeCodeSpan",
+																	"CodeMarkerLen": 1,
+																	"Children": [
+																		{
+																			"Type": "NodeCodeSpanOpenMarker",
+																			"Data": "`"
+																		},
+																		{
+																			"Type": "NodeCodeSpanContent",
+																			"Data": "void com.itheima.service.impl.AccountServiceImpl.saveAccount()"
+																		},
+																		{
+																			"Type": "NodeCodeSpanCloseMarker",
+																			"Data": "`"
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													"ID": "20210707233138-7sl37v1",
+													"Type": "NodeListItem",
+													"Data": "*",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 42,
+														"Padding": 2,
+														"Marker": "Kg==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707233138-7sl37v1"
+													},
+													"Children": [
+														{
+															"ID": "20210707233138-ap2i5is",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707233138-ap2i5is"
+															},
+															"Children": [
+																{
+																	"Type": "NodeText",
+																	"Data": "返回值可以使用通配符，表示任意返回值"
+																}
+															]
+														},
+														{
+															"ID": "20210707233138-v83v80q",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707233138-v83v80q"
+															},
+															"Children": [
+																{
+																	"Type": "NodeCodeSpan",
+																	"CodeMarkerLen": 1,
+																	"Children": [
+																		{
+																			"Type": "NodeCodeSpanOpenMarker",
+																			"Data": "`"
+																		},
+																		{
+																			"Type": "NodeCodeSpanContent",
+																			"Data": "* com.itheima.service.impl.AccountServiceImpl.saveAccount()"
+																		},
+																		{
+																			"Type": "NodeCodeSpanCloseMarker",
+																			"Data": "`"
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													"ID": "20210707233138-m81kuut",
+													"Type": "NodeListItem",
+													"Data": "*",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 42,
+														"Padding": 2,
+														"Marker": "Kg==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707233138-m81kuut"
+													},
+													"Children": [
+														{
+															"ID": "20210707233138-48vn4hq",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707233138-48vn4hq"
+															},
+															"Children": [
+																{
+																	"Type": "NodeText",
+																	"Data": "包名可以使用通配符，表示任意包。但是有几级包，就需要写几个"
+																},
+																{
+																	"Type": "NodeCodeSpan",
+																	"CodeMarkerLen": 1,
+																	"Children": [
+																		{
+																			"Type": "NodeCodeSpanOpenMarker",
+																			"Data": "`"
+																		},
+																		{
+																			"Type": "NodeCodeSpanContent",
+																			"Data": "*."
+																		},
+																		{
+																			"Type": "NodeCodeSpanCloseMarker",
+																			"Data": "`"
+																		}
+																	]
+																}
+															]
+														},
+														{
+															"ID": "20210707233138-2e49lvf",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707233138-2e49lvf"
+															},
+															"Children": [
+																{
+																	"Type": "NodeCodeSpan",
+																	"CodeMarkerLen": 1,
+																	"Children": [
+																		{
+																			"Type": "NodeCodeSpanOpenMarker",
+																			"Data": "`"
+																		},
+																		{
+																			"Type": "NodeCodeSpanContent",
+																			"Data": "* *.*.*.*.AccountServiceImpl.saveAccount()"
+																		},
+																		{
+																			"Type": "NodeCodeSpanCloseMarker",
+																			"Data": "`"
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													"ID": "20210707233138-bcack27",
+													"Type": "NodeListItem",
+													"Data": "*",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 42,
+														"Padding": 2,
+														"Marker": "Kg==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707233138-bcack27"
+													},
+													"Children": [
+														{
+															"ID": "20210707233138-axdv4zx",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707233138-axdv4zx"
+															},
+															"Children": [
+																{
+																	"Type": "NodeText",
+																	"Data": "包名可以使用"
+																},
+																{
+																	"Type": "NodeCodeSpan",
+																	"CodeMarkerLen": 1,
+																	"Children": [
+																		{
+																			"Type": "NodeCodeSpanOpenMarker",
+																			"Data": "`"
+																		},
+																		{
+																			"Type": "NodeCodeSpanContent",
+																			"Data": "*.."
+																		},
+																		{
+																			"Type": "NodeCodeSpanCloseMarker",
+																			"Data": "`"
+																		}
+																	]
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "表示当前包及其子包"
+																},
+																{
+																	"Type": "NodeSoftBreak",
+																	"Data": "\n"
+																},
+																{
+																	"Type": "NodeCodeSpan",
+																	"CodeMarkerLen": 1,
+																	"Children": [
+																		{
+																			"Type": "NodeCodeSpanOpenMarker",
+																			"Data": "`"
+																		},
+																		{
+																			"Type": "NodeCodeSpanContent",
+																			"Data": "* *..AccountServiceImpl.saveAccount()"
+																		},
+																		{
+																			"Type": "NodeCodeSpanCloseMarker",
+																			"Data": "`"
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													"ID": "20210707233138-r8vr2yc",
+													"Type": "NodeListItem",
+													"Data": "*",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 42,
+														"Padding": 2,
+														"Marker": "Kg==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707233138-r8vr2yc"
+													},
+													"Children": [
+														{
+															"ID": "20210707233138-rfbl4yo",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707233138-rfbl4yo"
+															},
+															"Children": [
+																{
+																	"Type": "NodeText",
+																	"Data": "类名和方法名都可以使用"
+																},
+																{
+																	"Type": "NodeCodeSpan",
+																	"CodeMarkerLen": 1,
+																	"Children": [
+																		{
+																			"Type": "NodeCodeSpanOpenMarker",
+																			"Data": "`"
+																		},
+																		{
+																			"Type": "NodeCodeSpanContent",
+																			"Data": "*"
+																		},
+																		{
+																			"Type": "NodeCodeSpanCloseMarker",
+																			"Data": "`"
+																		}
+																	]
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "来实现通配"
+																}
+															]
+														},
+														{
+															"ID": "20210707233138-clq531x",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707233138-clq531x"
+															},
+															"Children": [
+																{
+																	"Type": "NodeCodeSpan",
+																	"CodeMarkerLen": 1,
+																	"Children": [
+																		{
+																			"Type": "NodeCodeSpanOpenMarker",
+																			"Data": "`"
+																		},
+																		{
+																			"Type": "NodeCodeSpanContent",
+																			"Data": "* *..*.*()"
+																		},
+																		{
+																			"Type": "NodeCodeSpanCloseMarker",
+																			"Data": "`"
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													"ID": "20210707233138-lcoe8uo",
+													"Type": "NodeListItem",
+													"Data": "*",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 42,
+														"Padding": 2,
+														"Marker": "Kg==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707233138-lcoe8uo"
+													},
+													"Children": [
+														{
+															"ID": "20210707233138-z39gvw2",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707233138-z39gvw2"
+															},
+															"Children": [
+																{
+																	"Type": "NodeText",
+																	"Data": "参数列表："
+																}
+															]
+														},
+														{
+															"ID": "20210707233138-zqbcssk",
+															"Type": "NodeList",
+															"ListData": {
+																"BulletChar": 42,
+																"Padding": 2,
+																"Marker": "Kg==",
+																"Num": -1
+															},
+															"Properties": {
+																"id": "20210707233138-zqbcssk"
+															},
+															"Children": [
+																{
+																	"ID": "20210707233138-3690yc2",
+																	"Type": "NodeListItem",
+																	"Data": "*",
+																	"ListData": {
+																		"BulletChar": 42,
+																		"Padding": 2,
+																		"Marker": "Kg==",
+																		"Num": -1
+																	},
+																	"Properties": {
+																		"id": "20210707233138-3690yc2"
+																	},
+																	"Children": [
+																		{
+																			"ID": "20210707233138-fnuu2dj",
+																			"Type": "NodeParagraph",
+																			"Properties": {
+																				"id": "20210707233138-fnuu2dj"
+																			},
+																			"Children": [
+																				{
+																					"Type": "NodeText",
+																					"Data": "可以直接写数据类型："
+																				}
+																			]
+																		},
+																		{
+																			"ID": "20210707233138-5m8zhzw",
+																			"Type": "NodeList",
+																			"ListData": {
+																				"Tight": true,
+																				"BulletChar": 42,
+																				"Padding": 2,
+																				"Marker": "Kg==",
+																				"Num": -1
+																			},
+																			"Properties": {
+																				"id": "20210707233138-5m8zhzw"
+																			},
+																			"Children": [
+																				{
+																					"ID": "20210707233138-bixis5u",
+																					"Type": "NodeListItem",
+																					"Data": "*",
+																					"ListData": {
+																						"Tight": true,
+																						"BulletChar": 42,
+																						"Padding": 2,
+																						"Marker": "Kg==",
+																						"Num": -1
+																					},
+																					"Properties": {
+																						"id": "20210707233138-bixis5u"
+																					},
+																					"Children": [
+																						{
+																							"ID": "20210707233138-8s3cus5",
+																							"Type": "NodeParagraph",
+																							"Properties": {
+																								"id": "20210707233138-8s3cus5"
+																							},
+																							"Children": [
+																								{
+																									"Type": "NodeText",
+																									"Data": "基本类型直接写名称           int"
+																								}
+																							]
+																						}
+																					]
+																				},
+																				{
+																					"ID": "20210707233138-e0648ws",
+																					"Type": "NodeListItem",
+																					"Data": "*",
+																					"ListData": {
+																						"Tight": true,
+																						"BulletChar": 42,
+																						"Padding": 2,
+																						"Marker": "Kg==",
+																						"Num": -1
+																					},
+																					"Properties": {
+																						"id": "20210707233138-e0648ws"
+																					},
+																					"Children": [
+																						{
+																							"ID": "20210707233138-ke4jpl1",
+																							"Type": "NodeParagraph",
+																							"Properties": {
+																								"id": "20210707233138-ke4jpl1"
+																							},
+																							"Children": [
+																								{
+																									"Type": "NodeText",
+																									"Data": "引用类型写包名.类名的方式   java.lang.String"
+																								}
+																							]
+																						}
+																					]
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	"ID": "20210707233138-um5o4mg",
+																	"Type": "NodeListItem",
+																	"Data": "*",
+																	"ListData": {
+																		"Tight": true,
+																		"BulletChar": 42,
+																		"Padding": 2,
+																		"Marker": "Kg==",
+																		"Num": -1
+																	},
+																	"Properties": {
+																		"id": "20210707233138-um5o4mg"
+																	},
+																	"Children": [
+																		{
+																			"ID": "20210707233138-g7ow00v",
+																			"Type": "NodeParagraph",
+																			"Properties": {
+																				"id": "20210707233138-g7ow00v"
+																			},
+																			"Children": [
+																				{
+																					"Type": "NodeText",
+																					"Data": "可以使用通配符表示任意类型，但是必须有参数"
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	"ID": "20210707233138-5e4z6xg",
+																	"Type": "NodeListItem",
+																	"Data": "*",
+																	"ListData": {
+																		"Tight": true,
+																		"BulletChar": 42,
+																		"Padding": 2,
+																		"Marker": "Kg==",
+																		"Num": -1
+																	},
+																	"Properties": {
+																		"id": "20210707233138-5e4z6xg"
+																	},
+																	"Children": [
+																		{
+																			"ID": "20210707233138-smojtea",
+																			"Type": "NodeParagraph",
+																			"Properties": {
+																				"id": "20210707233138-smojtea"
+																			},
+																			"Children": [
+																				{
+																					"Type": "NodeText",
+																					"Data": "可以使用..表示有无参数均可，有参数可以是任意类型"
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													"ID": "20210707233138-t4cfdd4",
+													"Type": "NodeListItem",
+													"Data": "*",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 42,
+														"Padding": 2,
+														"Marker": "Kg==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707233138-t4cfdd4"
+													},
+													"Children": [
+														{
+															"ID": "20210707233138-2nuxu5h",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707233138-2nuxu5h"
+															},
+															"Children": [
+																{
+																	"Type": "NodeText",
+																	"Data": "全通配写法："
+																},
+																{
+																	"Type": "NodeCodeSpan",
+																	"CodeMarkerLen": 1,
+																	"Children": [
+																		{
+																			"Type": "NodeCodeSpanOpenMarker",
+																			"Data": "`"
+																		},
+																		{
+																			"Type": "NodeCodeSpanContent",
+																			"Data": "* *..*.*(..)"
+																		},
+																		{
+																			"Type": "NodeCodeSpanCloseMarker",
+																			"Data": "`"
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													"ID": "20210707233138-d6gkuiu",
+													"Type": "NodeListItem",
+													"Data": "*",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 42,
+														"Padding": 2,
+														"Marker": "Kg==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707233138-d6gkuiu"
+													},
+													"Children": [
+														{
+															"ID": "20210707233138-qp7z5o8",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707233138-qp7z5o8"
+															},
+															"Children": [
+																{
+																	"Type": "NodeStrong",
+																	"Children": [
+																		{
+																			"Type": "NodeStrongA6kOpenMarker",
+																			"Data": "**"
+																		},
+																		{
+																			"Type": "NodeText",
+																			"Data": "实际开发中切入点表达式的通常写法"
+																		},
+																		{
+																			"Type": "NodeStrongA6kCloseMarker",
+																			"Data": "**"
+																		}
+																	]
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "："
+																},
+																{
+																	"Type": "NodeStrong",
+																	"Children": [
+																		{
+																			"Type": "NodeStrongA6kOpenMarker",
+																			"Data": "**"
+																		},
+																		{
+																			"Type": "NodeText",
+																			"Data": "切到业务层实现类下的所有方法"
+																		},
+																		{
+																			"Type": "NodeStrongA6kCloseMarker",
+																			"Data": "**"
+																		}
+																	]
+																}
+															]
+														},
+														{
+															"ID": "20210707233138-ut855wo",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707233138-ut855wo"
+															},
+															"Children": [
+																{
+																	"Type": "NodeCodeSpan",
+																	"CodeMarkerLen": 1,
+																	"Children": [
+																		{
+																			"Type": "NodeCodeSpanOpenMarker",
+																			"Data": "`"
+																		},
+																		{
+																			"Type": "NodeCodeSpanContent",
+																			"Data": "* com.itheima.service.impl.*.*(..)"
+																		},
+																		{
+																			"Type": "NodeCodeSpanCloseMarker",
+																			"Data": "`"
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"ID": "20210707233138-8s792s6",
+											"Type": "NodeCodeBlock",
+											"IsFencedCodeBlock": true,
+											"CodeBlockFenceChar": 96,
+											"CodeBlockFenceLen": 3,
+											"CodeBlockOpenFence": "YGBg",
+											"CodeBlockInfo": "eG1s",
+											"CodeBlockCloseFence": "YGBg",
+											"Properties": {
+												"id": "20210707233138-8s792s6"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeBlockFenceOpenMarker",
+													"Data": "```",
+													"CodeBlockFenceLen": 3
+												},
+												{
+													"Type": "NodeCodeBlockFenceInfoMarker",
+													"CodeBlockInfo": "eG1s"
+												},
+												{
+													"Type": "NodeCodeBlockCode",
+													"Data": "\u003c!-- 配置Logger类 --\u003e\n\u003cbean id=\"logger\" class=\"com.itheima.utils.Logger\"\u003e\u003c/bean\u003e\n\n\u003c!--配置AOP--\u003e\n\u003caop:config\u003e\n    \u003c!-- 配置切入点表达式 id属性用于指定表达式的唯一标识。expression属性用于指定表达式内容\n              此标签写在aop:aspect标签内部只能当前切面使用。\n              它还可以写在aop:aspect外面，此时就变成了所有切面的通知可可使用此切点  --\u003e\n    \u003caop:pointcut id=\"pt1\" expression=\"execution(* com.itheima.service.impl.*.*(..))\"\u003e\u003c/aop:pointcut\u003e\n\n    \u003c!--配置切面 --\u003e\n    \u003caop:aspect id=\"logAdvice\" ref=\"logger\"\u003e  \u003c!--引入通知--\u003e\n        \u003c!-- 配置前置通知：在切入点方法执行之前执行\n        \u003caop:before method=\"beforePrintLog\" pointcut-ref=\"pt1\" \u003e\u003c/aop:before\u003e--\u003e\n\n        \u003c!-- 配置后置通知：在切入点方法正常执行之后值。它和异常通知永远只能执行一个\n        \u003caop:after-returning method=\"afterReturningPrintLog\" pointcut-ref=\"pt1\"\u003e\u003c/aop:after-returning\u003e--\u003e\n\n        \u003c!-- 配置异常通知：在切入点方法执行产生异常之后执行。它和后置通知永远只能执行一个\n        \u003caop:after-throwing method=\"afterThrowingPrintLog\" pointcut-ref=\"pt1\"\u003e\u003c/aop:after-throwing\u003e--\u003e\n\n        \u003c!-- 配置最终通知：无论切入点方法是否正常执行它都会在其后面执行\n        \u003caop:after method=\"afterPrintLog\" pointcut-ref=\"pt1\"\u003e\u003c/aop:after\u003e--\u003e\n\n        \u003c!-- 配置环绕通知 详细的注释请看Logger类中。通常情况下，环绕通知都是独立使用的 --\u003e\n        \u003caop:around method=\"aroundPringLog\" pointcut-ref=\"pt1\"\u003e\u003c/aop:around\u003e\n    \u003c/aop:aspect\u003e\n\u003c/aop:config\u003e\n"
+												},
+												{
+													"Type": "NodeCodeBlockFenceCloseMarker",
+													"Data": "```",
+													"CodeBlockFenceLen": 3
+												}
+											]
+										},
+										{
+											"ID": "20210707233138-c9eka06",
+											"Type": "NodeCodeBlock",
+											"IsFencedCodeBlock": true,
+											"CodeBlockFenceChar": 96,
+											"CodeBlockFenceLen": 3,
+											"CodeBlockOpenFence": "YGBg",
+											"CodeBlockInfo": "amF2YQ==",
+											"CodeBlockCloseFence": "YGBg",
+											"Properties": {
+												"id": "20210707233138-c9eka06"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeBlockFenceOpenMarker",
+													"Data": "```",
+													"CodeBlockFenceLen": 3
+												},
+												{
+													"Type": "NodeCodeBlockFenceInfoMarker",
+													"CodeBlockInfo": "amF2YQ=="
+												},
+												{
+													"Type": "NodeCodeBlockCode",
+													"Data": "/**\n * 用于记录日志的工具类，它里面提供了公共的代码\n */\npublic class Logger {\n\n\t//前置通知\n    public  void beforePrintLog(){\n        System.out.println(\"前置通知Logger类中的beforePrintLog方法开始记录日志了。。。\");\n    }\n\t//后置通知\n    public  void afterReturningPrintLog(){\n        System.out.println(\"后置通知Logger类中的afterReturningPrintLog方法开始记录日志了。。。\");\n    }\n    //异常通知\n    public  void afterThrowingPrintLog(){\n        System.out.println(\"异常通知Logger类中的afterThrowingPrintLog方法开始记录日志了。。。\");\n    }\n    //最终通知\n    public  void afterPrintLog(){\n        System.out.println(\"最终通知Logger类中的afterPrintLog方法开始记录日志了。。。\");\n    }\n\n    /**\n     * 环绕通知\n     * 问题：\n     *      当我们配置了环绕通知之后，切入点方法没有执行，而通知方法执行了。\n     * 分析：\n     *      通过对比动态代理中的环绕通知代码，发现动态代理的环绕通知有明确的切入点方法调用，而我们的代码中没有。\n     * 解决：\n     *      Spring框架为我们提供了一个接口：ProceedingJoinPoint。该接口有一个方法proceed()，此方法就相当于明确调用切入点方法。\n     *      该接口可以作为环绕通知的方法参数，在程序执行时，spring框架会为我们提供该接口的实现类供我们使用。\n     *\n     * spring中的环绕通知：\n     *      它是spring框架为我们提供的一种可以在代码中手动控制增强方法何时执行的方式。\n     */\n    public Object aroundPringLog(ProceedingJoinPoint pjp){\n        Object rtValue = null;\n        try{\n            Object[] args = pjp.getArgs();//得到方法执行所需的参数\n\n            System.out.println(\"Logger类中的aroundPringLog方法开始记录日志了。。。前置\");\n\n            rtValue = pjp.proceed(args);//明确调用业务层方法（切入点方法）\n\n            System.out.println(\"Logger类中的aroundPringLog方法开始记录日志了。。。后置\");\n\n            return rtValue;\n        }catch (Throwable t){\n            System.out.println(\"Logger类中的aroundPringLog方法开始记录日志了。。。异常\");\n            throw new RuntimeException(t);\n        }finally {\n            System.out.println(\"Logger类中的aroundPringLog方法开始记录日志了。。。最终\");\n        }\n    }\n}\n"
+												},
+												{
+													"Type": "NodeCodeBlockFenceCloseMarker",
+													"Data": "```",
+													"CodeBlockFenceLen": 3
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-4mhvdft",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233138-4mhvdft"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "要想使用"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "注解的方式"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "使用Spring AOP就"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "必须要有源码"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "(因为我们要在切面类上添加注解)。如果没有源码的话，我们就得使用XML来声明切面了"
+				}
+			]
+		},
+		{
+			"ID": "20210707233138-w6bxkqh",
+			"Type": "NodeTable",
+			"Data": "| AOP配置元素                | 用途                                            |\n| -------------------------- | ----------------------------------------------- |\n| **\u003c aop:config\u003e**          | 顶层的AOP配置元素                               |\n| **\u003c aop:aspect\u003e**          | 定义一个切面                                    |\n| **\u003c aop:pointcut\u003e**        | 定义一个切点                                    |\n| \u003c aop:advesor\u003e             | 定义AOP通知器                                   |\n| \u003c aop:before\u003e              | 定义AOP前置通知                                 |\n| \u003c aop:after\u003e               | 定义AOP后置通知（无论被通知的方法是否执行成功） |\n| \u003c aop:after-returning\u003e     | 定义AOP返回通知                                 |\n| \u003c aop:after-throwing\u003e      | 定义AOP异常通知                                 |\n| \u003c aop:around\u003e              | 定义AOP环绕通知                                 |\n| \u003c aop:aspect-autoproxy\u003e    | 启用@AspectJ注解驱动的切面                      |\n| **\u003c aop:declare-parents\u003e** | 以透明的方式为被通知的对象引入额外的接口        |",
+			"TableAligns": [
+				0,
+				0
+			],
+			"Properties": {
+				"id": "20210707233138-w6bxkqh"
+			},
+			"Children": [
+				{
+					"Type": "NodeTableHead",
+					"Children": [
+						{
+							"Type": "NodeTableRow",
+							"Children": [
+								{
+									"Type": "NodeTableCell",
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "AOP配置元素"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "用途"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "\u003c aop:config\u003e"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "顶层的AOP配置元素"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "\u003c aop:aspect\u003e"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "定义一个切面"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "\u003c aop:pointcut\u003e"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "定义一个切点"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "\u003c aop:advesor\u003e"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "定义AOP通知器"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "\u003c aop:before\u003e"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "定义AOP前置通知"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "\u003c aop:after\u003e"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "定义AOP后置通知（无论被通知的方法是否执行成功）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "\u003c aop:after-returning\u003e"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "定义AOP返回通知"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "\u003c aop:after-throwing\u003e"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "定义AOP异常通知"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "\u003c aop:around\u003e"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "定义AOP环绕通知"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "\u003c aop:aspect-autoproxy\u003e"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "启用@AspectJ注解驱动的切面"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "\u003c aop:declare-parents\u003e"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "以透明的方式为被通知的对象引入额外的接口"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,5709 @@
+{
+	"ID": "20210707214341-mrrwi08",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210707214341-mrrwi08",
+		"type": "doc",
+		"updated": "20210707214341"
+	},
+	"Children": [
+		{
+			"ID": "20210707214341-dr10tk8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214341-dr10tk8",
+				"updated": "20210707214341"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "程序执行中发生的不正常情况称为异常。"
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-qxsa9vr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707214341-qxsa9vr"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "异常的体系"
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-vvpn6yv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214341-vvpn6yv"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "异常的根类是"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "java.lang.Throwable"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，其下有两个子类："
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-x4lqjlp",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214341-x4lqjlp"
+			},
+			"Children": [
+				{
+					"ID": "20210707214341-cdi8no5",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-cdi8no5"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-5nx00o3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-5nx00o3"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "java.lang.Error"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214341-j8ruvdl",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-j8ruvdl"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "JVM 无法解决的严重问题"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。如：JVM 系统内部错误、资源耗尽等严重情况。如栈 stack、堆 heap 内存耗尽"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "StackOverflowError（可能在递归时发生）"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "和"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "OutOfMemoryError（new 了非常多对象）"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。一般不编写针对性的代码进行处理。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214341-5l2vin3",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-5l2vin3"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-eydtsgz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-eydtsgz"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "java.lang.Exception"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214341-wsofel8",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-wsofel8"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "其它因编程错误或偶然的外在因素导致的一般性问题，可以使用针对性的代码进行处理。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-g95sn4i",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214341-g95sn4i"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Throwable 中的常用方法："
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-li6tcg7",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214341-li6tcg7"
+			},
+			"Children": [
+				{
+					"ID": "20210707214341-hau6ihd",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-hau6ihd"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-vbp9g5x",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-vbp9g5x"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "public void printStackTrace()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "打印异常的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "详细信息"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						},
+						{
+							"ID": "20210707214341-3xbkv0c",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-3xbkv0c"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "包含了异常的类型，异常的原因 ，还包括异常出现的位置，在开发和调试阶段，都得使用 printStackTrace"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214341-is8ehxi",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-is8ehxi"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-d5pgt6q",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-d5pgt6q"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "public String getMessage()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "获取发生异常的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "原因"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。提示"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "给用户"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的时候,就提示错误原因。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-f78oh27",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707214341-f78oh27"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "异常的分类"
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-nmu087k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214341-nmu087k"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们平常说的异常就是指 Exception，因为这类异常一旦出现，我们就要对代码进行更正，修复程序。对于这些错误，一般有两种解决方法：一是遇到错误就终止程序 的运行。另一种方法是由程序员在编写程序时，就考虑到错误的 检测、错误消息的提示，以及错误的处理。"
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-o7g3txx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214341-o7g3txx"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "捕获错误最理想的是在编译期间"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，但"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "有的错误只有在运行时才会发生"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。 比如：除数为 0，数组下标越界等。"
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-jes1ox2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214341-jes1ox2"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "异常(Exception)的分类"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：根据在编译时期还是运行时期去检查异常。Java 语言规范将派生于"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Error"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "类和"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "RuntimeException"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "类的所有异常称为"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "非受查异常（unchecked 异常）"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，其他为"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "受查异常（checked 异常）"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-6uq82jm",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214341-6uq82jm"
+			},
+			"Children": [
+				{
+					"ID": "20210707214341-19homyr",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-19homyr"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-92barih",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-92barih"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "编译时期异常"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：在编译时期就会检查，如果没有处理异常则编译失败。(IO、日期格式化异常)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214341-333p7iw",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-333p7iw"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-fgmk30k",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-fgmk30k"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "运行时期异常"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：在编译时期运行异常不会被检测，即不报错，但在运行时期检查异常。如：数学异常。"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "运行时发生时一定是程序的问题"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，不完善，需要程序员做好"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "校验等"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "工作！"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-o4k0ffc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214341-o4k0ffc"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Children": [
+						{
+							"Type": "NodeBang",
+							"Data": "!"
+						},
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "../assets/Exception.png"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-uaa4m8z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214341-uaa4m8z"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Children": [
+						{
+							"Type": "NodeBang",
+							"Data": "!"
+						},
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "../assets/Exception-2.png"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-wjc75ee",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214341-wjc75ee"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Children": [
+						{
+							"Type": "NodeBang",
+							"Data": "!"
+						},
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20190916232901753"
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "../assets/image-20190916232901753.png"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-t0smrk7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707214341-t0smrk7"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "异常的处理"
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-t8j6mv6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214341-t8j6mv6"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "关于异常对象的产生："
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-h0ru5p6",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214341-h0ru5p6"
+			},
+			"Children": [
+				{
+					"ID": "20210707214341-074a689",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-074a689"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-bv7cw2q",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-bv7cw2q"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "系统自动生成的异常对象"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214341-09gu7oi",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-09gu7oi"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-y5y6s9n",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-y5y6s9n"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "手动的生成一个异常对象，并抛出（throw）"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-i3wv7hu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214341-i3wv7hu"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Java 提供的是异常处理的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "抓抛模型"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-3gfquus",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214341-3gfquus"
+			},
+			"Children": [
+				{
+					"ID": "20210707214341-9go9nz5",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-9go9nz5"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-n3e16px",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-n3e16px"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "抓：可以理解为异常的处理方式：try-catch-finally 、 throws"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214341-vx86est",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-vx86est"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-x9gunrr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-x9gunrr"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "抛：程序在正常执行的过程中，一旦出现异常，就会在异常代码处生成一个对应异常类的对象。该异常对象将被提交给 Java 运行时系统，这个过程称为抛出(throw)异常。一旦抛出对象以后，其后的代码就不再执行。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-8ybj9rl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214341-8ybj9rl"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "抓—捕获异常 try-catch-finally"
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-2fiwis1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214341-2fiwis1"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "捕获异常"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：Java 中对异常有针对性的语句进行捕获，可以对出现的异常进行指定方式的处理。"
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-h8g5sdl",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707214341-h8g5sdl"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "try {\n    //可能产生异常的代码\n} catch (异常类名  变量名) {\n    //异常的处理逻辑,异常异常对象之后,怎么处理异常对象\n    //记录日志/打印异常信息/继续抛出异常\n}\n...\ncatch (异常类名 变量名) {\n\n} finally {\n    //一定会执行的代码\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-ghfouab",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214341-ghfouab"
+			},
+			"Children": [
+				{
+					"ID": "20210707214341-8juspix",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-8juspix"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-gnxt0ih",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-gnxt0ih"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用 try 将可能出现异常代码包装起来，在执行过程中，一旦出现异常，就会生成一个对应异常类的对象，根据此对象的类型，去 catch 中进行匹配。一旦 try 中的异常对象匹配到某一个 catch 时，就进入 catch 中进行异常的处理。一旦处理完成，就跳出当前的 try-catch 结构（只匹配一个。在没有写 finally 的情况）。继续执行其后的代码。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214341-zxi9mha",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-zxi9mha"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-3hjyhp7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-3hjyhp7"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "catch 中的异常类型如果没有子父类关系，则谁声明在上，谁声明在下无所谓。也可以放入一个 catch 中。"
+								}
+							]
+						},
+						{
+							"ID": "20210707214341-pzq7zsq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-pzq7zsq"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "catch 中的异常类型如果满足子父类关系，则要求子类一定声明在父类的上面。否则，报错。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214341-jxsnayz",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-jxsnayz"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-jzy0kim",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-jzy0kim"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "常用的异常对象处理的方式："
+								}
+							]
+						},
+						{
+							"ID": "20210707214341-spqpdac",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707214341-spqpdac"
+							},
+							"Children": [
+								{
+									"ID": "20210707214341-yxw14x8",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214341-yxw14x8"
+									},
+									"Children": [
+										{
+											"ID": "20210707214341-4qym5pr",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-4qym5pr"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "String getMessage()"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214341-ucpi30x",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214341-ucpi30x"
+									},
+									"Children": [
+										{
+											"ID": "20210707214341-icxffe0",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-icxffe0"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "printStackTrace()"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-7tc36w8",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214341-7tc36w8"
+			},
+			"Children": [
+				{
+					"ID": "20210707214341-nip6ysz",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-nip6ysz"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-jyjrqwc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-jyjrqwc"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在 try 结构中声明的变量，再出了 try 结构以后，就不能再被调用"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214341-bfjzqmb",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-bfjzqmb"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-afj8y9r",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-afj8y9r"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "try-catch-finally 结构"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "可以嵌套"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214341-h5f91q8",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-h5f91q8"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-vostls4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-vostls4"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "多个异常使用捕获该如何处理"
+								}
+							]
+						},
+						{
+							"ID": "20210707214341-x3blo3j",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707214341-x3blo3j"
+							},
+							"Children": [
+								{
+									"ID": "20210707214341-6kkxy46",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214341-6kkxy46"
+									},
+									"Children": [
+										{
+											"ID": "20210707214341-2jm94o6",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-2jm94o6"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "多个异常分别处理"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214341-gmot50p",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214341-gmot50p"
+									},
+									"Children": [
+										{
+											"ID": "20210707214341-lp34g9b",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-lp34g9b"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "多个异常"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "一次捕获，多次处理"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "（若捕获的异常"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "有子父类关系"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "，"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "父类放下面"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "；"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "没有"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "可以放在"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "一个 catch 中"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "）"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214341-fw8r2o4",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214341-fw8r2o4"
+									},
+									"Children": [
+										{
+											"ID": "20210707214341-x66zozf",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-x66zozf"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "多个异常一次捕获一次处理"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214341-dzwq44n",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-dzwq44n"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-57g3wg8",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-57g3wg8"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "运行时异常"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "被抛出"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "可以不处理"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。即不捕获也不声明抛出。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-i91bylu",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210707214341-i91bylu"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "finally 代码块"
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-mqyo8f0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214341-mqyo8f0"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "finally"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "try"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中异常语句后的代码不被执行，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "必须要执行的"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "可以放在"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "finally"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中，如"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "释放系统资源"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。但是当在"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "try...catch..."
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "执行"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"CodeMarkerLen": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker",
+									"Data": "`"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "System.exit(0)"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker",
+									"Data": "`"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "(表示"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "退出当前 Java 虚拟机"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ")，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"CodeMarkerLen": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker",
+									"Data": "`"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "finally"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker",
+									"Data": "`"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "才不会执行"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-a8i4a1s",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214341-a8i4a1s"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "语法："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "try...catch....finally"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，不能单独使用"
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-zddgiq1",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214341-zddgiq1"
+			},
+			"Children": [
+				{
+					"ID": "20210707214341-ducskx5",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-ducskx5"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-33mohrm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-33mohrm"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "finally 有 return 语句"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，将"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "覆盖"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "原始的返回值，永远返回 finally 中的值。一般应避免该情况"
+								}
+							]
+						},
+						{
+							"ID": "20210707214341-yf6ekvk",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214341-yf6ekvk"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "public static int fin() {\n    int a = 10;\n    try {\n        return a;\n    } catch (Exception e) {\n        System.out.println(e.getMessage());\n    } finally {\n        a = 40;\n        return a; //最终返回40。这里若修改为return 4，最终就返回4\n        // 若没有return a; 这行代码，则无论a怎么变化，还是会返回10；\n    }\n}\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-ghyjv1m",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214341-ghyjv1m"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "抓—声明异常 throws"
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-h1ck1er",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214341-h1ck1er"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "关键字"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "throws"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "运用于"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "方法声明之上"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，用于"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "表示当前方法不处理异常"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，而是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "提醒"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "该方法的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "调用者来处理异常"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-19q85fr",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707214341-19q85fr"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "修饰符 返回值类型 方法名(参数) throws 异常类名1,异常类名2…{   }\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-m9cs3kc",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214341-m9cs3kc"
+			},
+			"Children": [
+				{
+					"ID": "20210707214341-77v1s9x",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-77v1s9x"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-h29b85p",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-h29b85p"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "注意："
+								}
+							]
+						},
+						{
+							"ID": "20210707214341-2eg3caq",
+							"Type": "NodeList",
+							"ListData": {
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707214341-2eg3caq"
+							},
+							"Children": [
+								{
+									"ID": "20210707214341-q3533jx",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214341-q3533jx"
+									},
+									"Children": [
+										{
+											"ID": "20210707214341-3tpsyw5",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-3tpsyw5"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "throws 关键字必须写在"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "方法声明处"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "，指明此方法执行时，可能会抛出的异常类型。"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214341-uxfb847",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214341-uxfb847"
+									},
+									"Children": [
+										{
+											"ID": "20210707214341-ugrmnmj",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-ugrmnmj"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "一旦当方法体执行时，出现异常，仍会在异常代码处生成一个异常类的对象，此对象满足 throws 后异常"
+												}
+											]
+										},
+										{
+											"ID": "20210707214341-6w5tc0w",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-6w5tc0w"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "类型时，就会被抛出。异常代码后续的代码，就不再执行！"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214341-60ts8mq",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214341-60ts8mq"
+									},
+									"Children": [
+										{
+											"ID": "20210707214341-au6wv9w",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-au6wv9w"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "throws 关键字后边声明的异常必须是"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "Exception 或者是 Exception 的子类"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214341-2qb4gem",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214341-2qb4gem"
+									},
+									"Children": [
+										{
+											"ID": "20210707214341-kj7buzj",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-kj7buzj"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "方法内部如果"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "抛出了多个异常对象"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "，那么 throws 后边必须也"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "声明多个异常"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												}
+											]
+										},
+										{
+											"ID": "20210707214341-u73l2ro",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-u73l2ro"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "如果抛出的多个异常对象有"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "子父类关系"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": ",那么"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "直接声明父类异常即可"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214341-3ggi69l",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214341-3ggi69l"
+									},
+									"Children": [
+										{
+											"ID": "20210707214341-kx4941y",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-kx4941y"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "调用"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "了一个声明"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "抛出异常的方法"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": ",我们就必须的"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "处理"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "声明的异常"
+												}
+											]
+										},
+										{
+											"ID": "20210707214341-e3ckksr",
+											"Type": "NodeList",
+											"ListData": {
+												"Tight": true,
+												"BulletChar": 45,
+												"Padding": 2,
+												"Marker": "LQ==",
+												"Num": -1
+											},
+											"Properties": {
+												"id": "20210707214341-e3ckksr"
+											},
+											"Children": [
+												{
+													"ID": "20210707214341-1mkhwfp",
+													"Type": "NodeListItem",
+													"Data": "-",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 45,
+														"Padding": 2,
+														"Marker": "LQ==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707214341-1mkhwfp"
+													},
+													"Children": [
+														{
+															"ID": "20210707214341-vn5l383",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707214341-vn5l383"
+															},
+															"Children": [
+																{
+																	"Type": "NodeText",
+																	"Data": "要么"
+																},
+																{
+																	"Type": "NodeStrong",
+																	"Children": [
+																		{
+																			"Type": "NodeStrongA6kOpenMarker",
+																			"Data": "**"
+																		},
+																		{
+																			"Type": "NodeText",
+																			"Data": "try-catch"
+																		},
+																		{
+																			"Type": "NodeStrongA6kCloseMarker",
+																			"Data": "**"
+																		}
+																	]
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "自己处理异常"
+																}
+															]
+														}
+													]
+												},
+												{
+													"ID": "20210707214341-8fyaeav",
+													"Type": "NodeListItem",
+													"Data": "-",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 45,
+														"Padding": 2,
+														"Marker": "LQ==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707214341-8fyaeav"
+													},
+													"Children": [
+														{
+															"ID": "20210707214341-uezeb1n",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707214341-uezeb1n"
+															},
+															"Children": [
+																{
+																	"Type": "NodeText",
+																	"Data": "要么继续使用"
+																},
+																{
+																	"Type": "NodeStrong",
+																	"Children": [
+																		{
+																			"Type": "NodeStrongA6kOpenMarker",
+																			"Data": "**"
+																		},
+																		{
+																			"Type": "NodeText",
+																			"Data": "throws"
+																		},
+																		{
+																			"Type": "NodeStrongA6kCloseMarker",
+																			"Data": "**"
+																		}
+																	]
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "声明抛出，交给方法的调用者处理，最终交给 JVM"
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-yu2b7z5",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20210707214341-yu2b7z5"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e "
+				},
+				{
+					"ID": "20210707214341-dpmz4ay",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210707214341-dpmz4ay"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "开发中如何选择使用 try-catch-finally 还是使用 throws？"
+						}
+					]
+				},
+				{
+					"ID": "20210707214341-lj74v9o",
+					"Type": "NodeList",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-lj74v9o"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-8f2pj89",
+							"Type": "NodeListItem",
+							"Data": "-",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707214341-8f2pj89"
+							},
+							"Children": [
+								{
+									"ID": "20210707214341-z39km05",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20210707214341-z39km05"
+									},
+									"Children": [
+										{
+											"Type": "NodeStrong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "如果父类中被重写的方法没有 throws 方式处理异常，则子类重写的方法也不能使用 throws"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "，意味着如果子类重写的方法中有异常，必须"
+										},
+										{
+											"Type": "NodeStrong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "使用 try-catch-finally 方式处理"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "。"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214341-lpu2mj6",
+							"Type": "NodeListItem",
+							"Data": "-",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707214341-lpu2mj6"
+							},
+							"Children": [
+								{
+									"ID": "20210707214341-cawcii5",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20210707214341-cawcii5"
+									},
+									"Children": [
+										{
+											"Type": "NodeStrong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "执行的方法 a 中，先后又调用了另外的几个方法"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "，这几个方法是"
+										},
+										{
+											"Type": "NodeStrong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "递进关系"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "执行的。我们建议这几个方法"
+										},
+										{
+											"Type": "NodeStrong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "使用 throws"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "的方式进行处理。而执行的方法 a 可以考虑使用 try-catch-finally 方式进行处理。（可能 try-catch 已经捕获了异常，之后的需要的数据没获取到）"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-jfanaqy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214341-jfanaqy"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "抛—抛出异常 throw"
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-fx2c4s9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214341-fx2c4s9"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在编写程序时，我们必须要考虑程序出现问题的情况。比如，在"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "定义方法"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "时，方法需要"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "接受参数"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。那么，当调用方法使用接受到的参数时，首先需要"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "先对参数数据进行合法的判断"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，数据若"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "不合法"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，就应该"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "告诉调用者"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，传递合法的数据进来。这时需要使用"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "抛出异常"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的方式来告诉调用者。"
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-odqjlee",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214341-odqjlee"
+			},
+			"Children": [
+				{
+					"ID": "20210707214341-e7n34o2",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-e7n34o2"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-to9q8nn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-to9q8nn"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在 java 中，提供了一个 throw 关键字，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "throw 用在方法内，抛出一个指定的异常对象"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214341-a3g7kdo",
+							"Type": "NodeList",
+							"ListData": {
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707214341-a3g7kdo"
+							},
+							"Children": [
+								{
+									"ID": "20210707214341-3kc0pxf",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214341-3kc0pxf"
+									},
+									"Children": [
+										{
+											"ID": "20210707214341-gkczz20",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-gkczz20"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "创建一个异常对象"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "，封装一些提示信息(信息可以自己编写)。"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214341-hzuz1r4",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214341-hzuz1r4"
+									},
+									"Children": [
+										{
+											"ID": "20210707214341-5k0giqj",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-5k0giqj"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "通过关键字"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "throw"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "将这个异常对象告知给调用者，并结束当前方法的执行"
+												}
+											]
+										},
+										{
+											"ID": "20210707214341-7c9vimg",
+											"Type": "NodeCodeBlock",
+											"IsFencedCodeBlock": true,
+											"CodeBlockFenceChar": 96,
+											"CodeBlockFenceLen": 3,
+											"CodeBlockOpenFence": "YGBg",
+											"CodeBlockInfo": "amF2YQ==",
+											"CodeBlockCloseFence": "YGBg",
+											"Properties": {
+												"id": "20210707214341-7c9vimg"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeBlockFenceOpenMarker",
+													"Data": "```",
+													"CodeBlockFenceLen": 3
+												},
+												{
+													"Type": "NodeCodeBlockFenceInfoMarker",
+													"CodeBlockInfo": "amF2YQ=="
+												},
+												{
+													"Type": "NodeCodeBlockCode",
+													"Data": "throw new 异常类名(参数);\n"
+												},
+												{
+													"Type": "NodeCodeBlockFenceCloseMarker",
+													"Data": "```",
+													"CodeBlockFenceLen": 3
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214341-8dmblgd",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-8dmblgd"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-u95kjka",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-u95kjka"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "注意："
+								}
+							]
+						},
+						{
+							"ID": "20210707214341-j5jqdbc",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707214341-j5jqdbc"
+							},
+							"Children": [
+								{
+									"ID": "20210707214341-gpr3znu",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214341-gpr3znu"
+									},
+									"Children": [
+										{
+											"ID": "20210707214341-dzi3pnq",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-dzi3pnq"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "throw 关键字必须写在"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "方法的内部"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214341-9aaaa91",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214341-9aaaa91"
+									},
+									"Children": [
+										{
+											"ID": "20210707214341-h35ecc1",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-h35ecc1"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "throw 关键字后边 new 的对象必须是"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "Exception 或者 Exception 的子类对象"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214341-h9koop9",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214341-h9koop9"
+									},
+									"Children": [
+										{
+											"ID": "20210707214341-5f7q7a9",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-5f7q7a9"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "throw 关键字抛出指定的异常对象,我们就必须处理这个异常对象"
+												}
+											]
+										},
+										{
+											"ID": "20210707214341-4a08zk4",
+											"Type": "NodeList",
+											"ListData": {
+												"Tight": true,
+												"BulletChar": 45,
+												"Padding": 2,
+												"Marker": "LQ==",
+												"Num": -1
+											},
+											"Properties": {
+												"id": "20210707214341-4a08zk4"
+											},
+											"Children": [
+												{
+													"ID": "20210707214341-tl5rfpz",
+													"Type": "NodeListItem",
+													"Data": "-",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 45,
+														"Padding": 2,
+														"Marker": "LQ==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707214341-tl5rfpz"
+													},
+													"Children": [
+														{
+															"ID": "20210707214341-e7gqf4q",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707214341-e7gqf4q"
+															},
+															"Children": [
+																{
+																	"Type": "NodeText",
+																	"Data": "throw 关键字后边创建的是"
+																},
+																{
+																	"Type": "NodeStrong",
+																	"Children": [
+																		{
+																			"Type": "NodeStrongA6kOpenMarker",
+																			"Data": "**"
+																		},
+																		{
+																			"Type": "NodeText",
+																			"Data": "RuntimeException"
+																		},
+																		{
+																			"Type": "NodeStrongA6kCloseMarker",
+																			"Data": "**"
+																		}
+																	]
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "或是"
+																},
+																{
+																	"Type": "NodeStrong",
+																	"Children": [
+																		{
+																			"Type": "NodeStrongA6kOpenMarker",
+																			"Data": "**"
+																		},
+																		{
+																			"Type": "NodeText",
+																			"Data": "其子类对象"
+																		},
+																		{
+																			"Type": "NodeStrongA6kCloseMarker",
+																			"Data": "**"
+																		}
+																	]
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": ","
+																},
+																{
+																	"Type": "NodeStrong",
+																	"Children": [
+																		{
+																			"Type": "NodeStrongA6kOpenMarker",
+																			"Data": "**"
+																		},
+																		{
+																			"Type": "NodeText",
+																			"Data": "可以不处理"
+																		},
+																		{
+																			"Type": "NodeStrongA6kCloseMarker",
+																			"Data": "**"
+																		}
+																	]
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": ",默认交给 JVM 处理"
+																}
+															]
+														}
+													]
+												},
+												{
+													"ID": "20210707214341-mmtqe80",
+													"Type": "NodeListItem",
+													"Data": "-",
+													"ListData": {
+														"Tight": true,
+														"BulletChar": 45,
+														"Padding": 2,
+														"Marker": "LQ==",
+														"Num": -1
+													},
+													"Properties": {
+														"id": "20210707214341-mmtqe80"
+													},
+													"Children": [
+														{
+															"ID": "20210707214341-tzyswdh",
+															"Type": "NodeParagraph",
+															"Properties": {
+																"id": "20210707214341-tzyswdh"
+															},
+															"Children": [
+																{
+																	"Type": "NodeText",
+																	"Data": "throw 关键字后边创建的是"
+																},
+																{
+																	"Type": "NodeStrong",
+																	"Children": [
+																		{
+																			"Type": "NodeStrongA6kOpenMarker",
+																			"Data": "**"
+																		},
+																		{
+																			"Type": "NodeText",
+																			"Data": "编译异常"
+																		},
+																		{
+																			"Type": "NodeStrongA6kCloseMarker",
+																			"Data": "**"
+																		}
+																	]
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": "(写代码的时候报错),我们就"
+																},
+																{
+																	"Type": "NodeStrong",
+																	"Children": [
+																		{
+																			"Type": "NodeStrongA6kOpenMarker",
+																			"Data": "**"
+																		},
+																		{
+																			"Type": "NodeText",
+																			"Data": "必须处理"
+																		},
+																		{
+																			"Type": "NodeStrongA6kCloseMarker",
+																			"Data": "**"
+																		}
+																	]
+																},
+																{
+																	"Type": "NodeText",
+																	"Data": ",要么 throws,要么 try...catch"
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-f1giqiv",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214341-f1giqiv"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "子父类异常注意事项"
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-vfpliwm",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214341-vfpliwm"
+			},
+			"Children": [
+				{
+					"ID": "20210707214341-4rcc3hr",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-4rcc3hr"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-wgleybp",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-wgleybp"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "父类的方法"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "抛出或不抛出"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "异常，子类重写的方法抛出的异常必须"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "小于等于父类抛出的异常"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（多态）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214341-swtyxxa",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-swtyxxa"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-yceajhm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-yceajhm"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "父类的方法"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "抛出"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "一个或多个"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "异常"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "子类"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "重写的方法"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "抛出的异常"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "必须"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "与父类相同"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "或是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "其子类"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "或"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "不抛"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214341-hpwawaq",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-hpwawaq"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-ww9l1lp",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-ww9l1lp"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "父类的方法"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "没有异常抛出"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，子类重写的方法"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "不能有异常抛出"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。若"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "产生异常则只能捕获处理"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-04zl1d5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707214341-04zl1d5"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "自定义异常"
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-h9n9i0n",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214341-h9n9i0n"
+			},
+			"Children": [
+				{
+					"ID": "20210707214341-e4qse83",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-e4qse83"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-o706g0b",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-o706g0b"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "自定义的异常类"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "继承"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"CodeMarkerLen": 1,
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker",
+													"Data": "`"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "Exception"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker",
+													"Data": "`"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "或"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"CodeMarkerLen": 1,
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker",
+													"Data": "`"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "RuntimeException"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker",
+													"Data": "`"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "（尽量继承这个，对代码没有侵入性）"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214341-m8q2q9p",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-m8q2q9p"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-214wr85",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-214wr85"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "定义"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "空参构造"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "方法和"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "带异常信息的构造"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "方法"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214341-htj75y3",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-htj75y3"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-aekv0lr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-aekv0lr"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "提供全局常量：serialVersionUID"
+								}
+							]
+						},
+						{
+							"ID": "20210707214341-7cm10lj",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707214341-7cm10lj"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "public class MyException extends Exception/*RuntimeException*/ {\n    static final long serialVersionUID = 1L;\n\n    public MyException() {\n    }\n\n    public MyException(String message) {\n        super(message);\n    }\n}\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-3kfn637",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707214341-3kfn637"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "习题"
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-bqsgc0j",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214341-bqsgc0j"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "常见的异常，举例说明"
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-uhgj7dy",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214341-uhgj7dy"
+			},
+			"Children": [
+				{
+					"ID": "20210707214341-e2hkgxu",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-e2hkgxu"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-3v0u9l5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-3v0u9l5"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "RuntimeException（unchecked）"
+								}
+							]
+						},
+						{
+							"ID": "20210707214341-xgauicq",
+							"Type": "NodeList",
+							"ListData": {
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707214341-xgauicq"
+							},
+							"Children": [
+								{
+									"ID": "20210707214341-mxvultl",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214341-mxvultl"
+									},
+									"Children": [
+										{
+											"ID": "20210707214341-ljxn0wu",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-ljxn0wu"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "NullPointerException"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214341-vc2r1dv",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214341-vc2r1dv"
+									},
+									"Children": [
+										{
+											"ID": "20210707214341-bzba73o",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-bzba73o"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "ArithmeticException"
+												}
+											]
+										},
+										{
+											"ID": "20210707214341-wdoj441",
+											"Type": "NodeCodeBlock",
+											"IsFencedCodeBlock": true,
+											"CodeBlockFenceChar": 96,
+											"CodeBlockFenceLen": 3,
+											"CodeBlockOpenFence": "YGBg",
+											"CodeBlockInfo": "amF2YQ==",
+											"CodeBlockCloseFence": "YGBg",
+											"Properties": {
+												"id": "20210707214341-wdoj441"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeBlockFenceOpenMarker",
+													"Data": "```",
+													"CodeBlockFenceLen": 3
+												},
+												{
+													"Type": "NodeCodeBlockFenceInfoMarker",
+													"CodeBlockInfo": "amF2YQ=="
+												},
+												{
+													"Type": "NodeCodeBlockCode",
+													"Data": "int a = 10;\nint b = 0;\nSystem.out.println(a / b);\n"
+												},
+												{
+													"Type": "NodeCodeBlockFenceCloseMarker",
+													"Data": "```",
+													"CodeBlockFenceLen": 3
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214341-t8099ys",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214341-t8099ys"
+									},
+									"Children": [
+										{
+											"ID": "20210707214341-2m5zyis",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-2m5zyis"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "ArrayIndexOutOfBoundsException"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214341-hm009vs",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214341-hm009vs"
+									},
+									"Children": [
+										{
+											"ID": "20210707214341-755cv2v",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-755cv2v"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "NumberFormatException"
+												}
+											]
+										},
+										{
+											"ID": "20210707214341-k0uk4ue",
+											"Type": "NodeCodeBlock",
+											"IsFencedCodeBlock": true,
+											"CodeBlockFenceChar": 96,
+											"CodeBlockFenceLen": 3,
+											"CodeBlockOpenFence": "YGBg",
+											"CodeBlockInfo": "amF2YQ==",
+											"CodeBlockCloseFence": "YGBg",
+											"Properties": {
+												"id": "20210707214341-k0uk4ue"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeBlockFenceOpenMarker",
+													"Data": "```",
+													"CodeBlockFenceLen": 3
+												},
+												{
+													"Type": "NodeCodeBlockFenceInfoMarker",
+													"CodeBlockInfo": "amF2YQ=="
+												},
+												{
+													"Type": "NodeCodeBlockCode",
+													"Data": "String str = \"123\";\nstr = \"abc\";\nint num = Integer.parseInt(str);\n"
+												},
+												{
+													"Type": "NodeCodeBlockFenceCloseMarker",
+													"Data": "```",
+													"CodeBlockFenceLen": 3
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214341-z8icbya",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214341-z8icbya"
+									},
+									"Children": [
+										{
+											"ID": "20210707214341-w2985lk",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-w2985lk"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "InputMismatchException"
+												}
+											]
+										},
+										{
+											"ID": "20210707214341-p0o58p2",
+											"Type": "NodeCodeBlock",
+											"IsFencedCodeBlock": true,
+											"CodeBlockFenceChar": 96,
+											"CodeBlockFenceLen": 3,
+											"CodeBlockOpenFence": "YGBg",
+											"CodeBlockInfo": "amF2YQ==",
+											"CodeBlockCloseFence": "YGBg",
+											"Properties": {
+												"id": "20210707214341-p0o58p2"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeBlockFenceOpenMarker",
+													"Data": "```",
+													"CodeBlockFenceLen": 3
+												},
+												{
+													"Type": "NodeCodeBlockFenceInfoMarker",
+													"CodeBlockInfo": "amF2YQ=="
+												},
+												{
+													"Type": "NodeCodeBlockCode",
+													"Data": "Scanner scanner = new Scanner(System.in);\nint score = scanner.nextInt();\nSystem.out.println(score);\nscanner.close();\n"
+												},
+												{
+													"Type": "NodeCodeBlockFenceCloseMarker",
+													"Data": "```",
+													"CodeBlockFenceLen": 3
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214341-vbifq7k",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214341-vbifq7k"
+									},
+									"Children": [
+										{
+											"ID": "20210707214341-g6iafkf",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-g6iafkf"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "ClassCastException"
+												}
+											]
+										},
+										{
+											"ID": "20210707214341-xzyhc1t",
+											"Type": "NodeCodeBlock",
+											"IsFencedCodeBlock": true,
+											"CodeBlockFenceChar": 96,
+											"CodeBlockFenceLen": 3,
+											"CodeBlockOpenFence": "YGBg",
+											"CodeBlockInfo": "amF2YQ==",
+											"CodeBlockCloseFence": "YGBg",
+											"Properties": {
+												"id": "20210707214341-xzyhc1t"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeBlockFenceOpenMarker",
+													"Data": "```",
+													"CodeBlockFenceLen": 3
+												},
+												{
+													"Type": "NodeCodeBlockFenceInfoMarker",
+													"CodeBlockInfo": "amF2YQ=="
+												},
+												{
+													"Type": "NodeCodeBlockCode",
+													"Data": "Object obj = new Date();\nString str = (String)obj;\n"
+												},
+												{
+													"Type": "NodeCodeBlockFenceCloseMarker",
+													"Data": "```",
+													"CodeBlockFenceLen": 3
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707214341-8ew387n",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214341-8ew387n"
+									},
+									"Children": [
+										{
+											"ID": "20210707214341-gj7a09v",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-gj7a09v"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "……"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214341-031ljvh",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-031ljvh"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-fign2k2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-fign2k2"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "java.io.IOException"
+								}
+							]
+						},
+						{
+							"ID": "20210707214341-j42n7wo",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707214341-j42n7wo"
+							},
+							"Children": [
+								{
+									"ID": "20210707214341-09see30",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707214341-09see30"
+									},
+									"Children": [
+										{
+											"ID": "20210707214341-vp8vwl9",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707214341-vp8vwl9"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "java.io.FileNotFoundException"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214341-2cqd1et",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-2cqd1et"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-3pztfcl",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-3pztfcl"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "java.lang.ClassNotFoundException"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214341-fl0djtp",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-fl0djtp"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-zgw8v35",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-zgw8v35"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "java.sql.SQLException"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214341-vlhiipb",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-vlhiipb"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-0l2qw5t",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-0l2qw5t"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "java.lang.InterruptedException"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-hcdj7vs",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214341-hcdj7vs"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "throw"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "和"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "throws"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "区别"
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-k9bzial",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214341-k9bzial"
+			},
+			"Children": [
+				{
+					"ID": "20210707214341-400zaak",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-400zaak"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-o94t6jx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-o94t6jx"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "throw：在方法体中，并且抛出一个异常对象。程序执行到 t 此时立即停止，它后面的语句都不执行。"
+								}
+							]
+						},
+						{
+							"ID": "20210707214341-t8gah0q",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-t8gah0q"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "抛出的是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "异常对象"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " ，说明这里"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "肯定有异常"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "产生。一般用于自定义异常，体现在选择语句中"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214341-vf32wzf",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-vf32wzf"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-4l4pxp5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-4l4pxp5"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "throws：在方法声明上，后面跟异常的类名，可以是多个，调用者处理"
+								}
+							]
+						},
+						{
+							"ID": "20210707214341-czpaqga",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-czpaqga"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "声明方法有异常"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，是一种"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "可能性"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，这个异常不一定会产生"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-gdvsfak",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214341-gdvsfak"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "final"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ","
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "finally"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ","
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "finallize"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "区别"
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-7ujfv8h",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214341-7ujfv8h"
+			},
+			"Children": [
+				{
+					"ID": "20210707214341-qcmztjd",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-qcmztjd"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-5r7ezz2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-5r7ezz2"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "final"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：最终意思，可以修饰类、成员变量、成员方法。\u003ca href=\"#final\"\u003e详见此\u003c/a\u003e"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214341-hbc6gwn",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-hbc6gwn"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-bh8gpt0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-bh8gpt0"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "finally"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：异常处理，用于释放资源，finally 中的代码一定会被执行，除非执行之前 jvm 退出"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214341-zn6cife",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214341-zn6cife"
+					},
+					"Children": [
+						{
+							"ID": "20210707214341-ipcr0a4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214341-ipcr0a4"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "finalize"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：Object 类的一个方法，用于垃圾回收"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-863x2ql",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214341-863x2ql"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "throw"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 后代码"
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-632uo11",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214341-632uo11"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "throw 语句后不能跟其他代码，否则永远执行不到，编译错误"
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-xhgyf5u",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707214341-xhgyf5u"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "try {\n    throw new Exception();\n    System.out.println(\"怎么也执行不到，编译失败\");\n} catch (Exception e) {\n    e.printStackTrace();\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-68sdi2e",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214341-68sdi2e"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "习题 1"
+				}
+			]
+		},
+		{
+			"ID": "20210707214341-3tsscad",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707214341-3tsscad"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class ReturnExceptionDemo {\n    static void methodA() {\n        try {\n            System.out.println(\"进入方法A\");\n            throw new RuntimeException(\"制造异常\");\n        } finally {\n            System.out.println(\"用A方法的finally\");\n        }\n    }\n\n    static void methodB() {\n        try {\n            System.out.println(\"进入方法B\");\n            return;\n        } finally {\n            System.out.println(\"调用B方法的finally\");\n        }\n    }\n\n    public static void main(String[] args) {\n        try {\n            methodA();\n        } catch (Exception e) {\n            System.out.println(e.getMessage());\n        }\n        methodB();\n\n        // 进入方法A\n        // 用A方法的finally\n        // 制造异常\n        // 进入方法B\n        // 调用B方法的finally\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		}
+	]
+}

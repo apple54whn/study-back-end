@@ -1,0 +1,4622 @@
+{
+	"ID": "20210707235333-f46w3qa",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210707235333-f46w3qa",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210707235333-u9v95a6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707235333-u9v95a6"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "JDBC 操作数据库及思考 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-4lz8qi1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-4lz8qi1"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "有一个用户表"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-qt24tud",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707235333-qt24tud"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "create table t_user (\n\tid bigint auto_increament,\n    username varchar(100),\n    address varchar(255)\n)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-t4wjh7q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-t4wjh7q"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "用户表对应的 model"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-lq5gyl8",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707235333-lq5gyl8"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Data\npublic class User {\n    private Long userId;\n    private String username;\n    private String address;\n\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-owf7jaw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-owf7jaw"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "JDBC 保存用户操作（只关注步骤，api 可能不对，且没有关注事务）"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-uut1t0b",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707235333-uut1t0b"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "String sql = \"insert into t_user (username, address) values (?,?)\";\n\n// 1 获取连接\nConnection conn = DriverManager.getConnection(url, username, password);\n// 2 创建 statement 对象\nPreparedStatement ps = conn.preparedStatment(sql);\n// 3 对占位符赋值\nps.setString(1, user.getUsername());\nps.setString(2, user.getAddress());\n// 4 保存\nps.executeUpdate();\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-w83hr6q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-w83hr6q"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "上述操作总的来说很麻烦，当然可以"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "封装一个工具类"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "只写 sql、占位符赋值、执行操作"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。但是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "占位符赋值没有用到面向对象的思想"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，那么怎么使用面向对象的思想来操作呢？"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-sjgd44v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-sjgd44v"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "例如调用 repository.save(user) 即可保存到数据库中，从该语句中可以得出，save 动词可拼接出 sql：insert into ** values **，那么表名和占位符赋值则直接使用 user 对象可以获取到，然后执行操作即可。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-l2f7lhy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-l2f7lhy"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "所以，只需"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "建立 user 对象和 t_user 表的映射关系，user 的属性和 t_user 表字段的映射关系"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "即可使用面向对象来操作数据库了"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-6cum5bk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707235333-6cum5bk"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "ORM \u0026 JPA 与 Hibernate"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-92jxrtv",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-92jxrtv"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "ORM 思想"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-r1jfykq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-r1jfykq"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "ORM（Object-Relational Mapping）"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 表示"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "对象关系映射"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。简单的说：ORM 就是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "建立实体类和数据库表之间的关系"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "（包括"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "表和字段"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "），从而达到"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "操作实体类就相当于操作数据库表"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的目的。解决了可能会写特别多数据访问层的代码、从数据库保存数据、修改数据、删除数据等重复代码问题。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-l5k82bn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-l5k82bn"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "常见的 ORM 框架："
+				},
+				{
+					"Type": "NodeStrikethrough",
+					"Children": [
+						{
+							"Type": "NodeStrikethrough2OpenMarker",
+							"Data": "~~"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Mybatis（ibatis）"
+						},
+						{
+							"Type": "NodeStrikethrough2CloseMarker",
+							"Data": "~~"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、Hibernate"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-raafslz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-raafslz"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "JPA 及其优势"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-12ebpa8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-12ebpa8"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "JPA（Java Persistence API）"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "， 即"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Java 持久化 API"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，是 SUN 公司推出的一套"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "基于 ORM 的规范"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "（"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "操作 ORM 框架，JDBC 是操作不同数据库"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "），内部是由一系列的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "接口和抽象类"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "构成。注意"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "不是框架"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "！"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-ghwzn42",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-ghwzn42"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "JPA 的优势如下："
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-q74lkyz",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707235333-q74lkyz"
+			},
+			"Children": [
+				{
+					"ID": "20210707235333-hvoaq14",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-hvoaq14"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-05kgnfi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-05kgnfi"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "标准化"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707235333-xp7rzpa",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-xp7rzpa"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "JPA 是 JCP 组织发布的 Java EE 标准之一，因此任何声称符合 JPA 标准的框架都遵循同样的架构，提供相同的访问 API，这保证了基于 JPA 开发的企业应用能够经过少量的修改就能够在不同的 JPA 框架下运行。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-1pm9dnd",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-1pm9dnd"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-soc2hfg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-soc2hfg"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "容器级特性的支持"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707235333-be80rew",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-be80rew"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "JPA 框架中支持大数据集、事务、并发等容器级事务，使得 JPA 超越了简单持久化框架的局限，在企业应用发挥更大作用。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-231ydac",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-231ydac"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-e1rm8lw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-e1rm8lw"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "简单方便"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707235333-gk1cdsv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-gk1cdsv"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "JPA 的主要目标之一就是提供更加简单的编程模型：在 JPA 框架下创建实体和创建 Java 类一样简单，没有任何的约束和限制，只需要使用 javax.persistence.Entity 进行注释，JPA 的框架和接口也都非常简单，没有太多特别的规则和设计模式的要求，开发者可以很容易的掌握。JPA 基于非侵入式原则设计，因此可以很容易的和其它框架或者容器集成"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-8bjme03",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-8bjme03"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-zxfpvfh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-zxfpvfh"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "查询能力"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707235333-ncmsnhe",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-ncmsnhe"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "JPA 的查询语言是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "面向对象"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "而非面向数据库的，它以面向对象的自然语法构造查询语句，可以看成是 Hibernate HQL 的等价物。JPA 定义了独特的 JPQL（Java Persistence Query Language），JPQL 是 EJB QL 的一种扩展，它是针对实体的一种查询语言，操作对象是实体，而不是关系数据库的表，而且能够支持批量更新和修改、JOIN、GROUP BY、HAVING 等通常只有 SQL 才能够提供的高级查询特性，甚至还能够支持子查询。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-3e75eb2",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-3e75eb2"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-k68vz5z",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-k68vz5z"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "高级特性"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707235333-ni26yj9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-ni26yj9"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "JPA 中能够支持面向对象的高级特性，如类之间的继承、多态和类之间的复杂关系，这样的支持能够让开发者最大限度的使用面向对象的模型设计企业应用，而不需要自行处理这些特性在关系数据库的持久化。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-pak17jm",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-pak17jm"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Hibernate 简介"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-crm905q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-crm905q"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Hibernate 是一个开放源代码的对象关系映射框架，它对 JDBC 进行了非常"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "轻量级"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的对象封装，实现类了 JPA 规范，它将 POJO 与数据库表建立映射关系，是一个"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "全自动的 ORM 框架"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。Hibernate 可以自动生成 SQL 语句，自动执行，使得 Java 程序员可以随心所欲的使用对象编程思维来操纵数据库。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-scjpbfs",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-scjpbfs"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "JPA、Hibernate、JDBC 关系 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-2h4v8xx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-2h4v8xx"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "JPA 和 Hibernate 的关系就像 JDBC 和 JDBC 驱动的关系，JPA 是规范，Hibernate 除了作为 ORM 框架之外，它也是一种 JPA 实现。JPA 怎么取代 Hibernate 呢？JDBC 规范可以驱动底层数据库吗？答案都是否定的，也就是说，如果使用 JPA 规范进行数据库操作，底层需要 Hibernate 作为其实现类完成数据持久化工作。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-i2okffy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-i2okffy"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Children": [
+						{
+							"Type": "NodeBang",
+							"Data": "!"
+						},
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20201217220824953"
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "./assets/image-20201217220824953.png"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-wpo8m0z",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707235333-wpo8m0z"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "JPA 环境准备"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-m3z8sqf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-m3z8sqf"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "目标"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-4v6pdss",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-4v6pdss"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "实现功能是搭建 JPA 环境，并实现一条数据的增删改查"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-tu19yit",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-tu19yit"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "准备数据库环境"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-tzj4tpv",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707235333-tzj4tpv"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "-- 准备数据库，创建一张文章表备用\nCREATE TABLE `article` (\n    `aid` INT ( 11 ) NOT NULL auto_increment COMMENT '主键',\n    `author` VARCHAR ( 255 ) DEFAULT NULL COMMENT '作者',\n    `title` VARCHAR ( 255 ) DEFAULT NULL COMMENT '标题',\n    `createTime` datetime DEFAULT NULL COMMENT '创建时间',\n    PRIMARY KEY ( `aid` )\n);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-9ckq4ri",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-9ckq4ri"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "创建 Maven 工程"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-fapn8u8",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eG1s",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707235333-fapn8u8"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cdependency\u003e\n    \u003cgroupId\u003emysql\u003c/groupId\u003e\n    \u003cartifactId\u003emysql-connector-java\u003c/artifactId\u003e\n    \u003cversion\u003e8.0.19\u003c/version\u003e\n\u003c/dependency\u003e\n\n\u003c!--包括 hibernate-core--\u003e\n\u003cdependency\u003e\n    \u003cgroupId\u003eorg.hibernate\u003c/groupId\u003e\n    \u003cartifactId\u003ehibernate-entitymanager\u003c/artifactId\u003e\n    \u003cversion\u003e5.4.25.Final\u003c/version\u003e\n\u003c/dependency\u003e\n\n\n\u003c!--\u003cdependency\u003e--\u003e\n\u003c!--    \u003cgroupId\u003elog4j\u003c/groupId\u003e--\u003e\n\u003c!--    \u003cartifactId\u003elog4j\u003c/artifactId\u003e--\u003e\n\u003c!--    \u003cversion\u003e1.2.17\u003c/version\u003e--\u003e\n\u003c!--\u003c/dependency\u003e--\u003e\n\n\n\u003cdependency\u003e\n    \u003cgroupId\u003eorg.projectlombok\u003c/groupId\u003e\n    \u003cartifactId\u003elombok\u003c/artifactId\u003e\n    \u003cversion\u003e1.18.12\u003c/version\u003e\n\u003c/dependency\u003e\n\n\u003cdependency\u003e\n    \u003cgroupId\u003eorg.junit.jupiter\u003c/groupId\u003e\n    \u003cartifactId\u003ejunit-jupiter\u003c/artifactId\u003e\n    \u003cversion\u003e5.6.2\u003c/version\u003e\n    \u003cscope\u003etest\u003c/scope\u003e\n\u003c/dependency\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-8fzfkb3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-8fzfkb3"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其余的 JDK 8 之类的参考 Maven 笔记！"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-ocp7z8p",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-ocp7z8p"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "JPA 的核心配置文件"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-ok1dm7r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-ok1dm7r"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在 Maven 工程的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "resources"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "路径下创建一个名为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "META-INF"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的文件夹，在文件夹下创建一个名为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "persistence.xml"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的配置文件。注意："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "META-INF"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "文件夹名称不能修改，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "persistence.xml"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "文件名称不能改。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-w9h20on",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eG1s",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707235333-w9h20on"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003c?xml version=\"1.0\" encoding=\"UTF-8\"?\u003e\n\u003cpersistence xmlns=\"http://java.sun.com/xml/ns/persistence\"\n             xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n             xsi:schemaLocation=\"http://java.sun.com/xml/ns/persistence\n             http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd\"\n             version=\"2.0\"\u003e\n\n    \u003c!--持久化单元，可配置多个\n       name 持久化单元的名称 唯一\n       transaction-type  事务类型\n            RESOURCE_LOCAL  本地事务\n            JTA   分布式事务\n    --\u003e\n    \u003cpersistence-unit name=\"jpa01\" transaction-type=\"RESOURCE_LOCAL\"\u003e\n\n        \u003c!--配置 JPA 规范的服务提供商,当项目中依赖的只有一个JPA的实现时（如 Hibernate）,此选项可省略--\u003e\n        \u003cprovider\u003eorg.hibernate.jpa.HibernatePersistenceProvider\u003c/provider\u003e\n\n        \u003c!--指定实体类,此选项可省略--\u003e\n        \u003cclass\u003etop.conanan.domain.Article\u003c/class\u003e\n\n        \u003cproperties\u003e\n            \u003c!--跟数据库相关的信息 驱动 url 用户名 密码。可从 AvailableSettings 类中找到name的值--\u003e\n            \u003cproperty name=\"javax.persistence.jdbc.driver\" value=\"com.mysql.cj.jdbc.Driver\"/\u003e\n            \u003cproperty name=\"javax.persistence.jdbc.url\" value=\"jdbc:mysql:///demo?serverTimezone=GMT%2B8\"/\u003e\n            \u003cproperty name=\"javax.persistence.jdbc.user\" value=\"root\"/\u003e\n            \u003cproperty name=\"javax.persistence.jdbc.password\" value=\"w111111\"/\u003e\n\n            \u003c!--jpa的核心配置中兼容hibernate的配置（只能 Hibernate 使用）--\u003e\n            \u003c!--是否显示SQL--\u003e\n            \u003cproperty name=\"hibernate.show_sql\" value=\"true\"/\u003e\n            \u003c!--是否格式化显示的SQL--\u003e\n            \u003cproperty name=\"hibernate.format_sql\" value=\"true\"/\u003e\n            \u003c!--\n                自动建表\n                    update  如果数据库存在数据表,就使用;不存在,就创建\n                    create  不管数据库有没有数据表,每次SQL请求都会重新建表\n            --\u003e\n            \u003cproperty name=\"hibernate.hbm2ddl.auto\" value=\"update\"/\u003e\n        \u003c/properties\u003e\n    \u003c/persistence-unit\u003e\n\u003c/persistence\u003e\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-f38gryr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-f38gryr"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "配置实体类与表的映射关系"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-fzlzh37",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707235333-fzlzh37"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Getter\n@Setter\n@ToString\n@Builder\n@NoArgsConstructor\n@AllArgsConstructor\n@Entity // 告诉 JPA 这是一个实体类，需要把它跟数据库中的表做映射\n@Table(name = \"article\")//@Table建立了实体类和数据表的关系，name指向表名。当类名和数据表的名一致时，此注解可省略\npublic class Article {\n\n    @Id//标识这是主键字段\n    //指定主键生成策略，GenerationType.IDENTITY就是对应到mysql中的数据自增策略\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long aid;\n\n    //使用@Column映射类的属性和数据表的字段关系  name指定表中的字段名\n    //当类的属性名和数据表的字段名一致时，此注解可省略\n    @Column(name = \"author\")\n    private String author;\n\n    private String title;\n\n    private LocalDateTime createTime;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-try20ec",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-try20ec"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "工具类 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-6kd5ewa",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707235333-6kd5ewa"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public final class JpaUtil {\n    // JPA的实体管理器工厂：相当于Hibernate的SessionFactory。工厂类的创建十分消耗资源，一般在项目中配置为单例\n    private static final EntityManagerFactory em;\n    // 使用静态代码块赋值\n    static {\n        // 注意：该方法参数必须和persistence.xml中persistence-unit标签name属性取值一致\n        em = Persistence.createEntityManagerFactory(\"jpa01\");\n    }\n\n    /**\n     * 使用管理器工厂生产一个管理器对象\n     */\n    public static EntityManager getEntityManager() {\n        return em.createEntityManager();\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-yij1oa7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707235333-yij1oa7"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "JPA 增删改查 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-yhd3op2",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707235333-yhd3op2"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n * Jpa的操作步骤\n * 1.加载配置文件创建工厂（实体管理器工厂）对象 EntityManagerFactory\n * 2.通过实体管理器工厂获取实体管理器 EntityManager\n * 3.获取事务对象，开启事务 EntityTransaction\n * 4.完成增删改查操作（查询不需要事务）\n * 5.提交事务（回滚事务）\n * 6.释放 EntityManager 资源\n */\nclass TestJpa {\n\n    private EntityManager entityManager;\n    private EntityTransaction transaction;\n\n    @BeforeEach\n    void init() {\n        //通过工具类获取EntityManager对象\n        entityManager = JpaUtil.getEntityManager();\n        //获取事务对象，根据需要调用 transaction.begin() 开启事务\n        transaction = entityManager.getTransaction();\n    }\n\n    @AfterEach\n    void destroy() {\n        //释放资源，工厂对象不用释放，其他方法还需要使用\n        entityManager.close();\n    }\n\n\n    @Test\n    void testPersist() {\n\n        // 创建对象\n        Article article = Article.builder().author(\"男哥\").title(\"测试文章\").createTime(LocalDateTime.now()).build();\n        try {\n            // 开启事务\n            transaction.begin();\n            // 保存\n            entityManager.persist(article);\n            // 提交事务\n            transaction.commit();\n        } catch (Exception e) {\n            e.printStackTrace();\n            transaction.rollback();\n        }\n    }\n\n\n    /**\n     * find为立即加载\n     */\n    @Test\n    void testFind() {\n        // 第一个参数为要封装的对象的字节码，第二个参数为主键\n        Article article = entityManager.find(Article.class, 1L);\n        System.out.println(article);\n    }\n\n    /**\n     * getReference为延迟加载（懒加载），使用的时候才查询数据库。一般使用这个（序列化时可能报错？）\n     * IDEA需要去掉Debug中几个选项才可以看到\n     */\n    @Test\n    void testReference() {\n        Article article = entityManager.getReference(Article.class, 1L);\n        System.out.println(article);\n    }\n\n    @Test\n    void testMerge() {\n        Article article = entityManager.find(Article.class, 3L);\n        article.setAuthor(\"男神\");\n        try {\n            // 开启事务\n            transaction.begin();\n            // 更新（注意，实体类中当前为null的字段也会被更新为null，可以配置更改该策略）\n            entityManager.merge(article);\n            // 提交事务\n            transaction.commit();\n        } catch (Exception e) {\n            e.printStackTrace();\n            transaction.rollback();\n        }\n    }\n\n    @Test\n    void testRemove() {\n        Article article = entityManager.find(Article.class, 3L);\n        try {\n            // 开启事务\n            transaction.begin();\n            // 删除\n            entityManager.remove(article);\n            // 提交事务\n            transaction.commit();\n        } catch (Exception e) {\n            e.printStackTrace();\n            transaction.rollback();\n        }\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-yu4o12z",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707235333-yu4o12z"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "JPQL 增删改查 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-ocogrhj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-ocogrhj"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "此处示例只演示查询"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-7snuapi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-7snuapi"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "JPQL（Java Persistence Query Language）。基于首次在 EJB2.0 中引入的 EJB 查询语言(EJB QL)，Java 持久化查询语言(JPQL)是一种可移植的查询语言，旨在以面向对象表达式语言的表达式，将 SQL 语法和简单查询语义绑定在一起，使用这种语言编写的查询是可移植的，可以被编译成所有主流数据库服务器上的 SQL。避免了程序与数据库 SQL 语句耦合严重，比较适合跨数据源的场景（一会儿 MySQL，一会儿 Oracle 等）"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-pkz6s92",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-pkz6s92"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其特征与原生 SQL 语句类似，并且完全"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "面向对象"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，通过"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "类名"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "和"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "属性"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "访问，而"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "不是表名和表中字段"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。不支持"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "SELECT *"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，但是支持"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "COUNT(*)"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-envw8xx",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707235333-envw8xx"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n * Jpa的操作步骤\n * 1.加载配置文件创建工厂（实体管理器工厂）对象 EntityManagerFactory\n * 2.通过实体管理器工厂获取实体管理器 EntityManager\n * 3.获取事务对象，开启事务 EntityTransaction\n * 4.完成增删改查操作（查询不需要事务）\n * 5.提交事务（回滚事务）\n * 6.释放 EntityManager 资源\n */\nclass TestJpql {\n\n    private EntityManager entityManager;\n    private EntityTransaction transaction;\n\n    @BeforeEach\n    void init() {\n        //通过工具类获取EntityManager对象\n        entityManager = JpaUtil.getEntityManager();\n        //获取事务对象，根据需要调用 transaction.begin() 开启事务\n        transaction = entityManager.getTransaction();\n    }\n\n    @AfterEach\n    void destroy() {\n        //释放资源，工厂对象不用释放，其他方法还需要使用\n        entityManager.close();\n    }\n\n\n    /**\n     * 查找所有\n     */\n    @Test\n    void testFindAll() {\n        String jpql = \"from Article\";//也可以省略掉全限定类名，只写类名\n        //创建Query查询对象，这个对象才是执行jpql的对象\n        TypedQuery\u003cArticle\u003e query = entityManager.createQuery(jpql, Article.class);\n        List\u003cArticle\u003e articles = query.getResultList();\n        articles.forEach(System.out::println);\n    }\n\n    /**\n     * 排序查询（根据ID倒序查询所有文章）\n     */\n    @Test\n    void testOrder() {\n        String jpql = \"from Article order by aid desc\";//也可以省略掉全限定类名，只写类名。这里的aid也可以写id，因为是@Id注解了\n        //创建Query查询对象，这个对象才是执行jpql的对象\n        TypedQuery\u003cArticle\u003e query = entityManager.createQuery(jpql, Article.class);\n\n        List\u003cArticle\u003e articles = query.getResultList();\n        articles.forEach(System.out::println);\n    }\n\n    /**\n     * 统计查询\n     */\n    @Test\n    void testCount() {\n        String jpql = \"select count(id) from Article \";//也可以省略掉全限定类名，只写类名\n        //创建Query查询对象，这个对象才是执行jpql的对象\n        TypedQuery\u003cLong\u003e query = entityManager.createQuery(jpql, Long.class);\n        Long count = query.getSingleResult();\n        System.out.println(count);\n    }\n\n    /**\n     * 分页查询\n     */\n    @Test\n    void testPage() {\n        String jpql = \"from Article \";//也可以省略掉全限定类名，只写类名\n        //创建Query查询对象，这个对象才是执行jpql的对象\n        TypedQuery\u003cArticle\u003e query = entityManager.createQuery(jpql, Article.class);\n        query.setFirstResult(0);//起始索引\n        query.setMaxResults(5);//每页查询条数\n        List\u003cArticle\u003e articles = query.getResultList();//此处为查询前5条\n        articles.forEach(System.out::println);\n    }\n\n    /**\n     * 条件查询\n     */\n    @Test\n    void testCondition() {\n        String jpql = \"from Article where author like ?2\";//也可以省略掉全限定类名，只写类名\n        //创建Query查询对象，这个对象才是执行jpql的对象\n        TypedQuery\u003cArticle\u003e query = entityManager.createQuery(jpql, Article.class);\n        query.setParameter(2, \"女%\");//第1个参数：占位符索引位置，根据?n写即可；第2个参数：值\n        List\u003cArticle\u003e articles = query.getResultList();\n        articles.forEach(System.out::println);\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-rh0nqgd",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707235333-rh0nqgd"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "注意"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-cz91ykp",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-cz91ykp"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "find 与 getReference 区别"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-bkt4dup",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707235333-bkt4dup"
+			},
+			"Children": [
+				{
+					"ID": "20210707235333-rmgxxf1",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-rmgxxf1"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-x2rmk1u",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-x2rmk1u"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "find："
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "立即加载"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。debug 执行发现调用方法后就会发送 sql 查询数据库，且查询得到的对象就是该"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "对象本身"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-8os4j0u",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-8os4j0u"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-p1t8d5o",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-p1t8d5o"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "getReference："
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "延迟加载（懒加载）"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。debug 执行发现调用方法后"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "不会立即查询数据库"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，只会在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "使用该对象时才发送 sql 查询数据库"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，并且查询"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "得到的对象是动态代理生成的"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "对象！"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-v0xsdqw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-v0xsdqw"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意，IDEA 比较智能，调用方法后 debug 会显示值，所以会立即发送 sql。可以修改设置中的 Debugger - Data Views - Java 中的配置，去掉所有选项基本就可以了"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-idub49y",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707235333-idub49y"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "JPA 重要 API 介绍"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-5pbykgf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-5pbykgf"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Persistence"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-gkero70",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-gkero70"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Persistence"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "对象主要作用是用于"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "获取"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "EntityManagerFactory"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "对象的 。通过调用该类的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "createEntityManagerFactory()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "静态方法，根据配置文件中"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "持久化单元名称"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "创建"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "EntityManagerFactory"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-9mfrxu3",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-9mfrxu3"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "EntityManagerFactory 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-31t1d0x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-31t1d0x"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "EntityManagerFactory"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 接口主要用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "createEntityManager()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "来创建 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "EntityManager"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 实例，由于它是一个"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "线程安全"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的对象（即多个线程访问同一个该对象不会有线程安全问题）"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-3zq3qwu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-3zq3qwu"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其内部维护了很多内容："
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-jo80ofh",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707235333-jo80ofh"
+			},
+			"Children": [
+				{
+					"ID": "20210707235333-id7vret",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-id7vret"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-277wemo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-277wemo"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "数据库信息"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-gzkuehw",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-gzkuehw"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-92rbb3z",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-92rbb3z"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "缓存信息"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-54wmean",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-54wmean"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-cldpno7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-cldpno7"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "所有的实体管理器对象"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-d27dwdw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-d27dwdw"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "因此创建"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "EntityManagerFactory"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 极其"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "浪费资源"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，所以在使用 JPA 编程时，我们可以对其创建进行优化（它是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "线程安全"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的），只需要做到"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "一个工程只存在一个"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"CodeMarkerLen": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker",
+									"Data": "`"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "EntityManagerFactory"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker",
+									"Data": "`"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " ，即在程序启动时创建好"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-u53e1ed",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-u53e1ed"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "EntityManager 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-1oxn7a5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-1oxn7a5"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在 JPA 规范中, "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "EntityManager"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "完成持久化操作的核心对象"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。实体类作为普通 Java 对象，只有在调用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "EntityManager"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "将其持久化后才会变成持久化对象。"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "EntityManager 对象在一组实体类与底层数据源之间进行 O/R 映射的管理"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。它可以用来管理和更新 Entity Bean, 根椐主键查找 Entity Bean, 还可以通过 JPQL 语句查询实体等。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-lpc6g3h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-lpc6g3h"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其内部维护了"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-u7gj7aj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-u7gj7aj"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们可以通过调用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "EntityManager"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的方法完成"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "获取事务"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，以及"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "持久化数据库"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的操作"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-iscdq7i",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707235333-iscdq7i"
+			},
+			"Children": [
+				{
+					"ID": "20210707235333-f0kp2yj",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-f0kp2yj"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-fnvomxc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-fnvomxc"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "getTransaction"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " : 获取事务对象"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-phu7t5u",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-phu7t5u"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-cxy49rs",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-cxy49rs"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "persist"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " ： 保存操作"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-muq6rfp",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-muq6rfp"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-lmh8j3f",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-lmh8j3f"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "find/getReference"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " ： 根据 id 查询"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-jiugy1v",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-jiugy1v"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-u1fxjxe",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-u1fxjxe"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "merge"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " ： 更新操作"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-6aymxi6",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-6aymxi6"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-gk4us4e",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-gk4us4e"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "remove"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " ： 删除操作"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-gfmqqcl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-gfmqqcl"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "EntityTransaction"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-y77hamx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-y77hamx"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在 JPA 规范中 EntityTransaction 是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "完成事务操作的核心对象"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，对于 EntityTransaction 在我们的 Java 代码中承接的功能比较简单"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-uh28wob",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707235333-uh28wob"
+			},
+			"Children": [
+				{
+					"ID": "20210707235333-hvzf3v1",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-hvzf3v1"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-h8ub9i6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-h8ub9i6"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "begin"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：开启事务"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-idrhtv3",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-idrhtv3"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-4xroiga",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-4xroiga"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "commit"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：提交事务"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-ldvj3t4",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-ldvj3t4"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-zie1l4j",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-zie1l4j"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "rollback"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：回滚事务"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-nvucw5l",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707235333-nvucw5l"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "JPA 常用注解"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-q5no4mu",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-q5no4mu"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "@Entity"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-b1bunt0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-b1bunt0"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "作用：指定当前类是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "实体类"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-ifc5okk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-ifc5okk"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "@Table"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-vho7vu2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-vho7vu2"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "作用：指定"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "实体类和表之间的对应关系"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-efvm9jc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-efvm9jc"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "属性："
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-0pyk7e2",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707235333-0pyk7e2"
+			},
+			"Children": [
+				{
+					"ID": "20210707235333-7yd4ego",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-7yd4ego"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-z33wkbi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-z33wkbi"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "name"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：指定数据库"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "表的名称"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，不指定则为类名首字母小写"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-hx5s168",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-hx5s168"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "@Id"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-if2oah3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-if2oah3"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "作用：指定当前字段是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "主键"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-zoq7fmw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-zoq7fmw"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "@GeneratedValue"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-5l2it27",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-5l2it27"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "作用：指定"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "主键的生成策略"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-9s3ty6e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-9s3ty6e"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "属性："
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-lbtp9o7",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707235333-lbtp9o7"
+			},
+			"Children": [
+				{
+					"ID": "20210707235333-ps9qxq1",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-ps9qxq1"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-lmu7neo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-lmu7neo"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "strategy"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：指定主键生成策略。JPA 提供的四种标准用法为"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "TABLE"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ","
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "SEQUENCE"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ","
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "IDENTITY"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ","
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "AUTO"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-vr92qbg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-vr92qbg"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "strategy"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 值介绍："
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-ys362qs",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707235333-ys362qs"
+			},
+			"Children": [
+				{
+					"ID": "20210707235333-7enoh8r",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-7enoh8r"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-ul48ezp",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-ul48ezp"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "IDENTITY"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：主键由数据库"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "自动生成"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（主要是自动增长型，必须数据库底层支持，如 MySQL）"
+								}
+							]
+						},
+						{
+							"ID": "20210707235333-gmxf4dc",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707235333-gmxf4dc"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "@Id\n@GeneratedValue(strategy = GenerationType.IDENTITY)\nprivate Long custId;\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-ppzpvwn",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-ppzpvwn"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-kfvh0n8",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-kfvh0n8"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"CodeMarkerLen": 1,
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker",
+													"Data": "`"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "SEQUENCE"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker",
+													"Data": "`"
+												}
+											]
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：根据底层数据库的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "序列"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "来生成主键，条件是数据库支持序列，如 Oracle。"
+								}
+							]
+						},
+						{
+							"ID": "20210707235333-8s8gyn6",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707235333-8s8gyn6"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "@Id\n@GeneratedValue(strategy = GenerationType.SEQUENCE,generator=\"payablemoney_seq\")\n@SequenceGenerator(name=\"payablemoney_seq\", sequenceName=\"seq_payment\")\nprivate Long custId;\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210707235333-aebhavh",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707235333-aebhavh"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "//@SequenceGenerator源码中的定义\n@Target({TYPE, METHOD, FIELD})\n@Retention(RUNTIME)\npublic @interface SequenceGenerator {\n    //表示该表主键生成策略的名称，它被引用在@GeneratedValue中设置的“generator”值中\n    String name();\n    //属性表示生成策略用到的数据库序列名称。\n    String sequenceName() default \"\";\n    //表示主键初识值，默认为0\n    int initialValue() default 0;\n    //表示每次主键值增加的大小，例如设置1，则表示每次插入新记录后自动加1，默认为50\n    int allocationSize() default 50;\n}\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-a7ajhwt",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-a7ajhwt"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-l5abx20",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-l5abx20"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "TABLE"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：使用一个特定的数据库表格来保存主键（好麻烦。。。）"
+								}
+							]
+						},
+						{
+							"ID": "20210707235333-zlokosv",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707235333-zlokosv"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "@Id\n@GeneratedValue(strategy = GenerationType.TABLE, generator=\"payablemoney_gen\")\n@TableGenerator(name = \"pk_gen\",\n                table=\"tb_generator\",\n                pkColumnName=\"gen_name\",\n                valueColumnName=\"gen_value\",\n                pkColumnValue=\"PAYABLEMOENY_PK\",\n                allocationSize=1\n               )\nprivate Long custId;\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210707235333-d7rusk2",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707235333-d7rusk2"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "//@TableGenerator的定义：\n@Target({TYPE, METHOD, FIELD})\n@Retention(RUNTIME)\npublic @interface TableGenerator {\n    //表示该表主键生成策略的名称，它被引用在@GeneratedValue中设置的“generator”值中\n    String name();\n    //表示表生成策略所持久化的表名，例如，这里表使用的是数据库中的“tb_generator”。\n    String table() default \"\";\n    //catalog和schema具体指定表所在的目录名或是数据库名\n    String catalog() default \"\";\n    String schema() default \"\";\n    //属性的值表示在持久化表中，该主键生成策略所对应键值的名称。例如在“tb_generator”中将“gen_name”作为主键的键值\n    String pkColumnName() default \"\";\n    //属性的值表示在持久化表中，该主键当前所生成的值，它的值将会随着每次创建累加。例如，在“tb_generator”中将“gen_value”作为主键的值\n    String valueColumnName() default \"\";\n    //属性的值表示在持久化表中，该生成策略所对应的主键。例如在“tb_generator”表中，将“gen_name”的值为“CUSTOMER_PK”。\n    String pkColumnValue() default \"\";\n    //表示主键初识值，默认为0。\n    int initialValue() default 0;\n    //表示每次主键值增加的大小，例如设置成1，则表示每次创建新记录后自动加1，默认为50。\n    int allocationSize() default 50;\n    UniqueConstraint[] uniqueConstraints() default {};\n}\n/*==================================================================*/\n//这里应用表tb_generator，定义为 ：\nCREATE TABLE  tb_generator (\n    id NUMBER NOT NULL,\n    gen_name VARCHAR2(255) NOT NULL,\n    gen_value NUMBER NOT NULL,\n    PRIMARY KEY(id)\n)\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-ygjd2o8",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-ygjd2o8"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-ka21mx6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-ka21mx6"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "AUTO"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：主键由程序自动控制，如数据库，环境等（测试了下 MySQL 使用的是 TABLE）"
+								}
+							]
+						},
+						{
+							"ID": "20210707235333-n4l976j",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707235333-n4l976j"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "@Id\n@GeneratedValue(strategy = GenerationType.AUTO)\nprivate Long custId;\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-sj93i90",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-sj93i90"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "@Column"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-s3203vu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-s3203vu"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "作用：指定实体类属性和数据库表之间的对应关系"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-md0ps00",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-md0ps00"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "属性："
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-gnfcms7",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707235333-gnfcms7"
+			},
+			"Children": [
+				{
+					"ID": "20210707235333-k45asmq",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-k45asmq"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-8rki7z9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-8rki7z9"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "name"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：指定数据库表的列名称。不指定则为属性名"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-rsrpp08",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-rsrpp08"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-uyhkhgn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-uyhkhgn"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "unique"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：是否唯一"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-nopfs99",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-nopfs99"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-ltk7c76",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-ltk7c76"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "nullable"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：是否可以为空"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-t0b40ad",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-t0b40ad"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-anag9lh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-anag9lh"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "inserttable"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：是否可以插入"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-kjv7pki",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-kjv7pki"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-lwqhf80",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-lwqhf80"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "updateable"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：是否可以更新"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-2zy333q",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-2zy333q"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-63eqvhp",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-63eqvhp"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "columnDefinition"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ": 定义建表时创建此列的 DDL"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-bggl48s",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707235333-bggl48s"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-vul6q2b",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-vul6q2b"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "secondaryTable"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ": 从表名。如果此列不建在主表上（默认建在主表），该属性定义该列所在从表的名字搭建开发环境 🔥"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

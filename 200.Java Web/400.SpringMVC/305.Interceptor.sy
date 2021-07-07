@@ -1,0 +1,1042 @@
+{
+	"ID": "20210707233642-5zg19ey",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210707233642-5zg19ey",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210707233642-u510tud",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233642-u510tud"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "简介"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-15flnd7",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233642-15flnd7"
+			},
+			"Children": [
+				{
+					"ID": "20210707233642-fsz4xuv",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-fsz4xuv"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-qgse5lo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-qgse5lo"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "拦截器类似于Servlet 开发中的过滤器Filter，用于对处理器进行预处理和后处理。AOP思想的具体应用"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233642-wjv0pve",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-wjv0pve"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-z4pve1i",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-z4pve1i"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "区别："
+								}
+							]
+						},
+						{
+							"ID": "20210707233642-p9uaehd",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707233642-p9uaehd"
+							},
+							"Children": [
+								{
+									"ID": "20210707233642-pgqzaf6",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233642-pgqzaf6"
+									},
+									"Children": [
+										{
+											"ID": "20210707233642-ebt716u",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233642-ebt716u"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "过滤器是 servlet 规范中的一部分，任何 java web 工程都可以使用。"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233642-wnyl3cq",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233642-wnyl3cq"
+									},
+									"Children": [
+										{
+											"ID": "20210707233642-3vpg163",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233642-3vpg163"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "拦截器是 SpringMVC 框架自己的，只有使用了 SpringMVC 框架的工程才能用。"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233642-0imussh",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233642-0imussh"
+									},
+									"Children": [
+										{
+											"ID": "20210707233642-vrtkw22",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233642-vrtkw22"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "过滤器在 url-pattern 中配置了"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "/*"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "之后，可以对所有要访问的资源拦截。"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233642-f4wtm99",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233642-f4wtm99"
+									},
+									"Children": [
+										{
+											"ID": "20210707233642-2qwabwd",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233642-2qwabwd"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "拦截器"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "它是"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "只会拦截访问的控制器方法"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "，如果访问的是 jsp,html,css,image 或者 js 是不会进行拦截的"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-4jsyoz7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233642-4jsyoz7"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "使用"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-0y2vagz",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233642-0y2vagz"
+			},
+			"Children": [
+				{
+					"ID": "20210707233642-b1a48hf",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-b1a48hf"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-w488dn1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-w488dn1"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "实现HandlerInterceptor接口，并重写三个默认方法"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707233642-sy9q1oh",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707233642-sy9q1oh"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "public class HandlerInterceptor1 implements HandlerInterceptor {\n    // Controller执行前调用此方法\n    // 返回true表示放行，返回false不放行\n    // 这里可以加入登录校验、权限拦截等\n    @Override\n    public boolean preHandle(HttpServletRequest arg0, HttpServletResponse arg1, Object arg2) throws Exception {\n        System.out.println(\"HandlerInterceptor1....preHandle\");\n        return true;\n    }\n\n    // controller执行后但未返回视图前调用此方法，且只有所有preHandle返回true时调用\n    // 这里可在返回用户前对模型数据进行加工处理，比如这里加入公用信息以便页面显示\n    @Override\n    public void postHandle(HttpServletRequest arg0, HttpServletResponse arg1, Object arg2, ModelAndView arg3) throws Exception {\n        System.out.println(\"HandlerInterceptor1....postHandle\");\n    }\n\n    // controller执行后且视图返回后调用此方法，且只有preHandle返回true才调用\n    // 这里可得到执行controller时的异常信息\n    // 这里可记录操作日志\n    @Override\n    public void afterCompletion(HttpServletRequest arg0, HttpServletResponse arg1, Object arg2, Exception arg3) throws Exception {\n        System.out.println(\"HandlerInterceptor1....afterCompletion\");\n    }\n}\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-rowa3i0",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233642-rowa3i0"
+			},
+			"Children": [
+				{
+					"ID": "20210707233642-vcyzt5n",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-vcyzt5n"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-pjqoily",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-pjqoily"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "拦截器配置"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707233642-miogqic",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "eG1s",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707233642-miogqic"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "eG1s"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "//spring-config.xml\n\u003c!-- 配置拦截器 --\u003e\n\u003cmvc:interceptors\u003e\n    \u003cmvc:interceptor\u003e\n        \u003c!-- /user/* 请求进入拦截器 --\u003e\n        \u003cmvc:mapping path=\"/user/*\" /\u003e\n        \u003c!-- 配置具体的拦截器 --\u003e\n        \u003cbean class=\"cn.itcast.ssm.interceptor.HandlerInterceptor1\" /\u003e\n    \u003c/mvc:interceptor\u003e\n    \u003cmvc:interceptor\u003e\n        \u003c!-- 所有的请求都进入拦截器 --\u003e\n        \u003cmvc:mapping path=\"/**\" /\u003e\n        \u003c!-- 配置具体的拦截器 --\u003e\n        \u003cbean class=\"cn.itcast.ssm.interceptor.HandlerInterceptor2\" /\u003e \u003c!--ref也可以，但必须有@Component注解 --\u003e\n    \u003c/mvc:interceptor\u003e\n\u003c/mvc:interceptors\u003e\n\n//需要释放静态资源\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-dj42azj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233642-dj42azj"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "总结"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-r4h1y5e",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233642-r4h1y5e"
+			},
+			"Children": [
+				{
+					"ID": "20210707233642-ttbao4z",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-ttbao4z"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-tnewxph",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-tnewxph"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "preHandle按拦截器定义顺序调用，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "返回false时后续拦截器将不调用"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233642-xeyft8e",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-xeyft8e"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-ndrs2f9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-ndrs2f9"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "postHandler按拦截器定义逆序调用，且只有"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "所有preHandle返回true时调用"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233642-gfir68j",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-gfir68j"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-9cfolnx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-9cfolnx"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "afterCompletion按拦截器定义逆序调用，且"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "只有preHandle返回true才调用"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，与上一条不同"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-inbl9id",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233642-inbl9id"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "应用"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-pdm71fa",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233642-pdm71fa"
+			},
+			"Children": [
+				{
+					"ID": "20210707233642-yn872u9",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-yn872u9"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-cd4itcz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-cd4itcz"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "有一个登录页面，需要写一个Controller访问登录页面"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233642-2bsepza",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-2bsepza"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-qh170ys",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-qh170ys"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "登录页面有一提交表单的动作。需要在Controller中处理"
+								}
+							]
+						},
+						{
+							"ID": "20210707233642-0dfpqay",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 42,
+								"Padding": 2,
+								"Marker": "Kg==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707233642-0dfpqay"
+							},
+							"Children": [
+								{
+									"ID": "20210707233642-l2kmm7v",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233642-l2kmm7v"
+									},
+									"Children": [
+										{
+											"ID": "20210707233642-24unr31",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233642-24unr31"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "判断用户名密码是否正确（在控制台打印）"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233642-8for8i1",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233642-8for8i1"
+									},
+									"Children": [
+										{
+											"ID": "20210707233642-fx243pg",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233642-fx243pg"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "如果正确,向session中写入用户信息（写入用户名username）"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233642-akosmct",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233642-akosmct"
+									},
+									"Children": [
+										{
+											"ID": "20210707233642-pti3t7t",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233642-pti3t7t"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "跳转到商品列表"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233642-oqr555c",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-oqr555c"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-pegmp7w",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-pegmp7w"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "拦截器"
+								}
+							]
+						},
+						{
+							"ID": "20210707233642-i7qq1v2",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 42,
+								"Padding": 2,
+								"Marker": "Kg==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707233642-i7qq1v2"
+							},
+							"Children": [
+								{
+									"ID": "20210707233642-ged7dh5",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233642-ged7dh5"
+									},
+									"Children": [
+										{
+											"ID": "20210707233642-sgvlqm7",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233642-sgvlqm7"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "拦截用户请求，判断用户是否登录（登录请求不能拦截）"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233642-ms9bych",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233642-ms9bych"
+									},
+									"Children": [
+										{
+											"ID": "20210707233642-15zky8z",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233642-15zky8z"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "如果用户已经登录。放行"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233642-gwzek7w",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233642-gwzek7w"
+									},
+									"Children": [
+										{
+											"ID": "20210707233642-8kmiv79",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233642-8kmiv79"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "如果用户未登录，跳转到登录页面。"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707233642-pwsap9i",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707233642-pwsap9i"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "public class LoginInterceptor implements HandlerInterceptor{ \n\t@Override  \n    Public boolean preHandle(HttpServletRequest request,HttpServletResponse response, Object handler) throws Exception { \n        //如果是登录页面则放行   \n        if(request.getRequestURI().indexOf(\"login.action\")\u003e=0)\n            return true;   \n        HttpSession session = request.getSession(); \n\n        //如果用户已登录也放行   \n        if(session.getAttribute(\"user\")!=null)\n            return true;   \n\n        //用户没有登录挑战到登录页面   \n        request.getRequestDispatcher(\"/WEB-INF/jsp/login.jsp\").forward(request, response);   \n        return false;  \n    } \n} \n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

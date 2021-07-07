@@ -1,0 +1,2944 @@
+{
+	"ID": "20210707233642-lvh7bvi",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210707233642-lvh7bvi",
+		"type": "doc",
+		"updated": "20210707233739"
+	},
+	"Children": [
+		{
+			"ID": "20210707233642-7up9d0e",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233642-7up9d0e"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "为什么需要异常处理？🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-lqxq7zd",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233642-lqxq7zd"
+			},
+			"Children": [
+				{
+					"ID": "20210707233642-b45h1zw",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-b45h1zw"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-riwso0n",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-riwso0n"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "异常时把"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "所有信息"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "都返回给客户端吗？许多老系统中发生异常，直接"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "暴露出数据库等各种错误，极其不安全"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "！！！"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233642-r8dol11",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-r8dol11"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-bo707wm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-bo707wm"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "异常时返回给客户端"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "简单的信息"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "吗？如"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "错误代码：11111，失败信息：操作失败"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "无法区别具体的错误信息"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233642-rba2g6e",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-rba2g6e"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-4tjdlx3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-4tjdlx3"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "Service 层方法在执行过程中出现异常该不该捕获"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "？如果该，则 Service 层中会有太多的 try、catch 代码，代码冗余不易维护；如果不该，则抛到 Controller 层，那无论如何还得捕获，否则直接暴露给 JVM，则还是会出现第一种情况！"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-edk8dkb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-edk8dkb"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "所以，需要一个能同一处理异常的地方！"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-998a1to",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233642-998a1to"
+			},
+			"Children": [
+				{
+					"ID": "20210707233642-o6bmrgc",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-o6bmrgc"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-x7zr037",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-x7zr037"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "无需 Service、Controller 来捕获异常，直接"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "在统一异常处理类中去捕获，并记录日志"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，最后统一向用户返回"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "规范的响应信息"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "！"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233642-uqwrk5k",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-uqwrk5k"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-qslpkll",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-qslpkll"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "此时在 Service 中的方法在编码时就可以"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "先校验判断"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，有问题"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "直接抛出"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "具体的异常信息，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "然后执行具体业务逻辑"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "最后返回成功的信息"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "！"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-nu6nubl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233642-nu6nubl"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "使用 HTTP 协议状态码 \u0026 全部返回 200 ？🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-og6ym86",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-og6ym86"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这个无法给出具体答案。"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-p348tda",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233642-p348tda"
+			},
+			"Children": [
+				{
+					"ID": "20210707233642-ex0e19u",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-ex0e19u"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-7hdmnww",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-7hdmnww"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "我认为在自己的业务系统中，可以使用 HTTP 的状态码来表示，前端异常处理就可以在 error 中捕获了，无需在 success 中判断 code 码！"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233642-rbsds1r",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-rbsds1r"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-v5tief2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-v5tief2"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "对于国内运营商来说，有些 HTTP 状态码会被过滤了。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-3apna7z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-3apna7z"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "总得来说，根据需要吧，反正也不需要使用太多的不常用 HTTP 状态码，应该没有问题！"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-89jy0kh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-89jy0kh"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "该章节演示 HTTP 协议状态码的使用，全部返回 200 更简单，修改一下即可！"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-1i5s4o6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233642-1i5s4o6"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "UnifyResponse 统一错误响应 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-ecl3a90",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-ecl3a90"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Builder\n@Data\npublic class UnifyResponse {\n\n    private int code;\n    private String message;\n    private String request;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-tuonew4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-tuonew4"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "config/code-message.properties"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-8fi3cvw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "cHJvcGVydGllcw==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-8fi3cvw"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "cHJvcGVydGllcw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "# ========== 不可预知异常 start ==========\nlin.codes[9999] = 😳服务器未知异常\nlin.codes[9998] = 😳非法参数异常\n# ========== 不可预知异常 end ==========\n\n\nlin.codes[10000] = 通用异常\n\nlin.codes[30003] = 商品信息不存在\nlin.codes[30005] = Banner类资源不存在\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-38vd1yl",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-38vd1yl"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n * 该类用于关联 code-message.properties 配置文件\n */\n@PropertySource(\"classpath:config/code-message.properties\")\n@ConfigurationProperties(prefix = \"lin\")\n@Configuration\npublic class CodeConfiguration {\n\n\n    /** codes 属性对应配置文件中的 codes */\n    private Map\u003cInteger, String\u003e codes = new HashMap\u003c\u003e();\n\n    /** 必须提供 setter 方法， 以便 Spring Boot 自动映射配置文件到属性 */\n    public void setCodes(Map\u003cInteger, String\u003e codes) {\n        this.codes = codes;\n    }\n\n    public String getMessage(int code){\n        return codes.get(code);\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-vseygjh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-vseygjh"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "返回值如下："
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-42gwwry",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "anNvbg==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-42gwwry"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anNvbg=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "{\n    \"code\": 10000,\n    \"message\": \"hello\",\n    \"body\": null,\n    \"request\": url\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-cgdnalu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-cgdnalu"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其中 code 和 message 可以使用错误信息清单配置文件集中管理，也方便 i18n。"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-7y18bwk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-7y18bwk"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当然使用枚举也行，只是不知道如何 i18n。"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-ja8wh2i",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233642-ja8wh2i"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "错误信息清单 \u0026 枚举 ？🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-rz327fd",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233642-rz327fd"
+			},
+			"Children": [
+				{
+					"ID": "20210707233642-a61jvnf",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-a61jvnf"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-ijrba8f",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-ijrba8f"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "错误信息清单可以更好的进行国际化。枚举就不知道如何操作了。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233642-z63ejbp",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-z63ejbp"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-3xpljtg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-3xpljtg"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "该章节演示错误信息清单的使用。枚举其实更简单。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-duav74w",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233642-duav74w"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "错误信息清单使用步骤 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-crn6rgp",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707233642-crn6rgp"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "1 自定义异常类—可预知异常"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-rpcdva4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-rpcdva4"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "由于是程序员抛出的异常，通常异常信息比较齐全，程序员在抛出时会指定错误代码及错误信息，获取异常信息也比较方便。"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-zxl8brt",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-zxl8brt"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@EqualsAndHashCode(callSuper = true)\n@Data\npublic class HttpException extends RuntimeException{\n\n    /** 业务状态码 */\n    private int code;\n\n    /** HTTP 状态 */\n    private HttpStatus httpStatus;\n\n\n    /**\n     * 通用构造类\n     * @param code code\n     * @param httpStatus httpStatus\n     */\n    public HttpException(int code, HttpStatus httpStatus){\n        this.code = code;\n        this.httpStatus = httpStatus;\n    }\n\n\n    /**\n     * 500\n     * @param code code\n     */\n    public HttpException(int code){\n        this.code = code;\n        this.httpStatus = HttpStatus.INTERNAL_SERVER_ERROR;\n    }\n\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-mbt7bdq",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-mbt7bdq"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class NotFoundException extends HttpException {\n\n    public NotFoundException(int code){\n        super(code, HttpStatus.NOT_FOUND); // 404\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-eh2b9q8",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-eh2b9q8"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class ForbiddenException extends HttpException {\n\n    public ForbiddenException(int code){\n        super(code, HttpStatus.FORBIDDEN); // 403\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-f1i0nd5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707233642-f1i0nd5"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "2 不可预知异常"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-cmdcy70",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-cmdcy70"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "不可预知异常通常是由于系统出现 bug、或一些不要抗拒的错误（比如网络中断、服务器宕机等），异常类型为 RuntimeException 类型（运行时异常）"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-dtdncyf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-dtdncyf"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如使用 Postman 测试报错信息如下："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "org.springframework.http.converter.HttpMessageNotReadableException"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，此异常是 SpringMVC 在进行参数转换时报的错误。"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-2oug6m6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-2oug6m6"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "针对不可预知异常问题其解决方案是："
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-lhunbdl",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Tight": true,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 3,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210707233642-lhunbdl"
+			},
+			"Children": [
+				{
+					"ID": "20210707233642-h6k29gg",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210707233642-h6k29gg"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-vugo9dx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-vugo9dx"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "我们在 map 中配置 HttpMessageNotReadableException 和错误代码。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233642-qc6pr09",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210707233642-qc6pr09"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-0sxurir",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-0sxurir"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在异常捕获类中对 Exception 异常进行捕获，并从 map 中获取异常类型对应的错误代码，如果存在错误代码则返回此错误，否则统一返回 9999 错误。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-yyi2tae",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707233642-yyi2tae"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "3 全局异常捕获—处理（不）可预知异常"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-0pexa0k",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-0pexa0k"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n * 全局异常处理\n */\n@RestControllerAdvice\n@Slf4j\npublic class GlobalExceptionAdvice {\n\n    @Autowired\n    private CodeConfiguration codeConfiguration;\n\n\n    // 这个不可预知异常完全可以直接抛出9999类似的服务器异常，无需写这些\n    //使用EXCEPTIONS存放异常类型和错误代码的映射，ImmutableMap的特点的一旦创建不可改变，并且线程安全\n    private static ImmutableMap\u003cClass\u003c? extends Throwable\u003e, Integer\u003e EXCEPTIONS;\n    //使用builder来构建一个异常类型和错误代码的异常\n    protected static ImmutableMap.Builder\u003cClass\u003c? extends Throwable\u003e, Integer\u003e builder = ImmutableMap.builder();\n\n    //在这里加入一些基础的异常类型判断。这里只添加了一个示例\n    static {\n        builder.put(HttpMessageNotReadableException.class, 9998);\n    }\n\n\n    /**\n     * 可预知异常（自定义异常类型）\n     */\n    @ExceptionHandler(HttpException.class)\n    public HttpEntity\u003cUnifyResponse\u003e handleHttpException(HttpException exception,\n                                                         HttpServletRequest request,\n                                                         HandlerMethod handlerMethod,\n                                                         HttpMethod httpMethod) {\n        UnifyResponse unifyResponse = UnifyResponse.builder()\n                .code(exception.getCode())\n                .message(codeConfiguration.getMessage(exception.getCode()))\n                .request(httpMethod + \" \" + request.getRequestURI())\n                .build();\n        log.warn(\"{}, 方法为：{}, 异常为：{}\", codeConfiguration.getMessage(exception.getCode()), handlerMethod, exception);\n        // ResponseEntity 继承了 HttpEntity\n        return new ResponseEntity\u003c\u003e(unifyResponse, exception.getHttpStatus());\n    }\n\n\n    /**\n     * 不可预知异常\n     * 已经使用了 @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR) 所以无需返回 HttpEntity\n     */\n    @ExceptionHandler(Exception.class)\n    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)\n    public UnifyResponse handleException(Exception exception,\n                                         HttpServletRequest request,\n                                         HandlerMethod handlerMethod,\n                                         HttpMethod httpMethod) {\n        if (EXCEPTIONS == null) {\n            EXCEPTIONS = builder.build();\n        }\n\n        Integer code = EXCEPTIONS.get(exception.getClass());\n        UnifyResponse unifyResponse;\n        if (Objects.nonNull(code)){\n            unifyResponse = new UnifyResponse(code, codeConfiguration.getMessage(code), httpMethod + \" \" + request.getRequestURI());\n        } else {\n            unifyResponse = new UnifyResponse(9999, codeConfiguration.getMessage(9999), httpMethod + \" \" + request.getRequestURI());\n        }\n\n\n        log.warn(\"系统未知异常, 方法为：{}, 异常为：{}\", handlerMethod, exception);\n        return unifyResponse;\n    }\n\n\n    // ====================后面这些是参数校验时使用======================\n\n    /**\n     * 参数校验异常 （JSON 格式）\n     * 已经使用了 @ResponseStatus(HttpStatus.BAD_REQUEST) 所以无需返回 HttpEntity\n     */\n    @ExceptionHandler(MethodArgumentNotValidException.class)\n    @ResponseStatus(HttpStatus.BAD_REQUEST)\n    public UnifyResponse handleMethodArgumentNotValidException(MethodArgumentNotValidException exception,\n                                                               HttpServletRequest request,\n                                                               HandlerMethod handlerMethod,\n                                                               HttpMethod httpMethod) {\n\n        // 日！这获取到的 error 还是随机顺序 ...\n        List\u003cObjectError\u003e allErrors = exception.getBindingResult().getAllErrors();\n        String message = formatAllErrorsMessage(allErrors);\n\n        UnifyResponse unifyResponse = new UnifyResponse(10001, message, httpMethod + \" \" + request.getRequestURI());\n        log.warn(\"系统未知异常, 方法为：{}, 异常为：{}\", handlerMethod, exception);\n        // ResponseEntity 继承了 HttpEntity\n        return unifyResponse;\n    }\n\n    /**\n     * 参数校验异常 URL 及查询参数（JSON 格式）\n     * 已经使用了 @ResponseStatus(HttpStatus.BAD_REQUEST) 所以无需返回 HttpEntity\n     */\n    @ExceptionHandler(ConstraintViolationException.class)\n    @ResponseStatus(HttpStatus.BAD_REQUEST)\n    public UnifyResponse handleConstraintViolationException(ConstraintViolationException exception,\n                                                            HttpServletRequest request,\n                                                            HandlerMethod handlerMethod,\n                                                            HttpMethod httpMethod) {\n\n        Set\u003cConstraintViolation\u003c?\u003e\u003e constraintViolations = exception.getConstraintViolations();\n        String message = formatAllErrorsMessage(constraintViolations);\n        // String message = formatAllErrorsMessage(allErrors);\n\n        UnifyResponse unifyResponse = new UnifyResponse(10001, message, httpMethod + \" \" + request.getRequestURI());\n        log.warn(\"系统未知异常, 方法为：{}, 异常为：{}\", handlerMethod, exception);\n        // ResponseEntity 继承了 HttpEntity\n        return unifyResponse;\n    }\n\n\n    /**\n     * 格式化参数校验错误信息\n     */\n    private String formatAllErrorsMessage(List\u003cObjectError\u003e allErrors) {\n        StringJoiner stringJoiner = new StringJoiner(\";\");\n        allErrors.forEach(error -\u003e stringJoiner.add(error.getDefaultMessage()));\n        return stringJoiner.toString();\n    }\n\n\n    /**\n     * 格式化参数校验错误信息\n     */\n    private String formatAllErrorsMessage(Set\u003cConstraintViolation\u003c?\u003e\u003e constraintViolations) {\n        StringJoiner stringJoiner = new StringJoiner(\";\");\n        constraintViolations.forEach(error -\u003e {\n            String format = String.format(\"['%s'无法通过校验, %s]\", error.getInvalidValue(), error.getMessage());\n            stringJoiner.add(format.toString());\n        });\n        return stringJoiner.toString();\n    }\n\n\n    // TODO 表单提交 org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors\n\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-i9s7j5u",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233642-i9s7j5u"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "枚举 \u0026 全 200 状态码使用步骤"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-hvffw3d",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707233642-hvffw3d"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "1 自定义异常类—可预知异常"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-dtj5051",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-dtj5051"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@NoArgsConstructor\n@AllArgsConstructor// 由构造方法传入\n@Getter// 提供get方法获取具体信息\npublic class CustomException extends RuntimeException {\n\n    private IStatusCode iStatusCode;\n\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-1fcen3z",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707233642-1fcen3z"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "2 不可预知异常"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-7oxf182",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-7oxf182"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 Postman 测试报错信息如下："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "org.springframework.http.converter.HttpMessageNotReadableException"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，此异常是 SpringMVC 在进行参数转换时报的错误。"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-59tu72i",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-59tu72i"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "针对不可预知异常问题其解决方案是："
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-qf1evd7",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Tight": true,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 3,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210707233642-qf1evd7"
+			},
+			"Children": [
+				{
+					"ID": "20210707233642-ox4gfry",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210707233642-ox4gfry"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-teohx0z",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-teohx0z"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "我们在 map 中配置 HttpMessageNotReadableException 和错误代码。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233642-bs7yiqv",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210707233642-bs7yiqv"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-2p0xywj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-2p0xywj"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在异常捕获类中对 Exception 异常进行捕获，并从 map 中获取异常类型对应的错误代码，如果存在错误代码则返回此错误，否则统一返回 9999 错误。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-lt8fs7c",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707233642-lt8fs7c"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "3 全局异常捕获—处理（不）可预知异常"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-gj5r5pt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-gj5r5pt"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "此处代码理解即可"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-b2uakw3",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-b2uakw3"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@ControllerAdvice//控制器增强\npublic class ExceptionCatch {\n\n    private static final Logger LOGGER = LoggerFactory.getLogger(ExceptionCatch.class);\n\n    //使用EXCEPTIONS存放异常类型和错误代码的映射，ImmutableMap的特点的一旦创建不可改变，并且线程安全\n    private static ImmutableMap\u003cClass\u003c? extends Throwable\u003e, ResultCode\u003e EXCEPTIONS;\n    //使用builder来构建一个异常类型和错误代码的异常\n    protected static ImmutableMap.Builder\u003cClass\u003c? extends Throwable\u003e, ResultCode\u003e builder =\n        ImmutableMap.builder();\n\n    //在这里加入一些基础的异常类型判断。这里只添加了一个示例\n    static {\n        builder.put(HttpMessageNotReadableException.class, CommonCode.INVALID_PARAM);\n    }\n\n    @ExceptionHandler(CustomException.class)//捕获 CustomException异常\n    @ResponseBody//返回JSON数据\n    public ResponseResult customException(CustomException e) {\n        LOGGER.error(\"catch exception:\\n\" + e.getMessage(), e);//catch到异常记录日志\n        return new ResponseResult(e.getResultCode());\n    }\n\n    @ExceptionHandler(Exception.class)//捕获 Exception异常\n    @ResponseBody//返回JSON数据\n    public ResponseResult exception(Exception e) {\n        LOGGER.error(\"catch exception:\\n\" + e.getMessage(), e);//catch到异常记录日志\n        if (EXCEPTIONS == null) {\n            EXCEPTIONS = builder.build();\n        }\n        ResponseResult responseResult;\n        ResultCode resultCode = EXCEPTIONS.get(e.getClass());\n        if (resultCode != null) {\n            responseResult = new ResponseResult(resultCode);\n        } else {\n            responseResult = new ResponseResult(CommonCode.SERVER_ERROR);//99999异常\n        }\n        return responseResult;\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-54laxq3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-54laxq3"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "还需再启动类上注解要扫描异常类所在包"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-5ameuar",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-5ameuar"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@ComponentScan(\"top.conanan.framework\")\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-31301df",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-31301df"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "或使用 @Componet 注解注册该 Bean"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-0dktn9b",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707233642-0dktn9b"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "异常的抛出及处理流程总结 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-h7wr48b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-h7wr48b",
+				"updated": "20210707233739"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "1550681223850.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "./assets/1550681223850-20210707233739-t88ojqn.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-be62sby",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Tight": true,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 3,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210707233642-be62sby"
+			},
+			"Children": [
+				{
+					"ID": "20210707233642-ljvpsny",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210707233642-ljvpsny"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-uku4wfj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-uku4wfj"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "Controller、Service、Dao 中程序员抛出自定义异常"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "；"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "SpringMVC 等框架抛出框架异常类型"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。统一由"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "异常捕获类捕获异常"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，并进行处理"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233642-ynhlz0q",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210707233642-ynhlz0q"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-fs093ni",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-fs093ni"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "捕获到"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "自定义异常则直接取出错误代码及错误信息"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233642-taseqaw",
+					"Type": "NodeListItem",
+					"Data": "3",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 3,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mw==",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20210707233642-taseqaw"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-15n667o",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-15n667o"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "捕获到"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "非自定义异常类型首先从 Map 中找"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "该异常类型是否对应具体的错误代码，如果有则取出错误代码和错误信息并响应给用户，如果从 Map 中找不到异常类型所对应的错误代码则统一为 99999 错误代码"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233642-nii4sbm",
+					"Type": "NodeListItem",
+					"Data": "4",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 4,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "NA==",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20210707233642-nii4sbm"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-p86ulsw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-p86ulsw"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "将"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "错误代码及错误信息以 JSON 格式响应给用户"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-krrrra3",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233642-krrrra3"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "ResponseBodyAdvice 对全 200 状态码增强 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-6iw2akh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-6iw2akh"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "参考挺哥的"
+				},
+				{
+					"Type": "NodeLink",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "语雀"
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://www.yuque.com/bravo1988/java/iodh7z"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-uz3wxtw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707233642-uz3wxtw"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "ResponseBodyAdvice 简介"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-qxne0nm",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233642-qxne0nm"
+			},
+			"Children": [
+				{
+					"ID": "20210707233642-k8b484j",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-k8b484j"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-8qwh53h",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-8qwh53h"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Spring 提供的一个接口，和 AOP 一样的，XxxAdvice 都是用来增强的"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233642-y07jxmn",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-y07jxmn"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-pfaj37a",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-pfaj37a"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "配合@RestControllerAdvice 注解，可以“拦截”返回值"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233642-ndw1aab",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-ndw1aab"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-p0gcjyd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-p0gcjyd"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "通过 supports()方法判断是否需要“拦截”"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-htviyqe",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-htviyqe"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@RestControllerAdvice\npublic class CommonResponseDataAdvice implements ResponseBodyAdvice\u003cObject\u003e {\n\n\n    @Override\n    public boolean supports(MethodParameter methodParameter, Class\u003c? extends HttpMessageConverter\u003c?\u003e\u003e aClass) {\n        // 对所有返回值起作用\n        return true;\n    }\n\n    @Override\n    public Object beforeBodyWrite(Object o,\n                                  MethodParameter methodParameter,\n                                  MediaType mediaType,\n                                  Class\u003c? extends HttpMessageConverter\u003c?\u003e\u003e aClass,\n                                  ServerHttpRequest serverHttpRequest,\n                                  ServerHttpResponse serverHttpResponse) {\n\t\t// 改一行代码即可：把Object返回值用Result封装\n        return Result.success(o);\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-cu6hjzl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707233642-cu6hjzl"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "定义@CosmoController"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-re7t29y",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-re7t29y"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@RestController\n@Retention(RetentionPolicy.RUNTIME)\n@Target({ElementType.TYPE})\npublic @interface CosmoController {\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-uty8f8t",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707233642-uty8f8t"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "ResponseBodyAdvice 统一结果封装"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-gdgxby7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-gdgxby7"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "目标是："
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-9vcpjfm",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233642-9vcpjfm"
+			},
+			"Children": [
+				{
+					"ID": "20210707233642-wide0r0",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-wide0r0"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-ysyy9is",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-ysyy9is"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果使用了@CosmoController，就在 CommonResponseDataAdvice 中使用 Result 封装结果"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233642-1aqz3b0",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-1aqz3b0"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-79792h8",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-79792h8"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果使用了原生的@RestController，就原样返回，不做任何处理"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-jxrbtvm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-jxrbtvm"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "且需要考虑到："
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-gps9qk5",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233642-gps9qk5"
+			},
+			"Children": [
+				{
+					"ID": "20210707233642-juogah3",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-juogah3"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-gt2ydbl",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-gt2ydbl"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果 Controller 返回值已经用 Result 封装过了呢，此时会造成重复嵌套！"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233642-17budyk",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-17budyk"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-bvy8vyo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-bvy8vyo"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "标注了@CosmoController 后，内部个别方法不希望用 Result 封装该怎么做？可以单独再定一个注解"
+								}
+							]
+						},
+						{
+							"ID": "20210707233642-dtcht9l",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707233642-dtcht9l"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "@Retention(RetentionPolicy.RUNTIME)\n@Target({ElementType.TYPE, ElementType.METHOD})\npublic @interface IgnoreCosmoResult {\n}\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233642-m7kcz5m",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-m7kcz5m"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-1u90510",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-1u90510"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "诸如参数校验失败等情况怎么处理呢？"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-mo1llkz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-mo1llkz"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "最终代码如下："
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-857kaz6",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-857kaz6"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@RestControllerAdvice\npublic class CommonResponseDataAdvice implements ResponseBodyAdvice\u003cObject\u003e {\n\n\n    @Override\n    public boolean supports(MethodParameter methodParameter, Class\u003c? extends HttpMessageConverter\u003c?\u003e\u003e aClass) {\n        // 标注了@CosmoController，且类及方法上都没有标注@IgnoreCosmoResult的方法才进行包装\n        return methodParameter.getDeclaringClass().isAnnotationPresent(CosmoController.class)\n                \u0026\u0026 !methodParameter.getDeclaringClass().isAnnotationPresent(IgnoreCosmoResult.class)\n                \u0026\u0026 !methodParameter.getMethod().isAnnotationPresent(IgnoreCosmoResult.class);\n    }\n\n    @Override\n    public Object beforeBodyWrite(Object o,\n                                  MethodParameter methodParameter,\n                                  MediaType mediaType,\n                                  Class\u003c? extends HttpMessageConverter\u003c?\u003e\u003e aClass,\n                                  ServerHttpRequest serverHttpRequest,\n                                  ServerHttpResponse serverHttpResponse) {\n\t\t// 已经包装过的，不再重复包装\n        if (o instanceof Result) {\n            return o;\n        }\n\n        return Result.success(o);\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-tef4pe2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233642-tef4pe2"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "SSM—非前后分离版"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-r41jqai",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707233642-r41jqai"
+			},
+			"Children": [
+				{
+					"ID": "20210707233642-u063hap",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-u063hap"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-btc181n",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-btc181n"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "SpringMVC 在处理请求过程中出现异常信息交由异常处理器进行处理，自定义异常处理器可以实现一个系统的异常处理逻辑"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233642-fq8l3re",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-fq8l3re"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-crb59nb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-crb59nb"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "思路："
+								}
+							]
+						},
+						{
+							"ID": "20210707233642-vzcrkt7",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210707233642-vzcrkt7"
+							},
+							"Children": [
+								{
+									"ID": "20210707233642-9bdyxe2",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233642-9bdyxe2"
+									},
+									"Children": [
+										{
+											"ID": "20210707233642-1k13xt2",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233642-1k13xt2"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "系统中异常包括两类："
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "预期异常"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "和运行时异常"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "RuntimeException"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "，前者通过捕获异常从而获取异常信息，后者主要通过规范代码开发、测试通过手段减少运行时异常的发生"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707233642-vhw5nhj",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210707233642-vhw5nhj"
+									},
+									"Children": [
+										{
+											"ID": "20210707233642-wzc2843",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707233642-wzc2843"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "系统的 dao、service、controller 出现都通过 throws Exception 向上抛出，最后由 SpringMVC"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "前端控制器交由异常处理器"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "进行异常处理"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233642-c7b9vew",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-c7b9vew"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-14mv55x",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-14mv55x"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "自定义异常类(继承 Exception 或 RuntimeException)"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：为了区别不同的异常,通常根据异常类型进行区分"
+								}
+							]
+						},
+						{
+							"ID": "20210707233642-fqwfd9p",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707233642-fqwfd9p"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "public class MyException{\n    public MyException(){};\n    public MyException(String msg){\n        super(msg);\n    };\n}\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707233642-3nnifqz",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707233642-3nnifqz"
+					},
+					"Children": [
+						{
+							"ID": "20210707233642-bb3d37i",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707233642-bb3d37i"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "自定义异常处理器(实现 HandlerExceptionResolver)"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，并"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "在"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"CodeMarkerLen": 1,
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker",
+													"Data": "`"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "spring-config.xml"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker",
+													"Data": "`"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "中配置或使用"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"CodeMarkerLen": 1,
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker",
+													"Data": "`"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "@Component"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker",
+													"Data": "`"
+												}
+											]
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707233642-1jqd6t6",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "amF2YQ==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210707233642-1jqd6t6"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "@Component\npublic class CustomExceptionResolver implements HandlerExceptionResolver {\n   \t//handler:异常处理器对象。发生异常的地方，包名+类名+方法名(形参)的字符串，用于日志\n    @Override\n    public ModelAndView resolveException(HttpServletRequest request, HttpServletResponse response, Object handler,Exception exception) {\n\n        ModelAndView modelAndView = new ModelAndView();\n        // 定义异常信息\n        String msg = \"\";\n\n        // 判断异常类型\n        if (exception instanceof MyException) {\n            // 如果是自定义异常，读取异常信息\n            msg = exception.getMessage();\n        } else {\n            //简写\n            msg = \"服务器访问量过大，请您稍后...\"\n            //或 如果是运行时异常，则取错误堆栈，从堆栈中获取异常信息\n            //Writer out = new StringWriter();\n            //PrintWriter s = new PrintWriter(out);\n            //exception.printStackTrace(s);\n            //msg = out.toString();\n\n        }\n        // 把错误信息发给相关人员,邮件,短信等方式\n        // 返回错误页面，给用户友好页面显示错误信息\n\n        modelAndView.addObject(\"msg\", msg);\n        modelAndView.setViewName(\"error\");\n\n        return modelAndView;\n    }\n}\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

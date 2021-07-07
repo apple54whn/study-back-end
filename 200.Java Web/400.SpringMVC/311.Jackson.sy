@@ -1,0 +1,1439 @@
+{
+	"ID": "20210707233642-k68d60a",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210707233642-k68d60a",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210707233642-ldstpx2",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20210707233642-ldstpx2"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e "
+				},
+				{
+					"ID": "20210707233642-n6n5aqc",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210707233642-n6n5aqc"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "参考这篇"
+						},
+						{
+							"Type": "NodeLink",
+							"Children": [
+								{
+									"Type": "NodeOpenBracket",
+									"Data": "["
+								},
+								{
+									"Type": "NodeLinkText",
+									"Data": "博客"
+								},
+								{
+									"Type": "NodeCloseBracket",
+									"Data": "]"
+								},
+								{
+									"Type": "NodeOpenParen",
+									"Data": "("
+								},
+								{
+									"Type": "NodeLinkDest",
+									"Data": "https://www.baeldung.com/jackson-annotations"
+								},
+								{
+									"Type": "NodeCloseParen",
+									"Data": ")"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-26xjrc5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233642-26xjrc5"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "通用注解"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-ptjfy4x",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20210707233642-ptjfy4x"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e "
+				},
+				{
+					"ID": "20210707233642-e1u4lm4",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210707233642-e1u4lm4"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "序列化和反序列化都生效"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-kluhek2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707233642-kluhek2"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "@JsonProperty 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-h0nbmei",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-h0nbmei"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "添加@JsonProperty注释来表示JSON中的属性名。"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-22mf5bp",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-22mf5bp"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class MyBean {\n    public int id;\n    private String name;\n \n    @JsonProperty(\"name1\")\n    public void setTheName(String name) {\n        this.name = name;\n    }\n \n    @JsonProperty(\"name1\")\n    public String getTheName() {\n        return name;\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-v45v4qe",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "anNvbg==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-v45v4qe"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anNvbg=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "{\"id\":1,\"name1\":\"My bean\"}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-1fo4cnq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233642-1fo4cnq"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "序列化注解"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-aov47zh",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20210707233642-aov47zh"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e "
+				},
+				{
+					"ID": "20210707233642-rpk239t",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210707233642-rpk239t"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "将 Java 对象转为与平台无关的二进制字节流"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-q2xc2zu",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707233642-q2xc2zu"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "@JsonAnyGetter"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-a87e4z0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-a87e4z0"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "@JsonAnyGetter注释允许灵活地使用Map类型字段作为标准属性。"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-ffz1mer",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-ffz1mer"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Data\npublic class ExtendableBean {\n    private String name;\n\n    private Map\u003cString, String\u003e map = new HashMap\u003c\u003e(10);\n\n    private Map\u003cString, String\u003e properties = new HashMap\u003c\u003e(10);\n\n    @JsonAnyGetter\n    public Map\u003cString, String\u003e getProperties() {\n        return properties;\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-9wmjlgj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-9wmjlgj"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当我们序列化这个实体的一个实例时，我们将得到映射中的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "所有键值作为标准的普通属性"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "："
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-dal5ehg",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "anNvbg==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-dal5ehg"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anNvbg=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "{\n  \"name\": \"Tom\",\n  \"map\": {},\n  \"attr2\": \"val2\",\n  \"attr1\": \"val1\",\n  \"attr3\": \"val3\"\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-xg324c9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-xg324c9"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "示例"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-vyhhv03",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-vyhhv03"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Test\npublic void whenSerializingUsingJsonAnyGetter_thenCorrect() throws JsonProcessingException {\n    ExtendableBean bean = new ExtendableBean();\n    bean.setName(\"Tom\");\n    bean.getProperties().put(\"attr1\", \"val1\");\n    bean.getProperties().put(\"attr3\", \"val3\");\n    bean.getProperties().put(\"attr2\", \"val2\");\n\n    String result = new ObjectMapper().writeValueAsString(bean);\n    System.out.println(result);\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-zonp49y",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707233642-zonp49y"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "@JsonGetter 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-t27nv6k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-t27nv6k"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "@JsonGetter注释是@JsonProperty注释的替代方法，用于将方法标记为getter方法，替代原样getter。"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-x6v5rct",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-x6v5rct"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class MyBean {\n    public int id;\n    private String name;\n \n    @JsonGetter(\"name1\")\n    public String getTheName() {\n        return name;\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-a1fwnha",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "anNvbg==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-a1fwnha"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anNvbg=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "{\"id\":1,\"name1\":\"My bean\"}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-e4syz7c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-e4syz7c"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "示例"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-dkkq07b",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-dkkq07b"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Test\npublic void whenSerializingUsingJsonGetter_thenCorrect() throws JsonProcessingException {\n\n    MyBean bean = new MyBean(1, \"My bean\");\n\n    String result = new ObjectMapper().writeValueAsString(bean);\n    System.out.println(result);\n\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-24omxw0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707233642-24omxw0"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "@JsonPropertyOrder"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-80v6mu6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-80v6mu6"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们可以使用@JsonPropertyOrder注释来指定序列化中属性的顺序。"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-pengfxo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-pengfxo"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们还可以使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "@JsonPropertyOrder(alphabetic=true)"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "按"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "字母顺序"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "排列属性。"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-uxgf8mu",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-uxgf8mu"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@JsonPropertyOrder({ \"name\", \"id\" })\npublic class MyBean {\n    public int id;\n    public String name;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-9w5c2gq",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "anNvbg==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-9w5c2gq"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anNvbg=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "{\n    \"name\":\"My bean\",\n    \"id\":1\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-7rrwxkz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707233642-7rrwxkz"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "@JsonRawValue"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-chm7amd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-chm7amd"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "@JsonRawValue注释可以指示Jackson按原样序列化属性。 可以设置true或false来定义此注释是否处于活动状态（一般不用）"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-hwpf9yv",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-hwpf9yv"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class RawBean {\n    public String name;\n \n    @JsonRawValue\n    public String json;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-fc1mx7s",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "anNvbg==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-fc1mx7s"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anNvbg=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "{\n    \"name\":\"My bean\",\n    \"json\":{\n        \"attr\":false\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-gncgxd7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-gncgxd7"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "示例"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-4dq53mu",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-4dq53mu"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Test\npublic void whenSerializingUsingJsonGetter_thenCorrect() throws JsonProcessingException {\n\n    MyBean bean = new MyBean(1, \"My bean\");\n    String result = new ObjectMapper().writeValueAsString(bean);\n    System.out.println(result);\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-f06pcvb",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707233642-f06pcvb"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "@JsonValue 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-7guzd3w",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-7guzd3w"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "@JsonValue表示该库将用于序列化整个实例的单个方法。"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-m9pcckr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-m9pcckr"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "例如，在enum中，我们使用@JsonValue注释getName，以便通过它的名称序列化任何这样的实体"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-q03k7jc",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-q03k7jc"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public enum TypeEnumWithValue {\n    TYPE1(1, \"Type A\"), TYPE2(2, \"Type 2\");\n \n    private Integer id;\n    private String name;\n \n    // standard constructors\n \n    @JsonValue\n    public String getName() {\n        return name;\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-sngd6sb",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "anNvbg==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-sngd6sb"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anNvbg=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\"Type A\"\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-dpzhpdc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-dpzhpdc"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "示例"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-g5j2q8z",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-g5j2q8z"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Test\npublic void whenSerializingUsingJsonValue_thenCorrect() throws IOException {\n\n    String enumAsString = new ObjectMapper().writeValueAsString(TypeEnumWithValue.TYPE1);\n    System.out.println(enumAsString);\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-covuupq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233642-covuupq"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "反序列化注解"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-nh2t0gn",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707233642-nh2t0gn"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "@JsonSetter 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-b8bocq5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-b8bocq5"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "@JsonSetter 注释是@JsonProperty注释的替代方法，用于将方法标记为setter方法，替代原样setter。"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-256lapr",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "anNvbg==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-256lapr"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anNvbg=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "{\"id\":1,\"name1\":\"My bean\"}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-0j4zy5p",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-0j4zy5p"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class MyBean {\n    public int id;\n    private String name;\n \n    @JsonSetter(\"name1\")\n    public String getTheName() {\n        return name;\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-8v4o17r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-8v4o17r"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "示例"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-q6bgntm",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-q6bgntm"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Test\npublic void whenSerializingUsingJsonGetter_thenCorrect() throws JsonProcessingException {\n\n    MyBean bean = new MyBean(1, \"My bean\");\n\n    String result = new ObjectMapper().writeValueAsString(bean);\n    System.out.println(result);\n\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-fdoszd5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707233642-fdoszd5"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "属性包含注解"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-o5xvfd6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707233642-o5xvfd6"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "@JsonIgnoreProperties 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-mwj85s8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-mwj85s8"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "标记Jackson将忽略的属性或属性列表。可用在类、方法、构造器、字段上"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-d3omeap",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-d3omeap"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "设置@JsonIgnoreProperties注释的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ignoreUnknown=true"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。 定义可以在"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "反序列化"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "期间仅忽略任何无法识别的属性的属性。如果为true，则所有无法识别的属性（即没有setter或builder接受它们）都将在没有警告的情况下被忽略（尽管仍会调用未知属性的处理程序）。"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "对序列化没有任何影响"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。即常用于"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "RequesBody"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-ruwl3c1",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-ruwl3c1"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@JsonIgnoreProperties({ \"id\" })\npublic class BeanWithIgnore {\n    public int id;\n    public String name;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-fah43jo",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "anNvbg==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-fah43jo"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "anNvbg=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "{\"name\":\"My bean\"}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-o683csn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-o683csn"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "示例"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-qewilk7",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-qewilk7"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Test\npublic void whenSerializingUsingJsonIgnoreProperties_thenCorrect()\n    throws JsonProcessingException {\n\n    BeanWithIgnore bean = new BeanWithIgnore(1, \"My bean\");\n\n    String result = new ObjectMapper().writeValueAsString(bean);\n    System.out.println(result);\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		}
+	]
+}

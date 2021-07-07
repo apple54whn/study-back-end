@@ -1,0 +1,1518 @@
+{
+	"ID": "20210707214420-8hrxe7q",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210707214420-8hrxe7q",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210707214420-0lbg8kt",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707214420-0lbg8kt"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "简介"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-ri51vvf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-ri51vvf"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "到目前为止，臭名昭著的空指针异常是导致 Java 应用程序失败的最常见原因。 以前，为了解决空指针异常，Google 公司著名的 Guava 项目引入了"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Optional"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "类， Guava 通过使用检查空值的方式来防止代码污染，它鼓励程序员写更干净的代 码。受到 Google Guava 的启发，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Optional"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "类已经成为 Java 8 类库的一部分。"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-227xyiy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-227xyiy"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "java.util.Optional\u003cT\u003e"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 是一个"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "容器类"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，它可以保存类型 T 的值，代表这个值存在；或者仅仅保存 null，表示这个值不存在。原来用 null 表示一个值不存在，现在 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Optional"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 可以更好的表达这个概念。并且可以避免空指针异常。"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-4o0xb1w",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-4o0xb1w"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Optional"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "类的 Javadoc 描述如下：这是一个可以为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "null"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的容器对象。如果值存在 则"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "isPresent()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "方法会返回"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "true"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，调用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "get()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "方法会返回该对象。"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-wbn8wep",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707214420-wbn8wep"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "使用"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-nzxk629",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214420-nzxk629"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "创建"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-lwyip5h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-lwyip5h"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "创建"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"CodeMarkerLen": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker",
+									"Data": "`"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "Optional"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker",
+									"Data": "`"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "类对象的方法"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-1smcirp",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214420-1smcirp"
+			},
+			"Children": [
+				{
+					"ID": "20210707214420-yt5rykn",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-yt5rykn"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-5ptp48s",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-5ptp48s"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Optional.of(T t)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-cjpld8p",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-cjpld8p"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "创建一个 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Optional"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 实例，"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "t"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "必须"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "非空"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ";"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-wrra1a6",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-wrra1a6"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-qvck4kc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-qvck4kc"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Optional.ofNullable(T t)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-sf5b0a3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-sf5b0a3"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "t"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "可以为"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "null"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-n6xq9ak",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-n6xq9ak"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-3f6pj8t",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-3f6pj8t"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Optional.empty()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-i285dza",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-i285dza"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "创建一个空的 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Optional"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 实例"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-ela0cmc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214420-ela0cmc"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "判断、Consumer"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-vm1sllx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-vm1sllx"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "判断"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"CodeMarkerLen": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker",
+									"Data": "`"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "Optional"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker",
+									"Data": "`"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "容器中是否包含对象"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-s42s0fp",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214420-s42s0fp"
+			},
+			"Children": [
+				{
+					"ID": "20210707214420-yne2t7u",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-yne2t7u"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-6vrtm8g",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-6vrtm8g"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "boolean isPresent()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-2bmil0n",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-2bmil0n"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "判断是否包含对象。不推荐这样用！和 if else 没区别！"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-ezqhsbz",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-ezqhsbz"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-rihcx8v",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-rihcx8v"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "void ifPresent(Consumer\u003c? super T\u003e consumer)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 🔥"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-gjv1zqm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-gjv1zqm"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果有值，就执行 Consumer 接口的实现代码，并且该值会作为参数传给它，消费掉。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-h4my06n",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214420-h4my06n"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "获取、Supplier"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-rb7pq8x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-rb7pq8x"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "获取"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"CodeMarkerLen": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker",
+									"Data": "`"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "Optional"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker",
+									"Data": "`"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "容器的对象"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-x0fpv5i",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707214420-x0fpv5i"
+			},
+			"Children": [
+				{
+					"ID": "20210707214420-393pq8t",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-393pq8t"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-4oc06w7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-4oc06w7"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "T get()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-ucjutj9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-ucjutj9"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果调用对象包含值，返回该值，否则抛异常。注意，这里"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "直接使用 get IDEA 会有黄色警告"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，因为这样就和普通用法一样了，失去 Optional 存在的意义。且注意，这里 get 后若没有值，则直接抛异常，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "将可能产生的 NPE 提前"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（类似 fast fail 机制；泛型的提前到编译期；）"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-gwet3xr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-gwet3xr"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "这个方法封装的很有用，但是一般推荐下面的用法"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-uwv8hs4",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-uwv8hs4"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-fi6oulc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-fi6oulc"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "T orElse(T other)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 🔥"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-87ifbkq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-87ifbkq"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果有值则将其返回，否则"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "直接返回指定"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的 other 对象。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-nkislb5",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-nkislb5"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-xwdaufj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-xwdaufj"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "T orElseGet(Supplier\u003c? extends T\u003e other)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 🔥"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-j13u4uv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-j13u4uv"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果有值则将其返回，否则返回由"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Supplier"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "接口"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "实现提供"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的对象。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707214420-ail46pk",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707214420-ail46pk"
+					},
+					"Children": [
+						{
+							"ID": "20210707214420-p4mbbhw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-p4mbbhw"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "T orElseThrow(Supplier\u003c? extends X\u003e exceptionSupplier)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 🔥"
+								}
+							]
+						},
+						{
+							"ID": "20210707214420-953c5u4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707214420-953c5u4"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果有值则将其返回，否则抛出由"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Supplier"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "接口"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "实现提供"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的异常。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-t6l6nsn",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707214420-t6l6nsn"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "示例"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-szshvh9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707214420-szshvh9"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "示例 1"
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-oahwiyi",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707214420-oahwiyi"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Data\n@AllArgsConstructor\n@NoArgsConstructor\npublic class Girl {\n    private String name;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-r82tzjf",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707214420-r82tzjf"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Data\n@NoArgsConstructor\n@AllArgsConstructor\npublic class Boy {\n\n    private Girl girl;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-0ft7p7t",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707214420-0ft7p7t"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Test\nvoid test1() {\n    // 可能是其他地方传来的值，不确定其是否为null\n    Girl girl = null;\n\n    //of(T t):保证t是非空的，对于 null 执行会报 NPE\n    // Optional\u003cGirl\u003e optionalGirl1 = Optional.of(girl);\n\n    //ofNullable(T t)：t可以为null，执行输出为Optional.empty\n    Optional\u003cGirl\u003e optionalGirl2 = Optional.ofNullable(girl);\n    System.out.println(optionalGirl2);// Optional.empty\n\n\n    //orElse(T t1):如果当前的Optional内部封装的t是非空的，则返回内部的t；如果内部的t是空的，则返回orElse()方法中的参数t1.\n    Girl girl1 = optionalGirl2.orElse(new Girl(\"赵丽颖\"));\n    System.out.println(girl1);// Girl(name=赵丽颖)\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707214420-903vxob",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707214420-903vxob"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Test\npublic void test2(){\n    // 可能其他地方传入的值，无法确定其是否为 null\n    Boy boy = new Boy();\n    boy = null;\n\n    String girlName = getGirlName(boy);\n    System.out.println(girlName);\n\n}\n\n//优化之前的 getGirlName():\npublic String getGirlName(Boy boy){\n    return boy.getGirl().getName();\n}\n\n\n//优化以后的 getGirlName():\npublic String getGirlName1(Boy boy){\n    if(boy != null){\n        Girl girl = boy.getGirl();\n        if(girl != null){\n            return girl.getName();\n        }\n    }\n    return null;\n}\n\n@Test\npublic void test3(){\n    // 分别注释如下可得结果\n    Boy boy = null;// 迪丽热巴\n    boy = new Boy();// 古力娜扎\n    boy = new Boy(new Girl(\"桥本有菜\"));// 桥本有菜\n    String girlName = getGirlName2(boy);\n    System.out.println(girlName);\n}\n\n\n//使用 Optional 容器后的 getGirlName():\npublic String getGirlName2(Boy boy){\n\n    Optional\u003cBoy\u003e boyOptional = Optional.ofNullable(boy);\n    // 此时的boy1一定非 null\n    Boy boy1 = boyOptional.orElse(new Boy(new Girl(\"迪丽热巴\")));\n    // 但是 girl 可能为 null\n    Girl girl = boy1.getGirl();\n\n    Optional\u003cGirl\u003e girlOptional = Optional.ofNullable(girl);\n    // girl1一定非空\n    Girl girl1 = girlOptional.orElse(new Girl(\"古力娜扎\"));\n    return girl1.getName();\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		}
+	]
+}

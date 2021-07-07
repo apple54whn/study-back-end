@@ -1,0 +1,657 @@
+{
+	"ID": "20210707225146-xyyi1x5",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210707225146-xyyi1x5",
+		"updated": "20210705232520"
+	},
+	"Children": [
+		{
+			"ID": "20210707225159-y66i3kw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707225159-y66i3kw",
+				"updated": "20210705232520"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "什么是 JMM？"
+				}
+			]
+		},
+		{
+			"ID": "20210707225159-1rdrkoe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707225159-1rdrkoe",
+				"updated": "20210705232827"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "JMM 是规范，规定了"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "对变量的写入操作在何时对其他线程可见"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "！"
+				}
+			]
+		},
+		{
+			"ID": "20210707225159-pk2qa4c",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210707225159-pk2qa4c",
+				"updated": "20210705233623"
+			},
+			"Children": [
+				{
+					"ID": "20210707225159-c6izzpt",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707225159-c6izzpt"
+					},
+					"Children": [
+						{
+							"ID": "20210707225159-e8lp75f",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707225159-e8lp75f",
+								"updated": "20210705232932"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "原子性"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707225159-i3m34lw",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707225159-i3m34lw",
+						"updated": "20210705233532"
+					},
+					"Children": [
+						{
+							"ID": "20210707225159-857cbjy",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707225159-857cbjy",
+								"updated": "20210705233532"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "有序性：编译器、CPU、运行时的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "指令重排"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707225159-y7ezhdi",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707225159-y7ezhdi",
+						"updated": "20210705233623"
+					},
+					"Children": [
+						{
+							"ID": "20210707225159-zmb869m",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707225159-zmb869m",
+								"updated": "20210705233623"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "可见性：CPU、寄存器、L1、L2、L3 Cache、主存等"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "多级缓存"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707225159-dm4s0ur",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707225159-dm4s0ur",
+				"updated": "20210705233529"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "上述都可能导致在并发程序中，无法获取到变量的最新值"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "！"
+				}
+			]
+		},
+		{
+			"ID": "20210707225159-z5gi7ps",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707225159-z5gi7ps",
+				"updated": "20210705233441"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在 Java 语言规范中维护一个类似串行（"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "只针对串行、单线程"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "）的语义："
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "只要程序最终结果与在严格串行环境中执行的结果相同，则上述指令重排、缓存优化都是允许的"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "！"
+				}
+			]
+		},
+		{
+			"ID": "20210707225159-tsm1h2x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707225159-tsm1h2x",
+				"updated": "20210705232954"
+			}
+		},
+		{
+			"ID": "20210707225159-h0nq9pa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707225159-h0nq9pa",
+				"updated": "20210705233901"
+			}
+		},
+		{
+			"ID": "20210707225159-b5yrtos",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707225159-b5yrtos",
+				"updated": "20210705234403"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Happens—Before \u0026 排序"
+				}
+			]
+		},
+		{
+			"ID": "20210707225159-c8t4ze7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707225159-c8t4ze7",
+				"updated": "20210705234813"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "要"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "保证执行操作B的线程可以看到操作A的结果"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "（无论是否在同一线程），"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "A和B之间必须满足 Happens—Before 关系"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "若不满足，则JVM可以对他们『任意』重排序"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "！"
+				}
+			]
+		},
+		{
+			"ID": "20210707225159-wtjtnai",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707225159-wtjtnai",
+				"updated": "20210705234139"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Happens—Before 规则"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "包括 7 个"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "："
+				}
+			]
+		},
+		{
+			"ID": "20210707225159-l6aw9vi",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210707225159-l6aw9vi",
+				"updated": "20210705234131"
+			},
+			"Children": [
+				{
+					"ID": "20210707225159-ekojipm",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707225159-ekojipm"
+					},
+					"Children": [
+						{
+							"ID": "20210707225159-v5z44em",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707225159-v5z44em",
+								"updated": "20210705234036"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "程序顺序规则"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707225159-krfi9v4",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707225159-krfi9v4"
+					},
+					"Children": [
+						{
+							"ID": "20210707225159-ri01mtf",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707225159-ri01mtf",
+								"updated": "20210705234101"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Monitor 锁规则"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707225159-ne2hgci",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707225159-ne2hgci"
+					},
+					"Children": [
+						{
+							"ID": "20210707225159-jak0lm4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707225159-jak0lm4",
+								"updated": "20210705234112"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "volatile 变量规则"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707225159-7294tv0",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707225159-7294tv0"
+					},
+					"Children": [
+						{
+							"ID": "20210707225159-xrge60d",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707225159-xrge60d",
+								"updated": "20210705234117"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "线程启动规则"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707225159-csw8gjo",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707225159-csw8gjo"
+					},
+					"Children": [
+						{
+							"ID": "20210707225159-3jpsa3t",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707225159-3jpsa3t",
+								"updated": "20210705234123"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "中断规则"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707225159-ylru4md",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707225159-ylru4md"
+					},
+					"Children": [
+						{
+							"ID": "20210707225159-40bu2r5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707225159-40bu2r5",
+								"updated": "20210705234127"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "终结器规则"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707225159-nn24v8j",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707225159-nn24v8j",
+						"updated": "20210705234131"
+					},
+					"Children": [
+						{
+							"ID": "20210707225159-bknt845",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707225159-bknt845",
+								"updated": "20210705234131"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "传递性"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707225159-12ntx37",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707225159-12ntx37",
+				"updated": "20210707000725"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20210707225159-l6mupqg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707225159-l6mupqg",
+				"updated": "20210707001213"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		}
+	]
+}

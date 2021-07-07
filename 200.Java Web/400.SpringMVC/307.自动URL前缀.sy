@@ -1,0 +1,357 @@
+{
+	"ID": "20210707233642-v11zybh",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210707233642-v11zybh",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210707233642-xmguzrh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-xmguzrh"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "什么意思呢？"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-6vch3j9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-6vch3j9"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在如下项目结构中："
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-bfu2luq",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-bfu2luq"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "——top.conanan.demo\n————api\n——————v1\n————————HelloController\n——————v2\n————————Hello2Controller\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-e0yu66f",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-e0yu66f"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "HelloController 如下："
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-00jugm4",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-00jugm4"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@RestController\n@RequestMapping(\"/v1/hello\")\npublic class HelloController {\n\n    @PostMapping(\"/test\")\n    public String test() {\n        return \"hello world\";\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-bxaodtg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-bxaodtg"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当我们要访问 test 接口时，请求的 url 为："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "host:port/v1/hello/test"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-jr4en6y",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-jr4en6y"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "那么如何不用写 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "v1"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "或"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "v2"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "呢？"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-taxcmp8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707233642-taxcmp8"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以重写"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "WebMvcRegistrations"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "接口的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "getRequestMappingHandlerMapping()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "方法"
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-yrhfy41",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-yrhfy41"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Configuration// 必须加上 @Configuration\npublic class AutoPrefixConfiguration implements WebMvcRegistrations {\n\n    @Override\n    public RequestMappingHandlerMapping getRequestMappingHandlerMapping() {\n        return new AutoPrefixUrlMapping();\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-rrblocr",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-rrblocr"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n * RequestMappingHandlerMapping Spring MVC 用于处理 @RequestMapping 的类\n */\npublic class AutoPrefixUrlMapping extends RequestMappingHandlerMapping {\n\n    @Value(\"${missyou.api-package}\")\n    public String apiPackage;\n\n\n    @Override\n    protected RequestMappingInfo getMappingForMethod(Method method, Class\u003c?\u003e handlerType) {\n\n        RequestMappingInfo requestMappingInfo = super.getMappingForMethod(method, handlerType);\n\n        // 这里除了自己写的 @RequestMapping 等注解和系统的 /error 不为 null，其余都为 null（会自动生成需要 RequestMapping）\n        if (requestMappingInfo == null){\n            return null;\n        }\n\n        // 这里只拦截如 com.lin.missyou.api 的包下的 @RequestMapping，\n        // 其他的 Spring 默认配置的 @RequestMapping 都直接放掉（如, /error）\n        String packageName = handlerType.getPackage().getName();\n        if (!packageName.startsWith(apiPackage))\n            return requestMappingInfo;\n\n\n        // 这里才是拦截到\"自己\"添加 @RequestMapping 注解的方法\n        String prefix = getPrefix(handlerType);\n        // 注意这里的 RequestMappingInfo 只有静态方法可以操作该类\n        // combine 联合。拼接前缀和 @RequestMapping 注解的 value\n        return RequestMappingInfo.paths(prefix).build().combine(requestMappingInfo);\n\n\n    }\n\n    private String getPrefix(Class\u003c?\u003e handlerType){\n        // 获取的包名如：com.lin.missyou.api.v1\n        String packageName = handlerType.getPackage().getName();\n        String dotPath = packageName.replace(apiPackage, \"\");\n        return dotPath.replaceAll(\"\\\\.\", \"/\");\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707233642-3fwuprb",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eWFtbA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707233642-3fwuprb"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eWFtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "missyou:\n  api-package: com.lin.missyou.api\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,1131 @@
+{
+	"ID": "20210707232652-t27tirn",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210707232652-t27tirn",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210707232652-fh9qque",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20210707232652-fh9qque"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "# "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Servlet 3.0 及纯注解配置"
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-dd25ocm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707232652-dd25ocm"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这章节就是试试，但是在纯注解配置 Mybatis 时失败，令人遗憾。"
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-kzucmue",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707232652-kzucmue"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "详细的查看文档，搜索 JCP 并搜 Servlet 下载即可"
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-p6mruw4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707232652-p6mruw4"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "ServletContainerInitializer"
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-b29mq85",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707232652-b29mq85"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "文档的 8.2.4 章节—Shared libraries（共享库） / runtimes pluggability（运行时可插拔性）"
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-3tu9gey",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Tight": true,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 3,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210707232652-3tu9gey"
+			},
+			"Children": [
+				{
+					"ID": "20210707232652-l0pd51m",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210707232652-l0pd51m"
+					},
+					"Children": [
+						{
+							"ID": "20210707232652-uxxsub6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707232652-uxxsub6"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Servlet 容器启动会扫描，当前应用里面每一个 jar 包的 ServletContainerInitializer 的实现"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707232652-ay1px8a",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210707232652-ay1px8a"
+					},
+					"Children": [
+						{
+							"ID": "20210707232652-rkbg7te",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707232652-rkbg7te"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "提供 ServletContainerInitializer 的实现类，必须绑定在 META-INF/services/javax.servlet.ServletContainerInitializer，文件的内容就是 ServletContainerInitializer 实现类的全类名"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-jjzb2a5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707232652-jjzb2a5"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "总结：容器在启动应用的时候，会扫描当前应用每一个 jar 包里面 META-INF/services/javax.servlet."
+				},
+				{
+					"Type": "NodeMark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker",
+							"Data": "=="
+						},
+						{
+							"Type": "NodeStrong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "ServletContainerInitializer"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker",
+							"Data": "=="
+						}
+					]
+				},
+				{
+					"Type": "NodeSoftBreak",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "指定的实现类，启动并运行这个实现类的方法；"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "@HandlesTypes"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "注解用于传入感兴趣的类型。"
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-2zqdnua",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707232652-2zqdnua"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "ServletContext 注册三大组件"
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-2yhtf1p",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707232652-2yhtf1p"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "//容器启动的时候会将@HandlesTypes指定的这个类型下面的子类（实现类，子接口等）传递过来；\n//传入感兴趣的类型；\n@HandlesTypes(value={HelloService.class})\npublic class MyServletContainerInitializer implements ServletContainerInitializer {\n\n\t/**\n\t * 应用启动的时候，会运行onStartup方法；\n\t *\n\t * Set\u003cClass\u003c?\u003e\u003e arg0：感兴趣的类型的所有子类型；\n\t * ServletContext arg1:代表当前Web应用的ServletContext；一个Web应用一个ServletContext；\n\t *\n\t * 1）、使用ServletContext注册Web组件（Servlet、Filter、Listener）\n\t * 2）、使用编码的方式，在项目启动的时候给ServletContext里面添加组件；\n\t * \t\t必须在项目启动的时候来添加；\n\t * \t\t1）、ServletContainerInitializer得到的ServletContext；\n\t * \t\t2）、ServletContextListener得到的ServletContext；\n\t */\n\t@Override\n\tpublic void onStartup(Set\u003cClass\u003c?\u003e\u003e arg0, ServletContext sc) throws ServletException {\n\t\tSystem.out.println(\"感兴趣的类型：\");\n\t\tfor (Class\u003c?\u003e claz : arg0) {\n\t\t\tSystem.out.println(claz);\n\t\t}\n\n\t\t//注册组件  ServletRegistration\n\t\tServletRegistration.Dynamic servlet = sc.addServlet(\"userServlet\", new UserServlet());\n\t\t//配置servlet的映射信息\n\t\tservlet.addMapping(\"/user\");\n\n\n\t\t//注册Listener\n\t\tsc.addListener(UserListener.class);\n\n\t\t//注册Filter  FilterRegistration\n\t\tFilterRegistration.Dynamic filter = sc.addFilter(\"userFilter\", UserFilter.class);\n\t\t//配置Filter的映射信息\n\t\tfilter.addMappingForUrlPatterns(EnumSet.of(DispatcherType.REQUEST), true, \"/*\");\n\t}\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-4ira7ac",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707232652-4ira7ac"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "与 SpringMVC 整合"
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-fs1m5za",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20210707232652-fs1m5za"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e "
+				},
+				{
+					"ID": "20210707232652-5hlko4f",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210707232652-5hlko4f"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "查看 Spring 官方文档即可"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-w53dp69",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707232652-w53dp69"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Children": [
+						{
+							"Type": "NodeBang",
+							"Data": "!"
+						},
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "./assets/mvc-context-hierarchy-9020383.png"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-zvqzo6b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707232652-zvqzo6b"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "原理"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-9puq42h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707232652-9puq42h"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "1、web 容器在启动的时候，会扫描每个 jar 包下的 META-INF/services/javax.servlet.ServletContainerInitializer"
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-gekdzwi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707232652-gekdzwi"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "2、加载这个文件指定的类 SpringServletContainerInitializer"
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-t7rysbj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707232652-t7rysbj"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "3、spring 的应用一启动会加载感兴趣的 WebApplicationInitializer 接口的下的所有组件；"
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-mkl09uh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707232652-mkl09uh"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "4、并且为 WebApplicationInitializer 组件创建对象（组件不是接口，不是抽象类）"
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-imkujmx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707232652-imkujmx"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "1）、AbstractContextLoaderInitializer：创建根容器；createRootApplicationContext()；"
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-az2n0te",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707232652-az2n0te"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "2）、AbstractDispatcherServletInitializer："
+				},
+				{
+					"Type": "NodeSoftBreak",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "创建一个 web 的 ioc 容器；createServletApplicationContext();"
+				},
+				{
+					"Type": "NodeSoftBreak",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "创建了 DispatcherServlet；createDispatcherServlet()；"
+				},
+				{
+					"Type": "NodeSoftBreak",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "将创建的 DispatcherServlet 添加到 ServletContext 中；"
+				},
+				{
+					"Type": "NodeSoftBreak",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "getServletMappings();"
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-gokcr96",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707232652-gokcr96"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "3）、AbstractAnnotationConfigDispatcherServletInitializer：注解方式配置的 DispatcherServlet 初始化器"
+				},
+				{
+					"Type": "NodeSoftBreak",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "创建根容器：createRootApplicationContext()"
+				},
+				{
+					"Type": "NodeSoftBreak",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "getRootConfigClasses();传入一个配置类"
+				},
+				{
+					"Type": "NodeSoftBreak",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "创建 web 的 ioc 容器： createServletApplicationContext();"
+				},
+				{
+					"Type": "NodeSoftBreak",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeText",
+					"Data": "获取配置类；getServletConfigClasses();"
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-skp07ir",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707232652-skp07ir"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "总结：以注解方式来启动 SpringMVC；"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "继承"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"CodeMarkerLen": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker",
+									"Data": "`"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "AbstractAnnotationConfigDispatcherServletInitializer"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker",
+									"Data": "`"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "；"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "实现抽象方法"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "指定 DispatcherServlet 等的配置信息（和在 web.xml 中功能一致）；"
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-pev84pb",
+			"Type": "NodeThematicBreak",
+			"Properties": {
+				"id": "20210707232652-pev84pb"
+			}
+		},
+		{
+			"ID": "20210707232652-pi3iz7o",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707232652-pi3iz7o"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "定制 SpringMVC；"
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-se68nhw",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 3,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210707232652-se68nhw"
+			},
+			"Children": [
+				{
+					"ID": "20210707232652-4zhnomf",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210707232652-4zhnomf"
+					},
+					"Children": [
+						{
+							"ID": "20210707232652-y6p062b",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707232652-y6p062b"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "@EnableWebMvc"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：开启 SpringMVC 定制配置功能；与"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "\u003cmvc:annotation-driven/\u003e"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "功能一致"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707232652-7uoug1l",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210707232652-7uoug1l"
+					},
+					"Children": [
+						{
+							"ID": "20210707232652-sw42o8z",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707232652-sw42o8z"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "配置组件（视图解析器、视图映射、静态资源映射、拦截器。。。）"
+								}
+							]
+						},
+						{
+							"ID": "20210707232652-4zip2ez",
+							"Type": "NodeList",
+							"ListData": {
+								"Typ": 1,
+								"Tight": true,
+								"Start": 1,
+								"Delimiter": 46,
+								"Padding": 3,
+								"Marker": "MQ==",
+								"Num": 1
+							},
+							"Properties": {
+								"id": "20210707232652-4zip2ez"
+							},
+							"Children": [
+								{
+									"ID": "20210707232652-0p7mkf1",
+									"Type": "NodeListItem",
+									"Data": "1",
+									"ListData": {
+										"Typ": 1,
+										"Tight": true,
+										"Start": 1,
+										"Delimiter": 46,
+										"Padding": 3,
+										"Marker": "MQ==",
+										"Num": 1
+									},
+									"Properties": {
+										"id": "20210707232652-0p7mkf1"
+									},
+									"Children": [
+										{
+											"ID": "20210707232652-wr344zb",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707232652-wr344zb"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "实现"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "WebMvcConfigurer"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "重写全部方法！！！可以配置任何东西。不如下面的实现类方便。"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707232652-2h3pqef",
+									"Type": "NodeListItem",
+									"Data": "2",
+									"ListData": {
+										"Typ": 1,
+										"Tight": true,
+										"Start": 2,
+										"Delimiter": 46,
+										"Padding": 3,
+										"Marker": "Mg==",
+										"Num": 2
+									},
+									"Properties": {
+										"id": "20210707232652-2h3pqef"
+									},
+									"Children": [
+										{
+											"ID": "20210707232652-i2na23h",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707232652-i2na23h"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "继承"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "WebMvcConfigurerAdapter"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "（Spring5.0 后过时）"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707232652-ivyowp0",
+									"Type": "NodeListItem",
+									"Data": "3",
+									"ListData": {
+										"Typ": 1,
+										"Tight": true,
+										"Start": 3,
+										"Delimiter": 46,
+										"Padding": 3,
+										"Marker": "Mw==",
+										"Num": 3
+									},
+									"Properties": {
+										"id": "20210707232652-ivyowp0"
+									},
+									"Children": [
+										{
+											"ID": "20210707232652-797wlx7",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707232652-797wlx7"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "实现"
+														},
+														{
+															"Type": "NodeCodeSpan",
+															"CodeMarkerLen": 1,
+															"Children": [
+																{
+																	"Type": "NodeCodeSpanOpenMarker",
+																	"Data": "`"
+																},
+																{
+																	"Type": "NodeCodeSpanContent",
+																	"Data": "WebMvcConfigurer"
+																},
+																{
+																	"Type": "NodeCodeSpanCloseMarker",
+																	"Data": "`"
+																}
+															]
+														},
+														{
+															"Type": "NodeText",
+															"Data": "接口"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-gcfjquy",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707232652-gcfjquy"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "//web容器启动的时候创建对象；调用方法来初始化容器以前前端控制器\npublic class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {\n\n\t//获取根容器的配置类；（Spring的配置文件）   父容器；\n\t@Override\n\tprotected Class\u003c?\u003e[] getRootConfigClasses() {\n\t\treturn new Class\u003c?\u003e[]{RootConfig.class};\n\t}\n\n\t//获取web容器的配置类（SpringMVC配置文件）  子容器；\n\t@Override\n\tprotected Class\u003c?\u003e[] getServletConfigClasses() {\n\t\treturn new Class\u003c?\u003e[]{AppConfig.class};\n\t}\n\n\t//获取DispatcherServlet的映射信息\n\t//  /：拦截所有请求（包括静态资源（xx.js,xx.png）），但是不包括*.jsp；\n\t//  /*：拦截所有请求；连*.jsp页面都拦截；jsp页面是tomcat的jsp引擎解析的；\n\t@Override\n\tprotected String[] getServletMappings() {\n\t\treturn new String[]{\"/\"};\n\t}\n\n    //该方法下的所有过滤器都会映射到DispatcherServlet\n    @Override\n    protected Filter[] getServletFilters() {\n        //编码过滤器\n        CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter(\"UTF-8\",true);\n        //解决PUT、DELETE等请求的过滤器\n        HiddenHttpMethodFilter hiddenHttpMethodFilter = new HiddenHttpMethodFilter();\n\n        return new Filter[]{characterEncodingFilter,hiddenHttpMethodFilter};\n    }\n\n    @Override\n    protected WebApplicationContext createServletApplicationContext() {\n        return super.createServletApplicationContext();\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-m7u33b1",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707232652-m7u33b1"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Configuration\n@ComponentScan(value=\"cn.itcast\",excludeFilters={\n    @Filter(type=FilterType.ANNOTATION,classes={Controller.class})\n})//扫描cn.itcast下的除过Controller的所有组件，不能添加useDefaultFilters\n@EnableTransactionManagement//开启事务\n@PropertySource(\"classpath:JdbcConfig.properties\")//导入外部配置文件\n@Configuration\npublic class RootConfig {\n\n    @Value(\"${jdbc.driver}\")\n    private String driver;\n    @Value(\"${jdbc.url}\")\n    private String url;\n    @Value(\"${jdbc.username}\")\n    private String username;\n    @Value(\"${jdbc.password}\")\n    private String password;\n\n\n    @Bean\n    public DataSource dataSource(){\n        //DriverManagerDataSource dataSource = new DriverManagerDataSource();//使用spring提供的DataSource\n        DruidDataSource dataSource = new DruidDataSource();//配置Druid的DataSource\n        dataSource.setDriverClassName(driver);\n        dataSource.setUrl(url);\n        dataSource.setUsername(username);\n        dataSource.setPassword(password);\n        return dataSource;\n    }\n\n    @Bean\n    public JdbcTemplate jdbcTemplate(DataSource dataSource){\n        return new JdbcTemplate(dataSource);\n    }\n\n    //配置事务管理器\n    @Bean\n    public PlatformTransactionManager transactionManager(DataSource dataSource){\n        return new DataSourceTransactionManager(dataSource);\n    }\n\n\n   /**配置mybatis，执行后总是报NullPointerException，毫无头绪。上面的JdbcTemplate成功了\n\n    //配置SqlSessionFactory，利用org.mybatis.spring提供的SqlSessionFactoryBean\n    @Bean\n    public SqlSessionFactory sqlSessionFactory(DataSource dataSource){\n        SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();\n\n        //数据源\n        sqlSessionFactoryBean.setDataSource(dataSource);\n\n        //pageHelper的拦截器插件配置\n        PageInterceptor pageInterceptor = new PageInterceptor();\n        Properties properties = new Properties();\n        properties.setProperty(\"helperDialect\",\"mysql\");\n        properties.setProperty(\"reasonable\",\"true\");\n        pageInterceptor.setProperties(properties);\n        sqlSessionFactoryBean.setPlugins(new Interceptor[]{pageInterceptor});\n\n        return sqlSessionFactoryBean.getObject();  //mybatis-spring整合的文档是这么写的\n    }\n\n    //配置Mapper接口扫描\n    @Bean\n    public MapperScannerConfigurer mapperScannerConfigurer(){\n        MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();\n        mapperScannerConfigurer.setBasePackage(\"cn.itcast.dao\");\n        return mapperScannerConfigurer;\n    } */\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-op2n2q1",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707232652-op2n2q1"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Configuration\n@ComponentScan(value = \"cn.itcast.controller\", includeFilters = {\n        @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = Controller.class)\n}, useDefaultFilters = false)//必须添加useDefaultFilters\n@EnableWebMvc\npublic class AppConfig implements WebMvcConfigurer  {\n\n    @Autowired\n    private ApplicationContext servletApplicationContext;\n\n    @Override\n    public void configureViewResolvers(ViewResolverRegistry registry) {\n        //模板解析器\n        SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();\n        templateResolver.setApplicationContext(this.servletApplicationContext);//必须有\n        templateResolver.setPrefix(\"/templates/\");\n        templateResolver.setSuffix(\".html\");\n        templateResolver.setTemplateMode(\"HTML\");\n        templateResolver.setCharacterEncoding(\"UTF-8\");\n\n        //模板引擎\n        SpringTemplateEngine templateEngine = new SpringTemplateEngine();\n        templateEngine.setTemplateResolver(templateResolver);\n\n        //Thymeleaf视图解析器\n        ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();\n        viewResolver.setTemplateEngine(templateEngine);\n        viewResolver.setCharacterEncoding(\"UTF-8\");\n\n        registry.viewResolver(viewResolver);\n\n        //registry.jsp(\"/views/\",\".jsp\");\n    }\n\n    //释放静态资源\n    @Override\n    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {\n        configurer.enable();\n    }\n\n    //拦截器\n    @Override\n    public void addInterceptors(InterceptorRegistry registry) {\n        registry.addInterceptor(new MyFirstInterceptor()).addPathPatterns(\"/**\");\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-8cw7u0w",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20210707232652-8cw7u0w"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e "
+				},
+				{
+					"ID": "20210707232652-h5f200a",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210707232652-h5f200a"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "以上配置，在 dao 层查询时会报空指针异常，暂时 GG。同样的 xml 配置 OK。我不 OK 了！！！"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-du0smr1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707232652-du0smr1"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "纯注解配置时由于 Maven 的原因，需要配置如下 plugin"
+				}
+			]
+		},
+		{
+			"ID": "20210707232652-xbvb9q5",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eG1s",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707232652-xbvb9q5"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cplugin\u003e\n    \u003cartifactId\u003emaven-war-plugin\u003c/artifactId\u003e\n    \u003cversion\u003e2.6\u003c/version\u003e\n    \u003cconfiguration\u003e\n        \u003cwarSourceDirectory\u003eWebContent\u003c/warSourceDirectory\u003e\n        \u003cfailOnMissingWebXml\u003efalse\u003c/failOnMissingWebXml\u003e\n    \u003c/configuration\u003e\n\u003c/plugin\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		}
+	]
+}

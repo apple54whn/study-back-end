@@ -1,0 +1,223 @@
+{
+	"ID": "20210707224346-wh0of6r",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210707224346-wh0of6r",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210707224346-vz3p9m0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707224346-vz3p9m0"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Java 9 对集合添加的优化"
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-gkp95qw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224346-gkp95qw"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Java 9，添加了几种集合工厂方法，更方便创建少量元素的Collection、Map实例。新的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "List"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Set"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Map"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的静态工厂方法可以更方便地创建集合的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "不可变实例（存储个数确定时使用）"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-2bopv6j",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707224346-2bopv6j"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "Set\u003cString\u003e str1=Set.of(\"a\",\"b\",\"c\");  \n//str1.add(\"c\");  这里编译的时候不会错，但是执行的时候会报错，因为是不可变的集合  \nSystem.out.println(str1);  \nMap\u003cString,Integer\u003e str2=Map.of(\"a\",1,\"b\",2);  \nSystem.out.println(str2);  \nList\u003cString\u003e str3=List.of(\"a\",\"b\");  \nSystem.out.println(str3);  \n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707224346-qpc5ut8",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20210707224346-qpc5ut8"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e "
+				},
+				{
+					"ID": "20210707224346-urjb493",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210707224346-urjb493"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "注意："
+						}
+					]
+				},
+				{
+					"ID": "20210707224346-r5kz3bb",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210707224346-r5kz3bb"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "1、of()方法只是Map，List，Set这三个接口的静态方法，其父类接口和子类实现并没有这类方法，比如    HashSet，ArrayList等等；"
+						}
+					]
+				},
+				{
+					"ID": "20210707224346-82ms2d3",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210707224346-82ms2d3"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "2、返回的集合是不可变的；List不能使用Collections遍历"
+						}
+					]
+				},
+				{
+					"ID": "20210707224346-efrvhw2",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210707224346-efrvhw2"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "3、Set和Map接口在调用of方法时，不能有重复的元素，否则会抛出异常"
+						}
+					]
+				}
+			]
+		}
+	]
+}

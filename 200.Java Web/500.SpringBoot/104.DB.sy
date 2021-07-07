@@ -1,0 +1,4340 @@
+{
+	"ID": "20210707234309-36rh7nx",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210707234309-36rh7nx",
+		"type": "doc",
+		"updated": "20210707234933"
+	},
+	"Children": [
+		{
+			"ID": "20210707234309-oo4rpk4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-oo4rpk4"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Spring Boot 可以自动配置嵌入式（embedded）数据库如：H2, HSQL, Derby 等。你不需要提供任何连接的 URL，你只需要包含对要使用的嵌入式数据库的构建依赖项"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-vgbmqbs",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234309-vgbmqbs"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "DataSource"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-3jge4d9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-3jge4d9"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过使用数据库连接池也可以"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "自动配置"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "生产数据库。Spring Boot 使用以下算法（algorithm）来选择特定的实现："
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-jegsgb5",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Tight": true,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 3,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210707234309-jegsgb5"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-r6oydt1",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210707234309-r6oydt1"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-4bwjajw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-4bwjajw"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果 HikariCP 存在，我们总是选择它，由于它的高性能和高并发。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-cm7fxir",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210707234309-cm7fxir"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-t55vjmn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-t55vjmn"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "另外，如果 Tomcat 数据库连接池存在，我们选择它"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-mg2wlbu",
+					"Type": "NodeListItem",
+					"Data": "3",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 3,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mw==",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20210707234309-mg2wlbu"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-qgwwy12",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-qgwwy12"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果上述 2 个都不存在，若 Commons DBCP2 存在，我们选择它"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-gjhw2p8",
+					"Type": "NodeListItem",
+					"Data": "4",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 4,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "NA==",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20210707234309-gjhw2p8"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-w86hjn9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-w86hjn9"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果你使用了"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "spring-boot-starter-jdbc"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 或 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "spring-boot-starter-data-jpa"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " starters，你将自动获得对 HikariCP 的依赖"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-lzhjv3c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-lzhjv3c"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "你也可以完全绕过（bypass）上述算法，通过设置 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "spring.datasource.type"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 属性来指定连接池。如果您在 Tomcat 容器中运行应用程序，这一点尤其重要，因为缺省情况下提供了"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "tomcat-jdbc"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。若自定义数据源 Bean，则不会发生自动配置。"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-1v7vuim",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234309-1v7vuim"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "HikariCP"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-565bsxk",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20210707234309-565bsxk"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e "
+				},
+				{
+					"ID": "20210707234309-pkyxrtg",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210707234309-pkyxrtg"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "Hikari Connection Poor"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-rhtzjsk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-rhtzjsk"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "什么是 HikariCP❓"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-z9hjeza",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-z9hjeza"
+			},
+			"Children": [
+				{
+					"Type": "NodeLink",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "HiKariCP"
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://github.com/brettwooldridge/HikariCP"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 是数据库连接池的一个后起之秀，号称性能最好，可以完美地 PK 掉其他连接池。是一个高性能的 JDBC 连接池，基于 BoneCP 做了不少的改进和优化。超快，快到连 Spring Boot 2 都宣布支持了。"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-cfgqxr3",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-cfgqxr3"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "什么是 BoneCP❓"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-d0dt0tx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-d0dt0tx"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "传说中 BoneCP 在快速这个特点上做到了极致，官方数据是 C3P0 等的 25 倍左右，以下为性能测试报告。"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-cpylymr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210707234309-cpylymr"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "单线程"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-80m9ra3",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707234309-80m9ra3"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-pezfbtz",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-pezfbtz"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-ljkh9ls",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-ljkh9ls"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "1,000,000 获取连接/释放连接请求"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-al1s4d8",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-al1s4d8"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-deb744p",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-deb744p"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "获取/释放连接之间没有延迟"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-4f4vrqy",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-4f4vrqy"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-bgljcrc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-bgljcrc"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "连接池范围：20-50"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-6s64ej5",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-6s64ej5"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-esrtvse",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-esrtvse"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "增量：5"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-qeeutq9",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-qeeutq9"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-jygaeqh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-jygaeqh"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "线程：1"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-blw004d",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-blw004d"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-f1spers",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-f1spers"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "分区：1"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-ohwthj7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-ohwthj7",
+				"updated": "20210707234820"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "ae19aac80c50404.jpg"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "./assets/ae19aac80c50404-20210707234820-ro57mrh.jpg"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-rkcqb2a",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210707234309-rkcqb2a"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "多线程"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-um0exee",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707234309-um0exee"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-fzn7z6x",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-fzn7z6x"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-aggdkci",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-aggdkci"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "500 个线程分别获取释放 100 个连接"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-7x6kiiu",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-7x6kiiu"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-0k131hm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-0k131hm"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在获取连接和释放连接之间引入了 10ms 的延迟 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Thread.sleep()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，模拟连接完成工作"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-zygr4ar",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-zygr4ar"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-e3x00m9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-e3x00m9"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "连接池范围：50-200"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-tulelp4",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-tulelp4"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-kx1lybj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-kx1lybj"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "增量：5"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-tlaj8fw",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-tlaj8fw"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-fyjxxfm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-fyjxxfm"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "线程：5"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-25tufqf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-25tufqf",
+				"updated": "20210707234846"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "1db8b584e0e7a03.jpg"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/1db8b584e0e7a03-20210707234846-tz8vf2d.jpg"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-2m9v9vj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210707234309-2m9v9vj"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Prepared Statement"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-z87telv",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707234309-z87telv"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-kvd23am",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-kvd23am"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-0fxejdv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-0fxejdv"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "500 个线程分别获取释放 100 个连接"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-e8b7rmb",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-e8b7rmb"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-zw1nxqx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-zw1nxqx"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "无延迟"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-55o2kns",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-55o2kns"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-kqlxwfx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-kqlxwfx"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "连接池范围：50-200"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-f5zs8dl",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-f5zs8dl"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-owxs6sk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-owxs6sk"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "增量：5"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-dd0eznk",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-dd0eznk"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-aa6hr2f",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-aa6hr2f"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "线程：5"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-2ayo7pc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-2ayo7pc",
+				"updated": "20210707234901"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "f976c3fb5ce1233.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/f976c3fb5ce1233-20210707234901-wm62mdq.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-ann5av4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-ann5av4"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "HikariCP 的 Power 💥"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-74qk1yz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-74qk1yz"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "BoneCP 作者放弃维护，并在 Github 项目主页推荐大家使用 HikariCP，Hikari（ひかり [hi·ka·'lē] ） 来自日文，是 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "光"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 的意思。这个产品的口号是 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "快速、简单、可靠"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-ho8g8g4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210707234309-ho8g8g4"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "优化"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-fr9ffk0",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707234309-fr9ffk0"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-0yt3wby",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-0yt3wby"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-uxj29sr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-uxj29sr"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "字节码精简 ："
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 优化代码，直到编译后的字节码最少，这样，CPU 缓存可以加载更多的程序代码"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-uajdq15",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-uajdq15"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-qazyqej",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-qazyqej"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "优化代理和拦截器 ："
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 减少代码，例如 HikariCP 的 Statement proxy 只有 100 行代码，只有 BoneCP 的十分之一"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-89lepzr",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-89lepzr"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-ds7m0ku",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-ds7m0ku"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "自定义数组类型（FastStatementList）代替 ArrayList ："
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 避免每次 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "get()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 调用都要进行 range check，避免调用 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "remove()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 时的从头到尾的扫描"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-z628g0k",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-z628g0k"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-cyln8zj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-cyln8zj"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "自定义集合类型（ConcurrentBag）："
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 提高并发读写的效率"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-u5cy3nc",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-u5cy3nc"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-kupakgd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-kupakgd"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "其他针对 BoneCP 缺陷的优化："
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 比如对于耗时超过一个 CPU 时间片的方法调用的研究（但没说具体怎么优化）"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-m5ml8mn",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210707234309-m5ml8mn"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "代码量"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-j35h3zt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-j35h3zt"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "几个连接池的代码量对比（代码量越少，一般意味着执行效率越高、发生 BUG 的可能性越低）"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-mbpetev",
+			"Type": "NodeTable",
+			"Data": "| Pool     | Files | Code  |\n| :------- | :---- | :---- |\n| Vibur    | 34    | 1927  |\n| HikariCP | 21    | 2228  |\n| Tomcat   | 31    | 6345  |\n| BoneCP   | 49    | 7293  |\n| C3P0     | 120   | 15550 |",
+			"TableAligns": [
+				1,
+				1,
+				1
+			],
+			"Properties": {
+				"id": "20210707234309-mbpetev"
+			},
+			"Children": [
+				{
+					"Type": "NodeTableHead",
+					"Children": [
+						{
+							"Type": "NodeTableRow",
+							"Children": [
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "Pool"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "Files"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "Code"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Vibur"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "34"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "1927"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "HikariCP"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "21"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "2228"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Tomcat"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "31"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "6345"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "BoneCP"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "49"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "7293"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "C3P0"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "120"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "15550"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-21i9nrv",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210707234309-21i9nrv"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "速度"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-5inceo3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-5inceo3"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "别人发推文测试 Hikari 速度"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-nqf13zq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-nqf13zq",
+				"updated": "20210707234918"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "daf29bd1cc47347.jpg"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/daf29bd1cc47347-20210707234918-8efvoox.jpg"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-5b6z3rn",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210707234309-5b6z3rn"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "稳定性"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-qjjx8m3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-qjjx8m3",
+				"updated": "20210707234933"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "1396c369655fa4b.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/1396c369655fa4b-20210707234933-ece3uho.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-04i2oqv",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210707234309-04i2oqv"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "可靠性"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-5eqff5f",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-5eqff5f"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "另外，关于可靠性方面，也是有实验和数据支持的。对于数据库连接中断的情况，通过测试 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "getConnection()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，各种 CP 的不相同处理方法如下（所有 CP 都配置了跟 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "connectionTimeout"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 类似的参数为 5 秒钟）"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-q2ziwy3",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210707234309-q2ziwy3"
+			},
+			"Children": [
+				{
+					"ID": "20210707234309-q5ic0o4",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-q5ic0o4"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-5gqawpi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-5gqawpi"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "HikariCP(A)："
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 等待 5 秒钟后，如果连接还是没有恢复，则抛出一个 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "SQLExceptions"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 异常；后续的 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "getConnection()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 也是一样处理"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-1hgzulg",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-1hgzulg"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-rl4koqk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-rl4koqk"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "C3P0(C-)："
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 完全没有反应，没有提示，也不会在 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "CheckoutTimeout"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 配置的时长超时后有任何通知给调用者；然后等待 2 分钟后终于醒来了，返回一个 error"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-v0qzbw7",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-v0qzbw7"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-o6uy4at",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-o6uy4at"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "Tomcat(F)："
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 返回一个 connection，然后调用者如果利用这个无效的 connection 执行 SQL 语句 结果可想而知；大约 55 秒之后终于醒来了，这时候的 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "getConnection()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 终于可以返回一个 error，但没有等待参数配置的 5 秒钟，而是立即返回 error"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-7vkln6o",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210707234309-7vkln6o"
+					},
+					"Children": [
+						{
+							"ID": "20210707234309-bsm64m9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707234309-bsm64m9"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "BoneCP(C)："
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 跟 Tomcat 的处理方法一样；也是大约 55 秒之后才醒来，有了正常的反应，并且终于会等待 5 秒钟之后返回 error 了"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-c0hqzpa",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-c0hqzpa"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "配置 HikariCP 🎩"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-oo66jxd",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210707234309-oo66jxd"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "POM"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-6izndk5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-6izndk5"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果你使用了"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-lo2dasy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-lo2dasy"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "spring-boot-starter[-data]-jdbc"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 或"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-3ro3mv0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-3ro3mv0"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "spring-boot-starter-data-jpa"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "或"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-4i0o9tm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-4i0o9tm"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "mybatis-spring-boot-starter"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " starters，你将自动获得对 HikariCP 的依赖。例如 Mybatis"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-dq8zxgc",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eG1s",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-dq8zxgc"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003cdependency\u003e\n  \u003cgroupId\u003eorg.mybatis.spring.boot\u003c/groupId\u003e\n  \u003cartifactId\u003emybatis-spring-boot-starter\u003c/artifactId\u003e\n  \u003cversion\u003e2.1.1\u003c/version\u003e\n\u003c/dependency\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-a1glzgu",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210707234309-a1glzgu"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "YAML"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-2xg7hh6",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eWFtbA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-2xg7hh6"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eWFtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "spring:\n  datasource:\n    # type: com.zaxxer.hikari.HikariDataSource # 可省略，Spring Boot 会自动检测\n    # driver-class-name: com.mysql.cj.jdbc.Driver # 可省略，Spring Boot 会自动检测\n    url: jdbc:mysql://172.16.154.11:3306/test?useUnicode=true\u0026characterEncoding=utf-8\u0026useSSL=false\n    username: root\n    password: 123456\n    hikari:\n      minimum-idle: 5\n      idle-timeout: 600000\n      maximum-pool-size: 10\n      auto-commit: true\n      pool-name: MyHikariCP\n      max-lifetime: 1800000\n      connection-timeout: 30000\n      connection-test-query: SELECT 1\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-9host42",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20210707234309-9host42"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e "
+				},
+				{
+					"ID": "20210707234309-m11fjs4",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210707234309-m11fjs4"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "You should at least specify the URL by setting the "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"CodeMarkerLen": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker",
+									"Data": "`"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "spring.datasource.url"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker",
+									"Data": "`"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " property. Otherwise, Spring Boot tries to auto-configure an embedded database."
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-1g2zasj",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210707234309-1g2zasj"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "You often do not need to specify the "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"CodeMarkerLen": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker",
+									"Data": "`"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "driver-class-name"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker",
+									"Data": "`"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ", since Spring Boot can deduce it for most databases from the "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"CodeMarkerLen": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker",
+									"Data": "`"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "url"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker",
+									"Data": "`"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "."
+						}
+					]
+				},
+				{
+					"ID": "20210707234309-e8q5k1x",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210707234309-e8q5k1x"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "See "
+						},
+						{
+							"Type": "NodeLink",
+							"Children": [
+								{
+									"Type": "NodeOpenBracket",
+									"Data": "["
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "DataSourceProperties"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeCloseBracket",
+									"Data": "]"
+								},
+								{
+									"Type": "NodeOpenParen",
+									"Data": "("
+								},
+								{
+									"Type": "NodeLinkDest",
+									"Data": "https://github.com/spring-projects/spring-boot/tree/v2.2.2.RELEASE/spring-boot-project/spring-boot-autoconfigure/src/main/java/org/springframework/boot/autoconfigure/jdbc/DataSourceProperties.java"
+								},
+								{
+									"Type": "NodeCloseParen",
+									"Data": ")"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " for more of the supported options. These are the standard options that work regardless of the actual implementation. It is also possible to fine-tune implementation-specific settings by using their respective prefix ("
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"CodeMarkerLen": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker",
+									"Data": "`"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "spring.datasource.hikari.*"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker",
+									"Data": "`"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ", "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"CodeMarkerLen": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker",
+									"Data": "`"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "spring.datasource.tomcat.*"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker",
+									"Data": "`"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": ", and "
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"CodeMarkerLen": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker",
+									"Data": "`"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "spring.datasource.dbcp2.*"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker",
+									"Data": "`"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "). Refer to the documentation of the connection pool implementation you are using for more details."
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-rijvvf9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234309-rijvvf9"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "集成 H2 数据库"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-gucrd8s",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-gucrd8s"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "H2 是一个内存数据库，方便测试。"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-6639zei",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234309-6639zei"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "集成 Mybatis"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-hipqr5t",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-hipqr5t"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "起步依赖"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-17o2i4n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-17o2i4n"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 Spring Initializr 添加 DevTools、Web、MySQL、"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "MyBatis"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "依赖"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-fnj40m5",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eG1s",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-fnj40m5"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003c!-- MySQL连接驱动 --\u003e\n\u003cdependency\u003e\n    \u003cgroupId\u003emysql\u003c/groupId\u003e\n    \u003cartifactId\u003emysql-connector-java\u003c/artifactId\u003e\n    \u003cscope\u003eruntime\u003c/scope\u003e\n\u003c/dependency\u003e\n\u003c!--mybatis起步依赖--\u003e\n\u003cdependency\u003e\n    \u003cgroupId\u003eorg.mybatis.spring.boot\u003c/groupId\u003e\n    \u003cartifactId\u003emybatis-spring-boot-starter\u003c/artifactId\u003e\n    \u003cversion\u003e2.0.0\u003c/version\u003e\n\u003c/dependency\u003e\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-lltisdk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-lltisdk"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "数据库连接和 MyBatis 配置"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-0m0dbna",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-0m0dbna"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在 application.properties/yml 中添加数据库的连接信息、Spring Boot 集成 MyBatis 的配置"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-wkdb7e8",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "cHJvcGVydGllcw==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-wkdb7e8"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "cHJvcGVydGllcw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#数据库连接信息\nspring.datasource.driverClassName=com.mysql.cj.jdbc.Driver\nspring.datasource.url=jdbc:mysql://localhost:3308/test?serverTimezone=GMT%2B8\u0026useSSL=false\nspring.datasource.username=root\nspring.datasource.password=w111151\n\n#spring集成Mybatis环境\n#pojo别名扫描包，不配置也行，需要指定全类名\nmybatis.type-aliases-package=com.example.domain\n#加载Mybatis映射文件，不配置也行，只需要*mapper.xml在@Mapper注解的接口的同一包中！\nmybatis.mapper-locations=classpath:mapper/*Mapper.xml\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-7g1ejk5",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eWFtbA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-7g1ejk5"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eWFtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#数据库连接信息\nspring:\n  datasource:\n    driver-class-name: com.mysql.cj.jdbc.Driver\n    url: jdbc:mysql://localhost:3308/test?serverTimezone=GMT%2B8\u0026useSSL=false\n    username: root\n    password: w111151\n\n#spring集成Mybatis环境\nmybatis:\n  #pojo别名扫描包\n  type-aliases-package: com.example.domain\n  #加载Mybatis映射文件\n  mapper-locations: classpath:mapper/*Mapper.xml\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-2mmcj9m",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-2mmcj9m"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "创建 user 表对应的实体类"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-9qw57v7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-9qw57v7"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在 test 数据库中创建 user 表"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-6lryf9b",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-6lryf9b"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "-- ----------------------------\n-- Table structure for `user`\n-- ----------------------------\nDROP TABLE IF EXISTS `user`;\nCREATE TABLE `user` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `username` varchar(50) DEFAULT NULL,\n  `password` varchar(50) DEFAULT NULL,\n  `name` varchar(50) DEFAULT NULL,\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;\n\n-- ----------------------------\n-- Records of user\n-- ----------------------------\nINSERT INTO `user` VALUES ('1', 'zhangsan', '123', '张三');\nINSERT INTO `user` VALUES ('2', 'lisi', '123', '李四');\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-8lq4veq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-8lq4veq"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "com.example.domain.User"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-xm8mg71",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-xm8mg71"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class User {\n    // 主键\n    private Long id;\n    // 用户名\n    private String username;\n    // 密码\n    private String password;\n    // 姓名\n    private String name;\n\n    //此处省略getter和setter方法 .. ..\n\n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-85c4nbi",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-85c4nbi"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "编写 Mapper 接口"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-kypv3ag",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-kypv3ag"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "com.example.mapper.UserMapper"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-tkrs5y8",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-tkrs5y8"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Mapper\npublic interface UserMapper {\n\tpublic List\u003cUser\u003e queryUserList();\n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-35j50yf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-35j50yf"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意："
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "@Mapper"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "标记该类是一个 mybatis 的 mapper 接口，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "可以被 spring boot 自动扫描到 spring 上下文中"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-bmg5yl6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-bmg5yl6"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "配置 Mapper 映射文件"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-th8fmnn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-th8fmnn"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在 src\\main\\resources\\mapper 路径下加入 UserMapper.xml 配置文件"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-a8o0642",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eG1s",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-a8o0642"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003c?xml version=\"1.0\" encoding=\"utf-8\" ?\u003e\n\u003c!DOCTYPE mapper PUBLIC \"-//mybatis.org//DTD Mapper 3.0//EN\" \"http://mybatis.org/dtd/mybatis-3-mapper.dtd\" \u003e\n\u003cmapper namespace=\"com.itheima.mapper.UserMapper\"\u003e\n    \u003cselect id=\"queryUserList\" resultType=\"user\"\u003e\n        select * from user\n    \u003c/select\u003e\n\u003c/mapper\u003e\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-t5bgcrn",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-t5bgcrn"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "编写测试 Controller"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-x271y9a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-x271y9a"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "com.example.controller.UserController"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-850x7do",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-850x7do"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@RestController\npublic class UserController {\n\n    @Autowired\n    private UserMapper userMapper;//报错，没有此类型的bean。但是可以使用，在运行期会创建好bean。还可以添加component之类注解\n\n    @RequestMapping(\"/queryUser\")\n    public List\u003cUser\u003e queryUser() {\n        List\u003cUser\u003e users = userMapper.queryUserList();\n        return users;\n    }\n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-03bz2lg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-03bz2lg"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "测试略"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-off781z",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234309-off781z"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "集成 JUnit"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-ev5y11y",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-ev5y11y"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "添加 JUnit 的起步依赖"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-ogax92r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-ogax92r"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "一般使用 Spring Initializr 添加 Web 依赖后会自动导入"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "JUnit"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "起步依赖"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-dxlvccw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eG1s",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-dxlvccw"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003c!--测试的起步依赖--\u003e\n\u003cdependency\u003e\n    \u003cgroupId\u003eorg.springframework.boot\u003c/groupId\u003e\n    \u003cartifactId\u003espring-boot-starter-test\u003c/artifactId\u003e\n    \u003cscope\u003etest\u003c/scope\u003e\n\u003c/dependency\u003e\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-kqq1r4p",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-kqq1r4p"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "编写测试类"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-bi4lgzt",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-bi4lgzt"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@RunWith(SpringRunner.class)\n@SpringBootTest(classes = SpringbootMybatisApplication.class)//不指定会从main下找启动类，加载Spring容器。但须在同一包中！\npublic class MapperTest {\n\n    @Autowired\n    private UserMapper userMapper;\n\n    @Test\n    public void test() {\n        List\u003cUser\u003e users = userMapper.queryUserList();\n        System.out.println(users);\n    }\n\n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-w5dxfaz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-w5dxfaz"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其中，"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-w03bxd4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-w03bxd4"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "SpringRunner 继承自 SpringJUnit4ClassRunner，使用哪一个 Spring 提供的测试测试引擎都可以"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-ktify2z",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-ktify2z"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public final class SpringRunner extends SpringJUnit4ClassRunner\n\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-flscykp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-flscykp"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "@SpringBootTest 的属性指定的是引导类的字节码对象"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-s4shrze",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234309-s4shrze"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "集成 Spring Data JPA"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-8pan2xt",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-8pan2xt"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "起步依赖"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-hyhxkbl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-hyhxkbl"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 Spring Initializr 添加 DevTools、Web、MySQL、"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "JPA"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "依赖"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-i98wlke",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eG1s",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-i98wlke"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003c!-- MySQL连接驱动 --\u003e\n\u003cdependency\u003e\n    \u003cgroupId\u003emysql\u003c/groupId\u003e\n    \u003cartifactId\u003emysql-connector-java\u003c/artifactId\u003e\n    \u003cscope\u003eruntime\u003c/scope\u003e\n\u003c/dependency\u003e\n\u003c!-- Spring Data JPA的起步依赖 --\u003e\n\u003cdependency\u003e\n    \u003cgroupId\u003eorg.springframework.boot\u003c/groupId\u003e\n    \u003cartifactId\u003espring-boot-starter-data-jpa\u003c/artifactId\u003e\n\u003c/dependency\u003e\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-6hfc60o",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-6hfc60o"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "数据库连接和 JPA 配置"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-67854mu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-67854mu"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在 application.properties/yml 中添加数据库的连接信息、Spring Boot 集成 Spring Data JPA 的配置"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-hk4cgv8",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eWFtbA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-hk4cgv8"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eWFtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "spring:\n  #DB Configuration:\n  datasource:\n    driver-class-name: com.mysql.cj.jdbc.Driver\n    url: jdbc:mysql://localhost:3308/test?serverTimezone=GMT%2B8\u0026useSSL=false\n    username: root\n    password: w111151\n  #JPA Configuration:\n  jpa:\n    database: mysql\n    show-sql: true\n    generate-ddl: true\n    hibernate:\n      ddl-auto: update\n      #命名策略，瞎选的\n      naming:\n        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl\n        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyComponentPathImpl\n        #Hibernate 4 naming strategy fully qualified name. Not supported with Hibernate 5\n        #strategy: org.hibernate.cfg.ImprovedNamingStrategy\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-zr8t3us",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "cHJvcGVydGllcw==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-zr8t3us"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "cHJvcGVydGllcw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#DB Configuration:\nspring.datasource.driverClassName=com.mysql.cj.jdbc.Driver\nspring.datasource.url=jdbc:mysql://localhost:3308/test?serverTimezone=GMT%2B8\u0026useSSL=false\nspring.datasource.username=root\nspring.datasource.password=w111151\n\n#JPA Configuration:\nspring.jpa.database=MySQL\nspring.jpa.show-sql=true\nspring.jpa.generate-ddl=true\nspring.jpa.hibernate.ddl-auto=update\n\n#Configure Hibernate Naming Strategy，瞎选的，不知道区别\n\nspring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl\nspring.jpa.hibernate.naming.implicit-strategy=org.hibernate.boot.model.naming.ImplicitNamingStrategyComponentPathImpl\n\n#Hibernate 4 naming strategy fully qualified name. Not supported with Hibernate 5\n#spring.jpa.hibernate.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy\n\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-3r9n1c7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-3r9n1c7"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "创建实体配置实体"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-tzgywo0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-tzgywo0"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "若实体类不在启动类包中，需要添加注解如"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "@EntityScan(\"com.xuecheng.domain\")"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "来扫描实体类"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-rp3ieix",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-rp3ieix"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Entity\npublic class User {\n    // 主键\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    //@Column可以省略，采用默认配置，若要具体配置，需要写上\n    private Long id;\n    // 用户名\n    private String username;\n    // 密码\n    private String password;\n    // 姓名\n    private String name;\n\n    //此处省略setter和getter方法... ...\n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-02p9yf9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-02p9yf9"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "编写 UserRepository"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-jny74t6",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-jny74t6"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public interface UserRepository extends JpaRepository\u003cUser,Long\u003e, JpaSpecificationExecutor\u003cUser\u003e {\n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-q1kr2ag",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-q1kr2ag"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "编写测试类"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-2lxqhsi",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-2lxqhsi"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@RunWith(SpringRunner.class)\n@SpringBootTest(classes = SpringbootJpaApplication.class)\npublic class JpaTest {\n\n    @Autowired\n    private UserRepository userRepository;\n\n    @Test\n    public void testJpa(){\n        List\u003cUser\u003e all = userRepository.findAll();\n        System.out.println(all);\n    }\n}\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-nwj2lw5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-nwj2lw5"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意：如果是 jdk9，执行报错如下："
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-n74aqjo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-n74aqjo"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "原因：jdk 缺少相应的 jar"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-drdcnro",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-drdcnro"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解决方案：手动导入对应的 maven 坐标，如下："
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-hes357i",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eG1s",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-hes357i"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003c!--jdk9需要导入如下坐标--\u003e\n\u003cdependency\u003e\n    \u003cgroupId\u003ejavax.xml.bind\u003c/groupId\u003e\n    \u003cartifactId\u003ejaxb-api\u003c/artifactId\u003e\n    \u003cversion\u003e2.3.0\u003c/version\u003e\n\u003c/dependency\u003e\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-pnmfcuy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707234309-pnmfcuy"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "集成 Spring Data Redis"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-6dij61d",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-6dij61d"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "起步依赖"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-fiybppg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707234309-fiybppg"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 Spring Initializr 添加 DevTools、Web、MySQL、JPA、"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Redis"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "依赖"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-rn7rhei",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eG1s",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-rn7rhei"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003c!-- 配置使用redis启动器 --\u003e\n\u003cdependency\u003e\n    \u003cgroupId\u003eorg.springframework.boot\u003c/groupId\u003e\n    \u003cartifactId\u003espring-boot-starter-data-redis\u003c/artifactId\u003e\n\u003c/dependency\u003e\n\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-69nrfdg",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-69nrfdg"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "配置 redis 的连接信息"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-mfy5qgk",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "eWFtbA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-mfy5qgk"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eWFtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "spring:\n  redis:\n    #url包括以下host，port，password\n    url: redis://user:password@example.com:6379\n    host: localhost\n    port: 6379\n    password: w111151\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-9au1xzu",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "cHJvcGVydGllcw==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-9au1xzu"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "cHJvcGVydGllcw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#Redis\nspring.redis.host=127.0.0.1\nspring.redis.port=6379\n\n\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-m11yk5y",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707234309-m11yk5y"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "注入 RedisTemplate 测试 redis 操作"
+				}
+			]
+		},
+		{
+			"ID": "20210707234309-l8lrgr5",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210707234309-l8lrgr5"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@RunWith(SpringRunner.class)\n@SpringBootTest(classes = SpringbootJpaApplication.class)\npublic class RedisTest {\n\n    @Autowired\n    private RedisTemplate\u003cString,String\u003e redisTemplate;\n\n    @Autowired\n    private UserRepository userRepository;\n\n    @Test\n    public void test() throws JsonProcessingException {\n        //1.从Redis中获取数据，一般为JSON字符串\n        String userListJson = redisTemplate.boundValueOps(\"user.findAll\").get();\n        //2.判断Redis中是否存在该数据\n        //2.1不存在，从数据库查，并保存到Redis\n        if (userListJson==null){\n            List\u003cUser\u003e all = userRepository.findAll();\n            //转为JSON字符串，Web环境默认导入了Jackson\n            ObjectMapper objectMapper = new ObjectMapper();\n            userListJson = objectMapper.writeValueAsString(all);\n            redisTemplate.boundValueOps(\"user.findAll\").set(userListJson);\n            System.out.println(\"从数据库查询\");\n        } else {\n            //2.2存在\n            System.out.println(\"从Redis查询\");\n        }\n        System.out.println(userListJson);\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		}
+	]
+}
