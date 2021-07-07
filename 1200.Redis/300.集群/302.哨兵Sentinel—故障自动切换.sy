@@ -1,0 +1,2750 @@
+{
+	"ID": "20210708004534-q37lfui",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210708004534-q37lfui",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210708004534-um0ap4n",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004534-um0ap4n"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "master 宕机"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-p4wdv3x",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004534-p4wdv3x"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "补救措施"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-24alyiv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-24alyiv"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "master 宕机后，我们需要做如下操作："
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-dj0qggg",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004534-dj0qggg"
+			},
+			"Children": [
+				{
+					"ID": "20210708004534-ox6tavl",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-ox6tavl"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-z91pqs0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-z91pqs0"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "将宕机的 master 下线"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-lz7ozy5",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-lz7ozy5"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-itafh42",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-itafh42"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "找一个 slave 作为 master"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-5pk1do5",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-5pk1do5"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-46mgym9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-46mgym9"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "通知所有的 slave 连接新的 master"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-xq92eya",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-xq92eya"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-f5j0heq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-f5j0heq"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "启动新的 master 和 slave"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-momg2x2",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-momg2x2"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-ww1j6p5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-ww1j6p5"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "有可能会全量复制 x N + 部分复制 x N"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-osg8wgc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-osg8wgc"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "那么问题来了："
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-psfe4ok",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004534-psfe4ok"
+			},
+			"Children": [
+				{
+					"ID": "20210708004534-c0da179",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-c0da179"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-10ehvrc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-10ehvrc"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "谁来确认 master 宕机了，标准是什么？"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-an1sgc3",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-an1sgc3"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-wxe1gbj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-wxe1gbj"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如何从众多 slave 中找一个 master，规则是什么？"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-l64vfgj",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-l64vfgj"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-dw9hpme",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-dw9hpme"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "修改配置后，原有的 master 恢复了怎么版？"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-tuyt2zj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004534-tuyt2zj"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "哨兵"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-65nbek2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-65nbek2"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "哨兵（Sentinel） 是一个分布式系统，用于对"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "主从结构中的每台服务器"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "进行"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "监控"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，当出现故障时通过"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "投票机制"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "选择新的 master 并将所有 slave 连接到新的 master。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-ag58041",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-ag58041"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其作用有："
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-dtz09jc",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004534-dtz09jc"
+			},
+			"Children": [
+				{
+					"ID": "20210708004534-dnuuzte",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-dnuuzte"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-9f3wvan",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-9f3wvan"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "监控："
+								}
+							]
+						},
+						{
+							"ID": "20210708004534-0gqi6iu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-0gqi6iu"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "不断的检查 master 和 slave 是否正常运行。 master 存活检测、master 与 slave 运行情况检测。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-nhkd5jl",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-nhkd5jl"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-z0q1pah",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-z0q1pah"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "通知（提醒）"
+								}
+							]
+						},
+						{
+							"ID": "20210708004534-6kieu02",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-6kieu02"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当被监控的服务器出现问题时，向其他（哨兵间，客户端）发送通知。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-2hp4jl8",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-2hp4jl8"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-nh5o42g",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-nh5o42g"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "自动故障转移"
+								}
+							]
+						},
+						{
+							"ID": "20210708004534-8k5mt8p",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-8k5mt8p"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "断开 master 与 slave 连接，选取一个 slave 作为 master，将其他 slave 连接到新的 master，并告知客户端新的服务器地址"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-hbob56m",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-hbob56m"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意："
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "哨兵也是一台 redis 服务器"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，只是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "不提供数据服务"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。通常哨兵配置数量为"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "单数！！！"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-c3e4hoy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004534-c3e4hoy"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "配置哨兵"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-wcddifl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004534-wcddifl"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "简介"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-5tgg2x6",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004534-5tgg2x6"
+			},
+			"Children": [
+				{
+					"ID": "20210708004534-1auctid",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-1auctid"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-oon4yw1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-oon4yw1"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "配置一拖二的主从结构"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-b4trutt",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-b4trutt"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-foutnic",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-foutnic"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "配置三个哨兵（配置相同，端口不同）。参看 Redis 中的 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "sentinel.conf"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210708004534-0fudso0",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708004534-0fudso0"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "cat sentinel.conf | grep -v '#' | grep -v '^$'\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708004534-cpu8zh2",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708004534-cpu8zh2"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "port 26379\ndaemonize no\npidfile /var/run/redis-sentinel.pid\nlogfile \"\"\ndir /tmp\n\nsentinel monitor mymaster 127.0.0.1 6379 2\nsentinel down-after-milliseconds mymaster 30000\nacllog-max-len 128\nsentinel parallel-syncs mymaster 1\nsentinel failover-timeout mymaster 180000\nsentinel deny-scripts-reconfig yes\nSENTINEL resolve-hostnames no\nSENTINEL announce-hostnames no\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708004534-159heg0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-159heg0"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "提示：复制并修改文件中"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "端口"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "时可以直接使用 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "sed"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 命令！！！"
+								}
+							]
+						},
+						{
+							"ID": "20210708004534-e5t5lj8",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708004534-e5t5lj8"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "sed 's/26379/26380/g' sentinel-26379.conf \u003e sentinel-26380.conf\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-ugkaqm4",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-ugkaqm4"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-6z45mq0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-6z45mq0"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "启动哨兵"
+								}
+							]
+						},
+						{
+							"ID": "20210708004534-icz3ior",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708004534-icz3ior"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "redis-sentinel sentinel-端口号.conf\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-hebwq84",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004534-hebwq84"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "配置"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-wztcocy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-wztcocy"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "上面 5 个就不多说了。也无需改变（特别是 daemonize 无需后台运行）。一般只改 port ！！！"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-db3xe0t",
+			"Type": "NodeTable",
+			"Data": "| 配置项                                                          | 范例                                            | 说明                                                                                                              |\n| --------------------------------------------------------------- | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |\n| sentinel monitor \\\u003cmaster-name\u003e \\\u003cip\u003e \\\u003credis-port\u003e \\\u003cquorum\u003e   | sentinel monitor mymaster 127.0.0.1 6379 2      | 设置哨兵监听的**主服务器信息**，最后的参数决定了最终**参与选举的服务器数量**（即多半）                            |\n| sentinel down-after-milliseconds \\\u003cmaster-name\u003e \\\u003cmilliseconds\u003e | sentinel down-after-milliseconds mymaster 30000 | 指定哨兵在监控 Redis 服务时，**判定 master 服务器挂掉的时间周期**，默认 30 秒 (30000)，也是主从切换的启动条件之一 |\n| sentinel parallel-syncs \\\u003cmaster-name\u003e \\\u003cnumreplicas\u003e           | sentinel parallel-syncs mymaster 1              | 指定**同时进行主从的 slave 数量**，数值越大，要求网络资源越高，要求约小，同步时间约长                             |\n| sentinel failover-timeout \\\u003cmaster-name\u003e \\\u003cmilliseconds\u003e        | sentinel failover-timeout mymaster 180000       | 指定出现故障后，**故障切换的最大超时时间**，超过该值，认定切换失败， 默认 3 分钟                                  |\n| sentinel notification-script \\\u003cmaster-name\u003e \\\u003cscript-path\u003e      |                                                 | 服务器无法正常联通时，设定的执行脚本，通常调试使用                                                                |",
+			"TableAligns": [
+				0,
+				0,
+				0
+			],
+			"Properties": {
+				"id": "20210708004534-db3xe0t"
+			},
+			"Children": [
+				{
+					"Type": "NodeTableHead",
+					"Children": [
+						{
+							"Type": "NodeTableRow",
+							"Children": [
+								{
+									"Type": "NodeTableCell",
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "配置项"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "范例"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "说明"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "sentinel monitor "
+								},
+								{
+									"Type": "NodeBackslash",
+									"Children": [
+										{
+											"Type": "NodeBackslashContent",
+											"Data": "\u003c"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "master-name\u003e "
+								},
+								{
+									"Type": "NodeBackslash",
+									"Children": [
+										{
+											"Type": "NodeBackslashContent",
+											"Data": "\u003c"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "ip\u003e "
+								},
+								{
+									"Type": "NodeBackslash",
+									"Children": [
+										{
+											"Type": "NodeBackslashContent",
+											"Data": "\u003c"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "redis-port\u003e "
+								},
+								{
+									"Type": "NodeBackslash",
+									"Children": [
+										{
+											"Type": "NodeBackslashContent",
+											"Data": "\u003c"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "quorum\u003e"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "sentinel monitor mymaster 127.0.0.1 6379 2"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "设置哨兵监听的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "主服务器信息"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，最后的参数决定了最终"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "参与选举的服务器数量"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（即多半）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "sentinel down-after-milliseconds "
+								},
+								{
+									"Type": "NodeBackslash",
+									"Children": [
+										{
+											"Type": "NodeBackslashContent",
+											"Data": "\u003c"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "master-name\u003e "
+								},
+								{
+									"Type": "NodeBackslash",
+									"Children": [
+										{
+											"Type": "NodeBackslashContent",
+											"Data": "\u003c"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "milliseconds\u003e"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "sentinel down-after-milliseconds mymaster 30000"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "指定哨兵在监控 Redis 服务时，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "判定 master 服务器挂掉的时间周期"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，默认 30 秒 (30000)，也是主从切换的启动条件之一"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "sentinel parallel-syncs "
+								},
+								{
+									"Type": "NodeBackslash",
+									"Children": [
+										{
+											"Type": "NodeBackslashContent",
+											"Data": "\u003c"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "master-name\u003e "
+								},
+								{
+									"Type": "NodeBackslash",
+									"Children": [
+										{
+											"Type": "NodeBackslashContent",
+											"Data": "\u003c"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "numreplicas\u003e"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "sentinel parallel-syncs mymaster 1"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "指定"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "同时进行主从的 slave 数量"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，数值越大，要求网络资源越高，要求约小，同步时间约长"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "sentinel failover-timeout "
+								},
+								{
+									"Type": "NodeBackslash",
+									"Children": [
+										{
+											"Type": "NodeBackslashContent",
+											"Data": "\u003c"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "master-name\u003e "
+								},
+								{
+									"Type": "NodeBackslash",
+									"Children": [
+										{
+											"Type": "NodeBackslashContent",
+											"Data": "\u003c"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "milliseconds\u003e"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "sentinel failover-timeout mymaster 180000"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "指定出现故障后，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "故障切换的最大超时时间"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，超过该值，认定切换失败， 默认 3 分钟"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "sentinel notification-script "
+								},
+								{
+									"Type": "NodeBackslash",
+									"Children": [
+										{
+											"Type": "NodeBackslashContent",
+											"Data": "\u003c"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "master-name\u003e "
+								},
+								{
+									"Type": "NodeBackslash",
+									"Children": [
+										{
+											"Type": "NodeBackslashContent",
+											"Data": "\u003c"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "script-path\u003e"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell"
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "服务器无法正常联通时，设定的执行脚本，通常调试使用"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-q96aqzr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004534-q96aqzr"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "哨兵工作原理 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-m3czmun",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004534-m3czmun"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "监控阶段"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-gzzpuub",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-gzzpuub"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "\u003cimg src=\"../assets/image-20210326235723206.png\" alt=\"image-20210326235723206\" style=\"zoom: 33%;\" /\u003e"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-ob3lr3d",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-ob3lr3d"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "用于同步各个节点"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-y2mtr4f",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004534-y2mtr4f"
+			},
+			"Children": [
+				{
+					"ID": "20210708004534-hi5u8yi",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-hi5u8yi"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-af3jqn8",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-af3jqn8"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "获取各个 sentinel 的状态(是否在线)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-49sst4i",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-49sst4i"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-omdtx22",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-omdtx22"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "获取 master 的状态"
+								}
+							]
+						},
+						{
+							"ID": "20210708004534-646ib63",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708004534-646ib63"
+							},
+							"Children": [
+								{
+									"ID": "20210708004534-39qykzb",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004534-39qykzb"
+									},
+									"Children": [
+										{
+											"ID": "20210708004534-qh6qg8z",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004534-qh6qg8z"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "master 属性：runid、role:master 等"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004534-zkot8aw",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004534-zkot8aw"
+									},
+									"Children": [
+										{
+											"ID": "20210708004534-otm8gtk",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004534-otm8gtk"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "各个 slave 的详细信息"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-8fs2fh6",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-8fs2fh6"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-0bqnwgr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-0bqnwgr"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "获取所有 slave 的状态(根据 master 中的 slave 信息获取)"
+								}
+							]
+						},
+						{
+							"ID": "20210708004534-huottic",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708004534-huottic"
+							},
+							"Children": [
+								{
+									"ID": "20210708004534-a5mxk43",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004534-a5mxk43"
+									},
+									"Children": [
+										{
+											"ID": "20210708004534-hgd90ce",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004534-hgd90ce"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "slave 属性：runid、role:slave、master_host、master_port、offset"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-deu0o7l",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004534-deu0o7l"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "通知阶段"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-kuumwsj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-kuumwsj"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Children": [
+						{
+							"Type": "NodeBang",
+							"Data": "!"
+						},
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20210327001035164"
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "../assets/image-20210327001035164.png"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-nuy1wpt",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004534-nuy1wpt"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "故障转移阶段"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-o0kpmkw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-o0kpmkw"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "众 sentinel 观察并确认 master 是否下线"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-qwqbj70",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-qwqbj70"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Children": [
+						{
+							"Type": "NodeBang",
+							"Data": "!"
+						},
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20210327001414792"
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "../assets/image-20210327001414792.png"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-lg10352",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-lg10352"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "推选一个主 sentinel"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-yzpsuw0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-yzpsuw0"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Children": [
+						{
+							"Type": "NodeBang",
+							"Data": "!"
+						},
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20210327001656092"
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "../assets/image-20210327001656092.png"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-h8v82q7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-h8v82q7"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "主 sentinel 来从 slave 中选 master"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-vbg4ne9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-vbg4ne9"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Children": [
+						{
+							"Type": "NodeBang",
+							"Data": "!"
+						},
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20210327002039853"
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "../assets/image-20210327002039853.png"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-lungj5k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-lungj5k"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "服务器列表中挑选备选 master 规则："
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-72dogvv",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004534-72dogvv"
+			},
+			"Children": [
+				{
+					"ID": "20210708004534-g03p4hv",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-g03p4hv"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-a6zzrf0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-a6zzrf0"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "必须是在线的"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-jo3yv73",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-jo3yv73"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-5sf1bt7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-5sf1bt7"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "pass 响应慢的"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-z2ik0m3",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-z2ik0m3"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-km4pr0a",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-km4pr0a"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "pass 与原 master 断开时间久的"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-uyytcno",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-uyytcno"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-tcy9h1o",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-tcy9h1o"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "优先原则"
+								}
+							]
+						},
+						{
+							"ID": "20210708004534-8v6fp1v",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708004534-8v6fp1v"
+							},
+							"Children": [
+								{
+									"ID": "20210708004534-qjj1r0m",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004534-qjj1r0m"
+									},
+									"Children": [
+										{
+											"ID": "20210708004534-7irvvac",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004534-7irvvac"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "优先级"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004534-7h77bl9",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004534-7h77bl9"
+									},
+									"Children": [
+										{
+											"ID": "20210708004534-d4dk3bs",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004534-d4dk3bs"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "offset，小的就会被认为数据不够"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004534-ddtshbh",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004534-ddtshbh"
+									},
+									"Children": [
+										{
+											"ID": "20210708004534-bygo65r",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004534-bygo65r"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "runid，小的优先（老员工）"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-o3kb0gt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-o3kb0gt"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "发送指令(sentinel)："
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-o6jo2oz",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004534-o6jo2oz"
+			},
+			"Children": [
+				{
+					"ID": "20210708004534-drdhs4k",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-drdhs4k"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-57hsnty",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-57hsnty"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "向新的 master 发送 slaveof no one"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-ynm4rw1",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-ynm4rw1"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-qy05h74",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-qy05h74"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "向其他 slave 发送 slaveof 新 masterIP 端口"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-e8zlcoe",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004534-e8zlcoe"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "总结"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-p4634dz",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004534-p4634dz"
+			},
+			"Children": [
+				{
+					"ID": "20210708004534-sn6nhzg",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-sn6nhzg"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-d0c0nwm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-d0c0nwm"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "监控"
+								}
+							]
+						},
+						{
+							"ID": "20210708004534-3lsazc9",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708004534-3lsazc9"
+							},
+							"Children": [
+								{
+									"ID": "20210708004534-lamjdg5",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004534-lamjdg5"
+									},
+									"Children": [
+										{
+											"ID": "20210708004534-9iay085",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004534-9iay085"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "同步信息"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-q43yml9",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-q43yml9"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-635l06l",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-635l06l"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "通知"
+								}
+							]
+						},
+						{
+							"ID": "20210708004534-3c77x3a",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708004534-3c77x3a"
+							},
+							"Children": [
+								{
+									"ID": "20210708004534-w282vq0",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004534-w282vq0"
+									},
+									"Children": [
+										{
+											"ID": "20210708004534-tujat0r",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004534-tujat0r"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "保持联通"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-uuuyix3",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-uuuyix3"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-drzw0ak",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-drzw0ak"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "故障转移"
+								}
+							]
+						},
+						{
+							"ID": "20210708004534-bjaxt64",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708004534-bjaxt64"
+							},
+							"Children": [
+								{
+									"ID": "20210708004534-xig74ng",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004534-xig74ng"
+									},
+									"Children": [
+										{
+											"ID": "20210708004534-q4otym3",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004534-q4otym3"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "发现问题"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004534-a24ajta",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004534-a24ajta"
+									},
+									"Children": [
+										{
+											"ID": "20210708004534-n03mwtr",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004534-n03mwtr"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "竞选负责人"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004534-z1s17gu",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004534-z1s17gu"
+									},
+									"Children": [
+										{
+											"ID": "20210708004534-f923u9e",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004534-f923u9e"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "优选新 master"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004534-xriguw9",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004534-xriguw9"
+									},
+									"Children": [
+										{
+											"ID": "20210708004534-3frwjpm",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004534-3frwjpm"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "新 master 上任，其他 slave 切换 master，原 master 作为 slave 故障回复后连接"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

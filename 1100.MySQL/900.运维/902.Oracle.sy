@@ -1,0 +1,4976 @@
+{
+	"ID": "20210708003749-m2wxgz5",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210708003749-m2wxgz5",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210708003749-np0rp6b",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003749-np0rp6b"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "通过 Docker 安装"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-fkrp2l2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003749-fkrp2l2"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "构建 Docker image"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-lykli51",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-lykli51"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "此处仅记录 Oracle12c 的 Docker image 构建及使用过程，其他版本如 19c 也类似（run 了半天没启动起来算逑了）。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-9ew0i3p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-9ew0i3p"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "构建："
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-nov64vu",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 4,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210708003749-nov64vu"
+			},
+			"Children": [
+				{
+					"ID": "20210708003749-bkxiahi",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 4,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210708003749-bkxiahi"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-p48ciuu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-p48ciuu"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Clone Oracle 准备的镜像构建"
+								},
+								{
+									"Type": "NodeLink",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket",
+											"Data": "["
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "仓库"
+										},
+										{
+											"Type": "NodeCloseBracket",
+											"Data": "]"
+										},
+										{
+											"Type": "NodeOpenParen",
+											"Data": "("
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://github.com/oracle/docker-images"
+										},
+										{
+											"Type": "NodeCloseParen",
+											"Data": ")"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（有该公司许多产品）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003749-kge5bki",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 4,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210708003749-kge5bki"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-i7fcpoi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-i7fcpoi"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在 "
+								},
+								{
+									"Type": "NodeLink",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket",
+											"Data": "["
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "Oracle 官网"
+										},
+										{
+											"Type": "NodeCloseBracket",
+											"Data": "]"
+										},
+										{
+											"Type": "NodeOpenParen",
+											"Data": "("
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://www.oracle.com/database/technologies/oracle-database-software-downloads.html"
+										},
+										{
+											"Type": "NodeCloseParen",
+											"Data": ")"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "下载需要构建镜像的 "
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "Linux"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 原版，此处为 Oracle Database 12c Release 2"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003749-lsqhc0v",
+					"Type": "NodeListItem",
+					"Data": "3",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 3,
+						"Delimiter": 46,
+						"Padding": 4,
+						"Marker": "Mw==",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20210708003749-lsqhc0v"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-vvd1v3v",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-vvd1v3v"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "进入 1 的 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "docker-images/OracleDatabase/SingleInstance/dockerfiles/12.2.0.1"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，将 2 下载的文件放入该目录，其他版本类似。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003749-qzya4g1",
+					"Type": "NodeListItem",
+					"Data": "4",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 4,
+						"Delimiter": 46,
+						"Padding": 4,
+						"Marker": "NA==",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20210708003749-qzya4g1"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-mgbbrcc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-mgbbrcc"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "退出到上一级目录，找到有"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "buildDockerImage.sh"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "命令的目录，执行"
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-erxuwdc",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "YmFzaA==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003749-erxuwdc"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "YmFzaA=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "./buildDockerImage.sh -v 12.2.0.1 -e\n\n-----------------含义如下-------------------\n-v: version to build, Choose one of: 11.2.0.2 12.1.0.2 12.2.0.1 .etc\n-e: creates image based on ‘Enterprise Edition’\n-s: creates image based on ‘Standard Edition 2’\n-x: creates image based on ‘Express Edition’\n-i: ignores the MD5 checksums\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-u00qe0p",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-u00qe0p"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "注意在安装过程中需要联网（可能需要科学上网），因为他会下载oraclelinux:7-slim 和 yum install pre-install 的包"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003749-tyogo45",
+					"Type": "NodeListItem",
+					"Data": "5",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 5,
+						"Delimiter": 46,
+						"Padding": 4,
+						"Marker": "NQ==",
+						"Num": 5
+					},
+					"Properties": {
+						"id": "20210708003749-tyogo45"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-qgtgb4n",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-qgtgb4n"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "等待 10 多分钟应该就好了，此时就可以查看 image，会有oracle linux 和 oracle database"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-zisb81o",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003749-zisb81o"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "将镜像上传至阿里云"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-c9ylafm",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 4,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210708003749-c9ylafm"
+			},
+			"Children": [
+				{
+					"ID": "20210708003749-54hmxck",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 4,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210708003749-54hmxck"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-pcnm4l5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-pcnm4l5"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "重命名镜像"
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-xp924p9",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "YmFzaA==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003749-xp924p9"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "YmFzaA=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "sudo docker tag imageId registry.cn-hangzhou.aliyuncs.com/con/oracle12c_r2:12.2.0.1-ee\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003749-gvxtjvo",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 4,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210708003749-gvxtjvo"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-qahugn6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-qahugn6"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "上传（慢得要死）"
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-oczqnwg",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "YmFzaA==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003749-oczqnwg"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "YmFzaA=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "sudo docker push registry.cn-hangzhou.aliyuncs.com/con/oracle12c_r2:12.2.0.1-ee\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-gz7yxti",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003749-gz7yxti"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "创建容器并运行"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-tung9h2",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 4,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210708003749-tung9h2"
+			},
+			"Children": [
+				{
+					"ID": "20210708003749-5q1jchi",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 4,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210708003749-5q1jchi"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-x4hug4r",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-x4hug4r"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "我选择创建"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "/usr/local/docker/oracle12c/"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "并进入，执行"
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-vh8wkt4",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "YmFzaA==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003749-vh8wkt4"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "YmFzaA=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "sudo docker run -d --name oracle12c \\\n  --privileged -v /usr/local/docker/oracle12c/oradata:/opt/oracle/oradata \\\n  -p 8080:8080 -p 1521:1521 oracle/database:12.2.0.1-ee\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-4vg0wty",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-4vg0wty"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "数据库设置和数据将持久化到"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "/oradata"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "文件夹，端口将公开给 localhost 或 boot2docker 容器（Mac 和 Win）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003749-kqaqq7s",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 4,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210708003749-kqaqq7s"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-ydag2rp",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-ydag2rp"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "此时的日志会显示一个随机密码，可以重新设置（此时容器必须运行正常，用"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "ps"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "查看）。此处设置为 oracle"
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-gwesh41",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "YmFzaA==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003749-gwesh41"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "YmFzaA=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "docker exec b0 ./setPassword.sh oracle\nThe Oracle base remains unchanged with value /opt/oracle\n\nSQL*Plus: Release 12.2.0.1.0 Production on Sat Feb 15 18:13:09 2020\n\nCopyright (c) 1982, 2016, Oracle.  All rights reserved.\n\n\nConnected to:\nOracle Database 12c Enterprise Edition Release 12.2.0.1.0 - 64bit Production\n\nSQL\u003e\nUser altered.\n\nSQL\u003e\nUser altered.\n\nSQL\u003e\nSession altered.\n\nSQL\u003e\nUser altered.\n\nSQL\u003e Disconnected from Oracle Database 12c Enterprise Edition Release 12.2.0.1.0 - 64bit Production\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003749-m7kccf3",
+					"Type": "NodeListItem",
+					"Data": "3",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 3,
+						"Delimiter": 46,
+						"Padding": 4,
+						"Marker": "Mw==",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20210708003749-m7kccf3"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-lyecza5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-lyecza5"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "默认的 SID 为 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "orclcdb"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，Server Name 为"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "orclpdb1"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，使用 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "system"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（dba）或"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "sys"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（sysdba）连接即可"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-ur89v1u",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003749-ur89v1u"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "运行时权限问题"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-w3zerba",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-w3zerba"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-v"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "数据卷时，有可能容器里用户对映射的路径没有写权限，会导致运行时报错，启动不了"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-0ffq1ja",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-0ffq1ja"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "ORACLE PASSWORD FOR SYS, SYSTEM AND PDBADMIN: eTsinj4LADk=1\n\nLSNRCTL for Linux: Version 12.2.0.1.0 - Production on 27-FEB-2020 18:27:12\n\nCopyright (c) 1991, 2016, Oracle.  All rights reserved.\n\nStarting /opt/oracle/product/12.2.0.1/dbhome_1/bin/tnslsnr: please wait...\n\nTNSLSNR for Linux: Version 12.2.0.1.0 - Production\nSystem parameter file is /opt/oracle/product/12.2.0.1/dbhome_1/network/admin/listener.ora\nLog messages written to /opt/oracle/diag/tnslsnr/1d786d0a6d23/listener/alert/log.xml\nListening on: (DESCRIPTION=(ADDRESS=(PROTOCOL=ipc)(KEY=EXTPROC1)))\nListening on: (DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=0.0.0.0)(PORT=1521)))\n\nConnecting to (DESCRIPTION=(ADDRESS=(PROTOCOL=IPC)(KEY=EXTPROC1)))\nSTATUS of the LISTENER\n\\------------------------\nAlias                     LISTENER\nVersion                   TNSLSNR for Linux: Version 12.2.0.1.0 - Production\nStart Date                27-FEB-2020 18:27:13\nUptime                    0 days 0 hr. 0 min. 1 sec\nTrace Level               off\nSecurity                  ON: Local OS Authentication\nSNMP                      OFF\nListener Parameter File   /opt/oracle/product/12.2.0.1/dbhome_1/network/admin/listener.ora\nListener Log File         /opt/oracle/diag/tnslsnr/1d786d0a6d23/listener/alert/log.xml\nListening Endpoints Summary...\n  (DESCRIPTION=(ADDRESS=(PROTOCOL=ipc)(KEY=EXTPROC1)))\n  (DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=0.0.0.0)(PORT=1521)))\nThe listener supports no services\nThe command completed successfully\n[WARNING] [DBT-10102] The listener configuration is not selected for the database. EM DB Express URL will not be accessible.\n   CAUSE: The database should be registered with a listener in order to access the EM DB Express URL.\n   ACTION: Select a listener to be registered or created with the database.\nLook at the log file \"/opt/oracle/cfgtoollogs/dbca/ORCLCDB.log\" for further details.\ncat: /opt/oracle/cfgtoollogs/dbca/ORCLCDB/ORCLCDB.log: No such file or directory\n[ 2020-02-27 18:27:23.443 UTC ] Cannot create directory \"/opt/oracle/oradata/ORCLCDB\".\n\nSQL*Plus: Release 12.2.0.1.0 Production on Thu Feb 27 18:27:23 2020\n\nCopyright (c) 1982, 2016, Oracle.  All rights reserved.\n\nConnected to an idle instance.\n\nSQL\u003e    ALTER SYSTEM SET control_files='/opt/oracle/oradata/ORCLCDB/control01.ctl' scope=spfile\n*\nERROR at line 1:\nORA-01034: ORACLE not available\nProcess ID: 0\nSession ID: 0 Serial number: 0\n\n\nSQL\u003e    ALTER PLUGGABLE DATABASE ORCLPDB1 SAVE STATE\n*\nERROR at line 1:\nORA-01034: ORACLE not available\nProcess ID: 0\nSession ID: 0 Serial number: 0\n\n\nSQL\u003e BEGIN DBMS_XDB_CONFIG.SETGLOBALPORTENABLED (TRUE); END;\n\n*\nERROR at line 1:\nORA-01034: ORACLE not available\nProcess ID: 0\nSession ID: 0 Serial number: 0\n\n\nSQL\u003e Disconnected\nmkdir: cannot create directory '/opt/oracle/oradata/dbconfig': Permission denied\nmv: cannot stat '/opt/oracle/product/12.2.0.1/dbhome_1/dbs/spfileORCLCDB.ora': No such file or directory\nmv: cannot stat '/opt/oracle/product/12.2.0.1/dbhome_1/dbs/orapwORCLCDB': No such file or directory\nmv: cannot move '/opt/oracle/product/12.2.0.1/dbhome_1/network/admin/sqlnet.ora' to '/opt/oracle/oradata/dbconfig/ORCLCDB/': No such file or directory\nmv: cannot move '/opt/oracle/product/12.2.0.1/dbhome_1/network/admin/listener.ora' to '/opt/oracle/oradata/dbconfig/ORCLCDB/': No such file or directory\nmv: cannot move '/opt/oracle/product/12.2.0.1/dbhome_1/network/admin/tnsnames.ora' to '/opt/oracle/oradata/dbconfig/ORCLCDB/': No such file or directory\ncp: cannot create regular file '/opt/oracle/oradata/dbconfig/ORCLCDB/': No such file or directory\nln: failed to create symbolic link '/opt/oracle/product/12.2.0.1/dbhome_1/network/admin/sqlnet.ora': File exists\nln: failed to create symbolic link '/opt/oracle/product/12.2.0.1/dbhome_1/network/admin/listener.ora': File exists\nln: failed to create symbolic link '/opt/oracle/product/12.2.0.1/dbhome_1/network/admin/tnsnames.ora': File exists\ncp: cannot stat '/opt/oracle/oradata/dbconfig/ORCLCDB/oratab': No such file or directory\nORACLE_HOME = [/home/oracle] ? ORACLE_BASE environment variable is not being set since this\ninformation is not available for the current user ID .\nYou can set ORACLE_BASE manually if it is required.\nResetting ORACLE_BASE to its previous value or ORACLE_HOME\nThe Oracle base remains unchanged with value /opt/oracle\n/opt/oracle/checkDBStatus.sh: line 26: sqlplus: command not found\n\\#####################################\n\\########### E R R O R ###############\nDATABASE SETUP WAS NOT SUCCESSFUL!\nPlease check output for further info!\n\\########### E R R O R ###############\n\\#####################################\nThe following output is now a tail of the alert.log:\ntail: cannot open '/opt/oracle/diag/rdbms/*/*/trace/alert*.log' for reading: No such file or directory\ntail: no files remaining\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-2tmz1ja",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-2tmz1ja"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "根据这条 "
+				},
+				{
+					"Type": "NodeLink",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "issue"
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://github.com/oracle/docker-images/issues/227"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，无论您将卷安装在哪个位置，请确保Docker容器内的用户在该位置具有写访问权限。请记住，在Linux中唯一重要的是 UID。因此，仅仅因为您在容器内有一个用户 oracle 并不意味着它是容器外的同一用户oracle。您必须确保 UID 匹配或提供正确的权限。这个博客的"
+				},
+				{
+					"Type": "NodeLink",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "评论区"
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://sqlmaria.com/2017/04/27/oracle-database-12c-now-available-on-docker/#comment-855"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "也有介绍到。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-fcrazlc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-fcrazlc"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "例如，如果您拥有一个"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "/home/data"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，请确保它是由 UID 54321 的用户即 oracle 拥有的，或者请确保您向其他用户授予了写权限。也可以添加上组名 dba，GID 为 54322。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-4g2olct",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-4g2olct"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "sudo chown -R 54321:54322 /usr/local/docker/oracle12c\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-u73509x",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003749-u73509x"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "设置 SID 环境变量"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-urc5g8m",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-urc5g8m"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果是docker，在"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "进入容器"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "后需确定是否当前为 oracle 用户"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-48jkd6e",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-48jkd6e"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "su oracle\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-a6o9zfs",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-a6o9zfs"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "直接登陆，可能报错。好像每次重启都要设置？"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-e8myfyo",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-e8myfyo"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "ERROR:\nORA-12162: TNS:net service name is incorrectly specified\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-v9m3pw7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-v9m3pw7"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "原因是系统没有设置 SID"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-kodqtd4",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-kodqtd4"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "export ORACLE_SID=ORCLCDB\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-0ztmjrl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-0ztmjrl"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "登陆"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-avp6gb3",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-avp6gb3"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "sqlplus /nolog\nSQL\u003econn / as sysdba;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-t0dyirx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003749-t0dyirx"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "修改编码"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-ubolkhi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-ubolkhi"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可能存在"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "AL32UTF8"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "编码的服务器导入中文时字段长度不够问题，需转换为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ZHS16GBK"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-zen64cl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-zen64cl"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "查看编码等信息"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-ss9j6lg",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-ss9j6lg"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "select * from nls_database_parameters\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-n3w2yg1",
+			"Type": "NodeTable",
+			"Data": "| PARAMETER               | VALUE                        |\n| ----------------------- | ---------------------------- |\n| NLS_RDBMS_VERSION       | 12.2.0.1.0                   |\n| NLS_NCHAR_CONV_EXCP     | FALSE                        |\n| NLS_LENGTH_SEMANTICS    | BYTE                         |\n| NLS_COMP                | BINARY                       |\n| NLS_DUAL_CURRENCY       | $                            |\n| NLS_TIMESTAMP_TZ_FORMAT | DD-MON-RR HH.MI.SSXFF AM TZR |\n| NLS_TIME_TZ_FORMAT      | HH.MI.SSXFF AM TZR           |\n| NLS_TIMESTAMP_FORMAT    | DD-MON-RR HH.MI.SSXFF AM     |\n| NLS_TIME_FORMAT         | HH.MI.SSXFF AM               |\n| NLS_SORT                | BINARY                       |\n| NLS_DATE_LANGUAGE       | AMERICAN                     |\n| NLS_DATE_FORMAT         | DD-MON-RR                    |\n| NLS_CALENDAR            | GREGORIAN                    |\n| NLS_NUMERIC_CHARACTERS  | .,                           |\n| NLS_NCHAR_CHARACTERSET  | AL16UTF16                    |\n| NLS_CHARACTERSET        | AL32UTF8                     |\n| NLS_ISO_CURRENCY        | AMERICA                      |\n| NLS_CURRENCY            | $                            |\n| NLS_TERRITORY           | AMERICA                      |\n| NLS_LANGUAGE            | AMERICAN                     |",
+			"TableAligns": [
+				0,
+				0
+			],
+			"Properties": {
+				"id": "20210708003749-n3w2yg1"
+			},
+			"Children": [
+				{
+					"Type": "NodeTableHead",
+					"Children": [
+						{
+							"Type": "NodeTableRow",
+							"Children": [
+								{
+									"Type": "NodeTableCell",
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "PARAMETER"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "VALUE"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "NLS_RDBMS_VERSION"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "12.2.0.1.0"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "NLS_NCHAR_CONV_EXCP"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "FALSE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "NLS_LENGTH_SEMANTICS"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "BYTE"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "NLS_COMP"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "BINARY"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "NLS_DUAL_CURRENCY"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "$"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "NLS_TIMESTAMP_TZ_FORMAT"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "DD-MON-RR HH.MI.SSXFF AM TZR"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "NLS_TIME_TZ_FORMAT"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "HH.MI.SSXFF AM TZR"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "NLS_TIMESTAMP_FORMAT"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "DD-MON-RR HH.MI.SSXFF AM"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "NLS_TIME_FORMAT"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "HH.MI.SSXFF AM"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "NLS_SORT"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "BINARY"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "NLS_DATE_LANGUAGE"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "AMERICAN"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "NLS_DATE_FORMAT"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "DD-MON-RR"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "NLS_CALENDAR"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "GREGORIAN"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "NLS_NUMERIC_CHARACTERS"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": ".,"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "NLS_NCHAR_CHARACTERSET"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "AL16UTF16"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "NLS_CHARACTERSET"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "AL32UTF8"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "NLS_ISO_CURRENCY"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "AMERICA"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "NLS_CURRENCY"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "$"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "NLS_TERRITORY"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "AMERICA"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "NLS_LANGUAGE"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "AMERICAN"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-b3frgzl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-b3frgzl"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "修改编码"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-bw5hjbh",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-bw5hjbh"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "sqlplus /nolog\n\nSQL\u003e conn /as sysdba\nSQL\u003e shutdown immediate;\nSQL\u003e startup mount;\nSQL\u003e ALTER SYSTEM ENABLE RESTRICTED SESSION;\nSQL\u003e ALTER SYSTEM SET JOB_QUEUE_PROCESSES=0;\nSQL\u003e ALTER SYSTEM SET AQ_TM_PROCESSES=0;\nSQL\u003e alter database open;\nSQL\u003e ALTER DATABASE CHARACTER SET ZHS16GBK;\n    ORA-12712: new character set must be a superset of old character set\n    --提示我们的字符集：新字符集必须为旧字符集的超集，这时我们可以跳过超集的检查做更改：\nSQL\u003e ALTER DATABASE character set INTERNAL_USE ZHS16GBK;\n    --我们看到这个过程和之前ALTER DATABASE CHARACTER SET操作的内部过程是完全相同的，也就是说INTERNAL_USE提供的帮助就是使Oracle数据库绕过了子集与超集的校验.\nSQL\u003e select * from v$nls_parameters; \nSQL\u003e shutdown immediate;\nSQL\u003e startup\nSQL\u003e select * from v$nls_parameters;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-sdsps97",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003749-sdsps97"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "备份恢复"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-isnt4mr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003749-isnt4mr"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "sqlplus"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-uf3hpf4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-uf3hpf4"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "根据SID登录（直接登陆查看设置SID时笔记）"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-7rujxck",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-7rujxck"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "sqlplus sys/oracle@orclcdb as sysdba;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-tpvyt7j",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-tpvyt7j"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "也可以根据 PDB 来登陆，需使用SID登录后查询"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "show pdbs"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-gf57dh9",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-gf57dh9"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "SQL\u003e show pdbs;\n\n    CON_ID CON_NAME\t\t\t  OPEN MODE  RESTRICTED\n---------- ------------------------------ ---------- ----------\n\t 2 PDB$SEED\t\t\t  READ ONLY  NO\n\t 3 ORCLPDB1\t\t\t  READ WRITE NO\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-pgo7fpv",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-pgo7fpv"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "sqlplus sys/oracle@orclpdb1 as sysdba;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-mdu7qin",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-mdu7qin"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "登陆后可以切换用户"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-n63m681",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-n63m681"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "conn sys/oracle@orclcdb as sysdba;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-usm7v24",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-usm7v24"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "查看当前 session 的 CDB 或 PDB"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-b61rwxl",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-b61rwxl"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "SQL\u003e show con_name;\n\nCON_NAME\n--------------PDB----------------\nORCLPDB1\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-6mxsgfc",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-6mxsgfc"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "SQL\u003e show con_name;\n\nCON_NAME\n--------------CDB----------------\nCDB$ROOT\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-jf1pupn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-jf1pupn"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "设置并启动PDB数据库（上述连接PDB后好像不用执行该步）"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-fqmvndp",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "U1FM",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-fqmvndp"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "U1FM"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "alter session set container=ORCLPDB1; \n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-mxg2abc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-mxg2abc"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用JDBC连接 PDB 时需要设置如下的URL"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-92h0ju6",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-92h0ju6"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "jdbc:oracle:thin:@192.168.214.101:1521/orclpdb1\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-68n19q6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-68n19q6"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "连接 CDB 设置如下"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-947l4ze",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-947l4ze"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "jdbc:oracle:thin:192.168.214.101:1521:orclcdb\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-d10cjhz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003749-d10cjhz"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "表空间"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-fglto3v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-fglto3v"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "查看表空间"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-rx07tja",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-rx07tja"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "select name from v$datafile;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-52fy968",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-52fy968"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "查看临时表空间"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-wkj2orz",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-wkj2orz"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "select name from v$tempfile;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-vdu2fhq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-vdu2fhq"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在 CDB 容器下创建的用户属于公有用户，尽量在 PDB 下创建"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-ejg8dwz",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "U1FM",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-ejg8dwz"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "U1FM"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "CREATE TABLESPACE HTDMS3\nDATAFILE '/opt/oracle/oradata/ORCLCDB/ORCLPDB1/htdms3.dbf'\n-- 容器中推荐使用上面查询到的路径，如上\n---若写为 DATAFILE './HTDMS3.DBF',则会存在/u01/app/oracle/product/12.1.0.2/dbhome_1/dbs/htdms3.dbf\n-- DATAFILE 'E:\\oralce_data\\HTDMS3.DBF' -- Windows下\nSIZE 1024M\nAUTOEXTEND ON\nNEXT 32M \nMAXSIZE UNLIMITED;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-v7qjmga",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-v7qjmga"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "删除表空间"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-ougn35w",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-ougn35w"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "DROP tablespace HTDMS3;-- 可能没把文件删除，可以采用下面命令\nDROP tablespace HTDMS3 INCLUDING CONTENTS AND DATAFILES;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-o1x0ss0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003749-o1x0ss0"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "用户"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-vcnyrzk",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003749-vcnyrzk"
+			},
+			"Children": [
+				{
+					"ID": "20210708003749-qd2loy5",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003749-qd2loy5"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-47qvt6d",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-47qvt6d"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "删除原有用户（不删除表空间）"
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-2mzsvws",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockFenceOffset": 2,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c3Fs",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003749-2mzsvws"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c3Fs"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "drop user htdms3 cascade;\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-2c6oi44",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-2c6oi44"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "若提示"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "ORA-01940: 无法删除当前连接的用户"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，则需要查看用户的连接状况"
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-zwevfv4",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockFenceOffset": 2,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c3Fs",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003749-zwevfv4"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c3Fs"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "select username,sid,serial# from v$session where username='htdms3';\n-----或-----\nselect saddr,sid,serial#,paddr,username,status from v$session where username ='ODI_SRC';\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-367k6hu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-367k6hu"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "根据用户的"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "sid"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "和"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "serial"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "删除"
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-ap5sznn",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockFenceOffset": 2,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c3Fs",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003749-ap5sznn"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c3Fs"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "alter system kill session'7,85';\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003749-twqxm63",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003749-twqxm63"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-xlrlvn1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-xlrlvn1"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "创建用户（12c在CDB容器下创建用户需要在前添加C##；PDB容器下不需要）"
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-j9gdaiv",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockFenceOffset": 2,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "U1FM",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003749-j9gdaiv"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "U1FM"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "CREATE USER htdms3\nIDENTIFIED BY 111111\nDEFAULT TABLESPACE htdms3;\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003749-or9oy5c",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003749-or9oy5c"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-ddm9m1k",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-ddm9m1k"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "授权"
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-fcuiyow",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockFenceOffset": 2,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "U1FM",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003749-fcuiyow"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "U1FM"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "grant all privileges to HTDMS3;\ngrant dba to HTDMS3;\n---------------------------\ngrant sysdba to HTDMS3;\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-ib719ux",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003749-ib719ux"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "备份恢复"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-08fkdxf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-08fkdxf"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "根据需要将SID换为PDB"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-krsdwfo",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003749-krsdwfo"
+			},
+			"Children": [
+				{
+					"ID": "20210708003749-5e82ois",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003749-5e82ois"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-uiitc6y",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-uiitc6y"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "恢复数据（指定表）"
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-e1pzunu",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockFenceOffset": 2,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "U1FM",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003749-e1pzunu"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "U1FM"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "imp HTDMS3/111111@192.168.1.108/oradb file=D:/DataBase/bjtrq3/_backup/htdms3.dmp ignore=y FULL=Y\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003749-2fslnlh",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003749-2fslnlh"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-vxu8yp6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-vxu8yp6"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "备份数据（指定表）"
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-aijmobg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-aijmobg"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "owner是当前用户时可以不指定，否则报错"
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-p4vgbvt",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockFenceOffset": 2,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c3Fs",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003749-p4vgbvt"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c3Fs"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "exp htdms3/111111@192.168.1.108/oradb file=D:/DataBase/bjtrq3/_backup/HTDMS_1225.dmp log=D:/DataBase/bjtrq3/_backup/HTDMS_1225.log tables=(DMS_GRP_DOC_TYPE) owner=htdms3 \n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-48koocz",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockFenceOffset": 2,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c3Fs",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003749-48koocz"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c3Fs"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "  // 不指定owner如下：\n  Connected to: Oracle Database 12c Enterprise Edition Release 12.2.0.1.0 - 64bit Production\n  Export done in ZHS16GBK character set and AL16UTF16 NCHAR character set\n\n  About to export specified users ...\n  . exporting pre-schema procedural objects and actions\n  . exporting foreign function library names for user DMSZYGD \n  . exporting PUBLIC type synonyms\n  . exporting private type synonyms\n  . exporting object type definitions for user DMSZYGD \n  About to export DMSZYGD's objects ...\n  . exporting database links\n  . exporting sequence numbers\n  . exporting cluster definitions\n  . about to export DMSZYGD's tables via Conventional Path ...\n  . . exporting table                    APP_DMS_DOC         86 rows exported\n  . . . . . .\n  . exporting synonyms\n  . exporting views\n  . exporting stored procedures\n  . exporting operators\n  . exporting referential integrity constraints\n  . exporting triggers\n  . exporting indextypes\n  . exporting bitmap, functional and extensible indexes\n  . exporting posttables actions\n  . exporting materialized views\n  . exporting snapshot logs\n  . exporting job queues\n  . exporting refresh groups and children\n  . exporting dimensions\n  . exporting post-schema procedural objects and actions\n  . exporting statistics\n  Export terminated successfully without warnings.\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-ycpqemu",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003749-ycpqemu"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "数据泵"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-2mlice7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-2mlice7"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在Oracle10g中exp imp 被重新设计为Oracle Data Pump（保留了原有的 exp imp工具），数据泵与传统导出导入的区别："
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-q8e2u5k",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003749-q8e2u5k"
+			},
+			"Children": [
+				{
+					"ID": "20210708003749-as2b9s9",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003749-as2b9s9"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-1x0gorm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-1x0gorm"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "exp 和 imp 是客户端工具，他们既可以在客户端使用，也可以在服务端使用。　　"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003749-lfi7nmk",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003749-lfi7nmk"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-khmgg97",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-khmgg97"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "expdp 和impdp 是服务端工具，只能在 Oracle 服务端使用。（不一定，参考下面代码）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003749-qt45g40",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003749-qt45g40"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-gpadlzs",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-gpadlzs"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "imp 只适用于 exp 导出文件，impdp 只适用于 expdp 导出文件。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-pvbvybm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-pvbvybm"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如下笔记参考了 https://www.cnblogs.com/chinas/p/8300955.html"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-esuu54p",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003749-esuu54p"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "expdp"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-z117bl4",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 3,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210708003749-z117bl4"
+			},
+			"Children": [
+				{
+					"ID": "20210708003749-fz8ugdx",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210708003749-fz8ugdx"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-aqnc80k",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-aqnc80k"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "为输出路径建立一个数据库的directory对象（"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "dp_data"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "需自行填写）"
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-tm1gx76",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockFenceOffset": 1,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c3Fs",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003749-tm1gx76"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c3Fs"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "-- 需在服务器创建该目录\ncreate or replace directory dp_data as 'D:\\app\\Administrator\\dp_data\\';\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-fxn1q4i",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-fxn1q4i"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "查看是否创建成功"
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-35px3hu",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockFenceOffset": 1,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c3Fs",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003749-35px3hu"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c3Fs"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "select * from dba_directories;\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-2a6mdf3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-2a6mdf3"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "给将要进行数据导出的用户授权访问"
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-wknka4d",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockFenceOffset": 1,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c3Fs",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003749-wknka4d"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c3Fs"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "grant read,write on directory dp_data to htdms;\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003749-tvienh2",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210708003749-tvienh2"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-i1ojkn3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-i1ojkn3"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "导出"
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-z9vzx08",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockFenceOffset": 1,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "YmFzaA==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003749-z9vzx08"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "YmFzaA=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "expdp htdms/bjtrqTXGL2018sc@10.168.52.133/orcl schemas=htdms directory=dp_data dumpfile=htdms3_dp_1128.dmp logfile=htdms3_dp_1128.log\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-nahuorq",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 42,
+								"Padding": 2,
+								"MarkerOffset": 1,
+								"Marker": "Kg==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708003749-nahuorq"
+							},
+							"Children": [
+								{
+									"ID": "20210708003749-t0yuzgh",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"MarkerOffset": 1,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708003749-t0yuzgh"
+									},
+									"Children": [
+										{
+											"ID": "20210708003749-e6u2sjm",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708003749-e6u2sjm"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "` "
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "full=y"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": " `"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "： 全量导出数据库"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708003749-uh30chb",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"MarkerOffset": 1,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708003749-uh30chb"
+									},
+									"Children": [
+										{
+											"ID": "20210708003749-18e8883",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708003749-18e8883"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "tablespace"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "： 按表空间导出"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708003749-kef4ji4",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"MarkerOffset": 1,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708003749-kef4ji4"
+									},
+									"Children": [
+										{
+											"ID": "20210708003749-wdh4tbg",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708003749-wdh4tbg"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "` "
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "schemas"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": " `"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "： 按用户导出"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708003749-pb9n852",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"MarkerOffset": 1,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708003749-pb9n852"
+									},
+									"Children": [
+										{
+											"ID": "20210708003749-0n54drz",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708003749-0n54drz"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "tables=t1,t2"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "： 按表导出"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708003749-stq8u72",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"MarkerOffset": 1,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708003749-stq8u72"
+									},
+									"Children": [
+										{
+											"ID": "20210708003749-brx7ip2",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708003749-brx7ip2"
+											},
+											"Children": [
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "tables=table1='where number=1234'"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "： 按查询条件导"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-8rlu2w1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003749-8rlu2w1"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "impdp"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-liujybs",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-liujybs"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "确保数据库directory目录已提前建好（参考expdp）， 提前将源库导出的数据文件传递到目标库的备份目录下 ， 给将要进行数据导入的用户授权访问"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-j0854oj",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-j0854oj"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "grant read,write on directory dp_data to htdms3;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-b0h6u7g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-b0h6u7g"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "导入"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-by12okv",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-by12okv"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "impdp htdms3/bjtrqTXGL2018sc@10.168.52.133/orcl schemas=htdms REMAP_SCHEMA=htdms:htdms3 REMAP_TABLESPACE=htdms:htdms3 directory=dp_data dumpfile=htdms3_dp_1128.dmp logfile=htdms3_dp_1128.log;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-q61wzbf",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003749-q61wzbf"
+			},
+			"Children": [
+				{
+					"ID": "20210708003749-8ga0lro",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003749-8ga0lro"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-ytu29em",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-ytu29em"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "` "
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "full=y"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": " `"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "： 全量导入数据库"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003749-i3e1yd6",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003749-i3e1yd6"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-1owjlvz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-1owjlvz"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "tablespace"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "： 按表空间导入，可指定"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "REMAP_TABLESPACE"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-fl2mmxl",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-fl2mmxl"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "将表空间TBS01、TBS02、TBS03导入到表空间A_TBS，将用户B的数据导入到A，并生成新的oid防止冲突；"
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-4vgakgq",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockFenceOffset": 2,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "YmFzaA==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003749-4vgakgq"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "YmFzaA=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "impdp A/passwd directory=data_dir dumpfile=expdp.dmp logfile=impdp.log  remap_tablespace=TBS01:A_TBS,TBS02:A_TBS,TBS03:A_TBS remap_schema=B:A FULL=Y transform=oid:n \n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003749-h719h8i",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 3,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003749-h719h8i"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-oa8g0w3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-oa8g0w3"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "` "
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "schemas"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": " `"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "： 按用户导入"
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-sdz256d",
+							"Type": "NodeList",
+							"ListData": {
+								"BulletChar": 42,
+								"Padding": 2,
+								"MarkerOffset": 1,
+								"Marker": "Kg==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708003749-sdz256d"
+							},
+							"Children": [
+								{
+									"ID": "20210708003749-atj0hh3",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"BulletChar": 42,
+										"Padding": 2,
+										"MarkerOffset": 1,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708003749-atj0hh3"
+									},
+									"Children": [
+										{
+											"ID": "20210708003749-unrz52f",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708003749-unrz52f"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "若导入的用户名同名，可以不用指定"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "REMAP_SCHEMA"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708003749-vq1xq7x",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"MarkerOffset": 1,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708003749-vq1xq7x"
+									},
+									"Children": [
+										{
+											"ID": "20210708003749-xr8sgdq",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708003749-xr8sgdq"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "否则需要指定映射关系"
+												},
+												{
+													"Type": "NodeCodeSpan",
+													"CodeMarkerLen": 1,
+													"Children": [
+														{
+															"Type": "NodeCodeSpanOpenMarker",
+															"Data": "`"
+														},
+														{
+															"Type": "NodeCodeSpanContent",
+															"Data": "REMAP_SCHEMA=htdms:htdms3"
+														},
+														{
+															"Type": "NodeCodeSpanCloseMarker",
+															"Data": "`"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003749-35ny17y",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003749-35ny17y"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-al162dg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-al162dg"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "tables=t1,t2"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "： 按表导入"
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-gw96wb3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-gw96wb3"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "从A用户中把表table1和table2导入到B用户中"
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-g7n6but",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockFenceOffset": 2,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "YmFzaA==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003749-g7n6but"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "YmFzaA=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "impdp B/passwd tables=A.table1,A.table2 remap_schema=A:B directory=dp_data dumpfile=expdp.dmp logfile=impdp.log;\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003749-je4n4b6",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 3,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003749-je4n4b6"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-vmwb9ed",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-vmwb9ed"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "追加数据"
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-zgto52h",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockFenceOffset": 1,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "YmFzaA==",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003749-zgto52h"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "YmFzaA=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "impdp sys/passwd directory=data_dir dumpfile=expdp.dmp schemas=system logfile=impdp.log table_exists_action=replace\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-27nzzai",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-27nzzai"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "table_exists_action"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "导入对象已存在时执行的操作。可传指：END,REPLACE和TRUNCATE"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-56meqgd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003749-56meqgd"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "测试"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-c3ellvz",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-c3ellvz"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "impdp htdms3/111111@127.0.0.1/xe SCHEMAS=htdms3 DIRECTORY=bak DUMPFILE=full.dmp LOGFILE=full.log remap_tablespace='htdms':'htdms3'\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-3thb03p",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003749-3thb03p"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "恢复某一时间数据"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-eqa3jxm",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003749-eqa3jxm"
+			},
+			"Children": [
+				{
+					"ID": "20210708003749-469cu5c",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003749-469cu5c"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-8edmi52",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-8edmi52"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "查询执行的SQL语句。可以看到SQL_TEXT、LAST_LOAD_TIME"
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-33o43iw",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockFenceOffset": 2,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "U1FM",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003749-33o43iw"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "U1FM"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "select sql_text,last_load_time from v$sql where sql_text like '%update%' order by last_load_time desc;\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003749-c6tdmft",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003749-c6tdmft"
+					},
+					"Children": [
+						{
+							"ID": "20210708003749-0ko483y",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003749-0ko483y"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "将数据回滚到需要的时间点"
+								}
+							]
+						},
+						{
+							"ID": "20210708003749-3w97teo",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockFenceOffset": 2,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "U1FM",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003749-3w97teo"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "U1FM"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "alter table $tablename$ enable row movement;\nflashback table $tablename$ to timestamp to_timestamp('xxxx-xx-xx xx:xx:xx', 'yyyy-mm-dd hh24:mi:ss');\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-vk9cgna",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003749-vk9cgna"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "修改列类型（已有数据）"
+				}
+			]
+		},
+		{
+			"ID": "20210708003749-vbzp8s6",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003749-vbzp8s6"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "alter table DMS_DOC_REVISION_RECORD add ARC_IDS_TEMP number;\nupdate DMS_DOC_REVISION_RECORD set ARC_IDS_TEMP=ARC_ID,ARC_ID=null;\nalter table DMS_DOC_REVISION_RECORD modify ARC_ID VARCHAR2(512);\nupdate DMS_DOC_REVISION_RECORD set ARC_ID=to_char(ARC_IDS_TEMP),ARC_IDS_TEMP=null;\nalter table DMS_DOC_REVISION_RECORD drop column ARC_IDS_TEMP;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		}
+	]
+}

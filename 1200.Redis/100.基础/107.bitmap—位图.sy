@@ -1,0 +1,2030 @@
+{
+	"ID": "20210708004513-hwogda5",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210708004513-hwogda5",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210708004513-jznp71w",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-jznp71w"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Redis 的位图是在"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "字符串"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的基础上实现的，所以它会把位图键看作一个字符串键。所以可以使用字符串命令对位图进行操作"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-ses36yg",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-ses36yg"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥SETBIT 设置二进制位的值"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-ywhi8s3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-ywhi8s3"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过使用 SETBIT 命令，用户可以为位图"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "指定偏移量（从 0 开始）"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "上的二进制位设置值"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-rlywj1p",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-rlywj1p"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "setbit bitmap offset value\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-3g72buw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-3g72buw"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "SETBIT 命令在对二进制位进行设置之后，将"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "返回"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "二进制位被设置之前的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "旧值"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "作为结果"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-36rvqdz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-36rvqdz"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意："
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-oi6hbk1",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004513-oi6hbk1"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-uy7rgru",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-uy7rgru"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-o4t6a7y",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-o4t6a7y"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当用户执行 SETBIT 命令尝试对一个位图进行设置的时候，如果"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "位图不存在"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，或者位图当前的大小无法满足用户想要执行的设置操作，那么 Redis 将对"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "被设置的位图进行扩展"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，使得位图可以满足用户的设置请求"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-qicb5qr",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-qicb5qr"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-vi6zbio",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-vi6zbio"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "因为 Redis 对位图的扩展操作是以字节为单位进行的，所以扩展之后的位图包含的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "二进制位数量"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "可能会比用户要求的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "稍微多一些"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，并且在扩展位图的同时，Redis 还会将"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "所有未被设置的二进制"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "位的值"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "初始化为 0"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-7dahtd9",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-7dahtd9"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-xp2b48q",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-xp2b48q"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "SETBIT 命令"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "只能使用正数偏移量"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，尝试输入负数作为偏移量将引发一个错误"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-i9l9f82",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-i9l9f82"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Children": [
+						{
+							"Type": "NodeBang",
+							"Data": "!"
+						},
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20210324220455060"
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "../assets/image-20210324220455060.png"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-mi6yf6h",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-mi6yf6h"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥GETBIT 获取二进制位的值"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-tgiloo2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-tgiloo2"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 GETBIT 命令，用户可以获取位图指定偏移量上的二进制位的值："
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-3msyuvg",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-3msyuvg"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "getbit bitmap offset\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-bcver40",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-bcver40"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意："
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-sav2lu1",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004513-sav2lu1"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-xpki8lr",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-xpki8lr"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-11t9r3y",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-11t9r3y"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "与 SETBIT 命令一样，GETBIT 命令也只能接受"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "正数作为偏移量"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-sager8x",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-sager8x"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-az6jilk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-az6jilk"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果用户输入的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "偏移量超过了"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "位图目前拥有的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "最大偏移量"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，那么 GETBIT 命令将"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "返回 0 作为结果"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-1l40m1f",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-1l40m1f"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥BITCOUNT 统计被设置的二进制位数量"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-u1vcbnw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-u1vcbnw"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "用户可以通过执行 BITCOUNT 命令统计位图中"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "值为 1"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的二进制位"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "数量"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-tvpcdeh",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-tvpcdeh"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "bitcount key [start end]\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-jeib72f",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-jeib72f"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "::: danger 注意"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-cl64shd",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004513-cl64shd"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-faovvlo",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-faovvlo"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-8ggehbt",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-8ggehbt"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "start 参数和 end 参数与本章之前介绍的 SETBIT 命令和 GETBIT 命令的 offset 参数并不相同，这两个参数是用来指定"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "字节偏移量"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "而"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "不是二进制位偏移量"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的。位图的字节偏移量与 Redis 其他数据结构的偏移量一样，都是从 0 开始的：位图第一个字节的偏移量为 0，第二个字节的偏移量为 1，第三个字节的偏移量为 2，以此类推。"
+								}
+							]
+						},
+						{
+							"ID": "20210708004513-s36alt2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-s36alt2"
+							},
+							"Children": [
+								{
+									"Type": "NodeImage",
+									"Children": [
+										{
+											"Type": "NodeBang",
+											"Data": "!"
+										},
+										{
+											"Type": "NodeOpenBracket",
+											"Data": "["
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image-20210324220828692"
+										},
+										{
+											"Type": "NodeCloseBracket",
+											"Data": "]"
+										},
+										{
+											"Type": "NodeOpenParen",
+											"Data": "("
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "../assets/image-20210324220828692.png"
+										},
+										{
+											"Type": "NodeCloseParen",
+											"Data": ")"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-qygp2qr",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-qygp2qr"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-3ntzxsx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-3ntzxsx"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "start 参数和 end 参数的值除了可以是正数之外，还可以是负数"
+								}
+							]
+						},
+						{
+							"ID": "20210708004513-fws9e20",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-fws9e20"
+							},
+							"Children": [
+								{
+									"Type": "NodeImage",
+									"Children": [
+										{
+											"Type": "NodeBang",
+											"Data": "!"
+										},
+										{
+											"Type": "NodeOpenBracket",
+											"Data": "["
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image-20210324220952133"
+										},
+										{
+											"Type": "NodeCloseBracket",
+											"Data": "]"
+										},
+										{
+											"Type": "NodeOpenParen",
+											"Data": "("
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "../assets/image-20210324220952133.png"
+										},
+										{
+											"Type": "NodeCloseParen",
+											"Data": ")"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-lkm1r77",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-lkm1r77"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": ":::"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-7sfajm1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-7sfajm1"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "BITPOS 查找第一个指定的二进制位值"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-g0j9m40",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-g0j9m40"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过执行 BITPOS 命令，在位图中查找第一个被设置为指定值的二进制位，并返回这个所处"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "整个位图"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "二进制位的偏移量"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-66gq9qh",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-66gq9qh"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "bitpos bitmap value [start end]\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-24acy1i",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-24acy1i"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "::: danger 注意"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-j1xghl6",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004513-j1xghl6"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-z1r3vyg",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-z1r3vyg"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-s5enc9k",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-s5enc9k"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "通过可选的 start 参数和 end 参数，让 BITPOS 命令只在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "指定字节范围（注意）"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "内的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "二进制位"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "中进行查找"
+								}
+							]
+						},
+						{
+							"ID": "20210708004513-3t2mivh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-3t2mivh"
+							},
+							"Children": [
+								{
+									"Type": "NodeImage",
+									"Children": [
+										{
+											"Type": "NodeBang",
+											"Data": "!"
+										},
+										{
+											"Type": "NodeOpenBracket",
+											"Data": "["
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image-20210324221401134"
+										},
+										{
+											"Type": "NodeCloseBracket",
+											"Data": "]"
+										},
+										{
+											"Type": "NodeOpenParen",
+											"Data": "("
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "../assets/image-20210324221401134.png"
+										},
+										{
+											"Type": "NodeCloseParen",
+											"Data": ")"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-n37mmzw",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-n37mmzw"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-s1bdl3n",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-s1bdl3n"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "start 参数和 end 参数也可以是负数"
+								}
+							]
+						},
+						{
+							"ID": "20210708004513-zl53fgz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-zl53fgz"
+							},
+							"Children": [
+								{
+									"Type": "NodeImage",
+									"Children": [
+										{
+											"Type": "NodeBang",
+											"Data": "!"
+										},
+										{
+											"Type": "NodeOpenBracket",
+											"Data": "["
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "image-20210324221506782"
+										},
+										{
+											"Type": "NodeCloseBracket",
+											"Data": "]"
+										},
+										{
+											"Type": "NodeOpenParen",
+											"Data": "("
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "../assets/image-20210324221506782.png"
+										},
+										{
+											"Type": "NodeCloseParen",
+											"Data": ")"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-7ktewg1",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-7ktewg1"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-baxa98g",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-baxa98g"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当用户尝试对一个"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "不存在的位图"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "或者一个"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "所有位都被设置成了 0"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的位图中查"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "找值为 1"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的二进制位时，该命令将返回-1 作为结果"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-ymtf3a9",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-ymtf3a9"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-2u61dyq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-2u61dyq"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果用户在一个"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "所有位都被设置成 1"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的位图中查"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "找值为 0"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的二进制位，那么该命令将返回位图"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "最大偏移量加上 1"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（Redis 会把位图中不存在的二进制位的值看作 0）作为结果"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-v8nctp5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-v8nctp5"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": ":::"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-tw8whai",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-tw8whai"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥BITOP 执行二进制位运算"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-5l63c9g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-5l63c9g"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过 BITOP 命令，对一个或多个位图执行指定的二进制位运算，并将运算结果存储到指定的键中"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-knhg80y",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-knhg80y"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "bitop operation result_key bitmap [bitmap ...]\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-d5sug83",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004513-d5sug83"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-fwg0789",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-fwg0789"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-n9rmr6i",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-n9rmr6i"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "and"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-r9aet2g",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-r9aet2g"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-rbyx55i",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-rbyx55i"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "or"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-dsnsl8u",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-dsnsl8u"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-4g0g4wu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-4g0g4wu"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "not"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-7jq24fd",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-7jq24fd"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-1aundq6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-1aundq6"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "xor"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-56muc9b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-56muc9b"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当 BITOP 命令在对两个长度不同的位图执行运算时，会将"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "长度较短的那个位图中不存在的二进制位的值看作 0"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-ufbt7ht",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-ufbt7ht"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "BITFIELD 在位图中存储整数值—未完"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-3bf4mwy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-3bf4mwy"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "BITFIELD 命令允许用户在位图中的任意区域（field）存储指定长度的整数值，并对这些整数值执行加法或减法操作。BITFIELD 命令支持 SET、GET、INCRBY、OVERFLOW 这 4 个子命令"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-33t8q0u",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-33t8q0u"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "======================================="
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-qu97mpg",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-qu97mpg"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥【场景】应用于信息状态统计"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-fqq76no",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004513-fqq76no"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "业务场景"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-z9k2gdk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-z9k2gdk"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "电影网站，要统计："
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-liz7x1f",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004513-liz7x1f"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-ntjfwdq",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-ntjfwdq"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-um0owv9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-um0owv9"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "统计每天某一部电影是否被点播"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-2j1y4m9",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-2j1y4m9"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-6z83coi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-6z83coi"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "统计每天有多少部电影被点播"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-7ahdg27",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-7ahdg27"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-8db2v7k",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-8db2v7k"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "统计每周/月/年有多少部电影被点播"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-jlfhodv",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-jlfhodv"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-rswtya5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-rswtya5"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "统计年度哪部电影没有被点播"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-lfe74zy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-lfe74zy"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "运用 bitcount，bitop 操作即可"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,2945 @@
+{
+	"ID": "20210708004048-onegt9x",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210708004048-onegt9x",
+		"type": "doc",
+		"updated": "20210708004048"
+	},
+	"Children": [
+		{
+			"ID": "20210708004048-2km80f9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20210708004048-2km80f9"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "# "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "基础"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-es41tz9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-es41tz9"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "什么是 Redis？使用 Redis 的好处？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-d7edajg",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-d7edajg"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeStrikethrough",
+					"Children": [
+						{
+							"Type": "NodeStrikethrough2OpenMarker",
+							"Data": "~~"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Redis 相比 Memchached 的区别、优势"
+						},
+						{
+							"Type": "NodeStrikethrough2CloseMarker",
+							"Data": "~~"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-bqxami7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20210708004048-bqxami7"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "# "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "线程模型"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-v7g6sp8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-v7g6sp8"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Redis 是单进程单线程的吗？为何还那么快那么高效"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-1dnlxyu",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004048-1dnlxyu"
+			},
+			"Children": [
+				{
+					"ID": "20210708004048-a4wqigx",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-a4wqigx"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-zc0w2vv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-zc0w2vv"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "无论什么版本，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "工作线程只有一个"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "！"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004048-gj1akm5",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-gj1akm5"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-wg8m5yv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-wg8m5yv"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "6.x 高版本出现了 IO 多线程"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004048-x8flr1b",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-x8flr1b"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-9gl82cs",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-9gl82cs"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "单线程，保证 Redis 命令的原子操作。加入 IO 多线程后，并行执行输入输出，提高执行速度，更好利用多核优势"
+								}
+							]
+						},
+						{
+							"ID": "20210708004048-xv7le5x",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 42,
+								"Padding": 2,
+								"Marker": "Kg==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708004048-xv7le5x"
+							},
+							"Children": [
+								{
+									"ID": "20210708004048-j0f1ggs",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004048-j0f1ggs"
+									},
+									"Children": [
+										{
+											"ID": "20210708004048-ecuil37",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004048-ecuil37"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "学习系统IO课，epoll操作，内核缓存、内核缓冲区"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004048-fv8rsrk",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004048-fv8rsrk"
+									},
+									"Children": [
+										{
+											"ID": "20210708004048-ve6fkcz",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004048-ve6fkcz"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "mmap"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-8wi6xlu",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-8wi6xlu"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Redis 多线程是什么多线程？默认开启吗？你们生产中用了吗？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-sxse0rm",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20210708004048-sxse0rm"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "# "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "数据类型、数据结构、场景"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-zl2e80z",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-zl2e80z"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "你的项目中 Redis 的应用场景"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-sygq4l5",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004048-sygq4l5"
+			},
+			"Children": [
+				{
+					"ID": "20210708004048-2vv3bzl",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-2vv3bzl"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-9m55hyw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-9m55hyw"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "从5 种基础数据类型说"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004048-v8l3o6c",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-v8l3o6c"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-lmpyesx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-lmpyesx"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "基本上就是用于缓存，一般不会用于数据库！"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004048-vmv3y0t",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-vmv3y0t"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-3zlp24y",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-3zlp24y"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用 Redis 为的是解决 HTTP 的无状态（Token等）；服务后台服务的无状态；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004048-ludpl5e",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-ludpl5e"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-18di9sn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-18di9sn"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "项目中的哪些数据结构"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004048-1naob3d",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-1naob3d"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-hotomea",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-hotomea"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "单机锁；多机分布式锁；无锁！"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-1qcb4fm",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-1qcb4fm"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Redis 的 5 种基础数据类型和 6 个数据结构"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-em517fl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-em517fl"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "BitMap、HyperLogLog、GEO、Stream 有接触过吗？什么时候用这些特殊数据结构？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-by3vylv",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-by3vylv"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "跳表又是什么，画一下？为什么使用跳表？为什么不用红黑树？全局 Hash 表又是什么？如何扩容的？什么是渐进式 rehash？Redis 怎么做到的？IO 多路复用是什么？多路是什么？复用了什么？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-t1gqzoy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-t1gqzoy",
+				"updated": "20210708004048"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "一个 String 类型的值能存储最大容量是多少"
+				}
+			]
+		},
+		{
+			"ID": "20210708005628-7yk78h2",
+			"Type": "NodeBlockQueryEmbed",
+			"Properties": {
+				"id": "20210708005628-7yk78h2",
+				"updated": "20210708005628"
+			},
+			"Children": [
+				{
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeBlockQueryEmbedScript",
+					"Data": "select * from blocks where id='20210708004513-f7t8ii8'"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-6y8udqs",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-6y8udqs"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "自定义过 Redis 数据类型吗？自定义过 Redis 命令吗？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-zivvf89",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-zivvf89"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\"🔥【场景】分布式数据库主键 ID\"（计数器）—string"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-uy8tyxw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-uy8tyxw"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\"🔥【场景】密码错误限制\"—string"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-pk02h1z",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-pk02h1z"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\"🔥【场景】实现用户登录会话\"—hash"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-s68fo4v",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-s68fo4v"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\"🔥【场景】电商网站购物车设计与实现\"—hash"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-u9s56ew",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-u9s56ew"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\"🔥【场景】限量抢购\"—hash"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-9zaluv2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-9zaluv2"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\"🔥【场景】朋友圈点赞顺序列表\"—list"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-vw2h83u",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-vw2h83u"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\"🔥【场景】微博关注列表\"—list"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-nf4sl61",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-nf4sl61"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\"🔥【场景】最新的新闻或资讯\"—list"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-qibv2in",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-qibv2in"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\"🔥【场景】唯一计数器—网站访问量去重\"—set（PV、UV、IP）"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-at9knz4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-at9knz4"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\"🔥【场景】网站黑、白名单\"—set"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-qm70mah",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-qm70mah"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\"🔥【场景】投票—点赞的多元化\"—set"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-gkw62sy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-gkw62sy"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\"🔥【场景】社交关系\"—set"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-31bibrs",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-31bibrs"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\"🔥【场景】共同好友、关联搜索\""
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-g1jxltf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-g1jxltf"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\"🔥【场景】排行榜\"—zset"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-a0o1lk9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-a0o1lk9"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\"🔥【场景】时间线排序\"—zset"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-dzfjuwx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20210708004048-dzfjuwx"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "# "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "持久化"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-2ct7n8n",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-2ct7n8n"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Redis 的持久化机制？各自优缺点？你们是怎么选的？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-fbry281",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004048-fbry281"
+			},
+			"Children": [
+				{
+					"ID": "20210708004048-hh5kbh9",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-hh5kbh9"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-4jm2l0x",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-4jm2l0x"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "RDB，快照"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004048-mrx3kmy",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-mrx3kmy"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-ayq3veq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-ayq3veq"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "AOF，每秒刷盘一次命令。aof日志可以得到所有命令，文件体积变大，需要 aof "
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "重写当前内存中指令"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "！4.x 新版本重写直接把 RDB 放到 AOF 文件，后续命令以 aof 命令追加"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004048-lk146ow",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-lk146ow"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-wx9f6i2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-wx9f6i2"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "主从同步也算持久化"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-4wixasw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004048-4wixasw"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "原理："
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-zocqmb9",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004048-zocqmb9"
+			},
+			"Children": [
+				{
+					"ID": "20210708004048-axljt96",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-axljt96"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-g8o4vyd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-g8o4vyd"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "fork + copyonwrit"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-j6xiznn",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-j6xiznn"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "AOF 什么时候重写？为什么重写？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-d7xlk3n",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-d7xlk3n"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "为什么 Redis 没有实现 WAL 机制？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-i0tadsc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20210708004048-i0tadsc"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "# "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "集群"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-9sh0n9d",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-9sh0n9d"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Redis 主从是什么？主从从又是什么？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-4w6shqe",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-4w6shqe"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "为什么主从从可以减少主库压力？从库可以设置可写吗？从库可写会带来什么问题？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-9g0bi3o",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-9g0bi3o"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥 主从什么时候会导致数据丢失？主从不一致？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-aux355l",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004048-aux355l"
+			},
+			"Children": [
+				{
+					"ID": "20210708004048-a48sv0a",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-a48sv0a"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-cycx6sx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-cycx6sx"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Redis 默认是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "弱一致性，异步的同步"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004048-fbb7hfs",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-fbb7hfs"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-gmeenjs",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-gmeenjs"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "锁不能用主从结构，可以采用 单实例、分片集群、redlock。逻辑上使用 redisson 即可！"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004048-tpg2707",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-tpg2707"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-3n0g3yi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-3n0g3yi"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "配置中提供了必须有多少个 client 连接才能同步，可以配置同步因子，趋向于强一致性"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004048-ah3jw10",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-ah3jw10"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-kvj84f9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-kvj84f9"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "wait 2 0 小心"
+								}
+							]
+						},
+						{
+							"ID": "20210708004048-5oqn5c8",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-5oqn5c8"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "最后2点有点违背 redis 的初衷"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-qs3az16",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-qs3az16"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "主从复制用到了哪种日志？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-vwxfi00",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-vwxfi00"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "主从复制过程说下。主从复制什么时候增量，什么时候全量？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-615roo1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-615roo1"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "主从复制第一次连接时，网络中断了怎么办？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-9qizv19",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-9qizv19"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Redis 十万并发能支撑住吗？如何支撑十万以上并发？为什么操作大对象支持不了十万并发？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-q1ghg98",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-q1ghg98"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "你说虚拟节点，说下如何实现？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-pylg1tf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-pylg1tf"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Codis 了解吗？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-dfqs8bw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-dfqs8bw"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "你们的 Redis 集群方案是什么？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-livpvxg",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-livpvxg"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Redis 是如何保证高可用的？哨兵机制了解吗？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-um8l6gb",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-um8l6gb"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "什么是主观下线什么是客观下线？选主的四个筛选条件优先级的条件依次递减分别是什么？打分又是什么？如何打分？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-epu3yh3",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-epu3yh3"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "数据倾斜知道吗，如何解决？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-v78wakl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-v78wakl"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "分布式锁了解过吗？讲讲分布式锁实现原理？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-rt7hbit",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-rt7hbit"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "分布式锁需要注意哪四个问题？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-zdvpiq4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-zdvpiq4"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Redisson 源码看过吗？它是如何实现的分布式锁？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-hv85vxb",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-hv85vxb"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Lua 脚本保证原子性吗？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-79bftwj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-79bftwj"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥 Redis 事务说下？事务 vs pipleline"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-wfvt2yw",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004048-wfvt2yw"
+			},
+			"Children": [
+				{
+					"ID": "20210708004048-0m6khea",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-0m6khea"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-2amd68s",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-2amd68s"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Redis "
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "单指令操作是原子的"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004048-mikmf2b",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-mikmf2b"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-fn8hosb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-fn8hosb"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "pipleline 是一个"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "客户端的指令集合"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（上车后统一发车）。节省网络开销！"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004048-7i9wq65",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-7i9wq65"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-4vm0r6t",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-4vm0r6t"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Redis 事务执行时期是原子的，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "失败的就是失败，其他继续执行，没有回滚，需要手动设置！和 MySQL 完全不一样"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210708004048-ex3gr35",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-ex3gr35"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "在 6.0 后，由于 IO 多线程，所以发送到 Redis 服务器的命令可能是穿插的，但是！执行的时候，是根据 Redis 客户端来区分，来执行原子事务！"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210708004048-wcrbamt",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-wcrbamt"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "所以，尽量不要使用 Redis 的事务"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-bpad91w",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20210708004048-bpad91w"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "# "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "其他"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-z49je9j",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-z49je9j"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥 缓存雪崩、缓存击穿、缓存穿透说下？如何解决？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-e3yakrs",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004048-e3yakrs"
+			},
+			"Children": [
+				{
+					"ID": "20210708004048-83jihxa",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-83jihxa"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-gu8j9cu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-gu8j9cu"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "\"缓存雪崩—大量key\""
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004048-mu5w2xb",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-mu5w2xb"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-9wvv2f6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-9wvv2f6"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "\"缓存击穿—单个key\""
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004048-55u8fnt",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-55u8fnt"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-ks5eifu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-ks5eifu"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "\"缓存穿透—没有的key—网警\""
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-nnprd8k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004048-nnprd8k"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "以上问题，核心就是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "避免对 DB 的无效、重复请求"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-03g0yur",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-03g0yur"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥 布隆过滤器又是什么？"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "能手写个布隆过滤器吗"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ？布谷鸟过滤器？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-wshedhv",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-wshedhv"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥 缓存预热？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-ffqlpwj",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004048-ffqlpwj"
+			},
+			"Children": [
+				{
+					"ID": "20210708004048-2qv3c6d",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-2qv3c6d"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-2ohgiq1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-2ohgiq1"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "\"缓存预热\""
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004048-1u13cuj",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-1u13cuj"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-ku9u169",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-ku9u169"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果是新的系统，总有无法预料的热点数据，所以必定会发生 缓存雪崩、缓存击穿、缓存穿透问题"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-8m1yspo",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-8m1yspo"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥 如何淘汰数据的？分别是哪八种策略？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-x7oqjt2",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004048-x7oqjt2"
+			},
+			"Children": [
+				{
+					"ID": "20210708004048-stewr9m",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-stewr9m"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-tr5xsif",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-tr5xsif"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "\"🔥过期键删除策略\""
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004048-ficn1wj",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-ficn1wj"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-cko8oh6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-cko8oh6"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "\"🔥逐出策略\"——也称作淘汰策略，内存空间不足时产生"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-jf9qxl1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-jf9qxl1"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Redis 对 lru 做了什么改变吗？lfu 又是什么？Redis 做了什么优化？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-dt4euad",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-dt4euad"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "缓存污染知道是什么吗？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-wpema0y",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-wpema0y"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥 如何解决数据库和缓存数据不一致问题？双写一致性问题？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-6r4klbs",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004048-6r4klbs"
+			},
+			"Children": [
+				{
+					"ID": "20210708004048-gnkip2k",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-gnkip2k"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-2699cy7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-2699cy7"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "分布式事务！慎重选择"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，意义不大，性能太差！除非"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "读多写少"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "时！"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004048-yf2ou4l",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-yf2ou4l"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-05rtjto",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-05rtjto"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "首先明确一个问题！但单机下也不一定完全保证一致性！计算机任何地方都有缓存！除非为了一致性牺牲性能！"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004048-0dv2xqe",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004048-0dv2xqe"
+					},
+					"Children": [
+						{
+							"ID": "20210708004048-9pfzuwn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004048-9pfzuwn"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如何解决呢？看如下案例："
+								}
+							]
+						},
+						{
+							"ID": "20210708004048-ocykilb",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 42,
+								"Padding": 2,
+								"Marker": "Kg==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708004048-ocykilb"
+							},
+							"Children": [
+								{
+									"ID": "20210708004048-7jh1exi",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004048-7jh1exi"
+									},
+									"Children": [
+										{
+											"ID": "20210708004048-wg0y0go",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004048-wg0y0go"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "先删除 Redis，后更新 DB。但是容易发生那3个缓存问题"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004048-7tu4pf2",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004048-7tu4pf2"
+									},
+									"Children": [
+										{
+											"ID": "20210708004048-xasbnzk",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004048-xasbnzk"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "Redis 是缓存，更倾向于有时差，不应该太过于追求强一致性。还是要减少 DB 操作。"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004048-u0jdgzp",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004048-u0jdgzp"
+									},
+									"Children": [
+										{
+											"ID": "20210708004048-48xc80i",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004048-48xc80i"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "🔥【推荐】使用 canal，同步 mysql 的 binlog。canal 能模拟为假的 mysql"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004048-19kjvzj",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 2,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004048-19kjvzj"
+									},
+									"Children": [
+										{
+											"ID": "20210708004048-k6jimre",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004048-k6jimre"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "通过 MQ 来，每次只发送消息，具体后续操作根据业务来消费！CQRS！了解！"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-ekg9rhq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-ekg9rhq"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Pika 知道吗？Tendis 和它的区别"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " ？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-5eqxt82",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-5eqxt82"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "如何实现一个 Key 千万并发？（Zoom 面试题）"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-ky0oya8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-ky0oya8"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Redis 6 还有什么新特性？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-wexsism",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20210708004048-wexsism"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "# "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "哈哈哈"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-xiz6ifw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-xiz6ifw"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Redis 的同步机制"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-a1q4oib",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-a1q4oib"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Redis 常见性能问题和解决方案"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-15iisoy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-15iisoy"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Redis 的过期删除策略（回收策略、淘汰策略）"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-wys2hex",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-wys2hex"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Pipline 有什么好处？为什么要用 Pipline？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-w21uc0z",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-w21uc0z"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "是否使用过 Redis 集群？集群的原理？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-8vvti0u",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-8vvti0u"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Redis 集群方案什么情况下会导致整个集群不可用？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-dezjn2d",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-dezjn2d"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Redis 集群之间是如何复制的？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-afnikyo",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-afnikyo"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Redis 的主从复制模型是怎样的？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-xal0mwa",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-xal0mwa"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Redis 集群会有写操作丢失吗？为什么？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-1g78p0k",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-1g78p0k"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Redis 哈希槽？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-hjq0rj2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-hjq0rj2"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Redis 如何设置密码及验证密码？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-jj7f7vd",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-jj7f7vd"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Redis 支持的 Java 客户端哪些？官方推荐哪个？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004048-fjg4hiz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004048-fjg4hiz"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Jedis 与 Redisson 对比有什么优缺点？"
+				}
+			]
+		}
+	]
+}

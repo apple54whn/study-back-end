@@ -1,0 +1,1422 @@
+{
+	"ID": "20210708004513-ze4inx8",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210708004513-ze4inx8",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210708004513-pwhl0sn",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-pwhl0sn"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "问题引入"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-smedxfc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-smedxfc"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 Redis 集合构建唯一计数器，并将这个计数器用于计算网站的唯一访客 IP。但是如果考虑得更长远一些，就会发现这个使用 Redis 集合实现的唯一计数器有一个明显的缺陷：随着被计数元素的不断增多，唯一计数器占用的内存也会越来越大；计数器越多，它们的体积越大，这一情况就会越严峻。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-j101fsv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-j101fsv"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "以计算唯一访客"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "IP"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "为例："
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-s97iu6g",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004513-s97iu6g"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-e738oy3",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-e738oy3"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-bjtmgt9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-bjtmgt9"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "存储一个 IPv4 格式的 IP 地址最多需要 15 个字节（比如\"127.234.122.101\"）。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-iofqrom",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-iofqrom"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-s53gl9g",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-s53gl9g"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "根据网站的规模不同，每天出现的唯一 IP 可能会有数十万、数百万甚至数千万个。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-mclqvss",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-mclqvss"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-o2q88zs",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-o2q88zs"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "为了记录网站在不同时期的访客，并进行相关的数据分析，网站可能需要持续地记录每天的唯一访客 IP 数量，短则几个月，长则数年。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-xbmbcic",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-xbmbcic"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "综合以上条件，如果一个网站想要长时间记录访客的 IP，就必须创建多个唯一计数器。如果网站的访客比较多，那么它创建的每个唯一计数器都将包含大量元素，并因此占用相当一部分内存"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-cgmtosf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-cgmtosf"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如下展示了不同规模的网站在不同时间段中，存储唯一访客 IP 所需的最大内存"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-5ufkl34",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-5ufkl34"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Children": [
+						{
+							"Type": "NodeBang",
+							"Data": "!"
+						},
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20210324223405822"
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "../assets/image-20210324223405822.png"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-7rhcqjo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-7rhcqjo"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为了高效地解决计算唯一访客 IP 数量这类问题，研究人员开发了很多不同的方法，其中一个就是本章要介绍的 HyperLogLog 算法。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-egih9xx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-egih9xx"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "HyperLogLog 简介"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-jdgg409",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-jdgg409"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "HyperLogLog 是一个专门为了计算"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "集合"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "基数（去重数量）"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "而创建的概率算法，对于一个给定的集合，HyperLogLog 可以计算出这个集合的近似基数：近似基数并非集合的实际基数，它可能会比实际的基数小一点或者大一点，但是估算基数和实际基数之间的误差会处于一个合理的范围之内，因此那些不需要知道实际基数或者因为条件限制而无法计算出实际基数的程序就可以把这个近似基数当作集合的基数来使用。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-3wi6ltb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-3wi6ltb"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "HyperLogLog 的优点在于它计算近似基数所需的内存并不会因为集合的大小而改变，无论集合包含的元素有多少个，HyperLogLog 进行计算所需的内存总是固定的，并且是非常少的。具体到实现上，Redis 的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "每个 HyperLogLog 最多只需要使用 12KB 内存空间"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，就可以对接近："
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "2^64 个元素"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "进行计数，而算法的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "标准误差仅为 0.81%"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，因此它计算出的近似基数是相当可信的。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-9r9mdsa",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-9r9mdsa"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥PFADD 对集合元素进行计数"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-bxa9enb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-bxa9enb"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过执行 PFADD 命令，使用 HyperLogLog 对给定的一个或多个集合元素进行计数"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-kuc16r9",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-kuc16r9"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "pfadd hyperloglog element [element ...]\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-00u9gqa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-00u9gqa"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "根据给定的元素是否已经进行过计数，PFADD 命令可能返回 0，也可能返回 1："
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-h4d0v5r",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004513-h4d0v5r"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-je8pe11",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-je8pe11"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-j2th603",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-j2th603"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果给定的所有元素都已经进行过计数，那么 PFADD 命令将返回 0，表示 HyperLog-Log 计算出的近似基数没有发生变化"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-l4s0lzb",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-l4s0lzb"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-dlkwzls",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-dlkwzls"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "与此相反，如果给定的元素中出现了至少一个之前没有进行过计数的元素，导致 HyperLogLog 计算出的近似基数发生了变化，那么 PFADD 命令将返回 1"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-nn9d8zc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-nn9d8zc"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "举个例子，通过执行以下命令，我们可以使用 alphabets 这个 HyperLogLog 对\"a\"、\"b\"、\"c\"这 3 个元素进行计数："
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-vopzgix",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-vopzgix"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "redis\u003e pfadd alphabets \"a\" \"b\" \"c\"\n(integer) 1\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-et309uc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-et309uc"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "因为这是 alphabets 第一次对元素\"a\"、\"b\"、\"c\"进行计数，所以 alphabets 计算的近似基数将发生变化，并使 PFADD 命令返回 1"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-m4px1xo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-m4px1xo"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "但是如果我们再次要求 alphabets 对元素\"a\"进行计数，那么这次 PFADD 命令将返回 0，这是因为已经计数过的元素\"a\"并不会对 alphabets 计算的近似基数产生影响"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-6q5pmoy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-6q5pmoy"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥PFCOUNT 返回集合的近似基数"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-y4h6lgo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-y4h6lgo"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在使用 PFADD 命令对元素进行计数之后，用户可以通过执行 PFCOUNT 命令来获取 HyperLogLog 为集合计算出的近似基数"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-3r0a5u3",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-3r0a5u3"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "pfcount hyperloglog [hyperloglog ...]\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-gn2asmn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-gn2asmn"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过执行以下命令，我们可以获取到 alphabets 这个 HyperLogLog 计算出的近似基数"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-3hxst7f",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-3hxst7f"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "redis\u003e pfcount alphabets\n(integer) 3\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-4utae4y",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-4utae4y"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "PFCOUNT 命令的返回值为 3，这表示 HyperLogLog 算法认为 alphabets 目前已经计数过"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "3 个不同的元素"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-dhcu5ip",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-dhcu5ip"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当用户给定的 HyperLogLog"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "不存在"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "时，PFCOUNT 命令将"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "返回 0"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "作为结果"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-wb69tk8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-wb69tk8"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "对多个 HyperLogLog 执行并集计算"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的效果与多个集合首先执行并集计算，然后再使用 HyperLogLog 去计算并集集合的近似基数的效果类似"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-wqvkynm",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-wqvkynm"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥PFMERGE 计算多个 HyperLogLog 的并集"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-ivkh5yv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-ivkh5yv"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "PFMERGE 命令可以对多个给定的 HyperLogLog 执行并集计算，然后把计算得出的并集 HyperLogLog"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "保存到指定的键中"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-xyeb7qw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-xyeb7qw"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "pfmerger destination hyperloglog [hyperloglog ...]\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-lsg9r01",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-lsg9r01"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果指定的键已经存在，那么 PFMERGE 命令将覆盖已有的键。PFMERGE 命令在成功执行并集计算之后将返回 OK 作为结果"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-7rzn47k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-7rzn47k"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "HyperLogLog 并集计算的近似基数接近于所有给定 HyperLogLog 的被计数集合的并集基数。举个例子，假如有 h1、h2、h33 个 HyperLogLog，它们分别对集合 s1、s2、s3 进行计数，那么 h1、h2、h3 这 3 个 HyperLogLog 的并集所计算出的近似基数将接近于 s1、s2、s3 这 3 个集合的并集的基数"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-gituxz7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-gituxz7"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "PFCOUNT 与 PFMERGE"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-ddxkn1n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-ddxkn1n"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "PFCOUNT 命令在计算多个 HyperLogLog 的近似基数时会执行以下操作："
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-4tyitgq",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Tight": true,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 3,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210708004513-4tyitgq"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-z55ft9t",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210708004513-z55ft9t"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-w4kgqsy",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-w4kgqsy"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在内部调用 PFMERGE 命令，计算所有给定 HyperLogLog 的并集，并将这个并集存储到一个临时的 HyperLogLog 中。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-pcq7ock",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210708004513-pcq7ock"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-rwvi2hr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-rwvi2hr"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "对临时 HyperLogLog 执行 PFCOUNT 命令，得到它的近似基数（因为这是针对单个 HyperLogLog 的 PFCOUNT，所以这个操作不会引起循环调用）。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-9u7qyji",
+					"Type": "NodeListItem",
+					"Data": "3",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 3,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mw==",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20210708004513-9u7qyji"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-8sw2m43",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-8sw2m43"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "删除临时 HyperLogLog。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-05ho3p5",
+					"Type": "NodeListItem",
+					"Data": "4",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 4,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "NA==",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20210708004513-05ho3p5"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-zs26qdc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-zs26qdc"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "向用户返回之前得到的近似基数。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-6nwmic8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-6nwmic8"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "PFCOUNT 将执行以下以下操作："
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-uo480zu",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Tight": true,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 3,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210708004513-uo480zu"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-mn6mcmu",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210708004513-mn6mcmu"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-04x4w22",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-04x4w22"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "PFMERGE \u003ctemp-hyperloglog\u003e numbers1 numbers2 numbers3"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，把 3 个给定 HyperLogLog 的并集结果存储到临时 HyperLogLog 中。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-jlws1pg",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210708004513-jlws1pg"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-b1anmv5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-b1anmv5"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "PFCOUNT \u003ctemp-hyperloglog\u003e"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，取得并集 HyperLogLog 的近似基数 4。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-hnxh1vd",
+					"Type": "NodeListItem",
+					"Data": "3",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 3,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mw==",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20210708004513-hnxh1vd"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-s5l83e1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-s5l83e1"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "DEL \u003ctemp-hyperloglog\u003e"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，删除临时 HyperLogLog。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-q9zfvtg",
+					"Type": "NodeListItem",
+					"Data": "4",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 4,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "NA==",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20210708004513-q9zfvtg"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-r11hax3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-r11hax3"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "向用户返回之前得到的近似基数 4。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-lwuoouq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-lwuoouq"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "基于上述原因，当程序需要对多个 HyperLogLog 调用 PFCOUNT 命令，并且这个调用可能会重复执行多次时，我们可以考虑把这一调用替换成相应的 PFMERGE 命令调用：通过把并集的计算结果存储到指定的 HyperLogLog 中而不是每次都重新计算并集，程序可以最大程度地减少不必要的并集计算"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-orv8a34",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-orv8a34"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "==========================="
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-t55sypb",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-t55sypb"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥【场景】IP 计数器"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-rbmpksr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-rbmpksr"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "略"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,264 @@
+{
+	"ID": "20210708004513-tw485oe",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210708004513-tw485oe",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210708004513-rzoultr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-rzoultr"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以操作 Redis 的 Client 有许多，参考"
+				},
+				{
+					"Type": "NodeLink",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "文档"
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://redis.io/clients"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。具体使用参考 Jedis 的 "
+				},
+				{
+					"Type": "NodeLink",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Github"
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://github.com/redis/jedis"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 仓库。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-qn6x28c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-qn6x28c"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用时需要添加依赖，具体看文档！"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-qzfggk1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-qzfggk1"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "简单使用步骤"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-u98od33",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-u98od33"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "//1. 获取连接\nJedis jedis = new Jedis(\"localhost\",6379);\n//2. 操作\njedis.set(\"username\",\"zhangsan\");\n//3. 关闭连接\njedis.close();\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-34wi2ge",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-34wi2ge"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "工具类封装"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-c7d4jx2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-c7d4jx2"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "redis.properties"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-x042rgx",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "cHJvcGVydGllcw==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-x042rgx"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "cHJvcGVydGllcw=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "host=111.51.216.173\nport=6379\nmaxTotal=30\nmaxIdle=10\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-7pjkr3z",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "amF2YQ==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-7pjkr3z"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class JedisPoolUtils {\n\n    private static final JedisPool jedisPool;\n\n    private static final int maxTotal;\n    private static final int maxIdle;\n    private static final String host;\n    private static final int port;\n\n    static {\n        ResourceBundle redisBundle = ResourceBundle.getBundle(\"redis\");\n        maxTotal = Integer.parseInt(redisBundle.getString(\"maxTotal\"));\n        maxIdle = Integer.parseInt(redisBundle.getString(\"maxIdle\"));\n        host = redisBundle.getString(\"host\");\n        port = Integer.parseInt(redisBundle.getString(\"port\"));\n\n        //获取数据，设置到JedisPoolConfig中\n        JedisPoolConfig config = new JedisPoolConfig();\n        config.setMaxTotal(maxTotal);\n        config.setMaxIdle(maxIdle);\n        //初始化JedisPool\n        jedisPool = new JedisPool(config, host, port);\n    }\n\n    public static Jedis getJedis() {\n        return jedisPool.getResource();\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		}
+	]
+}

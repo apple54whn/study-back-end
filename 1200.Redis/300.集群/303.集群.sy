@@ -1,0 +1,2888 @@
+{
+	"ID": "20210708004534-djqpqn7",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210708004534-djqpqn7",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210708004534-x3ntgpr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004534-x3ntgpr"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "业务发展过程中遇到的峰值瓶颈"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-cqisr2n",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004534-cqisr2n"
+			},
+			"Children": [
+				{
+					"ID": "20210708004534-l9rifvk",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-l9rifvk"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-5k4hwvc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-5k4hwvc"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Redis 提供的服务 "
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "OPS"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 可以达到"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "10 万/秒"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，当前业务 OPS 已经达到 20 万/秒"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-kzih4nv",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-kzih4nv"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-mlc2wgj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-mlc2wgj"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "内存单机容量达到 256G，当前业务需求内存容量 1T。但内存也没有那么多"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-x7h6a6m",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004534-x7h6a6m"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "集群"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-xt8tlwp",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004534-xt8tlwp"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "简介"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-u8fa3h8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-u8fa3h8"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "集群就是使用网络将"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "若干台计算机联通"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "起来，并提供统一的管理方式，使其"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "对外呈现单机"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的服务效果。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-j0p537z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-j0p537z"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Redis 集群是 3.0 版本引入的，在 5.0 后搭建更方便！"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-uu96s36",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004534-uu96s36"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "作用"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-92t4k0j",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004534-92t4k0j"
+			},
+			"Children": [
+				{
+					"ID": "20210708004534-zhmdba5",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-zhmdba5"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-lca7g7n",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-lca7g7n"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "分散单台服务器的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "访问压力"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，实现"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "负载均衡"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-y67ti6j",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-y67ti6j"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-fx5tmbr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-fx5tmbr"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "分散单台服务器的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "存储压力"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，实现"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "可扩展性"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-x6mqflz",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-x6mqflz"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-wfgf700",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-wfgf700"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "降低单台服务器"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "宕机带来的业务灾难"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-3iso11g",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004534-3iso11g"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "架构设计 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-0sx6zz5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004534-0sx6zz5"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "数据存储设计—数据分片"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-xe8wflr",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004534-xe8wflr"
+			},
+			"Children": [
+				{
+					"ID": "20210708004534-8e4n61l",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-8e4n61l"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-sy65jbd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-sy65jbd"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Redis 集群将整个"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "数据库空间"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "划分为"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "16384 个槽"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "来实现"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "数据分片"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。集群中各个 master 负责处理一部分的槽。每份槽代表的是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "一个存储空间"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "不是一个 key 的保存空间"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-jjj65oq",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-jjj65oq"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-bmxlptt",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-bmxlptt"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "通过算法设计，计算出 key 应该保存的位置"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-2ggq4su",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-2ggq4su"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-6uubj72",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-6uubj72"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "将 key 按照计算出的结果放到对应的存储空间"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-zi25wic",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-zi25wic"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-vlel3c0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-vlel3c0"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "集群添加节点时"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，会"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "将相应的槽以及槽中存储的数据迁移至新节点"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "！且都是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "在线"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "进行！"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "无需停机"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "！"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-323qft1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004534-323qft1"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "集群内部通讯设计"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-8pesgsk",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004534-8pesgsk"
+			},
+			"Children": [
+				{
+					"ID": "20210708004534-022topk",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-022topk"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-8jrvbg1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-8jrvbg1"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "各个数据库相互通信，保存各个库中"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "槽的编号数据"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-w25eqsr",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-w25eqsr"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-ky0d2ha",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-ky0d2ha"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "一次命中，直接返回"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-o7390wn",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-o7390wn"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-4aqbh46",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-4aqbh46"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "一次未命中，告知具体位置"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。然后"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "客户端"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "访问"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "重定向（redirect）"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的位置！"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-1r5v2x7",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-1r5v2x7"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-sdcm42r",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-sdcm42r"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Redis 集群采用"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "无代理模式"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，客户端的命令直接交由节点执行！对于优化过的集群客户端来说，大部分情况下命令不需要实施转向或仅需要一次转向"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-u876pls",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004534-u876pls"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "主从复制、Sentinel"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-lx5ham7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-lx5ham7"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Redis 集群也提供了与单机版 Redis 服务器一样的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "主从复制"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "功能；"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-quvgmiu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-quvgmiu"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "还提供了类似于单机版 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Sentinel"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 的功能！当集群中的某个 master 下线时，会提升该节点的 slave 为新 master 继续提供服务"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-ejpdyvm",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004534-ejpdyvm"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "搭建方式 1—集群自动搭建程序"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-vlrq962",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004534-vlrq962"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "帮助"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-7ul6ovd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-7ul6ovd"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在 utils/create-cluster/create-cluster 位置的 create-cluster 程序专门用来快速构建起一个完整可用的集群以供用户测试。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-vccg5ua",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-vccg5ua"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "./create-cluster help"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "可以查看用法"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-wt0dq5c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-wt0dq5c"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "创建一个群集，请按照以下步骤进行："
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-chrr1bd",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Tight": true,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 3,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210708004534-chrr1bd"
+			},
+			"Children": [
+				{
+					"ID": "20210708004534-qsketgg",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210708004534-qsketgg"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-r99qn5y",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-r99qn5y"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "编辑 create-cluster，并更改开始/结束端口，这取决于要创建的实例数量。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-nekaa7u",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210708004534-nekaa7u"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-9wv7s23",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-9wv7s23"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用\"./creat-cluster start \"来运行实例。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-oji396m",
+					"Type": "NodeListItem",
+					"Data": "3",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 3,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mw==",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20210708004534-oji396m"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-zhsq7ok",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-zhsq7ok"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用\"./create-cluster create \"来执行 redis-cli --cluster create，这样将会创建一个 Redis 集群。(如果您通过本地容器访问您的设置，请确保 CLUSTER_HOST 值被更改为您的本地 IP)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-namb362",
+					"Type": "NodeListItem",
+					"Data": "4",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 4,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "NA==",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20210708004534-namb362"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-mgd0r9w",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-mgd0r9w"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "现在你已经准备好玩集群了。每个实例的 AOF 文件和日志会创建在在当前目录下。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-zahf9yi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-zahf9yi"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "停止一个集群："
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-brnarhw",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Tight": true,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 3,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210708004534-brnarhw"
+			},
+			"Children": [
+				{
+					"ID": "20210708004534-28yrc5g",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210708004534-28yrc5g"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-68ag88l",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-68ag88l"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用\"./cake-cluster stop \"来停止所有实例。在你停止实例后，如果你改变主意，你可以使用\"./cake-cluster start \"来重新启动它们。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-6sqhcjh",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210708004534-6sqhcjh"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-idje7a1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-idje7a1"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用\"./creat-cluster clean \"删除所有 AOF/日志文件，以干净的环境重新启动。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-ak50q57",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004534-ak50q57"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "创建集群"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-697j20m",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-697j20m"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过执行 start 命令来创建出 6 个节点，这 6 个节点的 IP 地址都为本机，而端口号则为 30001 ～ 30006"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-jbmatjh",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004534-jbmatjh"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "ubuntu@VM-0-3-ubuntu:/usr/local/redis-6.2.1/utils/create-cluster$ sudo ./create-cluster start\nStarting 30001\nStarting 30002\nStarting 30003\nStarting 30004\nStarting 30005\nStarting 30006\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-z482d3a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-z482d3a"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 create 命令，把上述 6 个节点组合成一个集群，其中包含 3 个主节点和 3 个从节点"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-pedjlwc",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004534-pedjlwc"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "ubuntu@VM-0-3-ubuntu:/usr/local/redis-6.2.1/utils/create-cluster$ sudo ./create-cluster create\n\u003e\u003e\u003e Performing hash slots allocation on 6 nodes...\nMaster[0] -\u003e Slots 0 - 5460\nMaster[1] -\u003e Slots 5461 - 10922\nMaster[2] -\u003e Slots 10923 - 16383\nAdding replica 127.0.0.1:30005 to 127.0.0.1:30001\nAdding replica 127.0.0.1:30006 to 127.0.0.1:30002\nAdding replica 127.0.0.1:30004 to 127.0.0.1:30003\n\u003e\u003e\u003e Trying to optimize slaves allocation for anti-affinity\n[WARNING] Some slaves are in the same host as their master\nM: 01577c26ceb76eec6716563170826517f321d968 127.0.0.1:30001\n   slots:[0-5460] (5461 slots) master\nM: 97fd26fcdc24382afe81b8d0c45f514ecb67a2f8 127.0.0.1:30002\n   slots:[5461-10922] (5462 slots) master\nM: 81c5a05a97fe697e834e388ce318f3bb2b6155cd 127.0.0.1:30003\n   slots:[10923-16383] (5461 slots) master\nS: 7162dc4ebcb149b140639da0f229363276416a32 127.0.0.1:30004\n   replicates 01577c26ceb76eec6716563170826517f321d968\nS: e71361e154517888a63470b56343e16a88f91c6e 127.0.0.1:30005\n   replicates 97fd26fcdc24382afe81b8d0c45f514ecb67a2f8\nS: 3947e6ab1101ad12c8ddd18157edb7848712aa4a 127.0.0.1:30006\n   replicates 81c5a05a97fe697e834e388ce318f3bb2b6155cd\nCan I set the above configuration? (type 'yes' to accept): yes\n\u003e\u003e\u003e Nodes configuration updated\n\u003e\u003e\u003e Assign a different config epoch to each node\n\u003e\u003e\u003e Sending CLUSTER MEET messages to join the cluster\nWaiting for the cluster to join\n\n\u003e\u003e\u003e Performing Cluster Check (using node 127.0.0.1:30001)\nM: 01577c26ceb76eec6716563170826517f321d968 127.0.0.1:30001\n   slots:[0-5460] (5461 slots) master\n   1 additional replica(s)\nS: 7162dc4ebcb149b140639da0f229363276416a32 127.0.0.1:30004\n   slots: (0 slots) slave\n   replicates 01577c26ceb76eec6716563170826517f321d968\nS: 3947e6ab1101ad12c8ddd18157edb7848712aa4a 127.0.0.1:30006\n   slots: (0 slots) slave\n   replicates 81c5a05a97fe697e834e388ce318f3bb2b6155cd\nM: 81c5a05a97fe697e834e388ce318f3bb2b6155cd 127.0.0.1:30003\n   slots:[10923-16383] (5461 slots) master\n   1 additional replica(s)\nM: 97fd26fcdc24382afe81b8d0c45f514ecb67a2f8 127.0.0.1:30002\n   slots:[5461-10922] (5462 slots) master\n   1 additional replica(s)\nS: e71361e154517888a63470b56343e16a88f91c6e 127.0.0.1:30005\n   slots: (0 slots) slave\n   replicates 97fd26fcdc24382afe81b8d0c45f514ecb67a2f8\n[OK] All nodes agree about slots configuration.\n\u003e\u003e\u003e Check for open slots...\n\u003e\u003e\u003e Check slots coverage...\n[OK] All 16384 slots covered.\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-3vw4imj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-3vw4imj"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "create 命令会根据现有的节点制定出一个相应的角色和槽分配计划，然后询问你的意见。以上面打印出的计划为例："
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-tmum00s",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004534-tmum00s"
+			},
+			"Children": [
+				{
+					"ID": "20210708004534-kf3qw3a",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-kf3qw3a"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-x0fofj3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-x0fofj3"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "节点 30001、30002 和 30003 将被设置为主节点，并且分别负责槽 0 ～ 5460、槽 5461 ～ 10922 和槽 10923 ～ 16383。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-3ne0e6t",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-3ne0e6t"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-e3m7ft3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-e3m7ft3"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "节点 30004、30005 和 30006 分别被设置为以上 3 个主节点的从节点。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-tl5wlcg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-tl5wlcg"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "搭建完成后的集群："
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-ih2sqab",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-ih2sqab"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "\u003cimg src=\"../assets/image-20210331002702476.png\" alt=\"image-20210331002702476\" style=\"zoom:33%;\" /\u003e"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-l13qhqy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004534-l13qhqy"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "搭建方式 2—配置文件手动搭建"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-4i75ufq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004534-4i75ufq"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "方式 1 问题"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-96miex6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-96miex6"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 create-cluster 程序快速搭建 Redis 集群虽然非常方便，但是由于该程序搭建的 Redis 集群"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "不具备配置文件"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "主从节点数量固定"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "以及"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "槽分配模式固定"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "等原因，这些快速搭建的集群通常"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "只能够用于测试"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，但是无法应用在实际的生产环境中"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-jqf3p57",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-jqf3p57"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "搭建真正能够在生产环境中使用的 Redis 集群，我们需要创建相应的配置文件，并使用集群管理命令对集群进行配置和管理"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-pyrdf19",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004534-pyrdf19"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "创建集群"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-tfylbl7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-tfylbl7"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为了保证集群的各项功能可以正常运转，一个集群至少需要 3 个主节点和 3 个从节点。不过为了与之前使用 create-cluster 程序搭建的集群区别开来，这次我们将搭建一个由 5 个主节点和 5 个从节点组成的 Redis 集群。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-f59q1xt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-f59q1xt"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们需要先创建出 10 个文件夹，用于存放相应节点的数据以及配置文件"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-0vekent",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004534-0vekent"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "ubuntu@VM-0-3-ubuntu:/usr/local/redis-6.2.1/utils/create-cluster$ sudo mkdir my-cluster\nubuntu@VM-0-3-ubuntu:/usr/local/redis-6.2.1/utils/create-cluster$ cd my-cluster/\nubuntu@VM-0-3-ubuntu:/usr/local/redis-6.2.1/utils/create-cluster/my-cluster$ sudo mkdir node1 node2 node3 node4 node5 node6 node7 node8 node9 node10\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-tifsdji",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-tifsdji"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "接着，我们需要在每个节点文件夹中创建一个包含以下内容的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "redis.conf"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "配置文件"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-fe79yy4",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004534-fe79yy4"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "cluster-enabled yes\nport 30001\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-2t28x9p",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004534-2t28x9p"
+			},
+			"Children": [
+				{
+					"ID": "20210708004534-p1pncv0",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-p1pncv0"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-qa0am2b",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-qa0am2b"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "cluster-enabled 选项的值为 yes 表示将 Redis 实例设置成集群节点而不是单机服务器"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-aiob924",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-aiob924"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-b243wfs",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-b243wfs"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "port 选项则用于为每个节点设置不同的端口号。本例中，我们为 10 个节点分别设置了从 30001 ～ 30010 的端口号"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-hbwunck",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-hbwunck"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在为每个节点都设置好相应的配置文件之后，我们需要通过以下命令（目录自己调整），陆续启动各个文件夹中的集群节点："
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-3t5aq92",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004534-3t5aq92"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "ubuntu@VM-0-3-ubuntu:/usr/local/redis-6.2.1$ src/redis-server /node1/redis.conf\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-onkn2y1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-onkn2y1"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "连接这 10 个集群节点并为它们分配槽："
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-bbn1usw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004534-bbn1usw"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "ubuntu@VM-0-3-ubuntu:/usr/local/redis-6.2.1$ src/redis-cli --cluster create\n127.0.0.1:30001\n127.0.0.1:30002\n127.0.0.1:30003\n127.0.0.1:30004\n127.0.0.1:30005\n127.0.0.1:30006\n127.0.0.1:30007\n127.0.0.1:30008\n127.0.0.1:30009\n127.0.0.1:30010\n-- cluster-replicas 1\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-cjupc5w",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004534-cjupc5w"
+			},
+			"Children": [
+				{
+					"ID": "20210708004534-1v898js",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-1v898js"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-6pnnqfq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-6pnnqfq"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "redis-cli --cluster 是 Redis 客户端附带的集群管理工具，它的 create 子命令"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "接受任意多个节点的 IP 地址和端口号"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "作为参数，然后使用这些节点组建起一个 Redis 集群。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004534-iea6cyd",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004534-iea6cyd"
+					},
+					"Children": [
+						{
+							"ID": "20210708004534-x8vo0qk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004534-x8vo0qk"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "cluster-replicas 用于指定集群中"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "每个主节点的从节点数量"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。在上面的命令调用中，该参数的值为 1，这表示我们想要"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "为每个主节点设置一个从节点"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-nmrrel7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-nmrrel7"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "执行完上述命令后，会定制出节点角色、槽分配计划等（略）"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-nxv0na4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004534-nxv0na4"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "连接集群"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-xwrg6xp",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004534-xwrg6xp"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "redis-cli"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-nsgobtm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-nsgobtm"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 Redis 附带的 redis-cli 客户端，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-c"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "用于"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "连接集群"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-vpe96rc",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004534-vpe96rc"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "ubuntu@VM-0-3-ubuntu:/usr/local/redis-6.2.1$ src/redis-cli -c -p 30001\n127.0.0.1:30001\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-s6zv6gj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004534-s6zv6gj"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "常用配置"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-ckpmfk3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-ckpmfk3"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "添加节点 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-ybhve3f",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004534-ybhve3f"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "cluster-enabled yes|no\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-z776wf3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-z776wf3"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "cluster 配置文件名，该文件属于自动生成，仅用于快速查找文件并查询文件内容"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-s6xx29d",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004534-s6xx29d"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "cluster-config-file \u003cfilename\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-xb9eojs",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-xb9eojs"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "节点服务响应超时时间，用于判定该节点是否下线或切换为从节点 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-fq21ukm",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004534-fq21ukm"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "cluster-node-timeout \u003cmilliseconds\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-y1mfwj6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-y1mfwj6"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "master 连接的 slave 最小数量"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-weijzoz",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004534-weijzoz"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "cluster-migration-barrier \u003ccount\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-ikcedci",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004534-ikcedci"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "常用命令"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-s8ipxcf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-s8ipxcf"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "redis-cli 常用命令："
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-xwoeowh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-xwoeowh"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "查看集群节点信息 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-hhl8yff",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004534-hhl8yff"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "cluster nodes\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-w0uflup",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-w0uflup"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "进入一个从节点 redis，切换其主节点"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-r2cxff5",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004534-r2cxff5"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "cluster replicate \u003cmaster-id\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-0ugjkgb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-0ugjkgb"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "发现一个新节点，新增主节点"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-oi5rrwy",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004534-oi5rrwy"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "cluster meet ip:port\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-il69zhq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-il69zhq"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "忽略一个没有 solt 的节点"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-pbdq87d",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004534-pbdq87d"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "cluster forget \u003cid\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-permtot",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004534-permtot"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "手动故障转移"
+				}
+			]
+		},
+		{
+			"ID": "20210708004534-2qmw86i",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004534-2qmw86i"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "cluster failover\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,2728 @@
+{
+	"ID": "20210708004525-ngplqug",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210708004525-ngplqug",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210708004525-m8okeru",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004525-m8okeru"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "流水线"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-8g1gey6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-8g1gey6"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在一般情况下，用户每执行一个 Redis 命令，Redis 客户端和 Redis 服务器就需要执行以下步骤："
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-lbt44fr",
+			"Type": "NodeList",
+			"ListData": {
+				"Typ": 1,
+				"Tight": true,
+				"Start": 1,
+				"Delimiter": 46,
+				"Padding": 3,
+				"Marker": "MQ==",
+				"Num": 1
+			},
+			"Properties": {
+				"id": "20210708004525-lbt44fr"
+			},
+			"Children": [
+				{
+					"ID": "20210708004525-dnobdoe",
+					"Type": "NodeListItem",
+					"Data": "1",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 1,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "MQ==",
+						"Num": 1
+					},
+					"Properties": {
+						"id": "20210708004525-dnobdoe"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-nzhhi9t",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-nzhhi9t"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "客户端向服务器发送命令请求。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-wx3hbhk",
+					"Type": "NodeListItem",
+					"Data": "2",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 2,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mg==",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210708004525-wx3hbhk"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-ihfjx2s",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-ihfjx2s"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "服务器接收命令请求，并执行用户指定的命令调用，然后产生相应的命令执行结果。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-o4k18rd",
+					"Type": "NodeListItem",
+					"Data": "3",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 3,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "Mw==",
+						"Num": 3
+					},
+					"Properties": {
+						"id": "20210708004525-o4k18rd"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-3v11w67",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-3v11w67"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "服务器向客户端返回命令的执行结果。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-rr0zi0u",
+					"Type": "NodeListItem",
+					"Data": "4",
+					"ListData": {
+						"Typ": 1,
+						"Tight": true,
+						"Start": 4,
+						"Delimiter": 46,
+						"Padding": 3,
+						"Marker": "NA==",
+						"Num": 4
+					},
+					"Properties": {
+						"id": "20210708004525-rr0zi0u"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-60hihwu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-60hihwu"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "客户端接收命令的执行结果，并向用户进行展示"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-jqjcoha",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-jqjcoha"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "与大多数网络程序一样，执行 Redis 命令所消耗的大部分时间都用在了发送命令请求和接收命令结果上面：Redis 服务器处理一个命令请求通常只需要很短的时间，但客户端将命令请求发送给服务器以及服务器向客户端返回命令结果的过程却需要花费不少时间。通常情况下，程序需要执行的 Redis 命令越多，它需要进行的网络通信操作也会越多，程序的执行速度也会因此而变慢。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-pkzviym",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-pkzviym"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为了解决这个问题，我们可以使用 Redis 提供的流水线特性：这个特性"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "允许客户端把任意多条 Redis 命令请求打包在一起，然后一次性地将它们全部发送给服务器，而服务器则会在流水线包含的所有命令请求都处理完毕之后，一次性地将它们的执行结果全部返回给客户端"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-1wajcpw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-1wajcpw"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过使用流水线特性，我们可以将执行多个命令所需的网络通信次数从原来的 N 次降低为 1 次，这可以大幅度地减少程序在网络通信方面耗费的时间，使得程序的执行效率得到显著的提升。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-j3tzs99",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-j3tzs99"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "虽然 Redis 服务器提供了流水线特性，但这个特性还需要客户端支持才能使用。自己看客户端 API。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-lztt8qn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-lztt8qn"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "::: tip 注意"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-uxg8xdr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-uxg8xdr"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "虽然 Redis 服务器并不会限制客户端在流水线中包含的命令数量，但是却会为"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "客户端的输入缓冲区"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "设置默认值为"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "1GB 的体积上限"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：当客户端发送的数据量超过这一限制时，Redis 服务器将强制关闭该客户端。因此用户在使用流水线特性时，最好不要一下把大量命令或者一些体积非常庞大的命令放到同一个流水线中执行，以免触碰到 Redis 的这一限制。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-fnvj76c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-fnvj76c"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": ":::"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-bgcvpch",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004525-bgcvpch"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "事务"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-csqz6wr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004525-csqz6wr"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "什么是事务"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-2il9loe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-2il9loe"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Redis 事务就是一个命令执行的队列"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，将一系列预定义命令包装成一个整体（一个"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "队列"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "）。当执行时，一次性按照添加顺序依次执行，中间不会被打断或者干扰。一个队列中，一次性、顺序性、排他性的执行一系列命令。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-gkcwmyg",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004525-gkcwmyg"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "事务的基本操作"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-jm8dxgo",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004525-jm8dxgo"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "multi\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-ehy638a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-ehy638a"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "开启事务。作用：设定事务的开启位置，此指令执行后，后续的所有指令均加入到事务中"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-o3i7bol",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004525-o3i7bol"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "exec\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-k4iqdc5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-k4iqdc5"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "执行事务。作用：设定事务的结束位置，同时执行事务。与 multi 成对出现，成对使用"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-twcp6mx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-twcp6mx"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意：加入事务的命令"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "暂时进入到任务队列中"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，并没有立即执行，只有执行 exec 命令才开始执行"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-t6a31k9",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004525-t6a31k9"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "discard\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-ivbhwvk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-ivbhwvk"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "取消事务。作用：终止当前事务的定义，发生在 multi 之后，exec 之前"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-5v6krh9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004525-5v6krh9"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "事务的工作流程"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-svx48do",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-svx48do"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Children": [
+						{
+							"Type": "NodeBang",
+							"Data": "!"
+						},
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20210323003919582"
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "../assets/image-20210323003919582.png"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-m1zf1g0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004525-m1zf1g0"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "事务的注意事项"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-0pdoga6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-0pdoga6"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "定义事务的过程中，命令格式及"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "语法输入错误"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "怎么办？"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-gd67b76",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004525-gd67b76"
+			},
+			"Children": [
+				{
+					"ID": "20210708004525-26yshkk",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-26yshkk"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-95sngl5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-95sngl5"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "语法错误：指命令书写格式有误"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-1usv43k",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-1usv43k"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-rk8twit",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-rk8twit"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "处理结果：如果定义的事务中所包含的命令存在语法错误，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "整体事务中所有命令均不会执行"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "包括那些语法正确的命令"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-4w3npa2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-4w3npa2"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "定义事务的过程中，命令执"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "行出现错误"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "怎么办?"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-3keygf0",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004525-3keygf0"
+			},
+			"Children": [
+				{
+					"ID": "20210708004525-1lrw0o2",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-1lrw0o2"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-anbqxf0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-anbqxf0"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "运行错误：指命令格式正确，但是无法正确的执行。例如对 list 进行 incr 操作"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-ndp68zw",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-ndp68zw"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-nuy02ho",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-nuy02ho"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "处理结果："
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "能够正确运行的命令会执行，运行错误的命令不会被执行"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-wduhl0n",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-wduhl0n"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "注意："
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "已经执行完毕的命令对应的数据不会自动回滚，需要程序员自己在代码中实现回滚"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-4o8fb81",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004525-4o8fb81"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "手动进行事务回滚"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-b6nettu",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004525-b6nettu"
+			},
+			"Children": [
+				{
+					"ID": "20210708004525-hecltui",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-hecltui"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-bnjwxw7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-bnjwxw7"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "记录操作过程中被影响的数据之前的状态"
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-01jw79a",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708004525-01jw79a"
+							},
+							"Children": [
+								{
+									"ID": "20210708004525-hfspavw",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-hfspavw"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-rnpvd13",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-rnpvd13"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "单数据：string"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004525-wq4f9cp",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-wq4f9cp"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-rcoq3f8",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-rcoq3f8"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "多数据：hash、list、set、zset"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-aqn8kh7",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-aqn8kh7"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-qqjappp",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-qqjappp"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "设置指令恢复所有的被修改的项"
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-tubu4q0",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708004525-tubu4q0"
+							},
+							"Children": [
+								{
+									"ID": "20210708004525-wh8n2df",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-wh8n2df"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-k1lw2jy",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-k1lw2jy"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "单数据：直接 set（注意周边属性，例如时效）"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004525-kxp6dq4",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-kxp6dq4"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-dd1kfwl",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-dd1kfwl"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "多数据：修改对应值或整体克隆复制"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-gbyt2fk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004525-gbyt2fk"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "流水线、事务区别"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-s1yawh8",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004525-s1yawh8"
+			},
+			"Children": [
+				{
+					"ID": "20210708004525-l1jau8c",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-l1jau8c"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-n10a3ha",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-n10a3ha"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "流水线的作用是将多个命令打包，然后"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "一并发送"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "至服务器"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-bocr1f9",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-bocr1f9"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-4k32ixy",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-4k32ixy"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "事务的作用则是将多个命令打包，然后让服务器"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "一并执行"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "它们。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-rjnn57v",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004525-rjnn57v"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "带锁的事务"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-vkapatx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004525-vkapatx"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "基于特定条件的事务执行—锁"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-tctxrze",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-tctxrze"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "业务场景"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-6x5hlyz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-6x5hlyz"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "天猫双 11 热卖过程中，对已经售罄的货物追加补货，4 个业务员都有权限进行补货。补货的操作可能是一系 列的操作，牵扯到多个连续操作，如何保障不会重复操作?"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-1wec7yi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-1wec7yi"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "业务分析"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-wxgcwl0",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004525-wxgcwl0"
+			},
+			"Children": [
+				{
+					"ID": "20210708004525-441s247",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-441s247"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-2e8xlg5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-2e8xlg5"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "多个客户端有可能"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "同时操作同一组数据，并且该数据一旦被操作修改后，将不适用于继续操作"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-cv1m2aj",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-cv1m2aj"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-svptgz2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-svptgz2"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "操作之前锁定要操作的数据"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，一旦发生变化，终止当前操作"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-x435u5f",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-x435u5f"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解决方案"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-n1awdmg",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004525-n1awdmg"
+			},
+			"Children": [
+				{
+					"ID": "20210708004525-glexqvl",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-glexqvl"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-lelk45y",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-lelk45y"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "对 key 添加监视锁"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "在执行 exec 前如果 key 发生了变化，终止事务执行"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-0zijqrl",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708004525-0zijqrl"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "watch key1 [key2......]\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-x2tm4qc",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-x2tm4qc"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-2ysj7jt",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-2ysj7jt"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "取消对所有 key 的监视"
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-57hgt8c",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708004525-57hgt8c"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "unwatch\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-2d8fhkb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-2d8fhkb"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "示例："
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-wkj939p",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004525-wkj939p"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "set name conan\nset age 18\n\nwatch name\nmuti\nset name conanan\nset age 188\n---还未执行exec时，被其他client修改了name. set name ccc\nexec --此时返回nil\nunwatch -- 手动unwatch\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-wlklqp2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-wlklqp2"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "场景：redis 应用基于状态控制的批量任务执行"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-g4cqjnk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004525-g4cqjnk"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "基于特定条件的事务执行—分布式锁 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-o33w33x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-o33w33x"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "业务场景"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-o4gjha3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-o4gjha3"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "天猫双 11 热卖过程中，对已经售罄的货物追加补货，且补货完成。客户购买热情高涨，3 秒内将所有商品购 买完毕。本次补货已经将库存全部清空，如何避免"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "最后一件商品"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "不被多人同时购买?【"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "超卖"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "问题】"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-f7mp1od",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-f7mp1od"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "业务分析"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-rw04npu",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004525-rw04npu"
+			},
+			"Children": [
+				{
+					"ID": "20210708004525-kd4s5k2",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-kd4s5k2"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-tefhdii",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-tefhdii"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用 watch 监控一个 key 有没有改变已经不能解决问题，此处要监控的是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "具体数据"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-hw3tu3c",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-hw3tu3c"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-5pb7njx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-5pb7njx"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "虽然 redis 是单线程的，但是多个客户端对同一数据同时进行操作时，如何避免不被同时修改?"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-adl5lzt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-adl5lzt"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解决方案"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-xcrtl1o",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004525-xcrtl1o"
+			},
+			"Children": [
+				{
+					"ID": "20210708004525-p8pslih",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-p8pslih"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-57tobnh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-57tobnh"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用 setnx 设置一个"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "公共锁，必须是同一把锁"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-6efw3jn",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708004525-6efw3jn"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "setnx lock-key value\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-k3s2yls",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-k3s2yls"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "利用 setnx 命令的返回值特征"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，有值则返回设置失败，无值则返回设置成功"
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-063rcce",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708004525-063rcce"
+							},
+							"Children": [
+								{
+									"ID": "20210708004525-2y5q1qj",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-2y5q1qj"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-kxoxu5u",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-kxoxu5u"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "对于返回设置成功的，拥有控制权，进行下一步的具体业务操作"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004525-oqt1fth",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-oqt1fth"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-izkyx6n",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-izkyx6n"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "对于返回设置失败的，不具有控制权，排队或等待"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-b16eikv",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-b16eikv"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-1w3t243",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-1w3t243"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "操作完毕通过 del 操作释放锁"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-yyi6hcd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-yyi6hcd"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意：上述解决方案是一种设计概念，依赖规范保障，具有风险性"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-dfqz2r3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-dfqz2r3"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "场景：redis 应用基于分布式锁对应的场景控制"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-1ycx67i",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004525-1ycx67i"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "基于特定条件的事务执行—分布式锁改良 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-mb3shgf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-mb3shgf"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "业务场景"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-vo5zf8b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-vo5zf8b"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "依赖分布式锁的机制，某个用户操作时对应客户端宕机，且此时已经获取到锁。如何解决?"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-nve8gr3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-nve8gr3"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "业务分析"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-ercm4wi",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004525-ercm4wi"
+			},
+			"Children": [
+				{
+					"ID": "20210708004525-l354tbm",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-l354tbm"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-gtdi83y",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-gtdi83y"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "由于"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "锁操作由用户控制加锁解锁"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "必定会存在加锁后未解锁的风险"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-75xlff1",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-75xlff1"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-l3va4v4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-l3va4v4"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "需要解锁操作不能仅依赖用户控制，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "系统级别要给出对应的保底处理方案"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-umd4m7g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-umd4m7g"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解决方案"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-af90ous",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004525-af90ous"
+			},
+			"Children": [
+				{
+					"ID": "20210708004525-2wouzkc",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-2wouzkc"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-1y5g9d3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-1y5g9d3"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "使用 expire 为锁 key 添加时间限定"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，到时不释放，放弃锁"
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-2oac85f",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708004525-2oac85f"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "expire lock-key second\npexpire lock-key milliseconds\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-b189fbr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-b189fbr"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "由于操作通常都是微秒或毫秒级，因此该锁定时间不宜设置过大。具体时间需要业务测试后确认"
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-x312752",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708004525-x312752"
+							},
+							"Children": [
+								{
+									"ID": "20210708004525-33cky0p",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-33cky0p"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-a0dgu8u",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-a0dgu8u"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "例如：持有锁的操作最长执行时间 127ms，最短执行时间 7ms。"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004525-xrbp7hu",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-xrbp7hu"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-m4igm6k",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-m4igm6k"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "测试百万次最长执行时间对应命令的最大耗时，测试百万次网络延迟平均耗时"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004525-cio9ki9",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-cio9ki9"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-30dmy9k",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-30dmy9k"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "锁时间设定推荐：最大耗时"
+												},
+												{
+													"Type": "NodeEmphasis",
+													"Children": [
+														{
+															"Type": "NodeEmA6kOpenMarker",
+															"Data": "*"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "120%+平均网络延迟"
+														},
+														{
+															"Type": "NodeEmA6kCloseMarker",
+															"Data": "*"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "110%"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004525-tzmid7j",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-tzmid7j"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-y4o55b1",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-y4o55b1"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "如果业务最大耗时\u003c\u003c网络平均延迟，通常为 2 个数量级，取其中单个耗时较长即可"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

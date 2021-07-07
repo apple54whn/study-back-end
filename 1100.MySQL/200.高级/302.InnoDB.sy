@@ -1,0 +1,1925 @@
+{
+	"ID": "20210708003626-ughpopn",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210708003626-ughpopn",
+		"type": "doc",
+		"updated": "20210708003626"
+	},
+	"Children": [
+		{
+			"ID": "20210708003626-tctcle0",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 42,
+				"Padding": 4,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003626-tctcle0"
+			},
+			"Children": [
+				{
+					"ID": "20210708003626-5thaasr",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-5thaasr"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-yzgtqcm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-yzgtqcm"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "MySQL 服务器中负责"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "对表中的数据进行读取和写入"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "工作的部分是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "存储引擎"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，如 InnoDB"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-ijieb40",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003626-ijieb40"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "InnoDB 页"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-k87xdwv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-k87xdwv"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "真正处理数据的过程发生在"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "内存"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中，所以需要把"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "磁盘中的数据加载到内存"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中。如果是写入或修改操作，还需把"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "内存中内容刷新到磁盘"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "上。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-ezo13a0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-ezo13a0"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "读写磁盘速度非常慢，与读写内存差了几个数量级。所以 InnoDB 采取的方式是：将数据划分为若干个页，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "以页作为磁盘和内存之间交互的基本单位"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。InnoDB 中"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "页的大小一般为 16KB"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，也就是一次"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "最少从磁盘中读取 16KB 的内容到内存中"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，一次"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "最少把内存中 16KB 的内容刷新到磁盘"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-o5hlngn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-o5hlngn"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "::: tip"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-zqb7r4v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-zqb7r4v"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "系统变量 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "innodb_page_size"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 表明了 InnoDB 存储引擎中页的大小，默认值为 16384 Byte，即 16KB。且"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "该系统变量只能在第一次初始化 MySQL 数据目录时指定"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，之后就"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "再也不能修改了"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。初始化时可以通过 mysqld-initialize 来初始化数据目录"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-nh2w978",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-nh2w978"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": ":::"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-q5hi265",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003626-q5hi265"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "InnoDB 行格式"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-6d96ogr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-6d96ogr"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们平时以记录为单位向表中插入数据，这些记录在磁盘上的存放形式也被称为"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "行格式"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "或者记录格式。InnoDB目前有四种行格式："
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Dynamic"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Compressed"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Compact"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、Redundant（这个在 Navicat 里没有，太老了，5.0 设计出来的）目前 MySQL5.7以及8的默认行格式为 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Dynamic"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。其原理都大致相同。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-22upu9n",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-22upu9n"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "指定行格式语法"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-klz7b6q",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003626-klz7b6q"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "create table 表名 (列的信息) row_format=行格式名称;\n\nalter table 表名 row_format=行格式名称;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-hh8nfjw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-hh8nfjw"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Compact 行格式"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-h60yhlg",
+			"Type": "NodeIFrame",
+			"Data": "\u003ciframe id=\"embed_dom\" name=\"embed_dom\" frameborder=\"0\" style=\"display: block; width: 992px; height: 535px;\" src=\"https://www.processon.com/embed/602154665653bb64f204bfd5\" data-src=\"https://www.processon.com/embed/602154665653bb64f204bfd5\"\u003e\u003c/iframe\u003e",
+			"Properties": {
+				"id": "20210708003626-h60yhlg",
+				"updated": "20210708003626"
+			}
+		},
+		{
+			"ID": "20210708003626-c924exg",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-c924exg"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "变长字段长度列表"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-xywzgi8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-xywzgi8"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "创建表"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-y8l38lp",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003626-y8l38lp"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "CREATE TABLE record_format_demo\n(\n    c1 VARCHAR(10),\n    c2 VARCHAR(10) NOT NULL,\n    c3 CHAR(10),\n    c4 VARCHAR(10)\n) CHARSET = ASCII\n  ROW_FORMAT = COMPACT;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-91ap4ca",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-91ap4ca"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意，该表的字符集为 ASCII，只能插入空格、标点符号、数字、大小写字母和一些不可见字符"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-yhbjhse",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-yhbjhse"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "插入2行记录"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-vu92pw6",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003626-vu92pw6"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "INSERT INTO record_format_demo (c1, c2, c3, c4)\nVALUES ('aaaa', 'bbb', 'cc', 'd'),\n       ('eeee', 'fff', NULL, NULL);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-xkjz5sq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-xkjz5sq"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "由于该表的字符集为 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "ASCII"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，所以每列的真实数据"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "只需一B即可保存"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，且c1,c2,c4列需要将存储空间字节数"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "逆序"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "保存到变长字段长度列表中。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-1itlu64",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-1itlu64"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "第一行c1,c2,c4列的数据长度为4，3，1，逆序并已16进制表示则为 0x01, 0x03, 0x04。存入compact行格式中为：010304"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-xbrqsjm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-xbrqsjm"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "第二行存入行格式中数据为0304"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-as67an5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-as67an5"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "::: tip 提示"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-opltrjo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-opltrjo"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "并不是所有记录行都有这个变长字段长度列表，如果表中所有列"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "都不是变长"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的，或者所有"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "列的值都是 NULL 的话（不存储值为 NULL 的列）"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，则不存在该表了"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-8nww6g6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-8nww6g6"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": ":::"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-mdf2cyd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-mdf2cyd"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这几条记录中数据内容都比较短，占用字节数少，所以变长字段长度列表中每列只需1个字节即可，但是若内容多，则需要2个字节来存储长度，具体InnoDB 有如下规则（引入"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "W、M、L"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "这几个符号）："
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-g85i19w",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 42,
+				"Padding": 4,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003626-g85i19w"
+			},
+			"Children": [
+				{
+					"ID": "20210708003626-ykrk5yq",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-ykrk5yq"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-86dv2dr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-86dv2dr"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "假设某个字符集中"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "最多需要W字节来表示一个字符"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（即 show charset 语句结果中的 maxlen 列）。比如 utf8mb4字符集中的W就是4，utf8字符集中的W就是3，gbk字符集中的W就是2，ascii字符集中的W就是1"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-n1bvty7",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-n1bvty7"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-5a3l34e",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-5a3l34e"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "对于变长类型VARCHAR(M)来说，这种类型表示"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "能存储最多M个字符"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。所以该类型能表示的字符串最多占用的字节数就是 WxM"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-oczesf8",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-oczesf8"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-l1gaim1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-l1gaim1"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "假设该变长字段"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "实际存储的字符串占用的字节数是L"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-gaxo2uc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-gaxo2uc"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "则确定使用1字节还是2字节表示变长字段真实数据占用字节数规则就是："
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-w37jcah",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 4,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003626-w37jcah"
+			},
+			"Children": [
+				{
+					"ID": "20210708003626-8qc0ojl",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-8qc0ojl"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-mctac7c",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-mctac7c"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果WxM\u003c=255，那么使用1字节表示"
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-b0s6ntx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-b0s6ntx"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "InnoDB在读取变长字段长度列表时"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "先查看表结构"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，直接计算WxM\u003c=255？为真则认为只是用1字节表示。直接使用1字节的二进制表示即可"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-a6esdcl",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-a6esdcl"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-m5mqnrk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-m5mqnrk"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果WxM\u003e255，则分如下情况："
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-egvyjrx",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 42,
+								"Padding": 4,
+								"Marker": "Kg==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708003626-egvyjrx"
+							},
+							"Children": [
+								{
+									"ID": "20210708003626-dm6y7xj",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 4,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708003626-dm6y7xj"
+									},
+									"Children": [
+										{
+											"ID": "20210708003626-g7618v0",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708003626-g7618v0"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "若L\u003c=127，则使用1字节表示"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708003626-bvgpx7d",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 4,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708003626-bvgpx7d"
+									},
+									"Children": [
+										{
+											"ID": "20210708003626-aovg5zy",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708003626-aovg5zy"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "若L\u003e127，则使用2字节表示"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-waqukqz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-waqukqz"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "InnoDB在读取变长字段长度列表时"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "先查看表结构"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，直接计算WxM\u003c=255？为假。那么如何区分正在读取的某个字节是一个单独的字段长度还是半个字段长度呢？（借助127规则）"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "InnoDB 使用该字节的第一个二进制位作为标志位"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。为0则该字节为单独的字段长度（即L\u003c=127本来就是那么点），为1则是半个字段长度，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "这个仅作为标志位，不参与运算哦"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-yr6f5e9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-yr6f5e9"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "::: tip 提示"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-ts2vawj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-ts2vawj"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "对一条记录来说，若某个字段占用的字节数特别多，InnoDB"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "有可能"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "把该字段值的一部分数据存放到所谓的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "溢出页"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中。那么该字段在记录的变长字段长度列表出只存储在本页面中的长度，使用2字节即可。至于溢出页字段长度则不做讨论"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-1421n07",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-1421n07"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": ":::"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-a0vctei",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-a0vctei"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "NULL 值列表"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-yrrsb01",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-yrrsb01"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "存储null字符串到真实数据中占用地方，所以Compact 行格式将其统一管理："
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-1eejfzw",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 42,
+				"Padding": 4,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003626-1eejfzw"
+			},
+			"Children": [
+				{
+					"ID": "20210708003626-3kar957",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-3kar957"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-91pdg3n",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-91pdg3n"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "先统计表中"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "允许存储 NULL 的列"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "有哪些"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-o6m0inn",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-o6m0inn"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-jmkgnoi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-jmkgnoi"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "若表中没有允许存储 NULL 的列，则NULL 值列表也不存在了。否则将"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "每个允许存储NULL的列对应一个二进制位"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，并按照列的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "逆序排列"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，二进制意义如下："
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-fbvajp0",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 42,
+								"Padding": 4,
+								"Marker": "Kg==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708003626-fbvajp0"
+							},
+							"Children": [
+								{
+									"ID": "20210708003626-kju2mpc",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 4,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708003626-kju2mpc"
+									},
+									"Children": [
+										{
+											"ID": "20210708003626-rjgq489",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708003626-rjgq489"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "为"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "1"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "则代表该列值"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "为NULL"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708003626-pb4o42p",
+									"Type": "NodeListItem",
+									"Data": "*",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 42,
+										"Padding": 4,
+										"Marker": "Kg==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708003626-pb4o42p"
+									},
+									"Children": [
+										{
+											"ID": "20210708003626-pd331sk",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708003626-pd331sk"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "为"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "0"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "则代表该列值"
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "不为NULL"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-zx20yju",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-zx20yju"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-2tl8eh4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-2tl8eh4"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "MySQL规定NULL 值列表必须用"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "整数个字节的位表示"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，不足一个字节在高位"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "补0"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-lv8y9g7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-lv8y9g7"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "对于上述表中2条数据来说，只有c1,c3,c4可以存储NULL，则NULL 值列表如下："
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-quhlzbe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-quhlzbe"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "第一行：先逆序排序为c4,c3,c1，高位补0，最终十六进制值为 0x00"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-zkupnct",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-zkupnct"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "第二行：先逆序排序为c4,c3,c1，高位补0，二进制为110，最终十六进制值为 0x06"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-zp1g3f8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-zp1g3f8"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "记录头信息—固定5字节"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-o8vdv9l",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-o8vdv9l"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "由固定5字节组成，即40个二进制位"
+				}
+			]
+		}
+	]
+}

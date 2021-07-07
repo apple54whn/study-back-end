@@ -1,0 +1,3894 @@
+{
+	"ID": "20210708004525-70ppk6p",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210708004525-70ppk6p",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210708004525-wnx04a1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004525-wnx04a1"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥EXPIRE / PEXPIRE 设置、更新生存时间"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-ultfuup",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004525-ultfuup"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "expire key seconds\npexpire key milliseconds\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-yank8rx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-yank8rx"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "EXPIRE 命令和 PEXPIRE 命令在生存时间设置成功时返回 1；如果用户给定的键并不存在，那么命令返回 0 表示设置失败。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-95t08oc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-95t08oc"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "对一个已经带有生存时间的键执行 EXPIRE 命令或 PEXPIRE 命令时，键原有的生存时间将会被"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "移除"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，并"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "设置新的生存时间"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-k30ntl1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-k30ntl1"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意："
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-e62uwjj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-e62uwjj"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "SET 命令有 EX、PX 选项，无需再使用 SETEX、SETPX、EXPIRE（即使是更新，也无需使用）"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-babnm89",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-babnm89"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以减少命令的调用数量并提升程序的执行速度之外，更重要的是保证了操作的原子性，使得“为键设置值”和“为键设置生存时间”这两个操作可以一起执行。当然后续可以通过事务来解决！"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-p50fjzj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004525-p50fjzj"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥EXPIREAT / PEXPIREAT 设置、更新过期时间"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-68x8ehw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004525-68x8ehw"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "expireat key timestamp\npexpireat key milliseconds-timestamp\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-n46dc6z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-n46dc6z"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过设置过期时间（expire time），让 Redis 在指定 UNIX 时间来临之后自动移除给定的键"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-e6s71zo",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004525-e6s71zo"
+			},
+			"Children": [
+				{
+					"ID": "20210708004525-u3nviuc",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-u3nviuc"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-gwj35og",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-gwj35og"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "EXPIREAT 命令接受一个键和一个秒级精度的 UNIX 时间戳为参数，当系统的当前 UNIX 时间超过命令指定的 UNIX 时间时，给定的键就会被移除"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-1ydj7jw",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-1ydj7jw"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-n5menv1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-n5menv1"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "PEXPIREAT 命令接受一个键和一个毫秒级精度的 UNIX 时间戳为参数，当系统的当前 UNIX 时间超过命令指定的 UNIX 时间时，给定的键就会被移除"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-a9eezu5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004525-a9eezu5"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "自动过期特性的不足之处"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-uw5rxqg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-uw5rxqg"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "EXPIRE、PEXIRE、EXPIREAT、PEXPIREAT，它们都只能对整个键进行设置，而无法对键中的某个元素进行设置，比如，用户只能对整个集合或者整个散列设置生存时间/过期时间，但是却无法为集合中的某个元素或者散列中的某个字段单独设置生存时间/过期时间，这也是目前 Redis 的自动过期功能的一个缺陷"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-5m8aorc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004525-5m8aorc"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥TTL / PTTL 获取键的剩余生存时间"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-wtqp57z",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004525-wtqp57z"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "ttl key\npttl key\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-7gvkztw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-7gvkztw"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "TTL 命令将以秒为单位返回键的剩余生存时间；PTTL 命令则会以毫秒为单位返回键的剩余生存时间"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-42ecjax",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004525-42ecjax"
+			},
+			"Children": [
+				{
+					"ID": "20210708004525-p1u4axe",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-p1u4axe"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-l6wxpil",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-l6wxpil"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果给定的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "键存在"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，但是并"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "没有设置生存时间或者过期时间"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，即"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "永久存在"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，那么 TTL 命令和 PTTL 命令将"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "返回-1"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-xknez3z",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-xknez3z"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-vgg7o1a",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-vgg7o1a"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果给定的键"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "已经过期、被删除、未定义"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，即"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "键并不存在"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "、，那么 TTL 命令和 PTTL 命令将"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "返回-2"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-yyb2bi8",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-yyb2bi8"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "注意："
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "过期的键不会立刻被删除"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "！但理论上就是不存在！"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-jlqs9k4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-jlqs9k4"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "TTL 命令的精度问题"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-urszcqu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-urszcqu"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "出现这种情况的原因在于 TTL 命令只能返回秒级精度的生存时间，所以当给定键的剩余生存时间不足 1s 时，TTL 命令只能返回 0 作为结果。这时，如果使用精度更高的 PTTL 命令去检查这些键，就会看到它们实际的剩余生存时间"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-lbzj2jv",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004525-lbzj2jv"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥 过期键删除策略"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-czks89j",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004525-czks89j"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥 时效性数据的存储结构"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-4fdbg4f",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-4fdbg4f"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Children": [
+						{
+							"Type": "NodeBang",
+							"Data": "!"
+						},
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20210324003018848"
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "../assets/image-20210324003018848.png"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-mky6s31",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-mky6s31"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "数据库键的过期时间都保存在过期字典中，如上图"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-o7d47k7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-o7d47k7"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "数据删除策略的目标：在内存占用与 CPU 占用之间寻找一种"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "平衡"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，不是为了立刻删除数据，顾此失彼都会造成整体 redis 性能的下降，甚至引发服务器宕机或内存泄露"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-7x9gmud",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004525-7x9gmud"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "定时（器）删除"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-oiwrfcf",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004525-oiwrfcf"
+			},
+			"Children": [
+				{
+					"ID": "20210708004525-7ktcktz",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-7ktcktz"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-8z1j91m",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-8z1j91m"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "创建一个"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "定时器"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，当 key 设置有过期时间，且过期时间到达时，由定时器任务立即执行对键的删除操作"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-w0tghde",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-w0tghde"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-x4q0qt4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-x4q0qt4"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "优点：节约内存，到时就删除，快速释放掉不必要的内存占用"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-8kn5y0v",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-8kn5y0v"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-epc2w1f",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-epc2w1f"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "缺点：CPU 压力很大，无论 CPU 此时负载量多高，均占用 CPU，会影响 redis 服务器响应时间和指令吞吐量"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-pococh4",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-pococh4"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-awlcs69",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-awlcs69"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "总结：用"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "处理器性能换取存储空间"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "拿时间换空间"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "）"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-80esgwa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-80esgwa"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "\u003cimg src=\"../assets/image-20210324003439382.png\" alt=\"image-20210324003439382\" style=\"zoom:50%;\" /\u003e"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-mtvup9h",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004525-mtvup9h"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥 惰性删除"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-80hfhqp",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004525-80hfhqp"
+			},
+			"Children": [
+				{
+					"ID": "20210708004525-06yuhor",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-06yuhor"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-u8pffqf",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-u8pffqf"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "数据到达过期时间，不做处理。等"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "下次访问该数据时"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-zekggfc",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708004525-zekggfc"
+							},
+							"Children": [
+								{
+									"ID": "20210708004525-skqb1b4",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-skqb1b4"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-envs8cw",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-envs8cw"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "如果未过期，返回数据"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004525-fjscrqo",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-fjscrqo"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-gfnjec5",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-gfnjec5"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "发现已过期，删除，返回不存在"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-i4am7ms",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-i4am7ms"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-btqfa6h",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-btqfa6h"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "优点：节约 CPU 性能，发现必须删除的时候才删除"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-ps1of1y",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-ps1of1y"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-xol05gx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-xol05gx"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "缺点："
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "内存压力很大"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，出现长期占用内存的数据"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-inebhwv",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-inebhwv"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-nb9qrt6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-nb9qrt6"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "总结："
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "用存储空间换取处理器性能"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "拿空间换时间"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "）"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-zvr2y73",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-zvr2y73"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "\u003cimg src=\"../assets/image-20210324003657003.png\" alt=\"image-20210324003657003\" style=\"zoom:50%;\" /\u003e"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-139y8vj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004525-139y8vj"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥 定期删除"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-ocr14aa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-ocr14aa"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "上述 2 种方案的折中方案："
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-j076e3e",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004525-j076e3e"
+			},
+			"Children": [
+				{
+					"ID": "20210708004525-y5tcv68",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-y5tcv68"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-pq9or7k",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-pq9or7k"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Redis 启动服务器初始化时，读取配置"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "server.hz"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的值，默认为 10"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-r1seu9g",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-r1seu9g"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-1p9t4lo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-1p9t4lo"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "每秒钟执行"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "server.hz"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "次"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "serverCron()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "—\u003e"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "databasesCron()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "—\u003e"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "activeExpireCycle()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-eicxq9c",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-eicxq9c"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-qxwg8dw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-qxwg8dw"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "activeExpireCycle()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "对每个"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "expires[x]"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "逐一进行检测，每次执行"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "250ms/server.hz"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-ce7vunm",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-ce7vunm"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-dgr4c3x",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-dgr4c3x"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "对某个 expires[x]检测时，随机挑选 W 个 key 检测"
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-13r35ni",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708004525-13r35ni"
+							},
+							"Children": [
+								{
+									"ID": "20210708004525-9ji846p",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-9ji846p"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-lir474w",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-lir474w"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "如果 key 超时，删除 key（类似惰性删除）"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004525-41vjl57",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-41vjl57"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-swrpg0p",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-swrpg0p"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "如果一轮中删除的 key 的数量\u003eW"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004525-jv84oz7",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-jv84oz7"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-b2bgslq",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-b2bgslq"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "如果一轮中删除的 key 的数量 ≤W"
+												},
+												{
+													"Type": "NodeBackslash",
+													"Children": [
+														{
+															"Type": "NodeBackslashContent",
+															"Data": "*"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "25%，检查下一个 expires[x]，0-15 循环"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004525-5nw0gqm",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-5nw0gqm"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-6kmoxvz",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-6kmoxvz"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "W 取值=ACTIVE_EXPIRE_CYCLE_LOOKUPS_PER_LOOP 属性值"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-5q3egp4",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-5q3egp4"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-s6hmzp1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-s6hmzp1"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "参数"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "current_db"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "用于记录"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "activeExpireCycle()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "进入哪个"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "expires[x]"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 执行"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-3wifp8m",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-3wifp8m"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-65tuljy",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-65tuljy"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "activeExpireCycle()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "执行时间到期，下次从"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "current_db"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "继续向下执行"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-wzvv9x5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-wzvv9x5"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "\u003cimg src=\"../assets/image-20210324005153814.png\" alt=\"image-20210324005153814\" style=\"zoom:50%;\" /\u003e"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-otabdrs",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-otabdrs"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "总结："
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-k6hdpfd",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004525-k6hdpfd"
+			},
+			"Children": [
+				{
+					"ID": "20210708004525-9n57jty",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-9n57jty"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-lg50f38",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-lg50f38"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "概念：周期性轮询 redis 库中的时效性数据，采用随机抽取的策略，利用过期数据占比的方式控制删除频度"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-pasdnmj",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-pasdnmj"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-shcdjhk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-shcdjhk"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "特点 1:CPU 性能占用设置有峰值，检测频度可自定义设置"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-mo5qbmc",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-mo5qbmc"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-yt81bff",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-yt81bff"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "特点 2:内存压力不是很大，长期占用内存的冷数据会被持续清理"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-685dabk",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-685dabk"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-m3xi10m",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-m3xi10m"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "总结:周期性抽查存储空间(随机抽查，重点抽查)"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-ft1q6ms",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004525-ft1q6ms"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥 对比总结"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-9quw1r9",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004525-9quw1r9"
+			},
+			"Children": [
+				{
+					"ID": "20210708004525-1p5jmhr",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-1p5jmhr"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-cq5f18k",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-cq5f18k"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "定时删除"
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-0he2giu",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708004525-0he2giu"
+							},
+							"Children": [
+								{
+									"ID": "20210708004525-i5e3z0t",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-i5e3z0t"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-ikq2ikv",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-ikq2ikv"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "节约内存，无占用"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004525-qix2jbu",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-qix2jbu"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-3b098q0",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-3b098q0"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "不分时段占用 CPU 资源，频度高"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004525-r4d07jn",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-r4d07jn"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-vkaeric",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-vkaeric"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "拿时间换空间"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-sy7ve27",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-sy7ve27"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-0hf1fov",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-0hf1fov"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "惰性删除"
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-imp4mvj",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708004525-imp4mvj"
+							},
+							"Children": [
+								{
+									"ID": "20210708004525-21hgv6i",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-21hgv6i"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-n499zli",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-n499zli"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "内存占用严重"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004525-7cp6c3s",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-7cp6c3s"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-b7s1o36",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-b7s1o36"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "延时执行，CPU 利用率高"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004525-ntpdvtk",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-ntpdvtk"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-etvtcvk",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-etvtcvk"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "拿空间换时间"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-9qz2tsy",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-9qz2tsy"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-4ggd4c7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-4ggd4c7"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "定期删除"
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-qrmuyg9",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708004525-qrmuyg9"
+							},
+							"Children": [
+								{
+									"ID": "20210708004525-mkyfp6m",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-mkyfp6m"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-f9urxeo",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-f9urxeo"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "内存定期随机清理"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004525-2obriln",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-2obriln"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-4zfoca6",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-4zfoca6"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "每秒花费固定的 CPU 资源维护内存"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004525-ubgavi3",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-ubgavi3"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-k7ucywr",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-k7ucywr"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "随机抽查，重点抽查"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-airre1k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-airre1k"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Redis 服务器实际使用的是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "惰性删除"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "和"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "定期删除"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "两种策略：通过"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "配合"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "使用这两种删除策略，服务器可以很好地在合理使用 CPU 时间和避免浪费内存空间之间取得"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "平衡"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-ycj521o",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004525-ycj521o"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥 逐出策略"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-qszmgd4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004525-qszmgd4"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "新数据进入检测"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-mrhmlop",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-mrhmlop"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当新数据进入 redis 时，如果内存不足怎么办?"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-9wt9nwl",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004525-9wt9nwl"
+			},
+			"Children": [
+				{
+					"ID": "20210708004525-ghj9zn6",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-ghj9zn6"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-u07r8kz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-u07r8kz"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Redis 使用内存存储数据，在执行每一个命令前，会调用"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "freeMemoryIfNeeded()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "检测内存是否充足"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。如果内存不满足新加入数据的最低存储要求，redis 要"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "临时删除一些数据为当前指令清理存储空间"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。清理数据的策略称为逐出算法。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-yduffr6",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-yduffr6"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-9nbaa3p",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-9nbaa3p"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "注意：逐出数据的过程"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "不是 100%能够清理出足够的可使用的内存空间"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，如果"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "不成功则反复执行"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。当"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "对所有数据尝试完毕后，如果还不能达到内存清理的要求，将出现错误信息"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-kuafjna",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708004525-kuafjna"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "(error) OOM command not allowed when used memory \u003e'maxmemory'\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-uoucvpy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004525-uoucvpy"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "影响数据逐出的相关配置"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-2c3im08",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004525-2c3im08"
+			},
+			"Children": [
+				{
+					"ID": "20210708004525-d6qrle4",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-d6qrle4"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-ii1vpwn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-ii1vpwn"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "最大可使用内存"
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-f1w4efk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-f1w4efk"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "占用物理内存的比例，默认值为 0，表示不限制。生产环境中根据需求设定，通常设置在 50%以上。"
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-23plnzb",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708004525-23plnzb"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "maxmemory\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-iu38pk5",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-iu38pk5"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-r4pbtc4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-r4pbtc4"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "每次选取待删除数据的个数"
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-gyo9sct",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-gyo9sct"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "选取数据时并不会全库扫描，导致严重的性能消耗，降低读写性能。因此采用随机获取数据的方式作为待检测删除数据"
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-p49xgyl",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708004525-p49xgyl"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "maxmemory-samples\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-kaadt53",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-kaadt53"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-tefw9bf",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-tefw9bf"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "删除策略"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-w3kuba6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-w3kuba6"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "达到最大内存后的，对被挑选出来的数据进行删除的策略。如下"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "8 种策略"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-khkhiqr",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708004525-khkhiqr"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "maxmemory-policy\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-ox7aouq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004525-ox7aouq"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥8 种逐出策略"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-j4eleao",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004525-j4eleao"
+			},
+			"Children": [
+				{
+					"ID": "20210708004525-meq3o4r",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-meq3o4r"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-q66jpsy",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-q66jpsy"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "检测"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "易失数据"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "(可能会过期的数据集 server.db[i].expires )"
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-2hwfynf",
+							"Type": "NodeList",
+							"ListData": {
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708004525-2hwfynf"
+							},
+							"Children": [
+								{
+									"ID": "20210708004525-ru0fhvt",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-ru0fhvt"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-g4pnhgd",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-g4pnhgd"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "volatile-lru:挑选最近最少使用的数据淘汰。推荐！🔥"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004525-wvc3vqo",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-wvc3vqo"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-tj7nfxv",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-tj7nfxv"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "volatile-lfu:挑选最近使用次数最少的数据淘汰"
+												}
+											]
+										},
+										{
+											"ID": "20210708004525-w0tdajs",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-w0tdajs"
+											},
+											"Children": [
+												{
+													"Type": "NodeImage",
+													"Children": [
+														{
+															"Type": "NodeBang",
+															"Data": "!"
+														},
+														{
+															"Type": "NodeOpenBracket",
+															"Data": "["
+														},
+														{
+															"Type": "NodeLinkText",
+															"Data": "image-20210324010220814"
+														},
+														{
+															"Type": "NodeCloseBracket",
+															"Data": "]"
+														},
+														{
+															"Type": "NodeOpenParen",
+															"Data": "("
+														},
+														{
+															"Type": "NodeLinkDest",
+															"Data": "../assets/image-20210324010220814.png"
+														},
+														{
+															"Type": "NodeCloseParen",
+															"Data": ")"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004525-7px22xf",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-7px22xf"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-0a8jibw",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-0a8jibw"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "volatile-ttl:挑选将要过期的数据淘汰"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004525-5z1s6d0",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-5z1s6d0"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-tlsjasq",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-tlsjasq"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "volatile-random:任意选择数据淘汰"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-vc8yl4c",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-vc8yl4c"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-m38dhdh",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-m38dhdh"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "检测"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "全库数据"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "(所有数据集 server.db[i].dict )"
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-kilbkh5",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708004525-kilbkh5"
+							},
+							"Children": [
+								{
+									"ID": "20210708004525-rhu99vm",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-rhu99vm"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-my8eeah",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-my8eeah"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "allkeys-lru:挑选最近最少使用的数据淘汰"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004525-10zfigl",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-10zfigl"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-rzm0xz6",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-rzm0xz6"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "allkeys-lfu:挑选最近使用次数最少的数据淘汰"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708004525-zvvyiw9",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-zvvyiw9"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-bd51siu",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-bd51siu"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "allkeys-random:任意选择数据淘汰"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004525-52rscv3",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004525-52rscv3"
+					},
+					"Children": [
+						{
+							"ID": "20210708004525-hahwyaq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004525-hahwyaq"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "放弃数据驱逐"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210708004525-c6vkx0h",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708004525-c6vkx0h"
+							},
+							"Children": [
+								{
+									"ID": "20210708004525-5c2bai8",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708004525-5c2bai8"
+									},
+									"Children": [
+										{
+											"ID": "20210708004525-6xie9ko",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708004525-6xie9ko"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "no-enviction(驱逐)："
+												},
+												{
+													"Type": "NodeStrong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "禁止驱逐数据"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "(redis4.0 中默认策略)，会引发错误 OOM(Out Of Memory)"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-x2hjjua",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-x2hjjua"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "::: tip"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-g1y1b8w",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-g1y1b8w"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 INFO 命令输出监控信息，查询缓存 hit 和 miss 的次数，根据业务需求调优 Redis 配置"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-561fe8a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004525-561fe8a"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": ":::"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-bjm7lgq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004525-bjm7lgq"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "PERSIST 时效转永久"
+				}
+			]
+		},
+		{
+			"ID": "20210708004525-lhqmym2",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004525-lhqmym2"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "persist key\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		}
+	]
+}

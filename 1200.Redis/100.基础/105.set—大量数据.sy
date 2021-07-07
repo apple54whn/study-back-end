@@ -1,0 +1,4458 @@
+{
+	"ID": "20210708004513-1wo4nzf",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210708004513-1wo4nzf",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210708004513-lvw5b3q",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-lvw5b3q"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "介绍"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-h5tu3p8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-h5tu3p8"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "介绍"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-5o0ugb2",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004513-5o0ugb2"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-cm5h7wz",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-cm5h7wz"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-jfg1pcr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-jfg1pcr"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "新的存储需求：存储"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "大量"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的数据，在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "查询方面提供更高的效率（list 由于双向链表结构，查询慢）"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-xqmtbqb",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-xqmtbqb"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-qz35g08",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-qz35g08"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "set 类型与 hash 存储结构完全相同"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "仅存储键"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，不存储值("
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "nil"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ")，键即为值，并且值是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "不允许重复"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的，如果添加的数据在 set 中已经存在，将"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "只保留一份"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-z0gfzc2",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-z0gfzc2"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-4pblylw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-4pblylw"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "set 虽然与 hash 的存储结构相同，但是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "无法启用 hash 中存储值的空间"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-avq7qoe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-avq7qoe"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "list 和 set 区别："
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-4evbn45",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004513-4evbn45"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-7cp5p7n",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-7cp5p7n"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-lyyu3qq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-lyyu3qq"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "列表可以存储"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "重复元素"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，而集合只会存储"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "非重复元素"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，尝试将一个已存在的元素添加到集合将被忽略。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-rii93ce",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-rii93ce"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-woh3jx9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-woh3jx9"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "列表以"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "有序"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "方式存储元素，而集合则以"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "无序"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "方式存储元素。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-0ru4imq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-0ru4imq"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这两个区别带来的差异主要跟命令的复杂度有关："
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-qtakt05",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004513-qtakt05"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-y4wj2f7",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-y4wj2f7"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-o4t1raw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-o4t1raw"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在执行像 LINSERT 和 LREM 这样的列表命令时，即使命令只针对单个列表元素，程序有时也不得不遍历整个列表以确定指定的元素是否存在，因此这些命令的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "复杂度都为 O(N)"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-45q2lhl",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-45q2lhl"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-4nty7dc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-4nty7dc"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "对于集合来说，因为所有针对单个元素的集合命令都不需要遍历整个集合，所以"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "复杂度都为 O(1)"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-aushz11",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-aushz11"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Children": [
+						{
+							"Type": "NodeBang",
+							"Data": "!"
+						},
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20210225230145789"
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "../assets/image-20210225230145789.png"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-bimlbmn",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-bimlbmn"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥SADD 将元素添加到集合"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-y0mqiqh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-y0mqiqh"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "添加数据"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-5en2xgr",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-5en2xgr"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "sadd key member1 [member2 ...]\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-aqeb6rk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-aqeb6rk"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "返回成功添加的新元素数量作为返回值"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-ss5qaty",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-ss5qaty"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "示例"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-5nngtl4",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-5nngtl4"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "127.0.0.1:6379\u003e sadd users a b\n(integer) 2\n\n127.0.0.1:6379\u003e sadd users c\n(integer) 1\n\n127.0.0.1:6379\u003e sadd users c\n(integer) 0 -- 忽略重复元素\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-gdcygpo",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-gdcygpo"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥SREM 从集合中移除元素"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-d5t9opw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-d5t9opw"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "srem key member1 [member2 ...]\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-2gdal05",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-2gdal05"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "返回被移除的元素数量。如果用户给定的元素并不存在于集合当中，那么 SREM 命令将忽略不存在的元素，只移除那些确实存在的元素。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-5hxa43g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-5hxa43g"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "示例"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-g9mek4p",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-g9mek4p"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "127.0.0.1:6379\u003e srem users b\n(integer) 1\n\n127.0.0.1:6379\u003e smembers users\n1) \"c\"\n2) \"a\"\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-fy4ksao",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-fy4ksao"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥SMOVE 将元素从一个集合移动到另一个集合"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-okvsr5x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-okvsr5x"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "将指定数据从原始集合中"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "移动（移动完原始集合就没有了）"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "到目标集合中"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-65fcv8v",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-65fcv8v"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "smove source destination member\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-u4wnik2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-u4wnik2"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果用户想要移动的元素并不存在于源集合，那么 SMOVE 将放弃执行移动操作，并返回 0 表示移动操作执行失败。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-fr0gq7t",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-fr0gq7t"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "即使用户想要移动的元素已经存在于目标集合，SMOVE 命令仍然会将指定的元素从源集合移动到目标集合，并覆盖目标集合中的相同元素。从结果来看，这种移动不会改变目标集合包含的元素，只会导致被移动的元素从源集合中消失。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-07etv8e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-07etv8e"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "示例"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-au14ynl",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-au14ynl"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "127.0.0.1:6379\u003e smove s1 s2 e1\n(integer) 1\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-tq8k78d",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-tq8k78d"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥SMEMBERS 获取集合包含的所有元素"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-mlpi1eu",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-mlpi1eu"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "smembers key\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-ysvwy4n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-ysvwy4n"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意返回的元素是无序排列的"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-zwwuk0j",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-zwwuk0j"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "示例"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-jki1e5h",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-jki1e5h"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "127.0.0.1:6379\u003e smembers users\n1) \"c\"\n2) \"b\"\n3) \"a\"\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-4eklhie",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-4eklhie"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥 SCARD 获取集合包含的元素数量"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-wius077",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-wius077"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "scard key\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-9oaqkvz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-9oaqkvz"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "实例"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-baqd98l",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-baqd98l"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "127.0.0.1:6379\u003e scard users\n(integer) 2\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-ybcf2ag",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-ybcf2ag"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "SISMEMBER❗️ 检查给定元素是否存在于集合"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-eexnk5j",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-eexnk5j"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "不推荐使用逻辑运算，应该在业务代码中判断"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-qyk6cgs",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-qyk6cgs"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "sismember key member\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-qnhvioz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-qnhvioz"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "示例"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-rg2wntv",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-rg2wntv"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "127.0.0.1:6379\u003e sismember users a\n(integer) 1\n127.0.0.1:6379\u003e sismember users b\n(integer) 0\n127.0.0.1:6379\u003e sismember users c\n(integer) 1\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-yme3lx1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-yme3lx1"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "1 为 true，0 为 false"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-j7nevoe",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-j7nevoe"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥SRANDMEMBER 随机获取集合中指定数量的元素"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-qt5z8t7",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-qt5z8t7"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "srandmember key [count]\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-mnbgu0h",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004513-mnbgu0h"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-uewbgfu",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-uewbgfu"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-x0ox638",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-x0ox638"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "SRANDMEMBER 命令接受一个可选的 count 参数，用于指定用户想要获取的元素数量，如果用户没有给定这个参数，那么 SRANDMEMBER 命令默认只获取一个元素"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-y07y9ir",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-y07y9ir"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-8m6ixa8",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-8m6ixa8"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果 count 参数的值为正数，那么 SRANDMEMBER 命令将返回 count 个"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "不重复"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的元素"
+								}
+							]
+						},
+						{
+							"ID": "20210708004513-3ecu4cy",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-3ecu4cy"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当 count 参数的值大于集合包含的元素数量时，SRANDMEMBER 命令将返回集合包含的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "所有元素"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-0kgtzk5",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-0kgtzk5"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-asax8iq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-asax8iq"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果 count 参数的值为负数，那么 SRANDMEMBER 命令将随机返回 abs(count)个元素（abs(count)也即是 count 的绝对值），并且在这些元素当中"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "允许出现重复"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的元素"
+								}
+							]
+						},
+						{
+							"ID": "20210708004513-e0ay6gk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-e0ay6gk"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "因为 count 参数为负数的 SRANDMEMBER 命令"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "允许返回重复元素"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，所以即使 abs(count)的值大于集合包含的元素数量，SRANDMEMBER 命令也会按照要求"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "返回 abs(count)个元素，可能会超过总数哦"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-x2nqrc1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-x2nqrc1"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "示例"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-lxvl7kl",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-lxvl7kl"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "127.0.0.1:6379\u003e sadd news n1 n2 n3 n4 n5\n(integer) 5\n\n127.0.0.1:6379\u003e srandmember news 3\n1) \"n4\"\n2) \"n1\"\n3) \"n2\"\n\n127.0.0.1:6379\u003e srandmember news 10\n1) \"n4\"\n2) \"n3\"\n3) \"n1\"\n4) \"n2\"\n5) \"n5\"\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-84sd7ri",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-84sd7ri"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥SPOP 随机地从集合中移除指定数量的元素"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-fqd7xmf",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-fqd7xmf"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "spop key [count]\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-j6dhyww",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-j6dhyww"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "count 参数，用于指定需要被移除的元素数量。如果用户没有给定这个参数，那么 SPOP 命令默认只移除一个元素"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-sz42w15",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-sz42w15"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "示例"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-1dqndar",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-1dqndar"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "127.0.0.1:6379\u003e sadd news n1 n2 n3 n4 n5\n(integer) 5\n\n127.0.0.1:6379\u003e spop news 3\n1) \"n1\"\n2) \"n4\"\n3) \"n2\"\n\n127.0.0.1:6379\u003e smembers news\n1) \"n3\"\n2) \"n5\"\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-yi1hn4i",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-yi1hn4i"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "SINTER / SUNION / SDIFF 交并差"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-jurppkm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-jurppkm"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "求多个集合的交、并、差集"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-hm0o8k0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-hm0o8k0"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "sinter key1 [key2 ...]\nsunion key1 [key2 ...]\nsdiff key1 [key2 ...]\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-sb9oivc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-sb9oivc"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "示例"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-e1fam61",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-e1fam61"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "127.0.0.1:6379\u003e sadd u1 u3 u4 u5 u6 u7\n(integer) 5\n\n127.0.0.1:6379\u003e sadd u2 u5 u7 u9\n(integer) 3\n\n127.0.0.1:6379\u003e sinter u1 u2\n1) \"u7\"\n2) \"u5\"\n\n127.0.0.1:6379\u003e sunion u1 u2\n1) \"u3\"\n2) \"u4\"\n3) \"u7\"\n4) \"u6\"\n5) \"u5\"\n6) \"u9\"\n\n127.0.0.1:6379\u003e sdiff u1 u2\n1) \"u4\"\n2) \"u3\"\n3) \"u6\"\n127.0.0.1:6379\u003e sdiff u2 u1\n1) \"u9\"\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-xl521d8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-xl521d8"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥SINTERSTORE / SUNIONSTORE / SDIFFSTORE 交并差并存储"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-7t078u7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-7t078u7"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "求多个集合的交、并、差集并存储到指定集合中"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-w8lxr37",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "YmFzaA==",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-w8lxr37"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "sinterstore destination_key key1 [key2 ...]\nsunionstore destination_key key1 [key2 ...]\nsdiffstore destination_key key1 [key2 ...]\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-hhot3mh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-hhot3mh"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "示例略"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-21zw2hr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-21zw2hr"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "::: tip"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-lcev8av",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-lcev8av"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "因为对集合执行交集、并集、差集等集合计算需要耗费大量的资源，所以用户"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "应该尽量使用 SINTERSTORE 等命令"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "来存储并重用计算结果，而不要每次都重复进行计算。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-wnim4k4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-wnim4k4"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "此外，当集合计算涉及的元素数量非常大时，Redis 服务器在进行计算时可能会被阻塞。这时，我们可以"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "考虑使用 Redis 的复制功能"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，通过"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "从服务器"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "来执行集合计算任务，从而"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "确保主服务器可以继续处理其他客户端发送的命令请求"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-koureoj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-koureoj"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": ":::"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-ib0m8iw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-ib0m8iw"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "===================="
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-hr52mq1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-hr52mq1"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥【场景】唯一计数器—网站访问量去重"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-bdnxmtb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-bdnxmtb"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "公司对旗下新的网站做推广，统计网站的 PV(访问量),UV(独立访客),IP(独立 IP)。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-6d39key",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004513-6d39key"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-0ejbl5j",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-0ejbl5j"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-01ehzh4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-01ehzh4"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "PV：网站被访问次数，可通过刷新页面提高访问量"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-gb6na5u",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-gb6na5u"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-6dt4l9z",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-6dt4l9z"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "UV：网站被不同用户访问的次数，可通过 cookie 统计访问量，相同用户切换 IP 地址，UV 不变"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-t6ip4p9",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-t6ip4p9"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-ks6z60q",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-ks6z60q"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "IP：网站被不同 IP 地址访问的总次数，可通过 IP 地址统计访问量，相同 IP 不同用户访问，IP 不变"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-9t8v525",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-9t8v525"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解决方案"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-4syftu9",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004513-4syftu9"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-nle9ndk",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-nle9ndk"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-q4s4i8r",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-q4s4i8r"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "利用 set 集合的数据去重特征，记录各种访问数据"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-q62uunf",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-q62uunf"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-j3fqx83",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-j3fqx83"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "建立 string 类型数据，利用 incr 统计日访问量(PV)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-4r93ym6",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-4r93ym6"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-63oocv9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-63oocv9"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "建立 set 模型，记录不同 cookie 数量(UV)，重复的存储不进来，最终计算数量即可"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-6wqui2i",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-6wqui2i"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-9deun5m",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-9deun5m"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "建立 set 模型，记录不同 IP 数量(IP)，重复的存储不进来，最终计算数量即可"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-d7xh39n",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-d7xh39n"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥【场景】打标签"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-474go0d",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-474go0d"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为了对网站上的内容进行分类标识，很多网站都提供了打标签（tagging）功能。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-2xspv44",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-2xspv44"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "比如论坛可能会允许用户为帖子添加标签，这些标签既可以对帖子进行归类，又可以让其他用户快速地了解到帖子要讲述的内容。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-4phmrck",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-4phmrck"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "再比如，一个图书分类网站可能会允许用户为自己收藏的每一本书添加标签，使得用户可以快速地找到被添加了某个标签的所有图书，并且网站还可以根据用户的这些标签进行数据分析，从而帮助用户找到他们可能感兴趣的图书。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-757rsdu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-757rsdu"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "除此之外，购物网站也可以为自己的商品加上标签，比如“新上架”“热销中”“原装进口”等，方便顾客了解每件商品的不同特点和属性。类似的例子还有很多。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-0hot17o",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-0hot17o"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "就是对一个元素的不同标签采用 set 存储而已"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-23hn8ff",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-23hn8ff"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥【场景】点赞"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-tq596q3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-tq596q3"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用集合来存储对内容进行了点赞的用户，从而确保"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "每个用户只能对同一内容点赞一次"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，并通过使用不同的集合命令来实现查看点赞数量、查看所有点赞用户以及取消点赞等功能"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-9eh5n7h",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-9eh5n7h"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥【场景】投票—点赞的多元化"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-wgxe81a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-wgxe81a"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "问答网站、文章推荐网站、论坛这类注重内容质量的网站上通常都会提供投票功能，用户可以通过投票来支持一项内容或者反对一项内容："
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-jebylqa",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004513-jebylqa"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-0xmhtho",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-0xmhtho"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-r41mf25",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-r41mf25"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "一项内容获得的支持票数越多，就会被网站安排到越明显的位置，使得网站的用户可以更快速地浏览到高质量的内容。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-pj5ga3v",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-pj5ga3v"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-jlvflbg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-jlvflbg"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "与此相反，一项内容获得的反对票数越多，它就会被网站安排到越不明显的位置，甚至被当作广告或者无用内容隐藏起来，使得用户可以忽略这些低质量的内容。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-q9jtgt9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-q9jtgt9"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "对于"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "每一项需要投票的内容"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，这个程序都会使用"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "两个集合"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "来分别存储投"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "支持票的用户"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "以及投"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "反对票的用户"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，然后通过对这两个集合执行命令来实现投票、取消投票、统计投票数量、获取已投票用户名单等功能。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-bb0lxw6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-bb0lxw6"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥【场景】社交关系"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-vena60g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-vena60g"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "微博、Twitter 以及类似的社交网站都允许用户通过加关注或者加好友的方式，构建一种社交关系。这些网站上的每个用户都可以关注其他用户，也可以被其他用户关注。通过正在关注名单（followinglist），用户可以查看自己正在关注的用户及其人数；通过关注者名单（follower list），用户可以查看有哪些人正在关注自己，以及有多少人正在关注自己。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-ds55sdu",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004513-ds55sdu"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-2bqmxhq",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-2bqmxhq"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-qyvuq2e",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-qyvuq2e"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "程序为"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "每个用户维护两个集合"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，一个集合存储用户的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "正在关注名单"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，而另一个集合则存储用户的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "关注者名单"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-sdkdz1d",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-sdkdz1d"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-rr5ecjb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-rr5ecjb"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当一个用户（关注者）关注另一个用户（被关注者）的时候，程序会将被关注者添加到关注者的正在关注名单中，并将关注者添加到被关注者的关注者名单里面。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-a4x3adb",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-a4x3adb"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-qx732di",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-qx732di"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当关注者取消对被关注者的关注时，程序会将被关注者从关注者的正在关注名单中移除，并将关注者从被关注者的关注者名单中移除。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-f8gcewt",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-f8gcewt"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥【场景】抽奖"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-1xgzfy5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-1xgzfy5"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "把所有参与抽奖活动的玩家都添加到一个集合中，然后通"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "过 SRANDMEMBER 命令随机地选出获奖者"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-52u6p3q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-52u6p3q"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "考虑到保留完整的抽奖者名单可能会有用，所以这个抽奖程序使用了随机获取元素的 SRANDMEMBER 命令而不是随机移除元素的 SPOP 命令。在不需要保留完整的抽奖者名单的情况下，我们也可以使用 SPOP 命令去实现抽奖程序"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-xw5pof0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-xw5pof0"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥【场景】随机固定数量推荐"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-qx0miev",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210708004513-qx0miev"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "业务场景"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-66sni1v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-66sni1v"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "每位用户首次使用今日头条时会设置 3 项爱好的内容，但是后期为了增加用户的活跃度、兴趣点，必须让用户 对其他信息类别逐渐产生兴趣，增加客户留存度，如何实现?"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-3dmlu2q",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210708004513-3dmlu2q"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "业务分析"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-j5udfvy",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004513-j5udfvy"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-h29o532",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-h29o532"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-h04vljo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-h04vljo"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "系统分析出各个分类的最新或最热点信息条目并组织成 set 集合"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-mj9rm6m",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-mj9rm6m"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-rx5o4fj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-rx5o4fj"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "随机挑选其中部分信息"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-3v3ay0t",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-3v3ay0t"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-rb3ar11",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-rb3ar11"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "配合用户关注信息分类中的热点信息组织成展示的全信息集合"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-5nr352b",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210708004513-5nr352b"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "总结"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-g1xkqo8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-g1xkqo8"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "redis 应用于随机推荐类信息检索，例如热点歌单推荐，热点新闻推荐，热卖旅游线路，应用 APP 推荐，大 V 推荐等"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-uvdpi77",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-uvdpi77"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "srandmember"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 或"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "spop"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "实现"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-6sol3j0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-6sol3j0"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥【场景】共同好友、关联搜索"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-zvxz6jv",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004513-zvxz6jv"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "业务场景"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-tf3eibs",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-tf3eibs"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "脉脉为了促进用户间的交流，保障业务成单率的提升，需要让每位用户拥有大量的好友，事实上职场新人不 具有更多的职场好友，如何快速为用户积累更多的好友?"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-62u1pu4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-62u1pu4"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "新浪微博为了增加用户热度，提高用户留存性，需要微博用户在关注更多的人，以此获得更多的信息或热门 话题，如何提高用户关注他人的总量?"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-qa4fd6n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-qa4fd6n"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "QQ 新用户入网年龄越来越低，这些用户的朋友圈交际圈非常小，往往集中在一所学校甚至一个班级中，如何 帮助用户快速积累好友用户带来更多的活跃度?"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-arcvfxo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-arcvfxo"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "微信公众号是微信信息流通的渠道之一，增加用户关注的公众号成为提高用户活跃度的一种方式，如何帮助 用户积累更多关注的公众号?"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-6dcgb4x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-6dcgb4x"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "美团外卖为了提升成单量，必须帮助用户挖掘美食需求，如何推荐给用户最适合自己的美食?"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-5b3k409",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004513-5b3k409"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "解决方案"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-umk9q9x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-umk9q9x"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 set 的交并差运算"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-erv5xag",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004513-erv5xag"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "总结 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-s4ht3w1",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004513-s4ht3w1"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-vvwvf5z",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-vvwvf5z"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-7w9agpt",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-7w9agpt"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "redis 应用于同类信息的关联搜索，二度关联搜索，深度关联搜索"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-qqwhpda",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-qqwhpda"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-7u6nq72",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-7u6nq72"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "显示共同关注(一度)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-36xk7ql",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-36xk7ql"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-43v5l0v",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-43v5l0v"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "显示共同好友(一度)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-j82qu8k",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-j82qu8k"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-dnikfo0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-dnikfo0"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "由用户 A 出发，获取到好友用户 B 的好友信息列表(一度)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-7fcb3os",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-7fcb3os"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-d1n8z5m",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-d1n8z5m"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "由用户 A 出发，获取到好友用户 B 的购物清单列表(二度)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-2z2cu1r",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-2z2cu1r"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-od5meba",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-od5meba"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "由用户 A 出发，获取到好友用户 B 的游戏充值列表(二度)"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-2m6hase",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-2m6hase"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥【场景】推荐关注—仅参考"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-7ch1xyg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-7ch1xyg"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "从用户的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "正在关注集合中随机选出"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "指定数量的用户作为种子用户，然后对这些种子用户的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "正在关注集合"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "执行"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "并集"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "计算，最后从这个并集中"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "随机"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "地选出一些用户作为推荐关注的对象"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-cgwsnzz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-cgwsnzz"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥【场景】使用反向索引构建商品筛选器"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-9bldyc3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-9bldyc3"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "比如对于笔记本电脑筛选器来说，如果我们单击图中“品牌”一栏的 ThinkPad 图标，那么筛选器将只在页面中展示 ThinkPad 品牌的笔记本电脑。如果我们继续单击“尺寸”一栏中的“13.3 英寸[插图]”选项，那么筛选器将只在页面中展示 ThinkPad 品牌 13.3 英寸的笔记本电脑，诸如此类。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-y3jwkc5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-y3jwkc5"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "实现商品筛选器的方法之一是使用"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "反向索引"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，这种数据结构可以为"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "每个物品添加多个关键字"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，然后"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "根据关键字去反向获取相应的物品"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。举个例子，对于\"X1 Carbon\"这台笔记本电脑来说，我们可以为它添加\"ThinkPad\"、\"14inch\"、\"Windows\"等关键字，然后通过这些关键字来反向获取\"X1 Carbon\"这台笔记本电脑。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-o1tbeoa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-o1tbeoa"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "实现反向索引的关键是要在物品和关键字之间构建起双向的映射关系，比如对于刚刚提到的\"X1Carbon\"笔记本电脑来说，反向索引程序需要构建出图所示的两种映射关系："
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-a5s6h98",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-a5s6h98"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "\u003cimg src=\"../assets/image-20210303223311123.png\" alt=\"image-20210303223311123\" style=\"zoom: 33%;\" /\u003e"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-alvppw8",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004513-alvppw8"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-w75b1d6",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-w75b1d6"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-9h3jp3x",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-9h3jp3x"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "第一种映射关系将\"X1 Carbon\"映射至它带有的各个关键字。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-o3gghze",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-o3gghze"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-xb0zc2t",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-xb0zc2t"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "第二种映射关系将\"ThinkPad\"、\"14inch\"、\"Windows\"等多个关键字映射至\"X1 Carbon\"。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-wpo1ydr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-wpo1ydr"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "反向索引程序，对于用户给定的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "每一件物品"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，这个程序都会使用"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "一个集合去存储物品带有的多个关键字"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，与此同时，对于"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "这件物品的每一个关键字，程序都会使用一个集合去存储关键字与物品之间的映射"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。因为构建反向索引所需的这两种映射都是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "一对多映射"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，所以使用集合来存储这两种映射关系的做法是可行的"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-vblggnc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-vblggnc"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥【场景】权限排重—仅参考"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-hrfwpcc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-hrfwpcc"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "集团公司共具有 12000 名员工，内部 OA 系统中具有 700 多个角色，3000 多个业务操作，23000 多种数据，每 位员工具有一个或多个角色，如何快速进行业务操作的权限校验?"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-60holl3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-60holl3"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "利用 set 不允许存储相同值，来合并权限 set。当然这是示例，一般会用框架，至于是否在 redis 中实现不确定！"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-9uey161",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-9uey161"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥【场景】网站黑、白名单"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-femgd9h",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004513-femgd9h"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "业务场景—黑名单"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-7d3vyln",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-7d3vyln"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "资讯类信息类网站追求高访问量，但是由于其信息的价值，往往容易被不法分子利用，通过爬虫技术，快速获取信息，个别特种行业网站信息通过爬虫获取分析后，可以转换成商业机密进行出售。例如第三方火 车票、机票、酒店刷票代购软件，电商刷评论、刷好评。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-j0mhi37",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-j0mhi37"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "同时爬虫带来的伪流量也会给经营者带来错觉，产生错误的决策，有效避免网站被爬虫反复爬取成为每个网站都要考虑的基本问题。在基于技术层面区分出爬虫用户后，需要将此类用户进行有效的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "屏蔽"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，这就是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "黑名单"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的典型应用。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-macny9t",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-macny9t"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "PS：不是说爬虫一定做摧毁性的工作，有些小型网站需要爬虫为其带来一些流量。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-vqjqmdt",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004513-vqjqmdt"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "业务场景—白名单"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-l2wlram",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-l2wlram"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "对于安全性更高的应用访问，仅仅靠黑名单是不能解决安全问题的，此时需要设定可访问的用户群体，依赖白名单做更为苛刻的访问验证。"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-277gtil",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708004513-277gtil"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "解决方案"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-6a9gds1",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004513-6a9gds1"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-9q251m4",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-9q251m4"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-5obnsrd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-5obnsrd"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "基于经营战略设定问题用户发现、鉴别规则"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-i790j60",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-i790j60"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-47wvqcb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-47wvqcb"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "周期性更新满足规则的用户黑名单，加入 set 集合"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-pbrphkz",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-pbrphkz"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-k56kq77",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-k56kq77"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "用户行为信息达到后与黑名单进行比对，确认行为去向"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-qbfm8r4",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-qbfm8r4"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-j9f0hdu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-j9f0hdu"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "黑名单过滤 IP 地址：应用于开放游客访问权限的信息源"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-i99kcvn",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-i99kcvn"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-ey13pa8",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-ey13pa8"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "黑名单过滤设备信息：应用于限定访问设备的信息源"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-m86nvbz",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-m86nvbz"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-p8og0vw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-p8og0vw"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "黑名单过滤用户：应用于基于访问权限的信息源"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

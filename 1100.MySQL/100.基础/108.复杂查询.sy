@@ -1,0 +1,5314 @@
+{
+	"ID": "20210708003510-yqk01l7",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210708003510-yqk01l7",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210708003510-3q6n3gq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003510-3q6n3gq"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "视图"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-xpm44cf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-xpm44cf"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "表中存储的是实际数据，而"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "视图"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中保存的是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "从表中取出数据所使用的 SELECT 语句"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。将经常使用的 SELECT 语句做成视图。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-400x5us",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-400x5us"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "用于封装复杂查询。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-99v0db9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003510-99v0db9"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "创建视图"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-wq1v41w",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003510-wq1v41w"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "CREATE VIEW 视图名称(\u003c视图列名1\u003e, \u003c视图列名2\u003e, ......) AS \u003cSELECT 语句 \u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-9tjdtf7",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 4,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003510-9tjdtf7"
+			},
+			"Children": [
+				{
+					"ID": "20210708003510-b5nkxca",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-b5nkxca"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-xu5jnev",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-xu5jnev"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "视图名称后可以不写列名，采用 SELECT 的列名"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003510-85rppf9",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-85rppf9"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-wqn8fgn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-wqn8fgn"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "SELECT 语句需要书写在 AS 关键字之后。SELECT 语句中列的排列顺序和视图中列的排列顺序相同"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003510-hp2ctie",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-hp2ctie"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-xb81ddj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-xb81ddj"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "应该"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "避免在视图的基础上创建视图"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，因为对多数DBMS来说多重视图会降低 SQL 的性能。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-0gswxvd",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003510-0gswxvd"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "删除视图"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-p6fw9fm",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003510-p6fw9fm"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "DROP VIEW 视图名称(\u003c视图列名1\u003e, \u003c视图列名2\u003e, ......)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-74v6ra5",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 4,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003510-74v6ra5"
+			},
+			"Children": [
+				{
+					"ID": "20210708003510-6igqg53",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-6igqg53"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-iil415l",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-iil415l"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在 PostgreSQL 中，如果删除以视图为基础创建出来的多重视图，由于存在关联的视图，因此会发生错误。使用 CASCADE 选项来删除关联视图。"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "DROP VIEW ProductSum CASCADE;"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-sgky62r",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003510-sgky62r"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "查看视图"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-v0ls7wk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210708003510-v0ls7wk"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "查看创建的视图（同表）"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-1keuq9h",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003510-1keuq9h"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "SHOW TABLES;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-y2lmmg7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210708003510-y2lmmg7"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "查看视图的定义"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-46fcvlu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-46fcvlu"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "视图是一张"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "虚拟表"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，用来查看视图结构的语句和用来查看表结构的语句比较类似，是这样的："
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-wmriqzt",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003510-wmriqzt"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "SHOW CREATE VIEW 视图名;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-rl2vbgq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-rl2vbgq"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "比如我们来查看一下"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "student_info_view"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "视图的结构可以这样写："
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-yq5yk0f",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003510-yq5yk0f"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e SHOW CREATE VIEW student_info_view\\G\n*************************** 1. row ***************************\n                View: student_info_view\n         Create View: CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `student_info_view` AS select `student_info`.`number` AS `no`,`student_info`.`name` AS `n`,`student_info`.`major` AS `m` from `student_info`\ncharacter_set_client: utf8\ncollation_connection: utf8_general_ci\n1 row in set (0.00 sec)\n\nmysql\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-cb3uy3l",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-cb3uy3l"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "::: tip"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-1akev15",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-1akev15"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "小贴士： 注意到我们查询出来的视图结构中多了很多信息，比方说ALGORITHM=UNDEFINED、DEFINER="
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "root"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "@"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "localhost"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、SQL SECURITY DEFINER等等等等，这些信息我们目前不关心，大家主动跳过就好了，等各位羽翼丰满了之后可以到MySQL文档中查看这些信息都代表啥意思。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-tyqk3as",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 42,
+				"Padding": 4,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003510-tyqk3as"
+			},
+			"Children": [
+				{
+					"ID": "20210708003510-bt7i42i",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-bt7i42i"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-l9se8nk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-l9se8nk"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "对于简单查询形成的 View，再对 View 进行查询时，如添加 WHERE、ORDER 等条件。MySQL 会把创建 View 的语句 + 查询 VIew 的语句"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "合并（Merge）"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "成查物理表的语句。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003510-xxc7yeq",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-xxc7yeq"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-7x6ddlv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-7x6ddlv"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "也可能视图本身比较复杂，很难再和查询视图的语句合并，MySQL 会先执行视图的创建语句，把结果集形成内存中的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "临时表"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，然后再去查临时表，该算法为 "
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "Temptable"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-y0f0h7y",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003510-y0f0h7y"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "CREATE ALGORITHM=MERGE VIEW 视图名称(\u003c视图列名1\u003e, \u003c视图列名2\u003e, ......) AS \u003cSELECT 语句 \u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-isy5x1a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-isy5x1a"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": ":::"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-w9lufbs",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003510-w9lufbs"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "可更新的视图（不推荐使用） ☠️"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-72upki6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-72upki6"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们前边唠叨的都是对视图的查询操作，其实有些视图是可更新的，也就是在视图上执行"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "INSERT"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "DELETE"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "UPDATE"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "语句。对视图执行INSERT、DELETE、UPDATE语句的本质上是对该视图对应的底层表中的数据进行增、删、改操作。比方说视图"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "student_info_view"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的底层表是"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "student_info"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，所以如果我们对"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "student_info_view"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "执行INSERT、DELETE、UPDATE语句就相当于对"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "student_info"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "表进行INSERT、DELETE、UPDATE语句，比方说我们执行这个语句："
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-ctftrvl",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003510-ctftrvl"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e UPDATE student_info_view SET n = '111' WHERE no = 20180101;\nQuery OK, 1 row affected (0.01 sec)\nRows matched: 1  Changed: 1  Warnings: 0\n\nmysql\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-eanrirm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-eanrirm"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们再到"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "student_info"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "表中看一下这个学生的名称是否被改了："
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-s5k67mj",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003510-s5k67mj"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e SELECT name FROM student_info WHERE number = 20180101;\n+------+\n| name |\n+------+\n| 111  |\n+------+\n1 row in set (0.00 sec)\n\nmysql\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-2umb51h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-2umb51h"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "名称的确被更改成功了！"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-4yin27e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-4yin27e"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "不过并不是可以在所有的视图上执行更新语句的，在生成视图的时候使用了下边这些语句的都不能进行更新："
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-f8xx49h",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 4,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003510-f8xx49h"
+			},
+			"Children": [
+				{
+					"ID": "20210708003510-bil2u6z",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-bil2u6z"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-ndkhykr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-ndkhykr"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "聚集函数（比如SUM(), MIN(), MAX(), COUNT()等等）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003510-she4uk7",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-she4uk7"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-9nkpeqw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-9nkpeqw"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "DISTINCT"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003510-nceq4f3",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-nceq4f3"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-sz759is",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-sz759is"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "GROUP BY"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003510-tz0f2vj",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-tz0f2vj"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-il829we",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-il829we"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "HAVING"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003510-3hpgayg",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-3hpgayg"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-o3cbnzq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-o3cbnzq"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "UNION 或者 UNION ALL"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003510-fvad605",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-fvad605"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-xuipla7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-xuipla7"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "某些子查询"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003510-b9hfrha",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-b9hfrha"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-cw60qxq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-cw60qxq"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "某些连接查询"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003510-3c030re",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-3c030re"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-wolqpo1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-wolqpo1"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "等等等等"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-26cpphj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-26cpphj"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们这里对这些限制条件并不准备展开来说，因为这会引入更多复杂的东西，对于作为小白的我们来说，一般我们只在查询语句里使用视图，而不在INSERT、DELETE、UPDATE语句里使用视图！这里介绍对可更新的视图只是为了语法的完整性，并不是建议大家在实际使用过程中使用此功能。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-rlt1os7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003510-rlt1os7"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "注意"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-el3tv3j",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 4,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003510-el3tv3j"
+			},
+			"Children": [
+				{
+					"ID": "20210708003510-rn0toyl",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-rn0toyl"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-6us9xq7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-6us9xq7"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "定义视图时不能使用ORDER BY子句（PostgreSQL可以使用）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003510-ng61xl0",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-ng61xl0"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-6cfrqcc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-6cfrqcc"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "（视图和表需要同时进行更新，因此通过汇总得到的视图无法进行更新）对视图进行更新需满足？？？啥意思："
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003510-ya0d3fz",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-ya0d3fz"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-mu9ohj9",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 4,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708003510-mu9ohj9"
+							},
+							"Children": [
+								{
+									"ID": "20210708003510-7xneqr3",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 4,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708003510-7xneqr3"
+									},
+									"Children": [
+										{
+											"ID": "20210708003510-9hjq7bt",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708003510-9hjq7bt"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "SELECT 子句中未使用 DISTINCT"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708003510-st5vmq1",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 4,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708003510-st5vmq1"
+									},
+									"Children": [
+										{
+											"ID": "20210708003510-ubm1q4s",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708003510-ubm1q4s"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "FROM 子句中只有一张表"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708003510-wkqf3qe",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 4,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708003510-wkqf3qe"
+									},
+									"Children": [
+										{
+											"ID": "20210708003510-dal84fa",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708003510-dal84fa"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "未使用GROUP BY子句"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708003510-inwri61",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 4,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708003510-inwri61"
+									},
+									"Children": [
+										{
+											"ID": "20210708003510-ggvegga",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708003510-ggvegga"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "未使用 HAVING 子句"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-756vzj4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003510-756vzj4"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "子查询"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-eo2q91s",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-eo2q91s"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如：有时候会有从多个表中查询数据的需求，比如我们想查一下名叫"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "'杜琦燕'"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的学生的各科成绩该怎么办呢？我们只能先从"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "student_info"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "表中根据名称找到对应的学生学号，然后再通过学号到"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "student_score"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "表中找着对应的成绩信息，所以这个问题的解决方案就是书写两个查询语句："
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-kab3r2t",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003510-kab3r2t"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e SELECT number FROM student_info WHERE name = '杜琦燕';\n+----------+\n| number   |\n+----------+\n| 20180102 |\n+----------+\n1 row in set (0.00 sec)\n\nmysql\u003e SELECT * FROM student_score WHERE number = 20180102;\n+----------+-----------------------------+-------+\n| number   | subject                     | score |\n+----------+-----------------------------+-------+\n| 20180102 | 母猪的产后护理              |   100 |\n| 20180102 | 论萨达姆的战争准备          |    98 |\n+----------+-----------------------------+-------+\n2 rows in set (0.00 sec)\n\nmysql\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-j7ppqsc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-j7ppqsc"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "子查询的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "目的是将多个查询 SQL 合并到一个 SQL 中"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-yvtcwtu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-yvtcwtu"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "有查询的嵌套，内部的查询称为子查询。看SELECT关键字的个数即可确认！"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-salgujz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-salgujz"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "子查询就是将用来定义视图的 SELECT 语句直接用于FROM子句当中，但是不会像视图那样保存在存储介质(硬盘)之中，而是在 SELECT 语句执行之后就消失了。实际上 SELECT 语句包含嵌套的结构，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "首先会执行 FROM 子句中的 SELECT 语句，然后才会执行外层的 SELECT 语句"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "尽量避免使用多层嵌套的子查询"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-ndgqqpc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-ndgqqpc"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "子查询必须设定名称"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。Oracle 需要省略 AS 关键字才可以使用。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-hgtufaj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003510-hgtufaj"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "标量子查询 scalar subquery—单行单列"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-gfzwvsl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-gfzwvsl"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "必须而且"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "只能返回 1 行 1 列"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的结果，即返回单一值的子查询。任何位置都可以使用。可用在= 或者 \u003c\u003e 等需要单一值的比较运算符中。由于在"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "WHERE中"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "不能使用聚合函数，所以可以使用标量自查询来代替！"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "SELECT 中"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "也比较常见！"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-ssm2k0q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-ssm2k0q"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "WHERE 中（运算符为 \u003e、\u003c、\u003e=、\u003c=、=、\u003c\u003e）："
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-3o943pc",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003510-3o943pc"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e SELECT * FROM student_score WHERE number = (SELECT number FROM student_info WHERE name = '杜琦燕');\n+----------+-----------------------------+-------+\n| number   | subject                     | score |\n+----------+-----------------------------+-------+\n| 20180102 | 母猪的产后护理              |   100 |\n| 20180102 | 论萨达姆的战争准备          |    98 |\n+----------+-----------------------------+-------+\n2 rows in set (0.01 sec)\n\nmysql\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-okp5mbg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-okp5mbg"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "SELECT 中："
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-vjev4xw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003510-vjev4xw"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e SELECT (SELECT number FROM student_info WHERE name = '杜琦燕') AS 学号;\n+----------+\n| 学号     |\n+----------+\n| 20180102 |\n+----------+\n1 row in set (0.00 sec)\n\nmysql\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-6y7lrun",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003510-6y7lrun"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "列子查询—多行单列"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-707u8bk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-707u8bk"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "WHERE后作为条件存在"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-5nllke5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-5nllke5"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "运算符为 IN、ALL、ANY"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-zbmgzwr",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003510-zbmgzwr"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "SELECT * FROM 表1 别名1 WHERE 列1 [IN, ALL, ANY] (SELECT 列 FROM 表2 别名2 WHERE 条件)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-dmb55wx",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003510-dmb55wx"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e SELECT * FROM student_score WHERE number IN (SELECT number FROM student_info WHERE major = '计算机科学与工程');\n+----------+-----------------------------+-------+\n| number   | subject                     | score |\n+----------+-----------------------------+-------+\n| 20180101 | 母猪的产后护理              |    78 |\n| 20180101 | 论萨达姆的战争准备          |    88 |\n| 20180102 | 母猪的产后护理              |   100 |\n| 20180102 | 论萨达姆的战争准备          |    98 |\n+----------+-----------------------------+-------+\n4 rows in set (0.00 sec)\n\nmysql\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-z18uafl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003510-z18uafl"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "行子查询—单行多列"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-29tp7gb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-29tp7gb"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "只要子查询的结果集中最多只包含一条记录，而且这条记录中有超过一个列的数据（如果该条记录只包含一个列的话，该子查询就成了"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "标量子查询"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "），那么这个子查询就可以被称之为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "行子查询"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-c75ndvx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-c75ndvx"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "比如这样："
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-q7ir9ki",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003510-q7ir9ki"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e SELECT * FROM student_score WHERE (number, subject) = (SELECT number, '母猪的产后护理' FROM student_info LIMIT 1);\n+----------+-----------------------+-------+\n| number   | subject               | score |\n+----------+-----------------------+-------+\n| 20180104 | 母猪的产后护理        |    55 |\n+----------+-----------------------+-------+\n1 row in set (0.01 sec)\n\nmysql\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-ttdj1j5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-ttdj1j5"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "该子查询的查询列表是"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "number, '母猪的产后护理'"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，其中"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "number"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "是列名，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "'母猪的产后护理'"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "是一个常数。我们在子查询语句中加了"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "LIMIT 1"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "这个子句，意味着子查询最多只能返回一条记录，所以该子查询就可以被看作一个"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "行子查询"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-tdnzy6p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-tdnzy6p"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "::: tip"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-sc0tnkj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-sc0tnkj"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "小贴士： 在想要得到标量子查询或者行子查询，但又不能保证子查询的结果集只有一条记录时，应该使用LIMIT 1子句来限制记录数量。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-xgz0nv0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-xgz0nv0"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": ":::"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-ls92bo8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-ls92bo8"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "另外，之前的子查询操作数都是单一的一个值，不过由于上述的子查询执行后产生的结果集是一个行（包含2个列），所以用作等值比较的另一个操作数也得是2个值，本例中就是"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "(number, subject)"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "（注意，这两个值必须用小括号"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "扩住，否则会产生歧义）。它表达的语义就是：先获取到子查询的执行结果，然后再执行外层查询，如果"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "student_score"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中记录的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "number"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "等于子查询结果中的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "number"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "列并且"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "subject"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "列等于子查询结果中的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "'母猪的产后护理'"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，那么就将该记录加入到结果集。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-04kn5bs",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003510-04kn5bs"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "表子查询—多行多列"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-f08skir",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-f08skir"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "FROM后作为表存在，或用普通内连接添加多个条件来查询"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-wo47h1r",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003510-wo47h1r"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "SELECT * FROM 表1 别名1 , (SELECT ....) 别名2 WHERE 条件\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-s31jm6b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-s31jm6b"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果子查询结果集中包含多行多列，那么这个子查询也可以被称之为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "表子查询"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，比如这样："
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-u7cb8jb",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003510-u7cb8jb"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e SELECT * FROM student_score WHERE (number, subject) IN (SELECT number, '母猪的产后护理' FROM student_info WHERE major = '计算机科学与工程');\n+----------+-----------------------+-------+\n| number   | subject               | score |\n+----------+-----------------------+-------+\n| 20180101 | 母猪的产后护理        |    78 |\n| 20180102 | 母猪的产后护理        |   100 |\n+----------+-----------------------+-------+\n2 rows in set (0.00 sec)\n\nmysql\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-n8j0zko",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-n8j0zko"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在这个例子中的子查询执行之后的结果集中包含多行多列，所以可以被看作是一个"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "表子查询"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-jqoen0s",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003510-jqoen0s"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "EXISTS和NOT EXISTS子查询"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-ep37ndf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-ep37ndf"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "有时候"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "外层查询并不关心子查询中的结果是什么"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，而"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "只关心子查询的结果集是不是为空集"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，这时可以用到下边这两个操作符："
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-f5uapr9",
+			"Type": "NodeTable",
+			"Data": "| 操作符       | 示例                      | 描述                               |\n| ------------ | ------------------------- | ---------------------------------- |\n| `EXISTS`     | `EXISTS (SELECT ...)`     | 当子查询结果集不是空集时表达式为真 |\n| `NOT EXISTS` | `NOT EXISTS (SELECT ...)` | 当子查询结果集是空集时表达式为真   |",
+			"TableAligns": [
+				0,
+				0,
+				0
+			],
+			"Properties": {
+				"id": "20210708003510-f5uapr9"
+			},
+			"Children": [
+				{
+					"Type": "NodeTableHead",
+					"Children": [
+						{
+							"Type": "NodeTableRow",
+							"Children": [
+								{
+									"Type": "NodeTableCell",
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "操作符"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "示例"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "描述"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "EXISTS"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "EXISTS (SELECT ...)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当子查询结果集不是空集时表达式为真"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "NOT EXISTS"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "NOT EXISTS (SELECT ...)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当子查询结果集是空集时表达式为真"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-w2pj67o",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-w2pj67o"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们来举个例子："
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-kbf06vt",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003510-kbf06vt"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e SELECT * FROM student_score WHERE EXISTS (SELECT * FROM student_info WHERE number = 20180108);\nEmpty set (0.00 sec)\n\nmysql\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-5kfku4a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-5kfku4a"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其中子查询的意思是在"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "student_info"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "表中查找学号为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "20180108"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的学生信息，很显然并没有学号为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "20180108"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的学生，所以子查询的结果集是一个空集，于是"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "EXISTS"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "表达式的结果为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "FALSE"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，所以外层查询也就不查了，直接返回了一个"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Empty set"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，表示没有结果。你可以自己试一下"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "NOT EXISTS"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的使用。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-3ukz15k",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003510-3ukz15k"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "不相关子查询和相关子查询 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-72nc2ot",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-72nc2ot"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "前边介绍的子查询和外层查询都没有依赖关系"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，也就是说"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "子查询可以独立运行并产生结果之后"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，再拿结果作为外层查询的条件去执行外层查询，这种子查询称为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "不相关子查询"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，比如下边这个查询："
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-j1vngsf",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003510-j1vngsf"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e SELECT * FROM student_score WHERE number = (SELECT number FROM student_info WHERE name = '杜琦燕');\n+----------+-----------------------------+-------+\n| number   | subject                     | score |\n+----------+-----------------------------+-------+\n| 20180102 | 母猪的产后护理              |   100 |\n| 20180102 | 论萨达姆的战争准备          |    98 |\n+----------+-----------------------------+-------+\n2 rows in set (0.00 sec)\n\nmysql\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-hacruo8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-hacruo8"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "子查询中只用到了"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "student_info"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "表而没有使用到"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "student_score"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "表，它可以单独运行并产生结果，这就是一种典型的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "不相关子查询"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-3h8x86o",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-3h8x86o"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "而有时候我们需要在子查询的语句中引用到外层查询的值，这样的话子查询就不能当作一个独立的语句去执行，这种子查询被称为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "相关子查询"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。比方说我们想查看一些学生的基本信息，但是前提是这些学生在"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "student_score"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "表中有成绩记录，那可以这么写："
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-d63wp78",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003510-d63wp78"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e SELECT number, name, id_number, major FROM student_info WHERE EXISTS (SELECT * FROM student_score WHERE student_score.number = student_info.number);\n+----------+-----------+--------------------+--------------------------+\n| number   | name      | id_number          | major                    |\n+----------+-----------+--------------------+--------------------------+\n| 20180101 | 杜子腾    | 158177199901044792 | 计算机科学与工程         |\n| 20180102 | 杜琦燕    | 151008199801178529 | 计算机科学与工程         |\n| 20180103 | 范统      | 17156319980116959X | 软件工程                 |\n| 20180104 | 史珍香    | 141992199701078600 | 软件工程                 |\n+----------+-----------+--------------------+--------------------------+\n4 rows in set (0.00 sec)\n\nmysql\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-z8nm1oi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-z8nm1oi"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "::: tip"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-84q3xb9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-84q3xb9"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "小贴士： student_info和student_score表里都有number列，所以在子查询的WHERE语句中书写number = number会造成二义性，也就是让服务器懵逼，不知道这个number列到底是哪个表的，所以为了区分，在列名前边加上了表名，并用点.连接起来，这种显式的将列所属的表名书写出来的名称称为该列的全限定名。所以上边子查询的WHERE语句中用了列的全限定名：student_score.number = student_info.number。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-8ycilzb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-8ycilzb"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": ":::"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-wsjirpy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-wsjirpy"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这条查询语句可以分成这么两部分来理解:"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-vh2bgj8",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 4,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003510-vh2bgj8"
+			},
+			"Children": [
+				{
+					"ID": "20210708003510-ebml9jg",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-ebml9jg"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-9nax6es",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-9nax6es"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "我们要查询学生的一些基本信息。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003510-qvjzgl5",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-qvjzgl5"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-sruk4vn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-sruk4vn"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "这些学生必须符合这样的条件："
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "必须有成绩记录保存在student_score表中"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-e0o77jk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-e0o77jk"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "所以这个例子中的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "相关子查询"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的查询过程是这样的（"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "与不相关子查询执行顺序相反"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "）："
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-i4yldd1",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 4,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003510-i4yldd1"
+			},
+			"Children": [
+				{
+					"ID": "20210708003510-c598nyy",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-c598nyy"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-enqewl6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-enqewl6"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "先执行外层查询"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "获得到"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "student_info"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "表的第一条记录，发现它的"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "number"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "值是"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "20180101"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。把"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "20180101"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "当作参数传入到子查询，此时子查询的意思是判断"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "student_score"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "表的"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "number"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "字段是否有"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "20180101"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "这个值存在，子查询的结果是该值存在，所以整个"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "EXISTS"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "表达式的值为"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "TRUE"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，那么"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "student_info"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "表的第一条记录可以被加入到结果集。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003510-mo3ozln",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-mo3ozln"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-qfo8vwf",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-qfo8vwf"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "再执行外层查询获得到"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "student_info"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "表的第二条记录，发现它的"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "number"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "值是"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "20180102"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，与上边的步骤相同，"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "student_info"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "表的第二条记录也可以被加入到结果集。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003510-sevvtzq",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-sevvtzq"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-udl53ow",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-udl53ow"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "与上边类似，"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "student_info"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "表的第三条记录也可以被加入到结果集。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003510-fyvr1s7",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-fyvr1s7"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-hl7n0c8",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-hl7n0c8"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "与上边类似，"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "student_info"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "表的第四条记录也可以被加入到结果集。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003510-k8q0wsy",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-k8q0wsy"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-esxg9k1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-esxg9k1"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "再执行外层查询获得到"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "student_info"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "表的第五条记录，发现它的"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "number"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "值是"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "20180105"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，把"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "20180105"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "当作参数传入到它的子查询，此时子查询的意思是判断"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "student_score"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "表的"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "number"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "字段是否有"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "20180105"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "这个值存在，子查询的结果是该值不存在，所以整个"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "EXISTS"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "表达式的值为"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "FALSE"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，那么"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "student_info"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "表的第五条记录就不被加入结果集中。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003510-7y755cz",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-7y755cz"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-ydc024w",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-ydc024w"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "与上一步骤类似，"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "student_info"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "表的第六条记录也不被加入结果集中。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003510-i6r92zi",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-i6r92zi"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-v35i9mi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-v35i9mi"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"CodeMarkerLen": 1,
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker",
+											"Data": "`"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "student_info"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker",
+											"Data": "`"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "表没有更多的记录了，结束查询。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-kti1zgx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003510-kti1zgx"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "对同一个表的子查询 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-t9xoao8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-t9xoao8"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其实不只是在涉及多个表查询的时候会用到子查询，在只涉及单个表的查询中有时也会用到子查询。比方说我们想看看在"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "student_score"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "表的"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "'母猪的产后护理'"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "这门课的成绩中，有哪些超过了平均分的记录，脑子中第一印象是这么写："
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-ecxfe4j",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003510-ecxfe4j"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e SELECT * FROM student_score WHERE subject = '母猪的产后护理' AND score \u003e AVG(score);\nERROR 1111 (HY000): Invalid use of group function\nmysql\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-qx8hgeb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-qx8hgeb"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "很抱歉，报错了。为啥呢？因为"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "聚集函数是用来对分组做数据统计的（如果没有GROUP BY语句那么意味着只有一个分组），而"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"CodeMarkerLen": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker",
+									"Data": "`"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "WHERE"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker",
+									"Data": "`"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "子句是以记录为单位来执行过滤操作的，在"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"CodeMarkerLen": 1,
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker",
+									"Data": "`"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "WHERE"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker",
+									"Data": "`"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "子句执行完成之后才会得到分组，也就是说：聚集函数不能放到WHERE子句中"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "！！！ 如果我们想实现上边的需求，就需要搞一个"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "student_score"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "表的副本，就相当于有了两个"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "student_score"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "表，在一个表上使用聚集函数统计，统计完了之后拿着统计结果再到另一个表中进行过滤，这个过程可以这么写："
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-c57fkh9",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003510-c57fkh9"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mysql\u003e  SELECT * FROM student_score WHERE subject = '母猪的产后护理' AND score \u003e (SELECT AVG(score) FROM student_score WHERE subject = '母猪的产后护理');\n+----------+-----------------------+-------+\n| number   | subject               | score |\n+----------+-----------------------+-------+\n| 20180101 | 母猪的产后护理        |    78 |\n| 20180102 | 母猪的产后护理        |   100 |\n+----------+-----------------------+-------+\n2 rows in set (0.01 sec)\n\nmysql\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-cmwetlw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-cmwetlw"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们使用子查询先统计出了"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "'母猪的产后护理'"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "这门课的平均分，然后再到外层查询中使用这个平均分组成的表达式来作为搜索条件去查找大于平均分的记录。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-od1qp3p",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003510-od1qp3p"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "谓词"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-zsz64eb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-zsz64eb"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "谓词就是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "返回值为真值的函数"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。例如，=、\u003c、\u003e、\u003c\u003e 等比较运算符，其正式的名称就是比较谓词。是需要满足特定条件的函数，该条件就是返回值是真值TRUE/FALSE/UNKNOWN)。如 : LIKE、IS NULL、IS NOT NULL、BETWEEN、IN、EXISTS。查看DQL中WHERE条件查询。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-iq6tkmo",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003510-iq6tkmo"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "CASE表达式 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-k2w8a21",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-k2w8a21"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "CASE表达式分为简单CASE表达式和搜索CASE表达式两种。搜索 CASE 表达式包含简单 CASE 表达式的全部功能。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-lki8hsg",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 4,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003510-lki8hsg"
+			},
+			"Children": [
+				{
+					"ID": "20210708003510-wador3k",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-wador3k"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-xz4g7f1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-xz4g7f1"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "虽然CASE表达式中的ELSE子句可以省略，这时会被默认为ELSE NULL，但为了阅读方便尽量写上"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003510-9ldfn4g",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-9ldfn4g"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-h7hxjh0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-h7hxjh0"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "CASE 表达式中的 END 不能省略"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003510-m3vop4y",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003510-m3vop4y"
+					},
+					"Children": [
+						{
+							"ID": "20210708003510-o16r3tw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003510-o16r3tw"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用CASE表达式能够将SELECT语句的结果进行组合"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-ssl62t3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-ssl62t3"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "有些 DBMS 还提供了一些特有的 CASE 表达式的简化函数，例如 Oracle 中的 DECODE、MySQL 中的 IF 等。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-vsuvx4p",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003510-vsuvx4p"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "简单 CASE 表达式"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-8fu8312",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003510-8fu8312"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "SELECT\n  product_name, -- 必须有这个逗号\n  CASE\n    product_type\n    WHEN '衣服' THEN 'A :' || product_type\n    WHEN '办公用品' THEN 'B :' || product_type\n    WHEN '衣厨房用具' THEN 'C :' || product_type\n    ELSE NULL\n  END AS abc_product_type\nFROM\n  Product;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-2mehepv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-2mehepv"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "想要在 WHEN 子句中指定不同列时，简单 CASE 表达式就无能为力了。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-0m86b1e",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003510-0m86b1e"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "搜索 CASE 表达式 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-hgi4t4y",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003510-hgi4t4y"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "SELECT\n  product_name, -- 必须有这个逗号\n  CASE\n    WHEN product_type = '衣服' THEN 'A :' | | product_type\n    WHEN product_type = '办公用品' THEN 'B :' | | product_type\n    WHEN product_type = '厨房用具' THEN 'C :' | | product_type\n    ELSE NULL\n  END AS abc_product_type\nFROM\n  Product;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003510-nr9uc19",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003510-nr9uc19"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在对 SELECT 语句的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "结果进行编辑"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "时，CASE 表达式能够发挥较大作用。"
+				}
+			]
+		}
+	]
+}

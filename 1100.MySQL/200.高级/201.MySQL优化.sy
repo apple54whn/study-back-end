@@ -1,0 +1,8790 @@
+{
+	"ID": "20210708003626-2n0p88t",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210708003626-2n0p88t",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210708003626-5pukgxm",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003626-5pukgxm"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "表的优化"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-6xbi5pn",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-6xbi5pn"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "定长和变长分离"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-x8t6wty",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-x8t6wty"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如 id int，占 4 个字节，char(4) 占 4 个字符长度，也是定长。即每一单元值占的字节是固定的。查询时就非常快。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-vnjj94s",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-vnjj94s"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "所以推荐核心且常用的字段，指定定长且放在一张表中"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-7p0fn84",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-7p0fn84"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "而 varchar，text，blob 这种变长字段，适合单放一张表，用主键和核心表关联起来"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-ar3tksr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-ar3tksr"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "常用字段和不常用字段分离"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-dwikjai",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-dwikjai"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "结合具体业务分析，分析字段的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "查询"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "场景，将查询频率低的字段，单拆出来"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-ju5h3f8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-ju5h3f8"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "冗余字段—反范式"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-ikbbop7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-ikbbop7"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "第三范式：略。拆分越细，则查询时关联的表越多。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-2qewpxz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-2qewpxz"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "一对多时，需要关联统计的字段上，添加冗余字段"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-2tbt20z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-2tbt20z"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如 BBS 中每个"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "板块"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "帖子数目"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-kiwzh94",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003626-kiwzh94"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "列类型选择"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-7l66y2d",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-7l66y2d"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "字段类型优先级"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-cpqozz0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-cpqozz0"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "字段类型优先级："
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "整形 \u003e date，time 等 \u003e enum，char \u003e varchar \u003e blob，text"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-d6036b4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210708003626-d6036b4"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "整形"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-a2xaton",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-a2xaton"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "定长，没有国家、地区之分，没有字符集的差异。比如 tinyint 1,2,3,4,5 \u003c--\u003e char(1) a,b,c,d,e。从空间上都是占用 1 个字节，但是 order by 排序，整形快。而后者需要考虑字符集与校对集（排序规则）"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-fdk6z30",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210708003626-fdk6z30"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "time 等"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-p7eozg2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-p7eozg2"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "定长，运算快，节省空间。但是考虑时区写 sql 时不方便，where create_time \u003e '2021-1-1'。可以"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "考虑用时间戳"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。xaprb 大佬博客中说明了关于 data/time 的选择，直接使用 int unsigned not null，存储 UTC 的 Unix 时间戳（最大值问题会解决的）"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-brq3vua",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-brq3vua"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "时间类型存储的选择，参考"
+				},
+				{
+					"Type": "NodeLink",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "xaprb 大佬的博客"
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "https://www.xaprb.com/blog/2014/01/30/timestamps-in-mysql"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-adl5d70",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210708003626-adl5d70"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "enum"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-yylbu7q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-yylbu7q"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "能起约束值的目的"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-g97o0pg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-g97o0pg"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "内部用整形来存储"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-uuw1m6s",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-uuw1m6s"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "enum 列与 enum 列相关联速度最快，但是与 char 联查时，内部要经历字符串与值的转化"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-0aagqwi",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210708003626-0aagqwi"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "char"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-3siozcx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-3siozcx"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "定长，需要考虑字符集与校对集（排序规则）"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-xo1p1gv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-xo1p1gv"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如存储性别，以 UTF-8 为例。char(1)，占 3 个字节；enum('男','女')，内部转成数字来存，多一个转化过程；tinyint，定长 1 个字节"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-8scy4n1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210708003626-8scy4n1"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "varchar"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-shn6apy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-shn6apy"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "不定长，需要考虑字符集与校对集（排序规则），速度慢"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-r7a3ttx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210708003626-r7a3ttx"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "#### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "text、blob"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-jgv2n7x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-jgv2n7x"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "无法使用内存临时表"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，排序等操作只能使用外部排序（磁盘上进行）"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-gc1aiho",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-gc1aiho"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "够用就行"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-h5y50u4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-h5y50u4"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "大的字段浪费内存，影响速度。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-c3mxv4e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-c3mxv4e"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "以年龄为例，tinyint unsigned not null 可以存储 255 岁，足够了，用 int 则浪费了 3 个字节"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-d0n6e75",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-d0n6e75"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "varchar(10), varchar(300)若存储的内存相同，但是在联表查询时需要花费更多内存"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-d3l07wb",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-d3l07wb"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "避免存 NULL"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-pvpcrqi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-pvpcrqi"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "NULL 不利于索引，需要特殊的字节来标注，在磁盘中占据的空间更大。但是 MySQL5.7 已对 NULL 做了改进，占用大小区别不大了。仅查询不便了（where a != null 不行，只能 where a is not null）"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-j7ml2ra",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003626-j7ml2ra"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "索引入门"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-ic8usve",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-ic8usve"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "简介"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-7xh8nh3",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003626-7xh8nh3"
+			},
+			"Children": [
+				{
+					"ID": "20210708003626-v6d8xdl",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-v6d8xdl"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-n36q965",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-n36q965"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "索引是数据的目录（对应关系），能快速定位行数据的位置"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-dara8zi",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-dara8zi"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-4s03g1w",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-4s03g1w"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "提高了查询速度，降低了增删改的速度，并非索引越多越好"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-3065owh",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-3065owh"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-9cqnzut",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-9cqnzut"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "一般在查询频率高的列上加，而且在重复度低的列上效果更好"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-pao6a8w",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-pao6a8w"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "索引分类"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-5dxoc7j",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003626-5dxoc7j"
+			},
+			"Children": [
+				{
+					"ID": "20210708003626-lrxy685",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-lrxy685"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-4br9mq7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-4br9mq7"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "key：普通索引"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-otgo18l",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-otgo18l"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-yofnc4v",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-yofnc4v"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "unique kye：唯一索引"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-fqjx6n6",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-fqjx6n6"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-2jogyvy",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-2jogyvy"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "primary key：主键索引"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-qa2gdtc",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-qa2gdtc"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-qdpzzvb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-qdpzzvb"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "fulltext：全文索引（中文无效，需要分词，给分词加索引）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-k0sdoex",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-k0sdoex"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-o29xo9x",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-o29xo9x"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "索引长度：建索引时，可以只索引列的前一部分内如，如前 10 个字符"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-mvlwsa4",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-mvlwsa4"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-suatwvw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-suatwvw"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "多列索引：把 2 列或多列的值看成一个整体（如 first name，last name）"
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-blcq1um",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-blcq1um"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "注意，最左前缀原则。如："
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-tom6ah6",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003626-tom6ah6"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "mysql\u003e CREATE TABLE t1 (\n\txing CHAR(2),\n\tming char(5),\n\tkey xm (xing,ming)\n\t);\nQuery OK, 0 rows affected (0.08 sec)\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-y1sonh0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-y1sonh0"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "查看表索引"
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-6a51zy6",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003626-6a51zy6"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "mysql\u003e SHOW INDEX FROM t1;\n+-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+\n| Table | Non_unique | Key_name | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment | Visible | Expression |\n+-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+\n| t1    |          1 | xm       |            1 | xing        | A         |           0 | NULL     | NULL   | YES  | BTREE      |         |               | YES     | NULL       |\n| t1    |          1 | xm       |            2 | ming        | A         |           0 | NULL     | NULL   | YES  | BTREE      |         |               | YES     | NULL       |\n+-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+\n2 rows in set (0.04 sec)\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-0acryim",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-0acryim"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "插入数据"
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-9d2tnoj",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c3Fs",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003626-9d2tnoj"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c3Fs"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "INSERT into t1 VALUES('朱', '元璋')\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-hm83mk0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-hm83mk0"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "explain 查看是否使用到索引"
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-mj1upuw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-mj1upuw"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "情况 1:"
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-4bkadaw",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003626-4bkadaw"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "mysql\u003e explain select * from t1 where xing = '朱' and ming = '元璋';\n+----+-------------+-------+------------+------+---------------+-----+---------+-------------+------+----------+-------------+\n| id | select_type | table | partitions | type | possible_keys | key | key_len | ref         | rows | filtered | Extra       |\n+----+-------------+-------+------------+------+---------------+-----+---------+-------------+------+----------+-------------+\n|  1 | SIMPLE      | t1    | NULL       | ref  | xm            | xm  | 30      | const,const |    1 |   100.00 | Using index |\n+----+-------------+-------+------------+------+---------------+-----+---------+-------------+------+----------+-------------+\n1 row in set (0.06 sec)\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-h92ofpy",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-h92ofpy"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "possible_keys 可能使用到的索引是 xm，key 实际使用到的索引是 xm"
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-vwjw8ow",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-vwjw8ow"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "情况 2:"
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-n5tnsso",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003626-n5tnsso"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "mysql\u003e explain select * from t1 where ming = '元璋' and xing = '朱';\n+----+-------------+-------+------------+------+---------------+-----+---------+-------------+------+----------+-------------+\n| id | select_type | table | partitions | type | possible_keys | key | key_len | ref         | rows | filtered | Extra       |\n+----+-------------+-------+------------+------+---------------+-----+---------+-------------+------+----------+-------------+\n|  1 | SIMPLE      | t1    | NULL       | ref  | xm            | xm  | 30      | const,const |    1 |   100.00 | Using index |\n+----+-------------+-------+------------+------+---------------+-----+---------+-------------+------+----------+-------------+\n1 row in set (0.06 sec)\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-8zy5egf",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-8zy5egf"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "possible_keys 可能使用到的索引是 xm，key 实际使用到的索引是 xm"
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-c6u7eax",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-c6u7eax"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "情况 3:"
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-clv598e",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003626-clv598e"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "mysql\u003e explain select * from t1 where xing = '朱';\n+----+-------------+-------+------------+------+---------------+-----+---------+-------+------+----------+-------------+\n| id | select_type | table | partitions | type | possible_keys | key | key_len | ref   | rows | filtered | Extra       |\n+----+-------------+-------+------------+------+---------------+-----+---------+-------+------+----------+-------------+\n|  1 | SIMPLE      | t1    | NULL       | ref  | xm            | xm  | 9       | const |    1 |   100.00 | Using index |\n+----+-------------+-------+------------+------+---------------+-----+---------+-------+------+----------+-------------+\n1 row in set (0.06 sec)\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-68qzffb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-68qzffb"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "possible_keys 可能使用到的索引是 xm，key 实际使用到的索引是 xm"
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-xxbauhw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-xxbauhw"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "情况 4:"
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-f2bqtzi",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003626-f2bqtzi"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "mysql\u003e explain select * from t1 where ming = '元璋';\n+----+-------------+-------+------------+-------+---------------+-----+---------+------+------+----------+--------------------------+\n| id | select_type | table | partitions | type  | possible_keys | key | key_len | ref  | rows | filtered | Extra                    |\n+----+-------------+-------+------------+-------+---------------+-----+---------+------+------+----------+--------------------------+\n|  1 | SIMPLE      | t1    | NULL       | index | xm            | xm  | 30      | NULL |    1 |   100.00 | Using where; Using index |\n+----+-------------+-------+------------+-------+---------------+-----+---------+------+------+----------+--------------------------+\n1 row in set (0.16 sec)\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-ftcoz2r",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-ftcoz2r"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "possible_keys 可能使用到的索引是 xm，key 实际使用到的索引是 xm。日？？？8.0.20 竟然 key 也是 xm！！测测 5.7 的"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-rfsnong",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-rfsnong"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-w6y8j3v",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-w6y8j3v"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "冗余索引"
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-9jo869y",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003626-9jo869y"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "mysql\u003e CREATE TABLE t2 (\n\txing CHAR(2),\n\tming char(5),\n\tkey xm (xing,ming),\n\tkey ming(ming)\n);\nQuery OK, 0 rows affected (0.11 sec)\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-cjq47pf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-cjq47pf"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "语法总结"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-35mzkyb",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003626-35mzkyb"
+			},
+			"Children": [
+				{
+					"ID": "20210708003626-pgozvuk",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-pgozvuk"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-g4rz9wi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-g4rz9wi"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "查看索引：show index from table_name"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-jo1vq4b",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-jo1vq4b"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-hn9zkdw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-hn9zkdw"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "删除索引："
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-pa6a6xl",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708003626-pa6a6xl"
+							},
+							"Children": [
+								{
+									"ID": "20210708003626-312gak7",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708003626-312gak7"
+									},
+									"Children": [
+										{
+											"ID": "20210708003626-qqykda5",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708003626-qqykda5"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "alert table table_name drop index index_name"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708003626-qnj7cyk",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708003626-qnj7cyk"
+									},
+									"Children": [
+										{
+											"ID": "20210708003626-cn9p4pg",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708003626-cn9p4pg"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "drop index from table_name"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708003626-ys6hjow",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708003626-ys6hjow"
+									},
+									"Children": [
+										{
+											"ID": "20210708003626-uj5p92f",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708003626-uj5p92f"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "主键索引：alert table table_name drop primary key"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-kvmy7zz",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-kvmy7zz"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-wt4e5rl",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-wt4e5rl"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "添加索引："
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-oanpqec",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708003626-oanpqec"
+							},
+							"Children": [
+								{
+									"ID": "20210708003626-gt8lj6k",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708003626-gt8lj6k"
+									},
+									"Children": [
+										{
+											"ID": "20210708003626-tp4uowa",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708003626-tp4uowa"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "alert table table_name add index/unique xm(xing,ming)"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708003626-z853h3q",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708003626-z853h3q"
+									},
+									"Children": [
+										{
+											"ID": "20210708003626-8jvkbo0",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708003626-8jvkbo0"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "主键索引：alert table table_name add primary key(xing)"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-2nuhjqz",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-2nuhjqz"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-7c7akx9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-7c7akx9"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "开启/禁用索引"
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-85muk4c",
+							"Type": "NodeList",
+							"ListData": {
+								"Tight": true,
+								"BulletChar": 45,
+								"Padding": 2,
+								"Marker": "LQ==",
+								"Num": -1
+							},
+							"Properties": {
+								"id": "20210708003626-85muk4c"
+							},
+							"Children": [
+								{
+									"ID": "20210708003626-kv2w253",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708003626-kv2w253"
+									},
+									"Children": [
+										{
+											"ID": "20210708003626-o2wft2f",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708003626-o2wft2f"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "alter table t1 enable keys;"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210708003626-3c4oqcw",
+									"Type": "NodeListItem",
+									"Data": "-",
+									"ListData": {
+										"Tight": true,
+										"BulletChar": 45,
+										"Padding": 2,
+										"Marker": "LQ==",
+										"Num": -1
+									},
+									"Properties": {
+										"id": "20210708003626-3c4oqcw"
+									},
+									"Children": [
+										{
+											"ID": "20210708003626-ikxxdqq",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210708003626-ikxxdqq"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "alter table t1 diable keys;"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-8dwk1m1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003626-8dwk1m1"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "索引类型"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-t35payv",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-t35payv"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "BTree 索引"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-vyzqpgf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-vyzqpgf"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "指数爆炸的反向"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-jxmh8e1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-jxmh8e1"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "2^n-1，当 n=32 时，大致为 42 亿，而此时使用 BTree 可以最多查询 32 次即可查找到（二分查找思想）！"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-5m63ihy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-5m63ihy"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Children": [
+						{
+							"Type": "NodeBang",
+							"Data": "!"
+						},
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20210119225518969"
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "../assets/image-20210119225518969.png"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-0uvjg18",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-0uvjg18"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "优点："
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-p0187s6",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003626-p0187s6"
+			},
+			"Children": [
+				{
+					"ID": "20210708003626-jappiu9",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-jappiu9"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-llvfld9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-llvfld9"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "提高查询速度"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-1dre2uc",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-1dre2uc"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-ionyzdw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-ionyzdw"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "提高排序速度（中序排列）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-olw5b4v",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-olw5b4v"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-r6hhv2w",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-r6hhv2w"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "提高分组速度（先安装 group by 字段排序，然后分组，所以间接提高分组速度）"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-mbd0j1k",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-mbd0j1k"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "Hash 索引"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-kypnp2q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-kypnp2q"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在 memory 表里，默认是 hash 索引，hash 的理论查询时间复杂度为 O(1)。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-7s7pbrb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-7s7pbrb"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "既然 hash 索引查找如此高效，为什么不都用 hash 索引？"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-4jzdjwl",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003626-4jzdjwl"
+			},
+			"Children": [
+				{
+					"ID": "20210708003626-l1ivmak",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-l1ivmak"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-ztb69go",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-ztb69go"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "hash 函数计算的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "结果是随机"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的，如果是在磁盘上放置数据，比如主键为 id 的列，那么随着 id 的增长，id 对应的行在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "磁盘上随机放置"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-viz0p0e",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-viz0p0e"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-f6e1sw1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-f6e1sw1"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "此时"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "无法对范围查询进行优化"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，只能精准查询快"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-i9somgm",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-i9somgm"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-2h0yzns",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-2h0yzns"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "此时"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "无法利用前缀索引"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。比如在 BTree 中，field 列的值 'helloworld'，并加索引，查询 xx=helloworld，自然可以利用索引，xx=hello 也可以利用索引（最左前缀索引）。但是 hash('helloword')和 hash('hello')两者的关系仍为随机。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-jsspzek",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-jsspzek"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-amv67wt",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-amv67wt"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "此时"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "排序也无法优化"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-526e6bx",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-526e6bx"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-dqxvby0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-dqxvby0"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "必须回行"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，就是说通过索引拿到数据位置，必须回到表中取数据"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-up3gywu",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-up3gywu"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-rxv404n",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-rxv404n"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "hash 冲突（这个也不会影响太多）。拉链算法，红黑树"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-qvx2f86",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003626-qvx2f86"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "BTree 常见误区—在 where 条件常用列都加索引"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-a15opng",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-a15opng"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "例如，where cat_id = 3 and price \u003e 100，查询第 3 个栏目，100 元以上的商品。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-wqhl4fz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-wqhl4fz"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "误：在 cat_id 和 price 上都加上索引。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-s666fix",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-s666fix"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "原因：只能用上 cat_id 或 price 的索引，因为是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "独立的索引，同时只能用上 1 个"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-sjbh8m6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-sjbh8m6"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "解决：实际中，建立联合索引。将多个列整体看作一个"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-n0i5bvg",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003626-n0i5bvg"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "BTree 常见误区—多列索引—左前缀—顺序"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-zbksbw3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-zbksbw3"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "例如：在多列上建立联合索引，查询哪个列，索引都将发挥作用？"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-2m6qufy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-2m6qufy"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "误：多列索引上，索引是否发挥作用，需要"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "满足最左前缀要求"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-q0h3gjc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-q0h3gjc"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "以 index(a,b,c) 为例，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "注意和顺序有关"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "！"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-ygnm8wz",
+			"Type": "NodeTable",
+			"Data": "| 语句                                          | 索引是否发挥作用                     |\n| --------------------------------------------- | ------------------------------------ |\n| where a = 3                                   | 是，只使用了 a 列                    |\n| where a = 3 and b = 5                         | 是，使用了 a，b 列                   |\n| where a = 3 and b = 5 and c = 4               | 是，使用了 a，b，c 列                |\n| where a = 3 or where c = 4                    | 否                                   |\n| where a = 3 and c = 4                         | a 列使用了索引，c 未使用             |\n| where a = 3 and b \u003e5 and c = 4                | a 列使用了索引，b 使用了，c 不能使用 |\n| 同上, where a = 3 and b like 'xxx%' and c = 7 | a 列使用了索引，b 使用了，c 不能使用 |",
+			"TableAligns": [
+				0,
+				0
+			],
+			"Properties": {
+				"id": "20210708003626-ygnm8wz"
+			},
+			"Children": [
+				{
+					"Type": "NodeTableHead",
+					"Children": [
+						{
+							"Type": "NodeTableRow",
+							"Children": [
+								{
+									"Type": "NodeTableCell",
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "语句"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "索引是否发挥作用"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "where a = 3"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "是，只使用了 a 列"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "where a = 3 and b = 5"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "是，使用了 a，b 列"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "where a = 3 and b = 5 and c = 4"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "是，使用了 a，b，c 列"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "where a = 3 or where c = 4"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "否"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "where a = 3 and c = 4"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "a 列使用了索引，c 未使用"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "where a = 3 and b \u003e5 and c = 4"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "a 列使用了索引，b 使用了，c 不能使用"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						0,
+						0
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "同上, where a = 3 and b like 'xxx%' and c = 7"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "a 列使用了索引，b 使用了，c 不能使用"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-2ztwnqa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-2ztwnqa"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为便于理解，假设 abc 为各 10 米长的木板（"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "顺序"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "），河面宽 30 米，精确匹配，则走 10 米，like 左前缀及返回查询，则走 5 米。走不到的木板即无法使用索引"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-loaff9e",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003626-loaff9e"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "面试题"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-1epkvi2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-1epkvi2"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "联合索引练习"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-n1p7j0j",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-n1p7j0j"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "假设某个表有一个联合索引(c1,c2,c3,c4)，以下哪些能使用该联合索引的 c1,c2,c3 部分"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-0a9ndk2",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003626-0a9ndk2"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "CREATE TABLE tt(\nc1 TINYINT NOT NULL DEFAULT 0,\nc2 TINYINT NOT NULL DEFAULT 0,\nc3 TINYINT NOT NULL DEFAULT 0,\nc4 TINYINT NOT NULL DEFAULT 0,\nc5 TINYINT NOT NULL DEFAULT 0,\nindex c1234(c1,c2,c3,c4)\n);\n\nINSERT INTO tt VALUES(1,3,5,6,7),(2,3,9,8,3),(4,3,2,7,5);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-nfp6s76",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003626-nfp6s76"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "EXPLAIN SELECT * FROM tt where c1 = 1 and c2 = 1 and c4 \u003e 1 and c3 = 1;\n\n+--+-----------+-----+----------+-----+-------------+-----+-------+----+----+--------+---------------------+\n|id|select_type|table|partitions|type |possible_keys|key  |key_len|ref |rows|filtered|Extra                |\n+--+-----------+-----+----------+-----+-------------+-----+-------+----+----+--------+---------------------+\n|1 |SIMPLE     |tt   |NULL      |range|c1234        |c1234|4      |NULL|1   |100     |Using index condition|\n+--+-----------+-----+----------+-----+-------------+-----+-------+----+----+--------+---------------------+\nand 同级，MySQL 自动重排优化。所以 c1,c2,c3,c4都能使用到。 key_len表示查询用到索引长度，建表时tinyint占用1字节，联合索引总占用4个字节\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-1gfs1cv",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003626-1gfs1cv"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "EXPLAIN SELECT * FROM tt where c1 = 1 and c2 = 1 and c4 = 1 order by c3;\n\n+--+-----------+-----+----------+----+-------------+-----+-------+-----------+----+--------+---------------------+\n|id|select_type|table|partitions|type|possible_keys|key  |key_len|ref        |rows|filtered|Extra                |\n+--+-----------+-----+----------+----+-------------+-----+-------+-----------+----+--------+---------------------+\n|1 |SIMPLE     |tt   |NULL      |ref |c1234        |c1234|2      |const,const|1   |33.33   |Using index condition|\n+--+-----------+-----+----------+----+-------------+-----+-------+-----------+----+--------+---------------------+\nc1,c2可以用到，c3用在排序上。c4无法使用\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-n3ugdgj",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003626-n3ugdgj"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "-- C: where c1 = x and c4 = x group by c3,c2\nEXPLAIN SELECT count(*) FROM tt where c1 = 1 and c4 = 1 group by c3,c2;\n\n+--+-----------+-----+----------+----+-------------+-----+-------+-----+----+--------+-----------------------------------------+\n|id|select_type|table|partitions|type|possible_keys|key  |key_len|ref  |rows|filtered|Extra                                    |\n+--+-----------+-----+----------+----+-------------+-----+-------+-----+----+--------+-----------------------------------------+\n|1 |SIMPLE     |tt   |NULL      |ref |c1234        |c1234|1      |const|1   |33.33   |Using where; Using index; Using temporary|\n+--+-----------+-----+----------+----+-------------+-----+-------+-----+----+--------+-----------------------------------------+\n\nc1可以用到，c4无法使用，c3,c2顺序不同，无法使用\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-5iblnkz",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003626-5iblnkz"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "-- D: where c1 = ? and c5 = ? group by c2,c3\nEXPLAIN SELECT count(*) FROM tt where c1 = 1 and c5 = 1 group by c2,c3;\n\n+--+-----------+-----+----------+----+-------------+-----+-------+-----+----+--------+-----------+\n|id|select_type|table|partitions|type|possible_keys|key  |key_len|ref  |rows|filtered|Extra      |\n+--+-----------+-----+----------+----+-------------+-----+-------+-----+----+--------+-----------+\n|1 |SIMPLE     |tt   |NULL      |ref |c1234        |c1234|1      |const|1   |33.33   |Using where|\n+--+-----------+-----+----------+----+-------------+-----+-------+-----+----+--------+-----------+\n\nc1可以用到，c2,c3用到分组上。c5无法使用\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-5uwwdgz",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003626-5uwwdgz"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "-- E: where c1 = ? and c2 = ? and c5 = ? order by c2,c3\nEXPLAIN SELECT count(*) FROM tt where c1 = 1 and c2 = 1 and c5 = 1 order by c2,c3;\n\n+--+-----------+-----+----------+----+-------------+-----+-------+-----------+----+--------+-----------+\n|id|select_type|table|partitions|type|possible_keys|key  |key_len|ref        |rows|filtered|Extra      |\n+--+-----------+-----+----------+----+-------------+-----+-------+-----------+----+--------+-----------+\n|1 |SIMPLE     |tt   |NULL      |ref |c1234        |c1234|2      |const,const|1   |33.33   |Using where|\n+--+-----------+-----+----------+----+-------------+-----+-------+-----------+----+--------+-----------+\nc1,c2查询用到，c3排序用到，c2排序（没有必要了，已经=查询了，优化掉了），c5无法使用\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-0crxwyd",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-0crxwyd"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "场景题"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-rs4q8bw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-rs4q8bw"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "有商品表，有主键、goods_id、栏目列 cat_id、价格 price。已经在 price 上架了索引，但安装价格查询还是很慢，可能是什么原因？怎么解决？"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-x92fvql",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-x92fvql"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在实际场景中，电商网站的商品分类很多，直接在所有商品中按照价格查询商品是极少的，一般客户都是来到某个分类下再查。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-9190rsz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-9190rsz"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "所以可以去掉单独的 price 索引，加(cat_id,price) 联合索引。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-xt70u5m",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-xt70u5m"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果根据日志分析许多人这样查：电脑-\u003e某品牌-\u003e价格，那么可以加(cat_id,brand_id,price)联合索引"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-aej2t0g",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003626-aej2t0g"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "聚簇索引 \u0026 非聚簇索引"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-f700qtt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-f700qtt"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "区别"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-ddcjhr5",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003626-ddcjhr5"
+			},
+			"Children": [
+				{
+					"ID": "20210708003626-xy7y73y",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-xy7y73y"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-79cxzlg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-79cxzlg"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Innodb 的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "主索引文件上（主键索引），直接存放该行数据"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，称为聚簇索引。"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "次索引指向对主键的引用（否则每个索引都要存储该行数据，炸了都）"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "；"
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-ma0252w",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-ma0252w"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "查询不指定排序时默认按照主键排序（主索引中有数据）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-884dy9w",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-884dy9w"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-nvwni24",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-nvwni24"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "MyISAM 索引是非聚簇索引，主索引和次索引都指向物理行（磁盘位置），所以查询不是索引的数据时需要回行！"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-0pocowj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-0pocowj"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "因为索引和数据分为 2 个文件，数据在 xxx.myd，索引在 xxx.myi，当然还有其他文件如表信息文件 xxx.frm；"
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-myckp91",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-myckp91"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "查询不指定排序时是乱序，因为按照磁盘存放的顺序读取"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-ukga6np",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-ukga6np"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意（InnoDB 来说）："
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-x43akbl",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003626-x43akbl"
+			},
+			"Children": [
+				{
+					"ID": "20210708003626-rqulqx2",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-rqulqx2"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-vhdtpb4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-vhdtpb4"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "主键索引既存储索引值，又在叶子汇总存储行的数据"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-omsjs8p",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-omsjs8p"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-pwnxe9i",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-pwnxe9i"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果没有主键，则会将 unique key 做主键"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-pk13oh5",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-pk13oh5"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-lasvx81",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-lasvx81"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果没有 unique，则系统生成一个内部的 rowid 做主键"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-hezlmrm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-hezlmrm"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "聚簇索引优缺点："
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-zpixkat",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003626-zpixkat"
+			},
+			"Children": [
+				{
+					"ID": "20210708003626-0xv65ut",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-0xv65ut"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-znj3c0s",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-znj3c0s"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "优势："
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "根据主键查询条目比较少时，不用回行"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（数据就在主键节点下）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-6rkustn",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-6rkustn"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-v4z3je4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-v4z3je4"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "劣势：如果碰到"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "不规则数据插入"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "时，造成频繁的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "页分裂（树重排）"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。但是对于"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "内存、固态硬盘来说，有随机读写功能"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，页分裂差异不明显；而硬盘盘片需要转圈读取"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-x1rd11a",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003626-x1rd11a"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "索引覆盖"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-cxwib4h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-cxwib4h"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "索引覆盖是指，如果"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "查询的列数据恰好是索引的一部分（MyISAM 就不行了，需要 InnoDB）"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，那么查询只需要在索引文件上进行，不需要回行（回表）到磁盘再找数据。这种查询非常快，称为索引覆盖"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-8vxkw7f",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-8vxkw7f"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "以 MyISAM 为例，select name form xx where id \u003e 5。因为 MyISAM 是非聚簇索引，主次索引都指向磁盘，如果查询的值不是索引包含的数据则需要回行，name 没有在索引数据中所以不可能索引覆盖。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-g1qdtzq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-g1qdtzq"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "有个问题描述如下："
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-4m6ehk7",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003626-4m6ehk7"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "create table A(\n\tid varchar(64) primary key,\n    ver int,\n    -- ...\n    t text(3000)， --长字段\n    key iv(id,ver)\n)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-rxg8ppw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-rxg8ppw"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "总共有 10000 条数据，为什么 select id from A order by id 特别慢？而 select id from A order by id,ver 非常快？"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-1asepyv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-1asepyv"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "疑问：id, (id,ver) 都有索引， select id 应该都产生“索引覆盖”的效果，为什么前者慢后者快？"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-6e36pqz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-6e36pqz"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "思路：从 InnoDB 和 MyISAM 索引的不同，索引覆盖这 2 个角度考虑分析："
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-fm7e3r4",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003626-fm7e3r4"
+			},
+			"Children": [
+				{
+					"ID": "20210708003626-5rkdqle",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-5rkdqle"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-homfgrd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-homfgrd"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "对于 MyISAM 索引都是指向磁盘上的位置（"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "索引不存储其他列的数据"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，统统指到磁盘）。而上面的 SQL 都应该走了索引且符合索引覆盖，所以不会是 MyISAM 引擎（该引擎上述 2 条语句速度不会有明显差异）。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-vrgw9ul",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-vrgw9ul"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-frzclmu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-frzclmu"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "InnoDB 表因为聚簇索引，id 主索引要在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "磁盘上跨 n 多块"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（存储所有该行数据），导致速度慢，而另一个非主索引不会垮 n 多块？。即使 InnoDB 引擎，如果没有那几个长字段，2 个语句的速度也不会有明显差异"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-xzp917g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-xzp917g"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "\u003cimg src=\"../assets/image-20210120223431803.png\" alt=\"image-20210120223431803\" style=\"zoom:50%;\" /\u003e"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-2kfafmm",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003626-2kfafmm"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "索引优化—设计理想的索引"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-xxrfssb",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-xxrfssb"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "查询频繁、区分度高"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-bdyhpjw",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003626-bdyhpjw"
+			},
+			"Children": [
+				{
+					"ID": "20210708003626-o3gmvah",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-o3gmvah"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-le50u4o",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-le50u4o"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "查询频繁"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-rt3ey7m",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-rt3ey7m"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-gpbpiji",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-gpbpiji"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "区分度高"
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-vhmeose",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-vhmeose"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "100w 用户，性别基本上五五开，若是按照性别索引则区分度就低。因为索引长度直接影响索引文件的大小，影响增删改的速度，间接影响查询速度（文件大，占用内存多）"
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-58luabc",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c3Fs",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003626-58luabc"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c3Fs"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "count(distinct brand_id) / count(*); -- 品牌的区分度\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-79h2b5u",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-79h2b5u"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "尽量使用一个索引值能查询到近 1 条数据即可！"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-gb018rz",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-gb018rz"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-urbuyqi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-urbuyqi"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "长度小（区分度高，那么索引长度就小）"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-o84abxi",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-o84abxi"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-u9h3t4i",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-u9h3t4i"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "尽量能覆盖常用查询字段"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-meadbeo",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-meadbeo"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "伪哈希索引—左前缀不易区分的列"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-1d09wi3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-1d09wi3"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如 url 列"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-hhw0d68",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-hhw0d68"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "http://www.baidu.com"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-uj4p6lq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-uj4p6lq"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "http://www.qq.com"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-yqg6qn0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-yqg6qn0"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "列的前 11 个字符都是一样的，不易区分，可以用如下 2 个办法解决："
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-srbt3b8",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003626-srbt3b8"
+			},
+			"Children": [
+				{
+					"ID": "20210708003626-fs19n8w",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-fs19n8w"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-sxnhgrv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-sxnhgrv"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "把列内容倒过来存储，并建立索引。这样区分度大"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-x8l1kk4",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-x8l1kk4"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-zr08ufl",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-zr08ufl"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "伪 hash 索引。即使用 hash 算法将 url 列计算并存储到另一列如 hashurl 中，查询时 where hashurl = hash(url)。缺点是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "可能重复"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-fa3242v",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-fa3242v"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "多列索引的原则—结合业务"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-52gshnw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-52gshnw"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "多列索引考虑因素：列的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "查询频率"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "列的区分度"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "列的查询顺序"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。注意一定要"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "结合实际业务场景（观察日志一周）"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-hn5xpzj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-hn5xpzj"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "虽然品牌的区分度大于分类，但是一般查询时顾客按照选大分类、小分类、品牌的顺序查询。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-2kt0g7u",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-2kt0g7u"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如选择 index(cat_id,brand_id) ， index(cat_id,shop_price) 建立索引，甚至可以再加 index(cat_id,brand_id,shop_price)，可以去掉第一个"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-9xdozki",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-9xdozki"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "索引与排序、分组"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-ll8cx2r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-ll8cx2r"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "排序可能发生 2 种情况："
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-u2e60or",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003626-u2e60or"
+			},
+			"Children": [
+				{
+					"ID": "20210708003626-9vo7sft",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-9vo7sft"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-xil0ua1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-xil0ua1"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "对于覆盖索引，直接在索引上查询时，就是有顺序的 using index（Extra 中）。在 InnoDB 中，沿着索引字段排序，也是自然有序的；对于 MyISAM，如果按照某索引字段排序，如 id，但取出的字段中有未索引字段，如 name，MyISAM 的做法不是索引-\u003e回行，索引-\u003e回行。而是先取出所有行，在进行排序（Extra 为 "
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "filesort"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "！！！）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-cpc4r6v",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-cpc4r6v"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-07p6a44",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-07p6a44"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "若没使用到索引，则先取出数据，形成临时表坐"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "filesort！！！"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（文件排序，但文件可能在磁盘上，也可能在内存中）"
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-eeqzwn6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-eeqzwn6"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "where 条件的索引和 order by 的索引不一致也会产生 "
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "filesort！！！"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-hoek3xp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-hoek3xp"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "我们争取目标：取出来的数据本身就是有序的，利用索引来排序"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-z0nyeo7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-z0nyeo7"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "重复索引与冗余索引"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-1d4gcj7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-1d4gcj7"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "重复索引：在同一个列如 age 或者顺序相同的几个列如 age，school 建立了多个索引，称为重复索引。没有任何帮助！只会增加索引文件大小，拖慢更新速度，去掉！！！"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-7n7inhb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-7n7inhb"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "冗余索引：指 2 个索引所覆盖的列有重复。"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "顺序不同也可以是冗余索引！"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-tsn3imx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-tsn3imx"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "索引碎片与维护"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-4idtmen",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-4idtmen"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在长期的数据更改中，索引文件和数据文件都将产生空洞，形成碎片。我们可以通过一个 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "nop"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "操作（不产生对数据实质影响的操作）来修改表"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-2szjcsg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-2szjcsg"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "比如表的引擎为 InnoDB，可以执行"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": " alert table xxx engine innodb"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，或"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "optimize table xxx"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "也可以修复"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-nxij9p1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-nxij9p1"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意：修复表的数据及索引碎片，就会把所有数据文件重新整理一遍，使之对齐，这个过程如果表的行数比较大，也是非常消耗资源的操作，所以不能频繁的修复。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-u1so4an",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-u1so4an"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果表的 update 操作很频繁，可以按照 周/月 来修复。如果不频繁，可以更长周期来修复"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-hfe4y0k",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003626-hfe4y0k"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "SQL 语句优化"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-mv6boxi",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-mv6boxi"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "SQL 语句的时间都花在哪？"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-djxcovz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-djxcovz"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "答："
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "等待"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "时间，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "执行"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "时间。这 2 个时间并非孤立的，如果单条语句执行的快了，对其他语句的锁定也就少了"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-ats1h92",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-ats1h92"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "SQL 语句的执行时间又花在哪了？"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-z75q87i",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003626-z75q87i"
+			},
+			"Children": [
+				{
+					"ID": "20210708003626-r2og511",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-r2og511"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-er43zxu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-er43zxu"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "查找：沿着索引查找，慢者可能全表扫描"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-tq347g0",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-tq347g0"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-gc56jux",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-gc56jux"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "取出：查到行后，把数据取出来（sending data）"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-wmsttkz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-wmsttkz"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "如何查询快？"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-kim2ioj",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003626-kim2ioj"
+			},
+			"Children": [
+				{
+					"ID": "20210708003626-gq2yyiy",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-gq2yyiy"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-m7r80vv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-m7r80vv"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "查询得快：联合索引的顺序，区分度，长度"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-d7i86dp",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-d7i86dp"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-a4u4qj3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-a4u4qj3"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "取得快：索引覆盖"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-r9or391",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-r9or391"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-p6gh6co",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-p6gh6co"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "传输得少，更少的行和列"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-7d1gx8i",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-7d1gx8i"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "切分查询"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：按数据拆成多次。例如：插入 1w 行数据， 每 1k 条为单位插入"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-mk3wlds",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-mk3wlds"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "分解查询"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：按照逻辑把多表连接查询分成多个简单 sql"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-is9q3i9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-is9q3i9"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "SQL 语句的优化思路"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-w67wvrt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-w67wvrt"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "不查-\u003e少查-\u003e高效的查"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-vdjuuli",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003626-vdjuuli"
+			},
+			"Children": [
+				{
+					"ID": "20210708003626-2d798v5",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-2d798v5"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-n8pbpf7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-n8pbpf7"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "不查：通过业务逻辑计算。比如论坛的注册会员数，可以根据前 3 个月统计的每天注册数，用程序来估算（没人在乎精确）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-24e9iyu",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-24e9iyu"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-k2oxrq3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-k2oxrq3"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "少查：尽量精准数据，少取行，新闻列表、评论内容等，一次 10 ～ 30 条左右"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-1rh5aha",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-1rh5aha"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-zxx7j2k",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-zxx7j2k"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "必须要查，尽量走在索引上查询"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-gfq7qv5",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-gfq7qv5"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-tgnyxj0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-tgnyxj0"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "取时，取尽量少的列"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-ebgy3s9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003626-ebgy3s9"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "SQL 语句优化—Explain"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-ntmw823",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-ntmw823"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "列名解释"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-lt0yc4u",
+			"Type": "NodeTable",
+			"Data": "| 列名            | 解释                                                                                                     |\n| :-------------- | :------------------------------------------------------------------------------------------------------- |\n| id              | 查询编号（有可能一个 sql 里有多个 select 查询）                                                          |\n| **select_type** | 查询类型：显示本行是简单还是复杂查询                                                                     |\n| table           | 涉及到的表（真实名或别名或 derived 派生表，也可能为 NULL，select 3+2）                                   |\n| partitions      | 匹配的分区：查询将匹配记录所在的分区。仅当使用 partition 关键字时才显示该列。对于非分区表，该值为 NULL。 |\n| **type**        | 本次查询的表连接类型                                                                                     |\n| possible_keys   | 可能选择的索引                                                                                           |\n| **key**         | 实际选择的索引                                                                                           |\n| key_len         | 被选择的索引长度：一般用于判断联合索引有多少列被选择了                                                   |\n| ref             | 与索引比较的列。连接查询关联的键                                                                         |\n| **rows**        | **预计**需要扫描的行数，对 **InnoDB** 来说，这个值是**估值**，并不一定准确                               |\n| filtered        | 按条件筛选的行的百分比                                                                                   |\n| **Extra**       | 附加信息                                                                                                 |",
+			"TableAligns": [
+				1,
+				1
+			],
+			"Properties": {
+				"id": "20210708003626-lt0yc4u"
+			},
+			"Children": [
+				{
+					"Type": "NodeTableHead",
+					"Children": [
+						{
+							"Type": "NodeTableRow",
+							"Children": [
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "列名"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "解释"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "id"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "查询编号（有可能一个 sql 里有多个 select 查询）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "select_type"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "查询类型：显示本行是简单还是复杂查询"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "table"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "涉及到的表（真实名或别名或 derived 派生表，也可能为 NULL，select 3+2）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "partitions"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "匹配的分区：查询将匹配记录所在的分区。仅当使用 partition 关键字时才显示该列。对于非分区表，该值为 NULL。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "type"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "本次查询的表连接类型"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "possible_keys"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "可能选择的索引"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "key"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "实际选择的索引"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "key_len"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "被选择的索引长度：一般用于判断联合索引有多少列被选择了"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "ref"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "与索引比较的列。连接查询关联的键"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "rows"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "预计"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "需要扫描的行数，对 "
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "InnoDB"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 来说，这个值是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "估值"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，并不一定准确"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "filtered"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "按条件筛选的行的百分比"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "Extra"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "附加信息"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-b1ig6dj",
+			"Type": "NodeTable",
+			"Data": "| select_type 的值     | 解释                                                         |\n| :------------------- | :----------------------------------------------------------- |\n| **SIMPLE**           | 简单查询 (**不使用关联查询或子查询**)                        |\n| **PRIMARY**          | 如果包含关联查询或者子查询，则最外层的查询部分标记为 primary |\n| UNION                | 联合查询中第二个及后面的查询                                 |\n| DEPENDENT UNION      | 满足依赖外部的关联查询中第二个及以后的查询                   |\n| UNION RESULT         | 联合查询的结果                                               |\n| SUBQUERY             | 子查询中的第一个查询（非 from 子查询）                       |\n| DEPENDENT SUBQUERY   | 子查询中的第一个查询，并且依赖外部查询                       |\n| DERIVED              | 用到派生表的查询（from 型子查询）                            |\n| MATERIALIZED         | 被物化的子查询                                               |\n| UNCACHEABLE SUBQUERY | 一个子查询的结果不能被缓存，必须重新评估外层查询的每一行     |\n| UNCACHEABLE UNION    | 关联查询第二个或后面的语句属于不可缓存的子查询               |",
+			"TableAligns": [
+				1,
+				1
+			],
+			"Properties": {
+				"id": "20210708003626-b1ig6dj"
+			},
+			"Children": [
+				{
+					"Type": "NodeTableHead",
+					"Children": [
+						{
+							"Type": "NodeTableRow",
+							"Children": [
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "select_type 的值"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "解释"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "SIMPLE"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "简单查询 ("
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "不使用关联查询或子查询"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ")"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "PRIMARY"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果包含关联查询或者子查询，则最外层的查询部分标记为 primary"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "UNION"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "联合查询中第二个及后面的查询"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "DEPENDENT UNION"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "满足依赖外部的关联查询中第二个及以后的查询"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "UNION RESULT"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "联合查询的结果"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "SUBQUERY"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "子查询中的第一个查询（非 from 子查询）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "DEPENDENT SUBQUERY"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "子查询中的第一个查询，并且依赖外部查询"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "DERIVED"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "用到派生表的查询（from 型子查询）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "MATERIALIZED"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "被物化的子查询"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "UNCACHEABLE SUBQUERY"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "一个子查询的结果不能被缓存，必须重新评估外层查询的每一行"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "UNCACHEABLE UNION"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "关联查询第二个或后面的语句属于不可缓存的子查询"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-rdklzvd",
+			"Type": "NodeTable",
+			"Data": "| type 的值       | 解释                                                                         |\n| :-------------- | :--------------------------------------------------------------------------- |\n| system          | 查询对象表只有一行数据，且只能用于 MyISAM 和 Memory 引擎的表，这是最好的情况 |\n| **const**       | 基于主键或唯一索引查询，最多返回一条结果                                     |\n| **eq_ref**      | 表连接时基于主键或非 NULL 的唯一索引完成扫描                                 |\n| **ref**         | 基于普通索引的等值查询，或者表间等值连接                                     |\n| fulltext        | 全文检索                                                                     |\n| ref_or_null     | 表连接类型是 ref，但进行扫描的索引列中可能包含 NULL 值                       |\n| index_merge     | 利用多个索引                                                                 |\n| unique_subquery | 子查询中使用唯一索引                                                         |\n| index_subquery  | 子查询中使用普通索引                                                         |\n| **range**       | 利用索引进行范围查询                                                         |\n| **index**       | 全索引扫描                                                                   |\n| **ALL**         | 全表扫描                                                                     |",
+			"TableAligns": [
+				1,
+				1
+			],
+			"Properties": {
+				"id": "20210708003626-rdklzvd"
+			},
+			"Children": [
+				{
+					"Type": "NodeTableHead",
+					"Children": [
+						{
+							"Type": "NodeTableRow",
+							"Children": [
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "type 的值"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "解释"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "system"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "查询对象表只有一行数据，且只能用于 MyISAM 和 Memory 引擎的表，这是最好的情况"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "const"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "基于主键或唯一索引查询，最多返回一条结果"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "eq_ref"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "表连接时基于主键或非 NULL 的唯一索引完成扫描"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "ref"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "基于普通索引的等值查询，或者表间等值连接"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "fulltext"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "全文检索"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "ref_or_null"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "表连接类型是 ref，但进行扫描的索引列中可能包含 NULL 值"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "index_merge"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "利用多个索引"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "unique_subquery"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "子查询中使用唯一索引"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "index_subquery"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "子查询中使用普通索引"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "range"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "利用索引进行范围查询"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "index"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "全索引扫描"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "ALL"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "全表扫描"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-ggmybu7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-ggmybu7"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "上表的这些情况，查询性能从上到下依次是最好到最差。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-bkzm336",
+			"Type": "NodeTable",
+			"Data": "| Extra 常见的值                        | 解释                                                                                     | 例子                                                                           |\n| :------------------------------------ | :--------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------- |\n| **Using filesort**                    | 将用外部排序而不是索引排序，数据较小时从内存排序，否则需要在磁盘完成排序（取出 text 等） | explain select \\* from t1 order by create_time;                                |\n| **Using temporary**                   | 需要创建一个临时表来存储结构，通常发生对没有索引的列进行 GROUP BY 时                     | explain select \\* from t1 group by create_time;                                |\n| **Using index**                       | 使用**覆盖索引**                                                                         | explain select a from t1 where a=111;                                          |\n| **Using where**                       | 使用 where 语句来处理结果                                                                | explain select \\* from t1 where create_time=‘2019-06-18 14:38:24’;             |\n| Impossible WHERE                      | 对 where 子句判断的结果总是 false 而不能选择任何数据                                     | explain select \\* from t1 where 1\u003c0;                                           |\n| Using join buffer (Block Nested Loop) | 关联查询中，被驱动表的关联字段没索引                                                     | explain select \\* from t1 straight_join t2 on (t1.create_time=t2.create_time); |\n| Using index condition                 | 先条件过滤索引，再查数据                                                                 | explain select \\* from t1 where a \u003e900 and a like “%9”;                        |\n| Select tables optimized away          | 使用某些聚合函数（比如 max、min）来访问存在索引的某个字段是                              | explain select max(a) from t1;                                                 |",
+			"TableAligns": [
+				1,
+				1,
+				1
+			],
+			"Properties": {
+				"id": "20210708003626-bkzm336"
+			},
+			"Children": [
+				{
+					"Type": "NodeTableHead",
+					"Children": [
+						{
+							"Type": "NodeTableRow",
+							"Children": [
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "Extra 常见的值"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "解释"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "例子"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "Using filesort"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "将用外部排序而不是索引排序，数据较小时从内存排序，否则需要在磁盘完成排序（取出 text 等）"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "explain select "
+								},
+								{
+									"Type": "NodeBackslash",
+									"Children": [
+										{
+											"Type": "NodeBackslashContent",
+											"Data": "*"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " from t1 order by create_time;"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "Using temporary"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "需要创建一个临时表来存储结构，通常发生对没有索引的列进行 GROUP BY 时"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "explain select "
+								},
+								{
+									"Type": "NodeBackslash",
+									"Children": [
+										{
+											"Type": "NodeBackslashContent",
+											"Data": "*"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " from t1 group by create_time;"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "Using index"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "覆盖索引"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "explain select a from t1 where a=111;"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "Using where"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用 where 语句来处理结果"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "explain select "
+								},
+								{
+									"Type": "NodeBackslash",
+									"Children": [
+										{
+											"Type": "NodeBackslashContent",
+											"Data": "*"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " from t1 where create_time=‘2019-06-18 14:38:24’;"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Impossible WHERE"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "对 where 子句判断的结果总是 false 而不能选择任何数据"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "explain select "
+								},
+								{
+									"Type": "NodeBackslash",
+									"Children": [
+										{
+											"Type": "NodeBackslashContent",
+											"Data": "*"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " from t1 where 1\u003c0;"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Using join buffer (Block Nested Loop)"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "关联查询中，被驱动表的关联字段没索引"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "explain select "
+								},
+								{
+									"Type": "NodeBackslash",
+									"Children": [
+										{
+											"Type": "NodeBackslashContent",
+											"Data": "*"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " from t1 straight_join t2 on (t1.create_time=t2.create_time);"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Using index condition"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "先条件过滤索引，再查数据"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "explain select "
+								},
+								{
+									"Type": "NodeBackslash",
+									"Children": [
+										{
+											"Type": "NodeBackslashContent",
+											"Data": "*"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " from t1 where a \u003e900 and a like “%9”;"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"TableAligns": [
+						1,
+						1,
+						1
+					],
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Select tables optimized away"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用某些聚合函数（比如 max、min）来访问存在索引的某个字段是"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "explain select max(a) from t1;"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-3ykl24f",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003626-3ykl24f"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "in、exists、from 型子查询陷阱"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-lf2drrh",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-lf2drrh"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "in 型子查询"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-qopmeic",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-qopmeic"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "题目：在 scshop 商城表中，查询 6 号栏目（大栏目，其下没有商品，只有子栏目）的商品。最直观的 sql 为"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-2j3f93t",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003626-2j3f93t"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "select goods_id,goods_name,cat_id from goods where cat_id in(select cat_id from category wehere parent_id = 6)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-v0ovku8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-v0ovku8"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "上述 sql 给我们的感觉是，先查询到内层的 6 号栏目的子栏目，如 7，8，9，11，然后根据子栏目使用 in 查询外层"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-p9bgfpf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-p9bgfpf"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "但是事实如下图，goods 表全扫描，并逐行与 category 表对照，看 parent_id = 6 是否成立"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-ijz0vrs",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-ijz0vrs"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Children": [
+						{
+							"Type": "NodeBang",
+							"Data": "!"
+						},
+						{
+							"Type": "NodeOpenBracket",
+							"Data": "["
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20210122000345618"
+						},
+						{
+							"Type": "NodeCloseBracket",
+							"Data": "]"
+						},
+						{
+							"Type": "NodeOpenParen",
+							"Data": "("
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "../assets/image-20210122000345618.png"
+						},
+						{
+							"Type": "NodeCloseParen",
+							"Data": ")"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-s5oal3g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-s5oal3g"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "原因：MySQL 的查询优化器，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "针对 in 做了优化"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "被改成了 exist 子查询"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的执行效果。"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "当 goods 表越大时，查询速度越慢"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-b11quub",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-b11quub"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "具体查询可以类比如下（limit 1 当作逐行比较）："
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-s7so4c8",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003626-s7so4c8"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "select goods_id,cat_id from goods limit 1;-- 查询结果如 1,4\nselect * from category where cat_id = 4 and parent_id = 6;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-b50vksq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-b50vksq"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "改进为连接查询"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-jngz5z6",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003626-jngz5z6"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "select goods_id,cat_id,goods_name from goods g inner join (select cat_id from category where parent_id = 6) c using(cat_id); --using(cat_id) 是 on 的简写\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-a6sp949",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-a6sp949"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "exists 先略"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-t3g155r",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-t3g155r"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "from 型子查询"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-7dfru75",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-7dfru75"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意："
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "内层 from 语句查到的临时表，是没有索引的"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。所以 from 的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "返回内容要尽量少，需要排序在内层先排好序"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "！"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-m60laey",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003626-m60laey"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "奇淫巧技—强制使用索引—不推荐"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-wwzrluy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-wwzrluy"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "查询 pid 为 69 的最小 id"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-9ol290q",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003626-9ol290q"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "select min(id) from area where pid = 69;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-962bn7e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-962bn7e"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用 limit 可否实现呢？"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-xot0muh",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003626-xot0muh"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "select id from area where pid = 69 limit 1;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-spjlkzk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-spjlkzk"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "按理说 InnoDB 中主键索引已是排好序的，所以 limit 1 就是最小的。也可以强制使用索引"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-pk12xcu",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003626-pk12xcu"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "select id from area use index(primary) where pid = 69 order by id desc limit 1;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-vnltjgc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003626-vnltjgc"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "误区"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-4y0fe9l",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-4y0fe9l"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "MyISAM 的 count() 非常快"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-q7jlopw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-q7jlopw"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "是比较快，但仅限于查询表的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "所有行"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "时，以为 MyISAM 对行数进行了存储，一旦有条件查询，速度就不再快了，尤其是 where 条件的列上没有索引。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-ujt1y4o",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-ujt1y4o"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "假如 id\u003c100 的商家都是我们内部测试的，我们想查询真实的商家有多少？"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-y1wlktg",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003626-y1wlktg"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "select count(*) from t1 where id \u003e 100;--1000w行使用了6s多\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-8yydfgh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-8yydfgh"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "上面的 sql 很慢，可以如何优化呢？"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-esqc8c7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-esqc8c7"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "改成查询所有数量减去 \u003c= 100 的，数量少嘛"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-rbp8crk",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockInfo": "c3Fs",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003626-rbp8crk"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "select ((select count(*) from t1) - (select count(*) from t1 where id \u003c= 1000)) from t1;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-gil38nk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-gil38nk"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "group by 误区"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-ha785vk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-ha785vk"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意："
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-ffiiy0t",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003626-ffiiy0t"
+			},
+			"Children": [
+				{
+					"ID": "20210708003626-onpo6ru",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-onpo6ru"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-d9o52aa",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-d9o52aa"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "分组用于统计，而不用于筛选重复数据。"
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-7z4vb53",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-7z4vb53"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "不重复的行，分组统计数据用，而不要让查询产生 n 多重复数据。比如 1-\u003en 连接时，栏目左连接商品表，将会产生重复行，用 group by 去重，效率很低"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-vh1o0d0",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-vh1o0d0"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-lge73hg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-lge73hg"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "group by 的列要有索引，可以避免临时表及 filesort"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-8o9qdg5",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-8o9qdg5"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-ea0y6eu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-ea0y6eu"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "order by 的列要和 group by 的一致，否则也会引起临时表。原因是 group by 和 order by 都需要排序，所以如果 2 者的列不一致，那必须经过至少 1 次排序"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-euzz8nz",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-euzz8nz"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-yfgf9ca",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-yfgf9ca"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "group by、order by 应用于左表"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-prmj5t4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210708003626-prmj5t4"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "### "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "union 优化—加 all"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-9c5quqv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-9c5quqv"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "union 总是产生临时表，优化比较棘手："
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-undldmq",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003626-undldmq"
+			},
+			"Children": [
+				{
+					"ID": "20210708003626-1gcvz9c",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-1gcvz9c"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-wmczg6p",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-wmczg6p"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "注意 union 的字句条件要尽量具体（查询更少的行）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-ugmluxm",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-ugmluxm"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-xmi4yw4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-xmi4yw4"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "子句的结果在内存里并成结果集，自动去重复，去重复就得先排序。而加 all 之后不需要去重，union 尽量加 all"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-frvslac",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003626-frvslac"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "limit 及翻页优化"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-94h74gr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-94h74gr"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "limit offset,n。当 offset 非常大时，效率极低。原因是 mysql 并不是跳过 offset 行，然后单取 n 行，而是取 offset + n 行，然后放弃前 offset 行。"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-w22tcrl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-w22tcrl"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "优化方法："
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-w1v43q5",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 2,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003626-w1v43q5"
+			},
+			"Children": [
+				{
+					"ID": "20210708003626-h7zcdyd",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-h7zcdyd"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-2r2rmlo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-2r2rmlo"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "业务上解决"
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-n39yext",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-n39yext"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "不允许翻过 100 页。以百度为例，一般翻页到 70 页左右"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-zk17jku",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-zk17jku"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-7an8hf5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-7an8hf5"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "不用 offset ，用条件查询"
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-ox9m04c",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-ox9m04c"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "但是得有序的列，并且有序的列不能删除，可逻辑删除（但是也不准了），如："
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-3ad37bt",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c3Fs",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003626-3ad37bt"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c3Fs"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "select * from t where id \u003e 5000000 limit 10;--几十秒\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003626-9lyklbb",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 2,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003626-9lyklbb"
+					},
+					"Children": [
+						{
+							"ID": "20210708003626-39iaji5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-39iaji5"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "必须物理删除，还要用 offset 精确查询，还不限制用户分页，怎么办？离职！！！"
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-lltfvqn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003626-lltfvqn"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "优化的思路：不查——少查——查询索引——少取列。那么可以只查索引，不查数据，先得到 id，然后根据 id 查询具体条目。即"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "延迟关联"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210708003626-zf9xyo7",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c3Fs",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003626-zf9xyo7"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c3Fs"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "select * from t inner join\n(select id from t limit 50000000,10) tmp on t.id = tmp.id;--几秒\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-0wcce2x",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003626-0wcce2x"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "优化的思路"
+				}
+			]
+		},
+		{
+			"ID": "20210708003626-ey31wte",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708003626-ey31wte"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "不查——少查——查询索引——少取列"
+				}
+			]
+		}
+	]
+}

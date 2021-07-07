@@ -1,0 +1,1196 @@
+{
+	"ID": "20210708004513-2k40f9a",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210708004513-2k40f9a",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210708004513-nlaolff",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-nlaolff"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Redis GEO是Redis在3.2版本中新添加的特性，通过这一特性，用户可以将"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "经纬度格式"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的地理坐标存储到Redis中，并对这些坐标执行距离计算、范围查找等操作"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-e3nucva",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-e3nucva"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥GEOADD 存储、更新坐标"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-unvyudd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-unvyudd"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用GEOADD命令，用户可以将给定的一个或多个经纬度坐标存储到位置集合中，并为这些"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "坐标设置相应的名字"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-4zam327",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-4zam327"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "geoadd location_set longitude latitude name [longitude latitude name ...]\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-cov8dnd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-cov8dnd"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "GEOADD命令会返回"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "新添加至位置集合的坐标数量"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "作为返回值"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-2e5tuvz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-2e5tuvz"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "位置相同，则更新"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-41ruh8m",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-41ruh8m"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥GEOPOS 获取指定位置的坐标"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-88kf0ra",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-88kf0ra"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用GEOADD命令将位置及其坐标存储到位置集合之后，用户可以使用GEOPOS命令去获取给定位置的坐标"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-e2gctho",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-e2gctho"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "geopos location_set name [name ...]\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-jdg5ftx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-jdg5ftx"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "GEOPOS命令会返回一个数组作为执行结果，数组中的每个项都与用户给定的位置相对应。数组中的每个项都包含两个元素，第一个元素是位置的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "经度"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，而第二个元素则是位置的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "纬度"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-dood53t",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-dood53t"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如果用户给定的位置并不存在于位置集合当中，那么GEOPOS命令将返回一个空值"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-h86fcg2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-h86fcg2"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥GEODIST 计算两个位置之间的直线距离"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-zke0uwg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-zke0uwg"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用GEODIST命令计算两个给定位置之间的直线距离"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-8kisqlg",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-8kisqlg"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "geodist location_set name1 name2 [unit]\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-mbhs53k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-mbhs53k"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "默认"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "情况下，GEODIST命令将"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "以米为单位"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，返回两个给定位置之间的直线距离"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-7p1vjw9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-7p1vjw9"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "unit参数的值可以是以下单位中的任意一个："
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-ut7240w",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004513-ut7240w"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-610r1q3",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-610r1q3"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-3svbsy4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-3svbsy4"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "m——以米为单位，为默认单位。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-pgw35w9",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-pgw35w9"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-crskvo1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-crskvo1"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "km——以千米为单位。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-se2bn0v",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-se2bn0v"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-wydszhg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-wydszhg"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "mi——以英里为单位。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-owbrywv",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-owbrywv"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-gm1eb9e",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-gm1eb9e"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "ft——以英尺为单位。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-ai5heqi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-ai5heqi"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在调用GEODIST命令时，如果用户给定的某个位置并不存在于位置集合中，那么命令将返回空值，表示计算失败"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-6kl0dag",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-6kl0dag"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥GEORADIUS 查找指定坐标半径范围内的其他位置"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-yz1ofgf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-yz1ofgf"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过使用GEORADIUS命令，用户可以指定一个经纬度作为中心点，并从位置集合中找出位于中心点指定半径范围内的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "其他位置"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-2is2hc3",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-2is2hc3"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "georadis location_set longitude latitude radis unit [withdist] [withcoord] [asc|desc] [count n]\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-atmnlzm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-atmnlzm"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "各个命令参数的意义分别如下："
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-cjysvcd",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004513-cjysvcd"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-h7t0baj",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-h7t0baj"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-syk1zwe",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-syk1zwe"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "location_set参数用于指定执行查找操作的位置集合。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-y7ypyeb",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-y7ypyeb"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-rqzy1f0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-rqzy1f0"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "longitude参数和latitude参数分别用于指定中心点的经度和纬度。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-22n80m3",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-22n80m3"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-sjnbick",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-sjnbick"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "radius参数用于指定查找半径。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-smapmsv",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-smapmsv"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-233qiuo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-233qiuo"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "unit参数用于指定查找半径的单位，与GEODIST命令中的unit参数一样，这个参数的值可以是m（米）、km（千米）、mi（英里）或者ft（英尺）中的任意一个。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-ls3jcir",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-ls3jcir"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其他参数"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-1z0wmb3",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 42,
+				"Padding": 2,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708004513-1z0wmb3"
+			},
+			"Children": [
+				{
+					"ID": "20210708004513-rjcve43",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-rjcve43"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-parx1ad",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-parx1ad"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "withdist 返回这些位置与中心点之间的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "距离"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-p8i5hnl",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-p8i5hnl"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-k67r50k",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-k67r50k"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "withcoord 返回被匹配位置的坐标"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-r3n8rw8",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-r3n8rw8"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-ho8una5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-ho8una5"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "asc|desc 排序查找结果"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708004513-hwh0kzq",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 42,
+						"Padding": 2,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708004513-hwh0kzq"
+					},
+					"Children": [
+						{
+							"ID": "20210708004513-u73p8dr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708004513-u73p8dr"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "count n 限制命令获取的位置数量"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-3vq2hx6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-3vq2hx6"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "🔥GEORADIUSBYMEMBER 查找指定位置半径范围内的其他位置"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-pnxr5jc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-pnxr5jc"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "GEORADIUSBYMEMBER命令的作用和GEORADIUS命令的作用一样，都是找出中心点指定半径范围内的其他位置，这两个命令的主要区别在于"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "GEORADIUS命令通过给定经纬度"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "来指定中心点，而"
+				},
+				{
+					"Type": "NodeStrong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "GEORADIUSBYMEMBER命令则通过选择位置集合中的一个位置"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "作为中心点"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-62eiqyn",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-62eiqyn"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "georadiusbymember location_set name radius unit [withdist] [withcoord] [asc|desc] [count n]\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-h4z2rxc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-h4z2rxc"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "除了指定中心点时使用的参数不一样之外，其余一样"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-6ne9t0a",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708004513-6ne9t0a"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "GEOHASH 获取指定位置的Geohash值"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-qqe0fqt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-qqe0fqt"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "用户可以通过向GEOHASH命令传入一个或多个位置来获得这些位置对应的经纬度坐标的Geohash表示"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-mw6xzr2",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708004513-mw6xzr2"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "geohash location_set name [name ...]\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-mg3qhny",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-mg3qhny"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在进行范围查找时获取Geohash值，传入"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"CodeMarkerLen": 1,
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker",
+							"Data": "`"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "withhash"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker",
+							"Data": "`"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "参数即可"
+				}
+			]
+		},
+		{
+			"ID": "20210708004513-bgpl8lk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210708004513-bgpl8lk"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意：需要注意的是，与GEOHASH命令不一样，GEORADIUS命令和GEORADIUSBYMEMBER命令返回的是被解释为数字的Geohash值。而GEOHASH命令返回的则是被解释为字符串的Geohash值。比如GEOHASH命令在获取清远市的Geohash值时返回的是字符串\"ws0w0phgp70\"，而GEORADIUS命令获取的Geohash值却是数字4046597933543051，不过这两个值底层的二进制位是完全相同的。"
+				}
+			]
+		}
+	]
+}

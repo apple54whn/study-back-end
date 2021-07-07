@@ -1,0 +1,1767 @@
+{
+	"ID": "20210708003810-1k5nlwz",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210708003810-1k5nlwz",
+		"type": "doc"
+	},
+	"Children": [
+		{
+			"ID": "20210708003810-q65vov9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003810-q65vov9"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "单表查询"
+				}
+			]
+		},
+		{
+			"ID": "20210708003810-0w67a1h",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 45,
+				"Padding": 4,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003810-0w67a1h"
+			},
+			"Children": [
+				{
+					"ID": "20210708003810-thvvu0j",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003810-thvvu0j"
+					},
+					"Children": [
+						{
+							"ID": "20210708003810-whjgxwo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003810-whjgxwo"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "找出奖金高于工资60%的员工"
+								}
+							]
+						},
+						{
+							"ID": "20210708003810-dmccnjk",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c3Fs",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003810-dmccnjk"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c3Fs"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "SELECT * \nFROM emp\nWHERE COMM\u003eSAL*0.6;\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003810-0lck9ai",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003810-0lck9ai"
+					},
+					"Children": [
+						{
+							"ID": "20210708003810-zxc4js0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003810-zxc4js0"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "找出部门编号10所有经理，部门编号20中所有销售员，即不是经理又不是销售员但其工资大或等于20000的..."
+								}
+							]
+						},
+						{
+							"ID": "20210708003810-i8s579l",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c3Fs",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003810-i8s579l"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c3Fs"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "select * \nfrom emp\nwhere (DEPTNO=10 AND JOB='经理') OR (DEPTNO=20 AND JOB='销售员') OR (JOB NOT IN('经理','销售员') AND SAL\u003e=20000);\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003810-4849xps",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003810-4849xps"
+					},
+					"Children": [
+						{
+							"ID": "20210708003810-z0tg3qp",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003810-z0tg3qp"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "查询2000年入职的员工"
+								}
+							]
+						},
+						{
+							"ID": "20210708003810-c97o6jx",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c3Fs",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003810-c97o6jx"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c3Fs"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "select * \nfrom emp\nWHERE HIREDATE LIKE '2002%';\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003810-t89iup7",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003810-t89iup7"
+					},
+					"Children": [
+						{
+							"ID": "20210708003810-8pui3mb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003810-8pui3mb"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "查询所有员工详细信息，用工资降序排序，如果工资相同使用入职日期升序排序"
+								}
+							]
+						},
+						{
+							"ID": "20210708003810-1749txi",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c3Fs",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003810-1749txi"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c3Fs"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "select * \nfrom emp\norder by SAL desc,HIREDATE ASC;\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003810-3ahuu6o",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003810-3ahuu6o"
+					},
+					"Children": [
+						{
+							"ID": "20210708003810-nx5p6ym",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003810-nx5p6ym"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "查询每种工作的最高工资、最低工资、平均工资、人数"
+								}
+							]
+						},
+						{
+							"ID": "20210708003810-3xf7bj8",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c3Fs",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003810-3xf7bj8"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c3Fs"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "select JOB,AVG(SAL) 平均工资,MAX(SAL) AS 最高工资,MIN(SAL)最低工资,COUNT(*) 人数 \nfrom emp\ngroup by JOB;\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003810-5r4hctp",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003810-5r4hctp"
+					},
+					"Children": [
+						{
+							"ID": "20210708003810-n92kqpk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003810-n92kqpk"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "有奖金的工种"
+								}
+							]
+						},
+						{
+							"ID": "20210708003810-e26pp5a",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c3Fs",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003810-e26pp5a"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c3Fs"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "select JOB \nFROM emp\nwhere COMM IS NOT NULL\ngroup by JOB;\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003810-ljconbm",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003810-ljconbm"
+					},
+					"Children": [
+						{
+							"ID": "20210708003810-7ztvjrf",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003810-7ztvjrf"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "显示非销售人员工作名称以及从事同一工作雇员的月工资的总和，并且要满足从事同一工作的雇员的月工资合计大于50000，输出结果按月工资的合计升序排列"
+								}
+							]
+						},
+						{
+							"ID": "20210708003810-xrifopl",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c3Fs",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003810-xrifopl"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c3Fs"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "select JOB,SUM(SAL) \nFROM EMP\nGROUP BY JOB\nHAVING SUM(SAL)\u003e50000 AND JOB\u003c\u003e'销售员'\nORDER BY SUM(SAL) ASC;\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003810-tkqiz0b",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003810-tkqiz0b"
+					},
+					"Children": [
+						{
+							"ID": "20210708003810-kfxf6va",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003810-kfxf6va"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "🔥 如下表，将num处于 [20,29] 之间的数改为20，[30,39] 之间的数改为30。变量计算"
+								}
+							]
+						},
+						{
+							"ID": "20210708003810-gix42gk",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003810-gix42gk"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "demo 表\n+-----+\n| num |\n+-----+\n|  3  |\n|  12 |\n|  15 |\n|  23 |\n|  28 |\n|  32 |\n|  39 |\n|  42 |\n|  49 |\n+-----+\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708003810-1exow26",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c3Fs",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003810-1exow26"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c3Fs"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "update table demo set num = floor(num/10)*10 where num between 20 and 39\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003810-sxdmoc6",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003810-sxdmoc6"
+					},
+					"Children": [
+						{
+							"ID": "20210708003810-xvvaxdw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003810-xvvaxdw"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "🔥 把 GOOD 表中商品名为 “红米xxxx“ 的商品改为 ”小米加步枪xxxx“"
+								}
+							]
+						},
+						{
+							"ID": "20210708003810-maqtipi",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c3Fs",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003810-maqtipi"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c3Fs"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "update good set name = CONCAT('h红米', SUBSTRING(name ,7)) where name like 'x小米加步枪%';\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708003810-66n0iim",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003810-66n0iim"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "注意，如果使用 length 时，需要记清楚它计算的是字节长度，汉字会占用2个字节哦。SUBSTRING 的 index 从 1开始，取长度（不写则到最后），好像不存在字节长度问题！！！"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210708003810-gp1clik",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003810-gp1clik"
+					},
+					"Children": [
+						{
+							"ID": "20210708003810-ivoijv0",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003810-ivoijv0"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "🔥 如下表，查询2门及2门以上不及格者的平均成绩"
+								}
+							]
+						},
+						{
+							"ID": "20210708003810-5y50dmk",
+							"Type": "NodeTable",
+							"Data": "| Name | Subject | Score |\n| ---- | ------- | ----- |\n| 张三 | 数学    | 90    |\n| 张三 | 语文    | 50    |\n| 张三 | 地理    | 40    |\n| 李四 | 语文    | 55    |\n| 李四 | 政治    | 45    |\n| 王五 | 政治    | 30    |",
+							"TableAligns": [
+								0,
+								0,
+								0
+							],
+							"Properties": {
+								"id": "20210708003810-5y50dmk"
+							},
+							"Children": [
+								{
+									"Type": "NodeTableHead",
+									"Children": [
+										{
+											"Type": "NodeTableRow",
+											"Children": [
+												{
+													"Type": "NodeTableCell",
+													"Children": [
+														{
+															"Type": "NodeText",
+															"Data": "Name"
+														}
+													]
+												},
+												{
+													"Type": "NodeTableCell",
+													"Children": [
+														{
+															"Type": "NodeText",
+															"Data": "Subject"
+														}
+													]
+												},
+												{
+													"Type": "NodeTableCell",
+													"Children": [
+														{
+															"Type": "NodeText",
+															"Data": "Score"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"Type": "NodeTableRow",
+									"TableAligns": [
+										0,
+										0,
+										0
+									],
+									"Children": [
+										{
+											"Type": "NodeTableCell",
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "张三"
+												}
+											]
+										},
+										{
+											"Type": "NodeTableCell",
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "数学"
+												}
+											]
+										},
+										{
+											"Type": "NodeTableCell",
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "90"
+												}
+											]
+										}
+									]
+								},
+								{
+									"Type": "NodeTableRow",
+									"TableAligns": [
+										0,
+										0,
+										0
+									],
+									"Children": [
+										{
+											"Type": "NodeTableCell",
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "张三"
+												}
+											]
+										},
+										{
+											"Type": "NodeTableCell",
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "语文"
+												}
+											]
+										},
+										{
+											"Type": "NodeTableCell",
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "50"
+												}
+											]
+										}
+									]
+								},
+								{
+									"Type": "NodeTableRow",
+									"TableAligns": [
+										0,
+										0,
+										0
+									],
+									"Children": [
+										{
+											"Type": "NodeTableCell",
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "张三"
+												}
+											]
+										},
+										{
+											"Type": "NodeTableCell",
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "地理"
+												}
+											]
+										},
+										{
+											"Type": "NodeTableCell",
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "40"
+												}
+											]
+										}
+									]
+								},
+								{
+									"Type": "NodeTableRow",
+									"TableAligns": [
+										0,
+										0,
+										0
+									],
+									"Children": [
+										{
+											"Type": "NodeTableCell",
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "李四"
+												}
+											]
+										},
+										{
+											"Type": "NodeTableCell",
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "语文"
+												}
+											]
+										},
+										{
+											"Type": "NodeTableCell",
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "55"
+												}
+											]
+										}
+									]
+								},
+								{
+									"Type": "NodeTableRow",
+									"TableAligns": [
+										0,
+										0,
+										0
+									],
+									"Children": [
+										{
+											"Type": "NodeTableCell",
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "李四"
+												}
+											]
+										},
+										{
+											"Type": "NodeTableCell",
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "政治"
+												}
+											]
+										},
+										{
+											"Type": "NodeTableCell",
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "45"
+												}
+											]
+										}
+									]
+								},
+								{
+									"Type": "NodeTableRow",
+									"TableAligns": [
+										0,
+										0,
+										0
+									],
+									"Children": [
+										{
+											"Type": "NodeTableCell",
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "王五"
+												}
+											]
+										},
+										{
+											"Type": "NodeTableCell",
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "政治"
+												}
+											]
+										},
+										{
+											"Type": "NodeTableCell",
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "30"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210708003810-zchb8tc",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c3Fs",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003810-zchb8tc"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c3Fs"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "-- 1 查询最终结果\nselect name, avg(score)\nfrom score\ngroup by name;\n\n-- 2 如何处理不及格（不能在聚合函数中写表达式，没有效果）\n-- score \u003c 60 true 为 1， false 为 0，据此可以使用 having 来筛选\nselect name, score, score \u003c 60\nfrom score;\n\n-- 3 只能用 sum 哦，count 会把返回的 0 或 1 都统计进去\nselect name, sum(score \u003c 60) gk, avg(score)\nfrom score group by name having gk \u003e= 2;\n\n-- 简写\nselect name, avg(score)\nfrom score group by name having sum(score \u003c 60) \u003e= 2;\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003810-4axzkpx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210708003810-4axzkpx"
+			},
+			"Children": [
+				{
+					"Type": "NodeHeadingC8hMarker",
+					"Data": "## "
+				},
+				{
+					"Type": "NodeText",
+					"Data": "多表查询"
+				}
+			]
+		},
+		{
+			"ID": "20210708003810-25d0fds",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 4,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003810-25d0fds"
+			},
+			"Children": [
+				{
+					"ID": "20210708003810-xdaih28",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003810-xdaih28"
+					},
+					"Children": [
+						{
+							"ID": "20210708003810-2h1m95z",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003810-2h1m95z"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "查出至少有一个员工的部门。显示部门编号、部门名称、部门位置、部门人数"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003810-fdzsp15",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003810-fdzsp15"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "SELECT d.deptno,d.dname,d.loc,t.cnt\nFROM dept d \n    JOIN (SELECT emp.deptno, COUNT(*) cnt FROM emp GROUP BY emp.deptno HAVING COUNT(*)\u003e1) t \n    ON d.deptno = t.deptno;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003810-zhfin1b",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 4,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003810-zhfin1b"
+			},
+			"Children": [
+				{
+					"ID": "20210708003810-y4j1vld",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003810-y4j1vld"
+					},
+					"Children": [
+						{
+							"ID": "20210708003810-lau4km5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003810-lau4km5"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "列出薪金比关羽高的所有员工"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003810-280p8bu",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003810-280p8bu"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "SELECT * \nFROM emp\nWHERE sal\u003e(SELECT sal FROM emp WHERE ename='关羽')\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003810-zbd6zdj",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 4,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003810-zbd6zdj"
+			},
+			"Children": [
+				{
+					"ID": "20210708003810-jvz1amt",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003810-jvz1amt"
+					},
+					"Children": [
+						{
+							"ID": "20210708003810-a3j72cq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003810-a3j72cq"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "列出所有员工的姓名及其直接上级的姓名"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003810-v3jgyni",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003810-v3jgyni"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "SELECT e.ename, IFNULL(m.ename, 'BOSS') 领导\nFROM emp e LEFT JOIN emp m\nON e.mgr=m.empno;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003810-lcepbry",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 4,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003810-lcepbry"
+			},
+			"Children": [
+				{
+					"ID": "20210708003810-fvdytny",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003810-fvdytny"
+					},
+					"Children": [
+						{
+							"ID": "20210708003810-w9ec46j",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003810-w9ec46j"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "列出受雇日期早于直接上级的所有员工的编号、姓名、部门名称("
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "三张表"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ")"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003810-qos26yw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003810-qos26yw"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "SELECT e.empno, e.ename, d.dname\nFROM emp e \n    JOIN emp m ON e.mgr=m.empno \n    JOIN dept d ON e.deptno=d.deptno\nWHERE e.hiredate\u003cm.hiredate;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003810-p07gww6",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 4,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003810-p07gww6"
+			},
+			"Children": [
+				{
+					"ID": "20210708003810-7my5332",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003810-7my5332"
+					},
+					"Children": [
+						{
+							"ID": "20210708003810-pdwihdd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003810-pdwihdd"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "列出薪金高于公司平均薪金的所有员工信息，所在部门名称，上级领导，工资等级("
+								},
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "四张表"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ")"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003810-q4ijt2a",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003810-q4ijt2a"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "SELECT emp.*,dept.dname,e2.ename,salgrade.grade\nFROM emp  \n    LEFT JOIN dept ON emp.deptno = dept.deptno \n    LEFT JOIN emp e2  ON emp.mgr = e2.empno\n    LEFT JOIN salgrade ON emp.sal BETWEEN salgrade.losal AND salgrade.hisal \nWHERE emp.sal\u003e(SELECT AVG(emp.sal) FROM emp);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003810-t6u93jl",
+			"Type": "NodeList",
+			"ListData": {
+				"Tight": true,
+				"BulletChar": 45,
+				"Padding": 4,
+				"Marker": "LQ==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003810-t6u93jl"
+			},
+			"Children": [
+				{
+					"ID": "20210708003810-r0rwhm7",
+					"Type": "NodeListItem",
+					"Data": "-",
+					"ListData": {
+						"Tight": true,
+						"BulletChar": 45,
+						"Padding": 4,
+						"Marker": "LQ==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003810-r0rwhm7"
+					},
+					"Children": [
+						{
+							"ID": "20210708003810-r5iv3zb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003810-r5iv3zb"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "查出年份、利润、年度增长比"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210708003810-7a4opyn",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"CodeBlockFenceChar": 96,
+			"CodeBlockFenceLen": 3,
+			"CodeBlockOpenFence": "YGBg",
+			"CodeBlockCloseFence": "YGBg",
+			"Properties": {
+				"id": "20210708003810-7a4opyn"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "SELECT E1.*,IFNULL(CONCAT((E1.zz-E2.zz)/E2.zz*100,'%'),0)\nFROM lirun E1 \n    JOIN lirun E2 ON E1.`year`=E2.`year`+1\nORDER BY E1.`year` ASC;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```",
+					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210708003810-y5e6gvj",
+			"Type": "NodeList",
+			"ListData": {
+				"BulletChar": 42,
+				"Padding": 4,
+				"Marker": "Kg==",
+				"Num": -1
+			},
+			"Properties": {
+				"id": "20210708003810-y5e6gvj"
+			},
+			"Children": [
+				{
+					"ID": "20210708003810-ohmwv93",
+					"Type": "NodeListItem",
+					"Data": "*",
+					"ListData": {
+						"BulletChar": 42,
+						"Padding": 4,
+						"Marker": "Kg==",
+						"Num": -1
+					},
+					"Properties": {
+						"id": "20210708003810-ohmwv93"
+					},
+					"Children": [
+						{
+							"ID": "20210708003810-dxbh3c1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003810-dxbh3c1"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "🔥 union。如下 a，b 表，求出 c 表"
+								}
+							]
+						},
+						{
+							"ID": "20210708003810-ya6sqok",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003810-ya6sqok"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "+----+-----+\n|name|value|\n+----+-----+\n|a   |5    |\n|b   |10   |\n|c   |15   |\n|d   |10   |\n+----+-----+\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708003810-836arep",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003810-836arep"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "+----+-----+\n|name|value|\n+----+-----+\n|b   |5    |\n|c   |15   |\n|d   |20   |\n|e   |99   |\n+----+-----+\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708003810-uxta29u",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003810-uxta29u"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "+----+----------+\n|name|sum(value)|\n+----+----------+\n|a   |5         |\n|b   |15        |\n|c   |30        |\n|d   |30        |\n|e   |99        |\n+----+----------+\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708003810-0h2bp1v",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003810-0h2bp1v"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "解法一："
+								}
+							]
+						},
+						{
+							"ID": "20210708003810-no6s1s7",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c3Fs",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003810-no6s1s7"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c3Fs"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "select name, sum(value)\nfrom (select name,value from a\nunion all\nselect name,value from b) t group by name;\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708003810-abse69h",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003810-abse69h"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "解法二（连接查询）："
+								}
+							]
+						},
+						{
+							"ID": "20210708003810-uvfti4v",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"CodeBlockFenceChar": 96,
+							"CodeBlockFenceLen": 3,
+							"CodeBlockOpenFence": "YGBg",
+							"CodeBlockInfo": "c3Fs",
+							"CodeBlockCloseFence": "YGBg",
+							"Properties": {
+								"id": "20210708003810-uvfti4v"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "c3Fs"
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "select a.name, coalesce(a.value, 0) + coalesce(b.value, 0)  sum\nfrom a left join b on a.name = b.name;\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```",
+									"CodeBlockFenceLen": 3
+								}
+							]
+						},
+						{
+							"ID": "20210708003810-ar17b1o",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210708003810-ar17b1o"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "但是该方式可能会造成a表没有的结果集中也没有"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
