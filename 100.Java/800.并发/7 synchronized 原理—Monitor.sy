@@ -4,7 +4,7 @@
 	"Properties": {
 		"id": "20210707224540-3aouv33",
 		"type": "doc",
-		"updated": "20210714235232"
+		"updated": "20210716004807"
 	},
 	"Children": [
 		{
@@ -443,7 +443,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20210714230843-1zusqrf",
-				"updated": "20210714230852"
+				"updated": "20210716002011"
 			},
 			"Children": [
 				{
@@ -485,33 +485,6 @@
 							"Data": "**"
 						}
 					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "。"
-				}
-			]
-		},
-		{
-			"ID": "20210714230718-jvpvwpi",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210714230718-jvpvwpi",
-				"updated": "20210714230718"
-			}
-		},
-		{
-			"ID": "20210714230718-imlzu8n",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210714230718-imlzu8n",
-				"updated": "20210714230900"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "非数组 \u0026 数组"
 				}
 			]
 		},
@@ -612,7 +585,7 @@
 							"Type": "NodeParagraph",
 							"Properties": {
 								"id": "20210714230405-r681ec9",
-								"updated": "20210714230433"
+								"updated": "20210715223406"
 							},
 							"Children": [
 								{
@@ -639,7 +612,7 @@
 								},
 								{
 									"Type": "NodeText",
-									"Data": "，则JVM 使用"
+									"Data": "，则 JVM 使用"
 								},
 								{
 									"Type": "NodeStrong",
@@ -678,24 +651,9 @@
 			}
 		},
 		{
-			"ID": "20210714230948-wy8q0xb",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210714230948-wy8q0xb",
-				"updated": "20210714231000"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "32 位 JVM"
-				}
-			]
-		},
-		{
 			"ID": "20210707224540-rs4u9yt",
 			"Type": "NodeHeading",
-			"HeadingLevel": 4,
+			"HeadingLevel": 3,
 			"Properties": {
 				"id": "20210707224540-rs4u9yt",
 				"updated": "20210714231052"
@@ -708,33 +666,58 @@
 			]
 		},
 		{
+			"ID": "20210716002026-q9p1vq8",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210716002026-q9p1vq8",
+				"updated": "20210716002218"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "32位JVM"
+				}
+			]
+		},
+		{
+			"ID": "20210716003033-4xj9ebo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210716003033-4xj9ebo",
+				"updated": "20210716003040"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "由如下可得出，int 占用 4 字节，Integer 占用 4+8 = 12 字节"
+				}
+			]
+		},
+		{
 			"ID": "20210707224540-bi3w6gf",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707224540-bi3w6gf"
+				"id": "20210707224540-bi3w6gf",
+				"updated": "20210715230729"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
-					"Type": "NodeCodeBlockFenceInfoMarker"
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "|--------------------------------------------------------------|\n|                     Object Header (64 bits)                  |\n|------------------------------------|-------------------------|\n|        Mark Word (32 bits)         |    Klass Word (32 bits) |\n|------------------------------------|-------------------------|\n"
+					"Data": "|---------------------------------------------------------------|\n|                     Object Header (64 bits)                   |\n|------------------------------------|--------------------------|\n|        Mark Word (32 bits)         |    Klass Point (32 bits) |\n|------------------------------------|--------------------------|\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
 		},
@@ -742,27 +725,267 @@
 			"ID": "20210707224540-oirrqoi",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707224540-oirrqoi"
+				"id": "20210707224540-oirrqoi",
+				"updated": "20210716003032"
+			}
+		},
+		{
+			"ID": "20210714231128-djq1rsu",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210714231128-djq1rsu",
+				"updated": "20210716002217"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "由此可得出，int 占用 4 字节，Integer 占用 4+8 = 12 字节"
+					"Data": "64位JVM"
 				}
 			]
 		},
 		{
-			"ID": "20210714231128-djq1rsu",
+			"ID": "20210716003155-hlhrdkj",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210714231128-djq1rsu",
-				"updated": "20210714231128"
+				"id": "20210716003155-hlhrdkj",
+				"updated": "20210716003220"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "按照32位JVM可推倒出64位JVM如下："
+				}
+			]
+		},
+		{
+			"ID": "20210716002112-vubd32y",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210716002112-vubd32y",
+				"updated": "20210716002204"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "|---------------------------------------------------------------|\n|                     Object Header (128 bits)                  |\n|------------------------------------|--------------------------|\n|        Mark Word (64 bits)         |    Klass Point (64 bits) |\n|------------------------------------|--------------------------|\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210716003149-4669g3c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210716003149-4669g3c",
+				"updated": "20210716003224"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可得出，int 占用 4 字节，Integer 占用 4+16 = 20 字节"
+				}
+			]
+		},
+		{
+			"ID": "20210716002303-m20op0p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210716002303-m20op0p",
+				"updated": "20210716004213"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "但是由于 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "Java8 默认开启指针压缩"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，即默认配置了"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "vm"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "参数"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-XX:+UseCompressedOops"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。同样可配置"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-XX:-UseCompressedOops"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 关闭指针压缩。"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "对 Klass Point 进行压缩"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "后的对象头如下："
+				}
+			]
+		},
+		{
+			"ID": "20210716002744-su98z1g",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210716002744-su98z1g",
+				"updated": "20210716002829"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "|---------------------------------------------------------------|\n|                     Object Header (96 bits)                  |\n|------------------------------------|--------------------------|\n|        Mark Word (64 bits)         |    Klass Point (32 bits) |\n|------------------------------------|--------------------------|\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210716002040-k6y1m7b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210716002040-k6y1m7b",
+				"updated": "20210716003118"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "此时可得出，int 占用 4 字节，Integer 占用 4+12 = 16 字节"
+				}
+			]
+		},
+		{
+			"ID": "20210716002846-gkcpgm9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210716002846-gkcpgm9",
+				"updated": "20210716002846"
+			}
+		},
+		{
+			"ID": "20210716002846-mufh50v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210716002846-mufh50v",
+				"updated": "20210716002846"
+			}
+		},
+		{
+			"ID": "20210716002040-ww53xtm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210716002040-ww53xtm",
+				"updated": "20210716002040"
 			}
 		},
 		{
 			"ID": "20210707224540-r7bsjim",
 			"Type": "NodeHeading",
-			"HeadingLevel": 4,
+			"HeadingLevel": 3,
 			"Properties": {
 				"id": "20210707224540-r7bsjim",
 				"updated": "20210714231122"
@@ -775,33 +998,44 @@
 			]
 		},
 		{
+			"ID": "20210716003715-ssbg7ug",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210716003715-ssbg7ug",
+				"updated": "20210716003725"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "32位JVM"
+				}
+			]
+		},
+		{
 			"ID": "20210707224540-wslg5ka",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707224540-wslg5ka"
+				"id": "20210707224540-wslg5ka",
+				"updated": "20210715230950"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
-					"Type": "NodeCodeBlockFenceInfoMarker"
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "|---------------------------------------------------------------------------------|\n|                                 Object Header (96 bits)                         |\n|--------------------------------|-----------------------|------------------------|\n|        Mark Word(32bits)       |    Klass Word(32bits) |  array length(32bits)  |\n|--------------------------------|-----------------------|------------------------|\n"
+					"Data": "|----------------------------------------------------------------------------------|\n|                                 Object Header (96 bits)                          |\n|--------------------------------|------------------------|------------------------|\n|        Mark Word(32bits)       |    Klass Point(32bits) |  array length(32bits)  |\n|--------------------------------|------------------------|------------------------|\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
 		},
@@ -810,21 +1044,114 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20210714231137-fj3jjkr",
-				"updated": "20210714231137"
+				"updated": "20210716004349"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "64位JVM"
+				}
+			]
+		},
+		{
+			"ID": "20210716004356-vp1fjpd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210716004356-vp1fjpd",
+				"updated": "20210716004406"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "未开启指针压缩"
+				}
+			]
+		},
+		{
+			"ID": "20210716004407-7yj6ao7",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210716004407-7yj6ao7",
+				"updated": "20210716004511"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "|----------------------------------------------------------------------------------|\n|                                 Object Header (192 bits)                         |\n|--------------------------------|------------------------|------------------------|\n|        Mark Word(64bits)       |    Klass Point(64bits) |  array length(64bits)  |\n|--------------------------------|------------------------|------------------------|\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210716003729-gh1zuej",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210716003729-gh1zuej",
+				"updated": "20210716004448"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "开启指针压缩"
+				}
+			]
+		},
+		{
+			"ID": "20210716004449-dlc7ohu",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210716004449-dlc7ohu",
+				"updated": "20210716004531"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "|----------------------------------------------------------------------------------|\n|                                 Object Header (128 bits)                         |\n|--------------------------------|------------------------|------------------------|\n|        Mark Word(64bits)       |    Klass Point(32bits) |  array length(32bits)  |\n|--------------------------------|------------------------|------------------------|\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210716004450-xizhyyt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210716004450-xizhyyt",
+				"updated": "20210716004450"
 			}
 		},
 		{
 			"ID": "20210707224540-4f6nzvj",
 			"Type": "NodeHeading",
-			"HeadingLevel": 4,
+			"HeadingLevel": 3,
 			"Properties": {
-				"id": "20210707224540-4f6nzvj"
+				"id": "20210707224540-4f6nzvj",
+				"updated": "20210707224540"
 			},
 			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "#### "
-				},
 				{
 					"Type": "NodeText",
 					"Data": "Mark Word 🔥"
@@ -835,64 +1162,219 @@
 			"ID": "20210707224540-7su974c",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707224540-7su974c"
+				"id": "20210707224540-7su974c",
+				"updated": "20210716003901"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "这部分主要用来存储对象自身的运行时数据，如 hashcode、gc 分代年龄等。"
+					"Data": "这部分主要用来存储对象自身的运行时数据，如 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "hashcode"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "GC 分代年龄"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "锁标记"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "等\n"
 				},
 				{
 					"Type": "NodeCodeSpan",
-					"CodeMarkerLen": 1,
+					"Data": "code",
 					"Children": [
 						{
-							"Type": "NodeCodeSpanOpenMarker",
-							"Data": "`"
+							"Type": "NodeCodeSpanOpenMarker"
 						},
 						{
 							"Type": "NodeCodeSpanContent",
 							"Data": "mark word"
 						},
 						{
-							"Type": "NodeCodeSpanCloseMarker",
-							"Data": "`"
+							"Type": "NodeCodeSpanCloseMarker"
 						}
 					]
 				},
 				{
 					"Type": "NodeText",
-					"Data": "的位长度为 JVM 的一个 Word 大小，也就是说 32 位 JVM 的"
+					"Data": "的位长度为 JVM 的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "一个字宽"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "大小，也就是说 32 位 JVM 的"
 				},
 				{
 					"Type": "NodeCodeSpan",
-					"CodeMarkerLen": 1,
+					"Data": "code",
 					"Children": [
 						{
-							"Type": "NodeCodeSpanOpenMarker",
-							"Data": "`"
+							"Type": "NodeCodeSpanOpenMarker"
 						},
 						{
 							"Type": "NodeCodeSpanContent",
 							"Data": "Mark word"
 						},
 						{
-							"Type": "NodeCodeSpanCloseMarker",
-							"Data": "`"
+							"Type": "NodeCodeSpanCloseMarker"
 						}
 					]
 				},
 				{
 					"Type": "NodeText",
-					"Data": "为 32 位，64 位 JVM 为 64 位。"
-				},
+					"Data": "为 32 位，64 位 JVM 为 64 位\n"
+				}
+			]
+		},
+		{
+			"ID": "20210716003903-uoqv1pa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210716003903-uoqv1pa",
+				"updated": "20210716003912"
+			},
+			"Children": [
 				{
-					"Type": "NodeSoftBreak",
-					"Data": "\n"
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "32 位"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
 				},
 				{
 					"Type": "NodeText",
-					"Data": "为了让一个字大小存储更多的信息，JVM 将字的最低两个位设置为标记位，不同标记位下的 Mark Word 示意如下："
+					"Data": "下的 Mark Word："
+				}
+			]
+		},
+		{
+			"ID": "20210716000623-minev08",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210716000623-minev08",
+				"updated": "20210716000643"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Properties": {
+						"style": "width: 907px;"
+					},
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "../assets/image-20210716000643-9i9a7py.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeKramdownSpanIAL",
+					"Data": "{: style=\"width: 907px;\"}"
 				}
 			]
 		},
@@ -900,18 +1382,14 @@
 			"ID": "20210707224540-0t4dfah",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707224540-0t4dfah"
+				"id": "20210707224540-0t4dfah",
+				"updated": "20210707224540"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker"
@@ -922,517 +1400,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-51iu5z0",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707224540-51iu5z0"
-			},
-			"Children": [
-				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "lock"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": ":2 位的锁状态标记位，由于希望用尽可能少的二进制位表示尽可能多的信息，所以设置了 lock 标记。该标记的值不同，整个 mark word 表示的含义不同。"
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-nvk6ef5",
-			"Type": "NodeTable",
-			"Data": "| biased_lock | lock |   状态   |\n| :---------: | :--: | :------: |\n|      0      |  01  |   无锁   |\n|      1      |  01  |  偏向锁  |\n|      0      |  00  | 轻量级锁 |\n|      0      |  10  | 重量级锁 |\n|      0      |  11  | GC 标记  |",
-			"TableAligns": [
-				2,
-				2,
-				2
-			],
-			"Properties": {
-				"id": "20210707224540-nvk6ef5"
-			},
-			"Children": [
-				{
-					"Type": "NodeTableHead",
-					"Children": [
-						{
-							"Type": "NodeTableRow",
-							"Children": [
-								{
-									"Type": "NodeTableCell",
-									"TableCellAlign": 2,
-									"Children": [
-										{
-											"Type": "NodeText",
-											"Data": "biased_lock"
-										}
-									]
-								},
-								{
-									"Type": "NodeTableCell",
-									"TableCellAlign": 2,
-									"Children": [
-										{
-											"Type": "NodeText",
-											"Data": "lock"
-										}
-									]
-								},
-								{
-									"Type": "NodeTableCell",
-									"TableCellAlign": 2,
-									"Children": [
-										{
-											"Type": "NodeText",
-											"Data": "状态"
-										}
-									]
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"TableAligns": [
-						2,
-						2,
-						2
-					],
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"TableCellAlign": 2,
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "0"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"TableCellAlign": 2,
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "01"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"TableCellAlign": 2,
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "无锁"
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"TableAligns": [
-						2,
-						2,
-						2
-					],
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"TableCellAlign": 2,
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "1"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"TableCellAlign": 2,
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "01"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"TableCellAlign": 2,
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "偏向锁"
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"TableAligns": [
-						2,
-						2,
-						2
-					],
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"TableCellAlign": 2,
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "0"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"TableCellAlign": 2,
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "00"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"TableCellAlign": 2,
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "轻量级锁"
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"TableAligns": [
-						2,
-						2,
-						2
-					],
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"TableCellAlign": 2,
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "0"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"TableCellAlign": 2,
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "10"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"TableCellAlign": 2,
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "重量级锁"
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"TableAligns": [
-						2,
-						2,
-						2
-					],
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"TableCellAlign": 2,
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "0"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"TableCellAlign": 2,
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "11"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"TableCellAlign": 2,
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "GC 标记"
-								}
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-1jufz2t",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707224540-1jufz2t"
-			},
-			"Children": [
-				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "biased_lock"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "：对象是否启用偏向锁标记，只占 1 个二进制位。为 1 时表示对象启用偏向锁，为 0 时表示对象没有偏向锁。"
-				},
-				{
-					"Type": "NodeSoftBreak",
-					"Data": "\n"
-				},
-				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "age"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "：4 位的 Java 对象年龄。在 GC 中，如果对象在 Survivor 区复制一次，年龄增加 1。当对象达到设定的阈值时，将会晋升到老年代。默认情况下，并行 GC 的年龄阈值为 15，并发 GC 的年龄阈值为 6。由于 age 只有 4 位，所以最大值为 15，这就是"
-				},
-				{
-					"Type": "NodeCodeSpan",
-					"CodeMarkerLen": 1,
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker",
-							"Data": "`"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "-XX:MaxTenuringThreshold"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker",
-							"Data": "`"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "选项最大值为 15 的原因。"
-				},
-				{
-					"Type": "NodeSoftBreak",
-					"Data": "\n"
-				},
-				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "identity_hashcode"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "：25 位的对象标识 Hash 码，采用延迟加载技术。调用方法"
-				},
-				{
-					"Type": "NodeCodeSpan",
-					"CodeMarkerLen": 1,
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker",
-							"Data": "`"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "System.identityHashCode()"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker",
-							"Data": "`"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "计算，并会将结果写到该对象头中。当对象被锁定时，该值会移动到管程 Monitor 中。"
-				},
-				{
-					"Type": "NodeSoftBreak",
-					"Data": "\n"
-				},
-				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "thread"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "：持有偏向锁的线程 ID。"
-				},
-				{
-					"Type": "NodeSoftBreak",
-					"Data": "\n"
-				},
-				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "epoch"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "：偏向时间戳。"
-				},
-				{
-					"Type": "NodeSoftBreak",
-					"Data": "\n"
-				},
-				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "ptr_to_lock_record"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "：指向栈中锁记录的指针。"
-				},
-				{
-					"Type": "NodeSoftBreak",
-					"Data": "\n"
-				},
-				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "ptr_to_heavyweight_monitor"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "：指向管程 Monitor 的指针。"
+					"Data": "```"
 				}
 			]
 		},
@@ -1440,12 +1408,77 @@
 			"ID": "20210707224540-i08g9mx",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707224540-i08g9mx"
+				"id": "20210707224540-i08g9mx",
+				"updated": "20210716003852"
 			},
 			"Children": [
 				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "64 位"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
 					"Type": "NodeText",
-					"Data": "64 位下的标记字与 32 位的相似："
+					"Data": "下的 Mark Word："
+				}
+			]
+		},
+		{
+			"ID": "20210716001732-ixth7g8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210716001732-ixth7g8",
+				"updated": "20210716001759"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Properties": {
+						"style": "width: 891px;"
+					},
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "../assets/image-20210716001759-26semd6.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeKramdownSpanIAL",
+					"Data": "{: style=\"width: 891px;\"}"
 				}
 			]
 		},
@@ -1481,17 +1514,388 @@
 			]
 		},
 		{
-			"ID": "20210707224540-1zc1yye",
-			"Type": "NodeHeading",
-			"HeadingLevel": 4,
+			"ID": "20210715231446-2pdwbm5",
+			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707224540-1zc1yye"
+				"id": "20210715231446-2pdwbm5",
+				"updated": "20210716003936"
 			},
 			"Children": [
 				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "#### "
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "identity_hashcode"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
 				},
+				{
+					"Type": "NodeText",
+					"Data": "：对象标识 Hash 码，采用延迟加载技术。调用方法"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "System.identityHashCode()"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "计算，并会将结果写到该对象头中。当对象被锁定时，该值会移动到管程 Monitor 中。"
+				}
+			]
+		},
+		{
+			"ID": "20210715231451-232th34",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210715231451-232th34",
+				"updated": "20210715231838"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "age"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：4 位的 Java "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "对象分代年龄"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。在 GC 中，如果对象在 Survivor 区复制一次，年龄增加 1。当对象达到设定的阈值时，将会晋升到老年代。默认情况下，并行 GC 的年龄阈值为 15，并发 GC 的年龄阈值为 6。由于 age 只有 4 位，所以最大值为 15，这就是"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "-XX:MaxTenuringThreshold"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "选项最大值为 15 的原因。"
+				}
+			]
+		},
+		{
+			"ID": "20210715231515-dlcwk4n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210715231515-dlcwk4n",
+				"updated": "20210715231515"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "thread"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：持有偏向锁的线程 ID。"
+				}
+			]
+		},
+		{
+			"ID": "20210715231524-hwtdbjl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210715231524-hwtdbjl",
+				"updated": "20210715231525"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "epoch"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：偏向时间戳。"
+				}
+			]
+		},
+		{
+			"ID": "20210715231544-3mw36yw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210715231544-3mw36yw",
+				"updated": "20210715231545"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "ptr_to_lock_record"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：指向栈中锁记录的指针。"
+				}
+			]
+		},
+		{
+			"ID": "20210715231548-qev4j1w",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210715231548-qev4j1w",
+				"updated": "20210715231551"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "ptr_to_heavyweight_monitor"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：指向管程 Monitor 的指针。"
+				}
+			]
+		},
+		{
+			"ID": "20210715231339-m3wmfvw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210715231339-m3wmfvw",
+				"updated": "20210715231413"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "biased_lock"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：对象是否启用"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "偏向锁标记"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，只占 1 个二进制位。为 1 时表示对象启用偏向锁，为 0 时表示对象没有偏向锁。"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-51iu5z0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-51iu5z0",
+				"updated": "20210715231327"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "lock"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：2 位的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "锁状态标记位"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210716003801-u8qyff1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210716003801-u8qyff1",
+				"updated": "20210716003801"
+			}
+		},
+		{
+			"ID": "20210716003801-3zeggsm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210716003801-3zeggsm",
+				"updated": "20210716003801"
+			}
+		},
+		{
+			"ID": "20210707224540-1zc1yye",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707224540-1zc1yye",
+				"updated": "20210707224540"
+			},
+			"Children": [
 				{
 					"Type": "NodeText",
 					"Data": "Klass Word"
@@ -1502,7 +1906,8 @@
 			"ID": "20210707224540-wmcgfhe",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707224540-wmcgfhe"
+				"id": "20210707224540-wmcgfhe",
+				"updated": "20210716004807"
 			},
 			"Children": [
 				{
@@ -1511,6 +1916,7 @@
 				},
 				{
 					"Type": "NodeStrong",
+					"Data": "strong",
 					"Children": [
 						{
 							"Type": "NodeStrongA6kOpenMarker",
@@ -1532,6 +1938,7 @@
 				},
 				{
 					"Type": "NodeStrong",
+					"Data": "strong",
 					"Children": [
 						{
 							"Type": "NodeStrongA6kOpenMarker",
@@ -1553,6 +1960,7 @@
 				},
 				{
 					"Type": "NodeStrong",
+					"Data": "strong",
 					"Children": [
 						{
 							"Type": "NodeStrongA6kOpenMarker",
@@ -1570,37 +1978,27 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "。该指针的位长度为 JVM 的一个字大小，即 32 位的 JVM 为 32 位，64 位的 JVM 为 64 位。"
-				},
-				{
-					"Type": "NodeSoftBreak",
-					"Data": "\n"
-				},
-				{
-					"Type": "NodeText",
-					"Data": "如果应用的对象过多，使用 64 位的指针将浪费大量内存，统计而言，64 位的 JVM 将会比 32 位的 JVM 多耗费 50%的内存。为了节约内存可以使用选项"
+					"Data": "。该指针的位长度为 JVM 的一个字宽，即 32 位的 JVM 为 32 位，64 位的 JVM 为 64 位。\n如果应用的对象过多，使用 64 位的指针将浪费大量内存，统计而言，64 位的 JVM 将会比 32 位的 JVM 多耗费 50%的内存。为了节约内存可以使用选项"
 				},
 				{
 					"Type": "NodeCodeSpan",
-					"CodeMarkerLen": 1,
+					"Data": "code",
 					"Children": [
 						{
-							"Type": "NodeCodeSpanOpenMarker",
-							"Data": "`"
+							"Type": "NodeCodeSpanOpenMarker"
 						},
 						{
 							"Type": "NodeCodeSpanContent",
-							"Data": "+UseCompressedOops"
+							"Data": "-XX:+UseCompressedOops"
 						},
 						{
-							"Type": "NodeCodeSpanCloseMarker",
-							"Data": "`"
+							"Type": "NodeCodeSpanCloseMarker"
 						}
 					]
 				},
 				{
 					"Type": "NodeText",
-					"Data": "开启指针压缩，其中，oop 即 ordinary object pointer 普通对象指针。开启该选项后，下列指针将压缩至 32 位："
+					"Data": "开启指针压缩（Java8默认开启），其中，oop 即 ordinary object pointer 普通对象指针。开启该选项后，下列指针将压缩至 32 位："
 				}
 			]
 		},
@@ -1732,17 +2130,22 @@
 			]
 		},
 		{
+			"ID": "20210716004715-orn02ay",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210716004715-orn02ay",
+				"updated": "20210716004715"
+			}
+		},
+		{
 			"ID": "20210707224540-v1gx2sw",
 			"Type": "NodeHeading",
-			"HeadingLevel": 4,
+			"HeadingLevel": 3,
 			"Properties": {
-				"id": "20210707224540-v1gx2sw"
+				"id": "20210707224540-v1gx2sw",
+				"updated": "20210707224540"
 			},
 			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "#### "
-				},
 				{
 					"Type": "NodeText",
 					"Data": "array length"
@@ -1753,7 +2156,8 @@
 			"ID": "20210707224540-4x5qtx1",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707224540-4x5qtx1"
+				"id": "20210707224540-4x5qtx1",
+				"updated": "20210716004737"
 			},
 			"Children": [
 				{
@@ -1762,28 +2166,27 @@
 				},
 				{
 					"Type": "NodeCodeSpan",
-					"CodeMarkerLen": 1,
+					"Data": "code",
 					"Children": [
 						{
-							"Type": "NodeCodeSpanOpenMarker",
-							"Data": "`"
+							"Type": "NodeCodeSpanOpenMarker"
 						},
 						{
 							"Type": "NodeCodeSpanContent",
-							"Data": "+UseCompressedOops"
+							"Data": "-XX:+UseCompressedOops"
 						},
 						{
-							"Type": "NodeCodeSpanCloseMarker",
-							"Data": "`"
+							"Type": "NodeCodeSpanCloseMarker"
 						}
 					]
 				},
 				{
 					"Type": "NodeText",
-					"Data": "选项，"
+					"Data": "选项（Java8默认开启），"
 				},
 				{
 					"Type": "NodeStrong",
+					"Data": "strong",
 					"Children": [
 						{
 							"Type": "NodeStrongA6kOpenMarker",
