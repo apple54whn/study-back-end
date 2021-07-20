@@ -3,9 +3,582 @@
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20210707225146-xyyi1x5",
-		"updated": "20210705232520"
+		"title": "JMM—Java 内存模型",
+		"updated": "20210721012509"
 	},
 	"Children": [
+		{
+			"ID": "20210721010656-j5y4581",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210721010656-j5y4581",
+				"updated": "20210721012051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "硬件的效率"
+				}
+			]
+		},
+		{
+			"ID": "20210721012052-99aj2zw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210721012052-99aj2zw",
+				"updated": "20210721012059"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "缓存 \u0026 缓存一致性"
+				}
+			]
+		},
+		{
+			"ID": "20210721010707-v8qw8hv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721010707-v8qw8hv",
+				"updated": "20210721011424"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "由于绝大多数任务"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "不能只靠处理器（无法仅靠寄存器）计算就能完成"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，还使用到了"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "I/O操作"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "（与内存交互，如读取数据，存储结果），所以现代计算机系统不得不"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "加入一层或多层"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "读写速度尽可能接近处理器运算速度的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "高速缓存(Cache)来作为内存与处理器之间的缓冲"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。将运算需要使用的数据"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "复制到缓存"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中，让运算能快速进行，当运算结束后再"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "从缓存同步回内存"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "之中，这样处理器就无须等待缓慢的内存读写了"
+				}
+			]
+		},
+		{
+			"ID": "20210721011700-5cl7z7h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721011700-5cl7z7h",
+				"updated": "20210721011708"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "上述操作引入了一个新的问题："
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "缓存一致性（Cache Coherence）"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。在多路处理器系统中，每个处理器都有自己的高速缓存，而它们又共享同一主内存，这种系统称为共享内存多核系统。当多个处理器的运算任务都涉及同一块主内存区域时，可能导致各自的缓存数据不一致"
+				}
+			]
+		},
+		{
+			"ID": "20210721011709-zdxeif2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721011709-zdxeif2",
+				"updated": "20210721011810"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为了解决一致性的问题，需要各个处理器访问缓存时都"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "遵循一些协议"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，在读写时要根据协议来进行操作：这类协议有MSI、MESI(Illinois Protocol)、MOSI、 Synapse、Firefly及Dragon Protocol等"
+				}
+			]
+		},
+		{
+			"ID": "20210721012459-2kxqdh2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721012459-2kxqdh2",
+				"updated": "20210721012509"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "../assets/image-20210721012509-avcsb68.png"
+						},
+						{
+							"Type": "NodeLinkSpace"
+						},
+						{
+							"Type": "NodeLinkTitle",
+							"Data": "处理器、高速缓存、主内存间的交互关系"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210721012117-z85xfg0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721012117-z85xfg0",
+				"updated": "20210721012117"
+			}
+		},
+		{
+			"ID": "20210721012117-4mop2n5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721012117-4mop2n5",
+				"updated": "20210721012117"
+			}
+		},
+		{
+			"ID": "20210721012213-7gpxyq0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210721012213-7gpxyq0",
+				"updated": "20210721012225"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "处理器乱序执行"
+				}
+			]
+		},
+		{
+			"ID": "20210721012228-clb0krs",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721012228-clb0krs",
+				"updated": "20210721012420"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "为了使处理器内部的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "运算单元能尽量被充分利用"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，处理器可能会对输入代码进行"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "乱序执行优化"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，处理器会在计算之后将乱序执行的结果重组，保证该结果与顺序执行的结果是一致的。但并不保证程序中各个语句计算的先后顺序与输入代码中的顺序一致，因此"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "如果存在一个计算任务依赖另外一个计算任务的中间结果，那么其顺序性并不能靠代码的先后顺序来保证"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210721012435-6tulfwb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721012435-6tulfwb",
+				"updated": "20210721012448"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "与处理器的乱序执行优化类似，Java虚拟机的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "即时编译器"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中也有"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "指令重排序"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " (Instruction Reorder) 优化"
+				}
+			]
+		},
+		{
+			"ID": "20210721012229-d7v02e0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721012229-d7v02e0",
+				"updated": "20210721012229"
+			}
+		},
+		{
+			"ID": "20210721012213-wsdormu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721012213-wsdormu",
+				"updated": "20210721012213"
+			}
+		},
+		{
+			"ID": "20210721012117-6wxc0zj",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210721012117-6wxc0zj",
+				"updated": "20210721012206"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "内存模型"
+				}
+			]
+		},
+		{
+			"ID": "20210721010708-cjc4zrr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721010708-cjc4zrr",
+				"updated": "20210721012210"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "在特定的操作协议下"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "对特定的内存或高速缓存进行读写访问的过程抽象"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210721011909-2oky0ot",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721011909-2oky0ot",
+				"updated": "20210721011909"
+			}
+		},
+		{
+			"ID": "20210721011910-qdl50ph",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721011910-qdl50ph",
+				"updated": "20210721011910"
+			}
+		},
+		{
+			"ID": "20210721011910-o7bgvwz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721011910-o7bgvwz",
+				"updated": "20210721011910"
+			}
+		},
+		{
+			"ID": "20210721010656-g8of4bm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721010656-g8of4bm",
+				"updated": "20210721010656"
+			}
+		},
 		{
 			"ID": "20210707225159-y66i3kw",
 			"Type": "NodeHeading",
@@ -20,6 +593,300 @@
 					"Data": "什么是 JMM？"
 				}
 			]
+		},
+		{
+			"ID": "20210721010022-4zyd326",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721010022-4zyd326",
+				"updated": "20210721010318"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Java 虚拟机"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "规范"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "中定义的，用来"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "屏蔽"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "各种"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "硬件和操作系统"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "内存访问差异"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，实现一致的内存访问效果。"
+				}
+			]
+		},
+		{
+			"ID": "20210721010240-vwxatd7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721010240-vwxatd7",
+				"updated": "20210721010240"
+			}
+		},
+		{
+			"ID": "20210721010022-5j2b8eo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721010022-5j2b8eo",
+				"updated": "20210721010022"
+			}
+		},
+		{
+			"ID": "20210721010229-s9zfy7r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721010229-s9zfy7r",
+				"updated": "20210721010229"
+			}
+		},
+		{
+			"ID": "20210721010229-5tlg94t",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210721010229-5tlg94t",
+				"updated": "20210721010230"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "主内存 \u0026 工作内存"
+				}
+			]
+		},
+		{
+			"ID": "20210721010232-bn1yesk",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210721010232-bn1yesk",
+				"updated": "20210721010609"
+			},
+			"Children": [
+				{
+					"ID": "20210721010508-r1it40n",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210721010508-r1it40n",
+						"updated": "20210721010545"
+					},
+					"Children": [
+						{
+							"ID": "20210721010508-33xhygq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210721010508-33xhygq",
+								"updated": "20210721010545"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Java内存模型规定了"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "所有的变量都存储在主内存（Main Memory）中"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（此处的主内存与物理硬件主内存可以类比，但物理上它仅是虚拟机内存的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "一部分"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210721010509-8es5oqg",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210721010509-8es5oqg",
+						"updated": "20210721010609"
+					},
+					"Children": [
+						{
+							"ID": "20210721010509-euuv9kz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210721010509-euuv9kz",
+								"updated": "20210721010609"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "每条线程还有自己的工作内存（Working Memory）"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " （可与处理器高速缓存类比)"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210721010221-tqkhndw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721010221-tqkhndw",
+				"updated": "20210721010221"
+			}
+		},
+		{
+			"ID": "20210721010221-5mkh4bp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721010221-5mkh4bp",
+				"updated": "20210721010221"
+			}
+		},
+		{
+			"ID": "20210721010022-z6fo21g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721010022-z6fo21g",
+				"updated": "20210721010022"
+			}
 		},
 		{
 			"ID": "20210707225159-1rdrkoe",

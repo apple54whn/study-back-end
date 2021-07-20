@@ -3,8 +3,9 @@
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20210707224540-5zmw0wh",
+		"title": "6 共享模型—管程（互斥、阻塞、悲观锁）",
 		"type": "doc",
-		"updated": "20210714221213"
+		"updated": "20210707224540"
 	},
 	"Children": [
 		{
@@ -13413,18 +13414,477 @@
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
 			"Properties": {
-				"id": "20210707224540-tcid703"
+				"id": "20210707224540-tcid703",
+				"updated": "20210707224540"
 			},
 			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
 				{
 					"Type": "NodeText",
 					"Data": "可重入"
 				}
 			]
+		},
+		{
+			"ID": "20210721004803-sip0792",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721004803-sip0792",
+				"updated": "20210721004803"
+			}
+		},
+		{
+			"ID": "20210721004803-cgwny3f",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721004803-cgwny3f",
+				"updated": "20210721004803"
+			}
+		},
+		{
+			"ID": "20210707224540-3d3y5f4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707224540-3d3y5f4",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "释放锁和不释放锁的操作（未完）"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-rvdszud",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-rvdszud",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "释放锁的操作"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-6tif1qi",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210707224540-6tif1qi",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"ID": "20210707224540-octs8t9",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-octs8t9"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-aml5wfu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-aml5wfu"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当前线程的同步方法、同步代码块"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "执行结束"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-srw8mwn",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-srw8mwn"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-btm5p8c",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-btm5p8c"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当前线程在同步代码块、同步方法中遇到"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "break、return 终止"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "了该代码块、该方法的继续执行。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-b53cdm2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-b53cdm2"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-rk2ibsd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-rk2ibsd"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当前线程在同步代码块、同步方法中出现了"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "未处理的 Error 或 Exception，导致异常结束"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-941q8f5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-941q8f5"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-7wg4a3j",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-7wg4a3j"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当前线程在同步代码块、同步方法中执行了线程对象的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "wait()"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "方法，当前线程暂停，并释放锁"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-4rp3ffe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-4rp3ffe",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "不释放锁的操作"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-5udsy3m",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210707224540-5udsy3m",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"ID": "20210707224540-m5gok2x",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-m5gok2x"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-jo2wnn6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-jo2wnn6"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "线程执行同步代码块或同步方法时，程序调用"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Thread.sleep()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "、"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Thread.yield()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "方法暂停当前线程的执行"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-knvyact",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-knvyact"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-iug3uim",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-iug3uim"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "线程执行同步代码块时，其他线程调用了该线程的"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "suspend()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "方法将该线程 挂起，该线程不会释放锁(同步监视器)"
+								}
+							]
+						},
+						{
+							"ID": "20210707224540-tex2mim",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-tex2mim"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "应尽量避免使用"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "suspend()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "和"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "resume()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "来控制线程"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210721004804-ulmfie4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721004804-ulmfie4",
+				"updated": "20210721004804"
+			}
 		},
 		{
 			"ID": "20210707224540-h9xig4p",

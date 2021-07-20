@@ -3,8 +3,9 @@
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20210707224540-qmucx7y",
+		"title": "2 并发基本概念",
 		"type": "doc",
-		"updated": "20210707224540"
+		"updated": "20210721004349"
 	},
 	"Children": [
 		{
@@ -28,9 +29,18 @@
 		{
 			"ID": "20210707224540-trzap5r",
 			"Type": "NodeIFrame",
-			"Data": "\u003ciframe id=\"embed_dom\" name=\"embed_dom\" frameborder=\"0\" style=\"display:block;width:725px; height:545px;\" src=\"https://www.processon.com/embed/602b7b0d7d9c081db9a36542\"\u003e\u003c/iframe\u003e",
+			"Data": "\u003ciframe id=\"embed_dom\" name=\"embed_dom\" frameborder=\"0\" style=\"display:block;width:725px; height:545px;\" src=\"https://www.processon.com/embed/602b7b0d7d9c081db9a36542\" data-src=\"https://www.processon.com/embed/602b7b0d7d9c081db9a36542\"\u003e\u003c/iframe\u003e",
 			"Properties": {
-				"id": "20210707224540-trzap5r"
+				"id": "20210707224540-trzap5r",
+				"updated": "20210707224540"
+			}
+		},
+		{
+			"ID": "20210720234331-k3098pp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210720234331-k3098pp",
+				"updated": "20210720234331"
 			}
 		},
 		{
@@ -38,13 +48,10 @@
 			"Type": "NodeHeading",
 			"HeadingLevel": 2,
 			"Properties": {
-				"id": "20210707224540-jm9botg"
+				"id": "20210707224540-jm9botg",
+				"updated": "20210707224540"
 			},
 			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "## "
-				},
 				{
 					"Type": "NodeText",
 					"Data": "操作系统、程序、进程、线程"
@@ -52,20 +59,221 @@
 			]
 		},
 		{
+			"ID": "20210721004152-shdpmeu",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210721004152-shdpmeu",
+				"updated": "20210721004155"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "目的"
+				}
+			]
+		},
+		{
+			"ID": "20210707224738-koib93n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224738-koib93n",
+				"updated": "20210707224738"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "操作系统、进程、线程出现，是为了解决如下问题（基于如下原因）："
+				}
+			]
+		},
+		{
+			"ID": "20210707224738-xl83jcf",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210707224738-xl83jcf",
+				"updated": "20210707224738"
+			},
+			"Children": [
+				{
+					"ID": "20210707224738-sak2ten",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224738-sak2ten"
+					},
+					"Children": [
+						{
+							"ID": "20210707224738-m51azcj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224738-m51azcj"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "资源利用率"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "\n在等待IO时执行其他程序可以提高资源利用率"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224738-6x0dyd4",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224738-6x0dyd4"
+					},
+					"Children": [
+						{
+							"ID": "20210707224738-wc3q575",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224738-wc3q575"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "公平性"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "\n不同用户和程序对于计算机的资源有着同等的使用权，一种方式是通过粗粒度"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "时间分片"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "使用户和程序共享计算机资源，而不是有一个程序从头执行到尾，在启动下一个程序"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224738-ol0q1ji",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224738-ol0q1ji",
+						"updated": "20210707224738"
+					},
+					"Children": [
+						{
+							"ID": "20210707224738-0pje43o",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224738-0pje43o",
+								"updated": "20210707224738"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "便利性"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "\n在计算多个任务时，不应该只编写一个程序实现，应该每个程序执行一个任务，并在必要时互相通信"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210721004202-024mvij",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721004202-024mvij",
+				"updated": "20210721004202"
+			}
+		},
+		{
 			"ID": "20210707224540-12r4fcq",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
 			"Properties": {
-				"id": "20210707224540-12r4fcq"
+				"id": "20210707224540-12r4fcq",
+				"updated": "20210720234621"
 			},
 			"Children": [
 				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
 					"Type": "NodeText",
-					"Data": "操作系统（OS）"
+					"Data": "操作系统（OS）—狭义"
 				}
 			]
 		},
@@ -81,6 +289,14 @@
 					"Data": "操作系统（OS）是包含多个进程的容器，而每个进程又都是容纳多个线程的容器"
 				}
 			]
+		},
+		{
+			"ID": "20210720234629-jgw2c75",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210720234629-jgw2c75",
+				"updated": "20210720234629"
+			}
 		},
 		{
 			"ID": "20210707224540-mjnc7t8",
@@ -175,6 +391,14 @@
 					"Data": "。"
 				}
 			]
+		},
+		{
+			"ID": "20210720234631-i9kzh5f",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210720234631-i9kzh5f",
+				"updated": "20210720234631"
+			}
 		},
 		{
 			"ID": "20210707224540-sqdlvfq",
@@ -401,12 +625,35 @@
 			"ID": "20210707224540-anqtw4v",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707224540-anqtw4v"
+				"id": "20210707224540-anqtw4v",
+				"updated": "20210720235400"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "Oracle 文档中定义进程是：使用 fork（2）系统调用创建的 UNIX 环境（例如文件描述符，用户 ID 等），它被设置为运行程序"
+					"Data": "Oracle 文档中定义进程是：使用 fork（2）"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "系统调用"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "（system call）创建的 UNIX 环境（例如文件描述符，用户 ID 等），它被设置为运行程序"
 				}
 			]
 		},
@@ -479,17 +726,30 @@
 			]
 		},
 		{
+			"ID": "20210720234654-xle0tem",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210720234654-xle0tem",
+				"updated": "20210720234654"
+			}
+		},
+		{
+			"ID": "20210720234655-ipj4mzc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210720234655-ipj4mzc",
+				"updated": "20210720234655"
+			}
+		},
+		{
 			"ID": "20210707224540-4iozqow",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
 			"Properties": {
-				"id": "20210707224540-4iozqow"
+				"id": "20210707224540-4iozqow",
+				"updated": "20210707224540"
 			},
 			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
 				{
 					"Type": "NodeText",
 					"Data": "线程（Thread）🔥"
@@ -497,14 +757,16 @@
 			]
 		},
 		{
-			"ID": "20210707224540-l7rc32a",
+			"ID": "20210720235001-8w0gshj",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707224540-l7rc32a"
+				"id": "20210720235001-8w0gshj",
+				"updated": "20210720235041"
 			},
 			"Children": [
 				{
 					"Type": "NodeStrong",
+					"Data": "strong",
 					"Children": [
 						{
 							"Type": "NodeStrongA6kOpenMarker",
@@ -512,7 +774,7 @@
 						},
 						{
 							"Type": "NodeText",
-							"Data": "线程是进程中的一个执行单元/路径"
+							"Data": "线程是进程中的一个执行单元/路径/程序控制流"
 						},
 						{
 							"Type": "NodeStrongA6kCloseMarker",
@@ -522,10 +784,11 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "，负责当前进程中程序的执行，是"
+					"Data": "。Oracle 文档中定义线程是：在"
 				},
 				{
 					"Type": "NodeStrong",
+					"Data": "strong",
 					"Children": [
 						{
 							"Type": "NodeStrongA6kOpenMarker",
@@ -533,7 +796,7 @@
 						},
 						{
 							"Type": "NodeText",
-							"Data": "处理机调度的基本单位"
+							"Data": "进程上下文中执行的一系列指令"
 						},
 						{
 							"Type": "NodeStrongA6kCloseMarker",
@@ -544,54 +807,40 @@
 			]
 		},
 		{
-			"ID": "20210707224540-9cyss5m",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707224540-9cyss5m"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "Oracle 文档中定义线程是：在进程上下文中执行的一系列指令"
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-9r0or65",
+			"ID": "20210720234817-ejgeiel",
 			"Type": "NodeList",
-			"ListData": {
-				"BulletChar": 45,
-				"Padding": 2,
-				"Marker": "LQ==",
-				"Num": -1
-			},
+			"ListData": {},
 			"Properties": {
-				"id": "20210707224540-9r0or65"
+				"id": "20210720234817-ejgeiel",
+				"updated": "20210720234818"
 			},
 			"Children": [
 				{
-					"ID": "20210707224540-c9j69qk",
+					"ID": "20210720234818-84jdy7q",
 					"Type": "NodeListItem",
-					"Data": "-",
 					"ListData": {
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
+						"BulletChar": 42,
+						"Marker": "Kg=="
 					},
 					"Properties": {
-						"id": "20210707224540-c9j69qk"
+						"id": "20210720234818-84jdy7q"
 					},
 					"Children": [
 						{
-							"ID": "20210707224540-ae8kejc",
+							"ID": "20210720234818-zdsdtic",
 							"Type": "NodeParagraph",
 							"Properties": {
-								"id": "20210707224540-ae8kejc"
+								"id": "20210720234818-zdsdtic",
+								"updated": "20210720235100"
 							},
 							"Children": [
 								{
+									"Type": "NodeText",
+									"Data": "线程的出现允许在同一个进程中同时存在多个"
+								},
+								{
 									"Type": "NodeStrong",
+									"Data": "strong",
 									"Children": [
 										{
 											"Type": "NodeStrongA6kOpenMarker",
@@ -599,7 +848,7 @@
 										},
 										{
 											"Type": "NodeText",
-											"Data": "每个线程拥有独立的运行栈和程序计数器"
+											"Data": "程序控制流"
 										},
 										{
 											"Type": "NodeStrongA6kCloseMarker",
@@ -612,29 +861,31 @@
 					]
 				},
 				{
-					"ID": "20210707224540-x96sptb",
+					"ID": "20210720234924-47vtxkh",
 					"Type": "NodeListItem",
-					"Data": "-",
 					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
+						"BulletChar": 42,
+						"Marker": "Kg=="
 					},
 					"Properties": {
-						"id": "20210707224540-x96sptb"
+						"id": "20210720234924-47vtxkh"
 					},
 					"Children": [
 						{
-							"ID": "20210707224540-txgb6mc",
+							"ID": "20210720234924-l973g20",
 							"Type": "NodeParagraph",
 							"Properties": {
-								"id": "20210707224540-txgb6mc"
+								"id": "20210720234924-l973g20",
+								"updated": "20210721002419"
 							},
 							"Children": [
 								{
+									"Type": "NodeText",
+									"Data": "现代操作系统中，"
+								},
+								{
 									"Type": "NodeStrong",
+									"Data": "strong",
 									"Children": [
 										{
 											"Type": "NodeStrongA6kOpenMarker",
@@ -642,7 +893,7 @@
 										},
 										{
 											"Type": "NodeText",
-											"Data": "一个进程中的多个线程共享相同的内存单元/内存地址空间"
+											"Data": "线程是处理机（如CPU）调度的基本单位"
 										},
 										{
 											"Type": "NodeStrongA6kCloseMarker",
@@ -652,10 +903,127 @@
 								},
 								{
 									"Type": "NodeText",
-									"Data": "：它们从同一堆中分配对象，可以访问相同的变量和对象。这就使得线程间通信更简便、高效。但多个线程操作共享的系统资源可能会带来"
+									"Data": "，不是进程！"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210721002503-35gqjer",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210721002503-35gqjer"
+					},
+					"Children": [
+						{
+							"ID": "20210721002503-pa9k0qx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210721002503-pa9k0qx",
+								"updated": "20210721002511"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "每个线程有各自的程序计数器（PC）、栈、局部变量等"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210721002325-w46wcec",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210721002325-w46wcec"
+					},
+					"Children": [
+						{
+							"ID": "20210721002325-oxz8g7u",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210721002325-oxz8g7u",
+								"updated": "20210721002705"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "一个进程中的多个线程共享相同的资源"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "："
 								},
 								{
 									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "内存"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "句柄、"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "文件"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "句柄。它们从同一堆中分配对象，可以访问相同的变量和对象。这就使得线程间通信更简便、高效。但多个线程操作共享的系统资源可能会带来"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
 									"Children": [
 										{
 											"Type": "NodeStrongA6kOpenMarker",
@@ -676,29 +1044,30 @@
 					]
 				},
 				{
-					"ID": "20210707224540-k5qvrpo",
+					"ID": "20210721002329-1zjbigh",
 					"Type": "NodeListItem",
-					"Data": "-",
 					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
+						"BulletChar": 42,
+						"Marker": "Kg=="
 					},
 					"Properties": {
-						"id": "20210707224540-k5qvrpo"
+						"id": "20210721002329-1zjbigh"
 					},
 					"Children": [
 						{
-							"ID": "20210707224540-v92pfv9",
+							"ID": "20210721002329-duzzkw9",
 							"Type": "NodeParagraph",
 							"Properties": {
-								"id": "20210707224540-v92pfv9"
+								"id": "20210721002329-duzzkw9"
 							},
 							"Children": [
 								{
+									"Type": "NodeText",
+									"Data": "同一个程序（不同程序当然也可以）的多个"
+								},
+								{
 									"Type": "NodeStrong",
+									"Data": "strong",
 									"Children": [
 										{
 											"Type": "NodeStrongA6kOpenMarker",
@@ -706,38 +1075,87 @@
 										},
 										{
 											"Type": "NodeText",
-											"Data": "线程切换的开销小"
+											"Data": "线程"
 										},
 										{
 											"Type": "NodeStrongA6kCloseMarker",
 											"Data": "**"
 										}
 									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "可以同时被"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "调度到多个CPU"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "上运行"
 								}
 							]
 						}
 					]
 				},
 				{
-					"ID": "20210707224540-44zbnsa",
+					"ID": "20210721002727-pn37ut1",
 					"Type": "NodeListItem",
-					"Data": "-",
 					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
+						"BulletChar": 42,
+						"Marker": "Kg=="
 					},
 					"Properties": {
-						"id": "20210707224540-44zbnsa"
+						"id": "20210721002727-pn37ut1"
 					},
 					"Children": [
 						{
-							"ID": "20210707224540-ab644jk",
+							"ID": "20210721002727-he7l6yk",
 							"Type": "NodeParagraph",
 							"Properties": {
-								"id": "20210707224540-ab644jk"
+								"id": "20210721002727-he7l6yk",
+								"updated": "20210721002733"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "线程切换的开销比进程小"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210721002746-oh8y77u",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210721002746-oh8y77u"
+					},
+					"Children": [
+						{
+							"ID": "20210721002746-7j61hbx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210721002746-7j61hbx"
 							},
 							"Children": [
 								{
@@ -746,6 +1164,7 @@
 								},
 								{
 									"Type": "NodeStrong",
+									"Data": "strong",
 									"Children": [
 										{
 											"Type": "NodeStrongA6kOpenMarker",
@@ -766,52 +1185,65 @@
 									"Data": "到 OS 的内核线程，使用 JNI 实现的。若是支持协程的语言，可能几十个协程对应一个 OS 线程"
 								}
 							]
-						},
-						{
-							"ID": "20210707224540-3on8nzh",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707224540-3on8nzh"
-							},
-							"Children": [
-								{
-									"Type": "NodeImage",
-									"Children": [
-										{
-											"Type": "NodeBang",
-											"Data": "!"
-										},
-										{
-											"Type": "NodeOpenBracket",
-											"Data": "["
-										},
-										{
-											"Type": "NodeLinkText",
-											"Data": "image-20210208002102861"
-										},
-										{
-											"Type": "NodeCloseBracket",
-											"Data": "]"
-										},
-										{
-											"Type": "NodeOpenParen",
-											"Data": "("
-										},
-										{
-											"Type": "NodeLinkDest",
-											"Data": "../assets/image-20210208002102861.png"
-										},
-										{
-											"Type": "NodeCloseParen",
-											"Data": ")"
-										}
-									]
-								}
-							]
 						}
 					]
 				}
 			]
+		},
+		{
+			"ID": "20210707224540-3on8nzh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-3on8nzh",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20210208002102861"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "../assets/image-20210208002102861.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210721002804-4zp0o8o",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721002804-4zp0o8o",
+				"updated": "20210721002804"
+			}
+		},
+		{
+			"ID": "20210721002805-pyxh1ex",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721002805-pyxh1ex",
+				"updated": "20210721002805"
+			}
 		},
 		{
 			"ID": "20210707224540-ir5tv55",
@@ -1300,6 +1732,30 @@
 			]
 		},
 		{
+			"ID": "20210721002849-fdxr92x",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721002849-fdxr92x",
+				"updated": "20210721002849"
+			}
+		},
+		{
+			"ID": "20210707224738-0upcpf2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224738-0upcpf2",
+				"updated": "20210707224738"
+			}
+		},
+		{
+			"ID": "20210721002850-yd8n6pp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721002850-yd8n6pp",
+				"updated": "20210721002850"
+			}
+		},
+		{
 			"ID": "20210707224540-tqd41oy",
 			"Type": "NodeHeading",
 			"HeadingLevel": 2,
@@ -1387,20 +1843,25 @@
 			]
 		},
 		{
+			"ID": "20210721002908-tt2dj9y",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721002908-tt2dj9y",
+				"updated": "20210721002908"
+			}
+		},
+		{
 			"ID": "20210707224540-v79ubu2",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
 			"Properties": {
-				"id": "20210707224540-v79ubu2"
+				"id": "20210707224540-v79ubu2",
+				"updated": "20210721004118"
 			},
 			"Children": [
 				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
 					"Type": "NodeText",
-					"Data": "为什么需要多线程、优点 🔥"
+					"Data": "多线程的优势 🔥"
 				}
 			]
 		},
@@ -1408,55 +1869,65 @@
 			"ID": "20210707224540-pqb7oup",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707224540-pqb7oup"
+				"id": "20210707224540-pqb7oup",
+				"updated": "20210721003401"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "若是单核 CPU，只使用单个线程先后完成多个任务(调用多个方法)，肯定比用多个线程来完成用的时间更短（线程切换时间长），但是目前大部分都是多核 CPU，那多线程究竟有什么好处呢？为什么要使用多线程？"
+					"Data": "若是单核 CPU，只使用单个线程先后完成多个任务(调用多个方法)，肯定比用多个线程来完成用的时间更短（线程切换时间长），但是目前大部分都是多核 CPU，那多线程究竟有什么好处呢？为什么要使用多线程？其实就是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "提高 CPU 利用率"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
 				}
 			]
 		},
 		{
-			"ID": "20210707224540-gv9bokz",
+			"ID": "20210707224738-61adf1z",
 			"Type": "NodeList",
-			"ListData": {
-				"BulletChar": 45,
-				"Padding": 2,
-				"Marker": "LQ==",
-				"Num": -1
-			},
+			"ListData": {},
 			"Properties": {
-				"id": "20210707224540-gv9bokz"
+				"id": "20210707224738-61adf1z",
+				"updated": "20210721003917"
 			},
 			"Children": [
 				{
-					"ID": "20210707224540-itxyhyk",
+					"ID": "20210707224738-ogyx3v7",
 					"Type": "NodeListItem",
-					"Data": "-",
 					"ListData": {
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
+						"BulletChar": 42,
+						"Marker": "Kg=="
 					},
 					"Properties": {
-						"id": "20210707224540-itxyhyk"
+						"id": "20210707224738-ogyx3v7"
 					},
 					"Children": [
 						{
-							"ID": "20210707224540-kssaf6q",
+							"ID": "20210707224738-mm87nhx",
 							"Type": "NodeParagraph",
 							"Properties": {
-								"id": "20210707224540-kssaf6q"
+								"id": "20210707224738-mm87nhx",
+								"updated": "20210721003805"
 							},
 							"Children": [
 								{
-									"Type": "NodeText",
-									"Data": "最主要的目的就是"
-								},
-								{
 									"Type": "NodeStrong",
+									"Data": "strong",
 									"Children": [
 										{
 											"Type": "NodeStrongA6kOpenMarker",
@@ -1464,7 +1935,73 @@
 										},
 										{
 											"Type": "NodeText",
-											"Data": "提高 CPU 利用率"
+											"Data": "GUI"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "\n采用一个事件分发线程来代替主事件循环，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "提高用户界面响应灵敏度"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。\n在 Android 开发中，主线程的重要任务之一是绘制屏幕界面，即 "
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "UI 线程"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，该线程中不允许进行 IO 操作或网络请求，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "避免卡顿"
 										},
 										{
 											"Type": "NodeStrongA6kCloseMarker",
@@ -1473,270 +2010,31 @@
 									]
 								}
 							]
-						},
-						{
-							"ID": "20210707224540-8qg4inp",
-							"Type": "NodeList",
-							"ListData": {
-								"Tight": true,
-								"BulletChar": 45,
-								"Padding": 2,
-								"Marker": "LQ==",
-								"Num": -1
-							},
-							"Properties": {
-								"id": "20210707224540-8qg4inp"
-							},
-							"Children": [
-								{
-									"ID": "20210707224540-shmeiz3",
-									"Type": "NodeListItem",
-									"Data": "-",
-									"ListData": {
-										"Tight": true,
-										"BulletChar": 45,
-										"Padding": 2,
-										"Marker": "LQ==",
-										"Num": -1
-									},
-									"Properties": {
-										"id": "20210707224540-shmeiz3"
-									},
-									"Children": [
-										{
-											"ID": "20210707224540-m7sqt78",
-											"Type": "NodeParagraph",
-											"Properties": {
-												"id": "20210707224540-m7sqt78"
-											},
-											"Children": [
-												{
-													"Type": "NodeText",
-													"Data": "提高"
-												},
-												{
-													"Type": "NodeStrong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "处理速度"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
-												}
-											]
-										}
-									]
-								},
-								{
-									"ID": "20210707224540-fxj8y6z",
-									"Type": "NodeListItem",
-									"Data": "-",
-									"ListData": {
-										"Tight": true,
-										"BulletChar": 45,
-										"Padding": 2,
-										"Marker": "LQ==",
-										"Num": -1
-									},
-									"Properties": {
-										"id": "20210707224540-fxj8y6z"
-									},
-									"Children": [
-										{
-											"ID": "20210707224540-w0j7jo3",
-											"Type": "NodeParagraph",
-											"Properties": {
-												"id": "20210707224540-w0j7jo3"
-											},
-											"Children": [
-												{
-													"Type": "NodeText",
-													"Data": "避免"
-												},
-												{
-													"Type": "NodeStrong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "无效等待"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
-												},
-												{
-													"Type": "NodeText",
-													"Data": "（IO 时可以做其他事）"
-												}
-											]
-										}
-									]
-								},
-								{
-									"ID": "20210707224540-9aw6h44",
-									"Type": "NodeListItem",
-									"Data": "-",
-									"ListData": {
-										"Tight": true,
-										"BulletChar": 45,
-										"Padding": 2,
-										"Marker": "LQ==",
-										"Num": -1
-									},
-									"Properties": {
-										"id": "20210707224540-9aw6h44"
-									},
-									"Children": [
-										{
-											"ID": "20210707224540-yf445ux",
-											"Type": "NodeParagraph",
-											"Properties": {
-												"id": "20210707224540-yf445ux"
-											},
-											"Children": [
-												{
-													"Type": "NodeStrong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "提高用户体验"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
-												},
-												{
-													"Type": "NodeText",
-													"Data": "，应用程序响应快，避免卡顿，缩短等待时间"
-												}
-											]
-										},
-										{
-											"ID": "20210707224540-wbyek92",
-											"Type": "NodeList",
-											"ListData": {
-												"Tight": true,
-												"BulletChar": 45,
-												"Padding": 2,
-												"Marker": "LQ==",
-												"Num": -1
-											},
-											"Properties": {
-												"id": "20210707224540-wbyek92"
-											},
-											"Children": [
-												{
-													"ID": "20210707224540-1ygb00r",
-													"Type": "NodeListItem",
-													"Data": "-",
-													"ListData": {
-														"Tight": true,
-														"BulletChar": 45,
-														"Padding": 2,
-														"Marker": "LQ==",
-														"Num": -1
-													},
-													"Properties": {
-														"id": "20210707224540-1ygb00r"
-													},
-													"Children": [
-														{
-															"ID": "20210707224540-5sau3z3",
-															"Type": "NodeParagraph",
-															"Properties": {
-																"id": "20210707224540-5sau3z3"
-															},
-															"Children": [
-																{
-																	"Type": "NodeText",
-																	"Data": "并行处理，提高性能，通常是服务器领域（例如 Tomcat），用多个线程去接收进来的 HTTP 请求，而不是排队等待单一的线程处理"
-																}
-															]
-														}
-													]
-												},
-												{
-													"ID": "20210707224540-8mpb044",
-													"Type": "NodeListItem",
-													"Data": "-",
-													"ListData": {
-														"Tight": true,
-														"BulletChar": 45,
-														"Padding": 2,
-														"Marker": "LQ==",
-														"Num": -1
-													},
-													"Properties": {
-														"id": "20210707224540-8mpb044"
-													},
-													"Children": [
-														{
-															"ID": "20210707224540-oy5vjvv",
-															"Type": "NodeParagraph",
-															"Properties": {
-																"id": "20210707224540-oy5vjvv"
-															},
-															"Children": [
-																{
-																	"Type": "NodeText",
-																	"Data": "在 Android 开发中，主线程的重要任务之一是绘制屏幕界面，即 UI 线程，该线程中不允许进行 IO 操作或网络请求，目的就是避免卡顿，影响用户的交互"
-																}
-															]
-														}
-													]
-												}
-											]
-										}
-									]
-								}
-							]
 						}
 					]
 				},
 				{
-					"ID": "20210707224540-s9fv06z",
+					"ID": "20210707224738-2okxuv0",
 					"Type": "NodeListItem",
-					"Data": "-",
 					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
+						"BulletChar": 42,
+						"Marker": "Kg=="
 					},
 					"Properties": {
-						"id": "20210707224540-s9fv06z"
+						"id": "20210707224738-2okxuv0"
 					},
 					"Children": [
 						{
-							"ID": "20210707224540-fqn4tb2",
+							"ID": "20210707224738-gyn9n6g",
 							"Type": "NodeParagraph",
 							"Properties": {
-								"id": "20210707224540-fqn4tb2"
+								"id": "20210707224738-gyn9n6g",
+								"updated": "20210721003714"
 							},
 							"Children": [
 								{
 									"Type": "NodeStrong",
+									"Data": "strong",
 									"Children": [
 										{
 											"Type": "NodeStrongA6kOpenMarker",
@@ -1744,7 +2042,161 @@
 										},
 										{
 											"Type": "NodeText",
-											"Data": "便于编程建模，改善程序结构"
+											"Data": "服务器"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "\n通过提高时钟频率来提高性能越来越困难，转而在单个芯片上放多个处理器核。\n多线程程序可以在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "多处理器"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "上执行，提高了处理器"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "资源利用率"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "从而提升"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "系统吞吐率"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "\n多线程程序在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "单处理器"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "上执行，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "在等待IO时可以让另一个线程继续执行"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "避免无效等待"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，从而"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "提高吞吐率"
 										},
 										{
 											"Type": "NodeStrongA6kCloseMarker",
@@ -1753,46 +2205,146 @@
 									]
 								}
 							]
-						},
+						}
+					]
+				},
+				{
+					"ID": "20210707224738-fwfr8m2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224738-fwfr8m2"
+					},
+					"Children": [
 						{
-							"ID": "20210707224540-pzc8rct",
+							"ID": "20210707224738-4bpqmyw",
 							"Type": "NodeParagraph",
 							"Properties": {
-								"id": "20210707224540-pzc8rct"
+								"id": "20210707224738-4bpqmyw"
 							},
 							"Children": [
 								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "简化JVM实现"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
 									"Type": "NodeText",
-									"Data": "把这个大的任务 A 分解成几个小任务，任务 B、任务 C、任务 D，分别建立程序模型，并通过多线程分别运行这几个任务，便于理解和修改"
+									"Data": "\nGC通常在一个或多个专门的线程中运行"
 								}
 							]
 						}
 					]
 				},
 				{
-					"ID": "20210707224540-zrermrw",
+					"ID": "20210707224738-9pfix77",
 					"Type": "NodeListItem",
-					"Data": "-",
 					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
+						"BulletChar": 42,
+						"Marker": "Kg=="
 					},
 					"Properties": {
-						"id": "20210707224540-zrermrw"
+						"id": "20210707224738-9pfix77"
 					},
 					"Children": [
 						{
-							"ID": "20210707224540-jxwedgj",
+							"ID": "20210707224738-z3quavy",
 							"Type": "NodeParagraph",
 							"Properties": {
-								"id": "20210707224540-jxwedgj"
+								"id": "20210707224738-z3quavy",
+								"updated": "20210721003752"
 							},
 							"Children": [
 								{
 									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "建模的简单性"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "\n如：Servlet程序就像编写单线程程序一样，无需关心多少请求在同一时刻要被处理，无需了解Socket是否阻塞\n如：把大的任务 A 分解成几个小任务，分别建立程序模型，并通过多线程分别运行这几个任务，便于理解和修改"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224738-8p4kfk2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224738-8p4kfk2"
+					},
+					"Children": [
+						{
+							"ID": "20210707224738-vp0lb6p",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224738-vp0lb6p"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "异步事件简单化处理\n单线程服务器应用必须使用非阻塞IO，其复杂性远高于同步阻塞IO，容易出错。\n早期操作系统可创建线程数量比较少（数百），所以操作系统提供了实现多路IO的方法，如Unix的select、poll等。要调用这些方法，Java需要实现非阻塞IO（NIO）。而现代操作系统可创建线程数量有极大提升，为每个客户端分配一个线程也行"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210721003842-lvns77w",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210721003842-lvns77w",
+						"updated": "20210721003917"
+					},
+					"Children": [
+						{
+							"ID": "20210721003842-dtclntp",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210721003842-dtclntp"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
 									"Children": [
 										{
 											"Type": "NodeStrongA6kOpenMarker",
@@ -1811,39 +2363,30 @@
 							]
 						},
 						{
-							"ID": "20210707224540-1uu02az",
+							"ID": "20210721003856-t75vu8i",
 							"Type": "NodeList",
-							"ListData": {
-								"Tight": true,
-								"BulletChar": 45,
-								"Padding": 2,
-								"Marker": "LQ==",
-								"Num": -1
-							},
+							"ListData": {},
 							"Properties": {
-								"id": "20210707224540-1uu02az"
+								"id": "20210721003856-t75vu8i",
+								"updated": "20210721003917"
 							},
 							"Children": [
 								{
-									"ID": "20210707224540-q89ev85",
+									"ID": "20210721003855-l1wklsv",
 									"Type": "NodeListItem",
-									"Data": "-",
 									"ListData": {
-										"Tight": true,
-										"BulletChar": 45,
-										"Padding": 2,
-										"Marker": "LQ==",
-										"Num": -1
+										"BulletChar": 42,
+										"Marker": "Kg=="
 									},
 									"Properties": {
-										"id": "20210707224540-q89ev85"
+										"id": "20210721003855-l1wklsv"
 									},
 									"Children": [
 										{
-											"ID": "20210707224540-r9fna40",
+											"ID": "20210721003855-cw7a6rj",
 											"Type": "NodeParagraph",
 											"Properties": {
-												"id": "20210707224540-r9fna40"
+												"id": "20210721003855-cw7a6rj"
 											},
 											"Children": [
 												{
@@ -1852,6 +2395,7 @@
 												},
 												{
 													"Type": "NodeStrong",
+													"Data": "strong",
 													"Children": [
 														{
 															"Type": "NodeStrongA6kOpenMarker",
@@ -1873,6 +2417,7 @@
 												},
 												{
 													"Type": "NodeStrong",
+													"Data": "strong",
 													"Children": [
 														{
 															"Type": "NodeStrongA6kOpenMarker",
@@ -1894,6 +2439,7 @@
 												},
 												{
 													"Type": "NodeStrong",
+													"Data": "strong",
 													"Children": [
 														{
 															"Type": "NodeStrongA6kOpenMarker",
@@ -1911,104 +2457,79 @@
 												},
 												{
 													"Type": "NodeText",
-													"Data": "。"
+													"Data": "。用于描述处理器晶体管数量与运行效率之间的发展关系"
 												}
 											]
 										}
 									]
 								},
 								{
-									"ID": "20210707224540-oc7xefp",
+									"ID": "20210721003911-anv95ia",
 									"Type": "NodeListItem",
-									"Data": "-",
 									"ListData": {
-										"Tight": true,
-										"BulletChar": 45,
-										"Padding": 2,
-										"Marker": "LQ==",
-										"Num": -1
+										"BulletChar": 42,
+										"Marker": "Kg=="
 									},
 									"Properties": {
-										"id": "20210707224540-oc7xefp"
+										"id": "20210721003911-anv95ia",
+										"updated": "20210721003917"
 									},
 									"Children": [
 										{
-											"ID": "20210707224540-zuqkvuv",
+											"ID": "20210721003911-l1owkvc",
 											"Type": "NodeParagraph",
 											"Properties": {
-												"id": "20210707224540-zuqkvuv"
+												"id": "20210721003911-l1owkvc",
+												"updated": "20210721003917"
 											},
 											"Children": [
 												{
 													"Type": "NodeText",
-													"Data": "阿姆达尔定律："
-												}
-											]
-										},
-										{
-											"ID": "20210707224540-9x2whqw",
-											"Type": "NodeList",
-											"ListData": {
-												"Tight": true,
-												"BulletChar": 45,
-												"Padding": 2,
-												"Marker": "LQ==",
-												"Num": -1
-											},
-											"Properties": {
-												"id": "20210707224540-9x2whqw"
-											},
-											"Children": [
+													"Data": "阿姆达尔定律：通过系统中"
+												},
 												{
-													"ID": "20210707224540-627c9te",
-													"Type": "NodeListItem",
-													"Data": "-",
-													"ListData": {
-														"Tight": true,
-														"BulletChar": 45,
-														"Padding": 2,
-														"Marker": "LQ==",
-														"Num": -1
-													},
-													"Properties": {
-														"id": "20210707224540-627c9te"
-													},
+													"Type": "NodeStrong",
+													"Data": "strong",
 													"Children": [
 														{
-															"ID": "20210707224540-ipahdwp",
-															"Type": "NodeParagraph",
-															"Properties": {
-																"id": "20210707224540-ipahdwp"
-															},
-															"Children": [
-																{
-																	"Type": "NodeText",
-																	"Data": "结论：一般情况下，处理器越多，程序执行的速度就会越快，但是会有一个上限，上限取决于程序中串行部分的比例，"
-																},
-																{
-																	"Type": "NodeStrong",
-																	"Children": [
-																		{
-																			"Type": "NodeStrongA6kOpenMarker",
-																			"Data": "**"
-																		},
-																		{
-																			"Type": "NodeText",
-																			"Data": "并行的比例越高，多处理器的效果越明显"
-																		},
-																		{
-																			"Type": "NodeStrongA6kCloseMarker",
-																			"Data": "**"
-																		}
-																	]
-																},
-																{
-																	"Type": "NodeText",
-																	"Data": "。但是大部分程序都是串行占比多！"
-																}
-															]
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "并行化与串行化的比重"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
 														}
 													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "来描述多处理器系统能获得的运算加速能力\n一般情况下，处理器越多，程序执行的速度就会越快，但是会有一个上限，上限取决于程序中串行部分的比例，"
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "并行的比例越高，多处理器的效果越明显"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "。但是大部分程序都是串行占比多！"
 												}
 											]
 										}
@@ -2063,17 +2584,480 @@
 			]
 		},
 		{
+			"ID": "20210721003941-t96jpev",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721003941-t96jpev",
+				"updated": "20210721003941"
+			}
+		},
+		{
+			"ID": "20210721003944-u6wn3hk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721003944-u6wn3hk",
+				"updated": "20210721003944"
+			}
+		},
+		{
+			"ID": "20210721003945-e4v07dg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721003945-e4v07dg",
+				"updated": "20210721003945"
+			}
+		},
+		{
+			"ID": "20210707224540-z9zj9s9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707224540-z9zj9s9",
+				"style": "border-radius: 4px; transition: all 0.15s cubic-bezier(0, 0, 0.2, 1) 0ms; background-color: var(--b3-theme-primary-lightest); box-shadow: 4px 0px 0 var(--b3-theme-primary-lightest), -4px 0px 0 var(--b3-theme-primary-lightest);",
+				"updated": "20210721004123"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "多线程的局限 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707224738-o77e69g",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210707224738-o77e69g",
+				"updated": "20210707224738"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "安全性问题 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707224738-olvslbe",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210707224738-olvslbe",
+				"updated": "20210707224738"
+			},
+			"Children": [
+				{
+					"ID": "20210707224738-c7fd9lk",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224738-c7fd9lk"
+					},
+					"Children": [
+						{
+							"ID": "20210707224738-wpsw7so",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224738-wpsw7so"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "由于"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "同一个进程中的所有线程都共享进程的内存地址空间"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，所以这些线程可以访问相同的变量，并在同一个堆上分配对象"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224738-22lvqz6",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224738-22lvqz6"
+					},
+					"Children": [
+						{
+							"ID": "20210707224738-nlb6f3t",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224738-nlb6f3t"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "此时需要比在进程中共享数据更细粒度的数据共享机制，即明确的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "同步机制协同对共享数据访问"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224738-eeb90yl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224738-eeb90yl",
+				"updated": "20210707224738"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如：++的非原子操作、指令重排问题"
+				}
+			]
+		},
+		{
+			"ID": "20210721004007-0z650t0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721004007-0z650t0",
+				"updated": "20210721004007"
+			}
+		},
+		{
+			"ID": "20210707224738-nr6kvk4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210707224738-nr6kvk4",
+				"updated": "20210707224738"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "活跃性问题 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707224738-kevbebn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224738-kevbebn",
+				"updated": "20210707224738"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如："
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "死锁"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "饥饿"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "、"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "活锁"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210721004009-hwgcl74",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721004009-hwgcl74",
+				"updated": "20210721004009"
+			}
+		},
+		{
+			"ID": "20210707224738-mrk1hko",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210707224738-mrk1hko",
+				"updated": "20210707224738"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "性能问题 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707224738-rpkc4t4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224738-rpkc4t4",
+				"updated": "20210707224738"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "活跃性问题意味着某件事情应该最终会发生，但是不够好。与活跃性问题相关的就是性能问题。"
+				}
+			]
+		},
+		{
+			"ID": "20210707224738-kfvcaxc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224738-kfvcaxc",
+				"updated": "20210707224738"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在多线程程序中，线"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "程调度器挂起活跃线程"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "转而"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "运行另一个线程"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "时，就会频繁出现"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "上下文切换"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，该操作会带来"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "极大的开销"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "："
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "保存和恢复执行上下文，丢失局部性"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，且CPU将更多花在"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "线程调度"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "上！而不是线程执行上！"
+				}
+			]
+		},
+		{
+			"ID": "20210721003955-pohunul",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721003955-pohunul",
+				"updated": "20210721003955"
+			}
+		},
+		{
 			"ID": "20210707224540-vchmk5v",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
 			"Properties": {
-				"id": "20210707224540-vchmk5v"
+				"id": "20210707224540-vchmk5v",
+				"updated": "20210707224540"
 			},
 			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
 				{
 					"Type": "NodeText",
 					"Data": "多线程的使用场景 🔥"
@@ -2083,25 +3067,18 @@
 		{
 			"ID": "20210707224540-2frbxva",
 			"Type": "NodeList",
-			"ListData": {
-				"BulletChar": 45,
-				"Padding": 2,
-				"Marker": "LQ==",
-				"Num": -1
-			},
+			"ListData": {},
 			"Properties": {
-				"id": "20210707224540-2frbxva"
+				"id": "20210707224540-2frbxva",
+				"updated": "20210707224540"
 			},
 			"Children": [
 				{
 					"ID": "20210707224540-5ebyam0",
 					"Type": "NodeListItem",
-					"Data": "-",
 					"ListData": {
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
+						"BulletChar": 42,
+						"Marker": "Kg=="
 					},
 					"Properties": {
 						"id": "20210707224540-5ebyam0"
@@ -2120,6 +3097,7 @@
 								},
 								{
 									"Type": "NodeStrong",
+									"Data": "strong",
 									"Children": [
 										{
 											"Type": "NodeStrongA6kOpenMarker",
@@ -2146,13 +3124,9 @@
 				{
 					"ID": "20210707224540-evpc1wm",
 					"Type": "NodeListItem",
-					"Data": "-",
 					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
+						"BulletChar": 42,
+						"Marker": "Kg=="
 					},
 					"Properties": {
 						"id": "20210707224540-evpc1wm"
@@ -2167,6 +3141,7 @@
 							"Children": [
 								{
 									"Type": "NodeStrong",
+									"Data": "strong",
 									"Children": [
 										{
 											"Type": "NodeStrongA6kOpenMarker",
@@ -2201,6 +3176,7 @@
 								},
 								{
 									"Type": "NodeStrong",
+									"Data": "strong",
 									"Children": [
 										{
 											"Type": "NodeStrongA6kOpenMarker",
@@ -2227,13 +3203,9 @@
 				{
 					"ID": "20210707224540-gomi9ma",
 					"Type": "NodeListItem",
-					"Data": "-",
 					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
+						"BulletChar": 42,
+						"Marker": "Kg=="
 					},
 					"Properties": {
 						"id": "20210707224540-gomi9ma"
@@ -2257,276 +3229,20 @@
 			]
 		},
 		{
-			"ID": "20210707224540-z9zj9s9",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
+			"ID": "20210721004132-52xba2p",
+			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707224540-z9zj9s9"
-			},
-			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
-					"Type": "NodeText",
-					"Data": "多线程局限 🔥"
-				}
-			]
+				"id": "20210721004132-52xba2p",
+				"updated": "20210721004132"
+			}
 		},
 		{
-			"ID": "20210707224540-ggd9ai1",
-			"Type": "NodeList",
-			"ListData": {
-				"Tight": true,
-				"BulletChar": 45,
-				"Padding": 2,
-				"Marker": "LQ==",
-				"Num": -1
-			},
+			"ID": "20210721004132-2q1co35",
+			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707224540-ggd9ai1"
-			},
-			"Children": [
-				{
-					"ID": "20210707224540-03vbg6a",
-					"Type": "NodeListItem",
-					"Data": "-",
-					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
-					},
-					"Properties": {
-						"id": "20210707224540-03vbg6a"
-					},
-					"Children": [
-						{
-							"ID": "20210707224540-kb417n1",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707224540-kb417n1"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "性能问题："
-								},
-								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "上下文切换的消耗"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210707224540-xqhqju1",
-					"Type": "NodeListItem",
-					"Data": "-",
-					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
-					},
-					"Properties": {
-						"id": "20210707224540-xqhqju1"
-					},
-					"Children": [
-						{
-							"ID": "20210707224540-izqurwq",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707224540-izqurwq"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "带来"
-								},
-								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "线程安全问题"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "："
-								}
-							]
-						},
-						{
-							"ID": "20210707224540-x1o61r0",
-							"Type": "NodeList",
-							"ListData": {
-								"Tight": true,
-								"BulletChar": 45,
-								"Padding": 2,
-								"Marker": "LQ==",
-								"Num": -1
-							},
-							"Properties": {
-								"id": "20210707224540-x1o61r0"
-							},
-							"Children": [
-								{
-									"ID": "20210707224540-v8wb6jq",
-									"Type": "NodeListItem",
-									"Data": "-",
-									"ListData": {
-										"Tight": true,
-										"BulletChar": 45,
-										"Padding": 2,
-										"Marker": "LQ==",
-										"Num": -1
-									},
-									"Properties": {
-										"id": "20210707224540-v8wb6jq"
-									},
-									"Children": [
-										{
-											"ID": "20210707224540-gk2gcdg",
-											"Type": "NodeParagraph",
-											"Properties": {
-												"id": "20210707224540-gk2gcdg"
-											},
-											"Children": [
-												{
-													"Type": "NodeStrong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "数据安全"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
-												},
-												{
-													"Type": "NodeText",
-													"Data": "问题：i++总数不一致"
-												}
-											]
-										}
-									]
-								},
-								{
-									"ID": "20210707224540-plnd5sy",
-									"Type": "NodeListItem",
-									"Data": "-",
-									"ListData": {
-										"Tight": true,
-										"BulletChar": 45,
-										"Padding": 2,
-										"Marker": "LQ==",
-										"Num": -1
-									},
-									"Properties": {
-										"id": "20210707224540-plnd5sy"
-									},
-									"Children": [
-										{
-											"ID": "20210707224540-j0peol8",
-											"Type": "NodeParagraph",
-											"Properties": {
-												"id": "20210707224540-j0peol8"
-											},
-											"Children": [
-												{
-													"Type": "NodeStrong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "线程活跃性"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
-												},
-												{
-													"Type": "NodeText",
-													"Data": "问题：线程饥饿、死锁、活锁"
-												}
-											]
-										}
-									]
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210707224540-inysp8d",
-					"Type": "NodeListItem",
-					"Data": "-",
-					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
-					},
-					"Properties": {
-						"id": "20210707224540-inysp8d"
-					},
-					"Children": [
-						{
-							"ID": "20210707224540-xsgdwpe",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707224540-xsgdwpe"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "异构化任务（任务结构不一样）很难高效并行。即对于串行任务无法改造为多线程"
-								}
-							]
-						}
-					]
-				}
-			]
+				"id": "20210721004132-2q1co35",
+				"updated": "20210721004132"
+			}
 		},
 		{
 			"ID": "20210707224540-m7pa3g2",
@@ -2868,6 +3584,14 @@
 			]
 		},
 		{
+			"ID": "20210721004238-pzppmy7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721004238-pzppmy7",
+				"updated": "20210721004238"
+			}
+		},
+		{
 			"ID": "20210707224540-a8omxfj",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
@@ -3188,6 +3912,14 @@
 			]
 		},
 		{
+			"ID": "20210721004249-z03qe3y",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721004249-z03qe3y",
+				"updated": "20210721004249"
+			}
+		},
+		{
 			"ID": "20210707224540-o3b0khg",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
@@ -3342,495 +4074,12 @@
 			]
 		},
 		{
-			"ID": "20210707224540-nsihw9k",
-			"Type": "NodeHeading",
-			"HeadingLevel": 2,
-			"Properties": {
-				"id": "20210707224540-nsihw9k"
-			},
-			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "## "
-				},
-				{
-					"Type": "NodeText",
-					"Data": "高并发"
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-2ucf6he",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210707224540-2ucf6he"
-			},
-			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
-					"Type": "NodeText",
-					"Data": "什么是高并发？"
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-r67wnrk",
+			"ID": "20210721004259-su124g8",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707224540-r67wnrk"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "服务器短时间可以处理非常多个请求，如双十一、过年微信摇一摇红包"
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-f2tfv7y",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210707224540-f2tfv7y"
-			},
-			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
-					"Type": "NodeText",
-					"Data": "高并发和多线程的联系和不同？🔥"
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-i0t6soo",
-			"Type": "NodeList",
-			"ListData": {
-				"Tight": true,
-				"BulletChar": 45,
-				"Padding": 2,
-				"Marker": "LQ==",
-				"Num": -1
-			},
-			"Properties": {
-				"id": "20210707224540-i0t6soo"
-			},
-			"Children": [
-				{
-					"ID": "20210707224540-480qwax",
-					"Type": "NodeListItem",
-					"Data": "-",
-					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
-					},
-					"Properties": {
-						"id": "20210707224540-480qwax"
-					},
-					"Children": [
-						{
-							"ID": "20210707224540-sfbv0kx",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707224540-sfbv0kx"
-							},
-							"Children": [
-								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "多线程"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "是高并发其中一种重要的"
-								},
-								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "解决方案"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "，"
-								},
-								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "高并发"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "是一种服务器"
-								},
-								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "状态"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210707224540-1gr685y",
-					"Type": "NodeListItem",
-					"Data": "-",
-					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
-					},
-					"Properties": {
-						"id": "20210707224540-1gr685y"
-					},
-					"Children": [
-						{
-							"ID": "20210707224540-rypnaur",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707224540-rypnaur"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "高并发并不意味着是多线程，如 Redis"
-								}
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-0lad4xy",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210707224540-0lad4xy"
-			},
-			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
-					"Type": "NodeText",
-					"Data": "高并发的指标"
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-31vqf2d",
-			"Type": "NodeList",
-			"ListData": {
-				"BulletChar": 45,
-				"Padding": 2,
-				"Marker": "LQ==",
-				"Num": -1
-			},
-			"Properties": {
-				"id": "20210707224540-31vqf2d"
-			},
-			"Children": [
-				{
-					"ID": "20210707224540-rideypa",
-					"Type": "NodeListItem",
-					"Data": "-",
-					"ListData": {
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
-					},
-					"Properties": {
-						"id": "20210707224540-rideypa"
-					},
-					"Children": [
-						{
-							"ID": "20210707224540-kqyvzit",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707224540-kqyvzit"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "QPS（Queries Per Second）：每秒查询数"
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210707224540-8f8v6mm",
-					"Type": "NodeListItem",
-					"Data": "-",
-					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
-					},
-					"Properties": {
-						"id": "20210707224540-8f8v6mm"
-					},
-					"Children": [
-						{
-							"ID": "20210707224540-oa899pq",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707224540-oa899pq"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "TPS：每秒处理事务数"
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210707224540-0m9ugjj",
-					"Type": "NodeListItem",
-					"Data": "-",
-					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
-					},
-					"Properties": {
-						"id": "20210707224540-0m9ugjj"
-					},
-					"Children": [
-						{
-							"ID": "20210707224540-vjt9zmn",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707224540-vjt9zmn"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "带宽"
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210707224540-72fdhs3",
-					"Type": "NodeListItem",
-					"Data": "-",
-					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
-					},
-					"Properties": {
-						"id": "20210707224540-72fdhs3"
-					},
-					"Children": [
-						{
-							"ID": "20210707224540-au7exqz",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707224540-au7exqz"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "PV（Page View）：一天访问量。。。"
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210707224540-kvut8la",
-					"Type": "NodeListItem",
-					"Data": "-",
-					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
-					},
-					"Properties": {
-						"id": "20210707224540-kvut8la"
-					},
-					"Children": [
-						{
-							"ID": "20210707224540-fuqxiok",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707224540-fuqxiok"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "UV（Unique Visitor）：一天访问量去重"
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210707224540-ytjsz37",
-					"Type": "NodeListItem",
-					"Data": "-",
-					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
-					},
-					"Properties": {
-						"id": "20210707224540-ytjsz37"
-					},
-					"Children": [
-						{
-							"ID": "20210707224540-b0f180d",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707224540-b0f180d"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "IP：不同 IP 访问量"
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210707224540-jek8125",
-					"Type": "NodeListItem",
-					"Data": "-",
-					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
-					},
-					"Properties": {
-						"id": "20210707224540-jek8125"
-					},
-					"Children": [
-						{
-							"ID": "20210707224540-9peihgj",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707224540-9peihgj"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "并发连接数（The number of concurrent connections）"
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210707224540-xft0x80",
-					"Type": "NodeListItem",
-					"Data": "-",
-					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
-					},
-					"Properties": {
-						"id": "20210707224540-xft0x80"
-					},
-					"Children": [
-						{
-							"ID": "20210707224540-si5yq9r",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707224540-si5yq9r"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "服务器平均请求等待时间 TPR（Time per request）：across all concurrent request"
-								}
-							]
-						}
-					]
-				}
-			]
+				"id": "20210721004259-su124g8",
+				"updated": "20210721004259"
+			}
 		},
 		{
 			"ID": "20210707224540-c9lm7zl",
@@ -4298,6 +4547,14 @@
 			]
 		},
 		{
+			"ID": "20210721004349-t7db70p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721004349-t7db70p",
+				"updated": "20210721004349"
+			}
+		},
+		{
 			"ID": "20210707224540-j9bcrnk",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
@@ -4344,6 +4601,14 @@
 					"Data": "（线程发出请求，如 HTTP）是否阻塞等待"
 				}
 			]
+		},
+		{
+			"ID": "20210721004347-4ihklce",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721004347-4ihklce",
+				"updated": "20210721004347"
+			}
 		},
 		{
 			"ID": "20210707224540-yxfp3tc",
@@ -4492,6 +4757,474 @@
 								{
 									"Type": "NodeText",
 									"Data": "异步非阻塞：带有鸣笛的水壶开始烧水后，我们干其他事去了，鸣笛后再过来"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210721004333-4j2ove4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721004333-4j2ove4",
+				"updated": "20210721004333"
+			}
+		},
+		{
+			"ID": "20210721004334-rcn7wr1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721004334-rcn7wr1",
+				"updated": "20210721004334"
+			}
+		},
+		{
+			"ID": "20210707224540-nsihw9k",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707224540-nsihw9k",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "高并发"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-2ucf6he",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707224540-2ucf6he",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "什么是高并发？"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-r67wnrk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-r67wnrk",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "服务器短时间可以处理非常多个请求，如双十一、过年微信摇一摇红包"
+				}
+			]
+		},
+		{
+			"ID": "20210721004309-5edb44c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721004309-5edb44c",
+				"updated": "20210721004309"
+			}
+		},
+		{
+			"ID": "20210707224540-f2tfv7y",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707224540-f2tfv7y",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "高并发和多线程的联系和不同？🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-i0t6soo",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210707224540-i0t6soo",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"ID": "20210707224540-480qwax",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-480qwax"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-sfbv0kx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-sfbv0kx"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "多线程"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "是高并发其中一种重要的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "解决方案"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "高并发"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "是一种服务器"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "状态"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-1gr685y",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-1gr685y"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-rypnaur",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-rypnaur"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "高并发并不意味着是多线程，如 Redis"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210721004318-90799l0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721004318-90799l0",
+				"updated": "20210721004318"
+			}
+		},
+		{
+			"ID": "20210707224540-0lad4xy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707224540-0lad4xy",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "高并发的指标"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-31vqf2d",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210707224540-31vqf2d",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"ID": "20210707224540-rideypa",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-rideypa"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-kqyvzit",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-kqyvzit"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "QPS（Queries Per Second）：每秒查询数"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-8f8v6mm",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-8f8v6mm"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-oa899pq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-oa899pq"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "TPS：每秒处理事务数"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-0m9ugjj",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-0m9ugjj"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-vjt9zmn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-vjt9zmn"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "带宽"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-72fdhs3",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-72fdhs3"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-au7exqz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-au7exqz"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "PV（Page View）：一天访问量。。。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-kvut8la",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-kvut8la"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-fuqxiok",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-fuqxiok"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "UV（Unique Visitor）：一天访问量去重"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-ytjsz37",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-ytjsz37"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-b0f180d",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-b0f180d"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "IP：不同 IP 访问量"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-jek8125",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-jek8125"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-9peihgj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-9peihgj"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "并发连接数（The number of concurrent connections）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-xft0x80",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-xft0x80"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-si5yq9r",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-si5yq9r"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "服务器平均请求等待时间 TPR（Time per request）：across all concurrent request"
 								}
 							]
 						}
