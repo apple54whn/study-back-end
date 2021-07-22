@@ -1,0 +1,240 @@
+{
+	"ID": "20210723012339-3guxcyc",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210723012339-3guxcyc",
+		"title": "3 线程的实现（了解）",
+		"updated": "20210723013307"
+	},
+	"Children": [
+		{
+			"ID": "20210723012339-ehpmiro",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012339-ehpmiro",
+				"updated": "20210723012520"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "目前 Java 中线程是处理器资源调度的最基本单位，若 Java 17 后 Loom 项目可以为 Java 引入纤程（Fiber），则会改变这点"
+				}
+			]
+		},
+		{
+			"ID": "20210723012521-f3ebgk5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012521-f3ebgk5",
+				"updated": "20210723012521"
+			}
+		},
+		{
+			"ID": "20210723012521-t42thhw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210723012521-t42thhw",
+				"updated": "20210723012555"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "实现线程的方式—通用非 Java"
+				}
+			]
+		},
+		{
+			"ID": "20210723012555-o5kikwp",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210723012555-o5kikwp",
+				"updated": "20210723012752"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "内核线程实现—1:1"
+				}
+			]
+		},
+		{
+			"ID": "20210723012644-mneqqdb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012644-mneqqdb",
+				"updated": "20210723013307"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "内核线程（Kernel-Level Thread，KTL）就是由操作系统内核支持的线程。由"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "内核对内核线程进行调度、切换"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，并将线程任务映射到各个处理器上。内核线程可看作内核的一个个分身。"
+				}
+			]
+		},
+		{
+			"ID": "20210723012644-pg93zz8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012644-pg93zz8",
+				"updated": "20210723012644"
+			}
+		},
+		{
+			"ID": "20210723012644-8l1njn3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012644-8l1njn3",
+				"updated": "20210723012644"
+			}
+		},
+		{
+			"ID": "20210723012645-7efz5sa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012645-7efz5sa",
+				"updated": "20210723012645"
+			}
+		},
+		{
+			"ID": "20210723012645-43kzprk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210723012645-43kzprk",
+				"updated": "20210723012700"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "用户线程实现"
+				}
+			]
+		},
+		{
+			"ID": "20210723012702-3e3pvis",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012702-3e3pvis",
+				"updated": "20210723012702"
+			}
+		},
+		{
+			"ID": "20210723012702-wwumwcb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012702-wwumwcb",
+				"updated": "20210723012702"
+			}
+		},
+		{
+			"ID": "20210723012702-tzqoqgb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012702-tzqoqgb",
+				"updated": "20210723012702"
+			}
+		},
+		{
+			"ID": "20210723012702-9cwmhrz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210723012702-9cwmhrz",
+				"updated": "20210723012707"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "混合实现"
+				}
+			]
+		},
+		{
+			"ID": "20210723012712-tii5tqv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012712-tii5tqv",
+				"updated": "20210723012712"
+			}
+		},
+		{
+			"ID": "20210723012712-1qjz0tm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012712-1qjz0tm",
+				"updated": "20210723012712"
+			}
+		},
+		{
+			"ID": "20210723012712-f2stxy5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012712-f2stxy5",
+				"updated": "20210723012712"
+			}
+		},
+		{
+			"ID": "20210723012712-tq1ercr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012712-tq1ercr",
+				"updated": "20210723012712"
+			}
+		},
+		{
+			"ID": "20210723012713-3iq96k6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012713-3iq96k6",
+				"updated": "20210723012713"
+			}
+		},
+		{
+			"ID": "20210723012713-a19efca",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210723012713-a19efca",
+				"updated": "20210723012719"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Java 线程实现"
+				}
+			]
+		},
+		{
+			"ID": "20210723012722-2bk1s0c",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012722-2bk1s0c",
+				"updated": "20210723012722"
+			}
+		}
+	]
+}
