@@ -5,7 +5,7 @@
 		"id": "20210707224540-3aouv33",
 		"title": "8 synchronized 原理—Monitor",
 		"type": "doc",
-		"updated": "20210727005746"
+		"updated": "20210727003421"
 	},
 	"Children": [
 		{
@@ -3881,1776 +3881,6 @@
 			}
 		},
 		{
-			"ID": "20210707224540-z6ajt00",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210707224540-z6ajt00",
-				"updated": "20210727003421"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "自适应自旋锁（优化重量级锁） 🔥"
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-u933zlh",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707224540-u933zlh",
-				"updated": "20210727003846"
-			},
-			"Children": [
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "竞争重量级锁"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "的时候，"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "线程挂起、恢复"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "需要转入"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "内核态"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "进行，消耗大"
-				}
-			]
-		},
-		{
-			"ID": "20210727003919-sg7yt3z",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210727003919-sg7yt3z",
-				"updated": "20210727004441"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "又因为"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "时间片小"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "，"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "共享数据锁定时间很短"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "，这段时间"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "挂起、恢复线程不值得"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "，在"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "多处理器"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "下，可以让请求锁的线程"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "不释放处理器资源"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "，"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "继续等一会"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "（让线程执行一个忙循环，即自旋），这时要是持有锁的线程释放了锁，那请求锁的线程将获得锁，还可以避免阻塞，避免上下文切换"
-				}
-			]
-		},
-		{
-			"ID": "20210727003634-l6sh6wm",
-			"Type": "NodeBlockquote",
-			"Properties": {
-				"id": "20210727003634-l6sh6wm",
-				"updated": "20210727003639"
-			},
-			"Children": [
-				{
-					"Type": "NodeBlockquoteMarker",
-					"Data": "\u003e"
-				},
-				{
-					"ID": "20210727003635-90rea5x",
-					"Type": "NodeParagraph",
-					"Properties": {
-						"id": "20210727003635-90rea5x",
-						"updated": "20210727003635"
-					},
-					"Children": [
-						{
-							"Type": "NodeText",
-							"Data": "线程切换"
-						}
-					]
-				},
-				{
-					"ID": "20210727003639-5g7aic3",
-					"Type": "NodeParagraph",
-					"Properties": {
-						"id": "20210727003639-5g7aic3",
-						"updated": "20210727003639"
-					},
-					"Children": [
-						{
-							"Type": "NodeText",
-							"Data": "线程的阻塞唤醒需要从用户态切换到内核态，然后内核态切换 tcb，切到另一个线程的内核态，再从内核态进入用户态，这是一个重量级的操作"
-						}
-					]
-				}
-			]
-		},
-		{
-			"ID": "20210727004614-mvccfv0",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210727004614-mvccfv0",
-				"updated": "20210727004617"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "注意："
-				}
-			]
-		},
-		{
-			"ID": "20210727004514-a5j3cb0",
-			"Type": "NodeList",
-			"ListData": {},
-			"Properties": {
-				"id": "20210727004514-a5j3cb0",
-				"updated": "20210727004643"
-			},
-			"Children": [
-				{
-					"ID": "20210727004639-7lugu4b",
-					"Type": "NodeListItem",
-					"ListData": {
-						"BulletChar": 42,
-						"Marker": "Kg=="
-					},
-					"Properties": {
-						"id": "20210727004639-7lugu4b"
-					},
-					"Children": [
-						{
-							"ID": "20210727004639-h9zw60s",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210727004639-h9zw60s",
-								"updated": "20210727004743"
-							},
-							"Children": [
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "自旋会占用 CPU 时间"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "，单核 CPU 自旋就是浪费，"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "多核 CPU 自旋且时间短才能发挥优势"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "，否则浪费性能"
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210727004619-2veeksw",
-					"Type": "NodeListItem",
-					"ListData": {
-						"BulletChar": 42,
-						"Marker": "Kg=="
-					},
-					"Properties": {
-						"id": "20210727004619-2veeksw"
-					},
-					"Children": [
-						{
-							"ID": "20210727004619-0jiuy6v",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210727004619-0jiuy6v",
-								"updated": "20210727004650"
-							},
-							"Children": [
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "Java6"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": " 及其之后都是"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "默认开启"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "，也可以通过"
-								},
-								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "-XX:+UseSpinning"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "开启"
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210727004814-cebvphu",
-					"Type": "NodeListItem",
-					"ListData": {
-						"BulletChar": 42,
-						"Marker": "Kg=="
-					},
-					"Properties": {
-						"id": "20210727004814-cebvphu"
-					},
-					"Children": [
-						{
-							"ID": "20210727004814-paa90mj",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210727004814-paa90mj",
-								"updated": "20210727004919"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "自旋次数"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "默认10次"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "，可以通过"
-								},
-								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "-XX:PreBlockSpin"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "修改"
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210727004641-d6lgb8q",
-					"Type": "NodeListItem",
-					"ListData": {
-						"BulletChar": 42,
-						"Marker": "Kg=="
-					},
-					"Properties": {
-						"id": "20210727004641-d6lgb8q",
-						"updated": "20210727005219"
-					},
-					"Children": [
-						{
-							"ID": "20210727004641-h0jagi5",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210727004641-h0jagi5",
-								"updated": "20210727005050"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "Java6 之后自旋锁是"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "自适应"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "的，即"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "自旋次数时间不再固定"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "，由前一次在同一个锁上的自旋时间及锁的拥有者的状态来决定的。"
-								}
-							]
-						},
-						{
-							"ID": "20210727005135-rdavd0s",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210727005135-rdavd0s",
-								"updated": "20210727005219"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "比如对象刚刚的一次自旋操作成功过，那么认为这次自旋成功的可能性会高，就多自旋几次；反之，就少自旋甚至不自旋。JVM将变得越来越聪明。"
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210727004643-9gmx6cq",
-					"Type": "NodeListItem",
-					"ListData": {
-						"BulletChar": 42,
-						"Marker": "Kg=="
-					},
-					"Properties": {
-						"id": "20210727004643-9gmx6cq",
-						"updated": "20210727004643"
-					},
-					"Children": [
-						{
-							"ID": "20210727004643-8zbhiex",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210727004643-8zbhiex",
-								"updated": "20210727004643"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "Java 7 之后不能控制是否开启自旋功能"
-								}
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-ktbqumt",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707224540-ktbqumt",
-				"updated": "20210707224540"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "自旋重试成功的情况："
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-bimkane",
-			"Type": "NodeTable",
-			"TableAligns": [
-				0,
-				0,
-				0
-			],
-			"Properties": {
-				"id": "20210707224540-bimkane",
-				"updated": "20210707224540"
-			},
-			"Children": [
-				{
-					"Type": "NodeTableHead",
-					"Data": "thead",
-					"Children": [
-						{
-							"Type": "NodeTableRow",
-							"Data": "tr",
-							"Children": [
-								{
-									"Type": "NodeTableCell",
-									"Data": "th",
-									"Children": [
-										{
-											"Type": "NodeText",
-											"Data": "线程 1（core1 上）"
-										}
-									]
-								},
-								{
-									"Type": "NodeTableCell",
-									"Data": "th",
-									"Children": [
-										{
-											"Type": "NodeText",
-											"Data": "对象 Mark"
-										}
-									]
-								},
-								{
-									"Type": "NodeTableCell",
-									"Data": "th",
-									"Children": [
-										{
-											"Type": "NodeText",
-											"Data": "线程 2（core2 上）"
-										}
-									]
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"Data": "tr",
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "-"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "10（重量锁）"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "-"
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"Data": "tr",
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "访问同步块，获取 monitor"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "10（重量锁）重量锁指针"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "-"
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"Data": "tr",
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "成功（加锁）"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "10（重量锁）重量锁指针"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "-"
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"Data": "tr",
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "执行同步块"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "10（重量锁）重量锁指针"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "-"
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"Data": "tr",
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "执行同步块"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "10（重量锁）重量锁指针"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "访问同步块，获取 monitor"
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"Data": "tr",
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "执行同步块"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "10（重量锁）重量锁指针"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "自旋重试"
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"Data": "tr",
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "执行完毕"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "10（重量锁）重量锁指针"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "自旋重试"
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"Data": "tr",
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "成功（解锁）"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "01（无锁）"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "自旋重试"
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"Data": "tr",
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "-"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "10（重量锁）重量锁指针"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "成功（加锁）"
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"Data": "tr",
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "-"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "10（重量锁）重量锁指针"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "执行同步块"
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"Data": "tr",
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "-"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "..."
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "..."
-								}
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-umvtcv5",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707224540-umvtcv5",
-				"updated": "20210707224540"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "自旋重试失败的情况："
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-69njzjl",
-			"Type": "NodeTable",
-			"TableAligns": [
-				0,
-				0,
-				0
-			],
-			"Properties": {
-				"id": "20210707224540-69njzjl",
-				"updated": "20210707224540"
-			},
-			"Children": [
-				{
-					"Type": "NodeTableHead",
-					"Data": "thead",
-					"Children": [
-						{
-							"Type": "NodeTableRow",
-							"Data": "tr",
-							"Children": [
-								{
-									"Type": "NodeTableCell",
-									"Data": "th",
-									"Children": [
-										{
-											"Type": "NodeText",
-											"Data": "线程 1（core1 上）"
-										}
-									]
-								},
-								{
-									"Type": "NodeTableCell",
-									"Data": "th",
-									"Children": [
-										{
-											"Type": "NodeText",
-											"Data": "对象 Mark"
-										}
-									]
-								},
-								{
-									"Type": "NodeTableCell",
-									"Data": "th",
-									"Children": [
-										{
-											"Type": "NodeText",
-											"Data": "线程 2（core2 上）"
-										}
-									]
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"Data": "tr",
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "-"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "10（重量锁）"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "-"
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"Data": "tr",
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "访问同步块，获取 monitor"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "10（重量锁）重量锁指针"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "-"
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"Data": "tr",
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "成功（加锁）"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "10（重量锁）重量锁指针"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "-"
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"Data": "tr",
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "执行同步块"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "10（重量锁）重量锁指针"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "-"
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"Data": "tr",
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "执行同步块"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "10（重量锁）重量锁指针"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "访问同步块，获取 monitor"
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"Data": "tr",
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "执行同步块"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "10（重量锁）重量锁指针"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "自旋重试"
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"Data": "tr",
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "执行同步块"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "10（重量锁）重量锁指针"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "自旋重试"
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"Data": "tr",
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "执行同步块"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "10（重量锁）重量锁指针"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "自旋重试"
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"Data": "tr",
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "执行同步块"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "10（重量锁）重量锁指针"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "阻塞"
-								}
-							]
-						}
-					]
-				},
-				{
-					"Type": "NodeTableRow",
-					"Data": "tr",
-					"Children": [
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "-"
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "..."
-								}
-							]
-						},
-						{
-							"Type": "NodeTableCell",
-							"Data": "td",
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "..."
-								}
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"ID": "20210727003342-jz0tgcg",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210727003342-jz0tgcg",
-				"updated": "20210727003342"
-			}
-		},
-		{
-			"ID": "20210727005829-0wr38ek",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210727005829-0wr38ek",
-				"updated": "20210727005829"
-			}
-		},
-		{
-			"ID": "20210707224540-2hfr67f",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210707224540-2hfr67f",
-				"updated": "20210727005746"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "锁消除 🔥—由于锁无法逃逸"
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-2nkrivr",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707224540-2nkrivr",
-				"updated": "20210707224540"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "benchmarks 项目见前面章节"
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-75anb5z",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"Properties": {
-				"id": "20210707224540-75anb5z",
-				"updated": "20210707224540"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```"
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "amF2YQ=="
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "@Fork(1)\n@BenchmarkMode(Mode.AverageTime)\n@Warmup(iterations=3)\n@Measurement(iterations=5)\n@OutputTimeUnit(TimeUnit.NANOSECONDS)\npublic class MyBenchmark {\n    static int x = 0;\n    @Benchmark\n    public void a() throws Exception {\n        x++;\n    }\n\n    // JIT（即时编译器）对Java字节码进行进一步优化\n    // 发现锁对象就是局部变量，不会逃离作用范围，所以去掉该锁！这里面的x变量也是局部变量，不会共享，所以去掉该锁！\n    @Benchmark\n    public void b() throws Exception {\n        Object o = new Object();\n        synchronized (o) {\n            x++;\n        }\n    }\n}\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```"
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-1c2n3cb",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"Properties": {
-				"id": "20210707224540-1c2n3cb",
-				"updated": "20210707224540"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```"
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "YmFzaA=="
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "java -jar benchmarks.jar\n\nBenchmark Mode Samples Score Score error Units\nc.i.MyBenchmark.a avgt 5 1.542 0.056 ns/op\nc.i.MyBenchmark.b avgt 5 1.518 0.091 ns/op\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```"
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-gde0v2h",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707224540-gde0v2h",
-				"updated": "20210707224540"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "禁用锁消除优化"
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-o091pxs",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"Properties": {
-				"id": "20210707224540-o091pxs",
-				"updated": "20210707224540"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```"
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "YmFzaA=="
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "java -XX:-EliminateLocks -jar benchmarks.jar\nBenchmark Mode Samples Score Score error Units\nc.i.MyBenchmark.a avgt 5 1.507 0.108 ns/op\nc.i.MyBenchmark.b avgt 5 16.976 1.572 ns/op\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```"
-				}
-			]
-		},
-		{
-			"ID": "20210727003253-x2pj2ik",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210727003253-x2pj2ik",
-				"updated": "20210727005601"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "还有个例子，如 Java5 及之前的 String 拼接，编译时会转为 StringBuffer 进行，Java5 之后转为 StringBuilder。StringBuffer 的 append 是一个同步方法。但是由于绝大部分字符串拼接都是局部变量，所以会进行锁消除"
-				}
-			]
-		},
-		{
-			"ID": "20210727003253-i2e0fdu",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210727003253-i2e0fdu",
-				"updated": "20210727003253"
-			}
-		},
-		{
-			"ID": "20210707224540-85yns3y",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210707224540-85yns3y",
-				"updated": "20210727005711"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "锁粗化 🔥—由于多次锁重入"
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-28tib13",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707224540-28tib13",
-				"updated": "20210727005627"
-			},
-			"Children": [
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "对相同对象多次加锁，导致线程发生多次重入"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "，可以使用锁粗化（"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "扩大同步快的作用域"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "）方式来优化，这不同于之前讲的细分锁的粒度。"
-				}
-			]
-		},
-		{
 			"ID": "20210727005829-v61q2al",
 			"Type": "NodeParagraph",
 			"Properties": {
@@ -8222,6 +6452,1776 @@
 				"id": "20210727003308-27l08it",
 				"updated": "20210727003308"
 			}
+		},
+		{
+			"ID": "20210707224540-z6ajt00",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707224540-z6ajt00",
+				"updated": "20210727003421"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "自适应自旋锁（优化重量级锁） 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-u933zlh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-u933zlh",
+				"updated": "20210727003846"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "竞争重量级锁"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的时候，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "线程挂起、恢复"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "需要转入"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "内核态"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "进行，消耗大"
+				}
+			]
+		},
+		{
+			"ID": "20210727003919-sg7yt3z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210727003919-sg7yt3z",
+				"updated": "20210727004441"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "又因为"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "时间片小"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "共享数据锁定时间很短"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，这段时间"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "挂起、恢复线程不值得"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，在"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "多处理器"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "下，可以让请求锁的线程"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "不释放处理器资源"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "继续等一会"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "（让线程执行一个忙循环，即自旋），这时要是持有锁的线程释放了锁，那请求锁的线程将获得锁，还可以避免阻塞，避免上下文切换"
+				}
+			]
+		},
+		{
+			"ID": "20210727003634-l6sh6wm",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20210727003634-l6sh6wm",
+				"updated": "20210727003639"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20210727003635-90rea5x",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210727003635-90rea5x",
+						"updated": "20210727003635"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "线程切换"
+						}
+					]
+				},
+				{
+					"ID": "20210727003639-5g7aic3",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20210727003639-5g7aic3",
+						"updated": "20210727003639"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "线程的阻塞唤醒需要从用户态切换到内核态，然后内核态切换 tcb，切到另一个线程的内核态，再从内核态进入用户态，这是一个重量级的操作"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210727004614-mvccfv0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210727004614-mvccfv0",
+				"updated": "20210727004617"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意："
+				}
+			]
+		},
+		{
+			"ID": "20210727004514-a5j3cb0",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210727004514-a5j3cb0",
+				"updated": "20210727004643"
+			},
+			"Children": [
+				{
+					"ID": "20210727004639-7lugu4b",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210727004639-7lugu4b"
+					},
+					"Children": [
+						{
+							"ID": "20210727004639-h9zw60s",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210727004639-h9zw60s",
+								"updated": "20210727004743"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "自旋会占用 CPU 时间"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，单核 CPU 自旋就是浪费，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "多核 CPU 自旋且时间短才能发挥优势"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，否则浪费性能"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210727004619-2veeksw",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210727004619-2veeksw"
+					},
+					"Children": [
+						{
+							"ID": "20210727004619-0jiuy6v",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210727004619-0jiuy6v",
+								"updated": "20210727004650"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "Java6"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 及其之后都是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "默认开启"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，也可以通过"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "-XX:+UseSpinning"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "开启"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210727004814-cebvphu",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210727004814-cebvphu"
+					},
+					"Children": [
+						{
+							"ID": "20210727004814-paa90mj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210727004814-paa90mj",
+								"updated": "20210727004919"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "自旋次数"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "默认10次"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，可以通过"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "-XX:PreBlockSpin"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "修改"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210727004641-d6lgb8q",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210727004641-d6lgb8q",
+						"updated": "20210727005219"
+					},
+					"Children": [
+						{
+							"ID": "20210727004641-h0jagi5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210727004641-h0jagi5",
+								"updated": "20210727005050"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Java6 之后自旋锁是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "自适应"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的，即"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "自旋次数时间不再固定"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，由前一次在同一个锁上的自旋时间及锁的拥有者的状态来决定的。"
+								}
+							]
+						},
+						{
+							"ID": "20210727005135-rdavd0s",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210727005135-rdavd0s",
+								"updated": "20210727005219"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "比如对象刚刚的一次自旋操作成功过，那么认为这次自旋成功的可能性会高，就多自旋几次；反之，就少自旋甚至不自旋。JVM将变得越来越聪明。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210727004643-9gmx6cq",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210727004643-9gmx6cq",
+						"updated": "20210727004643"
+					},
+					"Children": [
+						{
+							"ID": "20210727004643-8zbhiex",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210727004643-8zbhiex",
+								"updated": "20210727004643"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Java 7 之后不能控制是否开启自旋功能"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-ktbqumt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-ktbqumt",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "自旋重试成功的情况："
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-bimkane",
+			"Type": "NodeTable",
+			"TableAligns": [
+				0,
+				0,
+				0
+			],
+			"Properties": {
+				"id": "20210707224540-bimkane",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeTableHead",
+					"Data": "thead",
+					"Children": [
+						{
+							"Type": "NodeTableRow",
+							"Data": "tr",
+							"Children": [
+								{
+									"Type": "NodeTableCell",
+									"Data": "th",
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "线程 1（core1 上）"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"Data": "th",
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "对象 Mark"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"Data": "th",
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "线程 2（core2 上）"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "访问同步块，获取 monitor"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "成功（加锁）"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行同步块"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行同步块"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "访问同步块，获取 monitor"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行同步块"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "自旋重试"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行完毕"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "自旋重试"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "成功（解锁）"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "01（无锁）"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "自旋重试"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "成功（加锁）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行同步块"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "..."
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "..."
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-umvtcv5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-umvtcv5",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "自旋重试失败的情况："
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-69njzjl",
+			"Type": "NodeTable",
+			"TableAligns": [
+				0,
+				0,
+				0
+			],
+			"Properties": {
+				"id": "20210707224540-69njzjl",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeTableHead",
+					"Data": "thead",
+					"Children": [
+						{
+							"Type": "NodeTableRow",
+							"Data": "tr",
+							"Children": [
+								{
+									"Type": "NodeTableCell",
+									"Data": "th",
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "线程 1（core1 上）"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"Data": "th",
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "对象 Mark"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"Data": "th",
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "线程 2（core2 上）"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "访问同步块，获取 monitor"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "成功（加锁）"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行同步块"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行同步块"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "访问同步块，获取 monitor"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行同步块"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "自旋重试"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行同步块"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "自旋重试"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行同步块"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "自旋重试"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "执行同步块"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "10（重量锁）重量锁指针"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "阻塞"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "-"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "..."
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "..."
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210727003342-jz0tgcg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210727003342-jz0tgcg",
+				"updated": "20210727003342"
+			}
+		},
+		{
+			"ID": "20210727005829-0wr38ek",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210727005829-0wr38ek",
+				"updated": "20210727005829"
+			}
+		},
+		{
+			"ID": "20210707224540-2hfr67f",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707224540-2hfr67f",
+				"updated": "20210727005746"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "锁消除 🔥—由于锁无法逃逸"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-2nkrivr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-2nkrivr",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "benchmarks 项目见前面章节"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-75anb5z",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707224540-75anb5z",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Fork(1)\n@BenchmarkMode(Mode.AverageTime)\n@Warmup(iterations=3)\n@Measurement(iterations=5)\n@OutputTimeUnit(TimeUnit.NANOSECONDS)\npublic class MyBenchmark {\n    static int x = 0;\n    @Benchmark\n    public void a() throws Exception {\n        x++;\n    }\n\n    // JIT（即时编译器）对Java字节码进行进一步优化\n    // 发现锁对象就是局部变量，不会逃离作用范围，所以去掉该锁！这里面的x变量也是局部变量，不会共享，所以去掉该锁！\n    @Benchmark\n    public void b() throws Exception {\n        Object o = new Object();\n        synchronized (o) {\n            x++;\n        }\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-1c2n3cb",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707224540-1c2n3cb",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "java -jar benchmarks.jar\n\nBenchmark Mode Samples Score Score error Units\nc.i.MyBenchmark.a avgt 5 1.542 0.056 ns/op\nc.i.MyBenchmark.b avgt 5 1.518 0.091 ns/op\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-gde0v2h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-gde0v2h",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "禁用锁消除优化"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-o091pxs",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707224540-o091pxs",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "YmFzaA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "java -XX:-EliminateLocks -jar benchmarks.jar\nBenchmark Mode Samples Score Score error Units\nc.i.MyBenchmark.a avgt 5 1.507 0.108 ns/op\nc.i.MyBenchmark.b avgt 5 16.976 1.572 ns/op\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210727003253-x2pj2ik",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210727003253-x2pj2ik",
+				"updated": "20210727005601"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "还有个例子，如 Java5 及之前的 String 拼接，编译时会转为 StringBuffer 进行，Java5 之后转为 StringBuilder。StringBuffer 的 append 是一个同步方法。但是由于绝大部分字符串拼接都是局部变量，所以会进行锁消除"
+				}
+			]
+		},
+		{
+			"ID": "20210727003253-i2e0fdu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210727003253-i2e0fdu",
+				"updated": "20210727003253"
+			}
+		},
+		{
+			"ID": "20210707224540-85yns3y",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707224540-85yns3y",
+				"updated": "20210727005711"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "锁粗化 🔥—由于多次锁重入"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-28tib13",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-28tib13",
+				"updated": "20210727005627"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "对相同对象多次加锁，导致线程发生多次重入"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，可以使用锁粗化（"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "扩大同步快的作用域"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "）方式来优化，这不同于之前讲的细分锁的粒度。"
+				}
+			]
 		}
 	]
 }
