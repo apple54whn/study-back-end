@@ -3,10 +3,664 @@
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20210707224756-8c68gf7",
-		"title": "33 线程安全理论",
-		"updated": "20210720233348"
+		"title": "4 线程安全理论",
+		"updated": "20210727002907"
 	},
 	"Children": [
+		{
+			"ID": "20210727000345-ebsh1b8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210727000345-ebsh1b8",
+				"updated": "20210727000345"
+			}
+		},
+		{
+			"ID": "20210727000346-lxikgr6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210727000346-lxikgr6",
+				"updated": "20210727001934"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "实现线程安全 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210727000442-xxg3v7t",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210727000442-xxg3v7t",
+				"updated": "20210727000442"
+			}
+		},
+		{
+			"ID": "20210727000446-x2zazw0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210727000446-x2zazw0",
+				"updated": "20210727002017"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "互斥（阻塞）同步—悲观锁"
+				}
+			]
+		},
+		{
+			"ID": "20210727000450-0y3s0j1",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210727000450-0y3s0j1",
+				"updated": "20210727000728"
+			},
+			"Children": [
+				{
+					"ID": "20210727000453-ue5xw3d",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210727000453-ue5xw3d",
+						"updated": "20210727000728"
+					},
+					"Children": [
+						{
+							"ID": "20210727000453-tka6za9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210727000453-tka6za9",
+								"updated": "20210727000705"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "互斥是方法"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，如：临界区（Critical Section）、互斥量（Mutex）、信号量（Semaphore）"
+								}
+							]
+						},
+						{
+							"ID": "20210727000714-hj10a52",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210727000714-hj10a52",
+								"updated": "20210727000728"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Java 中可以使用 synchronized、Lock 实现"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210727000457-2465zmg",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210727000457-2465zmg"
+					},
+					"Children": [
+						{
+							"ID": "20210727000457-ts9ge9y",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210727000457-ts9ge9y",
+								"updated": "20210727000704"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "同步是目的"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210727000706-5v7e2bd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210727000706-5v7e2bd",
+				"updated": "20210727000757"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "缺点："
+				}
+			]
+		},
+		{
+			"ID": "20210727000757-9d5mff3",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210727000757-9d5mff3",
+				"updated": "20210727000858"
+			},
+			"Children": [
+				{
+					"ID": "20210727000758-ayftvdd",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210727000758-ayftvdd",
+						"updated": "20210727000858"
+					},
+					"Children": [
+						{
+							"ID": "20210727000758-nothf49",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210727000758-nothf49",
+								"updated": "20210727000858"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "线程阻塞、唤醒的性能开销。所以也称阻塞同步"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210727000746-7ebkb2h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210727000746-7ebkb2h",
+				"updated": "20210727000746"
+			}
+		},
+		{
+			"ID": "20210727000707-lcjwkch",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210727000707-lcjwkch",
+				"updated": "20210727000949"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "非阻塞同步—乐观无锁"
+				}
+			]
+		},
+		{
+			"ID": "20210727000949-xvfvska",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210727000949-xvfvska",
+				"updated": "20210727001253"
+			},
+			"Children": [
+				{
+					"ID": "20210727001253-2674ij0",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210727001253-2674ij0"
+					},
+					"Children": [
+						{
+							"ID": "20210727001253-api38no",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210727001253-api38no",
+								"updated": "20210727001320"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "乐观并发策略"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "需要硬件指令集的发展"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "！如下必须使用一条指令完成："
+								}
+							]
+						},
+						{
+							"ID": "20210727001321-821ff2w",
+							"Type": "NodeList",
+							"ListData": {},
+							"Properties": {
+								"id": "20210727001321-821ff2w"
+							},
+							"Children": [
+								{
+									"ID": "20210727001257-fmk8qj7",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20210727001257-fmk8qj7"
+									},
+									"Children": [
+										{
+											"ID": "20210727001257-60ew5rd",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210727001257-60ew5rd",
+												"updated": "20210727001403"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "测试并设置：Test-and-Set"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210727001338-fep24nr",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20210727001338-fep24nr"
+									},
+									"Children": [
+										{
+											"ID": "20210727001338-v3ot4fq",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210727001338-v3ot4fq",
+												"updated": "20210727001401"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "获取并增加：Fetch-and-Increment"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210727001405-au6vg10",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20210727001405-au6vg10"
+									},
+									"Children": [
+										{
+											"ID": "20210727001405-dbyox30",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210727001405-dbyox30",
+												"updated": "20210727001412"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "交换：Swap"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210727001413-mhhc7se",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20210727001413-mhhc7se"
+									},
+									"Children": [
+										{
+											"ID": "20210727001413-9d9xr81",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210727001413-9d9xr81",
+												"updated": "20210727001444"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "比较并交换：Compar-and-Swap，CAS"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210727001440-khynm6r",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20210727001440-khynm6r"
+									},
+									"Children": [
+										{
+											"ID": "20210727001440-wrh2p4i",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210727001440-wrh2p4i",
+												"updated": "20210727001507"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "加载链接/条件储存：Load-Linked/St ore-Condit ional，LL/SC"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210727001508-4yx1811",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210727001508-4yx1811",
+				"updated": "20210727001749"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "后2条是现代处理器增加的指令。Java 的 CAS 封装在 Unsafe 类中，且必须是 Bootstrap ClassLoader 加载的类才能访问它。Java 9后开放 VarHandle 类供用户使用 Unsafe 类"
+				}
+			]
+		},
+		{
+			"ID": "20210727001750-oo8uyfi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210727001750-oo8uyfi",
+				"updated": "20210727001830"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "缺点："
+				}
+			]
+		},
+		{
+			"ID": "20210727001830-otm27xt",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210727001830-otm27xt",
+				"updated": "20210727001832"
+			},
+			"Children": [
+				{
+					"ID": "20210727001832-6weu191",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210727001832-6weu191"
+					},
+					"Children": [
+						{
+							"ID": "20210727001832-wy4l8je",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210727001832-wy4l8je",
+								"updated": "20210727001852"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "ABA 问题"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210727001852-57pw97j",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210727001852-57pw97j",
+				"updated": "20210727001852"
+			}
+		},
+		{
+			"ID": "20210727001925-svatm3b",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210727001925-svatm3b",
+				"updated": "20210727001930"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "无同步方案"
+				}
+			]
+		},
+		{
+			"ID": "20210727001945-ict723s",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210727001945-ict723s",
+				"updated": "20210727002149"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "不涉及共享数据。"
+				}
+			]
+		},
+		{
+			"ID": "20210727002853-7l9bfzt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210727002853-7l9bfzt",
+				"updated": "20210727002907"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如：经典Web交互模型中 的“一个请求对应一个服务器线程”(Thread-per-Request)的处理方式。可以使用"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "ThreadLocal"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 处理"
+				}
+			]
+		},
+		{
+			"ID": "20210727001931-jmtnv7i",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210727001931-jmtnv7i",
+				"updated": "20210727001931"
+			}
+		},
+		{
+			"ID": "20210727000740-d6n56ag",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210727000740-d6n56ag",
+				"updated": "20210727000740"
+			}
+		},
+		{
+			"ID": "20210727000504-rd97zkm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210727000504-rd97zkm",
+				"updated": "20210727000504"
+			}
+		},
+		{
+			"ID": "20210727000504-fh0lch6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210727000504-fh0lch6",
+				"updated": "20210727000504"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "\t"
+				}
+			]
+		},
+		{
+			"ID": "20210727000356-bidu99a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210727000356-bidu99a",
+				"updated": "20210727000356"
+			}
+		},
+		{
+			"ID": "20210727000356-jzn3z8q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210727000356-jzn3z8q",
+				"updated": "20210727000356"
+			}
+		},
+		{
+			"ID": "20210727000346-txbqp80",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210727000346-txbqp80",
+				"updated": "20210727000346"
+			}
+		},
 		{
 			"ID": "20210707224803-tvjytug",
 			"Type": "NodeHeading",

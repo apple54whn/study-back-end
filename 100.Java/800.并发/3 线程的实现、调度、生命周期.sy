@@ -1,0 +1,3712 @@
+{
+	"ID": "20210723012339-3guxcyc",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210723012339-3guxcyc",
+		"title": "3 线程的实现、调度、生命周期",
+		"updated": "20210726233832"
+	},
+	"Children": [
+		{
+			"ID": "20210723012339-ehpmiro",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012339-ehpmiro",
+				"updated": "20210723012520"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "目前 Java 中线程是处理器资源调度的最基本单位，若 Java 17 后 Loom 项目可以为 Java 引入纤程（Fiber），则会改变这点"
+				}
+			]
+		},
+		{
+			"ID": "20210723012521-f3ebgk5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012521-f3ebgk5",
+				"updated": "20210723012521"
+			}
+		},
+		{
+			"ID": "20210723012521-t42thhw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210723012521-t42thhw",
+				"updated": "20210726214358"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "实现线程的方式"
+				}
+			]
+		},
+		{
+			"ID": "20210723012555-o5kikwp",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210723012555-o5kikwp",
+				"style": "border-radius: 4px; transition: all 0.15s cubic-bezier(0, 0, 0.2, 1) 0ms; background-color: var(--b3-theme-primary-lightest); box-shadow: 4px 0px 0 var(--b3-theme-primary-lightest), -4px 0px 0 var(--b3-theme-primary-lightest);",
+				"updated": "20210724165216"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "内核线程实现—1:1 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210723012644-mneqqdb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012644-mneqqdb",
+				"updated": "20210724165146"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "内核线程"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "（Kernel-Level Thread，KTL）就是由 OS Kernel 支持的线程。由"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "内核对内核线程进行调度、切换"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，并将线程任务映射到各个处理器上。内核线程可看作内核的一个个分身。"
+				}
+			]
+		},
+		{
+			"ID": "20210723012644-pg93zz8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012644-pg93zz8",
+				"updated": "20210724164753"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "程序不直接使用 OS Kernel，而是使用的高级接口—"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "轻量级进程"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "（Light Weight Process，LWP），即我们称为的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "线程"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。LWP 与 KTL 之间也是一对一关系，且必须先支持 KLT，才能有 LWP。"
+				}
+			]
+		},
+		{
+			"ID": "20210723012644-8l1njn3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012644-8l1njn3",
+				"updated": "20210724164839"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "../assets/image-20210724164839-mqh4ptb.png"
+						},
+						{
+							"Type": "NodeLinkSpace"
+						},
+						{
+							"Type": "NodeLinkTitle",
+							"Data": "轻量级进程与内核线程之间1:1的关系"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210723012645-7efz5sa",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210723012645-7efz5sa",
+				"updated": "20210724165219"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "轻量级进程优缺点 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210724165220-cz7dj17",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210724165220-cz7dj17",
+				"updated": "20210724165223"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "优点："
+				}
+			]
+		},
+		{
+			"ID": "20210724165224-1kgmv77",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210724165224-1kgmv77",
+				"updated": "20210724165224"
+			},
+			"Children": [
+				{
+					"ID": "20210724165224-jtbk31z",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210724165224-jtbk31z"
+					},
+					"Children": [
+						{
+							"ID": "20210724165224-05aha12",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210724165224-05aha12",
+								"updated": "20210724165349"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "每个"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "轻量级进程"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "都是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "独立的调度单元"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "不会因其中一个的阻塞而影响整个进程"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210724165357-u37zjcl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210724165357-u37zjcl",
+				"updated": "20210724165400"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "缺点："
+				}
+			]
+		},
+		{
+			"ID": "20210724165400-f4loihu",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210724165400-f4loihu",
+				"updated": "20210724172301"
+			},
+			"Children": [
+				{
+					"ID": "20210724165401-nez6pmy",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210724165401-nez6pmy",
+						"updated": "20210724172140"
+					},
+					"Children": [
+						{
+							"ID": "20210724165401-822o2qw",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210724165401-822o2qw",
+								"updated": "20210724172140"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "内核线程的线程操作"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，如创建、析构、同步等都"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "需要系统调用"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（System Call），其"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "代价高"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，需在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "用户态、内核态之间来回切换"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210724172137-lji8rkj",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210724172137-lji8rkj",
+						"updated": "20210724172301"
+					},
+					"Children": [
+						{
+							"ID": "20210724172137-md7ctbi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210724172137-md7ctbi",
+								"updated": "20210724172301"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "每个轻量级进程需要消耗对应的内核线程资源"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（如栈空间），所以系统支持的轻量级进程"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "数量有限"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210724165206-6kzibkw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210724165206-6kzibkw",
+				"updated": "20210724165206"
+			}
+		},
+		{
+			"ID": "20210724165137-44053x8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210724165137-44053x8",
+				"updated": "20210724165137"
+			}
+		},
+		{
+			"ID": "20210726233816-5j0ytny",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210726233816-5j0ytny",
+				"updated": "20210726233832"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "内核线程的成本—上下文切换 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210726233916-lnejzzp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210726233916-lnejzzp",
+				"updated": "20210726234759"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "切换的成本来自"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "保护和恢复现场"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "代码的执行需要上下文"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，上下文就是："
+				}
+			]
+		},
+		{
+			"ID": "20210726234143-s7kdtq7",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210726234143-s7kdtq7",
+				"updated": "20210726234340"
+			},
+			"Children": [
+				{
+					"ID": "20210726234144-vdkfdqg",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210726234144-vdkfdqg",
+						"updated": "20210726234320"
+					},
+					"Children": [
+						{
+							"ID": "20210726234144-t8yv42j",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210726234144-t8yv42j",
+								"updated": "20210726234320"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "程序员角度：方法调用过程中的局部变量和资源"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210726234200-ydbjgc7",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210726234200-ydbjgc7"
+					},
+					"Children": [
+						{
+							"ID": "20210726234200-k7hogyo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210726234200-k7hogyo",
+								"updated": "20210726234231"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "线程角度：方法调用栈中存储的各类信息"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210726234231-22zhrdp",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210726234231-22zhrdp",
+						"updated": "20210726234340"
+					},
+					"Children": [
+						{
+							"ID": "20210726234231-uxgsywo",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210726234231-uxgsywo",
+								"updated": "20210726234340"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "操作系统、硬件角度：是存储在内存、缓存、寄存器的数值"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210726233832-9i5724z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210726233832-9i5724z",
+				"updated": "20210726233832"
+			}
+		},
+		{
+			"ID": "20210726233816-fi8x6ht",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210726233816-fi8x6ht",
+				"updated": "20210726233816"
+			}
+		},
+		{
+			"ID": "20210724165016-xi6235z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210724165016-xi6235z",
+				"updated": "20210724165016"
+			}
+		},
+		{
+			"ID": "20210724165016-bw64zsu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210724165016-bw64zsu",
+				"updated": "20210724165016"
+			}
+		},
+		{
+			"ID": "20210723012645-43kzprk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210723012645-43kzprk",
+				"updated": "20210724181330"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "用户线程实现—1:n 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210724172339-d1yz6c3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210724172339-d1yz6c3",
+				"updated": "20210724172524"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "只要不是内核线程的都可以被认为是用户线程。"
+				}
+			]
+		},
+		{
+			"ID": "20210724172526-bfwifem",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210724172526-bfwifem",
+				"updated": "20210724172526"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意轻量级进程需要内核线程支持（如系统调用等），效率受到限制，不具备用户线程的优点"
+				}
+			]
+		},
+		{
+			"ID": "20210723012702-3e3pvis",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012702-3e3pvis",
+				"updated": "20210724172546"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "../assets/image-20210724172546-n5xbj8x.png"
+						},
+						{
+							"Type": "NodeLinkSpace"
+						},
+						{
+							"Type": "NodeLinkTitle",
+							"Data": "进程与用户线程之间1:N的关系"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210723012702-wwumwcb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012702-wwumwcb",
+				"updated": "20210724172806"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "优点："
+				}
+			]
+		},
+		{
+			"ID": "20210724172737-9t6s6uj",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210724172737-9t6s6uj",
+				"updated": "20210724181202"
+			},
+			"Children": [
+				{
+					"ID": "20210724173016-0eyptut",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210724173016-0eyptut",
+						"updated": "20210724173214"
+					},
+					"Children": [
+						{
+							"ID": "20210724173016-xjazuld",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210724173016-xjazuld",
+								"updated": "20210724173214"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "系统内核"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "不能感知"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "到用户线程的存在及如何实现"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210724172737-7z2z8o2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210724172737-7z2z8o2",
+						"updated": "20210724181202"
+					},
+					"Children": [
+						{
+							"ID": "20210724172737-0fpgxjg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210724172737-0fpgxjg",
+								"updated": "20210724181202"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "用户线程不需要 OS Kernel 支持。所以"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "用户线程的建立、销毁、同步、调度都是在用户态中完成"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，操作"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "快速、低消耗"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，支持"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "大规模并发"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210724172818-tz1d87w",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210724172818-tz1d87w",
+				"updated": "20210724172822"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "缺点："
+				}
+			]
+		},
+		{
+			"ID": "20210724172822-70p84dp",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210724172822-70p84dp",
+				"updated": "20210724172823"
+			},
+			"Children": [
+				{
+					"ID": "20210724172823-ezqvn07",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210724172823-ezqvn07"
+					},
+					"Children": [
+						{
+							"ID": "20210724172823-qdsre04",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210724172823-qdsre04",
+								"updated": "20210724173156"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "用户线程不需要 OS Kernel 支持。所以"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "用户线程的建立、销毁、同步、调度都是用户考虑"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的事情："
+								}
+							]
+						},
+						{
+							"ID": "20210724173148-k8cown1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210724173148-k8cown1",
+								"updated": "20210724175618"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "操作系统只把处理器资源分配到进程，所以『处理阻塞』『多处理器系统如何线程映射到其他处理器』解决麻烦"
+								}
+							]
+						},
+						{
+							"ID": "20210724175619-jrq6efx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210724175619-jrq6efx",
+								"updated": "20210724175749"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Java 当时的绿色线程就是用户线程，如今舍弃了，Ruby也是。近年的Golang、Erlang又支持了用户线程"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210723012702-tzqoqgb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012702-tzqoqgb",
+				"updated": "20210723012702"
+			}
+		},
+		{
+			"ID": "20210723012702-9cwmhrz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210723012702-9cwmhrz",
+				"updated": "20210724175833"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "混合实现—n:m"
+				}
+			]
+		},
+		{
+			"ID": "20210723012712-tii5tqv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012712-tii5tqv",
+				"updated": "20210724180958"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "操作系统支持的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "轻量级进程"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "作为"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "内核线程"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "和"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "用户线程"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "的桥梁。"
+				}
+			]
+		},
+		{
+			"ID": "20210724181007-txenfyx",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210724181007-txenfyx",
+				"updated": "20210724181008"
+			},
+			"Children": [
+				{
+					"ID": "20210724181107-y19qpr5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210724181107-y19qpr5"
+					},
+					"Children": [
+						{
+							"ID": "20210724181107-dregt8w",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210724181107-dregt8w",
+								"updated": "20210724181154"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "用户线程的建立、销毁、同步、调度都是在用户态中完成，消耗低，支持"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "大规模并发"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210724181008-lc3gzyo",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210724181008-lc3gzyo"
+					},
+					"Children": [
+						{
+							"ID": "20210724181008-839vwk9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210724181008-839vwk9",
+								"updated": "20210724181036"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "可以使用内核提供的线程调度、处理器映射"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210724181215-quacaf9",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210724181215-quacaf9"
+					},
+					"Children": [
+						{
+							"ID": "20210724181215-g3oxiya",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210724181215-g3oxiya",
+								"updated": "20210724181308"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "用户线程的系统调用通过轻量级进程完成，降低整个进程被阻塞风险"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210724181320-9upqbek",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210724181320-9upqbek",
+				"updated": "20210724181323"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "许多UNIX系列的操作系统，如Solaris、HP-UX等都提供了M:N的线程模型实现"
+				}
+			]
+		},
+		{
+			"ID": "20210723012712-1qjz0tm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012712-1qjz0tm",
+				"updated": "20210724180020"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image.png"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "../assets/image-20210724180020-ppgxwy4.png"
+						},
+						{
+							"Type": "NodeLinkSpace"
+						},
+						{
+							"Type": "NodeLinkTitle",
+							"Data": "用户线程与轻量级进程之间M :N的关系"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210723012712-f2stxy5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012712-f2stxy5",
+				"updated": "20210723012712"
+			}
+		},
+		{
+			"ID": "20210723012712-tq1ercr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012712-tq1ercr",
+				"updated": "20210723012712"
+			}
+		},
+		{
+			"ID": "20210723012713-3iq96k6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210723012713-3iq96k6",
+				"updated": "20210723012713"
+			}
+		},
+		{
+			"ID": "20210723012713-a19efca",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210723012713-a19efca",
+				"style": "border-radius: 4px; transition: all 0.15s cubic-bezier(0, 0, 0.2, 1) 0ms; background-color: var(--b3-theme-primary-lightest); box-shadow: 4px 0px 0 var(--b3-theme-primary-lightest), -4px 0px 0 var(--b3-theme-primary-lightest);",
+				"updated": "20210726214310"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Java 线程实现 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210723012722-2bk1s0c",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210723012722-2bk1s0c",
+				"updated": "20210726215006"
+			},
+			"Children": [
+				{
+					"ID": "20210724181414-51qnfhz",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210724181414-51qnfhz",
+						"updated": "20210726214115"
+					},
+					"Children": [
+						{
+							"ID": "20210724181414-6fvbij6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210724181414-6fvbij6",
+								"updated": "20210726214115"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Java 线程实现是由具体 JVM 来完成的，不受 JVM 规范约束，JVM又受到具体操作系统影响"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210724181424-xuvgppg",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210724181424-xuvgppg"
+					},
+					"Children": [
+						{
+							"ID": "20210724181424-lv8zt8c",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210724181424-lv8zt8c",
+								"updated": "20210724181516"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "早起 Classic 虚拟机（JDK1.2及之前）使用『绿色线程』的用户线程实现"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210724181517-0onrkvl",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210724181517-0onrkvl",
+						"updated": "20210726215006"
+					},
+					"Children": [
+						{
+							"ID": "20210724181517-ohwurl1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210724181517-ohwurl1",
+								"updated": "20210724181600"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "JDK1.3 起，采用基于操作系统原生线程实现，即 1:1 线程模型"
+								}
+							]
+						},
+						{
+							"ID": "20210724181601-cyntbq2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210724181601-cyntbq2",
+								"updated": "20210726215006"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如 "
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "HotSpot"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，其"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "每一个线程都直接映射到一个操作系统原生线程来实现"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的，HotSpot "
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "不会干涉线程调度"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（线程优先级只是建议，1—10可能无法完整映射到具体操作系统的线程优先级上，如 Windows 只有7种优先级；『优先级推进器』也会影响）"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210724181806-wg2oa3q",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210724181806-wg2oa3q",
+				"updated": "20210724181945"
+			}
+		},
+		{
+			"ID": "20210726214202-mr3mlif",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210726214202-mr3mlif",
+				"updated": "20210726214202"
+			}
+		},
+		{
+			"ID": "20210707224540-klsfnbm",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707224540-klsfnbm",
+				"updated": "20210726214205"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "线程调度模型 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-ndqy3bz",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210707224540-ndqy3bz",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"ID": "20210707224540-8p8pyjr",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-8p8pyjr"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-fbgqyc5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-fbgqyc5"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "线程调度模型"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（应用程序的执行都是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "CPU 在多个线程间快速切换"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "完成的）"
+								}
+							]
+						},
+						{
+							"ID": "20210707224540-91aw45d",
+							"Type": "NodeList",
+							"ListData": {},
+							"Properties": {
+								"id": "20210707224540-91aw45d"
+							},
+							"Children": [
+								{
+									"ID": "20210707224540-uxe7rfl",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20210707224540-uxe7rfl"
+									},
+									"Children": [
+										{
+											"ID": "20210707224540-3k86itz",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707224540-3k86itz"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "分时调度模型（时间片）"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "：所有线程轮流使用 CPU 的使用权，平均分配每个线程占用 CPU 的时间片"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707224540-774o9n0",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20210707224540-774o9n0"
+									},
+									"Children": [
+										{
+											"ID": "20210707224540-o31thnd",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707224540-o31thnd"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "抢占式调度模型"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "：优先让"
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "优先级高"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "的线程使用 CPU，如果线程的优先级相同，那么会随机选择一个，优先级高的线程获取的 CPU 时间片相对多一些"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-6ytbfy7",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-6ytbfy7"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-o2sky98",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-o2sky98"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "Java 的线程调度方法"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707224540-uqt9ylu",
+							"Type": "NodeList",
+							"ListData": {},
+							"Properties": {
+								"id": "20210707224540-uqt9ylu"
+							},
+							"Children": [
+								{
+									"ID": "20210707224540-phrtelb",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20210707224540-phrtelb"
+									},
+									"Children": [
+										{
+											"ID": "20210707224540-t9k83fk",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707224540-t9k83fk"
+											},
+											"Children": [
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "同优先级"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "线程组成"
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "先进先出队列"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "（先到先服务），使用"
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "时间片"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "策略"
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707224540-5tjo5jv",
+									"Type": "NodeListItem",
+									"ListData": {
+										"BulletChar": 42,
+										"Marker": "Kg=="
+									},
+									"Properties": {
+										"id": "20210707224540-5tjo5jv"
+									},
+									"Children": [
+										{
+											"ID": "20210707224540-dowl1t7",
+											"Type": "NodeParagraph",
+											"Properties": {
+												"id": "20210707224540-dowl1t7"
+											},
+											"Children": [
+												{
+													"Type": "NodeText",
+													"Data": "对"
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "高优先级"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "，使用优先调度的"
+												},
+												{
+													"Type": "NodeStrong",
+													"Data": "strong",
+													"Children": [
+														{
+															"Type": "NodeStrongA6kOpenMarker",
+															"Data": "**"
+														},
+														{
+															"Type": "NodeText",
+															"Data": "抢占式"
+														},
+														{
+															"Type": "NodeStrongA6kCloseMarker",
+															"Data": "**"
+														}
+													]
+												},
+												{
+													"Type": "NodeText",
+													"Data": "策略"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210726214258-o0gtr5n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210726214258-o0gtr5n",
+				"updated": "20210726214258"
+			}
+		},
+		{
+			"ID": "20210726214332-t24osnq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210726214332-t24osnq",
+				"updated": "20210726214332"
+			}
+		},
+		{
+			"ID": "20210726214333-s4cqg5k",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210726214333-s4cqg5k",
+				"updated": "20210726214337"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "线程生命周期"
+				}
+			]
+		},
+		{
+			"ID": "20210726214258-fcoqvmx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210726214258-fcoqvmx",
+				"updated": "20210726214258"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "五种状态—OS 层面 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-bs8v7i8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-bs8v7i8",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20210216131939277"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "../assets/image-20210216131939277.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-maqz7fa",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210707224540-maqz7fa",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"ID": "20210707224540-aui4hao",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-aui4hao"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-80nc90h",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-80nc90h"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "【初始状态】仅是在语言层面创建了线程对象，还未与操作系统线程关联"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-m102eql",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-m102eql"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-d112cha",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-d112cha"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "【可运行状态】（就绪状态）指该线程已经被创建（与操作系统线程关联），可以由 CPU 调度执行"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-n8xdk5a",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-n8xdk5a"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-rh1pdcv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-rh1pdcv"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "【运行状态】指获取了 CPU 时间片并运行中的状态"
+								}
+							]
+						},
+						{
+							"ID": "20210707224540-si54m0u",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-si54m0u"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "当 CPU 时间片用完，会从【运行状态】转换至【可运行状态】，会导致线程的上下文切换"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-5n3fv9t",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-5n3fv9t"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-a4ib2v7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-a4ib2v7"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "【阻塞状态】"
+								}
+							]
+						},
+						{
+							"ID": "20210707224540-yat8ahg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-yat8ahg"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果调用了"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "阻塞 API，如 BIO 读写文件"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，这时该线程实际不会用到 CPU，会导致线程上下文切换，进入【阻塞状态】，等 BIO 操作完毕，会由操作系统唤醒阻塞的线程，转换至【可运行状态】"
+								}
+							]
+						},
+						{
+							"ID": "20210707224540-xt2cebq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-xt2cebq"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "与【可运行状态】的区别是，对【阻塞状态】的线程来说只要它们一直不唤醒，调度器就一直不会考虑调度它们"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-7njresf",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-7njresf"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-06wnjg3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-06wnjg3"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "【终止状态】表示线程已经执行完毕，生命周期已经结束，不会再转换为其它状态"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210726214318-dttva94",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210726214318-dttva94",
+				"updated": "20210726214318"
+			}
+		},
+		{
+			"ID": "20210707224540-dto7hz4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707224540-dto7hz4",
+				"updated": "20210726214327"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "六种状态—Java 层面 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-j1qr5hm",
+			"Type": "NodeIFrame",
+			"Data": "\u003ciframe id=\"embed_dom\" name=\"embed_dom\" frameborder=\"0\" style=\"display: block; width: 904px; height: 741px;\" src=\"https://www.processon.com/embed/60267a51f346fb64f5655b6a\" data-src=\"https://www.processon.com/embed/60267a51f346fb64f5655b6a\"\u003e\u003c/iframe\u003e",
+			"Properties": {
+				"id": "20210707224540-j1qr5hm",
+				"updated": "20210707224540"
+			}
+		},
+		{
+			"ID": "20210707224540-fkyz9ck",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-fkyz9ck",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "常用方法："
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-m3btg31",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210707224540-m3btg31",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"ID": "20210707224540-gr7ompt",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-gr7ompt"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-1nl6qaj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-1nl6qaj"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "boolean isAlive()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：判断线程是否还"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "存活"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，还没有运行完毕"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-3kwlnj7",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-3kwlnj7"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-23y0qmv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-23y0qmv"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Enum getState()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：获取线程状态"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-u2oorts",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-u2oorts",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "当线程被创建并启动以后，它既不是一启动就进入了执行状态，也不是一直处于执行状态。在线程的生命周期中， 有几种状态呢？在 API 中 "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "java.lang.Thread"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " "
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "中的"
+						},
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "State"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "内部枚举类中给出了六种线程状态"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "："
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-2gbe1t7",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210707224540-2gbe1t7",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"ID": "20210707224540-gvldcl5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-gvldcl5"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-t0eglri",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-t0eglri"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "新建"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：当一个 Thread 类或其子类的对象被声明并创建时，但是并未启动即调用 "
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "start()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，新生的线程对象处于新建状态"
+								}
+							]
+						},
+						{
+							"ID": "20210707224540-j0yo1jq",
+							"Type": "NodeBlockquote",
+							"Properties": {
+								"id": "20210707224540-j0yo1jq"
+							},
+							"Children": [
+								{
+									"Type": "NodeBlockquoteMarker",
+									"Data": "\u003e"
+								},
+								{
+									"ID": "20210707224540-3o8i0v1",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20210707224540-3o8i0v1"
+									},
+									"Children": [
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "NEW"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "：Thread state for a thread which has not yet started."
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-lzffmvn",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-lzffmvn"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-5f6qmjm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-5f6qmjm"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "可运行"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：处于新建状态的线程被"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "start()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "后，可能正在 JVM 中执行，也可能正在等待来自操作系统的其他资源如处理器"
+								}
+							]
+						},
+						{
+							"ID": "20210707224540-oz0ntsc",
+							"Type": "NodeBlockquote",
+							"Properties": {
+								"id": "20210707224540-oz0ntsc"
+							},
+							"Children": [
+								{
+									"Type": "NodeBlockquoteMarker",
+									"Data": "\u003e"
+								},
+								{
+									"ID": "20210707224540-oc5v9je",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20210707224540-oc5v9je"
+									},
+									"Children": [
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "RUNNABLE"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "：state for a runnable thread. A thread in the runnable state is executing in the Java virtual machine but it may be waiting for other resources from the operating system such as processor."
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-aqfuiuv",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-aqfuiuv"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-16t9wwb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-16t9wwb"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "阻塞"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：当一个线程试图获取一个对象锁，而该对象锁被其他的线程持有，则该线程进入 Blocked 状态；当该线程持有锁时，该线程将变成 Runnable 状态。"
+								}
+							]
+						},
+						{
+							"ID": "20210707224540-fd8qflh",
+							"Type": "NodeBlockquote",
+							"Properties": {
+								"id": "20210707224540-fd8qflh"
+							},
+							"Children": [
+								{
+									"Type": "NodeBlockquoteMarker",
+									"Data": "\u003e"
+								},
+								{
+									"ID": "20210707224540-565uw7c",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20210707224540-565uw7c"
+									},
+									"Children": [
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "BLOCKED"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "：Thread state for a thread blocked waiting for a monitor lock.A thread in the blocked state is waiting for a monitor lock to enter a synchronized block/method or reenter a synchronized block/method after calling "
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "Object.wait"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "."
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-2ndnkcg",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-2ndnkcg"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-8prcqsi",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-8prcqsi"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "无限等待"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：一个线程在等待另一个线程执行一个（唤醒）动作时，该线程进入 Waiting 状态。这个状态后是不能自动唤醒的"
+								}
+							]
+						},
+						{
+							"ID": "20210707224540-zrigsmt",
+							"Type": "NodeBlockquote",
+							"Properties": {
+								"id": "20210707224540-zrigsmt"
+							},
+							"Children": [
+								{
+									"Type": "NodeBlockquoteMarker",
+									"Data": "\u003e"
+								},
+								{
+									"ID": "20210707224540-sacj4pz",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20210707224540-sacj4pz"
+									},
+									"Children": [
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "WAITING"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "：state for a waiting thread.A thread is in the waiting state due to calling one of the following methods:"
+										}
+									]
+								},
+								{
+									"ID": "20210707224540-j17c8sk",
+									"Type": "NodeList",
+									"ListData": {},
+									"Properties": {
+										"id": "20210707224540-j17c8sk"
+									},
+									"Children": [
+										{
+											"ID": "20210707224540-vgmosl6",
+											"Type": "NodeListItem",
+											"ListData": {
+												"BulletChar": 42,
+												"Marker": "Kg=="
+											},
+											"Properties": {
+												"id": "20210707224540-vgmosl6"
+											},
+											"Children": [
+												{
+													"ID": "20210707224540-ol2jou5",
+													"Type": "NodeParagraph",
+													"Properties": {
+														"id": "20210707224540-ol2jou5"
+													},
+													"Children": [
+														{
+															"Type": "NodeCodeSpan",
+															"Data": "code",
+															"Children": [
+																{
+																	"Type": "NodeCodeSpanOpenMarker"
+																},
+																{
+																	"Type": "NodeCodeSpanContent",
+																	"Data": "Object.wait"
+																},
+																{
+																	"Type": "NodeCodeSpanCloseMarker"
+																}
+															]
+														},
+														{
+															"Type": "NodeText",
+															"Data": " with no timeout"
+														}
+													]
+												}
+											]
+										},
+										{
+											"ID": "20210707224540-mdthx2f",
+											"Type": "NodeListItem",
+											"ListData": {
+												"BulletChar": 42,
+												"Marker": "Kg=="
+											},
+											"Properties": {
+												"id": "20210707224540-mdthx2f"
+											},
+											"Children": [
+												{
+													"ID": "20210707224540-qgh9iym",
+													"Type": "NodeParagraph",
+													"Properties": {
+														"id": "20210707224540-qgh9iym"
+													},
+													"Children": [
+														{
+															"Type": "NodeCodeSpan",
+															"Data": "code",
+															"Children": [
+																{
+																	"Type": "NodeCodeSpanOpenMarker"
+																},
+																{
+																	"Type": "NodeCodeSpanContent",
+																	"Data": "th.join"
+																},
+																{
+																	"Type": "NodeCodeSpanCloseMarker"
+																}
+															]
+														},
+														{
+															"Type": "NodeText",
+															"Data": " with no timeout"
+														}
+													]
+												}
+											]
+										},
+										{
+											"ID": "20210707224540-xpoz1vn",
+											"Type": "NodeListItem",
+											"ListData": {
+												"BulletChar": 42,
+												"Marker": "Kg=="
+											},
+											"Properties": {
+												"id": "20210707224540-xpoz1vn"
+											},
+											"Children": [
+												{
+													"ID": "20210707224540-0yjgavn",
+													"Type": "NodeParagraph",
+													"Properties": {
+														"id": "20210707224540-0yjgavn"
+													},
+													"Children": [
+														{
+															"Type": "NodeCodeSpan",
+															"Data": "code",
+															"Children": [
+																{
+																	"Type": "NodeCodeSpanOpenMarker"
+																},
+																{
+																	"Type": "NodeCodeSpanContent",
+																	"Data": "LockSupport.park"
+																},
+																{
+																	"Type": "NodeCodeSpanCloseMarker"
+																}
+															]
+														}
+													]
+												},
+												{
+													"ID": "20210707224540-px15cyy",
+													"Type": "NodeParagraph",
+													"Properties": {
+														"id": "20210707224540-px15cyy"
+													},
+													"Children": [
+														{
+															"Type": "NodeText",
+															"Data": "A thread in the waiting state is waiting for another thread to perform a particular action."
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"ID": "20210707224540-yoriwwz",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20210707224540-yoriwwz"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "For example, a thread that has called "
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "Object.wait()"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": " on an object is waiting for another thread to call "
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "Object.notify()"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": " or "
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "Object.notifyAll()"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": " on that object. A thread that has called "
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "th.join()"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": " is waiting for a specified thread to terminate."
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-d12mq2h",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-d12mq2h"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-rkytpny",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-rkytpny"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "计时等待"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：同 waiting 状态，有几个方法有超时参数，调用他们将进入 Timed Waiting 状态。这一状态将一直保持到超时期满或者接收到唤醒通知。"
+								}
+							]
+						},
+						{
+							"ID": "20210707224540-dqlxpsv",
+							"Type": "NodeBlockquote",
+							"Properties": {
+								"id": "20210707224540-dqlxpsv"
+							},
+							"Children": [
+								{
+									"Type": "NodeBlockquoteMarker",
+									"Data": "\u003e"
+								},
+								{
+									"ID": "20210707224540-pw7r8lp",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20210707224540-pw7r8lp"
+									},
+									"Children": [
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "TIMED_WAITING"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "：Thread state for a waiting thread with a specified waiting time. A thread is in the timed waiting state due to calling one of the following methods with a specified positive waiting time:"
+										}
+									]
+								},
+								{
+									"ID": "20210707224540-nx8k824",
+									"Type": "NodeList",
+									"ListData": {},
+									"Properties": {
+										"id": "20210707224540-nx8k824"
+									},
+									"Children": [
+										{
+											"ID": "20210707224540-wuys06u",
+											"Type": "NodeListItem",
+											"ListData": {
+												"BulletChar": 42,
+												"Marker": "Kg=="
+											},
+											"Properties": {
+												"id": "20210707224540-wuys06u"
+											},
+											"Children": [
+												{
+													"ID": "20210707224540-mis77p0",
+													"Type": "NodeParagraph",
+													"Properties": {
+														"id": "20210707224540-mis77p0"
+													},
+													"Children": [
+														{
+															"Type": "NodeCodeSpan",
+															"Data": "code",
+															"Children": [
+																{
+																	"Type": "NodeCodeSpanOpenMarker"
+																},
+																{
+																	"Type": "NodeCodeSpanContent",
+																	"Data": "Thread.sleep"
+																},
+																{
+																	"Type": "NodeCodeSpanCloseMarker"
+																}
+															]
+														},
+														{
+															"Type": "NodeText",
+															"Data": "must with timeout"
+														}
+													]
+												}
+											]
+										},
+										{
+											"ID": "20210707224540-8tvphvi",
+											"Type": "NodeListItem",
+											"ListData": {
+												"BulletChar": 42,
+												"Marker": "Kg=="
+											},
+											"Properties": {
+												"id": "20210707224540-8tvphvi"
+											},
+											"Children": [
+												{
+													"ID": "20210707224540-rij4fe5",
+													"Type": "NodeParagraph",
+													"Properties": {
+														"id": "20210707224540-rij4fe5"
+													},
+													"Children": [
+														{
+															"Type": "NodeCodeSpan",
+															"Data": "code",
+															"Children": [
+																{
+																	"Type": "NodeCodeSpanOpenMarker"
+																},
+																{
+																	"Type": "NodeCodeSpanContent",
+																	"Data": "Object.wait"
+																},
+																{
+																	"Type": "NodeCodeSpanCloseMarker"
+																}
+															]
+														},
+														{
+															"Type": "NodeText",
+															"Data": " with timeout"
+														}
+													]
+												}
+											]
+										},
+										{
+											"ID": "20210707224540-wwumrzn",
+											"Type": "NodeListItem",
+											"ListData": {
+												"BulletChar": 42,
+												"Marker": "Kg=="
+											},
+											"Properties": {
+												"id": "20210707224540-wwumrzn"
+											},
+											"Children": [
+												{
+													"ID": "20210707224540-jhfebz8",
+													"Type": "NodeParagraph",
+													"Properties": {
+														"id": "20210707224540-jhfebz8"
+													},
+													"Children": [
+														{
+															"Type": "NodeCodeSpan",
+															"Data": "code",
+															"Children": [
+																{
+																	"Type": "NodeCodeSpanOpenMarker"
+																},
+																{
+																	"Type": "NodeCodeSpanContent",
+																	"Data": "th.join"
+																},
+																{
+																	"Type": "NodeCodeSpanCloseMarker"
+																}
+															]
+														},
+														{
+															"Type": "NodeText",
+															"Data": " with timeout"
+														}
+													]
+												}
+											]
+										},
+										{
+											"ID": "20210707224540-23xn1lx",
+											"Type": "NodeListItem",
+											"ListData": {
+												"BulletChar": 42,
+												"Marker": "Kg=="
+											},
+											"Properties": {
+												"id": "20210707224540-23xn1lx"
+											},
+											"Children": [
+												{
+													"ID": "20210707224540-oovyipw",
+													"Type": "NodeParagraph",
+													"Properties": {
+														"id": "20210707224540-oovyipw"
+													},
+													"Children": [
+														{
+															"Type": "NodeCodeSpan",
+															"Data": "code",
+															"Children": [
+																{
+																	"Type": "NodeCodeSpanOpenMarker"
+																},
+																{
+																	"Type": "NodeCodeSpanContent",
+																	"Data": "LockSupport.parkNanos"
+																},
+																{
+																	"Type": "NodeCodeSpanCloseMarker"
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"ID": "20210707224540-vi49z9a",
+											"Type": "NodeListItem",
+											"ListData": {
+												"BulletChar": 42,
+												"Marker": "Kg=="
+											},
+											"Properties": {
+												"id": "20210707224540-vi49z9a"
+											},
+											"Children": [
+												{
+													"ID": "20210707224540-k041934",
+													"Type": "NodeParagraph",
+													"Properties": {
+														"id": "20210707224540-k041934"
+													},
+													"Children": [
+														{
+															"Type": "NodeCodeSpan",
+															"Data": "code",
+															"Children": [
+																{
+																	"Type": "NodeCodeSpanOpenMarker"
+																},
+																{
+																	"Type": "NodeCodeSpanContent",
+																	"Data": "LockSupport.parkUntil"
+																},
+																{
+																	"Type": "NodeCodeSpanCloseMarker"
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707224540-fr2kago",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707224540-fr2kago"
+					},
+					"Children": [
+						{
+							"ID": "20210707224540-ekm3ym2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707224540-ekm3ym2"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "被终止"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：因为"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "run"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "方法正常退出而终止（完成全部工作），或者因为没有捕获的异常终止了"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "run"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "方法而死亡，或者或线程被提前强制性地中止。"
+								}
+							]
+						},
+						{
+							"ID": "20210707224540-ges085h",
+							"Type": "NodeBlockquote",
+							"Properties": {
+								"id": "20210707224540-ges085h"
+							},
+							"Children": [
+								{
+									"Type": "NodeBlockquoteMarker",
+									"Data": "\u003e"
+								},
+								{
+									"ID": "20210707224540-smkg5n9",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20210707224540-smkg5n9"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "TERMINATED：Thread state for a terminated thread. The thread has completed execution."
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-nus3vsi",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707224540-nus3vsi",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Slf4j(topic = \"TestState\")\npublic class TestState {\n\n    public static void main(String[] args) throws InterruptedException {\n\n        // NEW\n        Thread t1 = new Thread(() -\u003e log.debug(\"{} running\", Thread.currentThread().getName()), \"t1\");\n\n\n        // RUNNABLE\n        Thread t2 = new Thread(() -\u003e {\n            while (true){\n                // TODO\n            }\n        }, \"t2\");\n        t2.start();\n\n\n        // TERMINATED\n        Thread t3 = new Thread(() -\u003e log.debug(\"{} running\", Thread.currentThread().getName()), \"t3\");\n        t3.start();\n\n\n        // TIMED_WAITING\n        Thread t4 = new Thread(() -\u003e {\n            synchronized (TestState.class){\n                try {\n                    TimeUnit.SECONDS.sleep(100);\n                } catch (InterruptedException e) {\n                    e.printStackTrace();\n                }\n            }\n        }, \"t4\");\n        t4.start();\n\n\n        // WAITING\n        Thread t5 = new Thread(() -\u003e {\n            try {\n                t2.join();\n            } catch (InterruptedException e) {\n                e.printStackTrace();\n            }\n        }, \"t5\");\n        t5.start();\n\n\n        // BLOCKED\n        Thread t6 = new Thread(() -\u003e {\n            synchronized (TestState.class){\n                try {\n                    TimeUnit.SECONDS.sleep(100);\n                } catch (InterruptedException e) {\n                    e.printStackTrace();\n                }\n            }\n        }, \"t6\");\n        t6.start();\n\n\n        TimeUnit.MILLISECONDS.sleep(500);\n\n        log.debug(\"T1 state {}\", t1.getState());\n        log.debug(\"T2 state {}\", t2.getState());\n        log.debug(\"T3 state {}\", t3.getState());\n        log.debug(\"T4 state {}\", t4.getState());\n        log.debug(\"T5 state {}\", t5.getState());\n        log.debug(\"T6 state {}\", t6.getState());\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210721004735-kvkmz67",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210721004735-kvkmz67",
+				"updated": "20210721004735"
+			}
+		},
+		{
+			"ID": "20210724182013-mvq076a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210724182013-mvq076a",
+				"updated": "20210724182013"
+			}
+		},
+		{
+			"ID": "20210726233800-chjxftr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210726233800-chjxftr",
+				"updated": "20210726233800"
+			}
+		},
+		{
+			"ID": "20210726233800-hdrh977",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210726233800-hdrh977",
+				"updated": "20210726233800"
+			}
+		}
+	]
+}
