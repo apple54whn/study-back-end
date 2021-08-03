@@ -5,7 +5,7 @@
 		"id": "20210707224540-3aouv33",
 		"title": "8 synchronized 原理—Monitor",
 		"type": "doc",
-		"updated": "20210803005117"
+		"updated": "20210804010855"
 	},
 	"Children": [
 		{
@@ -2246,6 +2246,318 @@
 			}
 		},
 		{
+			"ID": "20210803234038-ciwgm6o",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210803234038-ciwgm6o",
+				"updated": "20210803234038"
+			}
+		},
+		{
+			"ID": "20210803234043-v0hvbsc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210803234043-v0hvbsc",
+				"updated": "20210803234054"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "jol 工具🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-uslnpyx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-uslnpyx",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "查看 Java 对象头需要借助 openjdk 提供的工具"
+				}
+			]
+		},
+		{
+			"ID": "20210707224540-m1ssn7k",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707224540-m1ssn7k",
+				"updated": "20210803234551"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eG1s"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\u003c!-- https://mvnrepository.com/artifact/org.openjdk.jol/jol-core --\u003e\n\u003cdependency\u003e\n    \u003cgroupId\u003eorg.openjdk.jol\u003c/groupId\u003e\n    \u003cartifactId\u003ejol-core\u003c/artifactId\u003e\n    \u003cversion\u003e0.16\u003c/version\u003e\n    \u003cscope\u003eprovided\u003c/scope\u003e\n\u003c/dependency\u003e\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210803234120-lr6qvix",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210803234120-lr6qvix",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Slf4j(topic = \"TestBiasedLock\")\npublic class TestBiasedLock {\n\n    public static void main(String[] args) throws InterruptedException {\n        test1();\n    }\n\n    /**\n     * 测试101\n     */\n    private static void test1(){\n        log.debug(ClassLayout.parseInstance(new Dog()).toPrintable());\n\n        // 偏向锁是默认是延迟的，不会在程序启动时立即生效。VM参数可以解决-XX:BiasedLockingStartupDelay=0\n        // 或睡一会。TimeUnit.SECONDS.sleep(5);\n        log.debug(ClassLayout.parseInstance(new Dog()).toPrintable());\n    }\n}\n\nclass Dog {\n\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210803234120-do0u2it",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210803234120-do0u2it",
+				"updated": "20210803234610"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "jol 0.14版本结果如下（"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "小端法"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：最低有效位在前）："
+				}
+			]
+		},
+		{
+			"ID": "20210803234120-7ndqcxa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210803234120-7ndqcxa",
+				"updated": "20210803232935"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "下面的偏向锁、锁状态为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "101"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，即"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "00000101"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "里的3bit。由于最低有效位在前，所以按照 mark word 来说，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "*****101"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "101"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "就是在最低位，所以排在前面。同一字节中按照正常顺序排列即可！"
+				}
+			]
+		},
+		{
+			"ID": "20210803234120-zeffzkc",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210803234120-zeffzkc",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "21:21:16.604 [main] DEBUG TestBiasedLock - _999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           05 00 00 00 (00000101 00000000 00000000 00000000) (5)\n      4     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)\n      8     4        (object header)                           22 dc 00 f8 (00100010 11011100 00000000 11111000) (-134161374)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210803234120-bk79339",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210803234120-bk79339",
+				"updated": "20210803234804"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "jol 0.16 版本结果如下（更清晰了）："
+				}
+			]
+		},
+		{
+			"ID": "20210803234613-meulogv",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210803234613-meulogv",
+				"updated": "20210803234755"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "cGxhaW50ZXh0"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "23:47:03.277 [main] DEBUG TestBiasedLock - _999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x0000000000000005 (biasable; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210803234119-vhca9iy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210803234119-vhca9iy",
+				"updated": "20210803234119"
+			}
+		},
+		{
+			"ID": "20210803234038-bs0p9kp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210803234038-bs0p9kp",
+				"updated": "20210803234038"
+			}
+		},
+		{
+			"ID": "20210803234038-oda4jsh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210803234038-oda4jsh",
+				"updated": "20210803234038"
+			}
+		},
+		{
 			"ID": "20210707224540-rvhx33q",
 			"Type": "NodeHeading",
 			"HeadingLevel": 2,
@@ -3551,12 +3863,12 @@
 			"HeadingLevel": 2,
 			"Properties": {
 				"id": "20210714222239-24vwirk",
-				"updated": "20210729001212"
+				"updated": "20210803232539"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "synchronized 优化"
+					"Data": "synchronized 优化小故事"
 				}
 			]
 		},
@@ -3980,7 +4292,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20210803004451-ekwzq2o",
-				"updated": "20210803004454"
+				"updated": "20210803233108"
 			},
 			"Children": [
 				{
@@ -4002,7 +4314,7 @@
 						},
 						{
 							"Type": "NodeLinkDest",
-							"Data": "cnblogs.com/LemonFive/p/11248248.html"
+							"Data": "https://www.cnblogs.com/LemonFive/p/11248248.html"
 						},
 						{
 							"Type": "NodeCloseParen"
@@ -4055,12 +4367,12 @@
 			"HeadingLevel": 3,
 			"Properties": {
 				"id": "20210801162322-euxz469",
-				"updated": "20210801162329"
+				"updated": "20210803233152"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "原理图 🔥"
+					"Data": "原理 🔥"
 				}
 			]
 		},
@@ -4072,53 +4384,6 @@
 				"id": "20210731173127-sv5du07",
 				"updated": "20210731173127"
 			}
-		},
-		{
-			"ID": "20210731172924-noo3mm3",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210731172924-noo3mm3",
-				"updated": "20210731172924"
-			}
-		},
-		{
-			"ID": "20210801162709-mcte0a4",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210801162709-mcte0a4",
-				"updated": "20210801162709"
-			}
-		},
-		{
-			"ID": "20210731181526-taklcsb",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210731181526-taklcsb",
-				"updated": "20210731181555"
-			}
-		},
-		{
-			"ID": "20210731181520-p33r0p6",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210731181520-p33r0p6",
-				"updated": "20210731181520"
-			}
-		},
-		{
-			"ID": "20210731172924-8eavd3u",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210731172924-8eavd3u",
-				"updated": "20210731172934"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "特点 🔥"
-				}
-			]
 		},
 		{
 			"ID": "20210731173252-bssrsdv",
@@ -4275,723 +4540,215 @@
 			]
 		},
 		{
-			"ID": "20210801162322-1b7u92c",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210801162322-1b7u92c",
-				"updated": "20210801162322"
-			}
-		},
-		{
-			"ID": "20210801162322-929py9q",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210801162322-929py9q",
-				"updated": "20210801162322"
-			}
-		},
-		{
-			"ID": "20210731173215-md4repg",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210731173215-md4repg",
-				"updated": "20210731173215"
-			}
-		},
-		{
-			"ID": "20210728235021-wyt2aaf",
-			"Type": "NodeList",
-			"ListData": {},
-			"Properties": {
-				"id": "20210728235021-wyt2aaf",
-				"updated": "20210730010315"
-			},
-			"Children": [
-				{
-					"ID": "20210728235022-f2edas6",
-					"Type": "NodeListItem",
-					"ListData": {
-						"BulletChar": 42,
-						"Marker": "Kg=="
-					},
-					"Properties": {
-						"id": "20210728235022-f2edas6",
-						"updated": "20210730010315"
-					},
-					"Children": [
-						{
-							"ID": "20210728235022-4zwtzuh",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210728235022-4zwtzuh",
-								"updated": "20210730010315"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "当"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "锁对象第一次被线程获取"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "时"
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210730010308-l2hvq09",
-					"Type": "NodeListItem",
-					"ListData": {
-						"BulletChar": 42,
-						"Marker": "Kg=="
-					},
-					"Properties": {
-						"id": "20210730010308-l2hvq09"
-					},
-					"Children": [
-						{
-							"ID": "20210730010308-i0w62xe",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210730010308-i0w62xe"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "JVM 会将 Mark Word "
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "锁状态"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "置为"
-								},
-								{
-									"Type": "NodeCodeSpan",
-									"Data": "code",
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "101"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "即偏向锁，同时"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "使用 CAS 将该线程 ID 设置到 Mark Word 中"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "。若 CAS 成功，则以后线程进入同步块时只需对比偏向锁状态及 Mark Word 中的线程 ID"
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210728235024-luwsht7",
-					"Type": "NodeListItem",
-					"ListData": {
-						"BulletChar": 42,
-						"Marker": "Kg=="
-					},
-					"Properties": {
-						"id": "20210728235024-luwsht7"
-					},
-					"Children": [
-						{
-							"ID": "20210728235024-g08wpsr",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210728235024-g08wpsr"
-							}
-						}
-					]
-				}
-			]
-		},
-		{
-			"ID": "20210728011808-a8zltz5",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210728011808-a8zltz5",
-				"updated": "20210728011808"
-			}
-		},
-		{
-			"ID": "20210728011138-2xu6axd",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210728011138-2xu6axd",
-				"updated": "20210728011138"
-			}
-		},
-		{
-			"ID": "20210707224540-7898se0",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707224540-7898se0",
-				"updated": "20210728011143"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "线程只在"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "第一次进入同步代码并获取锁时使用 CAS 将线程 ID 设置到对象的 Mark Word 头"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "，之后进入或退出同步时，只需检查下 Mark Word 里"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "是否存储着指向当前线程的偏向锁"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "："
-				}
-			]
-		},
-		{
-			"ID": "20210727223013-7oqd63b",
-			"Type": "NodeList",
-			"ListData": {},
-			"Properties": {
-				"id": "20210727223013-7oqd63b",
-				"updated": "20210727223014"
-			},
-			"Children": [
-				{
-					"ID": "20210727223014-nm1wcot",
-					"Type": "NodeListItem",
-					"ListData": {
-						"BulletChar": 42,
-						"Marker": "Kg=="
-					},
-					"Properties": {
-						"id": "20210727223014-nm1wcot"
-					},
-					"Children": [
-						{
-							"ID": "20210727223014-tryk0dk",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210727223014-tryk0dk",
-								"updated": "20210727223230"
-							},
-							"Children": [
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "是"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "，表示当前线程"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "获得锁"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210727223231-71elkqz",
-					"Type": "NodeListItem",
-					"ListData": {
-						"BulletChar": 42,
-						"Marker": "Kg=="
-					},
-					"Properties": {
-						"id": "20210727223231-71elkqz"
-					},
-					"Children": [
-						{
-							"ID": "20210727223231-xa007e3",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210727223231-xa007e3",
-								"updated": "20210728005624"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "否（其他线程竞争了），检查 Mark Word 的"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "偏向锁标记是否为1"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "（即为真）"
-								}
-							]
-						},
-						{
-							"ID": "20210727223320-26q9aah",
-							"Type": "NodeList",
-							"ListData": {},
-							"Properties": {
-								"id": "20210727223320-26q9aah"
-							},
-							"Children": [
-								{
-									"ID": "20210727223319-210ay4b",
-									"Type": "NodeListItem",
-									"ListData": {
-										"BulletChar": 42,
-										"Marker": "Kg=="
-									},
-									"Properties": {
-										"id": "20210727223319-210ay4b"
-									},
-									"Children": [
-										{
-											"ID": "20210727223319-vnmx5qh",
-											"Type": "NodeParagraph",
-											"Properties": {
-												"id": "20210727223319-vnmx5qh",
-												"updated": "20210728005720"
-											},
-											"Children": [
-												{
-													"Type": "NodeText",
-													"Data": "是，则"
-												},
-												{
-													"Type": "NodeStrong",
-													"Data": "strong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "重偏向"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
-												},
-												{
-													"Type": "NodeText",
-													"Data": "，使用 CAS 将 Mark Word 的"
-												},
-												{
-													"Type": "NodeStrong",
-													"Data": "strong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "偏向锁指向当前线程"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
-												}
-											]
-										}
-									]
-								},
-								{
-									"ID": "20210727235821-rq1v0ky",
-									"Type": "NodeListItem",
-									"ListData": {
-										"BulletChar": 42,
-										"Marker": "Kg=="
-									},
-									"Properties": {
-										"id": "20210727235821-rq1v0ky"
-									},
-									"Children": [
-										{
-											"ID": "20210727235821-gx7iwop",
-											"Type": "NodeParagraph",
-											"Properties": {
-												"id": "20210727235821-gx7iwop",
-												"updated": "20210728005700"
-											},
-											"Children": [
-												{
-													"Type": "NodeText",
-													"Data": "否，则执行"
-												},
-												{
-													"Type": "NodeStrong",
-													"Data": "strong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "轻量级锁"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
-												},
-												{
-													"Type": "NodeText",
-													"Data": "过程，即使用 CAS "
-												},
-												{
-													"Type": "NodeStrong",
-													"Data": "strong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "竞争锁"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
-												}
-											]
-										}
-									]
-								}
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"ID": "20210728005757-wzl3eyx",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210728005757-wzl3eyx",
-				"updated": "20210728005803"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "其他线程进来："
-				}
-			]
-		},
-		{
-			"ID": "20210728005803-o6t75yz",
-			"Type": "NodeList",
-			"ListData": {},
-			"Properties": {
-				"id": "20210728005803-o6t75yz",
-				"updated": "20210728005804"
-			},
-			"Children": [
-				{
-					"ID": "20210728005804-ult1t61",
-					"Type": "NodeListItem",
-					"ListData": {
-						"BulletChar": 42,
-						"Marker": "Kg=="
-					},
-					"Properties": {
-						"id": "20210728005804-ult1t61"
-					},
-					"Children": [
-						{
-							"ID": "20210728005804-jbtojb1",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210728005804-jbtojb1"
-							}
-						}
-					]
-				}
-			]
-		},
-		{
 			"ID": "20210727222443-garky9x",
-			"Type": "NodeParagraph",
+			"Type": "NodeList",
+			"ListData": {},
 			"Properties": {
 				"id": "20210727222443-garky9x",
-				"updated": "20210728000351"
+				"updated": "20210803233339"
 			},
 			"Children": [
 				{
-					"Type": "NodeText",
-					"Data": "解决了轻量级锁在没有竞争时（就自己这个线程），每次重入仍然需要执行 CAS 操作（还需再次"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
+					"ID": "20210803233339-tfe8brg",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210803233339-tfe8brg"
+					},
 					"Children": [
 						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
+							"ID": "20210803233339-bjeuq12",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210803233339-bjeuq12"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "解决了轻量级锁在没有竞争时（就自己这个线程），每次重入仍然需要执行 CAS 操作（还需再次"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "记录 lock record"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "）。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210803233851-xvsn1zw",
+			"Type": "NodeSuperBlock",
+			"Properties": {
+				"fold": "1",
+				"id": "20210803233851-xvsn1zw",
+				"updated": "20210803233851"
+			},
+			"Children": [
+				{
+					"Type": "NodeSuperBlockOpenMarker"
+				},
+				{
+					"Type": "NodeSuperBlockLayoutMarker",
+					"Data": "row"
+				},
+				{
+					"ID": "20210707224540-7jod1ja",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"fold": "0",
+						"id": "20210707224540-7jod1ja",
+						"updated": "20210707224540"
+					},
+					"Children": [
 						{
 							"Type": "NodeText",
-							"Data": "记录 lock record"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
+							"Data": "例如："
 						}
 					]
 				},
 				{
-					"Type": "NodeText",
-					"Data": "）。"
+					"ID": "20210707224540-ck92t0z",
+					"Type": "NodeCodeBlock",
+					"IsFencedCodeBlock": true,
+					"Properties": {
+						"id": "20210707224540-ck92t0z",
+						"updated": "20210707224540"
+					},
+					"Children": [
+						{
+							"Type": "NodeCodeBlockFenceOpenMarker",
+							"Data": "```"
+						},
+						{
+							"Type": "NodeCodeBlockFenceInfoMarker",
+							"CodeBlockInfo": "amF2YQ=="
+						},
+						{
+							"Type": "NodeCodeBlockCode",
+							"Data": "public class Test {\n    static final Object obj = new Object();\n    public static void m1() {\n        synchronized( obj ) {\n            // 同步块 A\n            m2();\n        }\n    }\n    public static void m2() {\n        synchronized( obj ) {\n            // 同步块 B\n            m3();\n        }\n    }\n    public static void m3() {\n        synchronized( obj ) {\n        }\n        // 同步块 C\n    }\n}\n"
+						},
+						{
+							"Type": "NodeCodeBlockFenceCloseMarker",
+							"Data": "```"
+						}
+					]
+				},
+				{
+					"ID": "20210803233750-y16amnf",
+					"Type": "NodeSuperBlock",
+					"Properties": {
+						"id": "20210803233750-y16amnf"
+					},
+					"Children": [
+						{
+							"Type": "NodeSuperBlockOpenMarker"
+						},
+						{
+							"Type": "NodeSuperBlockLayoutMarker",
+							"Data": "col"
+						},
+						{
+							"ID": "20210707224540-g0c6t0x",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"Properties": {
+								"id": "20210707224540-g0c6t0x",
+								"style": "text-align: center; width: 50%; flex: 0 0 auto;",
+								"updated": "20210707224540"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```"
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "bWVybWFpZA=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "flowchart TB\n    subgraph 轻量级锁\n    m1(\"m1内调用synchronized(obj)\")\n    m1-- 用 ThreadId 替换  Mark Word --\u003eobj(对象)\n    m2(\"m2内调用synchronized(obj)\")\n    m2-- 检查 ThreadId 是否是自己 --\u003eobj(对象)\n    m3(\"m3内调用synchronized(obj)\")\n    m3-- 检查 ThreadId 是否是自己 --\u003eobj(对象)\n   \tend"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```"
+								}
+							]
+						},
+						{
+							"ID": "20210803233717-eeprqbk",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"Properties": {
+								"id": "20210803233717-eeprqbk",
+								"updated": "20210803233745"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```"
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "bWVybWFpZA=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "flowchart TB\n    subgraph 轻量级锁\n    m1(\"m1内调用synchronized(obj)\") -.生成锁记录.-\u003e m1\n    m1-- 用 锁记录 替换 Mark Word --\u003eobj(对象)\n    m2(\"m2内调用synchronized(obj)\") -.生成锁记录.-\u003e m2\n    m2-- 用 锁记录 替换 Mark Word --\u003eobj(对象)\n    m3(\"m3内调用synchronized(obj)\") -.生成锁记录.-\u003e m3\n    m3-- 用 锁记录 替换 Mark Word --\u003eobj(对象)\n   \tend"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```"
+								}
+							]
+						},
+						{
+							"Type": "NodeSuperBlockCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeSuperBlockCloseMarker"
 				}
 			]
 		},
 		{
-			"ID": "20210707224540-7jod1ja",
+			"ID": "20210803233710-j5knqso",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707224540-7jod1ja",
-				"updated": "20210707224540"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "例如："
-				}
-			]
+				"id": "20210803233710-j5knqso",
+				"updated": "20210803233716"
+			}
 		},
 		{
-			"ID": "20210707224540-ck92t0z",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"Properties": {
-				"id": "20210707224540-ck92t0z",
-				"updated": "20210707224540"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```"
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "amF2YQ=="
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "public class Test {\n    static final Object obj = new Object();\n    public static void m1() {\n        synchronized( obj ) {\n            // 同步块 A\n            m2();\n        }\n    }\n    public static void m2() {\n        synchronized( obj ) {\n            // 同步块 B\n            m3();\n        }\n    }\n    public static void m3() {\n        synchronized( obj ) {\n        }\n        // 同步块 C\n    }\n}\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```"
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-7unuu72",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"Properties": {
-				"id": "20210707224540-7unuu72",
-				"updated": "20210707224540"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```"
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "bWVybWFpZA=="
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "flowchart TB\n    subgraph 轻量级锁\n    m1(\"m1内调用synchronized(obj)\") -.生成锁记录.-\u003e m1\n    m1-- 用 锁记录 替换 Mark Word --\u003eobj(对象)\n    m2(\"m2内调用synchronized(obj)\") -.生成锁记录.-\u003e m2\n    m2-- 用 锁记录 替换 Mark Word --\u003eobj(对象)\n    m3(\"m3内调用synchronized(obj)\") -.生成锁记录.-\u003e m3\n    m3-- 用 锁记录 替换 Mark Word --\u003eobj(对象)\n   \tend"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```"
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-g0c6t0x",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"Properties": {
-				"id": "20210707224540-g0c6t0x",
-				"updated": "20210707224540"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```"
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "bWVybWFpZA=="
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "flowchart TB\n    subgraph 轻量级锁\n    m1(\"m1内调用synchronized(obj)\")\n    m1-- 用 ThreadId 替换  Mark Word --\u003eobj(对象)\n    m2(\"m2内调用synchronized(obj)\")\n    m2-- 检查 ThreadId 是否是自己 --\u003eobj(对象)\n    m3(\"m3内调用synchronized(obj)\")\n    m3-- 检查 ThreadId 是否是自己 --\u003eobj(对象)\n   \tend"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```"
-				}
-			]
-		},
-		{
-			"ID": "20210728235953-ddvh5vr",
+			"ID": "20210803233710-dcb9se8",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210728235953-ddvh5vr",
-				"updated": "20210728235953"
+				"id": "20210803233710-dcb9se8",
+				"updated": "20210803233710"
 			}
 		},
 		{
@@ -5000,12 +4757,12 @@
 			"HeadingLevel": 3,
 			"Properties": {
 				"id": "20210707224540-xgpuj6b",
-				"updated": "20210728235807"
+				"updated": "20210803233822"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "偏向状态 🔥"
+					"Data": "偏向锁 🔥"
 				}
 			]
 		},
@@ -5015,12 +4772,13 @@
 			"HeadingLevel": 4,
 			"Properties": {
 				"id": "20210801163519-8avr491",
-				"updated": "20210801163521"
+				"style": "border-radius: 4px; transition: all 0.15s cubic-bezier(0, 0, 0.2, 1) 0ms; background-color: var(--b3-theme-primary-lightest); box-shadow: 4px 0px 0 var(--b3-theme-primary-lightest), -4px 0px 0 var(--b3-theme-primary-lightest);",
+				"updated": "20210804000110"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "简介"
+					"Data": "特点 🔥"
 				}
 			]
 		},
@@ -5138,7 +4896,7 @@
 			"ListData": {},
 			"Properties": {
 				"id": "20210707224540-aaj9qmm",
-				"updated": "20210729005702"
+				"updated": "20210804002031"
 			},
 			"Children": [
 				{
@@ -5409,57 +5167,137 @@
 							]
 						}
 					]
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-uslnpyx",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707224540-uslnpyx",
-				"updated": "20210707224540"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "查看 Java 对象头需要借助 openjdk 提供的工具"
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-m1ssn7k",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"Properties": {
-				"id": "20210707224540-m1ssn7k",
-				"updated": "20210707224540"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```"
 				},
 				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "eG1s"
+					"ID": "20210803235857-v2cq38b",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210803235857-v2cq38b"
+					},
+					"Children": [
+						{
+							"ID": "20210803235857-o26l1q4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210803235857-o26l1q4",
+								"updated": "20210803235901"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "biased 后是线程 id（OS 分配的，和 Java 不一样）。只有第一次加锁后才有。处于"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "偏向锁的对象解锁后，线程 id 仍存储于对象头中"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，除非"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "撤销偏向锁"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
 				},
 				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "\u003c!-- https://mvnrepository.com/artifact/org.openjdk.jol/jol-core --\u003e\n\u003cdependency\u003e\n    \u003cgroupId\u003eorg.openjdk.jol\u003c/groupId\u003e\n    \u003cartifactId\u003ejol-core\u003c/artifactId\u003e\n    \u003cversion\u003e0.14\u003c/version\u003e\n    \u003cscope\u003eprovided\u003c/scope\u003e\n\u003c/dependency\u003e\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```"
+					"ID": "20210804001923-plnrk9m",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210804001923-plnrk9m",
+						"updated": "20210804002031"
+					},
+					"Children": [
+						{
+							"ID": "20210804001923-h33tl8f",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210804001923-h33tl8f",
+								"updated": "20210804002031"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "除了偏向锁其他锁执行完释放后都是"
+										},
+										{
+											"Type": "NodeCodeSpan",
+											"Data": "code",
+											"Children": [
+												{
+													"Type": "NodeCodeSpanOpenMarker"
+												},
+												{
+													"Type": "NodeCodeSpanContent",
+													"Data": "0x1"
+												},
+												{
+													"Type": "NodeCodeSpanCloseMarker"
+												}
+											]
+										},
+										{
+											"Type": "NodeText",
+											"Data": "无锁状态"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
 				}
 			]
-		},
-		{
-			"ID": "20210728235542-rwdqqwd",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210728235542-rwdqqwd",
-				"updated": "20210728235542"
-			}
 		},
 		{
 			"ID": "20210801162825-1ft7djx",
@@ -5524,34 +5362,12 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20210707224540-e0yey13",
-				"updated": "20210728004210"
+				"updated": "20210803235035"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "结果如下（"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "小端法"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "）："
+					"Data": "结果如下"
 				}
 			]
 		},
@@ -5561,7 +5377,7 @@
 			"IsFencedCodeBlock": true,
 			"Properties": {
 				"id": "20210707224540-vxkwbfm",
-				"updated": "20210707224540"
+				"updated": "20210803235015"
 			},
 			"Children": [
 				{
@@ -5573,7 +5389,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "21:21:16.604 [main] DEBUG TestBiasedLock - _999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           05 00 00 00 (00000101 00000000 00000000 00000000) (5)\n      4     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)\n      8     4        (object header)                           22 dc 00 f8 (00100010 11011100 00000000 11111000) (-134161374)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n"
+					"Data": "23:47:03.277 [main] DEBUG TestBiasedLock - _999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x0000000000000005 (biasable; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
@@ -5586,7 +5402,15 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20210801163439-6qycz33",
-				"updated": "20210801163439"
+				"updated": "20210803232652"
+			}
+		},
+		{
+			"ID": "20210803232618-uiq3jda",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210803232618-uiq3jda",
+				"updated": "20210803232618"
 			}
 		},
 		{
@@ -5668,12 +5492,12 @@
 			]
 		},
 		{
-			"ID": "20210707224540-6c9ytkn",
+			"ID": "20210803235237-p8qftby",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
 			"Properties": {
-				"id": "20210707224540-6c9ytkn",
-				"updated": "20210707224540"
+				"id": "20210803235237-p8qftby",
+				"updated": "20210803235242"
 			},
 			"Children": [
 				{
@@ -5681,11 +5505,12 @@
 					"Data": "```"
 				},
 				{
-					"Type": "NodeCodeBlockFenceInfoMarker"
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "cGxhaW50ZXh0"
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "21:22:16.638 [t1] DEBUG TestBiasedLock - synchronized 加锁前\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           05 00 00 00 (00000101 00000000 00000000 00000000) (5)\n      4     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)\n      8     4        (object header)                           22 dc 00 f8 (00100010 11011100 00000000 11111000) (-134161374)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n21:22:16.643 [t1] DEBUG TestBiasedLock - synchronized 加锁中\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           05 b8 19 86 (00000101 10111000 00011001 10000110) (-2045134843)\n      4     4        (object header)                           a4 7f 00 00 (10100100 01111111 00000000 00000000) (32676)\n      8     4        (object header)                           22 dc 00 f8 (00100010 11011100 00000000 11111000) (-134161374)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n21:22:16.644 [t1] DEBUG TestBiasedLock - synchronized 加锁后\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           05 b8 19 86 (00000101 10111000 00011001 10000110) (-2045134843)\n      4     4        (object header)                           a4 7f 00 00 (10100100 01111111 00000000 00000000) (32676)\n      8     4        (object header)                           22 dc 00 f8 (00100010 11011100 00000000 11111000) (-134161374)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n"
+					"Data": "23:52:10.531 [t1] DEBUG TestBiasedLock - synchronized 加锁前\n_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x0000000000000005 (biasable; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n23:52:10.537 [t1] DEBUG TestBiasedLock - synchronized 加锁中\n_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007fe007228005 (biased: 0x0000001ff801c8a0; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n23:52:10.538 [t1] DEBUG TestBiasedLock - synchronized 加锁后\n_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007fe007228005 (biased: 0x0000001ff801c8a0; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
@@ -5694,16 +5519,28 @@
 			]
 		},
 		{
-			"ID": "20210707224540-lyn1uky",
-			"Type": "NodeParagraph",
+			"ID": "20210803235941-dttihvh",
+			"Type": "NodeBlockQueryEmbed",
 			"Properties": {
-				"id": "20210707224540-lyn1uky",
-				"updated": "20210728004118"
+				"id": "20210803235941-dttihvh",
+				"updated": "20210803235941"
 			},
 			"Children": [
 				{
-					"Type": "NodeText",
-					"Data": "其中 00000000 00000000 01111111 10100100 10000110 00011001 101110 是线程 id（OS 分配的，和 Java 不一样）。只有第二次及之后才有。处于偏向锁的对象解锁后，线程 id 仍存储于对象头中"
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeBlockQueryEmbedScript",
+					"Data": "select * from blocks where id='20210803235857-o26l1q4'"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				},
+				{
+					"Type": "NodeCloseBrace"
 				}
 			]
 		},
@@ -5895,7 +5732,7 @@
 			"IsFencedCodeBlock": true,
 			"Properties": {
 				"id": "20210707224540-wh60epk",
-				"updated": "20210707224540"
+				"updated": "20210803235639"
 			},
 			"Children": [
 				{
@@ -5907,7 +5744,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "01:57:17.769 [t1] DEBUG TestBiasedLock - synchronized 加锁前\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           01 00 00 00 (00000001 00000000 00000000 00000000) (1)\n      4     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)\n      8     4        (object header)                           22 dc 00 f8 (00100010 11011100 00000000 11111000) (-134161374)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n01:57:17.775 [t1] DEBUG TestBiasedLock - synchronized 加锁中\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           00 b9 6d 06 (00000000 10111001 01101101 00000110) (107854080)\n      4     4        (object header)                           00 70 00 00 (00000000 01110000 00000000 00000000) (28672)\n      8     4        (object header)                           22 dc 00 f8 (00100010 11011100 00000000 11111000) (-134161374)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n01:57:17.776 [t1] DEBUG TestBiasedLock - synchronized 加锁后\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           01 00 00 00 (00000001 00000000 00000000 00000000) (1)\n      4     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)\n      8     4        (object header)                           22 dc 00 f8 (00100010 11011100 00000000 11111000) (-134161374)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n"
+					"Data": "23:56:10.023 [t1] DEBUG TestBiasedLock - synchronized 加锁前\n_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x0000000000000001 (non-biasable; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n23:56:10.028 [t1] DEBUG TestBiasedLock - synchronized 加锁中\n_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x000070000b9a5900 (thin lock: 0x000070000b9a5900)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n23:56:10.029 [t1] DEBUG TestBiasedLock - synchronized 加锁后\n_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x0000000000000001 (non-biasable; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
@@ -5916,108 +5753,84 @@
 			]
 		},
 		{
-			"ID": "20210707224540-r7b23yj",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707224540-r7b23yj",
-				"updated": "20210801163703"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "可以看到，加锁中为"
-				},
-				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "000"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "即轻量锁。加锁前、后为"
-				},
-				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "001"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "即无锁（"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "除了偏向锁其他锁执行完释放后都是"
-						},
-						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "001"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": "无锁状态"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "）"
-				}
-			]
-		},
-		{
 			"ID": "20210801162726-ajcpjof",
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20210801162726-ajcpjof",
-				"updated": "20210801162726"
-			}
+				"updated": "20210804002019"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "加锁前、后为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "0x1"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "即无锁，加锁中为"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "0x0"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "即轻量锁。"
+				}
+			]
+		},
+		{
+			"ID": "20210804002045-u9t704f",
+			"Type": "NodeBlockQueryEmbed",
+			"Properties": {
+				"id": "20210804002045-u9t704f",
+				"updated": "20210804002045"
+			},
+			"Children": [
+				{
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeBlockQueryEmbedScript",
+					"Data": "select * from blocks where id='20210804001923-h33tl8f'"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				}
+			]
 		},
 		{
 			"ID": "20210801162906-gikxgi4",
@@ -6057,6 +5870,68 @@
 					"Data": "撤销偏向锁 🔥"
 				}
 			]
+		},
+		{
+			"ID": "20210804010752-3p0juyx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210804010752-3p0juyx",
+				"updated": "20210804010855"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注意：释放和撤销的区别，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "释放是退出同步块"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "（即同步块内代码执行完毕），"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "撤销指线程竞争导致需要锁升级"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210804010752-1ffjps1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210804010752-1ffjps1",
+				"updated": "20210804010752"
+			}
 		},
 		{
 			"ID": "20210707224540-29k1dj4",
@@ -6271,17 +6146,7 @@
 				{
 					"Type": "NodeText",
 					"Data": "，加上"
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-mjop5v4",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707224540-mjop5v4",
-				"updated": "20210707224540"
-			},
-			"Children": [
+				},
 				{
 					"Type": "NodeCodeSpan",
 					"Data": "code",
@@ -6369,7 +6234,7 @@
 			"IsFencedCodeBlock": true,
 			"Properties": {
 				"id": "20210707224540-i2pq7yt",
-				"updated": "20210707224540"
+				"updated": "20210804000333"
 			},
 			"Children": [
 				{
@@ -6381,7 +6246,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "21:25:59.886 [t1] DEBUG TestBiasedLock - synchronized 加锁前\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           01 18 94 ad (00000001 00011000 10010100 10101101) (-1382803455)\n      4     4        (object header)                           20 00 00 00 (00100000 00000000 00000000 00000000) (32)\n      8     4        (object header)                           22 de 00 f8 (00100010 11011110 00000000 11111000) (-134160862)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n21:25:59.890 [t1] DEBUG TestBiasedLock - synchronized 加锁中\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           00 b9 c5 03 (00000000 10111001 11000101 00000011) (63289600)\n      4     4        (object header)                           00 70 00 00 (00000000 01110000 00000000 00000000) (28672)\n      8     4        (object header)                           22 de 00 f8 (00100010 11011110 00000000 11111000) (-134160862)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n21:25:59.890 [t1] DEBUG TestBiasedLock - synchronized 加锁后\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           01 18 94 ad (00000001 00011000 10010100 10101101) (-1382803455)\n      4     4        (object header)                           20 00 00 00 (00100000 00000000 00000000 00000000) (32)\n      8     4        (object header)                           22 de 00 f8 (00100010 11011110 00000000 11111000) (-134160862)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n"
+					"Data": "00:01:59.516 [t1] DEBUG TestBiasedLock - synchronized 加锁前\n_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00000020ad941801 (hash: 0x20ad9418; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n00:01:59.522 [t1] DEBUG TestBiasedLock - synchronized 加锁中\n_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x0000700001f96900 (thin lock: 0x0000700001f96900)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n00:01:59.523 [t1] DEBUG TestBiasedLock - synchronized 加锁后\n_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00000020ad941801 (hash: 0x20ad9418; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
@@ -6394,7 +6259,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20210707224540-0kjtgps",
-				"updated": "20210707224540"
+				"updated": "20210804002225"
 			},
 			"Children": [
 				{
@@ -6410,7 +6275,7 @@
 						},
 						{
 							"Type": "NodeCodeSpanContent",
-							"Data": "001"
+							"Data": "0x1"
 						},
 						{
 							"Type": "NodeCodeSpanCloseMarker"
@@ -6430,7 +6295,7 @@
 						},
 						{
 							"Type": "NodeCodeSpanContent",
-							"Data": "000"
+							"Data": "0x0"
 						},
 						{
 							"Type": "NodeCodeSpanCloseMarker"
@@ -6439,45 +6304,33 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "轻量锁，"
+					"Data": "轻量锁"
+				}
+			]
+		},
+		{
+			"ID": "20210804002226-5vheu6p",
+			"Type": "NodeBlockQueryEmbed",
+			"Properties": {
+				"id": "20210804002226-5vheu6p",
+				"updated": "20210804002226"
+			},
+			"Children": [
+				{
+					"Type": "NodeOpenBrace"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "轻量锁执行完后都是"
-						},
-						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "001"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": "无锁状态"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeBlockQueryEmbedScript",
+					"Data": "select * from blocks where id='20210804001923-h33tl8f'"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				},
+				{
+					"Type": "NodeCloseBrace"
 				}
 			]
 		},
@@ -6509,7 +6362,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20210707224540-hl44l72",
-				"updated": "20210707224540"
+				"updated": "20210804000351"
 			},
 			"Children": [
 				{
@@ -6577,20 +6430,10 @@
 							"Data": "**"
 						}
 					]
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-kgfokfe",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707224540-kgfokfe",
-				"updated": "20210729002957"
-			},
-			"Children": [
+				},
 				{
 					"Type": "NodeText",
-					"Data": "记住"
+					"Data": "。记住"
 				},
 				{
 					"Type": "NodeStrong",
@@ -6618,7 +6461,7 @@
 			"IsFencedCodeBlock": true,
 			"Properties": {
 				"id": "20210707224540-l7obmjd",
-				"updated": "20210729003036"
+				"updated": "20210804000506"
 			},
 			"Children": [
 				{
@@ -6631,7 +6474,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "@Slf4j(topic = \"TestBiasedLock\")\npublic class TestBiasedLock {\n\n    public static void main(String[] args) {\n        test3();\n    }\n\n    /**\n     * 其他线程使用对象 撤销偏向锁\n     */\n    private static void test3() {\n        Dog d = new Dog();\n        ClassLayout classLayout = ClassLayout.parseInstance(d);\n        Thread t1 = new Thread(() -\u003e {\n            log.debug(\"t1 synchronized 加锁前\\n{}\", classLayout.toPrintable());\n            synchronized (d) {\n                log.debug(\"t1 synchronized 加锁中\\n{}\", classLayout.toPrintable());\n            }\n            log.debug(\"t1 synchronized 加锁后\\n{}\", classLayout.toPrintable());\n\n            // 这里和 wait、notify 撤销偏向锁不一样哦，因为锁对象都不一样！\n            // t1 执行完再唤醒 t2（用同一把锁）。此时wait、notify使用的TestBiasedLock是重量锁，但与本实验的d锁无关\n            // 结果是要让t1先执行哦，所以使用 wait、notify\n            synchronized (TestBiasedLock.class) {\n                TestBiasedLock.class.notify();\n            }\n\n        }, \"t1\");\n        t1.start();\n\n\n        Thread t2 = new Thread(() -\u003e {\n            // 这里和 wait、notify 撤销偏向锁不一样哦，因为锁对象都不一样！\n            // 结果是要让t1先执行哦，所以使用 wait、notify\n            // 等待唤醒\n            synchronized (TestBiasedLock.class) {\n                try {\n                    TestBiasedLock.class.wait();\n                } catch (InterruptedException e) {\n                    e.printStackTrace();\n                }\n            }\n\n            log.debug(\"t2 synchronized 加锁前\\n{}\", classLayout.toPrintable());\n            synchronized (d) {\n                log.debug(\"t2 synchronized 加锁中\\n{}\", classLayout.toPrintable());\n            }\n            log.debug(\"t2 synchronized 加锁后\\n{}\", classLayout.toPrintable());\n        }, \"t2\");\n        t2.start();\n    }\n}\n\nclass Dog {\n\n}\n"
+					"Data": "@Slf4j(topic = \"TestBiasedLock\")\npublic class TestBiasedLock {\n\n    public static void main(String[] args) {\n        test3();\n    }\n\n    /**\n     * 其他线程使用对象 撤销偏向锁\n     */\n    private static void test3() {\n        Dog d = new Dog();\n        ClassLayout classLayout = ClassLayout.parseInstance(d);\n        Thread t1 = new Thread(() -\u003e {\n            log.debug(\"t1 synchronized 加锁前\\n{}\", classLayout.toPrintable());\n            synchronized (d) {\n                log.debug(\"t1 synchronized 加锁中\\n{}\", classLayout.toPrintable());\n            }\n            log.debug(\"t1 synchronized 加锁后\\n{}\", classLayout.toPrintable());\n\n            // 这里和 wait、notify 撤销偏向锁不一样哦，因为锁对象都不一样！\n            // 结果是要让t1先执行哦，所以使用 wait、notify\n            // t1 执行完再唤醒 t2（用同一把锁）。此时wait、notify使用的TestBiasedLock是重量锁，但与本实验的d锁无关\n            synchronized (TestBiasedLock.class) {\n                TestBiasedLock.class.notify();\n            }\n\n        }, \"t1\");\n        t1.start();\n\n\n        Thread t2 = new Thread(() -\u003e {\n            // 这里和 wait、notify 撤销偏向锁不一样哦，因为锁对象都不一样！\n            // 结果是要让t1先执行哦，所以使用 wait、notify\n            // 等待唤醒\n            synchronized (TestBiasedLock.class) {\n                try {\n                    TestBiasedLock.class.wait();\n                } catch (InterruptedException e) {\n                    e.printStackTrace();\n                }\n            }\n\n            log.debug(\"t2 synchronized 加锁前\\n{}\", classLayout.toPrintable());\n            synchronized (d) {\n                log.debug(\"t2 synchronized 加锁中\\n{}\", classLayout.toPrintable());\n            }\n            log.debug(\"t2 synchronized 加锁后\\n{}\", classLayout.toPrintable());\n        }, \"t2\");\n        t2.start();\n    }\n}\n\nclass Dog {\n\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
@@ -6681,7 +6524,7 @@
 			"IsFencedCodeBlock": true,
 			"Properties": {
 				"id": "20210729002140-zjsflke",
-				"updated": "20210729003013"
+				"updated": "20210804000610"
 			},
 			"Children": [
 				{
@@ -6694,7 +6537,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "00:29:24.808 [t1] DEBUG TestBiasedLock - t1 synchronized 加锁前\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           05 00 00 00 (00000101 00000000 00000000 00000000) (5)\n      4     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)\n      8     4        (object header)                           22 ef 00 f8 (00100010 11101111 00000000 11111000) (-134156510)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n00:29:24.813 [t1] DEBUG TestBiasedLock - t1 synchronized 加锁中\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           05 38 21 c1 (00000101 00111000 00100001 11000001) (-1054787579)\n      4     4        (object header)                           85 7f 00 00 (10000101 01111111 00000000 00000000) (32645)\n      8     4        (object header)                           22 ef 00 f8 (00100010 11101111 00000000 11111000) (-134156510)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n00:29:24.814 [t1] DEBUG TestBiasedLock - t1 synchronized 加锁后\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           05 38 21 c1 (00000101 00111000 00100001 11000001) (-1054787579)\n      4     4        (object header)                           85 7f 00 00 (10000101 01111111 00000000 00000000) (32645)\n      8     4        (object header)                           22 ef 00 f8 (00100010 11101111 00000000 11111000) (-134156510)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n00:29:24.814 [t2] DEBUG TestBiasedLock - t2 synchronized 加锁前\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           05 38 21 c1 (00000101 00111000 00100001 11000001) (-1054787579)\n      4     4        (object header)                           85 7f 00 00 (10000101 01111111 00000000 00000000) (32645)\n      8     4        (object header)                           22 ef 00 f8 (00100010 11101111 00000000 11111000) (-134156510)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n00:29:24.815 [t2] DEBUG TestBiasedLock - t2 synchronized 加锁中\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           f0 48 71 0e (11110000 01001000 01110001 00001110) (242305264)\n      4     4        (object header)                           00 70 00 00 (00000000 01110000 00000000 00000000) (28672)\n      8     4        (object header)                           22 ef 00 f8 (00100010 11101111 00000000 11111000) (-134156510)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n00:29:24.816 [t2] DEBUG TestBiasedLock - t2 synchronized 加锁后\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           01 00 00 00 (00000001 00000000 00000000 00000000) (1)\n      4     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)\n      8     4        (object header)                           22 ef 00 f8 (00100010 11101111 00000000 11111000) (-134156510)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n"
+					"Data": "00:05:17.090 [t1] DEBUG TestBiasedLock - t1 synchronized 加锁前\n_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x0000000000000005 (biasable; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n00:05:17.095 [t1] DEBUG TestBiasedLock - t1 synchronized 加锁中\n_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007fa475155005 (biased: 0x0000001fe91d4554; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n00:05:17.095 [t1] DEBUG TestBiasedLock - t1 synchronized 加锁后\n_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007fa475155005 (biased: 0x0000001fe91d4554; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n00:05:17.096 [t2] DEBUG TestBiasedLock - t2 synchronized 加锁前\n_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007fa475155005 (biased: 0x0000001fe91d4554; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n00:05:17.097 [t2] DEBUG TestBiasedLock - t2 synchronized 加锁中\n_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x000070000d8128f0 (thin lock: 0x000070000d8128f0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n00:05:17.098 [t2] DEBUG TestBiasedLock - t2 synchronized 加锁后\n_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x0000000000000001 (non-biasable; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
@@ -6707,50 +6550,38 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20210707224540-rovc6id",
-				"updated": "20210729003220"
+				"updated": "20210804002217"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "由上面状态 101、101、101、101、000、001 改变可以得出 t1 线程都是偏向锁，t2 线程加锁前、中、后分别为偏向锁、轻量锁（竞争导致锁升级）、无锁。"
+					"Data": "由上面状态 0x5、0x5、0x5、0x5、0x0、0x1 改变可以得出 t1 线程都是偏向锁，t2 线程加锁前、中、后分别为偏向锁、轻量锁（竞争导致锁升级）、无锁。"
+				}
+			]
+		},
+		{
+			"ID": "20210804002218-9yx0hvx",
+			"Type": "NodeBlockQueryEmbed",
+			"Properties": {
+				"id": "20210804002218-9yx0hvx",
+				"updated": "20210804002218"
+			},
+			"Children": [
+				{
+					"Type": "NodeOpenBrace"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "除偏向锁外其他锁执行完后都是"
-						},
-						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "001"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": "无锁状态"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeBlockQueryEmbedScript",
+					"Data": "select * from blocks where id='20210804001923-h33tl8f'"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				},
+				{
+					"Type": "NodeCloseBrace"
 				}
 			]
 		},
@@ -6811,7 +6642,7 @@
 			"IsFencedCodeBlock": true,
 			"Properties": {
 				"id": "20210707224540-pa4ydl5",
-				"updated": "20210707224540"
+				"updated": "20210804001458"
 			},
 			"Children": [
 				{
@@ -6824,7 +6655,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "@Slf4j(topic = \"TestBiasedLock\")\npublic class TestBiasedLock {\n\n    public static void main(String[] args) {\n        test4();\n    }\n\n    /**\n     * 撤销偏向锁—锁对象调用 wait/notify\n     */\n    private static void test4() {\n        Dog d = new Dog();\n        ClassLayout classLayout = ClassLayout.parseInstance(d);\n\n        // 结果是要让t1先执行哦\n        Thread t1 = new Thread(() -\u003e {\n            log.debug(\"t1 synchronized 加锁前\\n{}\", classLayout.toPrintable());\n            synchronized (d) {\n                log.debug(\"t1 synchronized 加锁中\\n{}\", classLayout.toPrintable());\n                try {\n                    // 等待\n                    d.wait();\n                } catch (InterruptedException e) {\n                    e.printStackTrace();\n                }\n            }\n            log.debug(\"t1 synchronized 加锁后\\n{}\", classLayout.toPrintable());\n        }, \"t1\");\n        t1.start();\n\n\n        Thread t2 = new Thread(() -\u003e {\n            try {\n                TimeUnit.SECONDS.sleep(5);\n            } catch (InterruptedException e) {\n                e.printStackTrace();\n            }\n\n            synchronized (d){\n                log.debug(\"t2 notify\");\n                d.notify();\n            }\n\n        }, \"t2\");\n        t2.start();\n    }\n}\n\nclass Dog {\n\n}\n"
+					"Data": "@Slf4j(topic = \"TestBiasedLock\")\npublic class TestBiasedLock {\n\n    public static void main(String[] args) {\n        test4();\n    }\n\n    /**\n     * 撤销偏向锁—锁对象调用 wait/notify\n     */\n    private static void test4() {\n        Dog d = new Dog();\n        ClassLayout classLayout = ClassLayout.parseInstance(d);\n\n        // 结果是要让t1先执行哦\n        Thread t1 = new Thread(() -\u003e {\n            log.debug(\"t1 synchronized 加锁前\\n{}\", classLayout.toPrintable());\n            synchronized (d) {\n                log.debug(\"t1 synchronized 加锁中\\n{}\", classLayout.toPrintable());\n                try {\n                    // 等待\n                    d.wait();\n                } catch (InterruptedException e) {\n                    e.printStackTrace();\n                }\n                log.debug(\"t1 synchronized notify 后\\n{}\", classLayout.toPrintable());\n            }\n            log.debug(\"t1 synchronized 加锁后\\n{}\", classLayout.toPrintable());\n        }, \"t1\");\n        t1.start();\n\n\n        Thread t2 = new Thread(() -\u003e {\n            // 这里sleep只是为了让t1的wait先执行\n            try {\n                TimeUnit.SECONDS.sleep(5);\n                log.debug(\"t2 睡了5秒\");\n            } catch (InterruptedException e) {\n                e.printStackTrace();\n            }\n\n            synchronized (d) {\n                log.debug(\"t2 notify\");\n                d.notify();\n            }\n\n        }, \"t2\");\n        t2.start();\n\n\n        try {\n            TimeUnit.SECONDS.sleep(10);\n            log.debug(\"=============最后\\n{}\", classLayout.toPrintable());\n        } catch (InterruptedException e) {\n            e.printStackTrace();\n        }\n    }\n}\n\nclass Dog {\n\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
@@ -6874,7 +6705,7 @@
 			"IsFencedCodeBlock": true,
 			"Properties": {
 				"id": "20210707224540-f552sv9",
-				"updated": "20210707224540"
+				"updated": "20210804001509"
 			},
 			"Children": [
 				{
@@ -6886,7 +6717,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "21:48:53.705 [t1] DEBUG TestBiasedLock - t1 synchronized 加锁前\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           05 00 00 00 (00000101 00000000 00000000 00000000) (5)\n      4     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)\n      8     4        (object header)                           22 dc 00 f8 (00100010 11011100 00000000 11111000) (-134161374)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n21:48:53.710 [t1] DEBUG TestBiasedLock - t1 synchronized 加锁中\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           05 08 83 5e (00000101 00001000 10000011 01011110) (1585645573)\n      4     4        (object header)                           f9 7f 00 00 (11111001 01111111 00000000 00000000) (32761)\n      8     4        (object header)                           22 dc 00 f8 (00100010 11011100 00000000 11111000) (-134161374)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n21:48:58.703 [t2] DEBUG TestBiasedLock - t2 notify\n21:48:58.706 [t1] DEBUG TestBiasedLock - t1 synchronized notify 后\n_999_demo.Dog object internals:\n OFFSET  SIZE   TYPE DESCRIPTION                               VALUE\n      0     4        (object header)                           fa 93 01 5e (11111010 10010011 00000001 01011110) (1577161722)\n      4     4        (object header)                           f9 7f 00 00 (11111001 01111111 00000000 00000000) (32761)\n      8     4        (object header)                           22 dc 00 f8 (00100010 11011100 00000000 11111000) (-134161374)\n     12     4        (loss due to the next object alignment)\nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n"
+					"Data": "00:14:26.080 [t1] DEBUG TestBiasedLock - t1 synchronized 加锁前\n_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x0000000000000005 (biasable; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n00:14:26.085 [t1] DEBUG TestBiasedLock - t1 synchronized 加锁中\n_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007fd941077805 (biased: 0x0000001ff65041de; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n00:14:31.079 [t2] DEBUG TestBiasedLock - t2 睡了5秒\n00:14:31.080 [t2] DEBUG TestBiasedLock - t2 notify\n00:14:31.081 [t1] DEBUG TestBiasedLock - t1 synchronized notify 后\n_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007fd93e83cf3a (fat lock: 0x00007fd93e83cf3a)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n00:14:31.082 [t1] DEBUG TestBiasedLock - t1 synchronized 加锁后\n_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007fd93e83cf3a (fat lock: 0x00007fd93e83cf3a)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n00:14:36.080 [main] DEBUG TestBiasedLock - =============最后\n_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x0000000000000001 (non-biasable; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
@@ -6899,54 +6730,48 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20210707224540-4mk9hl7",
-				"updated": "20210707224540"
+				"updated": "20210804001759"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "上面的状态：加锁前 101 偏向锁、加锁中 101 偏向锁、nofity 后 010 重量级锁（锁膨胀），"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "重量锁不会撤销标记"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "、因为"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "重量级锁是根据 monitor 的 owner 来判断锁状态的"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Data": "上面的状态：加锁前 0x5 偏向锁、加锁中 0x5 偏向锁、nofity 后 0xa 重量级锁（锁膨胀）、加锁后 0xa 重量级锁、最后sleep 5秒后变为 0x1（无锁）。"
 				}
 			]
+		},
+		{
+			"ID": "20210804002205-h8spia0",
+			"Type": "NodeBlockQueryEmbed",
+			"Properties": {
+				"id": "20210804002205-h8spia0",
+				"updated": "20210804002205"
+			},
+			"Children": [
+				{
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeOpenBrace"
+				},
+				{
+					"Type": "NodeBlockQueryEmbedScript",
+					"Data": "select * from blocks where id='20210804001923-h33tl8f'"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				},
+				{
+					"Type": "NodeCloseBrace"
+				}
+			]
+		},
+		{
+			"ID": "20210804001656-emxf67l",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210804001656-emxf67l",
+				"updated": "20210804001757"
+			}
 		},
 		{
 			"ID": "20210802235052-oqhz3mc",
@@ -6976,7 +6801,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20210803000245-11j8s8w",
-				"updated": "20210803000248"
+				"updated": "20210804005851"
 			},
 			"Children": [
 				{
@@ -7003,21 +6828,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "，和对象无关"
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-ht55gvs",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707224540-ht55gvs",
-				"updated": "20210803005110"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "都是"
+					"Data": "，和对象无关，都是"
 				},
 				{
 					"Type": "NodeStrong",
@@ -7061,7 +6872,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "），阈值之前的变为轻量级锁，之后的重偏向了。同一类的可能有多个实例锁对象。"
+					"Data": "）"
 				}
 			]
 		},
@@ -7188,7 +6999,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20210803000229-mkpy2ld",
-				"updated": "20210803000232"
+				"updated": "20210804010153"
 			},
 			"Children": [
 				{
@@ -7208,6 +7019,10 @@
 							"Data": "**"
 						}
 					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，因为再一次20次，就会触发批量撤销！！！"
 				}
 			]
 		},
@@ -7217,7 +7032,7 @@
 			"IsFencedCodeBlock": true,
 			"Properties": {
 				"id": "20210707224540-28qf40i",
-				"updated": "20210707224540"
+				"updated": "20210804005809"
 			},
 			"Children": [
 				{
@@ -7230,7 +7045,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "@Slf4j(topic = \"TestBiasedLock\")\npublic class TestBiasedLock {\n\n    public static void main(String[] args) {\n        test5();\n    }\n\n    /**\n     * 批量重偏向\n     */\n    private static void test5() {\n        Vector\u003cDog\u003e list = new Vector\u003c\u003e();\n        Thread t1 = new Thread(() -\u003e {\n            for (int i = 0; i \u003c 30; i++) {\n                Dog d = new Dog();\n                list.add(d);\n                synchronized (d) {\n                    log.debug(i + \"\\t\" + ClassLayout.parseInstance(d).toPrintable());\n                }\n            }\n            synchronized (list) {\n                list.notify();\n            }\n        }, \"t1\");\n        t1.start();\n\n        Thread t2 = new Thread(() -\u003e {\n            synchronized (list) {\n                try {\n                    list.wait();\n                } catch (InterruptedException e) {\n                    e.printStackTrace();\n                }\n            }\n            log.debug(\"===============\u003e \");\n            for (int i = 0; i \u003c 30; i++) {\n                Dog d = list.get(i);\n                log.debug(i + \"\\t\" + ClassLayout.parseInstance(d).toPrintable());\n                synchronized (d) {\n                    log.debug(i + \"\\t\" + ClassLayout.parseInstance(d).toPrintable());\n                }\n                log.debug(i + \"\\t\" + ClassLayout.parseInstance(d).toPrintable());\n            }\n        }, \"t2\");\n        t2.start();\n    }\n}\n\nclass Dog {\n\n}\n"
+					"Data": "@Slf4j(topic = \"TestBiasedLock\")\npublic class TestBiasedLock {\n\n    public static void main(String[] args) {\n        test5();\n    }\n\n    /**\n     * 批量重偏向\n     */\n    private static void test5() {\n        Vector\u003cDog\u003e list = new Vector\u003c\u003e();\n        Thread t1 = new Thread(() -\u003e {\n            for (int i = 0; i \u003c 30; i++) {\n                Dog d = new Dog();\n                list.add(d);\n                synchronized (d) {\n                    log.debug(\"t1线程第{}个锁对象加偏向锁:\\t{}\", i+1, ClassLayout.parseInstance(d).toPrintable());\n                }\n            }\n\n            // 只是为了保证t1先执行\n            synchronized (list) {\n                list.notify();\n            }\n\t    // 如果不用 wait/notify 使用 join 必须打开下面的注释\n            // 因为：t1 线程不能结束，否则底层线程可能被 jvm 重用作为 t2 线程，导致底层线程 id 是一样的\n            // try {\n            //     System.in.read();\n            // } catch (IOException e) {\n            //     e.printStackTrace();\n            // }\n        }, \"t1\");\n        t1.start();\n\n        Thread t2 = new Thread(() -\u003e {\n            // 只是为了保证t1先执行\n            synchronized (list) {\n                try {\n                    list.wait();\n                } catch (InterruptedException e) {\n                    e.printStackTrace();\n                }\n            }\n            for (int i = 0; i \u003c 30; i++) {\n                Dog d = list.get(i);\n                log.debug(\"t2线程第{}个锁对象 sync 前：\\t{}\", i+1, ClassLayout.parseInstance(d).toPrintable());\n                synchronized (d) {\n                    log.debug(\"t2线程第{}个锁对象 sync 中：\\t{}\", i+1, ClassLayout.parseInstance(d).toPrintable());\n                }\n                log.debug(\"t2线程第{}个锁对象 sync 后：\\t{}\", i+1, ClassLayout.parseInstance(d).toPrintable());\n            }\n\n            // 前面19个锁对象已经撤销为轻量级锁，最终变为无锁状态，偏向锁状态已经为0了，所以批量重偏向时不会对它们进行\n            for (int i = 0; i \u003c 19; i++) {\n                Dog d = list.get(i);\n                log.debug(\"===最终第{}个锁对象状态：\\t{}\", i+1, ClassLayout.parseInstance(d).toPrintable());\n            }\n\n        }, \"t2\");\n        t2.start();\n    }\n}\n\nclass Dog {\n\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
@@ -7253,12 +7068,12 @@
 			]
 		},
 		{
-			"ID": "20210707224540-3jn2hib",
+			"ID": "20210804003542-j64mrug",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
 			"Properties": {
-				"id": "20210707224540-3jn2hib",
-				"updated": "20210707224540"
+				"id": "20210804003542-j64mrug",
+				"updated": "20210804005128"
 			},
 			"Children": [
 				{
@@ -7266,15 +7081,251 @@
 					"Data": "```"
 				},
 				{
-					"Type": "NodeCodeBlockFenceInfoMarker"
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "cGxhaW50ZXh0"
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "[t1] - 0 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 1 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 2 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 3 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 4 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 5 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 6 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 7 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 8 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 9 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 10 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 11 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 12 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 13 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 14 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 15 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 16 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 17 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 18 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 19 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 20 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 21 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 22 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 23 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 24 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 25 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 26 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 27 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 28 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t1] - 29 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - ===============\u003e\n[t2] - 0 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 0 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 0 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 1 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 1 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 1 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 2 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 2 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 2 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 3 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 3 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 3 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 4 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 4 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 4 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 5 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 5 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 5 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 6 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 6 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 6 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 7 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 7 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 7 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 8 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 8 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 8 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 9 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 9 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 9 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 10 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 10 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 10 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 11 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 11 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 11 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 12 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 12 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 12 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 13 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 13 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 13 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 14 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 14 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 14 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 15 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 15 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 15 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 16 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 16 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 16 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 17 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 17 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 17 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 18 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 18 00000000 00000000 00000000 00000000 00100000 01011000 11110111 00000000\n[t2] - 18 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001\n[t2] - 19 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 19 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 19 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 20 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 20 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 20 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 21 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 21 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 21 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 22 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 22 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 22 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 23 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 23 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 23 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 24 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 24 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 24 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 25 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 25 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 25 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 26 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 26 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 26 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 27 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 27 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 27 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 28 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 28 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 28 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 29 00000000 00000000 00000000 00000000 00011111 11110011 11100000 00000101\n[t2] - 29 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n[t2] - 29 00000000 00000000 00000000 00000000 00011111 11110011 11110001 00000101\n"
+					"Data": "00:32:43.680 [t1] DEBUG TestBiasedLock - t1线程第1个加偏向锁:\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007f9e79193805 (biased: 0x0000001fe79e464e; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800f1c6\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n............ \n00:32:43.695 [t1] DEBUG TestBiasedLock - t1线程第30个加偏向锁:\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007f9e79193805 (biased: 0x0000001fe79e464e; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800f1c6\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n\n\n00:32:43.695 [t2] DEBUG TestBiasedLock - t2线程第1个锁对象 sync 前：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007f9e79193805 (biased: 0x0000001fe79e464e; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800f1c6\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n00:32:43.695 [t2] DEBUG TestBiasedLock - t2线程第1个锁对象 sync 中：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x000070000ee678f8 (thin lock: 0x000070000ee678f8)\n  8   4        (object header: class)    0xf800f1c6\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n00:32:43.696 [t2] DEBUG TestBiasedLock - t2线程第1个锁对象 sync 后：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x0000000000000001 (non-biasable; age: 0)\n  8   4        (object header: class)    0xf800f1c6\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n............\n00:32:43.709 [t2] DEBUG TestBiasedLock - t2线程第19个锁对象 sync 前：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007f9e79193805 (biased: 0x0000001fe79e464e; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800f1c6\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n00:32:43.709 [t2] DEBUG TestBiasedLock - t2线程第19个锁对象 sync 中：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x000070000ee678f8 (thin lock: 0x000070000ee678f8)\n  8   4        (object header: class)    0xf800f1c6\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n00:32:43.709 [t2] DEBUG TestBiasedLock - t2线程第19个锁对象 sync 后：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x0000000000000001 (non-biasable; age: 0)\n  8   4        (object header: class)    0xf800f1c6\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n\n\n00:32:43.709 [t2] DEBUG TestBiasedLock - t2线程第20个锁对象 sync 前：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007f9e79193805 (biased: 0x0000001fe79e464e; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800f1c6\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n00:32:43.709 [t2] DEBUG TestBiasedLock - t2线程第20个锁对象 sync 中：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007f9e78099105 (biased: 0x0000001fe79e0264; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800f1c6\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n00:32:43.710 [t2] DEBUG TestBiasedLock - t2线程第20个锁对象 sync 后：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007f9e78099105 (biased: 0x0000001fe79e0264; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800f1c6\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n............\n00:32:43.714 [t2] DEBUG TestBiasedLock - t2线程第30个锁对象 sync 前：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007f9e79193805 (biased: 0x0000001fe79e464e; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800f1c6\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n00:32:43.714 [t2] DEBUG TestBiasedLock - t2线程第30个锁对象 sync 中：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007f9e78099105 (biased: 0x0000001fe79e0264; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800f1c6\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n00:32:43.714 [t2] DEBUG TestBiasedLock - t2线程第30个锁对象 sync 后：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007f9e78099105 (biased: 0x0000001fe79e0264; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800f1c6\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n\n\n00:46:50.025 [t2] DEBUG TestBiasedLock - ===最终第1个锁对象状态：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x0000000000000001 (non-biasable; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n............\n00:46:50.025 [t2] DEBUG TestBiasedLock - ===最终第19个锁对象状态：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x0000000000000001 (non-biasable; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
 					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210804003628-r4vt3ha",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210804003628-r4vt3ha",
+				"updated": "20210804005254"
+			},
+			"Children": [
+				{
+					"ID": "20210804003633-6ix9dwg",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210804003633-6ix9dwg"
+					},
+					"Children": [
+						{
+							"ID": "20210804003633-a5pcf6a",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210804003633-a5pcf6a",
+								"updated": "20210804003921"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "t1中 1~30个锁对象"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "加偏向锁"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "都是一样的"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210804003652-ibaj65d",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210804003652-ibaj65d"
+					},
+					"Children": [
+						{
+							"ID": "20210804003652-vwbgugd",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210804003652-vwbgugd",
+								"updated": "20210804003918"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "t2中1~19个锁对象都是在进行"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "偏向锁撤销"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，经历"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "偏向锁-\u003e轻量级锁-\u003e无锁"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210804003922-k7p4b6l",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210804003922-k7p4b6l",
+						"updated": "20210804005254"
+					},
+					"Children": [
+						{
+							"ID": "20210804003922-a56v1rk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210804003922-a56v1rk",
+								"updated": "20210804005254"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "t2中从第20锁对象开始，进行"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "批量重偏向"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，第20~30个锁对象批量重偏向前偏向状态都是1，所以最后都是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "偏向了t2线程的偏向锁"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "；而第师"
+								},
+								{
+									"Type": "NodeBackslash",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBackslashContent",
+											"Data": "~"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "傅师傅"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210804005402-byrysi9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210804005402-byrysi9",
+				"updated": "20210804005402"
+			}
+		},
+		{
+			"ID": "20210707224540-3jn2hib",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707224540-3jn2hib",
+				"updated": "20210707224540"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "\n"
 				}
 			]
 		},
