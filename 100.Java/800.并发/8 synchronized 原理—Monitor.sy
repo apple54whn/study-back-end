@@ -5,7 +5,7 @@
 		"id": "20210707224540-3aouv33",
 		"title": "8 synchronized 原理—Monitor",
 		"type": "doc",
-		"updated": "20210804010855"
+		"updated": "20210804230752"
 	},
 	"Children": [
 		{
@@ -1544,357 +1544,538 @@
 		},
 		{
 			"ID": "20210715231446-2pdwbm5",
-			"Type": "NodeParagraph",
+			"Type": "NodeList",
+			"ListData": {},
 			"Properties": {
 				"id": "20210715231446-2pdwbm5",
-				"updated": "20210716003936"
+				"updated": "20210804182227"
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
+					"ID": "20210804182029-qvqnkp3",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210804182029-qvqnkp3"
+					},
 					"Children": [
 						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "identity_hashcode"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
+							"ID": "20210804182029-bp8hlfe",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210804182029-bp8hlfe"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "identity_hashcode"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：对象标识 Hash 码，采用延迟加载技术。调用方法"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "System.identityHashCode()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "计算，并会将结果写到该对象头中。当对象被锁定时，该值会移动到管程 Monitor 中。"
+								}
+							]
 						}
 					]
 				},
 				{
-					"Type": "NodeText",
-					"Data": "：对象标识 Hash 码，采用延迟加载技术。调用方法"
-				},
-				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
+					"ID": "20210804182055-5ir4ilz",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210804182055-5ir4ilz"
+					},
 					"Children": [
 						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "System.identityHashCode()"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
+							"ID": "20210804182055-5yr92qj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210804182055-5yr92qj"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "age"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：4 位的 Java "
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "对象分代年龄"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。在 GC 中，如果对象在 Survivor 区复制一次，年龄增加 1。当对象达到设定的阈值时，将会晋升到老年代。默认情况下，并行 GC 的年龄阈值为 15，并发 GC 的年龄阈值为 6。由于 age 只有 4 位，所以最大值为 15，这就是"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "-XX:MaxTenuringThreshold"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "选项最大值为 15 的原因。"
+								}
+							]
 						}
 					]
 				},
 				{
-					"Type": "NodeText",
-					"Data": "计算，并会将结果写到该对象头中。当对象被锁定时，该值会移动到管程 Monitor 中。"
-				}
-			]
-		},
-		{
-			"ID": "20210715231451-232th34",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210715231451-232th34",
-				"updated": "20210715231838"
-			},
-			"Children": [
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
+					"ID": "20210804182057-0ke345q",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210804182057-0ke345q",
+						"updated": "20210804182227"
+					},
 					"Children": [
 						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "age"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
+							"ID": "20210804182057-dvshhdq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210804182057-dvshhdq",
+								"updated": "20210804182227"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "thread"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：持有"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "偏向锁的线程 ID"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "（OS分配的，与Java无关）。"
+								}
+							]
 						}
 					]
 				},
 				{
-					"Type": "NodeText",
-					"Data": "：4 位的 Java "
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
+					"ID": "20210804182059-qlzv7jm",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210804182059-qlzv7jm",
+						"updated": "20210804182211"
+					},
 					"Children": [
 						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "对象分代年龄"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
+							"ID": "20210804182059-wmm0p92",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210804182059-wmm0p92",
+								"updated": "20210804182211"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "epoch"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：偏向时间戳。只在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "批量重偏向时发生改变"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
 						}
 					]
 				},
 				{
-					"Type": "NodeText",
-					"Data": "。在 GC 中，如果对象在 Survivor 区复制一次，年龄增加 1。当对象达到设定的阈值时，将会晋升到老年代。默认情况下，并行 GC 的年龄阈值为 15，并发 GC 的年龄阈值为 6。由于 age 只有 4 位，所以最大值为 15，这就是"
-				},
-				{
-					"Type": "NodeCodeSpan",
-					"Data": "code",
+					"ID": "20210804182101-e6rktov",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210804182101-e6rktov",
+						"updated": "20210804182153"
+					},
 					"Children": [
 						{
-							"Type": "NodeCodeSpanOpenMarker"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "-XX:MaxTenuringThreshold"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker"
+							"ID": "20210804182101-0swlgnb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210804182101-0swlgnb",
+								"updated": "20210804182153"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "ptr_to_lock_record"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：指向栈中"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "锁记录"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的指针。"
+								}
+							]
 						}
 					]
 				},
 				{
-					"Type": "NodeText",
-					"Data": "选项最大值为 15 的原因。"
-				}
-			]
-		},
-		{
-			"ID": "20210715231515-dlcwk4n",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210715231515-dlcwk4n",
-				"updated": "20210715231515"
-			},
-			"Children": [
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
+					"ID": "20210804182103-586mv4q",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210804182103-586mv4q"
+					},
 					"Children": [
 						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "thread"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
+							"ID": "20210804182103-735a0vg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210804182103-735a0vg"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "ptr_to_heavyweight_monitor"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：指向管程 Monitor 的指针。"
+								}
+							]
 						}
 					]
 				},
 				{
-					"Type": "NodeText",
-					"Data": "：持有偏向锁的线程 ID。"
-				}
-			]
-		},
-		{
-			"ID": "20210715231524-hwtdbjl",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210715231524-hwtdbjl",
-				"updated": "20210715231525"
-			},
-			"Children": [
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
+					"ID": "20210804182105-pml1a0p",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210804182105-pml1a0p",
+						"updated": "20210804182145"
+					},
 					"Children": [
 						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "epoch"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
+							"ID": "20210804182105-4h8kpa8",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210804182105-4h8kpa8",
+								"updated": "20210804182145"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "biased_lock"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：对象是否启用"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "偏向锁标记"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，1表示对象启用偏向锁，0表示对象关闭偏向锁。"
+								}
+							]
 						}
 					]
 				},
 				{
-					"Type": "NodeText",
-					"Data": "：偏向时间戳。"
-				}
-			]
-		},
-		{
-			"ID": "20210715231544-3mw36yw",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210715231544-3mw36yw",
-				"updated": "20210715231545"
-			},
-			"Children": [
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
+					"ID": "20210804182108-c6zosih",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210804182108-c6zosih"
+					},
 					"Children": [
 						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "ptr_to_lock_record"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "：指向栈中锁记录的指针。"
-				}
-			]
-		},
-		{
-			"ID": "20210715231548-qev4j1w",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210715231548-qev4j1w",
-				"updated": "20210715231551"
-			},
-			"Children": [
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "ptr_to_heavyweight_monitor"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "：指向管程 Monitor 的指针。"
-				}
-			]
-		},
-		{
-			"ID": "20210715231339-m3wmfvw",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210715231339-m3wmfvw",
-				"updated": "20210715231413"
-			},
-			"Children": [
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "biased_lock"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "：对象是否启用"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "偏向锁标记"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "，只占 1 个二进制位。为 1 时表示对象启用偏向锁，为 0 时表示对象没有偏向锁。"
-				}
-			]
-		},
-		{
-			"ID": "20210707224540-51iu5z0",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707224540-51iu5z0",
-				"updated": "20210715231327"
-			},
-			"Children": [
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "lock"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "：2 位的"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "锁状态标记位"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
+							"ID": "20210804182108-1sm7qw9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210804182108-1sm7qw9"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "lock"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：2 位的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "锁状态标记位"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
 						}
 					]
 				}
@@ -2538,8 +2719,50 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20210803234119-vhca9iy",
-				"updated": "20210803234119"
-			}
+				"updated": "20210804160856"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "0x5"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "代表"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "101"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "即偏向锁（此时为匿名偏向状态，因为线程id为null(0)）"
+				}
+			]
 		},
 		{
 			"ID": "20210803234038-bs0p9kp",
@@ -2626,7 +2849,21 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "，OS 中的概念。每个 Java 对象（此时可以称为"
+					"Data": "，OS 中的概念。"
+				}
+			]
+		},
+		{
+			"ID": "20210804182256-f8ljvqe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210804182256-f8ljvqe",
+				"updated": "20210804182307"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "每个 Java 对象（此时可以称为"
 				},
 				{
 					"Type": "NodeStrong",
@@ -2648,7 +2885,29 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "）都可以关联一个 Monitor 对象，如果使用 synchronized 给对象上锁（重量级）之后，该对象头的 Mark Word 中就被设置指向 Monitor 对象的指针"
+					"Data": "）都可以关联一个 Monitor 对象，如果使用 synchronized 给对象上锁（"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "重量级"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "）之后，该对象头的 Mark Word 中就被设置指向 Monitor 对象的指针"
 				}
 			]
 		},
@@ -4292,7 +4551,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20210803004451-ekwzq2o",
-				"updated": "20210803233108"
+				"updated": "20210804214834"
 			},
 			"Children": [
 				{
@@ -4304,7 +4563,7 @@
 						},
 						{
 							"Type": "NodeLinkText",
-							"Data": "博客1"
+							"Data": "偏向锁批量重偏向与批量撤销"
 						},
 						{
 							"Type": "NodeCloseBracket"
@@ -4323,8 +4582,18 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "，"
-				},
+					"Data": " 有实验代码"
+				}
+			]
+		},
+		{
+			"ID": "20210804214815-o3z7nh8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210804214815-o3z7nh8",
+				"updated": "20210804214903"
+			},
+			"Children": [
 				{
 					"Type": "NodeLink",
 					"Data": "span",
@@ -4334,7 +4603,7 @@
 						},
 						{
 							"Type": "NodeLinkText",
-							"Data": "博客2"
+							"Data": "死磕Synchronized底层实现--偏向锁"
 						},
 						{
 							"Type": "NodeCloseBracket"
@@ -4344,12 +4613,16 @@
 						},
 						{
 							"Type": "NodeLinkDest",
-							"Data": "https://github.com/farmerjohngit/myblog/issues/12"
+							"Data": "https://github.com/farmerjohngit/myblog/issues/13"
 						},
 						{
 							"Type": "NodeCloseParen"
 						}
 					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 🔥 太详细了，跪了"
 				}
 			]
 		},
@@ -4362,28 +4635,19 @@
 			}
 		},
 		{
-			"ID": "20210801162322-euxz469",
+			"ID": "20210804214952-7x1bu8r",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
 			"Properties": {
-				"id": "20210801162322-euxz469",
-				"updated": "20210803233152"
+				"id": "20210804214952-7x1bu8r",
+				"updated": "20210804215452"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "原理 🔥"
+					"Data": "偏向锁的引入的原因 🔥"
 				}
 			]
-		},
-		{
-			"ID": "20210731173127-sv5du07",
-			"Type": "NodeIFrame",
-			"Data": "\u003ciframe id=\"embed_dom\" name=\"embed_dom\" frameborder=\"0\" style=\"display: block; width: 800px; height: 704px;\" src=\"https://www.processon.com/embed/6101774b0791294ae0a8897d\" data-src=\"https://www.processon.com/embed/6101774b0791294ae0a8897d\"\u003e\u003c/iframe\u003e",
-			"Properties": {
-				"id": "20210731173127-sv5du07",
-				"updated": "20210731173127"
-			}
 		},
 		{
 			"ID": "20210731173252-bssrsdv",
@@ -4410,7 +4674,7 @@
 							"Type": "NodeParagraph",
 							"Properties": {
 								"id": "20210731173303-m3flsxe",
-								"updated": "20210731173545"
+								"updated": "20210804215735"
 							},
 							"Children": [
 								{
@@ -4427,7 +4691,7 @@
 										},
 										{
 											"Type": "NodeText",
-											"Data": "锁不存在竞争"
+											"Data": "锁总是由同一个线程获得"
 										},
 										{
 											"Type": "NodeStrongA6kCloseMarker",
@@ -4437,7 +4701,7 @@
 								},
 								{
 									"Type": "NodeText",
-									"Data": " （竞争意思是多个线程同一段时间都需要该锁），且 "
+									"Data": " 。但是轻量级锁每次"
 								},
 								{
 									"Type": "NodeStrong",
@@ -4449,7 +4713,7 @@
 										},
 										{
 											"Type": "NodeText",
-											"Data": "总是由同一个线程获得"
+											"Data": "加锁、解锁时都需要进行CAS操作"
 										},
 										{
 											"Type": "NodeStrongA6kCloseMarker",
@@ -4459,7 +4723,42 @@
 								},
 								{
 									"Type": "NodeText",
-									"Data": " ，所以 Java 6 中引入了偏向锁（需开启偏向锁）来做优化（减少了轻量级锁的 CAS 操作）"
+									"Data": "（将mark word CAS 到 lock record 中的 displaced mark word）；重量级锁更是需要进行"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "内核态的系统调用"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，资源耗费大"
+								}
+							]
+						},
+						{
+							"ID": "20210804215210-m911kf7",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210804215210-m911kf7"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "所以 Java 6 中引入了偏向锁（需开启偏向锁）来做优化（减少了轻量级锁的 CAS 操作）"
 								}
 							]
 						}
@@ -4540,71 +4839,12 @@
 			]
 		},
 		{
-			"ID": "20210727222443-garky9x",
-			"Type": "NodeList",
-			"ListData": {},
-			"Properties": {
-				"id": "20210727222443-garky9x",
-				"updated": "20210803233339"
-			},
-			"Children": [
-				{
-					"ID": "20210803233339-tfe8brg",
-					"Type": "NodeListItem",
-					"ListData": {
-						"BulletChar": 42,
-						"Marker": "Kg=="
-					},
-					"Properties": {
-						"id": "20210803233339-tfe8brg"
-					},
-					"Children": [
-						{
-							"ID": "20210803233339-bjeuq12",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210803233339-bjeuq12"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "解决了轻量级锁在没有竞争时（就自己这个线程），每次重入仍然需要执行 CAS 操作（还需再次"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "记录 lock record"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "）。"
-								}
-							]
-						}
-					]
-				}
-			]
-		},
-		{
 			"ID": "20210803233851-xvsn1zw",
 			"Type": "NodeSuperBlock",
 			"Properties": {
 				"fold": "1",
 				"id": "20210803233851-xvsn1zw",
-				"updated": "20210803233851"
+				"updated": "20210707224540"
 			},
 			"Children": [
 				{
@@ -4618,7 +4858,7 @@
 					"ID": "20210707224540-7jod1ja",
 					"Type": "NodeParagraph",
 					"Properties": {
-						"fold": "0",
+						"fold": "1",
 						"id": "20210707224540-7jod1ja",
 						"updated": "20210707224540"
 					},
@@ -4634,6 +4874,7 @@
 					"Type": "NodeCodeBlock",
 					"IsFencedCodeBlock": true,
 					"Properties": {
+						"fold": "0",
 						"id": "20210707224540-ck92t0z",
 						"updated": "20210707224540"
 					},
@@ -4736,6 +4977,62 @@
 			]
 		},
 		{
+			"ID": "20210804214952-e4espjz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210804214952-e4espjz",
+				"updated": "20210804214952"
+			}
+		},
+		{
+			"ID": "20210804230702-9396qdg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210804230702-9396qdg",
+				"updated": "20210804230702"
+			}
+		},
+		{
+			"ID": "20210804230702-mibh3t7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210804230702-mibh3t7",
+				"updated": "20210804230702"
+			}
+		},
+		{
+			"ID": "20210804230702-uzselr2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210804230702-uzselr2",
+				"updated": "20210804230702"
+			}
+		},
+		{
+			"ID": "20210801162322-euxz469",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210801162322-euxz469",
+				"updated": "20210803233152"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "原理 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210731173127-sv5du07",
+			"Type": "NodeIFrame",
+			"Data": "\u003ciframe id=\"embed_dom\" name=\"embed_dom\" frameborder=\"0\" style=\"display: block; width: 800px; height: 704px;\" src=\"https://www.processon.com/embed/6101774b0791294ae0a8897d\" data-src=\"https://www.processon.com/embed/6101774b0791294ae0a8897d\"\u003e\u003c/iframe\u003e",
+			"Properties": {
+				"id": "20210731173127-sv5du07",
+				"updated": "20210731173127"
+			}
+		},
+		{
 			"ID": "20210803233710-j5knqso",
 			"Type": "NodeParagraph",
 			"Properties": {
@@ -4757,12 +5054,12 @@
 			"HeadingLevel": 3,
 			"Properties": {
 				"id": "20210707224540-xgpuj6b",
-				"updated": "20210803233822"
+				"updated": "20210804230752"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "偏向锁 🔥"
+					"Data": "偏向锁介绍 🔥"
 				}
 			]
 		},
@@ -6999,7 +7296,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20210803000229-mkpy2ld",
-				"updated": "20210804010153"
+				"updated": "20210804160946"
 			},
 			"Children": [
 				{
@@ -7022,7 +7319,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "，因为再一次20次，就会触发批量撤销！！！"
+					"Data": "，因为再撤销20次，就会触发批量撤销！！！"
 				}
 			]
 		},
@@ -7072,6 +7369,7 @@
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
 			"Properties": {
+				"fold": "1",
 				"id": "20210804003542-j64mrug",
 				"updated": "20210804005128"
 			},
@@ -7100,7 +7398,7 @@
 			"ListData": {},
 			"Properties": {
 				"id": "20210804003628-r4vt3ha",
-				"updated": "20210804005254"
+				"updated": "20210804003921"
 			},
 			"Children": [
 				{
@@ -7111,7 +7409,8 @@
 						"Marker": "Kg=="
 					},
 					"Properties": {
-						"id": "20210804003633-6ix9dwg"
+						"id": "20210804003633-6ix9dwg",
+						"updated": "20210804003921"
 					},
 					"Children": [
 						{
@@ -7385,7 +7684,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20210707224540-n0j9vnh",
-				"updated": "20210803005117"
+				"updated": "20210804180734"
 			},
 			"Children": [
 				{
@@ -7434,7 +7733,29 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "）。同一类的可能有多个实例锁对象。"
+					"Data": "）。同一类的可能有"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "多个实例锁对象"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
 				}
 			]
 		},
@@ -7443,7 +7764,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20210707224540-zb6rumd",
-				"updated": "20210707224540"
+				"updated": "20210804213816"
 			},
 			"Children": [
 				{
@@ -7466,7 +7787,29 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "，jvm 会这样觉得，自己确实偏向错了，根本就不该偏向。于是整个类的所有对象都会变为不可偏向的，新建的对象也是不可偏向的"
+					"Data": "，jvm 会这样觉得，自己确实偏向错了，根本就不该偏向。于是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "将class中的偏向状态修改为0"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，整个类的所有对象在每次获取锁、释放锁时都会变为不可偏向的，新建的对象也是不可偏向的"
 				}
 			]
 		},
@@ -7476,7 +7819,7 @@
 			"IsFencedCodeBlock": true,
 			"Properties": {
 				"id": "20210707224540-xo5ym3x",
-				"updated": "20210707224540"
+				"updated": "20210804180716"
 			},
 			"Children": [
 				{
@@ -7489,7 +7832,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "@Slf4j(topic = \"TestBiasedLock\")\npublic class TestBiasedLock {\n\n    public static void main(String[] args) throws InterruptedException {\n        test6();\n    }\n\n    static Thread t1, t2, t3;\n\n    /**\n     * 批量撤销\n     */\n    private static void test6() throws InterruptedException {\n\n        Vector\u003cDog\u003e list = new Vector\u003c\u003e();\n        int loopNumber = 39;\n        t1 = new Thread(() -\u003e {\n            for (int i = 0; i \u003c loopNumber; i++) {\n                Dog d = new Dog();\n                list.add(d);\n                synchronized (d) {\n                    log.debug(i + \"\\t\" + ClassLayout.parseInstance(d).toPrintable());\n                }\n            }\n            LockSupport.unpark(t2);\n        }, \"t1\");\n        t1.start();\n\n        t2 = new Thread(() -\u003e {\n            LockSupport.park();\n            log.debug(\"===============\u003e \");\n            for (int i = 0; i \u003c loopNumber; i++) {\n                Dog d = list.get(i);\n                log.debug(i + \"\\t\" + ClassLayout.parseInstance(d).toPrintable());\n                synchronized (d) {\n                    log.debug(i + \"\\t\" + ClassLayout.parseInstance(d).toPrintable());\n                }\n                log.debug(i + \"\\t\" + ClassLayout.parseInstance(d).toPrintable());\n            }\n            LockSupport.unpark(t3);\n        }, \"t2\");\n        t2.start();\n\n        t3 = new Thread(() -\u003e {\n            LockSupport.park();\n            log.debug(\"===============\u003e \");\n            for (int i = 0; i \u003c loopNumber; i++) {\n                Dog d = list.get(i);\n                log.debug(i + \"\\t\" + ClassLayout.parseInstance(d).toPrintable());\n                synchronized (d) {\n                    log.debug(i + \"\\t\" + ClassLayout.parseInstance(d).toPrintable());\n                }\n                log.debug(i + \"\\t\" + ClassLayout.parseInstance(d).toPrintable());\n            }\n        }, \"t3\");\n        t3.start();\n\n        t3.join();\n        log.debug(ClassLayout.parseInstance(new Dog()).toPrintable());\n\n    }\n}\n\nclass Dog {\n\n}\n"
+					"Data": "@Slf4j(topic = \"TestBiasedLock\")\npublic class TestBiasedLock {\n\n    public static void main(String[] args) throws InterruptedException {\n        test6();\n    }\n\n    static Thread t1, t2, t3;\n\n    /**\n     * 批量撤销\n     */\n    private static void test6() throws InterruptedException {\n\n        Vector\u003cDog\u003e list = new Vector\u003c\u003e();\n        int loopNumber = 40;\n        t1 = new Thread(() -\u003e {\n            for (int i = 0; i \u003c loopNumber; i++) {\n                Dog d = new Dog();\n                list.add(d);\n                synchronized (d) {\n                    log.debug(\"t1线程第{}个锁对象加偏向锁:\\t{}\", i+1, ClassLayout.parseInstance(d).toPrintable());\n                }\n            }\n            LockSupport.unpark(t2);\n        }, \"t1\");\n        t1.start();\n\n        t2 = new Thread(() -\u003e {\n            LockSupport.park();\n            for (int i = 0; i \u003c loopNumber; i++) {\n                Dog d = list.get(i);\n                log.debug(\"t2线程第{}个锁对象 sync 前：\\t{}\", i+1, ClassLayout.parseInstance(d).toPrintable());\n                synchronized (d) {\n                    log.debug(\"t2线程第{}个锁对象 sync 中：\\t{}\", i+1, ClassLayout.parseInstance(d).toPrintable());\n                }\n                log.debug(\"t2线程第{}个锁对象 sync 后：\\t{}\", i+1, ClassLayout.parseInstance(d).toPrintable());\n            }\n            LockSupport.unpark(t3);\n        }, \"t2\");\n        t2.start();\n\n        t3 = new Thread(() -\u003e {\n            LockSupport.park();\n            for (int i = 0; i \u003c loopNumber; i++) {\n                Dog d = list.get(i);\n                log.debug(\"t3线程第{}个锁对象 sync 前：\\t{}\", i+1, ClassLayout.parseInstance(d).toPrintable());\n                synchronized (d) {\n                    log.debug(\"t3线程第{}个锁对象 sync 中：\\t{}\", i+1, ClassLayout.parseInstance(d).toPrintable());\n                }\n                log.debug(\"t3线程第{}个锁对象 sync 后：\\t{}\", i+1, ClassLayout.parseInstance(d).toPrintable());\n            }\n        }, \"t3\");\n        t3.start();\n\n        t3.join();\n        log.debug(ClassLayout.parseInstance(new Dog()).toPrintable());\n\n    }\n}\n\nclass Dog {\n\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
@@ -7502,47 +7845,74 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20210707224540-3gzk0h6",
-				"updated": "20210707224540"
+				"updated": "20210804161342"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "结果如下：略"
+					"Data": "结果如下："
 				}
 			]
 		},
 		{
-			"ID": "20210707224540-qlzgutj",
-			"Type": "NodeList",
-			"ListData": {},
+			"ID": "20210804161342-mq6j0pm",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
 			"Properties": {
-				"id": "20210707224540-qlzgutj",
-				"updated": "20210803004838"
+				"fold": "1",
+				"id": "20210804161342-mq6j0pm",
+				"updated": "20210804180409"
 			},
 			"Children": [
 				{
-					"ID": "20210707224540-jss4qm4",
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "cGxhaW50ZXh0"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "16:23:46.667 [t1] DEBUG TestBiasedLock - t1线程第1个锁对象加偏向锁:\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007fea07882805 (biased: 0x0000001ffa81e20a; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n............\n16:23:46.667 [t1] DEBUG TestBiasedLock - t1线程第40个锁对象加偏向锁: _999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007fea07882805 (biased: 0x0000001ffa81e20a; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n\n\n16:23:46.685 [t2] DEBUG TestBiasedLock - t2线程第1个锁对象 sync 前：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007fea07882805 (biased: 0x0000001ffa81e20a; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n16:23:46.685 [t2] DEBUG TestBiasedLock - t2线程第1个锁对象 sync 中：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007000026c38f0 (thin lock: 0x00007000026c38f0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n16:23:46.686 [t2] DEBUG TestBiasedLock - t2线程第1个锁对象 sync 后：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x0000000000000001 (non-biasable; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n............\n16:23:46.698 [t2] DEBUG TestBiasedLock - t2线程第19个锁对象 sync 前：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007fea07882805 (biased: 0x0000001ffa81e20a; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n16:23:46.698 [t2] DEBUG TestBiasedLock - t2线程第19个锁对象 sync 中：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007000026c38f0 (thin lock: 0x00007000026c38f0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n16:23:46.698 [t2] DEBUG TestBiasedLock - t2线程第19个锁对象 sync 后：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x0000000000000001 (non-biasable; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n\n\n16:23:46.698 [t2] DEBUG TestBiasedLock - t2线程第20个锁对象 sync 前：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007fea07882805 (biased: 0x0000001ffa81e20a; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n16:23:46.699 [t2] DEBUG TestBiasedLock - t2线程第20个锁对象 sync 中：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007fea07887105 (biased: 0x0000001ffa81e21c; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n16:23:46.699 [t2] DEBUG TestBiasedLock - t2线程第20个锁对象 sync 后：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007fea07887105 (biased: 0x0000001ffa81e21c; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n............\n16:23:46.706 [t2] DEBUG TestBiasedLock - t2线程第40个锁对象 sync 前：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007fea07882805 (biased: 0x0000001ffa81e20a; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n16:23:46.706 [t2] DEBUG TestBiasedLock - t2线程第40个锁对象 sync 中：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007fea07887105 (biased: 0x0000001ffa81e21c; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n16:23:46.707 [t2] DEBUG TestBiasedLock - t2线程第40个锁对象 sync 后：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007fea07887105 (biased: 0x0000001ffa81e21c; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n\n\n16:23:46.707 [t3] DEBUG TestBiasedLock - t3线程第1个锁对象 sync 前：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x0000000000000001 (non-biasable; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n16:23:46.707 [t3] DEBUG TestBiasedLock - t3线程第1个锁对象 sync 中：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007000027c68f0 (thin lock: 0x00007000027c68f0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n16:23:46.707 [t3] DEBUG TestBiasedLock - t3线程第1个锁对象 sync 后：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x0000000000000001 (non-biasable; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n............\n16:23:46.714 [t3] DEBUG TestBiasedLock - t3线程第19个锁对象 sync 前：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x0000000000000001 (non-biasable; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n16:23:46.714 [t3] DEBUG TestBiasedLock - t3线程第19个锁对象 sync 中：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007000027c68f0 (thin lock: 0x00007000027c68f0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n16:23:46.714 [t3] DEBUG TestBiasedLock - t3线程第19个锁对象 sync 后：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x0000000000000001 (non-biasable; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n\n\n16:23:46.714 [t3] DEBUG TestBiasedLock - t3线程第20个锁对象 sync 前：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007fea07887105 (biased: 0x0000001ffa81e21c; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n16:23:46.715 [t3] DEBUG TestBiasedLock - t3线程第20个锁对象 sync 中：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007000027c68f0 (thin lock: 0x00007000027c68f0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n16:23:46.715 [t3] DEBUG TestBiasedLock - t3线程第20个锁对象 sync 后：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x0000000000000001 (non-biasable; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n............\n16:23:46.724 [t3] DEBUG TestBiasedLock - t3线程第39个锁对象 sync 前：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007fea07887105 (biased: 0x0000001ffa81e21c; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n16:23:46.724 [t3] DEBUG TestBiasedLock - t3线程第39个锁对象 sync 中：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007000027c68f0 (thin lock: 0x00007000027c68f0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n16:23:46.724 [t3] DEBUG TestBiasedLock - t3线程第39个锁对象 sync 后：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x0000000000000001 (non-biasable; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n16:23:46.724 [t3] DEBUG TestBiasedLock - t3线程第40个锁对象 sync 前：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007fea07887105 (biased: 0x0000001ffa81e21c; epoch: 0; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n16:23:46.725 [t3] DEBUG TestBiasedLock - t3线程第40个锁对象 sync 中：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x00007000027c68f0 (thin lock: 0x00007000027c68f0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n16:23:46.725 [t3] DEBUG TestBiasedLock - t3线程第40个锁对象 sync 后：\t_999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x0000000000000001 (non-biasable; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n\n\n\n16:23:46.725 [main] DEBUG TestBiasedLock - _999_demo.Dog object internals:\nOFF  SZ   TYPE DESCRIPTION               VALUE\n  0   8        (object header: mark)     0x0000000000000001 (non-biasable; age: 0)\n  8   4        (object header: class)    0xf800ef22\n 12   4        (object alignment gap)  \nInstance size: 16 bytes\nSpace losses: 0 bytes internal + 4 bytes external = 4 bytes total\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210804162539-9wazum2",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210804162539-9wazum2",
+				"updated": "20210804180646"
+			},
+			"Children": [
+				{
+					"ID": "20210804162739-1sb4496",
 					"Type": "NodeListItem",
 					"ListData": {
 						"BulletChar": 42,
 						"Marker": "Kg=="
 					},
 					"Properties": {
-						"id": "20210707224540-jss4qm4",
-						"updated": "20210803004723"
+						"id": "20210804162739-1sb4496"
 					},
 					"Children": [
 						{
-							"ID": "20210707224540-etjjaha",
+							"ID": "20210804162739-oj1114a",
 							"Type": "NodeParagraph",
 							"Properties": {
-								"id": "20210707224540-etjjaha",
-								"updated": "20210803004723"
+								"id": "20210804162739-oj1114a",
+								"updated": "20210804162833"
 							},
 							"Children": [
 								{
 									"Type": "NodeText",
-									"Data": "第一次 39 个加 t1 的"
+									"Data": "t1中 1~40个锁对象"
 								},
 								{
 									"Type": "NodeStrong",
@@ -7554,7 +7924,78 @@
 										},
 										{
 											"Type": "NodeText",
-											"Data": "偏向锁"
+											"Data": "加偏向锁"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "都是一样的"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210804162746-y79a0rk",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210804162746-y79a0rk"
+					},
+					"Children": [
+						{
+							"ID": "20210804162746-w50cbjj",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210804162746-w50cbjj",
+								"updated": "20210804162747"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "t2中1~19个锁对象都是在进行"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "偏向锁撤销"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，经历"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "偏向锁-\u003e轻量级锁-\u003e无锁"
 										},
 										{
 											"Type": "NodeStrongA6kCloseMarker",
@@ -7567,28 +8008,28 @@
 					]
 				},
 				{
-					"ID": "20210707224540-ogwjjp2",
+					"ID": "20210804162949-2xp80he",
 					"Type": "NodeListItem",
 					"ListData": {
 						"BulletChar": 42,
 						"Marker": "Kg=="
 					},
 					"Properties": {
-						"id": "20210707224540-ogwjjp2",
-						"updated": "20210803004735"
+						"id": "20210804162949-2xp80he",
+						"updated": "20210804180617"
 					},
 					"Children": [
 						{
-							"ID": "20210707224540-ss0e4c0",
+							"ID": "20210804162949-hz6v9ee",
 							"Type": "NodeParagraph",
 							"Properties": {
-								"id": "20210707224540-ss0e4c0",
-								"updated": "20210803004735"
+								"id": "20210804162949-hz6v9ee",
+								"updated": "20210804180617"
 							},
 							"Children": [
 								{
 									"Type": "NodeText",
-									"Data": "第二次前"
+									"Data": "t2中第20个锁对象由于"
 								},
 								{
 									"Type": "NodeStrong",
@@ -7600,7 +8041,7 @@
 										},
 										{
 											"Type": "NodeText",
-											"Data": "19"
+											"Data": "锁对象撤销第20次及之后"
 										},
 										{
 											"Type": "NodeStrongA6kCloseMarker",
@@ -7610,51 +8051,7 @@
 								},
 								{
 									"Type": "NodeText",
-									"Data": "个会发生锁竞争，最终"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "撤销锁"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "变为"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "无锁"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "状态，第 20 个开始发生"
+									"Data": "开始进行"
 								},
 								{
 									"Type": "NodeStrong",
@@ -7676,35 +8073,66 @@
 								},
 								{
 									"Type": "NodeText",
-									"Data": "，最终锁状态都是指向 t2 的偏向锁"
+									"Data": "，第20~40个锁对象批量重偏向前偏向状态都是1（epoch不同，此时为可偏向状态），所以最终第20"
+								},
+								{
+									"Type": "NodeBackslash",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeBackslashContent",
+											"Data": "~"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "40个锁对象都是"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "偏向t2线程的偏向锁"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
 								}
 							]
 						}
 					]
 				},
 				{
-					"ID": "20210707224540-npsrxp6",
+					"ID": "20210804162754-vdlz2od",
 					"Type": "NodeListItem",
 					"ListData": {
 						"BulletChar": 42,
 						"Marker": "Kg=="
 					},
 					"Properties": {
-						"id": "20210707224540-npsrxp6",
-						"updated": "20210803004828"
+						"id": "20210804162754-vdlz2od"
 					},
 					"Children": [
 						{
-							"ID": "20210707224540-y8l5u0u",
+							"ID": "20210804162754-hw3pzv7",
 							"Type": "NodeParagraph",
 							"Properties": {
-								"id": "20210707224540-y8l5u0u",
-								"updated": "20210803004828"
+								"id": "20210804162754-hw3pzv7",
+								"updated": "20210804175751"
 							},
 							"Children": [
 								{
 									"Type": "NodeText",
-									"Data": "第三次"
+									"Data": "t3中1~19个锁对象都是进行轻量级锁的加锁、释放锁操作，经历"
 								},
 								{
 									"Type": "NodeStrong",
@@ -7716,89 +8144,40 @@
 										},
 										{
 											"Type": "NodeText",
-											"Data": "前 19 个无锁变为偏向锁"
+											"Data": "无锁-\u003e轻量级锁-\u003e无锁"
 										},
 										{
 											"Type": "NodeStrongA6kCloseMarker",
 											"Data": "**"
 										}
 									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "（根据第二次状态），没啥说的。第 20 个开始锁竞争，会"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "撤销锁"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "变为"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "无锁"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "，即 20 次"
 								}
 							]
 						}
 					]
 				},
 				{
-					"ID": "20210707224540-97jnqbm",
+					"ID": "20210804175755-pzwgesk",
 					"Type": "NodeListItem",
 					"ListData": {
 						"BulletChar": 42,
 						"Marker": "Kg=="
 					},
 					"Properties": {
-						"id": "20210707224540-97jnqbm",
-						"updated": "20210803004838"
+						"id": "20210804175755-pzwgesk"
 					},
 					"Children": [
 						{
-							"ID": "20210707224540-mpvy4oh",
+							"ID": "20210804175755-jlmazcu",
 							"Type": "NodeParagraph",
 							"Properties": {
-								"id": "20210707224540-mpvy4oh",
-								"updated": "20210803004838"
+								"id": "20210804175755-jlmazcu",
+								"updated": "20210804180133"
 							},
 							"Children": [
 								{
 									"Type": "NodeText",
-									"Data": "那么这个类的对象有了"
+									"Data": "t3中20~40个锁对象由于锁竞争又进行"
 								},
 								{
 									"Type": "NodeStrong",
@@ -7810,7 +8189,7 @@
 										},
 										{
 											"Type": "NodeText",
-											"Data": "总共 39 次锁撤销"
+											"Data": "偏向锁撤销"
 										},
 										{
 											"Type": "NodeStrongA6kCloseMarker",
@@ -7820,7 +8199,7 @@
 								},
 								{
 									"Type": "NodeText",
-									"Data": "，那么第 40 次以及之后创建该对象，则该对象默认为"
+									"Data": "，经历"
 								},
 								{
 									"Type": "NodeStrong",
@@ -7832,7 +8211,97 @@
 										},
 										{
 											"Type": "NodeText",
-											"Data": "无锁状态"
+											"Data": "偏向锁-\u003e轻量级锁-\u003e无锁"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210804180300-rh7nxev",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210804180300-rh7nxev",
+						"updated": "20210804180646"
+					},
+					"Children": [
+						{
+							"ID": "20210804180300-fuau0p2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210804180300-fuau0p2",
+								"updated": "20210804180646"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "由于此时该class的所有锁对象进行"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "撤销40次及之后"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，所以JVM进行"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "批量撤销"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，之后该class创建的"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "对象都是不可偏向的"
 										},
 										{
 											"Type": "NodeStrongA6kCloseMarker",
@@ -7845,6 +8314,14 @@
 					]
 				}
 			]
+		},
+		{
+			"ID": "20210804162537-u1o7l5l",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210804162537-u1o7l5l",
+				"updated": "20210804162537"
+			}
 		},
 		{
 			"ID": "20210727005340-bp0w6z0",
