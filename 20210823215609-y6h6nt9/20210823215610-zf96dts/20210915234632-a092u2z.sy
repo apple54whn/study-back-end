@@ -1,0 +1,2694 @@
+{
+	"ID": "20210915234632-a092u2z",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20210915234632-a092u2z",
+		"title": "603.Repository 入门（掌握）",
+		"updated": "1631721227176"
+	},
+	"Children": [
+		{
+			"ID": "20210707235333-yam6ucx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707235333-yam6ucx",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Spring Data Common 之 Repository 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-gzhpiuu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-gzhpiuu",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Spring Data Common 定义了很多公用的接口和一些相对数据操作的公共实现（如分页排序、结果映射、Autiting 信息、事务等），而 Spring Data JPA 就是 Spring Data Common 的关系数据库的查询实现。本节了解下 Spring Data Common 的核心内容——Repository，从 Repository 的所有子类着手，逐步掌握 CrudRepository、PageingAndSortingRepository、JpaRepository 的使用。"
+				}
+			]
+		},
+		{
+			"ID": "20210915234735-tuiy2gp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210915234735-tuiy2gp",
+				"updated": "20210915234735"
+			}
+		},
+		{
+			"ID": "20210707235333-ay988qf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707235333-ay988qf",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Spring Data JPA 的依赖关系"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-8elw33v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-8elw33v",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "先来看看 Spring Data JPA 所依赖的 jar 包关系是什么样的"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-aqzeasf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-aqzeasf",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20201219193544969"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "./assets/image-20201219193544969.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-fmsunge",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-fmsunge",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "数据库连接用的是 JDBC，连接池用的是 HikariCP（看 starter-jdbc），"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "强依赖 Hibernate（不能切换实现了 JPA 的其他框架）"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "；Spring Boot Starter Data JPA 依赖 Spring Data JPA；而 Spring Data JPA 依赖 Spring Data Commons。Spring Data Commons 是终极依赖。下面学习 DB 操作的入口 Repository 及其子类"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-tw4f8e9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707235333-tw4f8e9",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Repository 接口、层次关系 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-05yvpv4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-05yvpv4",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Repository 接口"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-i2ds29a",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-i2ds29a",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Repository 是 Spring Data Common 里面的顶级父类接口，操作 DB 的入口类。首先介绍 Repository 接口的源码、类层次关系和使用实例。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-u22mpcl",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-u22mpcl",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "package org.springframework.data.repository;\nimport org.springframework.stereotype.Indexed;\n\n@Indexed\npublic interface Repository\u003cT, ID\u003e {\n\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-0n9wik7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-0n9wik7",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Resposiory 是 Spring Data 里面进行数据库操作顶级的抽象接口，里面什么方法都没有，但是如果任何接口继承它，就能得到一个 Repository，还可以实现 JPA 的一些默认实现方法（"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "如方法名称规则查询"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "）。这是 Spring 利用 Respository 作为 DAO 操作的 Type，以及利用 Java 动态代理机制实现的"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-ui51fh6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-ui51fh6",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Spring 在做动态代理的时候，只要是它的子类或者实现类，再利用 T 类以及 T 类的 主键 ID 类型作为泛型的类型参数，就可以来标记出来、并捕获到要使用的实体类型，就能帮助使用者进行数据库操作。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-rozqsbl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-rozqsbl",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Repository 类层次关系"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-ybbzrhh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-ybbzrhh",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Type hierarchy 类的层次结构，使用 Ctrl + H（mac）即可看到"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-88gf979",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-88gf979",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20201219195036228"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "./assets/image-20201219195036228.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-zsg1jh1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-zsg1jh1",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过该层次结构视图，你就会明白基类 Repository 的用意，由此可知，存储库分为以下 4 个大类。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-g7ie3vp",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210707235333-g7ie3vp",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"ID": "20210707235333-kijif7n",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-kijif7n"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-sxqlxzm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-sxqlxzm"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "ReactiveCrudRepository 这条线是响应式编程，主要支持当前 NoSQL 方面的操作，因为这方面大部分操作都是分布式的，所以由此我们可以看出 Spring Data 想统一数据操作的“野心”，即想提供关于所有 Data 方面的操作。目前 Reactive 主要有 Cassandra、MongoDB、Redis 的实现。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-zofv1ea",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-zofv1ea"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-buzpex1",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-buzpex1"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "RxJava2/3CrudRepository 这条线是为了支持 RxJava 2/3 做的标准响应式编程的接口。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-3ilr9qv",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-3ilr9qv"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-m3530b4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-m3530b4"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "CoroutineCrudRepository 这条继承关系链是为了支持 Kotlin 语法而实现的。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-jdhv7fe",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-jdhv7fe"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-v4rfl6a",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-v4rfl6a"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "CrudRepository 这条继承关系链正是本课时我要详细介绍的 JPA 相关的操作接口，你也可以把我的这种方法应用到另外 3 种继承关系链里面学习。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-xctfdxj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-xctfdxj",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "点击 Show Diagram 显示层次结构图，其中 JpaSpecificationExecutor 也是继承了借口后出现的，也是需要学习的！"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-ndn6n0t",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-ndn6n0t",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20201219195652297"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "./assets/image-20201219195652297.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-imf8zpz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-imf8zpz",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "需要掌握和使用到的类如下所示："
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-th4wmye",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-th4wmye",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "7 大 Repository 接口："
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-opzkqs1",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210707235333-opzkqs1",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"ID": "20210707235333-qq48qid",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-qq48qid"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-3c5ewjs",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-3c5ewjs"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Repository(org.springframework.data.repository)，没有暴露任何方法；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-556dxun",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-556dxun"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-hfmeoum",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-hfmeoum"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "CrudRepository(org.springframework.data.repository)，简单的 Curd 方法；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-3v2jxir",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-3v2jxir"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-bhnxvvb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-bhnxvvb"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "PagingAndSortingRepository(org.springframework.data.repository)，带分页和排序的方法；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-kjtrkc0",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-kjtrkc0"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-mprgbrb",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-mprgbrb"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "QueryByExampleExecutor(org.springframework.data.repository.query)，简单 Example 查询；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-lvmlak5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-lvmlak5"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-ufqfcmg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-ufqfcmg"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "JpaRepository(org.springframework.data.jpa.repository)，JPA 的扩展方法；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-n385171",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-n385171"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-dvmrwpr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-dvmrwpr"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "JpaSpecificationExecutor(org.springframework.data.jpa.repository)，JpaSpecification 扩展查询；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-9my78i2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-9my78i2"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-y08a8pq",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-y08a8pq"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "QueryDslPredicateExecutor(org.springframework.data.querydsl)，QueryDsl 的封装。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-4z9sfhq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-4z9sfhq",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "2 大 Repository 实现类："
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-ocyq1ab",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210707235333-ocyq1ab",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"ID": "20210707235333-djxaxmf",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-djxaxmf"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-nhyfy0a",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-nhyfy0a"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "SimpleJpaRepository(org.springframework.data.jpa.repository.support)，JPA 所有接口的默认实现类；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-864iohi",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-864iohi"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-weenm0i",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-weenm0i"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "QueryDslJpaRepository(org.springframework.data.jpa.repository.support)，QueryDsl 的实现类。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-lxehykh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-lxehykh",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "关于其他的类，后面我也会通过不同方式的讲解"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-v753ipy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707235333-v753ipy",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "测试 Entity—User"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-r4foz8a",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-r4foz8a",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Entity\n@Data\n@Builder\n@NoArgsConstructor\n@AllArgsConstructor\npublic class User {\n    @Id\n    @GeneratedValue(strategy= GenerationType.AUTO)\n    private Long id;\n    private String name;\n    private String email;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-m44o76q",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707235333-m44o76q",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Repository 接口示例—方法名称规则查询 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-altuogr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-altuogr",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "利用 UserRepository 继承 Repository 来实现对 User 的两个查询方法（"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "方法名称规则查询"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "）"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-gyq22i1",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-gyq22i1",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public interface UserRepository extends Repository\u003cUser,Long\u003e {\n\t//根据名称进行查询用户列表\n\tList\u003cUser\u003e findByName(String name);\n\t// 根据用户的邮箱和名称查询\n\tList\u003cUser\u003e findByEmailAndName(String email, String name);\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-zgy5d7l",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-zgy5d7l",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "由于 Repository 接口里面没有任何方法，所以此 UserRepository 对外只有两个可用方法"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-s8sibwq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707235333-s8sibwq",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "CrudRepository 接口示例 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-qcin9qe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-qcin9qe",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过 IDEA 工具，看下 CrudRepository 为我们提供的方法有哪些"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-wxt083p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-wxt083p",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20201219200638254"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "./assets/image-20201219200638254.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-8pn6szg",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210707235333-8pn6szg",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"ID": "20210707235333-9na43n3",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-9na43n3"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-vlb5fut",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-vlb5fut"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "\u003cS extends T\u003e S save(S entity);"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 保存/更新实体方法"
+								}
+							]
+						},
+						{
+							"ID": "20210707235333-8u6ysiv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-8u6ysiv"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "Entity 中若 id 为 null，则 persist，否则执行 merge（源码中会进行 id 是否为 null 等判断。"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "有的说根据 id 查询了？乐观锁"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "）"
+								}
+							]
+						},
+						{
+							"ID": "20210707235333-m5zio22",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-m5zio22"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如果当传递的参数里面没有 ID，则直接 insert；若当传递的参数里面有 ID，则会触发 select 查询。此方法会去看一下数据库里面是否存在此记录，若存在，则 update，否则 insert"
+								}
+							]
+						},
+						{
+							"ID": "20210707235333-o340kb8",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-o340kb8"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "注意更新时实体类中当前为 null 的字段也会被更新为 null，可以配置更改该策略，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "DynamicUpdate 策略"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210707235333-umjbxzu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-umjbxzu"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "参数和返回结果可以是实体的子类"
+								}
+							]
+						},
+						{
+							"ID": "20210707235333-sxpb08m",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"Properties": {
+								"id": "20210707235333-sxpb08m"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```"
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "public \u003cS extends T\u003e S save(S entity) {\n    if (entityInformation.isNew(entity)) {\n        em.persist(entity);\n        return entity;\n    } else {\n        return em.merge(entity);\n    }\n}\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-g9y995e",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-g9y995e"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-mc6fd43",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-mc6fd43"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "saveAll(Iterable\u003cS\u003e entities)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " : 批量保存/更新，原理和 save 方法相同，我们去看实现的话，就是 for 循环调用上面的 save 方法。"
+								}
+							]
+						},
+						{
+							"ID": "20210707235333-3icy2sm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-3icy2sm"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "那这就很扯淡了，当然可以设置一下"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "spring.jpa.properties.hibernate.jdbc.batch_size=200"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，就会批量操作了！"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-j6sjhvh",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-j6sjhvh"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-13xh3mm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-13xh3mm"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "void deleteById(ID id);"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 根据主键删除，查看源码会发现，其是先根据主键查询出来再进行删除，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "没查询到直接抛异常（需要处理该异常，但是一般删除操作不会产生并发）"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "；（实际使用时无需手动查询！）"
+								}
+							]
+						},
+						{
+							"ID": "20210707235333-ou3zuhm",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"Properties": {
+								"id": "20210707235333-ou3zuhm"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```"
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "public void deleteById(ID id) {\n    Assert.notNull(id, ID_MUST_NOT_BE_NULL);\n    // 没查询到直接抛异常\n    delete(findById(id).orElseThrow(() -\u003e new EmptyResultDataAccessException(\n        String.format(\"No %s entity with id %s exists!\", entityInformation.getJavaType(), id), 1)));\n}\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-0wd3bkv",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-0wd3bkv"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-ipchcjy",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-ipchcjy"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "void delete(T entity)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 根据 Entity（其实是主键） 进行删除（底层和 deleteById 一样）；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-r6m64nv",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-r6m64nv"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-166fo94",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-166fo94"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "void deleteAll(Iterable\u003c? extends T\u003e entities)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 批量删除，还是 for 循环调用 delete(T entity)。"
+								}
+							]
+						},
+						{
+							"ID": "20210707235333-9wd2z7g",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-9wd2z7g"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "那这就很扯淡了，当然可以使用 JpaRepository 的批量删除！"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-co7mp1k",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-co7mp1k"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-wcy4ucf",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-wcy4ucf"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "void deleteAll()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 删除所有；原理可以通过刚才的类关系查看，CrudRepository 的实现方法如下："
+								}
+							]
+						},
+						{
+							"ID": "20210707235333-xg9pcdn",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"Properties": {
+								"id": "20210707235333-xg9pcdn"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```"
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "//SimpleJpaRepository里面的deleteALL方法\n// 利用 for 循环调用 delete 方法进行删除操作\npublic void deleteAll() {\n   for (T element : findAll()) {\n      delete(element);\n   }\n}\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-24f3tab",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-24f3tab"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-kt7rwu6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-kt7rwu6"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "boolean existsById(ID id)"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 根据主键判断实体是否存在；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-7bm4zzg",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-7bm4zzg"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-chj93r5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-chj93r5"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Optional\u003cT\u003e findById(ID id);"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 根据主键查询实体，返回 JDK 1.8 的 Optional，这可以避免 null exception；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-ij5ao6s",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-ij5ao6s"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-oexca2d",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-oexca2d"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Iterable\u003cT\u003e findAllById(Iterable ids);"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 根据主键列表查询实体列表；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-pzod2kg",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-pzod2kg"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-8goplf5",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-8goplf5"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Iterable\u003cT\u003e findAll();"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 查询实体的所有列表；"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-zax515f",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-zax515f"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-kxa3e9m",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-kxa3e9m"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "count()"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ": long 查询总数返回 long 类型；"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-i75zj0j",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-i75zj0j",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "上面这些方法是 CrudRepository 对外暴露的常见的 Crud 接口，我们在对数据库进行 Crud 的时候就会运用到，如下所示"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-v8c6082",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-v8c6082",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public interface UserRepository extends CrudRepository\u003cUser,Long\u003e {\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-yidl2qf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707235333-yidl2qf",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "PagingAndSortingRepository 接口示例 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-7v0bsnm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-7v0bsnm",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "主要用于分页查询和排序查询。源码如下："
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-gjr40g6",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-gjr40g6",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@NoRepositoryBean\npublic interface PagingAndSortingRepository\u003cT, ID\u003e extends CrudRepository\u003cT, ID\u003e {\n\tIterable\u003cT\u003e findAll(Sort sort); （1）\n\tPage\u003cT\u003e findAll(Pageable pageable); （2）\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-5eqybtx",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210707235333-5eqybtx",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"ID": "20210707235333-rwb4pog",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-rwb4pog"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-sa5fr6k",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-sa5fr6k"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "第一个方法 findAll 参数是 Sort，是根据排序参数，实现不同的排序规则获取所有的对象的集合"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-mrkeu2k",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-mrkeu2k"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-k0uctkm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-k0uctkm"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "🔥 第二个方法 findAll 参数是 Pageable，是根据分页和排序进行查询，并用 Page 对返回结果进行封装。而 Pageable 对象包含 Page 和 Sort 对象"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-qcvn04t",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-qcvn04t",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用方式如下："
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-57d9dnq",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-57d9dnq",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public interface UserRepository extends PagingAndSortingRepository\u003cUser,Long\u003e {\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-ob2vjq9",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-ob2vjq9",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "/**\n * 验证排序和分页查询方法，Pageable的默认实现类：PageRequest\n * @return\n */\n@GetMapping(path = \"/page\")\n@ResponseBody\npublic Page\u003cUser\u003e getAllUserByPage() {\n   return userRepository.findAll(\n         PageRequest.of(1, 20,Sort.by(new Sort.Order(Sort.Direction.ASC,\"name\"))));\n}\n/**\n * 排序查询方法，使用Sort对象\n * @return\n */\n@GetMapping(path = \"/sort\")\n@ResponseBody\npublic Iterable\u003cUser\u003e getAllUsersWithSort() {\n   return userRepository.findAll(Sort.by(new Sort.Order(Sort.Direction.ASC,\"name\")));\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-kcsgoa3",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707235333-kcsgoa3",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "JpaRepository 接口示例 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-p6upny5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-p6upny5",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "到这里可以进入到分水岭了，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "上面的那些都是 Spring Data 为了兼容 NoSQL 而进行的一些抽象封装"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，而"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "从 JpaRepository 开始是对关系型数据库进行抽象封装"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。从类图可以看出来它继承 PagingAndSortingRepository 类，也就继承了其所有方法，并且其实现类也是 SimpleJpaRepository。从类图上还可以看出 JpaRepository 继承和拥有了 QueryByExampleExecutor 的相关方法，我们先来看一下 JpaRepository 有哪些方法。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-1pz4h71",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-1pz4h71",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20201219224246112"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "./assets/image-20201219224246112.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-5ex8rib",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-5ex8rib",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "涉及 QueryByExample 的部分我们在 11 课时“JpaRepository 如何自定义”再详细介绍，"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-uu50lm8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-uu50lm8",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "JpaRepository 里面重点新增了"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "批量删除"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，优化了批量删除的性能，类似于之前 SQL 的 batch 操作，并不是像上面的 deleteAll 来 for 循环删除。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-a0t1120",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-a0t1120",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其中 flush() 和 saveAndFlush() 提供了手动刷新 session，把对象的值立即更新到数据库里面的机制。JPA 是 由 Hibernate 实现的，所以有 session 一级缓存的机制，当调用 save() 方法的时候，数据库里面是不会立即变化的，其原理我将在 21 课时“Persistence Context 所表达的核心概念是什么”再详细讲解"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-jrgic8m",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-jrgic8m",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用方式如下："
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-d28dcnw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-d28dcnw",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public interface UserRepository extends JpaRepository\u003cUser,Long\u003e {\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-8ybo3hz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707235333-8ybo3hz",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "具体实现类 SimpleJpaRepository 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-w9vytjk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-w9vytjk",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "PagingAndSortingRepository 和 CrudRepository 都是 Spring Data Common 的标准接口，那么实现类是什么呢？如果我们采用 JPA，那对应的实现类就是 Spring Data JPA 的 jar 包里面的 SimpleJpaRepository。如果是其他 NoSQL 的 实现如 MongoDB，那实现就在 Spring Data MongoDB 的 jar 里面的 MongoRepositoryImpl。JpaRepository 的实现类也是 SimpleJpaRepository"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-mkyfahm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-mkyfahm",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "关系数据库的所有 Repository 接口的实现类就是 SimpleJpaRepository，如果有些业务场景需要进行扩展了，可以继续继承此类，如 QueryDsl 的扩展（虽然不推荐使用了，但我们可以参考它的做法，自定义自己的 SimpleJpaRepository），"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "如果能将此类里面的实现方法看透了，基本上 JPA 中的 API 就能掌握大部分内容"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-zqetlr4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-zqetlr4",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "UserRepository 的实现类是 Spring 启动的时候，利用 Java 动态代理机制帮我们生成的实现类，而真正的实现类就是 SimpleJpaRepository。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-j609ik6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-j609ik6",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20201219225302748"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "./assets/image-20201219225302748.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-bhjxl7p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-bhjxl7p",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20201220000423131"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "./assets/image-20201220000423131.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-gh4zsbe",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-gh4zsbe",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "它是在什么时候被动态代理生成的？在 RepositoryFactorySupport 设置一个断点，启动的时候，在我们的断点处就会发现 UserRepository 的接口会被 JdkDynamicAopProxy 动态代理成 SimpleJapRepository 的实现类（底层还是 InvocationHandler 的 invoke 方法；非接口的动态代理会使用 Cglib）。注意每一个 Repository 的子类，都会通过这里的动态代理生成实现类"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-r3skxgf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-r3skxgf",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image-20201219225948290"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "./assets/image-20201219225948290.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-km5h46v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-km5h46v",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "部分源码如下："
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-xnj1ln0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-xnj1ln0",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Repository\n@Transactional(readOnly = true)\npublic class SimpleJpaRepository\u003cT, ID\u003e implements JpaRepository\u003cT, ID\u003e, JpaSpecificationExecutor\u003cT\u003e {\n\n    private static final String ID_MUST_NOT_BE_NULL = \"The given id must not be null!\";\n\n    private final JpaEntityInformation\u003cT, ?\u003e entityInformation;\n\n    private final EntityManager em;\n\n    private final PersistenceProvider provider;\n\n    private @Nullable CrudMethodMetadata metadata;\n\n    // ......\n\n    @Transactional\n    public void deleteAllInBatch() {\n        em.createQuery(getDeleteAllQueryString()).executeUpdate();\n    }\n    //......\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-yb08qkn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-yb08qkn",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "通过此类的源码，我们可以挺清晰地看出 SimpleJpaRepository 的实现机制，是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "通过 EntityManger 进行实体的操作（就是和 JPA 一样）"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，而 JpaEntityInforMation 里面存在实体的相关信息和 Crud 方法的元数据等。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-xxsn0qi",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707235333-xxsn0qi",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "启发 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-ftvkaci",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210707235333-ftvkaci",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"ID": "20210707235333-ndds5i5",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-ndds5i5"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-xifs1re",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-xifs1re"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "上面的 7 个大 Repository 接口，在使用的时候可以根据实际场景"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "继承不同的接口"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，从而选择暴露不同的 Spring Data Common 给我们提供的已有接口。这其实利用了 Java 语言的 interface 特性。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-2sc89oc",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-2sc89oc"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-k2o3rjl",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-k2o3rjl"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "利用源码也可以很好地理解一下 Spring 中"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "动态代理"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的作用，可以利用这种思想，在改善 MyBatis 的时候使用。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-977wjd9",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210707235333-977wjd9",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "附. Spring MVC 测试"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-6gh2w8k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-6gh2w8k",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在 /src/test/resources 中创建 JpaApplication.http 文件"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-tet47j3",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-tet47j3",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "aA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "### 新增（注意请求空行！）\nPOST /api/v1/user HTTP/1.1\nHost: 127.0.0.1:10000\nContent-Type: application/json\nCache-Control: no-cache\n\n{\"name\":\"jack\",\"email\":\"123@126.com\"}\n\n\n### 查询（我也不直到为啥这个必须加 ip + port\nGET http://127.0.0.1:10000/api/v1/users?size=3\u0026page=0\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210915234712-j06fp45",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210915234712-j06fp45",
+				"updated": "20210915234712"
+			}
+		}
+	]
+}
