@@ -5,7 +5,7 @@
 		"id": "20210707235333-4vryfex",
 		"title": "604.Entity 多表详解（掌握）",
 		"type": "doc",
-		"updated": "20210922232704"
+		"updated": "20210923010842"
 	},
 	"Children": [
 		{
@@ -709,12 +709,12 @@
 			"HeadingLevel": 3,
 			"Properties": {
 				"id": "20210707235333-y0br6t3",
-				"updated": "20210919005335"
+				"updated": "20210923003742"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "CascadeType 级联 🔥"
+					"Data": "CascadeType 级联（不推荐） "
 				}
 			]
 		},
@@ -948,12 +948,34 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20210707235333-9o0f9go",
-				"updated": "20210707235333"
+				"updated": "20210923001535"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "首先，修改 UserInfo 里面的关键代码如下，并在 @OneToOne 上面添加"
+					"Data": "首先，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "修改 UserInfo（从表维护外键，推荐在这里配置）"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 里面的关键代码如下，并在 @OneToOne 上面添加"
 				}
 			]
 		},
@@ -962,7 +984,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20210707235333-2himik3",
-				"updated": "20210707235333"
+				"updated": "20210923001452"
 			},
 			"Children": [
 				{
@@ -974,7 +996,7 @@
 						},
 						{
 							"Type": "NodeCodeSpanContent",
-							"Data": "cascade ={CascadeType.PERSIST,CascadeType.REMOVE}"
+							"Data": "cascade = {CascadeType.PERSIST,CascadeType.REMOVE}"
 						},
 						{
 							"Type": "NodeCodeSpanCloseMarker"
@@ -1073,12 +1095,12 @@
 			"HeadingLevel": 3,
 			"Properties": {
 				"id": "20210707235333-9ry53an",
-				"updated": "20210919010118"
+				"updated": "20210923003738"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "orphanRemoval 关联关系删除后变化 🔥"
+					"Data": "orphanRemoval 关联关系删除后变化（不推荐） "
 				}
 			]
 		},
@@ -2607,13 +2629,10 @@
 			"Type": "NodeHeading",
 			"HeadingLevel": 2,
 			"Properties": {
-				"id": "20210707235333-vlakcbk"
+				"id": "20210707235333-vlakcbk",
+				"updated": "20210707235333"
 			},
 			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "## "
-				},
 				{
 					"Type": "NodeText",
 					"Data": "一对多"
@@ -2621,684 +2640,39 @@
 			]
 		},
 		{
-			"ID": "20210707235333-t23scoc",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210707235333-t23scoc"
-			},
-			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
-					"Type": "NodeText",
-					"Data": "JPA 协议 🔥"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-lj2w25b",
-			"Type": "NodeList",
-			"ListData": {
-				"Tight": true,
-				"BulletChar": 45,
-				"Padding": 2,
-				"Marker": "LQ==",
-				"Num": -1
-			},
-			"Properties": {
-				"id": "20210707235333-lj2w25b"
-			},
-			"Children": [
-				{
-					"ID": "20210707235333-7kfcxbm",
-					"Type": "NodeListItem",
-					"Data": "-",
-					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
-					},
-					"Properties": {
-						"id": "20210707235333-7kfcxbm"
-					},
-					"Children": [
-						{
-							"ID": "20210707235333-zyrjhsy",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707235333-zyrjhsy"
-							},
-							"Children": [
-								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "维护关联关系的是拥有外键的一方，而另一方必须配置 "
-										},
-										{
-											"Type": "NodeCodeSpan",
-											"CodeMarkerLen": 1,
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker",
-													"Data": "`"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "mappedBy"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker",
-													"Data": "`"
-												}
-											]
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								}
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-w9amfeg",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210707235333-w9amfeg"
-			},
-			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
-					"Type": "NodeText",
-					"Data": "案例介绍"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-wvw32iv",
+			"ID": "20210922234310-7p3x0fd",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-wvw32iv"
+				"id": "20210922234310-7p3x0fd",
+				"updated": "20210922234324"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "客户和联系人的案例（注意，客户和联系人是属于同一公司的）"
+					"Data": "banner 和 bannerItem，属于一对多的。"
 				}
 			]
 		},
 		{
-			"ID": "20210707235333-omt5mvu",
-			"Type": "NodeList",
-			"ListData": {
-				"Tight": true,
-				"BulletChar": 45,
-				"Padding": 2,
-				"Marker": "LQ==",
-				"Num": -1
-			},
-			"Properties": {
-				"id": "20210707235333-omt5mvu"
-			},
-			"Children": [
-				{
-					"ID": "20210707235333-miopx4u",
-					"Type": "NodeListItem",
-					"Data": "-",
-					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
-					},
-					"Properties": {
-						"id": "20210707235333-miopx4u"
-					},
-					"Children": [
-						{
-							"ID": "20210707235333-71ef52s",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707235333-71ef52s"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "客户：买了商品的一家公司"
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210707235333-lfvagcf",
-					"Type": "NodeListItem",
-					"Data": "-",
-					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
-					},
-					"Properties": {
-						"id": "20210707235333-lfvagcf"
-					},
-					"Children": [
-						{
-							"ID": "20210707235333-eenzd05",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707235333-eenzd05"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "联系人：买了商品的这家公司的员工（可有多个）"
-								}
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-ubc7q7c",
+			"ID": "20210922234310-xpfihfp",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-ubc7q7c"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "一对多关系，一个客户可以具有多个联系人，一个联系人从属于一家公司"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-1q0j18n",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210707235333-1q0j18n"
-			},
-			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
-					"Type": "NodeText",
-					"Data": "分析步骤"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-sdsz92p",
-			"Type": "NodeList",
-			"ListData": {
-				"Typ": 1,
-				"Start": 1,
-				"Delimiter": 46,
-				"Padding": 3,
-				"Marker": "MQ==",
-				"Num": 1
-			},
-			"Properties": {
-				"id": "20210707235333-sdsz92p"
-			},
-			"Children": [
-				{
-					"ID": "20210707235333-vmy6se8",
-					"Type": "NodeListItem",
-					"Data": "1",
-					"ListData": {
-						"Typ": 1,
-						"Start": 1,
-						"Delimiter": 46,
-						"Padding": 3,
-						"Marker": "MQ==",
-						"Num": 1
-					},
-					"Properties": {
-						"id": "20210707235333-vmy6se8"
-					},
-					"Children": [
-						{
-							"ID": "20210707235333-mxr66m6",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707235333-mxr66m6"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "明确表关系：一对多关系"
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210707235333-9a2dzd9",
-					"Type": "NodeListItem",
-					"Data": "2",
-					"ListData": {
-						"Typ": 1,
-						"Tight": true,
-						"Start": 2,
-						"Delimiter": 46,
-						"Padding": 3,
-						"Marker": "Mg==",
-						"Num": 2
-					},
-					"Properties": {
-						"id": "20210707235333-9a2dzd9"
-					},
-					"Children": [
-						{
-							"ID": "20210707235333-6645i6s",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707235333-6645i6s"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "确定表关系（外键）"
-								}
-							]
-						},
-						{
-							"ID": "20210707235333-n05n7yx",
-							"Type": "NodeList",
-							"ListData": {
-								"Tight": true,
-								"BulletChar": 45,
-								"Padding": 2,
-								"Marker": "LQ==",
-								"Num": -1
-							},
-							"Properties": {
-								"id": "20210707235333-n05n7yx"
-							},
-							"Children": [
-								{
-									"ID": "20210707235333-hz1a70g",
-									"Type": "NodeListItem",
-									"Data": "-",
-									"ListData": {
-										"Tight": true,
-										"BulletChar": 45,
-										"Padding": 2,
-										"Marker": "LQ==",
-										"Num": -1
-									},
-									"Properties": {
-										"id": "20210707235333-hz1a70g"
-									},
-									"Children": [
-										{
-											"ID": "20210707235333-2aqn486",
-											"Type": "NodeParagraph",
-											"Properties": {
-												"id": "20210707235333-2aqn486"
-											},
-											"Children": [
-												{
-													"Type": "NodeStrong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "主表"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
-												},
-												{
-													"Type": "NodeText",
-													"Data": "：客户表"
-												}
-											]
-										}
-									]
-								},
-								{
-									"ID": "20210707235333-6p8k68h",
-									"Type": "NodeListItem",
-									"Data": "-",
-									"ListData": {
-										"Tight": true,
-										"BulletChar": 45,
-										"Padding": 2,
-										"Marker": "LQ==",
-										"Num": -1
-									},
-									"Properties": {
-										"id": "20210707235333-6p8k68h"
-									},
-									"Children": [
-										{
-											"ID": "20210707235333-qn3l0t3",
-											"Type": "NodeParagraph",
-											"Properties": {
-												"id": "20210707235333-qn3l0t3"
-											},
-											"Children": [
-												{
-													"Type": "NodeStrong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "从表"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
-												},
-												{
-													"Type": "NodeText",
-													"Data": "：联系人表，在从表添加"
-												},
-												{
-													"Type": "NodeStrong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "外键"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
-												}
-											]
-										}
-									]
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210707235333-5a333lv",
-					"Type": "NodeListItem",
-					"Data": "3",
-					"ListData": {
-						"Typ": 1,
-						"Tight": true,
-						"Start": 3,
-						"Delimiter": 46,
-						"Padding": 3,
-						"Marker": "Mw==",
-						"Num": 3
-					},
-					"Properties": {
-						"id": "20210707235333-5a333lv"
-					},
-					"Children": [
-						{
-							"ID": "20210707235333-zd27poz",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707235333-zd27poz"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "编写实体类，再实体类中描述表关系（"
-								},
-								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "组合"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "）"
-								}
-							]
-						},
-						{
-							"ID": "20210707235333-v25mdjz",
-							"Type": "NodeList",
-							"ListData": {
-								"Tight": true,
-								"BulletChar": 45,
-								"Padding": 2,
-								"Marker": "LQ==",
-								"Num": -1
-							},
-							"Properties": {
-								"id": "20210707235333-v25mdjz"
-							},
-							"Children": [
-								{
-									"ID": "20210707235333-z5kwukc",
-									"Type": "NodeListItem",
-									"Data": "-",
-									"ListData": {
-										"Tight": true,
-										"BulletChar": 45,
-										"Padding": 2,
-										"Marker": "LQ==",
-										"Num": -1
-									},
-									"Properties": {
-										"id": "20210707235333-z5kwukc"
-									},
-									"Children": [
-										{
-											"ID": "20210707235333-zf2n2kd",
-											"Type": "NodeParagraph",
-											"Properties": {
-												"id": "20210707235333-zf2n2kd"
-											},
-											"Children": [
-												{
-													"Type": "NodeText",
-													"Data": "客户：再客户的实体类中包含一个联系人的集合"
-												}
-											]
-										}
-									]
-								},
-								{
-									"ID": "20210707235333-03ksokk",
-									"Type": "NodeListItem",
-									"Data": "-",
-									"ListData": {
-										"Tight": true,
-										"BulletChar": 45,
-										"Padding": 2,
-										"Marker": "LQ==",
-										"Num": -1
-									},
-									"Properties": {
-										"id": "20210707235333-03ksokk"
-									},
-									"Children": [
-										{
-											"ID": "20210707235333-o1il36k",
-											"Type": "NodeParagraph",
-											"Properties": {
-												"id": "20210707235333-o1il36k"
-											},
-											"Children": [
-												{
-													"Type": "NodeText",
-													"Data": "联系人：在联系人的实体类中包含一个客户的对象"
-												}
-											]
-										}
-									]
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210707235333-4adgwjh",
-					"Type": "NodeListItem",
-					"Data": "4",
-					"ListData": {
-						"Typ": 1,
-						"Tight": true,
-						"Start": 4,
-						"Delimiter": 46,
-						"Padding": 3,
-						"Marker": "NA==",
-						"Num": 4
-					},
-					"Properties": {
-						"id": "20210707235333-4adgwjh"
-					},
-					"Children": [
-						{
-							"ID": "20210707235333-k41hsx1",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707235333-k41hsx1"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "配置映射关系"
-								}
-							]
-						},
-						{
-							"ID": "20210707235333-lijm3ih",
-							"Type": "NodeList",
-							"ListData": {
-								"Tight": true,
-								"BulletChar": 45,
-								"Padding": 2,
-								"Marker": "LQ==",
-								"Num": -1
-							},
-							"Properties": {
-								"id": "20210707235333-lijm3ih"
-							},
-							"Children": [
-								{
-									"ID": "20210707235333-mjbz1m7",
-									"Type": "NodeListItem",
-									"Data": "-",
-									"ListData": {
-										"Tight": true,
-										"BulletChar": 45,
-										"Padding": 2,
-										"Marker": "LQ==",
-										"Num": -1
-									},
-									"Properties": {
-										"id": "20210707235333-mjbz1m7"
-									},
-									"Children": [
-										{
-											"ID": "20210707235333-2lgkhvx",
-											"Type": "NodeParagraph",
-											"Properties": {
-												"id": "20210707235333-2lgkhvx"
-											},
-											"Children": [
-												{
-													"Type": "NodeText",
-													"Data": "使用 "
-												},
-												{
-													"Type": "NodeStrong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "JPA 注解配置一对多映射关系"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
-												}
-											]
-										}
-									]
-								}
-							]
-						}
-					]
-				}
-			]
+				"id": "20210922234310-xpfihfp",
+				"updated": "20210922234310"
+			}
 		},
 		{
 			"ID": "20210707235333-voisxre",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
 			"Properties": {
-				"id": "20210707235333-voisxre"
+				"id": "20210707235333-voisxre",
+				"updated": "20210922234348"
 			},
 			"Children": [
 				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
 					"Type": "NodeText",
-					"Data": "@OneToMany \u0026 @ManyToOne"
+					"Data": "@OneToMany \u0026 @ManyToOne 注解"
 				}
 			]
 		},
@@ -3542,91 +2916,48 @@
 			]
 		},
 		{
-			"ID": "20210707235333-3ldrwo8",
+			"ID": "20210922234425-dwbelo7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210922234425-dwbelo7",
+				"updated": "20210922234425"
+			}
+		},
+		{
+			"ID": "20210922234426-0yn6v9b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210922234426-0yn6v9b",
+				"updated": "20210922234426"
+			}
+		},
+		{
+			"ID": "20210922234436-cad1rdi",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
 			"Properties": {
-				"id": "20210707235333-3ldrwo8"
-			},
-			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
-					"Type": "NodeText",
-					"Data": "实战：保存"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-by6fr93",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-by6fr93"
+				"id": "20210922234436-cad1rdi",
+				"updated": "20210922235849"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "实体类如下，目前配置了"
-				},
-				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "双向关联"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "（@OneToMany、@ManyToOne），"
-				},
-				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "且主从表都可以维护外键（不推荐）"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Data": "双向关联（注意内存泄露）🔥"
 				}
 			]
 		},
 		{
-			"ID": "20210707235333-nljktr3",
+			"ID": "20210922235945-bz3z8m3",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-nljktr3"
+				"id": "20210922235945-bz3z8m3",
+				"updated": "20210923000356"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker",
@@ -3634,32 +2965,26 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "@Getter\n@Setter\n@NoArgsConstructor\n@AllArgsConstructor\n@Builder\n@Entity\npublic class Customer {\n\n\n    /* 客户编号（主键）*/\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long Id;\n\n    /* 客户名称（公司名称） */\n    private String name;\n\n    /* 客户信息来源 */\n    private String source;\n\n    /* 客户所属行业 */\n    private String industry;\n\n    /* 客户级别 */\n    private String level;\n\n    /* 客户联系地址 */\n    private String address;\n\n    /* 客户联系电话 */\n    private String phone;\n\n\n    // 不推荐的配置，主表没有放弃维护外键\n    @OneToMany\n    @JoinColumn(name = \"custId\")\n    private Set\u003cLinkMan\u003e linkManSet;\n}\n"
+					"Data": "@Entity\n@Data\n@Builder\n@NoArgsConstructor\n@AllArgsConstructor\npublic class Banner{\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long id;\n\n    /* 名称，对无意义id的描述 */\n    private String name;\n\n    /* 可以展示到前端的 */\n    private String title;\n    private String description;\n    private String img;\n\n\n    /** 主表也可以维护外键，不推荐的写法 */\n    // @OneToMany\n    // @JoinColumn(name = \"bannerId\")\n    // @Builder.Default\n    // private List\u003cBannerItem\u003e itemList = new ArrayList\u003c\u003e();\n  \n    /** 主表放弃外键维护，推荐的写法 */\n    @OneToMany(mappedBy = \"banner\")\n    @Builder.Default\n    private List\u003cBannerItem\u003e itemList = new ArrayList\u003c\u003e();\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
 		},
 		{
-			"ID": "20210707235333-43k7fjy",
+			"ID": "20210922234449-6tsm6gw",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-43k7fjy"
+				"id": "20210922234449-6tsm6gw",
+				"updated": "20210923000407"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker",
@@ -3667,45 +2992,26 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "@Getter\n@Setter\n@NoArgsConstructor\n@AllArgsConstructor\n@Builder\n@Entity\npublic class LinkMan {\n\n    /* 联系人编号(主键) */\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long id;\n\n    /* 联系人姓名 */\n    private String name;\n\n    /* 联系人性别 */\n    private String gender;\n\n    /* 联系人办公电话 */\n    private String phone;\n\n    /* 联系人手机 */\n    private String mobile;\n\n    /* 联系人邮箱 */\n    private String email;\n\n    /* 联系人职位 */\n    private String position;\n\n    /* 联系人备注 */\n    private String remark;\n\n\n    @ManyToOne\n    @JoinColumn(name = \"cust_id\")\n    private Customer customer;\n}\n"
+					"Data": "@Entity\n@Data\n@Builder\n@NoArgsConstructor\n@AllArgsConstructor\npublic class BannerItem{\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long id;\n\n    /* 名称，对无意义id的描述 */\n    private String name;\n\n    /* 图片 */\n    private String img;\n\n    /* 点击后跳转的类型，如 SPU（需要spuId）、专题（需要themeId）、页面（pageId）等 */\n    private String type;\n\n    /* 关键字，如 spuId、ThemeId、pageId */\n    private String keyword;\n\n    @ManyToOne\n    @JoinColumn(name = \"bannerId\")\n    private Banner banner;\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
 		},
 		{
-			"ID": "20210707235333-7neerkp",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-7neerkp"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "测试"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-6f9vw3y",
+			"ID": "20210922234449-5w8rwjd",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-6f9vw3y"
+				"id": "20210922234449-5w8rwjd",
+				"updated": "20210923000915"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker",
@@ -3713,304 +3019,40 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "@DataJpaTest\n// DataJpaTest、MybatisTest 会默认使用其测试数据源替代，若要使用自己配置的，需要添加如下注解\n@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)\npublic class One2ManyTest {\n\n    @Autowired\n    private CustomerRepository customerRepository;\n\n    @Autowired\n    private LinkManRepository linkManRepository;\n\n\n    /**\n     * 主表放弃维护外键后该方法无法添加外键值\n     */\n    @Test\n    @Rollback(false)\n    @Transactional\n    void testSave() {\n        Customer customer = Customer.builder().name(\"腾讯\").linkManSet(new HashSet\u003c\u003e()).build();\n\n        LinkMan linkMan = LinkMan.builder().name(\"小马\").build();\n\n        // 双向关联，主表维护外键\n        customer.getLinkManSet().add(linkMan);\n\n        customerRepository.save(customer);\n        linkManRepository.save(linkMan);\n        // 保存外键时没有直接 insert 而是2条 insert 后执行了 update！\n\n    }\n\n    /**\n     * 推荐使用的方式\n     */\n    @Test\n    @Rollback(false)\n    @Transactional\n    void testSave2() {\n        Customer customer = Customer.builder().name(\"腾讯\").build();\n\n        LinkMan linkMan = LinkMan.builder()\n                .name(\"小马\")\n                .customer(customer)// 双向关联，从表维护外键\n                .build();\n\n        customerRepository.save(customer);\n        linkManRepository.save(linkMan);\n        // 保存外键时只用了2条 update！\n\n    }\n\n}\n"
+					"Data": "@DataJpaTest\n// DataJpaTest、MybatisTest 会默认使用其测试数据源替代，若要使用自己配置的，需要添加如下注解\n@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)\npublic class One2ManyTest {\n\n    @Autowired\n    private BannerRepository bannerRepository;\n\n    @Autowired\n    private BannerItemRepository bannerItemRepository;\n\n    /**\n     * 主表放弃维护外键后该方法无法添加外键值（虽然不报错）\n     */\n    @Test\n    @Rollback(false)\n    @Transactional\n    void testSave() {\n        Banner banner = Banner.builder().name(\"首页轮播图\").build();\n        BannerItem bannerItem = BannerItem.builder().name(\"鞋服\").build();\n\n        // 双向关联，主表维护外键\n        banner.getItemList().add(bannerItem);\n\n        bannerRepository.save(banner);\n        bannerItemRepository.save(bannerItem);\n        // 保存外键时没有直接 insert 而是2条 insert 后执行了 update！\n\t// Hibernate: insert into banner (description, img, name, title) values (?, ?, ?, ?)\n        // Hibernate: insert into banner_item (banner_id, img, keyword, name, type) values (?, ?, ?, ?, ?)\n        // Hibernate: update banner_item set banner_id=? where id=?\n\t// 可见，保存外键时没有直接 insert 而是 2 条 insert 后执行了 update！\n\n    }\n\n    /**\n     * 推荐使用的方式\n     */\n    @Test\n    @Rollback(false)\n    @Transactional\n    void testSave2() {\n        Banner banner = Banner.builder().name(\"首页轮播图\").build();\n        BannerItem bannerItem = BannerItem.builder()\n                .name(\"鞋服\")\n                .banner(banner)// 双向关联，从表维护外键\n                .build();\n\n        bannerRepository.save(banner);\n        bannerItemRepository.save(bannerItem);\n        // 保存外键时只用了2条 update！\n\t// Hibernate: insert into banner (description, img, name, title) values (?, ?, ?, ?)\n\t// Hibernate: insert into banner_item (banner_id, img, keyword, name, type) values (?, ?, ?, ?, ?)\n    }\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
 		},
 		{
-			"ID": "20210707235333-g8yfk7q",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210707235333-g8yfk7q"
-			},
-			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
-					"Type": "NodeText",
-					"Data": "问题分析"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-rod3aqa",
+			"ID": "20210922234436-5umxufg",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-rod3aqa"
+				"id": "20210922234436-5umxufg",
+				"updated": "20210923001017"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "testSave 自动生成的 sql："
+					"Data": "建表日志"
 				}
 			]
 		},
 		{
-			"ID": "20210707235333-y2ewtr8",
+			"ID": "20210923001011-cmqjyg0",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "c3Fs",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-y2ewtr8"
+				"id": "20210923001011-cmqjyg0",
+				"updated": "20210923001043"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "c3Fs"
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "CREATE TABLE customer (\n\tid BIGINT NOT NULL auto_increment,\n\taddress VARCHAR ( 255 ),\n\tindustry VARCHAR ( 255 ),\n\tLEVEL VARCHAR ( 255 ),\n\tNAME VARCHAR ( 255 ),\n\tphone VARCHAR ( 255 ),\nsource VARCHAR ( 255 ),\nPRIMARY KEY ( id )) ENGINE = INNODB;\n\nCREATE TABLE link_man (\n\tid BIGINT NOT NULL auto_increment,\n\temail VARCHAR ( 255 ),\n\tgender VARCHAR ( 255 ),\n\tmobile VARCHAR ( 255 ),\n\tNAME VARCHAR ( 255 ),\n\tphone VARCHAR ( 255 ),\n\tposition VARCHAR ( 255 ),\n\tremark VARCHAR ( 255 ),\ncust_id BIGINT,\nPRIMARY KEY ( id )) ENGINE = INNODB;\n\n-- 外键约束\nalter table link_man add constraint FKd378jah5xd7bsqjolfsop35i foreign key (cust_id) references customer (id)\n\n-- 保存\ninsert into customer (address, industry, level, name, phone, source) values (?, ?, ?, ?, ?, ?)\ninsert into link_man (cust_id, email, gender, mobile, name, phone, position, remark) values (?, ?, ?, ?, ?, ?, ?, ?)\nupdate link_man set cust_id=? where id=?\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-0vxde3e",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-0vxde3e"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "可见，"
-				},
-				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "目前生成的建表语句竟然有 3 条"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "，本应该只有 2 条！并且保存外键时"
-				},
-				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "没有直接 insert 而是 2 条 insert 后执行了 update"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "！"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-plmf6z0",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-plmf6z0"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "因此该方式"
-				},
-				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "不可取"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "（实际生产中建表可以不用管，但是对于保存操作就不应该用这么多条语句完成！）"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-lr3bi97",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-lr3bi97"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "testSave2 自动生成的 sql："
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-3g600oe",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "c3Fs",
-			"CodeBlockCloseFence": "YGBg",
-			"Properties": {
-				"id": "20210707235333-3g600oe"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "c3Fs"
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "CREATE TABLE customer (\n\tid BIGINT NOT NULL auto_increment,\n\taddress VARCHAR ( 255 ),\n\tindustry VARCHAR ( 255 ),\n\tLEVEL VARCHAR ( 255 ),\n\tNAME VARCHAR ( 255 ),\n\tphone VARCHAR ( 255 ),\nsource VARCHAR ( 255 ),\nPRIMARY KEY ( id )) ENGINE = INNODB;\n\nCREATE TABLE link_man (\n\tid BIGINT NOT NULL auto_increment,\n\temail VARCHAR ( 255 ),\n\tgender VARCHAR ( 255 ),\n\tmobile VARCHAR ( 255 ),\n\tNAME VARCHAR ( 255 ),\n\tphone VARCHAR ( 255 ),\n\tposition VARCHAR ( 255 ),\n\tremark VARCHAR ( 255 ),\ncust_id BIGINT,\nPRIMARY KEY ( id )) ENGINE = INNODB;\n\n-- 外键约束\nalter table link_man add constraint FKd378jah5xd7bsqjolfsop35i foreign key (cust_id) references customer (id)\n\n-- 保存\ninsert into customer (address, industry, level, name, phone, source) values (?, ?, ?, ?, ?, ?)\ninsert into link_man (cust_id, email, gender, mobile, name, phone, position, remark) values (?, ?, ?, ?, ?, ?, ?, ?)\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-1igeo40",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-1igeo40"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "可见，"
-				},
-				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "目前生成的建表语句竟然有 3 条"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "，本应该只有 2 条！但是保存外键时"
-				},
-				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "只用了 2 条 update"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "！所以推荐！"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-j1mqu1u",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210707235333-j1mqu1u"
-			},
-			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
-					"Type": "NodeText",
-					"Data": "改进：主表放弃外键维护"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-q7pkiyz",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
-			"Properties": {
-				"id": "20210707235333-q7pkiyz"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker",
@@ -4018,43 +3060,50 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "@Data\n@NoArgsConstructor\n@AllArgsConstructor\n@Builder\n@Entity\npublic class Customer {\n\n\n    /* 客户编号（主键）*/\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long Id;\n\n    /* 客户名称（公司名称） */\n    private String name;\n\n    /* 客户信息来源 */\n    private String source;\n\n    /* 客户所属行业 */\n    private String industry;\n\n    /* 客户级别 */\n    private String level;\n\n    /* 客户联系地址 */\n    private String address;\n\n    /* 客户联系电话 */\n    private String phone;\n\n\n\n    // 主表应该放弃对外键的维护\n    // @OneToMany\n    // @JoinColumn(name = \"custId\")\n    // private Set\u003cLinkMan\u003e linkManSet;\n\n    @OneToMany(mappedBy = \"customer\")\n    private Set\u003cLinkMan\u003e linkManSet;\n}\n"
+					"Data": "Hibernate: create table banner (id bigint not null auto_increment, description varchar(255), img varchar(255), name varchar(255), title varchar(255), primary key (id)) engine=InnoDB\nHibernate: create table banner_item (id bigint not null auto_increment, img varchar(255), keyword varchar(255), name varchar(255), type varchar(255), banner_id bigint, primary key (id)) engine=InnoDB\nHibernate: alter table banner_item add constraint FKhtdlqcpk4vq84rtuxqtj2ht9e foreign key (banner_id) references banner (id)\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
 		},
 		{
-			"ID": "20210707235333-nv582a4",
+			"ID": "20210923000116-i5k42ip",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-nv582a4"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "其余不变，但是注意测试方法只有 testSave2 可以添加外键值了！因为只有从表才能维护外键了"
-				}
-			]
+				"id": "20210923000116-i5k42ip",
+				"updated": "20210923000116"
+			}
 		},
 		{
-			"ID": "20210707235333-zk4a9qy",
+			"ID": "20210923000116-wfbcwi5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210923000116-wfbcwi5",
+				"updated": "20210923000116"
+			}
+		},
+		{
+			"ID": "20210923001142-u376kip",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210923001142-u376kip",
+				"updated": "20210923001142"
+			}
+		},
+		{
+			"ID": "20210923001142-2mjkbrb",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
 			"Properties": {
-				"id": "20210707235333-zk4a9qy"
+				"id": "20210923001142-2mjkbrb",
+				"updated": "20210923003748"
 			},
 			"Children": [
 				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
 					"Type": "NodeText",
-					"Data": "实战：级联 ☠️"
+					"Data": "CascadeType 级联（不推荐） "
 				}
 			]
 		},
@@ -4511,11 +3560,13 @@
 			"ID": "20210707235333-mdig7bd",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-mdig7bd"
+				"id": "20210707235333-mdig7bd",
+				"updated": "20210923001605"
 			},
 			"Children": [
 				{
 					"Type": "NodeStrong",
+					"Data": "strong",
 					"Children": [
 						{
 							"Type": "NodeStrongA6kOpenMarker",
@@ -4537,6 +3588,7 @@
 				},
 				{
 					"Type": "NodeStrong",
+					"Data": "strong",
 					"Children": [
 						{
 							"Type": "NodeStrongA6kOpenMarker",
@@ -4544,7 +3596,7 @@
 						},
 						{
 							"Type": "NodeText",
-							"Data": "操作主表配置（一般配置在主表，虽然从表也可以配置）"
+							"Data": "操作主表配置（一般配置在主表—一个List即搞定，虽然从表也可以配置）"
 						},
 						{
 							"Type": "NodeStrongA6kCloseMarker",
@@ -4559,22 +3611,17 @@
 			]
 		},
 		{
-			"ID": "20210707235333-u3gr8tq",
+			"ID": "20210923001218-vfvo1m5",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-u3gr8tq"
+				"id": "20210923001218-vfvo1m5",
+				"updated": "20210923001243"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker",
@@ -4582,12 +3629,38 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "@Getter\n@Setter\n@NoArgsConstructor\n@AllArgsConstructor\n@Builder\n@Entity\npublic class Customer {\n\n\n    /* 客户编号（主键）*/\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long Id;\n\n    /* 客户名称（公司名称） */\n    private String name;\n\n    /* 客户信息来源 */\n    private String source;\n\n    /* 客户所属行业 */\n    private String industry;\n\n    /* 客户级别 */\n    private String level;\n\n    /* 客户联系地址 */\n    private String address;\n\n    /* 客户联系电话 */\n    private String phone;\n\n    // 可以单独配置级联保存、删除，还可以配置更新等操作，也可以直接配置全部\n    @OneToMany(mappedBy = \"customer\", cascade =CascadeType.ALL)\n    private Set\u003cLinkMan\u003e linkManSet;\n}\n"
+					"Data": "@Entity\n@Data\n@Builder\n@NoArgsConstructor\n@AllArgsConstructor\npublic class Banner{\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long id;\n\n    /* 名称，对无意义id的描述 */\n    private String name;\n\n    /* 可以展示到前端的 */\n    private String title;\n    private String description;\n    private String img;\n\n\n    /** 主表也可以维护外键，不推荐的写法 */\n    // @OneToMany\n    // @JoinColumn(name = \"bannerId\")\n    // @Builder.Default\n    // private List\u003cBannerItem\u003e itemList = new ArrayList\u003c\u003e();\n\n    /** 主表放弃外键维护，推荐的写法 */\n    @OneToMany(mappedBy = \"banner\", cascade = CascadeType.ALL)\n    @Builder.Default\n    private List\u003cBannerItem\u003e itemList = new ArrayList\u003c\u003e();\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-u3gr8tq",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-u3gr8tq",
+				"updated": "20210923001730"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Entity\n@Data\n@Builder\n@NoArgsConstructor\n@AllArgsConstructor\npublic class BannerItem{\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long id;\n\n    /* 名称，对无意义id的描述 */\n    private String name;\n\n    /* 图片 */\n    private String img;\n\n    /* 点击后跳转的类型，如 SPU（需要spuId）、专题（需要themeId）、页面（pageId）等 */\n    private String type;\n\n    /* 关键字，如 spuId、ThemeId、pageId */\n    private String keyword;\n\n    @ManyToOne(cascade = CascadeType.ALL)\n    @JoinColumn(name = \"bannerId\")\n    private Banner banner;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
 				}
 			]
 		},
@@ -4608,19 +3681,14 @@
 			"ID": "20210707235333-np89don",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-np89don"
+				"id": "20210707235333-np89don",
+				"updated": "20210923002124"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker",
@@ -4628,12 +3696,11 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "@DataJpaTest\n// DataJpaTest、MybatisTest 会默认使用其测试数据源替代，若要使用自己配置的，需要添加如下注解\n@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)\npublic class One2ManyTest {\n\n    @Autowired\n    private CustomerRepository customerRepository;\n\n    @Autowired\n    private LinkManRepository linkManRepository;\n\n    /**\n     * 级联添加，保存一个客户的同时保存联系人\n     */\n    @Test\n    @Rollback(false)\n    @Transactional\n    void testCascadeSave() {\n        Customer customer = Customer.builder().name(\"腾讯\").linkManSet(new HashSet\u003c\u003e()).build();\n\n        LinkMan linkMan = LinkMan.builder()\n                .name(\"小马\")\n                .customer(customer)// 双向关联，从表维护外键（这个是维护外键的，和级联没有关系！！！）\n                .build();\n\n        customer.getLinkManSet().add(linkMan);\n\n        customerRepository.save(customer);\n    }\n\n    /**\n     * 级联删除，删除一个客户的同时删除此客户的所有联系人。执行删除前记得把 ddl-auto 改为 update\n     */\n    @Test\n    @Rollback(false)\n    @Transactional\n    void testCascadeRemove() {\n        customerRepository.deleteById(1L);\n    }\n\n}\n"
+					"Data": "@DataJpaTest\n// DataJpaTest、MybatisTest 会默认使用其测试数据源替代，若要使用自己配置的，需要添加如下注解\n@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)\npublic class One2ManyTest {\n\n    @Autowired\n    private BannerRepository bannerRepository;\n\n    @Autowired\n    private BannerItemRepository bannerItemRepository;\n\n    /**\n     * 级联添加，保存一个banner的同时保存bannerItem\n     */\n    @Test\n    @Rollback(false)\n    @Transactional\n    void testCascadeSave() {\n        Banner banner = Banner.builder().name(\"首页轮播图\").build();\n\n        BannerItem bannerItem = BannerItem.builder()\n                .name(\"鞋服\")\n                .banner(banner)// 双向关联，从表维护外键（这个是维护外键的，和级联没有关系！！！）\n                .build();\n\n        banner.getItemList().add(bannerItem);\n        bannerRepository.save(banner);\n\t// Hibernate: insert into banner (description, img, name, title) values (?, ?, ?, ?)\n\t// Hibernate: insert into banner_item (banner_id, img, keyword, name, type) values (?, ?, ?, ?, ?)\n    }\n\n    /**\n     * 级联删除，删除一个客户的同时删除此客户的所有联系人。执行删除前记得把 ddl-auto 改为 update\n     */\n    @Test\n    @Rollback(false)\n    @Transactional\n    void testCascadeRemove() {\n        bannerRepository.deleteById(1L);\n\t// Hibernate: select banner0_.id as id1_1_0_, banner0_.description as descript2_1_0_, banner0_.img as img3_1_0_, banner0_.name as name4_1_0_, banner0_.title as title5_1_0_ from banner banner0_ where banner0_.id=?\n\t// Hibernate: select itemlist0_.banner_id as banner_i6_2_0_, itemlist0_.id as id1_2_0_, itemlist0_.id as id1_2_1_, itemlist0_.banner_id as banner_i6_2_1_, itemlist0_.img as img2_2_1_, itemlist0_.keyword as keyword3_2_1_, itemlist0_.name as name4_2_1_, itemlist0_.type as type5_2_1_ from banner_item itemlist0_ where itemlist0_.banner_id=?\n\t// Hibernate: delete from banner_item where id=?\n\t// Hibernate: delete from banner where id=?\n    }\n\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
 		},
@@ -4641,93 +3708,9 @@
 			"ID": "20210707235333-jabc6md",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-jabc6md"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "级联保存的 sql"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-oy1i5ch",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "c3Fs",
-			"CodeBlockCloseFence": "YGBg",
-			"Properties": {
-				"id": "20210707235333-oy1i5ch"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "c3Fs"
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "Hibernate: insert into customer (address, industry, level, name, phone, source) values (?, ?, ?, ?, ?, ?)\nHibernate: insert into link_man (cust_id, email, gender, mobile, name, phone, position, remark) values (?, ?, ?, ?, ?, ?, ?, ?)\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-2b2ilve",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-2b2ilve"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "级联删除的 sql"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-u8l3tgg",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "c3Fs",
-			"CodeBlockCloseFence": "YGBg",
-			"Properties": {
-				"id": "20210707235333-u8l3tgg"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "c3Fs"
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "Hibernate: select customer0_.id as id1_1_0_, customer0_.address as address2_1_0_, customer0_.industry as industry3_1_0_, customer0_.level as level4_1_0_, customer0_.name as name5_1_0_, customer0_.phone as phone6_1_0_, customer0_.source as source7_1_0_ from customer customer0_ where customer0_.id=?\nHibernate: select linkmanset0_.cust_id as cust_id9_2_0_, linkmanset0_.id as id1_2_0_, linkmanset0_.id as id1_2_1_, linkmanset0_.cust_id as cust_id9_2_1_, linkmanset0_.email as email2_2_1_, linkmanset0_.gender as gender3_2_1_, linkmanset0_.mobile as mobile4_2_1_, linkmanset0_.name as name5_2_1_, linkmanset0_.phone as phone6_2_1_, linkmanset0_.position as position7_2_1_, linkmanset0_.remark as remark8_2_1_ from link_man linkmanset0_ where linkmanset0_.cust_id=?\nHibernate: delete from link_man where id=?\nHibernate: delete from customer where id=?\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				}
-			]
+				"id": "20210707235333-jabc6md",
+				"updated": "20210923002134"
+			}
 		},
 		{
 			"ID": "20210707235333-lmka1ov",
@@ -5065,13 +4048,10 @@
 			"Type": "NodeHeading",
 			"HeadingLevel": 2,
 			"Properties": {
-				"id": "20210707235333-kjb40uf"
+				"id": "20210707235333-kjb40uf",
+				"updated": "20210707235333"
 			},
 			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "## "
-				},
 				{
 					"Type": "NodeText",
 					"Data": "多对多"
@@ -5079,51 +4059,16 @@
 			]
 		},
 		{
-			"ID": "20210707235333-c72s9vp",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210707235333-c72s9vp"
-			},
-			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
-					"Type": "NodeText",
-					"Data": "案例介绍"
-				}
-			]
-		},
-		{
 			"ID": "20210707235333-z5986al",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-z5986al"
+				"id": "20210707235333-z5986al",
+				"updated": "20210707235333"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
 					"Data": "用户和角色（多对多关系），不用多逼逼了，就是 RBAC 模型"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-egdxr5b",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210707235333-egdxr5b"
-			},
-			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
-					"Type": "NodeText",
-					"Data": "分析步骤"
 				}
 			]
 		},
@@ -5432,20 +4377,25 @@
 			]
 		},
 		{
+			"ID": "20210923002504-ixyvnox",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210923002504-ixyvnox",
+				"updated": "20210923002504"
+			}
+		},
+		{
 			"ID": "20210707235333-hsnt7t8",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
 			"Properties": {
-				"id": "20210707235333-hsnt7t8"
+				"id": "20210707235333-hsnt7t8",
+				"updated": "20210923002607"
 			},
 			"Children": [
 				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
 					"Type": "NodeText",
-					"Data": "@ManyToMany 实战 🔥"
+					"Data": "@ManyToMany 实战（没有其他字段） 🔥"
 				}
 			]
 		},
@@ -5559,19 +4509,14 @@
 			"ID": "20210707235333-djqyqjb",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-djqyqjb"
+				"id": "20210707235333-djqyqjb",
+				"updated": "20210923003249"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker",
@@ -5579,12 +4524,11 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "@Getter\n@Setter\n@NoArgsConstructor\n@AllArgsConstructor\n@Builder\n@Entity\npublic class SysUser {\n\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long userId;\n    private String userName;\n    private Integer age;\n\n\n    @ManyToMany\n    @JoinTable(name = \"sys_user_role\",\n            joinColumns = @JoinColumn(name = \"user_id\"),\n            inverseJoinColumns = @JoinColumn(name = \"role_id\"))\n    private Set\u003cSysRole\u003e roles;\n}\n"
+					"Data": "@Entity\n@Builder\n@Data\n@NoArgsConstructor\n@AllArgsConstructor\npublic class SysUser {\n\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long userId;\n    private String name;\n\n\n    @ManyToMany(cascade = CascadeType.ALL)\n    @JoinTable(name = \"sysUserRole\",\n            joinColumns = @JoinColumn(name = \"userId\"),\n            inverseJoinColumns = @JoinColumn(name = \"roleId\"))\n    @Builder.Default\n    private Set\u003cSysRole\u003e roles = new HashSet\u003c\u003e();\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
 		},
@@ -5592,19 +4536,14 @@
 			"ID": "20210707235333-19k5t4w",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-19k5t4w"
+				"id": "20210707235333-19k5t4w",
+				"updated": "20210923003256"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker",
@@ -5612,12 +4551,11 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "@Getter\n@Setter\n@NoArgsConstructor\n@AllArgsConstructor\n@Builder\n@Entity\npublic class SysRole {\n\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long roleId;\n    private String roleName;\n\n    // 放弃中间表维护权\n    @ManyToMany(mappedBy = \"roles\")\n    private Set\u003cSysUser\u003e users;\n}\n"
+					"Data": "@Getter\n@Setter\n@NoArgsConstructor\n@AllArgsConstructor\n@Builder\n@Entity\npublic class SysRole {\n\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long roleId;\n    private String roleName;\n\n\n    // referencedColumnName 可以不配置，默认为主键\n    @ManyToMany(mappedBy = \"roles\")\n    @Builder.Default\n    private Set\u003cSysUser\u003e users = new HashSet\u003c\u003e();\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
 		},
@@ -5704,19 +4642,14 @@
 			"ID": "20210707235333-ddsizds",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-ddsizds"
+				"id": "20210707235333-ddsizds",
+				"updated": "20210923003709"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker",
@@ -5724,12 +4657,11 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "@DataJpaTest\n// DataJpaTest、MybatisTest 会默认使用其测试数据源替代，若要使用自己配置的，需要添加如下注解\n@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)\npublic class Many2ManyTest {\n\n    @Autowired\n    private SysUserRepository sysUserRepository;\n\n    @Autowired\n    private SysRoleRepository sysRoleRepository;\n\n\n    /**\n     * 保存一个用户、一个角色\n     */\n    @Test\n    @Rollback(false)\n    @Transactional\n    void testSave() {\n\n        SysUser sysUser = SysUser.builder().userName(\"conanan\").roles(new HashSet\u003c\u003e()).build();\n\n        SysRole sysRole = SysRole.builder().roleName(\"架构师\").users(new HashSet\u003c\u003e()).build();\n\n        // 配置用户到角色的关系，可以对中间表进行维护\n        sysUser.getRoles().add(sysRole);\n        // 配置角色到用户的关系，可以对中间表进行维护\n        // sysRole.getUsers().add(sysUser);\n        // 但是不能同时维护，因为联合主键不能重复！\n        // 报错 Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1-1' for key 'sys_user_role.PRIMARY'\n        // 放弃被选择一方（如角色）的中间表维护权即可！\n\n        sysUserRepository.save(sysUser);\n        sysRoleRepository.save(sysRole);\n    }\n}\n"
+					"Data": "@DataJpaTest\n// DataJpaTest、MybatisTest 会默认使用其测试数据源替代，若要使用自己配置的，需要添加如下注解\n@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)\npublic class Many2ManyTest {\n\n    @Autowired\n    private SysUserRepository sysUserRepository;\n\n    @Autowired\n    private SysRoleRepository sysRoleRepository;\n\n\n    /**\n     * 保存一个用户、一个角色\n     */\n    @Test\n    @Rollback(false)\n    @Transactional\n    void testSave() {\n        SysUser sysUser = SysUser.builder().name(\"conanan\").build();\n        SysRole sysRole = SysRole.builder().roleName(\"架构师\").build();\n\n        // 配置用户到角色的关系，可以对中间表进行维护\n        sysUser.getRoles().add(sysRole);\n        // 配置角色到用户的关系，可以对中间表进行维护\n        // sysRole.getUsers().add(sysUser);\n        // 但是不能同时维护，因为联合主键不能重复！\n        // 报错 Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1-1' for key 'sys_user_role.PRIMARY'\n        // 放弃被选择一方（如角色）的中间表维护权即可！\n\n        sysUserRepository.save(sysUser);\n        sysRoleRepository.save(sysRole);\n    }\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
 		},
@@ -5750,19 +4682,14 @@
 			"ID": "20210707235333-ifqnzk1",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "c3Fs",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-ifqnzk1"
+				"id": "20210707235333-ifqnzk1",
+				"updated": "20210923003424"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker",
@@ -5770,12 +4697,11 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "create table sys_user_role (user_id bigint not null, role_id bigint not null, primary key (user_id, role_id)) engine=InnoDB\ncreate table sys_role (role_id bigint not null auto_increment, role_name varchar(255), primary key (role_id)) engine=InnoDB\ncreate table sys_user (user_id bigint not null auto_increment, age integer, user_name varchar(255), primary key (user_id)) engine=InnoDB\n\nalter table sys_user_role add constraint FKhh52n8vd4ny9ff4x9fb8v65qx foreign key (role_id) references sys_role (role_id)\nalter table sys_user_role add constraint FKb40xxfch70f5qnyfw8yme1n1s foreign key (user_id) references sys_user (user_id)\n\n-- 保存\ninsert into sys_user (age, user_name) values (?, ?)\ninsert into sys_role (role_name) values (?)\ninsert into sys_user_role (user_id, role_id) values (?, ?)\n"
+					"Data": "create table sys_role (role_id bigint not null auto_increment, role_name varchar(255), primary key (role_id)) engine=InnoDB\ncreate table sys_user (user_id bigint not null auto_increment, name varchar(255), primary key (user_id)) engine=InnoDB\ncreate table sys_user_role (user_id bigint not null, role_id bigint not null, primary key (user_id, role_id)) engine=InnoDB\n\nalter table sys_user_role add constraint FKhh52n8vd4ny9ff4x9fb8v65qx foreign key (role_id) references sys_role (role_id)\nalter table sys_user_role add constraint FKb40xxfch70f5qnyfw8yme1n1s foreign key (user_id) references sys_user (user_id)\n\n-- 保存\ninsert into sys_user (name) values (?)\ninsert into sys_role (role_name) values (?)\ninsert into sys_user_role (user_id, role_id) values (?, ?)\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
 		},
@@ -5783,51 +4709,30 @@
 			"ID": "20210707235333-vvpwkx1",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-vvpwkx1"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "可见，"
-				},
-				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "目前生成的建表语句竟然有 5 条"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "，本应该只有 3 条！"
-				}
-			]
+				"id": "20210707235333-vvpwkx1",
+				"updated": "20210923003434"
+			}
+		},
+		{
+			"ID": "20210923003435-7uhgrrp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210923003435-7uhgrrp",
+				"updated": "20210923003435"
+			}
 		},
 		{
 			"ID": "20210707235333-w12ilgy",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
 			"Properties": {
-				"id": "20210707235333-w12ilgy"
+				"id": "20210707235333-w12ilgy",
+				"updated": "20210923003734"
 			},
 			"Children": [
 				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
 					"Type": "NodeText",
-					"Data": "@ManyToMany 实战：级联 ☠️"
+					"Data": "@ManyToMany 级联实战（不推荐）"
 				}
 			]
 		},
@@ -5835,12 +4740,13 @@
 			"ID": "20210707235333-p1jx978",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-p1jx978"
+				"id": "20210707235333-p1jx978",
+				"updated": "20210923003843"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "配置同一对多"
+					"Data": "配置主表级联即可，因为外键维护也在主表这写的"
 				}
 			]
 		},
@@ -5848,19 +4754,14 @@
 			"ID": "20210707235333-ch5zang",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-ch5zang"
+				"id": "20210707235333-ch5zang",
+				"updated": "20210923003803"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker",
@@ -5868,25 +4769,11 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "@Getter\n@Setter\n@NoArgsConstructor\n@AllArgsConstructor\n@Builder\n@Entity\npublic class SysUser {\n\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long userId;\n    private String userName;\n    private Integer age;\n\n\n    @ManyToMany(cascade = CascadeType.ALL)\n    @JoinTable(name = \"sys_user_role\",\n            joinColumns = @JoinColumn(name = \"user_id\"),\n            inverseJoinColumns = @JoinColumn(name = \"role_id\"))\n    private Set\u003cSysRole\u003e roles;\n}\n"
+					"Data": "@Entity\n@Builder\n@Data\n@NoArgsConstructor\n@AllArgsConstructor\npublic class SysUser {\n\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long userId;\n    private String name;\n\n\n    @ManyToMany(cascade = CascadeType.ALL)\n    @JoinTable(name = \"sysUserRole\",\n            joinColumns = @JoinColumn(name = \"userId\"),\n            inverseJoinColumns = @JoinColumn(name = \"roleId\"))\n    @Builder.Default\n    private Set\u003cSysRole\u003e roles = new HashSet\u003c\u003e();\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-miaxej2",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-miaxej2"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "测试"
+					"Data": "```"
 				}
 			]
 		},
@@ -5894,19 +4781,14 @@
 			"ID": "20210707235333-ewj0uwz",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-ewj0uwz"
+				"id": "20210707235333-ewj0uwz",
+				"updated": "20210923004507"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker",
@@ -5914,138 +4796,11 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "@DataJpaTest\n// DataJpaTest、MybatisTest 会默认使用其测试数据源替代，若要使用自己配置的，需要添加如下注解\n@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)\npublic class Many2ManyTest {\n\n    @Autowired\n    private SysUserRepository sysUserRepository;\n\n    @Autowired\n    private SysRoleRepository sysRoleRepository;\n\n\n    /**\n     * 保存一个用户、一个角色\n     */\n    @Test\n    @Rollback(false)\n    @Transactional\n    void testSave() {\n\n        SysUser sysUser = SysUser.builder().userName(\"conanan\").roles(new HashSet\u003c\u003e()).build();\n\n        SysRole sysRole = SysRole.builder().roleName(\"架构师\").users(new HashSet\u003c\u003e()).build();\n\n        // 配置用户到角色的关系，可以对中间表进行维护\n        sysUser.getRoles().add(sysRole);\n        // 配置角色到用户的关系，可以对中间表进行维护\n        // sysRole.getUsers().add(sysUser);\n        // 但是不能同时维护，因为联合主键不能重复！\n        // 报错 Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1-1' for key 'sys_user_role.PRIMARY'\n        // 放弃被选择一方（如角色）的中间表维护权即可！\n\n        sysUserRepository.save(sysUser);\n        sysRoleRepository.save(sysRole);\n    }\n\n\n    /**\n     * 测试级联添加（保存一个用户同时保存用户相关角色及中间表关联信息）\n     */\n    @Test\n    @Rollback(false)\n    @Transactional\n    void testCascadeAdd() {\n\n        SysUser sysUser = SysUser.builder().userName(\"conanan\").roles(new HashSet\u003c\u003e()).build();\n\n\n        Optional\u003cSysRole\u003e byId = sysRoleRepository.findById(5L);\n\n        SysRole sysRole = SysRole.builder().roleId(5L).users(new HashSet\u003c\u003e()).build();\n\n        // 配置用户到角色的关系，可以对中间表进行维护。若还配置了级联，则这里也维护了级联关系\n        sysUser.getRoles().add(byId.orElse(new SysRole()));\n        // 配置角色到用户的关系，可以对中间表进行维护\n        // sysRole.getUsers().add(sysUser);\n        // 但是不能同时维护，因为联合主键不能重复！\n        // 报错 Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1-1' for key 'sys_user_role.PRIMARY'\n        // 放弃被选择一方（如角色）的中间表维护权即可！\n\n        sysUserRepository.save(sysUser);\n    }\n\n    /**\n     * 测试级联删除（删除一个用户同时删除中间表关联信息及用户相关角色）\n     */\n    @Test\n    @Rollback(false)\n    @Transactional\n    void testCascadeRemove() {\n\n        sysUserRepository.deleteById(5L);\n    }\n}\n"
+					"Data": "@DataJpaTest\n// DataJpaTest、MybatisTest 会默认使用其测试数据源替代，若要使用自己配置的，需要添加如下注解\n@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)\npublic class Many2ManyTest {\n\n    @Autowired\n    private SysUserRepository sysUserRepository;\n\n    @Autowired\n    private SysRoleRepository sysRoleRepository;\n\n    /**\n     * 测试级联添加（保存一个用户同时保存用户相关角色及中间表关联信息）\n     */\n    @Test\n    @Rollback(false)\n    @Transactional\n    void testCascadeAdd() {\n\n        SysUser sysUser = SysUser.builder().name(\"conanan\").build();\n        SysRole sysRole = SysRole.builder().roleName(\"架构师\").build();\n\n        // 配置用户到角色的关系，可以对中间表进行维护。若还配置了级联，则这里也维护了级联关系\n        sysUser.getRoles().add(sysRole);\n        // 配置角色到用户的关系，可以对中间表进行维护\n        // sysRole.getUsers().add(sysUser);\n        // 但是不能同时维护，因为联合主键不能重复！\n        // 报错 Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1-1' for key 'sys_user_role.PRIMARY'\n        // 放弃被选择一方（如角色）的中间表维护权即可！\n        sysUserRepository.save(sysUser);\n        // insert into sys_user (name) values (?)\n        // insert into sys_role (role_name) values (?)\n        // insert into sys_user_role (user_id, role_id) values (?, ?)\n    }\n\n    /**\n     * 测试级联删除（删除一个用户同时删除中间表关联信息及用户相关角色）。执行删除前记得把 ddl-auto 改为 update\n     */\n    @Test\n    @Rollback(false)\n    @Transactional\n    void testCascadeRemove() {\n        sysUserRepository.deleteById(1L);\n        // select sysuser0_.user_id as user_id1_4_0_, sysuser0_.name as name2_4_0_ from sys_user sysuser0_ where sysuser0_.user_id=?\n        // select roles0_.user_id as user_id1_5_0_, roles0_.role_id as role_id2_5_0_, sysrole1_.role_id as role_id1_3_1_, sysrole1_.role_name as role_nam2_3_1_ from sys_user_role roles0_ inner join sys_role sysrole1_ on roles0_.role_id=sysrole1_.role_id where roles0_.user_id=?\n        // delete from sys_user_role where user_id=?\n        // delete from sys_role where role_id=?\n        // delete from sys_user where user_id=?\n    }\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-dq2kywu",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-dq2kywu"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "保存的 sql"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-9yf4lho",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "c3Fs",
-			"CodeBlockCloseFence": "YGBg",
-			"Properties": {
-				"id": "20210707235333-9yf4lho"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "c3Fs"
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "create table sys_user_role (user_id bigint not null, role_id bigint not null, primary key (user_id, role_id)) engine=InnoDB\ncreate table sys_role (role_id bigint not null auto_increment, role_name varchar(255), primary key (role_id)) engine=InnoDB\ncreate table sys_user (user_id bigint not null auto_increment, age integer, user_name varchar(255), primary key (user_id)) engine=InnoDB\n\nalter table sys_user_role add constraint FKhh52n8vd4ny9ff4x9fb8v65qx foreign key (role_id) references sys_role (role_id)\nalter table sys_user_role add constraint FKb40xxfch70f5qnyfw8yme1n1s foreign key (user_id) references sys_user (user_id)\n\n-- 保存\ninsert into sys_user (age, user_name) values (?, ?)\ninsert into sys_role (role_name) values (?)\ninsert into sys_user_role (user_id, role_id) values (?, ?)\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-jkx8p2o",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-jkx8p2o"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "可见，"
-				},
-				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "目前生成的建表语句竟然有 5 条"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "，本应该只有 3 条！其余的一模一样"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-o1w4xs1",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-o1w4xs1"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "级联删除的 sql"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-hw1cwrd",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "c3Fs",
-			"CodeBlockCloseFence": "YGBg",
-			"Properties": {
-				"id": "20210707235333-hw1cwrd"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "c3Fs"
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "select sysuser0_.user_id as user_id1_5_0_, sysuser0_.age as age2_5_0_, sysuser0_.user_name as user_nam3_5_0_ from sys_user sysuser0_ where sysuser0_.user_id=?\nselect roles0_.user_id as user_id1_3_0_, roles0_.role_id as role_id2_3_0_, sysrole1_.role_id as role_id1_4_1_, sysrole1_.role_name as role_nam2_4_1_ from sys_user_role roles0_ inner join sys_role sysrole1_ on roles0_.role_id=sysrole1_.role_id where roles0_.user_id=?\ndelete from sys_user_role where user_id=?\ndelete from sys_role where role_id=?\ndelete from sys_user where user_id=?\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
 		},
@@ -6063,20 +4818,33 @@
 			]
 		},
 		{
+			"ID": "20210923004530-p5xcduq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210923004530-p5xcduq",
+				"updated": "20210923004530"
+			}
+		},
+		{
+			"ID": "20210923004530-57rw8pt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210923004530-57rw8pt",
+				"updated": "20210923004530"
+			}
+		},
+		{
 			"ID": "20210707235333-ciyqgcn",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
 			"Properties": {
-				"id": "20210707235333-ciyqgcn"
+				"id": "20210707235333-ciyqgcn",
+				"updated": "20210923004544"
 			},
 			"Children": [
 				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
 					"Type": "NodeText",
-					"Data": "@ManyToOne 和 @OneToMany 表示 🔥"
+					"Data": "@ManyToOne 和 @OneToMany 表示多对多 🔥"
 				}
 			]
 		},
@@ -6084,35 +4852,207 @@
 			"ID": "20210707235333-75vjzs2",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-75vjzs2"
+				"id": "20210707235333-75vjzs2",
+				"updated": "20210923010455"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "需要新建一个中间表 @Entity 类，并在该类中维护映射关系，记得在 2 个主表中配置 mappedBy。此时可见，"
-				},
-				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "目前生成的建表语句就只有 3 条"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "，非常正常！"
+					"Data": "需要新建一个中间表 @Entity 类，并在该类中维护映射关系，记得在 2 个主表中配置 mappedBy。"
 				}
 			]
+		},
+		{
+			"ID": "20210923010456-8k1se8n",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210923010456-8k1se8n",
+				"updated": "20210923010522"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Entity\n@Builder\n@Data\n@NoArgsConstructor\n@AllArgsConstructor\npublic class MyUser {\n\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long userId;\n    private String name;\n\n    @OneToMany(mappedBy = \"myUser\")\n    @Builder.Default\n    private Set\u003cMyUserRole\u003e myUserRoles = new HashSet\u003c\u003e();\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210923010508-tjs0y64",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210923010508-tjs0y64",
+				"updated": "20210923010551"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Data\n@NoArgsConstructor\n@AllArgsConstructor\n@Builder\n@Entity\npublic class MyRole {\n\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long roleId;\n    private String roleName;\n\n    // referencedColumnName 可以不配置，默认为主键\n    @OneToMany(mappedBy = \"myRole\")\n    @Builder.Default\n    private Set\u003cMyUserRole\u003e myUserRoles = new HashSet\u003c\u003e();\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210923010508-5kth6u5",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210923010508-5kth6u5",
+				"updated": "20210923010555"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Data\n@NoArgsConstructor\n@AllArgsConstructor\n@Builder\n@Entity\npublic class MyUserRole {\n\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long id;\n\n    private LocalDateTime createTime;\n\n    private Boolean deleted;\n\n    @ManyToOne\n    @JoinColumn(name = \"userId\")\n    private MyUser myUser;\n\n    @ManyToOne\n    @JoinColumn(name = \"roleId\")\n    private MyRole myRole;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210923010524-2ow3yle",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210923010524-2ow3yle",
+				"updated": "20210923010702"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Data\n@NoArgsConstructor\n@AllArgsConstructor\n@Builder\n@Entity\npublic class MyUserRole {\n\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long id;\n\n    private LocalDateTime createTime;\n\n    private Boolean deleted;\n\n    @ManyToOne\n    @JoinColumn(name = \"userId\")\n    private MyUser myUser;\n\n    @ManyToOne\n    @JoinColumn(name = \"roleId\")\n    private MyRole myRole;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210923010426-kvj7gis",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210923010426-kvj7gis",
+				"updated": "20210923010705"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "create table my_role (role_id bigint not null auto_increment, role_name varchar(255), primary key (role_id)) engine=InnoDB\ncreate table my_user (user_id bigint not null auto_increment, name varchar(255), primary key (user_id)) engine=InnoDB\ncreate table my_user_role (id bigint not null auto_increment, create_time datetime(6), deleted bit, role_id bigint, user_id bigint, primary key (id)) engine=InnoDB\n\nalter table my_user_role add constraint FKo6umfp8rayl6igco52yv9kbn2 foreign key (role_id) references my_role (role_id)\nalter table my_user_role add constraint FKmfjk40m0vdx3wg37x4w0ywf2 foreign key (user_id) references my_user (user_id)\nalter table sys_user_role add constraint FKhh52n8vd4ny9ff4x9fb8v65qx foreign key (role_id) references sys_role (role_id)\nalter table sys_user_role add constraint FKb40xxfch70f5qnyfw8yme1n1s foreign key (user_id) references sys_user (user_id)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210923010427-ggu6rps",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210923010427-ggu6rps",
+				"updated": "20210923010759"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@DataJpaTest\n// DataJpaTest、MybatisTest 会默认使用其测试数据源替代，若要使用自己配置的，需要添加如下注解\n@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)\npublic class Many2ManyTest2 {\n\n    @Autowired\n    private MyUserRepository myUserRepository;\n\n    @Autowired\n    private MyRoleRepository myRoleRepository;\n\n    @Autowired\n    private MyUserRoleRepository myUserRoleRepository;\n\n\n\n    /**\n     * 保存一个用户、一个角色\n     */\n    @Test\n    @Rollback(false)\n    @Transactional\n    void testSave() {\n        MyUser myUser = MyUser.builder().name(\"conanan\").build();\n        MyRole myRole = MyRole.builder().roleName(\"架构师\").build();\n        MyUserRole myUserRole = MyUserRole.builder().myUser(myUser).myRole(myRole).createTime(LocalDateTime.now()).build();\n\n\n        myUserRepository.save(myUser);\n        myRoleRepository.save(myRole);\n        myUserRoleRepository.save(myUserRole);\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210923010427-uqkei6u",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210923010427-uqkei6u",
+				"updated": "20210923010807"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "级联写法略"
+				}
+			]
+		},
+		{
+			"ID": "20210923004608-ed5dwmc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210923004608-ed5dwmc",
+				"updated": "20210923004608"
+			}
+		},
+		{
+			"ID": "20210923004608-0fzdnm7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210923004608-0fzdnm7",
+				"updated": "20210923004608"
+			}
 		},
 		{
 			"ID": "20210707235333-x583anq",
@@ -6290,20 +5230,25 @@
 			]
 		},
 		{
+			"ID": "20210923010811-btfansd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210923010811-btfansd",
+				"updated": "20210923010811"
+			}
+		},
+		{
 			"ID": "20210707235333-z7d0jo2",
 			"Type": "NodeHeading",
 			"HeadingLevel": 2,
 			"Properties": {
-				"id": "20210707235333-z7d0jo2"
+				"id": "20210707235333-z7d0jo2",
+				"updated": "20210923010838"
 			},
 			"Children": [
 				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "## "
-				},
-				{
 					"Type": "NodeText",
-					"Data": "对象导航查询 🔥"
+					"Data": "对象导航查询介绍"
 				}
 			]
 		},
@@ -6602,6 +5547,14 @@
 					"CodeBlockFenceLen": 3
 				}
 			]
+		},
+		{
+			"ID": "20210923010842-qw2ngjo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210923010842-qw2ngjo",
+				"updated": "20210923010842"
+			}
 		},
 		{
 			"ID": "20210707235333-thu5jio",
