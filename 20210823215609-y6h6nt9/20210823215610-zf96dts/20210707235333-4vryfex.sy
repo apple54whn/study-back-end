@@ -5,7 +5,7 @@
 		"id": "20210707235333-4vryfex",
 		"title": "604.Entity 多表详解（掌握）",
 		"type": "doc",
-		"updated": "20210915235435"
+		"updated": "20210922232704"
 	},
 	"Children": [
 		{
@@ -13,13 +13,10 @@
 			"Type": "NodeHeading",
 			"HeadingLevel": 2,
 			"Properties": {
-				"id": "20210707235333-71fsx8x"
+				"id": "20210707235333-71fsx8x",
+				"updated": "20210707235333"
 			},
 			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "## "
-				},
 				{
 					"Type": "NodeText",
 					"Data": "一对一"
@@ -27,20 +24,79 @@
 			]
 		},
 		{
+			"ID": "20210919004709-c4wzd7b",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210919004709-c4wzd7b",
+				"updated": "20210919004724"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "参考资料："
+				},
+				{
+					"Type": "NodeLink",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "JPA中的OneToMany和ManyToOne的最佳实践"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "http://www.wangzhenhua.rocks/zh-hans/java/jpa-one-to-many-many-to-one-best-practice"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210919004302-5aix4lw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210919004302-5aix4lw",
+				"updated": "20210919004732"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "如：user 表是用户的主信息，user_info 是用户的扩展信息，两者之间是一对一的关系"
+				}
+			]
+		},
+		{
+			"ID": "20210919004303-we8vfg7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210919004303-we8vfg7",
+				"updated": "20210919004303"
+			}
+		},
+		{
 			"ID": "20210707235333-se3jv95",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
 			"Properties": {
-				"id": "20210707235333-se3jv95"
+				"id": "20210707235333-se3jv95",
+				"updated": "20210919003149"
 			},
 			"Children": [
 				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
 					"Type": "NodeText",
-					"Data": "JPA 协议 🔥"
+					"Data": "JPA 协议规范 🔥"
 				}
 			]
 		},
@@ -240,343 +296,17 @@
 			}
 		},
 		{
-			"ID": "20210707235333-r2rtq9a",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210707235333-r2rtq9a"
-			},
-			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
-					"Type": "NodeText",
-					"Data": "案例介绍"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-if66vyq",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-if66vyq"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "举个例子：user 表是用户的主信息，user_info 是用户的扩展信息，两者之间是一对一的关系。"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-gcp017c",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210707235333-gcp017c"
-			},
-			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
-					"Type": "NodeText",
-					"Data": "单向关联"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-597jr6i",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-597jr6i"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "user_info 表里面有一个 user_id 作为关联关系的外键，如果是单项关联，我们的写法如下："
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-tacemi5",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
-			"Properties": {
-				"id": "20210707235333-tacemi5"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "amF2YQ=="
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "@Entity\n@Data\n@Builder\n@AllArgsConstructor\n@NoArgsConstructor\npublic class User {\n   @Id\n   @GeneratedValue(strategy= GenerationType.AUTO)\n   private Long id;\n   private String name;\n   private String email;\n   private String sex;\n   private String address;\n}\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-k3avfkn",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-k3avfkn"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "User 实体里面什么都没变化，不需要添加 @OneToOne 注解。我们只需要在拥有外键的一方配置就可以，所以 UserInfo 的代码如下："
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-9ivh1dr",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
-			"Properties": {
-				"id": "20210707235333-9ivh1dr"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "amF2YQ=="
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "@Entity\n@Data\n@Builder\n@AllArgsConstructor\n@NoArgsConstructor\n@ToString(exclude = \"user\")\npublic class UserInfo {\n   @Id\n   @GeneratedValue(strategy= GenerationType.AUTO)\n   private Long id;\n   private Integer ages;\n   private String telephone;\n   @OneToOne //维护user的外键关联关系，配置一对一\n   private User user;\n}\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-od1vltz",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-od1vltz"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "我们看到，UserInfo 实体对象里面添加了 @OneToOne 注解，这时我们写一个测试用例跑一下看看有什么效果："
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-ks5eupd",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "c3Fs",
-			"CodeBlockCloseFence": "YGBg",
-			"Properties": {
-				"id": "20210707235333-ks5eupd"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "c3Fs"
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "create table user (id bigint not null, address varchar(255), email varchar(255), name varchar(255), sex varchar(255), primary key (id))\ncreate table user_info (id bigint not null, ages integer, telephone varchar(255), user_id bigint, primary key (id))\nalter table user_info add constraint FKn8pl63y4abe7n0ls6topbqjh2 foreign key (user_id) references user\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-2nx6z1r",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-2nx6z1r"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "因为我们新建了两个实体，跑任何一个 @SpringDataTest 就会看到上面有三个 sql 在执行，分别创建了两张表，而在 user_info 表上面还创建了一个外键索引。"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-unr7add",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210707235333-unr7add"
-			},
-			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
-					"Type": "NodeText",
-					"Data": "双向关联"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-4hrka86",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-4hrka86"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "我们保持 UserInfo 不变，在 User 实体对象里面添加这一段代码即可。"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-4kwbsxq",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
-			"Properties": {
-				"id": "20210707235333-4kwbsxq"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "amF2YQ=="
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "@OneToOne(mappedBy = \"user\")\nprivate UserInfo userInfo;\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-jae6ua6",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-jae6ua6"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "完整的 User 实体对象就会变成如下模样。"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-xxjyyq8",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
-			"Properties": {
-				"id": "20210707235333-xxjyyq8"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "amF2YQ=="
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "@Entity\n@Data\n@Builder\n@AllArgsConstructor\n@NoArgsConstructor\npublic class User {\n   @Id\n   @GeneratedValue(strategy= GenerationType.AUTO)\n   private Long id;\n   private String name;\n   private String email;\n   @OneToOne(mappedBy = \"user\")\n   private UserInfo userInfo;//变化之处\n   private String sex;\n   private String address;\n}\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-cy8ahrk",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-cy8ahrk"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "我们跑任何一个测试用例，就会看到运行结果是一样的，还是上面三条 sql。那么我们再查看一下 @OneToOne 源码，看看其支持的配置都有哪些。"
-				}
-			]
-		},
-		{
 			"ID": "20210707235333-n48k9j8",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
 			"Properties": {
-				"id": "20210707235333-n48k9j8"
+				"id": "20210707235333-n48k9j8",
+				"updated": "20210919005412"
 			},
 			"Children": [
 				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
 					"Type": "NodeText",
-					"Data": "OneToOne 源码解读"
+					"Data": "OneToOne 注解"
 				}
 			]
 		},
@@ -584,19 +314,14 @@
 			"ID": "20210707235333-pvmlrmy",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-pvmlrmy"
+				"id": "20210707235333-pvmlrmy",
+				"updated": "20210707235333"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker",
@@ -608,26 +333,183 @@
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
+		},
+		{
+			"ID": "20210919004800-jxkll57",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210919004800-jxkll57",
+				"updated": "20210919004800"
+			}
+		},
+		{
+			"ID": "20210919005405-qfpxr4v",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210919005405-qfpxr4v",
+				"updated": "20210919005405"
+			}
+		},
+		{
+			"ID": "20210919003153-o7oh34r",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210919003153-o7oh34r",
+				"updated": "20210919005051"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "双向关联（注意内存泄露）🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210919003234-csobogn",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210919003234-csobogn",
+				"updated": "20210919003535"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Entity\n@Data\n@Builder\n@AllArgsConstructor\n@NoArgsConstructor\npublic class User {\n    @Id\n    @GeneratedValue(strategy= GenerationType.IDENTITY)\n    private Long id;\n    private String name;\n\n    @OneToOne(mappedBy = \"user\")// 主表放弃维护外键！否则主表维护外键时，会多一条update sql\n    private UserInfo userInfo;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210919003201-bvyhds1",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210919003201-bvyhds1",
+				"updated": "20210919004049"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Entity\n@Data\n@Builder\n@AllArgsConstructor\n@NoArgsConstructor\n@ToString(exclude = \"user\")\npublic class UserInfo {\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long id;\n    private String description;\n\n    @OneToOne\n    @JoinColumn(name = \"userId\")// 不使用@JoinColumn指定外键名，则外键名默认为userId（自动驼峰转换）\n    private User user;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210919003153-n6hkj7p",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210919003153-n6hkj7p",
+				"updated": "20210919003854"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@DataJpaTest\n// DataJpaTest、MybatisTest 会默认使用其测试数据源替代，若要使用自己配置的，需要添加如下注解\n@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)\npublic class One2OneTest {\n\n    @Autowired\n    private UserRepository userRepository;\n    @Autowired\n    private UserInfoRepository userInfoRepository;\n\n    @Test\n    @Rollback(false)\n    public void testUserRelationships() {\n        User user = User.builder().name(\"conanan\").build();\n        UserInfo userInfo = UserInfo.builder().description(\"conanan的描述\").user(user).build();\n\n        userRepository.save(user);\n        userInfoRepository.save(userInfo);\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210919003154-nmunygw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210919003154-nmunygw",
+				"updated": "20210919003938"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "代码日志如下"
+				}
+			]
+		},
+		{
+			"ID": "20210919003938-tujrf0h",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210919003938-tujrf0h",
+				"updated": "20210919004043"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "Hibernate: create table user (id bigint not null auto_increment, name varchar(255), primary key (id)) engine=InnoDB\nHibernate: create table user_info (id bigint not null, description varchar(255), user_id bigint, primary key (id)) engine=InnoDB\nHibernate: alter table user_info add constraint FKn8pl63y4abe7n0ls6topbqjh2 foreign key (user_id) references user (id)\n\nHibernate: insert into user (name) values (?)\nHibernate: insert into user_info (description, user_id) values (?, ?)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210919004245-3krrhtn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210919004245-3krrhtn",
+				"updated": "20210919004245"
+			}
 		},
 		{
 			"ID": "20210707235333-vgsxc2s",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
 			"Properties": {
-				"id": "20210707235333-vgsxc2s"
+				"id": "20210707235333-vgsxc2s",
+				"updated": "20210919005055"
 			},
 			"Children": [
 				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
 					"Type": "NodeText",
-					"Data": "mappedBy 注意事项 🔥"
+					"Data": "mappedBy 主表放弃外键维护 🔥"
 				}
 			]
 		},
@@ -635,7 +517,8 @@
 			"ID": "20210707235333-7gojo5j",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-7gojo5j"
+				"id": "20210707235333-7gojo5j",
+				"updated": "20210707235333"
 			},
 			"Children": [
 				{
@@ -644,6 +527,7 @@
 				},
 				{
 					"Type": "NodeStrong",
+					"Data": "strong",
 					"Children": [
 						{
 							"Type": "NodeStrongA6kOpenMarker",
@@ -665,6 +549,7 @@
 				},
 				{
 					"Type": "NodeStrong",
+					"Data": "strong",
 					"Children": [
 						{
 							"Type": "NodeStrongA6kOpenMarker",
@@ -686,6 +571,7 @@
 				},
 				{
 					"Type": "NodeStrong",
+					"Data": "strong",
 					"Children": [
 						{
 							"Type": "NodeStrongA6kOpenMarker",
@@ -711,12 +597,13 @@
 			"ID": "20210707235333-kqiu8i5",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-kqiu8i5"
+				"id": "20210707235333-kqiu8i5",
+				"updated": "20210919004822"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "mappedBy 不能与 @JoinColumn 或者 @JoinTable 同时使用，因为没有意义，关联关系不在这里面维护。"
+					"Data": "mappedBy 不能与 @JoinColumn 或者 @JoinTable 同时使用，因为矛盾没有意义，关联关系不在这里面维护。"
 				}
 			]
 		},
@@ -724,7 +611,8 @@
 			"ID": "20210707235333-y4evk4e",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-y4evk4e"
+				"id": "20210707235333-y4evk4e",
+				"updated": "20210707235333"
 			},
 			"Children": [
 				{
@@ -733,6 +621,7 @@
 				},
 				{
 					"Type": "NodeStrong",
+					"Data": "strong",
 					"Children": [
 						{
 							"Type": "NodeStrongA6kOpenMarker",
@@ -754,6 +643,7 @@
 				},
 				{
 					"Type": "NodeStrong",
+					"Data": "strong",
 					"Children": [
 						{
 							"Type": "NodeStrongA6kOpenMarker",
@@ -775,6 +665,7 @@
 				},
 				{
 					"Type": "NodeStrong",
+					"Data": "strong",
 					"Children": [
 						{
 							"Type": "NodeStrongA6kOpenMarker",
@@ -797,33 +688,65 @@
 			]
 		},
 		{
+			"ID": "20210919004825-p0n4kfh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210919004825-p0n4kfh",
+				"updated": "20210919004825"
+			}
+		},
+		{
+			"ID": "20210919005143-ksxxwj1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210919005143-ksxxwj1",
+				"updated": "20210919005143"
+			}
+		},
+		{
 			"ID": "20210707235333-y0br6t3",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
 			"Properties": {
-				"id": "20210707235333-y0br6t3"
+				"id": "20210707235333-y0br6t3",
+				"updated": "20210919005335"
 			},
 			"Children": [
 				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
 					"Type": "NodeText",
-					"Data": "CascadeType 用法"
+					"Data": "CascadeType 级联 🔥"
 				}
 			]
 		},
 		{
-			"ID": "20210707235333-szzjeuo",
+			"ID": "20210919005449-kflvilk",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-szzjeuo"
+				"id": "20210919005449-kflvilk",
+				"updated": "20210919005636"
 			},
 			"Children": [
 				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "默认是没有级联操作的"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
 					"Type": "NodeText",
-					"Data": "在 CascadeType 的用法中，CascadeType 的枚举值只有五个，分别如下："
+					"Data": "，CascadeType 的枚举值只有五个，分别如下："
 				}
 			]
 		},
@@ -831,45 +754,68 @@
 			"ID": "20210707235333-7fw78ea",
 			"Type": "NodeList",
 			"ListData": {
-				"Typ": 1,
-				"Tight": true,
-				"Start": 1,
-				"Delimiter": 46,
-				"Padding": 3,
-				"Marker": "MQ==",
-				"Num": 1
+				"Typ": 1
 			},
 			"Properties": {
-				"id": "20210707235333-7fw78ea"
+				"id": "20210707235333-7fw78ea",
+				"updated": "20210919005441"
 			},
 			"Children": [
 				{
-					"ID": "20210707235333-3zdey32",
+					"ID": "20210919005256-ipcec59",
 					"Type": "NodeListItem",
-					"Data": "1",
 					"ListData": {
 						"Typ": 1,
-						"Tight": true,
-						"Start": 1,
 						"Delimiter": 46,
-						"Padding": 3,
-						"Marker": "MQ==",
+						"Marker": "MS4=",
 						"Num": 1
 					},
 					"Properties": {
-						"id": "20210707235333-3zdey32"
+						"id": "20210919005256-ipcec59",
+						"updated": "20210919005314"
+					},
+					"Children": [
+						{
+							"ID": "20210919005256-e4jwvgz",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210919005256-e4jwvgz",
+								"updated": "20210919005314"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "ALL 全选"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-3zdey32",
+					"Type": "NodeListItem",
+					"ListData": {
+						"Typ": 1,
+						"Delimiter": 46,
+						"Marker": "Mi4=",
+						"Num": 2
+					},
+					"Properties": {
+						"id": "20210707235333-3zdey32",
+						"updated": "20210919005316"
 					},
 					"Children": [
 						{
 							"ID": "20210707235333-wirjfb5",
 							"Type": "NodeParagraph",
 							"Properties": {
-								"id": "20210707235333-wirjfb5"
+								"id": "20210707235333-wirjfb5",
+								"updated": "20210919005316"
 							},
 							"Children": [
 								{
 									"Type": "NodeText",
-									"Data": "CascadeType.PERSIST 级联新建"
+									"Data": "PERSIST 级联新建"
 								}
 							]
 						}
@@ -878,30 +824,28 @@
 				{
 					"ID": "20210707235333-tmdi35i",
 					"Type": "NodeListItem",
-					"Data": "2",
 					"ListData": {
 						"Typ": 1,
-						"Tight": true,
-						"Start": 2,
 						"Delimiter": 46,
-						"Padding": 3,
-						"Marker": "Mg==",
-						"Num": 2
+						"Marker": "My4=",
+						"Num": 3
 					},
 					"Properties": {
-						"id": "20210707235333-tmdi35i"
+						"id": "20210707235333-tmdi35i",
+						"updated": "20210919005318"
 					},
 					"Children": [
 						{
 							"ID": "20210707235333-8vcir31",
 							"Type": "NodeParagraph",
 							"Properties": {
-								"id": "20210707235333-8vcir31"
+								"id": "20210707235333-8vcir31",
+								"updated": "20210919005318"
 							},
 							"Children": [
 								{
 									"Type": "NodeText",
-									"Data": "CascadeType.REMOVE 级联删除"
+									"Data": "REMOVE 级联删除"
 								}
 							]
 						}
@@ -910,30 +854,28 @@
 				{
 					"ID": "20210707235333-uzrsabn",
 					"Type": "NodeListItem",
-					"Data": "3",
 					"ListData": {
 						"Typ": 1,
-						"Tight": true,
-						"Start": 3,
 						"Delimiter": 46,
-						"Padding": 3,
-						"Marker": "Mw==",
-						"Num": 3
+						"Marker": "NC4=",
+						"Num": 4
 					},
 					"Properties": {
-						"id": "20210707235333-uzrsabn"
+						"id": "20210707235333-uzrsabn",
+						"updated": "20210919005320"
 					},
 					"Children": [
 						{
 							"ID": "20210707235333-vyoscxx",
 							"Type": "NodeParagraph",
 							"Properties": {
-								"id": "20210707235333-vyoscxx"
+								"id": "20210707235333-vyoscxx",
+								"updated": "20210919005320"
 							},
 							"Children": [
 								{
 									"Type": "NodeText",
-									"Data": "CascadeType.REFRESH 级联刷新"
+									"Data": "REFRESH 级联刷新"
 								}
 							]
 						}
@@ -942,30 +884,28 @@
 				{
 					"ID": "20210707235333-4jeadii",
 					"Type": "NodeListItem",
-					"Data": "4",
 					"ListData": {
 						"Typ": 1,
-						"Tight": true,
-						"Start": 4,
 						"Delimiter": 46,
-						"Padding": 3,
-						"Marker": "NA==",
-						"Num": 4
+						"Marker": "NS4=",
+						"Num": 5
 					},
 					"Properties": {
-						"id": "20210707235333-4jeadii"
+						"id": "20210707235333-4jeadii",
+						"updated": "20210919005322"
 					},
 					"Children": [
 						{
 							"ID": "20210707235333-t2zpxj2",
 							"Type": "NodeParagraph",
 							"Properties": {
-								"id": "20210707235333-t2zpxj2"
+								"id": "20210707235333-t2zpxj2",
+								"updated": "20210919005322"
 							},
 							"Children": [
 								{
 									"Type": "NodeText",
-									"Data": "CascadeType.MERGE 级联更新"
+									"Data": "MERGE 级联更新"
 								}
 							]
 						}
@@ -974,30 +914,28 @@
 				{
 					"ID": "20210707235333-uy7wdre",
 					"Type": "NodeListItem",
-					"Data": "5",
 					"ListData": {
 						"Typ": 1,
-						"Tight": true,
-						"Start": 5,
 						"Delimiter": 46,
-						"Padding": 3,
-						"Marker": "NQ==",
-						"Num": 5
+						"Marker": "Ni4=",
+						"Num": 6
 					},
 					"Properties": {
-						"id": "20210707235333-uy7wdre"
+						"id": "20210707235333-uy7wdre",
+						"updated": "20210919005441"
 					},
 					"Children": [
 						{
 							"ID": "20210707235333-ae9rxpn",
 							"Type": "NodeParagraph",
 							"Properties": {
-								"id": "20210707235333-ae9rxpn"
+								"id": "20210707235333-ae9rxpn",
+								"updated": "20210919005441"
 							},
 							"Children": [
 								{
 									"Type": "NodeText",
-									"Data": "CascadeType.ALL 四项全选"
+									"Data": "DETACH 级联实体到 Detach 状态"
 								}
 							]
 						}
@@ -1006,36 +944,11 @@
 			]
 		},
 		{
-			"ID": "20210707235333-l0jkts9",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-l0jkts9"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "其中，默认是没有级联操作的，关系表不会产生任何影响。此外，JPA 2.0 还新增了 CascadeType.DETACH，即级联实体到 Detach 状态。"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-8vrxyo4",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-8vrxyo4"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "了解了枚举值，下面我们来测试一下级联新建和级联删除。"
-				}
-			]
-		},
-		{
 			"ID": "20210707235333-9o0f9go",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-9o0f9go"
+				"id": "20210707235333-9o0f9go",
+				"updated": "20210707235333"
 			},
 			"Children": [
 				{
@@ -1048,24 +961,23 @@
 			"ID": "20210707235333-2himik3",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-2himik3"
+				"id": "20210707235333-2himik3",
+				"updated": "20210707235333"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeSpan",
-					"CodeMarkerLen": 1,
+					"Data": "code",
 					"Children": [
 						{
-							"Type": "NodeCodeSpanOpenMarker",
-							"Data": "`"
+							"Type": "NodeCodeSpanOpenMarker"
 						},
 						{
 							"Type": "NodeCodeSpanContent",
 							"Data": "cascade ={CascadeType.PERSIST,CascadeType.REMOVE}"
 						},
 						{
-							"Type": "NodeCodeSpanCloseMarker",
-							"Data": "`"
+							"Type": "NodeCodeSpanCloseMarker"
 						}
 					]
 				}
@@ -1075,19 +987,14 @@
 			"ID": "20210707235333-dva10wa",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-dva10wa"
+				"id": "20210707235333-dva10wa",
+				"updated": "20210919010202"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker",
@@ -1095,12 +1002,11 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "@DataJpaTest\n// DataJpaTest、MybatisTest 会默认使用其测试数据源替代，若要使用自己配置的，需要添加如下注解\n@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)\npublic class One2OneTest {\n\n    @Autowired\n    private UserInfoRepository userInfoRepository;\n\n\n    @Test\n    @Rollback(false)\n    public void testUserRelationships() throws JsonProcessingException {\n        User user = User.builder().name(\"jackxx\").email(\"123456@126.com\").build();\n        UserInfo userInfo = UserInfo.builder().ages(12).user(user).telephone(\"12345678\").build();\n        //保存userInfo的同上也会保存User信息\n        userInfoRepository.saveAndFlush(userInfo);\n        //删除userInfo，同时也会级联的删除user记录\n        userInfoRepository.delete(userInfo);\n    }\n}\n"
+					"Data": "@DataJpaTest\n// DataJpaTest、MybatisTest 会默认使用其测试数据源替代，若要使用自己配置的，需要添加如下注解\n@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)\npublic class One2OneTest {\n\n    @Autowired\n    private UserInfoRepository userInfoRepository;\n\n\n    @Test\n    @Rollback(false)\n    public void testUserRelationships() throws JsonProcessingException {\n        User user = User.builder().name(\"conanan\").build();\n        UserInfo userInfo = UserInfo.builder().description(\"conanan的描述\").user(user).build();\n        //保存userInfo的同上也会保存User信息（先user、后userInfo）\n        userInfoRepository.saveAndFlush(userInfo);\n        //删除userInfo，同时也会级联的删除user记录\n        userInfoRepository.delete(userInfo);\n    }\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
 		},
@@ -1108,140 +1014,71 @@
 			"ID": "20210707235333-cepv6gk",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-cepv6gk"
+				"id": "20210707235333-cepv6gk",
+				"updated": "20210919010038"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "最后，运行一下看看效果。"
+					"Data": "运行日志如下"
 				}
 			]
 		},
 		{
-			"ID": "20210707235333-qozxgdh",
-			"Type": "NodeParagraph",
+			"ID": "20210919010039-82vc6vm",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
 			"Properties": {
-				"id": "20210707235333-qozxgdh"
+				"id": "20210919010039-82vc6vm",
+				"updated": "20210919010040"
 			},
 			"Children": [
 				{
-					"Type": "NodeImage",
-					"Children": [
-						{
-							"Type": "NodeBang",
-							"Data": "!"
-						},
-						{
-							"Type": "NodeOpenBracket",
-							"Data": "["
-						},
-						{
-							"Type": "NodeLinkText",
-							"Data": "img"
-						},
-						{
-							"Type": "NodeCloseBracket",
-							"Data": "]"
-						},
-						{
-							"Type": "NodeOpenParen",
-							"Data": "("
-						},
-						{
-							"Type": "NodeLinkDest",
-							"Data": "./assets/CgqCHl9xtbmAP4vcAAEKnyVM6Ig708.png"
-						},
-						{
-							"Type": "NodeCloseParen",
-							"Data": ")"
-						}
-					]
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "Hibernate: insert into user (name) values (?)\nHibernate: insert into user_info (description, user_id) values (?, ?)\nHibernate: delete from user_info where id=?\nHibernate: delete from user where id=?"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
 				}
 			]
 		},
 		{
-			"ID": "20210707235333-xpmt7jx",
+			"ID": "20210919010115-pfula87",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-xpmt7jx"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "上面的测试在执行了 insert 的时候，会执行两条 insert 的 sql 和两条 delete 的 sql，这就体现出了 CascadeType.PERSIST 和 CascadeType.REMOVE 的作用。"
-				}
-			]
+				"id": "20210919010115-pfula87",
+				"updated": "20210919010115"
+			}
 		},
 		{
-			"ID": "20210707235333-6jss7vy",
+			"ID": "20210919010539-ps3vqw9",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-6jss7vy"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "上面讲了"
-				},
-				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "级联删除"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "的场景，下面我们再说一下"
-				},
-				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "关联关系的删除场景"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "该怎么做。"
-				}
-			]
+				"id": "20210919010539-ps3vqw9",
+				"updated": "20210919010539"
+			}
 		},
 		{
 			"ID": "20210707235333-9ry53an",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
 			"Properties": {
-				"id": "20210707235333-9ry53an"
+				"id": "20210707235333-9ry53an",
+				"updated": "20210919010118"
 			},
 			"Children": [
 				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
 					"Type": "NodeText",
-					"Data": "orphanRemoval 属性用法"
+					"Data": "orphanRemoval 关联关系删除后变化 🔥"
 				}
 			]
 		},
@@ -1249,11 +1086,17 @@
 			"ID": "20210707235333-nbobud6",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-nbobud6"
+				"id": "20210707235333-nbobud6",
+				"updated": "20210919010553"
 			},
 			"Children": [
 				{
+					"Type": "NodeText",
+					"Data": "orphanRemoval 表示"
+				},
+				{
 					"Type": "NodeStrong",
+					"Data": "strong",
 					"Children": [
 						{
 							"Type": "NodeStrongA6kOpenMarker",
@@ -1261,7 +1104,7 @@
 						},
 						{
 							"Type": "NodeText",
-							"Data": "orphanRemoval 表示当关联关系被删除"
+							"Data": "当关联关系被删除"
 						},
 						{
 							"Type": "NodeStrongA6kCloseMarker",
@@ -1275,6 +1118,7 @@
 				},
 				{
 					"Type": "NodeStrong",
+					"Data": "strong",
 					"Children": [
 						{
 							"Type": "NodeStrongA6kOpenMarker",
@@ -1292,7 +1136,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "，默认 false。什么意思呢？测试一下你就会明白。"
+					"Data": "，默认 false。"
 				}
 			]
 		},
@@ -1300,12 +1144,13 @@
 			"ID": "20210707235333-8gfjh3t",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-8gfjh3t"
+				"id": "20210707235333-8gfjh3t",
+				"updated": "20210919010701"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "首先，还沿用上面的例子，当我们删除 userInfo 的时候，把 User 置空，作如下改动。"
+					"Data": "首先，还沿用上面的例子，当我们删除 userInfo 的时候，先把 userInfo 中的 User 置为 null，如下："
 				}
 			]
 		},
@@ -1313,19 +1158,14 @@
 			"ID": "20210707235333-y20ac0i",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-y20ac0i"
+				"id": "20210707235333-y20ac0i",
+				"updated": "20210707235333"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker",
@@ -1337,8 +1177,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
 		},
@@ -1346,7 +1185,8 @@
 			"ID": "20210707235333-chz4tsi",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-chz4tsi"
+				"id": "20210707235333-chz4tsi",
+				"updated": "20210707235333"
 			},
 			"Children": [
 				{
@@ -1359,18 +1199,14 @@
 			"ID": "20210707235333-9bm9dsu",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-9bm9dsu"
+				"id": "20210707235333-9bm9dsu",
+				"updated": "20210707235333"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker"
@@ -1381,8 +1217,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
 		},
@@ -1390,7 +1225,8 @@
 			"ID": "20210707235333-48er9y5",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-48er9y5"
+				"id": "20210707235333-48er9y5",
+				"updated": "20210707235333"
 			},
 			"Children": [
 				{
@@ -1403,19 +1239,14 @@
 			"ID": "20210707235333-hiyv6b6",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-hiyv6b6"
+				"id": "20210707235333-hiyv6b6",
+				"updated": "20210707235333"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker",
@@ -1427,8 +1258,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
 		},
@@ -1436,7 +1266,8 @@
 			"ID": "20210707235333-oi2vvwx",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-oi2vvwx"
+				"id": "20210707235333-oi2vvwx",
+				"updated": "20210707235333"
 			},
 			"Children": [
 				{
@@ -1449,19 +1280,14 @@
 			"ID": "20210707235333-xysrums",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-xysrums"
+				"id": "20210707235333-xysrums",
+				"updated": "20210919011243"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker",
@@ -1469,12 +1295,11 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "    @Test\n    public void testUserRelationships() throws JsonProcessingException {\n        User user = User.builder().name(\"jackxx\").email(\"123456@126.com\").build();\n        UserInfo userInfo = UserInfo.builder().ages(12).user(user).telephone(\"12345678\").build();\n        userInfoRepository.saveAndFlush(userInfo);\n        userInfo.setAges(13);\n        userInfo.setUser(null);//还是通过这个设置user数据为空\n        userInfoRepository.delete(userInfo);\n}\n"
+					"Data": "@DataJpaTest\n// DataJpaTest、MybatisTest 会默认使用其测试数据源替代，若要使用自己配置的，需要添加如下注解\n@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)\npublic class One2OneTest {\n\n    @Autowired\n    private UserRepository userRepository;\n    @Autowired\n    private UserInfoRepository userInfoRepository;\n\n    @Test\n    @Rollback(false)\n    public void testUserRelationships() {\n        User user = User.builder().name(\"conanan\").build();\n        UserInfo userInfo = UserInfo.builder().description(\"conanan的描述\").user(user).build();\n\n        // 保存userInfo的同上也会保存User信息\n        userInfoRepository.saveAndFlush(userInfo);\n\n        userInfo.setUser(null);\n        // 删除userInfo，同时也会级联的删除user记录\n        userInfoRepository.delete(userInfo);\n    }\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
 		},
@@ -1482,7 +1307,8 @@
 			"ID": "20210707235333-3ojfkxq",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-3ojfkxq"
+				"id": "20210707235333-3ojfkxq",
+				"updated": "20210707235333"
 			},
 			"Children": [
 				{
@@ -1492,44 +1318,29 @@
 			]
 		},
 		{
-			"ID": "20210707235333-yz30kk4",
-			"Type": "NodeParagraph",
+			"ID": "20210919010849-t249evf",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
 			"Properties": {
-				"id": "20210707235333-yz30kk4"
+				"id": "20210919010849-t249evf",
+				"updated": "20210919010852"
 			},
 			"Children": [
 				{
-					"Type": "NodeImage",
-					"Children": [
-						{
-							"Type": "NodeBang",
-							"Data": "!"
-						},
-						{
-							"Type": "NodeOpenBracket",
-							"Data": "["
-						},
-						{
-							"Type": "NodeLinkText",
-							"Data": "img"
-						},
-						{
-							"Type": "NodeCloseBracket",
-							"Data": "]"
-						},
-						{
-							"Type": "NodeOpenParen",
-							"Data": "("
-						},
-						{
-							"Type": "NodeLinkDest",
-							"Data": "./assets/CgqCHl9xthOAHALuAAFaT_9YXuM848.png"
-						},
-						{
-							"Type": "NodeCloseParen",
-							"Data": ")"
-						}
-					]
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "Hibernate: insert into user (name) values (?)\nHibernate: insert into user_info (description, user_id) values (?, ?)\n\nHibernate: update user_info set description=?, user_id=? where id=?\nHibernate: delete from user where id=?\nHibernate: delete from user_info where id=?\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
 				}
 			]
 		},
@@ -1537,12 +1348,13 @@
 			"ID": "20210707235333-kaji64h",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-kaji64h"
+				"id": "20210707235333-kaji64h",
+				"updated": "20210919011030"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "可以看到，结果依然是两个 inser 和两个 delete，但是中间多了一个 update。我来解释一下，因为去掉了 CascadeType.REMOVE，这个时候不会进行级联删除了。当我们把 user 对象更新成空的时候，就会执行一条 update 语句把关联关系去掉了。"
+					"Data": "结果依然是两个 inser 和两个 delete，但是中间多了一个 update。因为去掉了 CascadeType.REMOVE，这个时候不会进行级联删除了（即使加上也无妨，结果还是一样的）。当我们把 user 对象更新成空的时候，就会执行一条 update 语句把关联关系去掉了。"
 				}
 			]
 		},
@@ -1550,12 +1362,13 @@
 			"ID": "20210707235333-cp4aorr",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-cp4aorr"
+				"id": "20210707235333-cp4aorr",
+				"updated": "20210919011050"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "而为什么又出现了级联删除 user 呢？因为我们修改了集合关联关系，orphanRemoval 设置为 true，所以又执行了级联删除的操作。这一点你可以仔细体会一下 orphanRemoval 和 CascadeType.REMOVE 的区别。"
+					"Data": "而为什么又出现了级联删除 user 呢？因为我们修改了集合关联关系，orphanRemoval 设置为 true，所以又执行了级联删除的操作。"
 				}
 			]
 		},
@@ -1563,30 +1376,22 @@
 			"ID": "20210707235333-shedosv",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-shedosv"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "到这里，@OneToOne 关联关系介绍完了，接下来我们看一下日常工作常见的场景，先看场景一：主键和外键都是同一个字段的情况。"
-				}
-			]
+				"id": "20210707235333-shedosv",
+				"updated": "20210919011053"
+			}
 		},
 		{
 			"ID": "20210707235333-vgtd5s5",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
 			"Properties": {
-				"id": "20210707235333-vgtd5s5"
+				"id": "20210707235333-vgtd5s5",
+				"updated": "20210919011349"
 			},
 			"Children": [
 				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
 					"Type": "NodeText",
-					"Data": "主键和外键都是同一个字段"
+					"Data": "主键和外键都是同一个字段（如1对1中从表） 🔥"
 				}
 			]
 		},
@@ -1594,7 +1399,8 @@
 			"ID": "20210707235333-k1t8vm8",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-k1t8vm8"
+				"id": "20210707235333-k1t8vm8",
+				"updated": "20210707235333"
 			},
 			"Children": [
 				{
@@ -1607,12 +1413,13 @@
 			"ID": "20210707235333-gnsjvd5",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-gnsjvd5"
+				"id": "20210707235333-gnsjvd5",
+				"updated": "20210920000301"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "继续沿用上面的例子，User 实体不变，我们看看 UserInfo 变成什么样了。"
+					"Data": "继续沿用上面的例子，User 实体不变，UserInfo 如下："
 				}
 			]
 		},
@@ -1620,19 +1427,14 @@
 			"ID": "20210707235333-c2ndrx2",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-c2ndrx2"
+				"id": "20210707235333-c2ndrx2",
+				"updated": "20210919235746"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker",
@@ -1640,12 +1442,11 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "public class UserInfo implements Serializable {\n   @Id\n   private Long userId;\n   private Integer ages;\n   private String telephone;\n   @MapsId\n   @OneToOne(cascade = {CascadeType.PERSIST},orphanRemoval = true)\n   private User user;\n}\n"
+					"Data": "public class UserInfo implements Serializable {\n   @Id\n   private Long userId;\n   private String description;\n   @MapsId\n   @OneToOne\n   @JoinColumn(name = \"userId\")// 不使用@JoinColumn指定外键名，则外键名默认为userId（自动驼峰转换）\n   private User user;\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
 		},
@@ -1653,15 +1454,27 @@
 			"ID": "20210707235333-k9s7r4u",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-k9s7r4u"
+				"id": "20210707235333-k9s7r4u",
+				"updated": "20210919235355"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "这里的做法很简单，我们直接把 userId 设置为主键，在 @OneToOne 上面添加 @MapsId 注解即可。"
-				},
+					"Data": "直接把 userId 设置为主键（去掉自动生成），在 @OneToOne 上面添加 @MapsId 注解即可。"
+				}
+			]
+		},
+		{
+			"ID": "20210919235400-bv15z4g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210919235400-bv15z4g",
+				"updated": "20210919235459"
+			},
+			"Children": [
 				{
 					"Type": "NodeStrong",
+					"Data": "strong",
 					"Children": [
 						{
 							"Type": "NodeStrongA6kOpenMarker",
@@ -1669,7 +1482,7 @@
 						},
 						{
 							"Type": "NodeText",
-							"Data": "@MapsId 注解的作用是把关联关系实体里面的 ID（默认）值 copy 到 @MapsId 标注的字段上面"
+							"Data": "@MapsId 注解的作用是把所关联主实体里面的 ID（默认，可指定其他）值 COPY 到 @MapsId 标注的实体中 @Id 注解字段中"
 						},
 						{
 							"Type": "NodeStrongA6kCloseMarker",
@@ -1679,7 +1492,7 @@
 				},
 				{
 					"Type": "NodeText",
-					"Data": "（这里指的是 user_id 字段）。"
+					"Data": "（这里指的是 userId 字段）"
 				}
 			]
 		},
@@ -1687,7 +1500,8 @@
 			"ID": "20210707235333-9ri5pib",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-9ri5pib"
+				"id": "20210707235333-9ri5pib",
+				"updated": "20210707235333"
 			},
 			"Children": [
 				{
@@ -1700,19 +1514,14 @@
 			"ID": "20210707235333-bs1g10u",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "c3Fs",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-bs1g10u"
+				"id": "20210707235333-bs1g10u",
+				"updated": "20210919235641"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker",
@@ -1720,12 +1529,11 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "create table user (id bigint not null, address varchar(255), email varchar(255), name varchar(255), sex varchar(255), primary key (id))\ncreate table user_info (ages integer, telephone varchar(255), user_id bigint not null, primary key (user_id))\nalter table user_info add constraint FKn8pl63y4abe7n0ls6topbqjh2 foreign key (user_id) references user\n"
+					"Data": "Hibernate: create table user (id bigint not null auto_increment, name varchar(255), primary key (id)) engine=InnoDB\nHibernate: create table user_info (user_id bigint not null, description varchar(255), primary key (user_id)) engine=InnoDB\nHibernate: alter table user_info add constraint FKn8pl63y4abe7n0ls6topbqjh2 foreign key (user_id) references user (id)\n\nHibernate: insert into user (name) values (?)\nHibernate: insert into user_info (description, user_id) values (?, ?)\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
 		},
@@ -1733,76 +1541,80 @@
 			"ID": "20210707235333-07l3sld",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-07l3sld"
+				"id": "20210707235333-07l3sld",
+				"updated": "20210919235659"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "在启动的时候，我们直接创建了 user 表和 user_info 表，其中 user_info 的主键是 user_id，并且通过外键关联到了 user 表的 ID 字段，那么我们同时看一下 inser 的 sql，也发生了变化。"
+					"Data": "在启动的时候，创建了 user 表和 user_info 表，其中 user_info 的主键是 user_id，并且通过外键关联到了 user 表的 ID 字段，insert 的 sql，也发生了变化。"
 				}
 			]
 		},
 		{
-			"ID": "20210707235333-mnh04hh",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "c3Fs",
-			"CodeBlockCloseFence": "YGBg",
-			"Properties": {
-				"id": "20210707235333-mnh04hh"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "c3Fs"
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "insert into user (address, email, name, sex, id) values (?, ?, ?, ?, ?)\ninsert into user_info (ages, telephone, user_id) values (?, ?, ?)\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-dn0zk1h",
+			"ID": "20210919004945-8cb91r1",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-dn0zk1h"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "上面就是我们讲的实战场景一，主键和外键都是同一个字段。接下来我们再说一个场景，就是在查 user_info 的时候，我们只想知道 user_id 的值就行了，不需要查 user 的其他信息，具体我们应该怎么做呢？"
-				}
-			]
+				"id": "20210919004945-8cb91r1",
+				"updated": "20210919004945"
+			}
+		},
+		{
+			"ID": "20210919011649-rxzxko7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210919011649-rxzxko7",
+				"updated": "20210919011649"
+			}
 		},
 		{
 			"ID": "20210707235333-et8dw7l",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
 			"Properties": {
-				"id": "20210707235333-et8dw7l"
+				"id": "20210707235333-et8dw7l",
+				"updated": "20210919234933"
 			},
 			"Children": [
 				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
+					"Type": "NodeText",
+					"Data": "LAZY 延迟加载（只需要关联的 ID 值） 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210919011659-qi98z5z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210919011659-qi98z5z",
+				"updated": "20210920004438"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "但是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "序列化时会触发加载"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
 				},
 				{
 					"Type": "NodeText",
-					"Data": "@OneToOne 延迟加载，我们只需要 ID 值"
+					"Data": "，所以这个延迟加载也就无效了。IDEA也无法测试出来！"
 				}
 			]
 		},
@@ -1810,7 +1622,8 @@
 			"ID": "20210707235333-8kevhk9",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-8kevhk9"
+				"id": "20210707235333-8kevhk9",
+				"updated": "20210707235333"
 			},
 			"Children": [
 				{
@@ -1823,12 +1636,13 @@
 			"ID": "20210707235333-zrnz0lx",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-zrnz0lx"
+				"id": "20210707235333-zrnz0lx",
+				"updated": "20210920003229"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "第一种做法：还是 User 实体不变，我们改一下 UserInfo 对象，如下所示："
+					"Data": "第一种做法：修改 User 对象即可"
 				}
 			]
 		},
@@ -1836,19 +1650,14 @@
 			"ID": "20210707235333-ay7fj05",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-ay7fj05"
+				"id": "20210707235333-ay7fj05",
+				"updated": "20210920003322"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker",
@@ -1856,144 +1665,11 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "@Entity\n@Data\n@Builder\n@AllArgsConstructor\n@NoArgsConstructor\n@ToString(exclude = \"user\")\npublic class UserInfo{\n   @Id\n   @GeneratedValue(strategy= GenerationType.AUTO)\n   private Long id;\n   private Integer ages;\n   private String telephone;\n   @MapsId\n   @OneToOne(cascade = {CascadeType.PERSIST},orphanRemoval = true,fetch = FetchType.LAZY)\n   private User user;\n}\n"
+					"Data": "@Entity\n@Data\n@Builder\n@AllArgsConstructor\n@NoArgsConstructor\npublic class User {\n    @Id\n    @GeneratedValue(strategy= GenerationType.IDENTITY)\n    private Long id;\n    private String name;\n\n\n    @OneToOne(mappedBy = \"user\", fetch = FetchType.LAZY)// OneToOne默认为 EAGER\n    private UserInfo userInfo;\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-87q91e5",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-87q91e5"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "从上面这段代码中，可以看到做的更改如下："
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-vfwymol",
-			"Type": "NodeList",
-			"ListData": {
-				"Tight": true,
-				"BulletChar": 45,
-				"Padding": 2,
-				"Marker": "LQ==",
-				"Num": -1
-			},
-			"Properties": {
-				"id": "20210707235333-vfwymol"
-			},
-			"Children": [
-				{
-					"ID": "20210707235333-ggi3oru",
-					"Type": "NodeListItem",
-					"Data": "-",
-					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
-					},
-					"Properties": {
-						"id": "20210707235333-ggi3oru"
-					},
-					"Children": [
-						{
-							"ID": "20210707235333-d4y0jde",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707235333-d4y0jde"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "id 字段我们先用原来的"
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210707235333-xk5dn8o",
-					"Type": "NodeListItem",
-					"Data": "-",
-					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
-					},
-					"Properties": {
-						"id": "20210707235333-xk5dn8o"
-					},
-					"Children": [
-						{
-							"ID": "20210707235333-nsyriaq",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707235333-nsyriaq"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "@OneToOne 上面我们添加 @MapsId 注解"
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210707235333-xfwyy1e",
-					"Type": "NodeListItem",
-					"Data": "-",
-					"ListData": {
-						"Tight": true,
-						"BulletChar": 45,
-						"Padding": 2,
-						"Marker": "LQ==",
-						"Num": -1
-					},
-					"Properties": {
-						"id": "20210707235333-xfwyy1e"
-					},
-					"Children": [
-						{
-							"ID": "20210707235333-zlormj2",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707235333-zlormj2"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "@OneToOne 里面的 fetch = FetchType.LAZY 设置延迟加载（默认）"
-								}
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-196h6dx",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-196h6dx"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "接着，我们改造一下测试类，完整代码如下："
+					"Data": "```"
 				}
 			]
 		},
@@ -2001,19 +1677,14 @@
 			"ID": "20210707235333-dldtocs",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-dldtocs"
+				"id": "20210707235333-dldtocs",
+				"updated": "20210920003426"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker",
@@ -2021,12 +1692,11 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "@DataJpaTest\n@TestInstance(TestInstance.Lifecycle.PER_CLASS)\npublic class UserInfoRepositoryTest {\n    @Autowired\n    private UserInfoRepository userInfoRepository;\n    @BeforeAll\n    @Rollback(false)\n    @Transactional\n    void init() {\n        User user = User.builder().name(\"jackxx\").email(\"123456@126.com\").build();\n        UserInfo userInfo = UserInfo.builder().ages(12).user(user).telephone(\"12345678\").build();\n        userInfoRepository.saveAndFlush(userInfo);\n    }\n    /**\n     * 测试用User关联关系操作\n     *\n     * @throws JsonProcessingException\n     */\n    @Test\n    @Rollback(false)\n    public void testUserRelationships() throws JsonProcessingException {\n        UserInfo userInfo1 = userInfoRepository.getOne(1L);\n        System.out.println(userInfo1);\n        System.out.println(userInfo1.getUser().getId());\n}\n"
+					"Data": "@DataJpaTest\n@TestInstance(TestInstance.Lifecycle.PER_CLASS)\npublic class UserInfoRepositoryTest {\n    @Autowired\n    private UserRepository userRepository;\n    @Autowired\n    private UserInfoRepository userInfoRepository;\n  \n    @BeforeEach\n    @Rollback(false)\n    @Transactional\n    void init() {\n        User user = User.builder().name(\"conanan\").build();\n        UserInfo userInfo = UserInfo.builder().description(\"conanan的描述\").user(user).build();\n        // 保存userInfo的同上也会保存User信息\n        userInfoRepository.saveAndFlush(userInfo);\n    }\n\n    @Test\n    @Rollback(false)\n    public void testUserRelationships() throws JsonProcessingException {\n        User one = userRepository.getOne(1L);\n        System.out.println(one);\n        System.out.println(one.getUserInfo().getUserId());\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
 		},
@@ -2034,7 +1704,8 @@
 			"ID": "20210707235333-1xd0fzn",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-1xd0fzn"
+				"id": "20210707235333-1xd0fzn",
+				"updated": "20210707235333"
 			},
 			"Children": [
 				{
@@ -2047,19 +1718,14 @@
 			"ID": "20210707235333-i75wdu9",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "c3Fs",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-i75wdu9"
+				"id": "20210707235333-i75wdu9",
+				"updated": "20210920004509"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker",
@@ -2067,12 +1733,11 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "insert into user (address, email, name, sex, id) values (?, ?, ?, ?, ?)\ninsert into user (address, email, name, sex, id) values (?, ?, ?, ?, ?)\n\n-- 两条inser照旧，而只有一个select\nselect userinfo0_.user_id as user_id3_6_0_, userinfo0_.ages as ages1_6_0_, userinfo0_.telephone as telephon2_6_0_ from user_info userinfo0_ where userinfo0_.user_id=?\n"
+					"Data": "insert into user (address, email, name, sex, id) values (?, ?, ?, ?, ?)\ninsert into user (address, email, name, sex, id) values (?, ?, ?, ?, ?)\n\n-- 两条inser照旧，而只有一个select\nHibernate: select user0_.id as id1_8_0_, user0_.name as name2_8_0_ from user user0_ where user0_.id=?\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
 		},
@@ -2080,7 +1745,8 @@
 			"ID": "20210707235333-7jb0rbm",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-7jb0rbm"
+				"id": "20210707235333-7jb0rbm",
+				"updated": "20210707235333"
 			},
 			"Children": [
 				{
@@ -2093,30 +1759,26 @@
 			"ID": "20210707235333-p430ymk",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-p430ymk"
+				"id": "20210707235333-p430ymk",
+				"updated": "20210920004542"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
-					"Type": "NodeCodeBlockFenceInfoMarker"
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "UserInfo(id=1, ages=12, telephone=12345678)\n1\n"
+					"Data": "User(id=1, name=conanan)\n1\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
 		},
@@ -2124,12 +1786,13 @@
 			"ID": "20210707235333-w78sf7i",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-w78sf7i"
+				"id": "20210707235333-w78sf7i",
+				"updated": "20210920003822"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "接下来介绍第二种做法，这种做法很简单，只要在 UserInfo 对象里面直接去掉 @OneToOne 关联关系，新增下面的字段即可。"
+					"Data": "第二种做法，这种做法很简单，但是是查询 UserInfo！只要在 UserInfo 对象里面直接去掉 @OneToOne 关联关系，新增下面的字段即可。"
 				}
 			]
 		},
@@ -2137,19 +1800,14 @@
 			"ID": "20210707235333-bk1xng0",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707235333-bk1xng0"
+				"id": "20210707235333-bk1xng0",
+				"updated": "20210707235333"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker",
@@ -2161,8 +1819,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
 		},
@@ -2170,7 +1827,8 @@
 			"ID": "20210707235333-jl49fi3",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-jl49fi3"
+				"id": "20210707235333-jl49fi3",
+				"updated": "20210707235333"
 			},
 			"Children": [
 				{
@@ -2183,12 +1841,13 @@
 			"ID": "20210707235333-66kj54m",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-66kj54m"
+				"id": "20210707235333-66kj54m",
+				"updated": "20210920000506"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "第三做法是利用 Hibernate，它给我们提供了一种字节码增强技术，通过编译器改变 class 解决了延迟加载问题。这种方式有点复杂，需要在编译器引入 hibernateEnhance 的相关 jar 包，以及编译器需要改变 class 文件并添加 lazy 代理来解决延迟加载。我不太推荐这种方式，因为太复杂，你知道有这回事就行了。"
+					"Data": "第三做法是利用 Hibernate，它给我们提供了一种字节码增强技术，通过编译器改变 class 解决了延迟加载问题。这种方式有点复杂，需要在编译器引入 hibernateEnhance 的相关 jar 包，以及编译器需要改变 class 文件并添加 lazy 代理来解决延迟加载。因为太复杂，知道有这回事即可。"
 				}
 			]
 		},
@@ -2196,14 +1855,504 @@
 			"ID": "20210707235333-r5sj89e",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-r5sj89e"
+				"id": "20210707235333-r5sj89e",
+				"updated": "20210920000454"
+			}
+		},
+		{
+			"ID": "20210919011649-wwtt447",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210919011649-wwtt447",
+				"updated": "20210919011649"
+			}
+		},
+		{
+			"ID": "20210707235333-ho1wm79",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-ho1wm79",
+				"updated": "20210920004710"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "以上我们掌握了这么多用法，那么最佳实践是什么？双向关联更好还是单向关联更好？根据最近几年的应用，我总结出了一些最佳实践，我们来看一下。"
+					"Data": "@JoinCloumns \u0026 JoinColumn（外键）🔥"
 				}
 			]
+		},
+		{
+			"ID": "20210707235333-rnlrlw6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-rnlrlw6",
+				"updated": "20210920004719"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这两个注解是集合关系，他们可以同时使用，@JoinColumn 表示单字段，@JoinCloumns 表示多个 @JoinColumn"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-crszyly",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-crszyly",
+				"updated": "20210920004729"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "@JoinColumn 源码："
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-0zt49hw",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-0zt49hw",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public @interface JoinColumn {\n    //关键的字段名,默认注解上的字段名，在@OneToOne代表本表的外键字段名字；\n    String name() default \"\";\n    //与name相反关联对象的字段，默认主键字段\n    String referencedColumnName() default \"\";\n    //外键字段是否唯一\n    boolean unique() default false;\n    //外键字段是否允许为空\n    boolean nullable() default true;\n    //是否跟随一起新增\n    boolean insertable() default true;\n    //是否跟随一起更新\n    boolean updatable() default true;\n    //JPA2.1新增，外键策略\n    ForeignKey foreignKey() default @ForeignKey(PROVIDER_DEFAULT);\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-h6savz1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-h6savz1",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其次，我们看一下 @ForeignKey(PROVIDER_DEFAULT) 里面枚举值有几个。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-72z41dm",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-72z41dm",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public enum ConstraintMode {\n    //创建外键约束\n   CONSTRAINT,\n    //不创建外键约束\n   NO_CONSTRAINT,\n   //采用默认行为\n   PROVIDER_DEFAULT\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-eaj3hpb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-eaj3hpb",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "然后，我们看看这个注解的语法，就可以解答我们上面的两个问题。修改一下 UserInfo，如下所示："
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-ljl44og",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-ljl44og",
+				"updated": "20210922232602"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public class UserInfo{\n    @Id\n    @GeneratedValue(strategy= GenerationType.AUTO)\n    private Long id;\n    private String description;\n    @OneToOne(cascade = {CascadeType.PERSIST},orphanRemoval = true,fetch = FetchType.LAZY)\n    @JoinColumn(foreignKey = @ForeignKey(ConstraintMode.NO_CONSTRAINT),name = \"my_user_id\")\n    private User user;\n    //...其他不变\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-cblw2zm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-cblw2zm",
+				"updated": "20210922232623"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "可以看到，我们在其中指定了字段的名字：my_user_id，并且指定 NO_CONSTRAINT 不生成外键。而测试用例不变，我们看下运行结果。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-c3nwvvc",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-c3nwvvc",
+				"updated": "20210922232641"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "create table user (id bigint not null, name varchar(255), sex varchar(255), primary key (id))\ncreate table user_info (id bigint not null, description varchar(255), my_user_id bigint, primary key (id))\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-djo3un6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-djo3un6",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这时我们看到 user_info 表里面新增了一个字段 my_user_id，insert 的时候也能正确 inser my_user_id 的值等于 user.id。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-lwc7lmf",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-lwc7lmf",
+				"updated": "20210922232704"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "insert into user_info (description, my_user_id, id) values (?, ?, ?)\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-hepsij4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-hepsij4",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "而 @JoinColumns 是 JoinColumns 的复数形式，就是通过两个字段进行的外键关联，这个不常用，我们看一个 demo 了解一下就好。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-5olatrl",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-5olatrl",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Entity\npublic class CompanyOffice {\n   @ManyToOne(fetch = FetchType.LAZY)\n   @JoinColumns({\n         @JoinColumn(name=\"ADDR_ID\", referencedColumnName=\"ID\"),\n         @JoinColumn(name=\"ADDR_ZIP\", referencedColumnName=\"ZIP\")\n   })\n   private Address address;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-grpidiz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-grpidiz",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "上面的实例中，CompanyOffice 通过 ADDR_ID 和 ADDR_ZIP 两个字段对应一条 address 信息，解释了一下@JoinColumns 的用法。"
+				}
+			]
+		},
+		{
+			"ID": "20210920004659-sl5nne4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210920004659-sl5nne4",
+				"updated": "20210920004659"
+			}
+		},
+		{
+			"ID": "20210919004945-99wj3wq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210919004945-99wj3wq",
+				"updated": "20210919004945"
+			}
+		},
+		{
+			"ID": "20210707235333-gcp017c",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-gcp017c",
+				"updated": "20210919004635"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "单向关联（无内存泄露但无法自动主表关联）🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-tacemi5",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-tacemi5",
+				"updated": "20210919004320"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Entity\n@Data\n@Builder\n@AllArgsConstructor\n@NoArgsConstructor\npublic class User {\n    @Id\n    @GeneratedValue(strategy= GenerationType.IDENTITY)\n    private Long id;\n    private String name;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-k3avfkn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-k3avfkn"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "User 实体里面什么都没变化，不需要添加 @OneToOne 注解。我们只需要在拥有外键的一方配置就可以，所以 UserInfo 的代码如下："
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-9ivh1dr",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-9ivh1dr",
+				"updated": "20210919004329"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Entity\n@Data\n@Builder\n@AllArgsConstructor\n@NoArgsConstructor\n@ToString(exclude = \"user\")\npublic class UserInfo {\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long id;\n    private String description;\n\n    @OneToOne\n    @JoinColumn(name = \"userId\")// 不使用@JoinColumn指定外键名，则外键名默认为userId（自动驼峰转换）\n    private User user;\n}"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-od1vltz",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-od1vltz",
+				"updated": "20210919004520"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@DataJpaTest\n// DataJpaTest、MybatisTest 会默认使用其测试数据源替代，若要使用自己配置的，需要添加如下注解\n@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)\npublic class One2OneTest {\n\n    @Autowired\n    private UserRepository userRepository;\n    @Autowired\n    private UserInfoRepository userInfoRepository;\n\n    @Test\n    @Rollback(false)\n    public void testUserRelationships() {\n        User user = User.builder().name(\"conanan\").build();\n        UserInfo userInfo = UserInfo.builder().description(\"conanan的描述\").user(user).build();\n\n        userRepository.save(user);\n        userInfoRepository.save(userInfo);\n    }\n}"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210919004351-7gr9f9h",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210919004351-7gr9f9h",
+				"updated": "20210919004357"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "代码日志如下"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-ks5eupd",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-ks5eupd",
+				"updated": "20210919004344"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "c3Fs"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "Hibernate: create table user (id bigint not null auto_increment, name varchar(255), primary key (id)) engine=InnoDB\nHibernate: create table user_info (id bigint not null, description varchar(255), user_id bigint, primary key (id)) engine=InnoDB\nHibernate: alter table user_info add constraint FKn8pl63y4abe7n0ls6topbqjh2 foreign key (user_id) references user (id)\n\nHibernate: insert into user (name) values (?)\nHibernate: insert into user_info (description, user_id) values (?, ?)"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-2nx6z1r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-2nx6z1r",
+				"updated": "20210919004531"
+			}
+		},
+		{
+			"ID": "20210919004106-ehnd6p2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210919004106-ehnd6p2",
+				"updated": "20210919004106"
+			}
+		},
+		{
+			"ID": "20210919004106-5k7d8km",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210919004106-5k7d8km",
+				"updated": "20210919004106"
+			}
+		},
+		{
+			"ID": "20210919004106-wcbk6rq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210919004106-wcbk6rq",
+				"updated": "20210919004106"
+			}
 		},
 		{
 			"ID": "20210707235333-xxy40ai",
@@ -2438,350 +2587,20 @@
 			]
 		},
 		{
-			"ID": "20210707235333-si04283",
+			"ID": "20210919001528-3oh87zw",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-si04283"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "以上三点是我总结的避坑指南，有经验的同学这时候会有个疑问：外键约束不是不推荐使用的吗？如果我的外键字段名不是约定的怎么办？别着急，我们再看一下 @JoinColumn 注解和 @JoinColumns 注解。"
-				}
-			]
+				"id": "20210919001528-3oh87zw",
+				"updated": "20210919001528"
+			}
 		},
 		{
-			"ID": "20210707235333-ho1wm79",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210707235333-ho1wm79"
-			},
-			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
-				{
-					"Type": "NodeText",
-					"Data": "@JoinCloumns \u0026 JoinColumn"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-rnlrlw6",
+			"ID": "20210919001529-0q1ka1t",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-rnlrlw6"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "这两个注解是集合关系，他们可以同时使用，@JoinColumn 表示单字段，@JoinCloumns 表示多个 @JoinColumn，我们来一一看一下。"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-crszyly",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-crszyly"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "我们还是先直接看一下 @JoinColumn 源码，了解下这一注解都有哪些配置项。"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-0zt49hw",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
-			"Properties": {
-				"id": "20210707235333-0zt49hw"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "amF2YQ=="
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "public @interface JoinColumn {\n    //关键的字段名,默认注解上的字段名，在@OneToOne代表本表的外键字段名字；\n    String name() default \"\";\n    //与name相反关联对象的字段，默认主键字段\n    String referencedColumnName() default \"\";\n    //外键字段是否唯一\n    boolean unique() default false;\n    //外键字段是否允许为空\n    boolean nullable() default true;\n    //是否跟随一起新增\n    boolean insertable() default true;\n    //是否跟随一起更新\n    boolean updatable() default true;\n    //JPA2.1新增，外键策略\n    ForeignKey foreignKey() default @ForeignKey(PROVIDER_DEFAULT);\n}\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-h6savz1",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-h6savz1"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "其次，我们看一下 @ForeignKey(PROVIDER_DEFAULT) 里面枚举值有几个。"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-72z41dm",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
-			"Properties": {
-				"id": "20210707235333-72z41dm"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "amF2YQ=="
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "public enum ConstraintMode {\n    //创建外键约束\n   CONSTRAINT,\n    //不创建外键约束\n   NO_CONSTRAINT,\n   //采用默认行为\n   PROVIDER_DEFAULT\n}\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-eaj3hpb",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-eaj3hpb"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "然后，我们看看这个注解的语法，就可以解答我们上面的两个问题。修改一下 UserInfo，如下所示："
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-ljl44og",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
-			"Properties": {
-				"id": "20210707235333-ljl44og"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "amF2YQ=="
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "public class UserInfo{\n    @Id\n    @GeneratedValue(strategy= GenerationType.AUTO)\n    private Long id;\n    private Integer ages;\n    private String telephone;\n    @OneToOne(cascade = {CascadeType.PERSIST},orphanRemoval = true,fetch = FetchType.LAZY)\n    @JoinColumn(foreignKey = @ForeignKey(ConstraintMode.NO_CONSTRAINT),name = \"my_user_id\")\n    private User user;\n    //...其他不变\n}\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-cblw2zm",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-cblw2zm"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "可以看到，我们在其中指定了字段的名字：my_user_id，并且指定 NO_CONSTRAINT 不生成外键。而测试用例不变，我们看下运行结果。"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-c3nwvvc",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "c3Fs",
-			"CodeBlockCloseFence": "YGBg",
-			"Properties": {
-				"id": "20210707235333-c3nwvvc"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "c3Fs"
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "create table user (id bigint not null, address varchar(255), email varchar(255), name varchar(255), sex varchar(255), primary key (id))\ncreate table user_info (id bigint not null, ages integer, telephone varchar(255), my_user_id bigint, primary key (id))\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-djo3un6",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-djo3un6"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "这时我们看到 user_info 表里面新增了一个字段 my_user_id，insert 的时候也能正确 inser my_user_id 的值等于 user.id。"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-lwc7lmf",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "c3Fs",
-			"CodeBlockCloseFence": "YGBg",
-			"Properties": {
-				"id": "20210707235333-lwc7lmf"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "c3Fs"
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "insert into user_info (ages, telephone, my_user_id, id) values (?, ?, ?, ?)\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-hepsij4",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-hepsij4"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "而 @JoinColumns 是 JoinColumns 的复数形式，就是通过两个字段进行的外键关联，这个不常用，我们看一个 demo 了解一下就好。"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-5olatrl",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
-			"Properties": {
-				"id": "20210707235333-5olatrl"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "amF2YQ=="
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "@Entity\npublic class CompanyOffice {\n   @ManyToOne(fetch = FetchType.LAZY)\n   @JoinColumns({\n         @JoinColumn(name=\"ADDR_ID\", referencedColumnName=\"ID\"),\n         @JoinColumn(name=\"ADDR_ZIP\", referencedColumnName=\"ZIP\")\n   })\n   private Address address;\n}\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-grpidiz",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-grpidiz"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "上面的实例中，CompanyOffice 通过 ADDR_ID 和 ADDR_ZIP 两个字段对应一条 address 信息，解释了一下@JoinColumns 的用法。"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-ghm8qtc",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-ghm8qtc"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "如果你了解了 @OneToOne 的详细用法，后面要讲的几个注解就很好理解了，因为他们有点类似，那么我们接下来看看 @ManyToOne 和 @OneToMany 的用法。"
-				}
-			]
+				"id": "20210919001529-0q1ka1t",
+				"updated": "20210919001529"
+			}
 		},
 		{
 			"ID": "20210707235333-vlakcbk",
@@ -5185,12 +5004,13 @@
 			"ID": "20210707235333-cczaq2b",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-cczaq2b"
+				"id": "20210707235333-cczaq2b",
+				"updated": "20210920004905"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "一切级联更新和 orphanRemoval 都保持默认规则，并且 fetch 采用 lazy 延迟加载（也是默认规则）。"
+					"Data": "一切级联更新和 orphanRemoval 都保持默认规则，并且 fetch 采用 lazy 延迟加载"
 				}
 			]
 		},
@@ -5223,6 +5043,22 @@
 					]
 				}
 			]
+		},
+		{
+			"ID": "20210920004909-0vn7usg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210920004909-0vn7usg",
+				"updated": "20210920004909"
+			}
+		},
+		{
+			"ID": "20210920004910-fumgl8d",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210920004910-fumgl8d",
+				"updated": "20210920004910"
+			}
 		},
 		{
 			"ID": "20210707235333-kjb40uf",

@@ -4,7 +4,7 @@
 	"Properties": {
 		"id": "20210915232848-58oz2ab",
 		"title": "602.Entity 实体类详解（掌握）",
-		"updated": "1631721222250"
+		"updated": "20210916225946"
 	},
 	"Children": [
 		{
@@ -244,29 +244,6 @@
 			]
 		},
 		{
-			"ID": "20210915233806-sm0w8jp",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210915233806-sm0w8jp",
-				"updated": "20210915233806"
-			}
-		},
-		{
-			"ID": "20210707235333-bm4skam",
-			"Type": "NodeHeading",
-			"HeadingLevel": 2,
-			"Properties": {
-				"id": "20210707235333-bm4skam",
-				"updated": "20210915233333"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "详细的注解都有哪些？🔥"
-				}
-			]
-		},
-		{
 			"ID": "20210707235333-a4ngimf",
 			"Type": "NodeParagraph",
 			"Properties": {
@@ -340,6 +317,29 @@
 				"id": "20210915233356-bo5xp4r",
 				"updated": "20210915233356"
 			}
+		},
+		{
+			"ID": "20210916225611-uommy94",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210916225611-uommy94",
+				"updated": "20210916225611"
+			}
+		},
+		{
+			"ID": "20210916225612-0jez2n5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210916225612-0jez2n5",
+				"updated": "20210916225617"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "类"
+				}
+			]
 		},
 		{
 			"ID": "20210707235333-30g8ixo",
@@ -470,1092 +470,9 @@
 			}
 		},
 		{
-			"ID": "20210707235333-uc13jut",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210707235333-uc13jut",
-				"updated": "20210915233520"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "@Id \u0026 @GeneratedValue 🔥"
-				}
-			]
-		},
-		{
-			"ID": "20210915233529-tweuyzf",
-			"Type": "NodeHeading",
-			"HeadingLevel": 4,
-			"Properties": {
-				"id": "20210915233529-tweuyzf",
-				"updated": "20210915233530"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "@Id"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-qntv9zc",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-qntv9zc",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "定义属性为数据库的主键，一个实体里面必须有一个主键，但不一定是这个注解，可以和 @GeneratedValue 配合使用或成对出现。"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-l4c1snr",
-			"Type": "NodeHeading",
-			"HeadingLevel": 4,
-			"Properties": {
-				"id": "20210707235333-l4c1snr",
-				"updated": "20210915233536"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "@GeneratedValue"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-gi7idxb",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-gi7idxb",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "主键生成策略，如下所示："
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-o1j6a3k",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"Properties": {
-				"id": "20210707235333-o1j6a3k",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```"
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "amF2YQ=="
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "public @interface GeneratedValue {\n    //Id的生成策略\n    GenerationType strategy() default AUTO;\n    //通过Sequences生成Id,常见的是Orcale数据库ID生成规则，这个时候需要配合@SequenceGenerator使用\n    String generator() default \"\";\n}\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-u610248",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-u610248",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "其中，GenerationType 一共有以下四个值："
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-4vkgxx1",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"Properties": {
-				"id": "20210707235333-4vkgxx1",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```"
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "amF2YQ=="
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "public enum GenerationType {\n    //通过表产生主键，框架借由表模拟序列产生主键，使用该策略可以使应用更易于数据库移植。\n    TABLE,\n    //通过序列产生主键，通过 @SequenceGenerator 注解指定序列名， MySql 不支持这种方式；\n    SEQUENCE,\n    //采用数据库ID自增长， 一般用于mysql数据库\n    IDENTITY,\n//JPA 自动选择合适的策略，是默认选项；\n    AUTO\n}\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```"
-				}
-			]
-		},
-		{
-			"ID": "20210915233452-2p3ci36",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210915233452-2p3ci36",
-				"updated": "20210915233452"
-			}
-		},
-		{
-			"ID": "20210915233501-9edqdbt",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210915233501-9edqdbt",
-				"updated": "20210915233501"
-			}
-		},
-		{
-			"ID": "20210707235333-xujvdmt",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210707235333-xujvdmt",
-				"updated": "20210915233638"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "@Column 🔥"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-cjbbu38",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-cjbbu38",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "定义该属性对应数据库中的列名。"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-ymk7woo",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"Properties": {
-				"id": "20210707235333-ymk7woo",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```"
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "amF2YQ=="
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "public @interface Column {\n    //数据库中的表的列名；可选，如果不填写认为字段名和实体属性名一样。\n    String name() default \"\";\n    //是否唯一。默认flase，可选。\n    boolean unique() default false;\n    //数据字段是否允许空。可选，默认true。\n    boolean nullable() default true;\n    //执行insert操作的时候是否包含此字段，默认，true，可选。\n    boolean insertable() default true;\n    //执行update的时候是否包含此字段，默认，true，可选。\n    boolean updatable() default true;\n    //表示该字段在数据库中的实际类型。\n    String columnDefinition() default \"\";\n   //数据库字段的长度，可选，默认255\n    int length() default 255;\n}\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```"
-				}
-			]
-		},
-		{
-			"ID": "20210915233621-5wghwfq",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210915233621-5wghwfq",
-				"updated": "20210915233621"
-			}
-		},
-		{
-			"ID": "20210915233607-qx1zqbp",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210915233607-qx1zqbp",
-				"updated": "20210915233607"
-			}
-		},
-		{
-			"ID": "20210915233648-2zsu23v",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210915233648-2zsu23v",
-				"updated": "20210915233702"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "@Basic \u0026 @Transient 🔥"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-g4v1kvo",
-			"Type": "NodeHeading",
-			"HeadingLevel": 4,
-			"Properties": {
-				"id": "20210707235333-g4v1kvo",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "@Basic"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-3mh9xvr",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-3mh9xvr",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "表示属性是到数据库表的字段的映射。如果实体的字段上没有任何注解，默认即为 @Basic。也就是说默认所有的字段肯定是和数据库进行映射的，并且默认为 Eager 类型。"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-4qmtvg2",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"Properties": {
-				"id": "20210707235333-4qmtvg2",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```"
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "amF2YQ=="
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "public @interface Basic {\n    //可选，EAGER（默认）：立即加载；LAZY：延迟加载。（LAZY主要应用在大字段上面）\n    FetchType fetch() default EAGER;\n    //可选。这个字段是否可以为null，默认是true。\n    boolean optional() default true;\n}\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-oefegye",
-			"Type": "NodeHeading",
-			"HeadingLevel": 4,
-			"Properties": {
-				"id": "20210707235333-oefegye",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "@Transient"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-rhtg5gu",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-rhtg5gu",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "表示该属性并非一个到数据库表的字段的映射，表示非持久化属性。JPA 映射数据库的时候忽略它，与 @Basic 有相反的作用。也就是每个字段上面 @Transient 和 @Basic 必须二选一，而什么都不指定的话，默认是 @Basic。"
-				}
-			]
-		},
-		{
-			"ID": "20210915233608-runsw4f",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210915233608-runsw4f",
-				"updated": "20210915233608"
-			}
-		},
-		{
-			"ID": "20210707235333-hobu7ie",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210707235333-hobu7ie",
-				"updated": "20210915234301"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "@Temporal 🔥"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-858aqxt",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-858aqxt",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "用来设置 Date 类型的属性映射到对应精度的字段，存在以下三种情况："
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-94rdxtt",
-			"Type": "NodeList",
-			"ListData": {},
-			"Properties": {
-				"id": "20210707235333-94rdxtt",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"ID": "20210707235333-8zflsc4",
-					"Type": "NodeListItem",
-					"ListData": {
-						"BulletChar": 42,
-						"Marker": "Kg=="
-					},
-					"Properties": {
-						"id": "20210707235333-8zflsc4"
-					},
-					"Children": [
-						{
-							"ID": "20210707235333-k4gdegk",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707235333-k4gdegk"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "@Temporal(TemporalType.DATE)映射为日期 // date （"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "只有日期"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "）"
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210707235333-mspazjy",
-					"Type": "NodeListItem",
-					"ListData": {
-						"BulletChar": 42,
-						"Marker": "Kg=="
-					},
-					"Properties": {
-						"id": "20210707235333-mspazjy"
-					},
-					"Children": [
-						{
-							"ID": "20210707235333-sy8y8tc",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707235333-sy8y8tc"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "@Temporal(TemporalType.TIME)映射为日期 // time （"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "只有时间"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "）"
-								}
-							]
-						}
-					]
-				},
-				{
-					"ID": "20210707235333-krk5h1p",
-					"Type": "NodeListItem",
-					"ListData": {
-						"BulletChar": 42,
-						"Marker": "Kg=="
-					},
-					"Properties": {
-						"id": "20210707235333-krk5h1p"
-					},
-					"Children": [
-						{
-							"ID": "20210707235333-rhgixwx",
-							"Type": "NodeParagraph",
-							"Properties": {
-								"id": "20210707235333-rhgixwx"
-							},
-							"Children": [
-								{
-									"Type": "NodeText",
-									"Data": "@Temporal(TemporalType.TIMESTAMP)映射为日期 // date time （"
-								},
-								{
-									"Type": "NodeStrong",
-									"Data": "strong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "日期+时间"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
-								},
-								{
-									"Type": "NodeText",
-									"Data": "）"
-								}
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"ID": "20210915233725-dwrmitg",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210915233725-dwrmitg",
-				"updated": "20210915233725"
-			}
-		},
-		{
-			"ID": "20210915234333-tp627jq",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210915234333-tp627jq",
-				"updated": "20210915234333"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "@Lob"
-				}
-			]
-		},
-		{
-			"ID": "20210915234335-a8700ni",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210915234335-a8700ni",
-				"updated": "20210915234410"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "指定持久属性或字段应作为大对象持久化到数据库支持的大对象类型"
-				}
-			]
-		},
-		{
-			"ID": "20210915233502-aia8y0g",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210915233502-aia8y0g",
-				"updated": "20210915233502"
-			}
-		},
-		{
-			"ID": "20210707235333-ubp8sbi",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210707235333-ubp8sbi",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "@Access"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-yzu61ot",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-yzu61ot",
-				"updated": "20210915233435"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "用于指定 entity 里面的"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "注解是写在字段上面，还是 get/set 方法上面生效"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "，非必填。在默认不填写的情况下，当实体里面的第一个注解出现在字段上或者 get/set 方法上面，就以第一次出现的方式为准；也就是说，一个实体里面的注解既有用在 field 上面，又有用在 properties 上面的时候，看下面的代码你就会明白。"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-vt5s9uo",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"Properties": {
-				"id": "20210707235333-vt5s9uo",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```"
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "amF2YQ=="
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "@Id\nprivate Long id;\n@Column(length = 20, nullable = false)\npublic String getUserName(){\n    return userName;\n}\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-nfksja0",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-nfksja0",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "那么由于 @Id 是实体里面第一个出现的注解，并且作用在字段上面，所以所有写在 get/set 方法上面的注解就会失效。而 @Access 可以干预默认值，指定是在 fileds 上面生效还是在 properties 上面生效。我们通过源码看下语法："
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-9vh80k6",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"Properties": {
-				"id": "20210707235333-9vh80k6",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```"
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "amF2YQ=="
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "@Target( { TYPE, METHOD, FIELD })//表示此注解可以运用在class上(那么这个时候就可以指定此实体的默认注解生效策略了)，也可以用在方法上或者字段上(表示可以独立设置某一个字段或者方法的生效策略)；\n@Retention(RUNTIME)\npublic @interface Access {\n//指定是字段上面生效还是方法上面生效\n    AccessType value();\n}\npublic enum AccessType {\n    FIELD,\n    PROPERTY\n}\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```"
-				}
-			]
-		},
-		{
-			"ID": "20210915233440-sew43h6",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210915233440-sew43h6",
-				"updated": "20210915233440"
-			}
-		},
-		{
-			"ID": "20210707235333-ruqedva",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210707235333-ruqedva",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "@Enumerated（没啥用）"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-xy46r7n",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-xy46r7n",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "这个注解很不好用，因为它对 enum 提供了下标和 name 两种方式，用法直接映射在 enum 枚举类型的字段上。请看下面源码。"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-ejp2l2k",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"Properties": {
-				"id": "20210707235333-ejp2l2k",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```"
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "amF2YQ=="
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "@Target({METHOD, FIELD}) //作用在方法和字段上\npublic @interface Enumerated {\n//枚举映射的类型，默认是ORDINAL（即枚举字段的下标）。\n    EnumType value() default ORDINAL;\n}\npublic enum EnumType {\n    //映射枚举字段的下标\n    ORDINAL,\n    //映射枚举的Name\n    STRING\n}\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-ufzwcxy",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-ufzwcxy",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "再来看一个 User 里面关于性别枚举的例子，你就会知道 @Enumerated 在这里"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "没什么作用了"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "，如下所示："
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-mmnw85c",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"Properties": {
-				"id": "20210707235333-mmnw85c",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```"
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "amF2YQ=="
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "//有一个枚举类，用户的性别\npublic enum Gender {\n    MAIL(\"男性\"), FMAIL(\"女性\");\n    private String value;\n    private Gender(String value) {\n        this.value = value;\n    }\n}\n//实体类@Enumerated的写法如下\n@Entity\n@Table(name = \"tb_user\")\npublic class User implements Serializable {\n    @Enumerated(EnumType.STRING)\n    @Column(name = \"user_gender\")\n    private Gender gender;\n    //.......................\n}\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-pkm19xa",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-pkm19xa",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "这时候插入两条数据，数据库里面的值会变成 MAIL/FMAIL，而不是“男性” / 女性。"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-mjjh1ah",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-mjjh1ah",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "经验分享："
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": " 如果我们用 @Enumerated（EnumType.ORDINAL），这时候数据库里面的值是 0、1。但是实际工作中，不建议用数字下标，因为枚举里面的属性值是会不断新增的，如果新增一个，位置变化了就惨了。并且 0、1、2 这种下标在数据库里面看着非常痛苦，时间长了就会一点也看不懂了。"
-				}
-			]
-		},
-		{
-			"ID": "20210915233553-koewjco",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210915233553-koewjco",
-				"updated": "20210915233553"
-			}
-		},
-		{
-			"ID": "20210707235333-kt18v5l",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210707235333-kt18v5l",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "完整的例子"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-jioxlpa",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
-			"Properties": {
-				"id": "20210707235333-jioxlpa",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```"
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "amF2YQ=="
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "@Entity\n@Table(name = \"user_topic\")\n@Access(AccessType.FIELD)\n@Data\npublic class UserTopic {\n   @Id\n   @Column(name = \"id\", nullable = false)\n   @GeneratedValue(strategy = GenerationType.IDENTITY)\n   private Integer id;\n   @Column(name = \"title\", nullable = true, length = 200)\n   private String title;\n   @Basic\n   @Column(name = \"create_user_id\", nullable = true)\n   private Integer createUserId;\n   @Basic(fetch = FetchType.LAZY)\n   @Column(name = \"content\", nullable = true, length = -1)\n   @Lob\n   private String content;\n   @Basic(fetch = FetchType.LAZY)\n   @Column(name = \"image\", nullable = true)\n   @Lob\n   private byte[] image;\n   @Basic\n   @Column(name = \"create_time\", nullable = true)\n   @Temporal(TemporalType.TIMESTAMP)\n   private Date createTime;\n   @Basic\n   @Column(name = \"create_date\", nullable = true)\n   @Temporal(TemporalType.DATE)\n   private Date createDate;\n   @Enumerated(EnumType.STRING)\n   @Column(name = \"topic_type\")\n   private Type type;\n   @Transient\n   private String transientSimple;\n   //非数据库映射字段，业务类型的字段\n   public String getTransientSimple() {\n      return title + \"auto:jack\" + type;\n   }\n   //有一个枚举类，主题的类型\n   public enum Type {\n      EN(\"英文\"), CN(\"中文\");\n      private final String des;\n      Type(String des) {\n         this.des = des;\n      }\n   }\n}\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-3tbmyh3",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-3tbmyh3",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "其实这里面的很多注解都可以省略，直接使用默认的就可以。如 @Basic、@Column 名字有一定的映射策略（我们在第 17 课时讲 DataSource 的时候会详细讲解映射策略），所以可以省略。此外，@Access 也可以省略，我们只要在这些类里面保持一致就可以了。"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-t4bixf0",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-t4bixf0",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "但是需要注意的是，在生产环境中我们要把外键关联关系关闭，不然会出现意想不到的 ERROR，毕竟生产环境不同开发环境，我们可以通过在开发环境生成的表导出 DDL 到生产执行。我经常会利用生成 DDL 来做测试和写案例， 这样省去了创建表的时间，只需要关注我的代码就行了。"
-				}
-			]
-		},
-		{
-			"ID": "20210915230800-8w7p4t5",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210915230800-8w7p4t5",
-				"updated": "20210915230800"
-			}
-		},
-		{
-			"ID": "20210915230804-8uuiy8i",
-			"Type": "NodeHeading",
-			"HeadingLevel": 3,
-			"Properties": {
-				"id": "20210915230804-8uuiy8i",
-				"updated": "20210915230833"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "工具生成 Entity 🔥"
-				}
-			]
-		},
-		{
-			"ID": "20210915230746-6xbmsy8",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210915230746-6xbmsy8",
-				"updated": "20210915230746"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "学会"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "利用工具去生成 Entity 类"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "，将会节省很多时间。"
-				}
-			]
-		},
-		{
-			"ID": "20210707235333-0638rwv",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210707235333-0638rwv",
-				"updated": "20210707235333"
-			},
-			"Children": [
-				{
-					"Type": "NodeText",
-					"Data": "首先，"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "打开 Persistence 视图，点击 Generate Persistence Mapping"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "，接着"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "点击选中数据源"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "，然后，"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "选择表和字段，并点击 OK"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "。"
-				}
-			]
-		},
-		{
-			"ID": "20210915230801-yljqf2r",
-			"Type": "NodeParagraph",
-			"Properties": {
-				"id": "20210915230801-yljqf2r",
-				"updated": "20210915230801"
-			}
-		},
-		{
 			"ID": "20210707235333-j55ttrw",
 			"Type": "NodeHeading",
-			"HeadingLevel": 2,
+			"HeadingLevel": 3,
 			"Properties": {
 				"id": "20210707235333-j55ttrw",
 				"updated": "20210915234006"
@@ -2896,6 +1813,1170 @@
 			"Properties": {
 				"id": "20210915233842-t4l5xy5",
 				"updated": "20210915233842"
+			}
+		},
+		{
+			"ID": "20210916225703-bcuxme1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210916225703-bcuxme1",
+				"updated": "20210916225703"
+			}
+		},
+		{
+			"ID": "20210916225848-re9vadz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210916225848-re9vadz",
+				"updated": "20210916225946"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "@Where 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210916225850-o91i1ud",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210916225850-o91i1ud",
+				"updated": "20210916225912"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Where(clause = \"delete_time is null\")\npublic class Banner extends BaseEntity {\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long id;\n\n    /* 名称，对无意义id的描述 */\n    private String name;\n\n    /* 可以展示到前端的 */\n    private String title;\n    private String description;\n    private String img;\n\n\n    @OneToMany\n    @JoinColumn(name = \"bannerId\")\n    private List\u003cBannerItem\u003e itemList;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210916225848-zk7nzs5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210916225848-zk7nzs5",
+				"updated": "20210916225848"
+			}
+		},
+		{
+			"ID": "20210916225848-vlpbgjb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210916225848-vlpbgjb",
+				"updated": "20210916225848"
+			}
+		},
+		{
+			"ID": "20210916225703-c2lvllr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210916225703-c2lvllr",
+				"updated": "20210916225720"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "列"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-uc13jut",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-uc13jut",
+				"updated": "20210915233520"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "@Id \u0026 @GeneratedValue 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210915233529-tweuyzf",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210915233529-tweuyzf",
+				"updated": "20210915233530"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "@Id"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-qntv9zc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-qntv9zc",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "定义属性为数据库的主键，一个实体里面必须有一个主键，但不一定是这个注解，可以和 @GeneratedValue 配合使用或成对出现。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-l4c1snr",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210707235333-l4c1snr",
+				"updated": "20210915233536"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "@GeneratedValue"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-gi7idxb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-gi7idxb",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "主键生成策略，如下所示："
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-o1j6a3k",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-o1j6a3k",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public @interface GeneratedValue {\n    //Id的生成策略\n    GenerationType strategy() default AUTO;\n    //通过Sequences生成Id,常见的是Orcale数据库ID生成规则，这个时候需要配合@SequenceGenerator使用\n    String generator() default \"\";\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-u610248",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-u610248",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其中，GenerationType 一共有以下四个值："
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-4vkgxx1",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-4vkgxx1",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public enum GenerationType {\n    //通过表产生主键，框架借由表模拟序列产生主键，使用该策略可以使应用更易于数据库移植。\n    TABLE,\n    //通过序列产生主键，通过 @SequenceGenerator 注解指定序列名， MySql 不支持这种方式；\n    SEQUENCE,\n    //采用数据库ID自增长， 一般用于mysql数据库\n    IDENTITY,\n//JPA 自动选择合适的策略，是默认选项；\n    AUTO\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210915233452-2p3ci36",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210915233452-2p3ci36",
+				"updated": "20210915233452"
+			}
+		},
+		{
+			"ID": "20210915233501-9edqdbt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210915233501-9edqdbt",
+				"updated": "20210915233501"
+			}
+		},
+		{
+			"ID": "20210707235333-xujvdmt",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-xujvdmt",
+				"updated": "20210915233638"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "@Column 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-cjbbu38",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-cjbbu38",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "定义该属性对应数据库中的列名。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-ymk7woo",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-ymk7woo",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public @interface Column {\n    //数据库中的表的列名；可选，如果不填写认为字段名和实体属性名一样。\n    String name() default \"\";\n    //是否唯一。默认flase，可选。\n    boolean unique() default false;\n    //数据字段是否允许空。可选，默认true。\n    boolean nullable() default true;\n    //执行insert操作的时候是否包含此字段，默认，true，可选。\n    boolean insertable() default true;\n    //执行update的时候是否包含此字段，默认，true，可选。\n    boolean updatable() default true;\n    //表示该字段在数据库中的实际类型。\n    String columnDefinition() default \"\";\n   //数据库字段的长度，可选，默认255\n    int length() default 255;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210915233621-5wghwfq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210915233621-5wghwfq",
+				"updated": "20210915233621"
+			}
+		},
+		{
+			"ID": "20210915233607-qx1zqbp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210915233607-qx1zqbp",
+				"updated": "20210915233607"
+			}
+		},
+		{
+			"ID": "20210915233648-2zsu23v",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210915233648-2zsu23v",
+				"updated": "20210915233702"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "@Basic \u0026 @Transient 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-g4v1kvo",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210707235333-g4v1kvo",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "@Basic"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-3mh9xvr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-3mh9xvr",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "表示属性是到数据库表的字段的映射。如果实体的字段上没有任何注解，默认即为 @Basic。也就是说默认所有的字段肯定是和数据库进行映射的，并且默认为 Eager 类型。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-4qmtvg2",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-4qmtvg2",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "public @interface Basic {\n    //可选，EAGER（默认）：立即加载；LAZY：延迟加载。（LAZY主要应用在大字段上面）\n    FetchType fetch() default EAGER;\n    //可选。这个字段是否可以为null，默认是true。\n    boolean optional() default true;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-oefegye",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20210707235333-oefegye",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "@Transient"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-rhtg5gu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-rhtg5gu",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "表示该属性并非一个到数据库表的字段的映射，表示非持久化属性。JPA 映射数据库的时候忽略它，与 @Basic 有相反的作用。也就是每个字段上面 @Transient 和 @Basic 必须二选一，而什么都不指定的话，默认是 @Basic。"
+				}
+			]
+		},
+		{
+			"ID": "20210915233608-runsw4f",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210915233608-runsw4f",
+				"updated": "20210915233608"
+			}
+		},
+		{
+			"ID": "20210707235333-hobu7ie",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-hobu7ie",
+				"updated": "20210915234301"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "@Temporal 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-858aqxt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-858aqxt",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "用来设置 Date 类型的属性映射到对应精度的字段，存在以下三种情况："
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-94rdxtt",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210707235333-94rdxtt",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"ID": "20210707235333-8zflsc4",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-8zflsc4"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-k4gdegk",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-k4gdegk"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "@Temporal(TemporalType.DATE)映射为日期 // date （"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "只有日期"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-mspazjy",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-mspazjy"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-sy8y8tc",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-sy8y8tc"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "@Temporal(TemporalType.TIME)映射为日期 // time （"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "只有时间"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210707235333-krk5h1p",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210707235333-krk5h1p"
+					},
+					"Children": [
+						{
+							"ID": "20210707235333-rhgixwx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210707235333-rhgixwx"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "@Temporal(TemporalType.TIMESTAMP)映射为日期 // date time （"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "日期+时间"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "）"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210915233725-dwrmitg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210915233725-dwrmitg",
+				"updated": "20210915233725"
+			}
+		},
+		{
+			"ID": "20210915234333-tp627jq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210915234333-tp627jq",
+				"updated": "20210915234333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "@Lob"
+				}
+			]
+		},
+		{
+			"ID": "20210915234335-a8700ni",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210915234335-a8700ni",
+				"updated": "20210915234410"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "指定持久属性或字段应作为大对象持久化到数据库支持的大对象类型"
+				}
+			]
+		},
+		{
+			"ID": "20210915233502-aia8y0g",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210915233502-aia8y0g",
+				"updated": "20210915233502"
+			}
+		},
+		{
+			"ID": "20210707235333-ubp8sbi",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-ubp8sbi",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "@Access"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-yzu61ot",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-yzu61ot",
+				"updated": "20210915233435"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "用于指定 entity 里面的"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "注解是写在字段上面，还是 get/set 方法上面生效"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，非必填。在默认不填写的情况下，当实体里面的第一个注解出现在字段上或者 get/set 方法上面，就以第一次出现的方式为准；也就是说，一个实体里面的注解既有用在 field 上面，又有用在 properties 上面的时候，看下面的代码你就会明白。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-vt5s9uo",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-vt5s9uo",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Id\nprivate Long id;\n@Column(length = 20, nullable = false)\npublic String getUserName(){\n    return userName;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-nfksja0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-nfksja0",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "那么由于 @Id 是实体里面第一个出现的注解，并且作用在字段上面，所以所有写在 get/set 方法上面的注解就会失效。而 @Access 可以干预默认值，指定是在 fileds 上面生效还是在 properties 上面生效。我们通过源码看下语法："
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-9vh80k6",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-9vh80k6",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Target( { TYPE, METHOD, FIELD })//表示此注解可以运用在class上(那么这个时候就可以指定此实体的默认注解生效策略了)，也可以用在方法上或者字段上(表示可以独立设置某一个字段或者方法的生效策略)；\n@Retention(RUNTIME)\npublic @interface Access {\n//指定是字段上面生效还是方法上面生效\n    AccessType value();\n}\npublic enum AccessType {\n    FIELD,\n    PROPERTY\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210915233440-sew43h6",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210915233440-sew43h6",
+				"updated": "20210915233440"
+			}
+		},
+		{
+			"ID": "20210707235333-ruqedva",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-ruqedva",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "@Enumerated（没啥用）"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-xy46r7n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-xy46r7n",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这个注解很不好用，因为它对 enum 提供了下标和 name 两种方式，用法直接映射在 enum 枚举类型的字段上。请看下面源码。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-ejp2l2k",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-ejp2l2k",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Target({METHOD, FIELD}) //作用在方法和字段上\npublic @interface Enumerated {\n//枚举映射的类型，默认是ORDINAL（即枚举字段的下标）。\n    EnumType value() default ORDINAL;\n}\npublic enum EnumType {\n    //映射枚举字段的下标\n    ORDINAL,\n    //映射枚举的Name\n    STRING\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-ufzwcxy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-ufzwcxy",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "再来看一个 User 里面关于性别枚举的例子，你就会知道 @Enumerated 在这里"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "没什么作用了"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，如下所示："
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-mmnw85c",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-mmnw85c",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "//有一个枚举类，用户的性别\npublic enum Gender {\n    MAIL(\"男性\"), FMAIL(\"女性\");\n    private String value;\n    private Gender(String value) {\n        this.value = value;\n    }\n}\n//实体类@Enumerated的写法如下\n@Entity\n@Table(name = \"tb_user\")\npublic class User implements Serializable {\n    @Enumerated(EnumType.STRING)\n    @Column(name = \"user_gender\")\n    private Gender gender;\n    //.......................\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-pkm19xa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-pkm19xa",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "这时候插入两条数据，数据库里面的值会变成 MAIL/FMAIL，而不是“男性” / 女性。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-mjjh1ah",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-mjjh1ah",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "经验分享："
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 如果我们用 @Enumerated（EnumType.ORDINAL），这时候数据库里面的值是 0、1。但是实际工作中，不建议用数字下标，因为枚举里面的属性值是会不断新增的，如果新增一个，位置变化了就惨了。并且 0、1、2 这种下标在数据库里面看着非常痛苦，时间长了就会一点也看不懂了。"
+				}
+			]
+		},
+		{
+			"ID": "20210915233553-koewjco",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210915233553-koewjco",
+				"updated": "20210915233553"
+			}
+		},
+		{
+			"ID": "20210707235333-kt18v5l",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210707235333-kt18v5l",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "完整的例子"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-jioxlpa",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210707235333-jioxlpa",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Entity\n@Table(name = \"user_topic\")\n@Access(AccessType.FIELD)\n@Data\npublic class UserTopic {\n   @Id\n   @Column(name = \"id\", nullable = false)\n   @GeneratedValue(strategy = GenerationType.IDENTITY)\n   private Integer id;\n   @Column(name = \"title\", nullable = true, length = 200)\n   private String title;\n   @Basic\n   @Column(name = \"create_user_id\", nullable = true)\n   private Integer createUserId;\n   @Basic(fetch = FetchType.LAZY)\n   @Column(name = \"content\", nullable = true, length = -1)\n   @Lob\n   private String content;\n   @Basic(fetch = FetchType.LAZY)\n   @Column(name = \"image\", nullable = true)\n   @Lob\n   private byte[] image;\n   @Basic\n   @Column(name = \"create_time\", nullable = true)\n   @Temporal(TemporalType.TIMESTAMP)\n   private Date createTime;\n   @Basic\n   @Column(name = \"create_date\", nullable = true)\n   @Temporal(TemporalType.DATE)\n   private Date createDate;\n   @Enumerated(EnumType.STRING)\n   @Column(name = \"topic_type\")\n   private Type type;\n   @Transient\n   private String transientSimple;\n   //非数据库映射字段，业务类型的字段\n   public String getTransientSimple() {\n      return title + \"auto:jack\" + type;\n   }\n   //有一个枚举类，主题的类型\n   public enum Type {\n      EN(\"英文\"), CN(\"中文\");\n      private final String des;\n      Type(String des) {\n         this.des = des;\n      }\n   }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-3tbmyh3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-3tbmyh3",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其实这里面的很多注解都可以省略，直接使用默认的就可以。如 @Basic、@Column 名字有一定的映射策略（我们在第 17 课时讲 DataSource 的时候会详细讲解映射策略），所以可以省略。此外，@Access 也可以省略，我们只要在这些类里面保持一致就可以了。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-t4bixf0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-t4bixf0",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "但是需要注意的是，在生产环境中我们要把外键关联关系关闭，不然会出现意想不到的 ERROR，毕竟生产环境不同开发环境，我们可以通过在开发环境生成的表导出 DDL 到生产执行。我经常会利用生成 DDL 来做测试和写案例， 这样省去了创建表的时间，只需要关注我的代码就行了。"
+				}
+			]
+		},
+		{
+			"ID": "20210915230800-8w7p4t5",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210915230800-8w7p4t5",
+				"updated": "20210915230800"
+			}
+		},
+		{
+			"ID": "20210915230804-8uuiy8i",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210915230804-8uuiy8i",
+				"updated": "20210915230833"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "工具生成 Entity 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210915230746-6xbmsy8",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210915230746-6xbmsy8",
+				"updated": "20210915230746"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "学会"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "利用工具去生成 Entity 类"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，将会节省很多时间。"
+				}
+			]
+		},
+		{
+			"ID": "20210707235333-0638rwv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707235333-0638rwv",
+				"updated": "20210707235333"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "首先，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "打开 Persistence 视图，点击 Generate Persistence Mapping"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，接着"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "点击选中数据源"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，然后，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "选择表和字段，并点击 OK"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20210915230801-yljqf2r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210915230801-yljqf2r",
+				"updated": "20210915230801"
 			}
 		},
 		{
