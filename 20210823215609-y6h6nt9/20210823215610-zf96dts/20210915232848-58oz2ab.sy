@@ -4,7 +4,7 @@
 	"Properties": {
 		"id": "20210915232848-58oz2ab",
 		"title": "602.Entity 实体类详解（掌握）",
-		"updated": "20210916225946"
+		"updated": "20210925215647"
 	},
 	"Children": [
 		{
@@ -812,7 +812,7 @@
 			"IsFencedCodeBlock": true,
 			"Properties": {
 				"id": "20210915232017-7dlyfup",
-				"updated": "20210915232030"
+				"updated": "20210925215647"
 			},
 			"Children": [
 				{
@@ -825,7 +825,7 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "/**\n * abstract 这个类就是为了被继承\n * 这里三个字段无法被数据库映射到，且不能使用@Entity，但是JPA提供了@MappedSuperclass代表基类\n */\n@Getter\n@Setter\n@MappedSuperclass\npublic abstract class BaseEntity {\n\n    private LocalDateTime createTime;\n\n    @JsonIgnore\n    private LocalDateTime updateTime;\n\n    @JsonIgnore\n    private LocalDateTime deleteTime;\n}"
+					"Data": "/**\n * abstract 这个类就是为了被继承\n * 这里三个字段无法被数据库映射到，且不能使用@Entity，但是JPA提供了@MappedSuperclass代表基类\n */\n@Getter\n@Setter\n@MappedSuperclass\npublic abstract class BaseEntity {\n\n    /** 可以使用数据库默认 CURRENT_TIMESTAMP 来自动填写。去掉根据当前时间戳更新！*/\n    private LocalDateTime createTime;\n\n    /** 可以使用数据库默认 CURRENT_TIMESTAMP 来自动填写。勾上根据当前时间戳更新！*/\n    @JsonIgnore\n    private LocalDateTime updateTime;\n\n    @JsonIgnore\n    private LocalDateTime deleteTime;\n}\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
@@ -2843,133 +2843,448 @@
 		{
 			"ID": "20210915230804-8uuiy8i",
 			"Type": "NodeHeading",
-			"HeadingLevel": 3,
+			"HeadingLevel": 2,
 			"Properties": {
 				"id": "20210915230804-8uuiy8i",
-				"updated": "20210915230833"
+				"updated": "20210925202819"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "工具生成 Entity 🔥"
+					"Data": "IDEA 生成 Entity 🔥"
 				}
 			]
 		},
 		{
-			"ID": "20210915230746-6xbmsy8",
+			"ID": "20210925204957-5dcbze0",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210915230746-6xbmsy8",
-				"updated": "20210915230746"
+				"fold": "0",
+				"id": "20210925204957-5dcbze0",
+				"updated": "20210925205005"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "学会"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "利用工具去生成 Entity 类"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "，将会节省很多时间。"
+					"Data": "方式1：Database"
 				}
 			]
 		},
 		{
-			"ID": "20210707235333-0638rwv",
+			"ID": "20210925202834-a9perio",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210925202834-a9perio",
+				"updated": "20210925215422"
+			},
+			"Children": [
+				{
+					"ID": "20210925203003-37bwljg",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210925203003-37bwljg"
+					},
+					"Children": [
+						{
+							"ID": "20210925203003-740wg7r",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210925203003-740wg7r",
+								"updated": "20210925203005"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用 IDEA 自带的 Datebase 连接数据库后"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210925203006-9owk14z",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210925203006-9owk14z",
+						"updated": "20210925215422"
+					},
+					"Children": [
+						{
+							"ID": "20210925203006-h9m19kx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210925203006-h9m19kx",
+								"updated": "20210925203105"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在Database右键点击"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Scripted Extensions"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "—\u003e"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Go To Scripts Directory"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，修改"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Generate_POJOs.groovy"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20210925203108-cb65nm3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210925203108-cb65nm3",
+								"updated": "20210925204904"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "如：映射字段类型、getter、setter之类的。配置查询该"
+								},
+								{
+									"Type": "NodeLink",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "博客"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://xiao7.blog.csdn.net/article/details/104292797?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-7.no_search_link\u0026depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-7.no_search_link"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。"
+								}
+							]
+						},
+						{
+							"ID": "20210925213652-jw4rgms",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"Properties": {
+								"id": "20210925213652-jw4rgms",
+								"updated": "20210925215422"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```"
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "import com.intellij.database.model.DasTable\nimport com.intellij.database.util.Case\nimport com.intellij.database.util.DasUtil\n\n/*\n * Available context bindings:\n *   SELECTION   Iterable\u003cDasObject\u003e\n *   PROJECT     project\n *   FILES       files helper\n */\n\npackageName = \"top.conanan.model;\"\nimportName = \n        \"import lombok.*;\\n\" +\n        \"\\n\" +\n        \"import javax.persistence.*;\"\nbaseEntity = \"\"\n\ntypeMapping = [\n        (~/(?i)int/)                      : \"Long\",\n        (~/(?i)float|double|decimal|real/): \"Double\",\n        (~/(?i)datetime|timestamp/)       : \"LocalDateTime\",\n        (~/(?i)date/)                     : \"LocalDate\",\n        (~/(?i)time/)                     : \"LocalTime\",\n        (~/(?i)/)                         : \"String\"\n]\n\nFILES.chooseDirectoryAndSave(\"Choose directory\", \"Choose where to store generated files\") { dir -\u003e\n    SELECTION.filter { it instanceof DasTable }.each { generate(it, dir) }\n}\n\ndef generate(table, dir) {\n    def className = javaName(table.getName(), true)\n    def fields = calcFields(table)\n    new File(dir, className + \".java\").withPrintWriter { out -\u003e generate(out, className, fields, table) }\n}\n\ndef generate(out, className, fields, table) {\n    out.println \"package $packageName\"\n    out.println \"\"\n    out.println \"$importName\"\n    out.println \"\"\n    out.println \"\"\n\n\n    out.print \"/**\\n\" +\n                \" * \" + table.getComment() + \"\\n\" +\n                \" */\\n\"\n    out.println \"@Entity\"\n    out.println \"@Table(name = \\\"\" + table.getName() + \"\\\")\"\n    out.println \"@Builder\"\n    out.println \"@Getter\"\n    out.println \"@Setter\"\n    out.println \"@NoArgsConstructor\"\n    out.println \"@AllArgsConstructor\"\n    out.print \"public class $className \"\n    if (baseEntity != \"\") out.print \"extend $baseEntity \"\n    out.println \"{\"\n    out.println \"\"\n    fields.each() {\n        out.println \"\"\n        // 输出注释\n        if (isNotEmpty(it.comment)) \n            out.println \"    /** ${it.comment.toString()} */\"\n        if (it.isPrimary == true) out.println \"    @Id\"\n        if (it.isPrimary == true) out.println \"    @GeneratedValue(strategy = GenerationType.IDENTITY)\"\n        if (it.annos != \"\") out.println \"    ${it.annos}\"\n        out.println \"    private ${it.type} ${it.name};\"\n    }\n    out.println \"\"\n//    fields.each() {\n//        out.println \"\"\n//        out.println \"  public ${it.type} get${it.name.capitalize()}() {\"\n//        out.println \"    return ${it.name};\"\n//        out.println \"  }\"\n//        out.println \"\"\n//        out.println \"  public void set${it.name.capitalize()}(${it.type} ${it.name}) {\"\n//        out.println \"    this.${it.name} = ${it.name};\"\n//        out.println \"  }\"\n//        out.println \"\"\n//    }\n    out.println \"}\"\n}\n\ndef calcFields(table) {\n    DasUtil.getColumns(table).reduce([]) { fields, col -\u003e\n        def spec = Case.LOWER.apply(col.getDataType().getSpecification())\n        def typeStr = typeMapping.find { p, t -\u003e p.matcher(spec).find() }.value\n        def field = [\n                name   : javaName(col.getName(), false),\n                type   : typeStr,\n                comment: col.getComment(),\n                annos  : \"@Column(name = \\\"\" + col.getName() + \"\\\")\"]\n        if (\"id\" == Case.LOWER.apply(col.getName()))\n            field.isPrimary = true\n        fields += [field]\n    }\n}\n\ndef javaName(str, capitalize) {\n    def s = com.intellij.psi.codeStyle.NameUtil.splitNameIntoWords(str)\n            .collect { Case.LOWER.apply(it).capitalize() }\n            .join(\"\")\n            .replaceAll(/[^\\p{javaJavaIdentifierPart}[_]]/, \"_\")\n    capitalize || s.length() == 1 ? s : Case.LOWER.apply(s[0]) + s[1..-1]\n}\n\n\n//判断是否为空\nstatic def isNotEmpty(content) {\n    return content != null \u0026\u0026 content.toString().trim().length() \u003e 0\n}\n\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210925204904-tazm12b",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210925204904-tazm12b"
+					},
+					"Children": [
+						{
+							"ID": "20210925204904-7580zbv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210925204904-7580zbv",
+								"updated": "20210925204953"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "之后右键表"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Scripted Extensions"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "—\u003e"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "Generate POJOs.groovy"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "选择要保存的路径即可生成"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210925205007-lmsbd9k",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20210707235333-0638rwv",
-				"updated": "20210707235333"
+				"id": "20210925205007-lmsbd9k",
+				"updated": "20210925205011"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "首先，"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "打开 Persistence 视图，点击 Generate Persistence Mapping"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "，接着"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "点击选中数据源"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "，然后，"
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "选择表和字段，并点击 OK"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": "。"
+					"Data": "方式2："
 				}
 			]
+		},
+		{
+			"ID": "20210925205019-23ijd0a",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210925205019-23ijd0a",
+				"updated": "20210925205020"
+			},
+			"Children": [
+				{
+					"ID": "20210925205020-vmrg0cp",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210925205020-vmrg0cp"
+					},
+					"Children": [
+						{
+							"ID": "20210925205020-byfw3s6",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210925205020-byfw3s6",
+								"updated": "20210925205020"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用 IDEA 自带的 Datebase 连接数据库后"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210925205025-proars0",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210925205025-proars0"
+					},
+					"Children": [
+						{
+							"ID": "20210925205025-ixzeb4a",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210925205025-ixzeb4a"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "打开 Persistence 视图，点击 Generate Persistence Mapping"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，接着"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "点击选中数据源"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "，然后，"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "选择表和字段，并点击 OK"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "。若没有 Persistence 视图，则需要在 Project Structure 中的 Module 添加 JPA（提供者为 Hibernate）"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210925202829-ahr1yjw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925202829-ahr1yjw",
+				"updated": "20210925202829"
+			}
+		},
+		{
+			"ID": "20210925201251-9nb3buy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925201251-9nb3buy",
+				"updated": "20210925202825"
+			}
 		},
 		{
 			"ID": "20210915230801-yljqf2r",

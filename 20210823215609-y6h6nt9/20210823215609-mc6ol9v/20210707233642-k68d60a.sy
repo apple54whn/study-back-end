@@ -4,7 +4,8 @@
 	"Properties": {
 		"id": "20210707233642-k68d60a",
 		"title": "311.Jackson",
-		"type": "doc"
+		"type": "doc",
+		"updated": "20210925222043"
 	},
 	"Children": [
 		{
@@ -1181,6 +1182,14 @@
 			]
 		},
 		{
+			"ID": "20210925214915-6zq0usu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925214915-6zq0usu",
+				"updated": "20210925214915"
+			}
+		},
+		{
 			"ID": "20210707233642-fdoszd5",
 			"Type": "NodeHeading",
 			"HeadingLevel": 2,
@@ -1433,6 +1442,341 @@
 					"Type": "NodeCodeBlockFenceCloseMarker",
 					"Data": "```",
 					"CodeBlockFenceLen": 3
+				}
+			]
+		},
+		{
+			"ID": "20210925214922-v1cgmd1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925214922-v1cgmd1",
+				"updated": "20210925214922"
+			}
+		},
+		{
+			"ID": "20210925214923-6nbizyw",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210925214923-6nbizyw",
+				"updated": "20210925214926"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "@JsonIgnore 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210925214927-4s3nduj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925214927-4s3nduj",
+				"updated": "20210925214956"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "序列号排除字段，作用在Field字段上"
+				}
+			]
+		},
+		{
+			"ID": "20210925221136-l3t8han",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925221136-l3t8han",
+				"updated": "20210925221136"
+			}
+		},
+		{
+			"ID": "20210925221136-0hh9kjb",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925221136-0hh9kjb",
+				"updated": "20210925221136"
+			}
+		},
+		{
+			"ID": "20210925221212-8s7re23",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925221212-8s7re23",
+				"updated": "20210925221212"
+			}
+		},
+		{
+			"ID": "20210925221305-j95ymjq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210925221305-j95ymjq",
+				"updated": "20210925221858"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "序列化\u0026反序列化—SNAKE_CASE \u0026 lowerCamelCase 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210925221833-65ytgpu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925221833-65ytgpu",
+				"updated": "20210925221833"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "和 SpringBoot 整合后的，可以在 application.yml 中配置"
+				}
+			]
+		},
+		{
+			"ID": "20210925221007-qceowvf",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210925221007-qceowvf",
+				"updated": "20210925221023"
+			},
+			"Children": [
+				{
+					"ID": "20210925221008-tjq6n5c",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210925221008-tjq6n5c"
+					},
+					"Children": [
+						{
+							"ID": "20210925221008-h3oydde",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210925221008-h3oydde",
+								"updated": "20210925221308"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "SNAKE_CASE：类C格式（下划线连接）"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210925221019-s1jviqq",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210925221019-s1jviqq",
+						"updated": "20210925221023"
+					},
+					"Children": [
+						{
+							"ID": "20210925221019-9reaork",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210925221019-9reaork",
+								"updated": "20210925221023"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "LOWER_CAMEL_CASE：Java 小驼峰"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210925221218-9k5z97l",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210925221218-9k5z97l",
+				"updated": "20210925221607"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eWFtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "spring:\n  jackson:\n    property-naming-strategy: SNAKE_CASE # LOWER_CAMEL_CASE\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210925221614-e9eqo7u",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925221614-e9eqo7u",
+				"updated": "20210925221614"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "返回的序列化字段为 SNAKE_CASE 时更清晰，根据项目需要修改"
+				}
+			]
+		},
+		{
+			"ID": "20210925221703-3wz1co9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925221703-3wz1co9",
+				"updated": "20210925221703"
+			}
+		},
+		{
+			"ID": "20210925221704-yxees0k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925221704-yxees0k",
+				"updated": "20210925221704"
+			}
+		},
+		{
+			"ID": "20210925221704-x5uuv5r",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210925221704-x5uuv5r",
+				"updated": "20210925221924"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "时间处理 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210925221934-g9k3e2w",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210925221934-g9k3e2w",
+				"updated": "20210925221934"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "@JsonFormat 注解"
+				}
+			]
+		},
+		{
+			"ID": "20210925221939-sypynam",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925221939-sypynam",
+				"updated": "20210925222015"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "用在Field字段上，Date、LocalDateTime 等都可以使用"
+				}
+			]
+		},
+		{
+			"ID": "20210925222018-44lekmm",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210925222018-44lekmm",
+				"updated": "20210925222043"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "@Data\npublic class OrderDTO {\n\n    @JsonFormat(locale = \"zh\", timezone = \"GMT+8\", pattern = \"yyyy-MM-dd HH:mm:ss\")\n    private LocalDateTime createTime;\n\n    @JsonFormat(locale = \"zh\", timezone = \"GMT+8\", pattern = \"yyyy-MM-dd HH:mm:ss\")\n    private Date updateTime;\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20210925221926-nakgcmi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925221926-nakgcmi",
+				"updated": "20210925221926"
+			}
+		},
+		{
+			"ID": "20210925221926-lxvyjqa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925221926-lxvyjqa",
+				"updated": "20210925221926"
+			}
+		},
+		{
+			"ID": "20210925221926-5jmxydm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925221926-5jmxydm",
+				"updated": "20210925221926"
+			}
+		},
+		{
+			"ID": "20210925221713-5jfw6ud",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20210925221713-5jfw6ud",
+				"updated": "20210925221736"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "eWFtbA=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "spring:\n  jackson:\n    serialization:\n      # 序列化为时间戳，只能解决Date，Java8的还需手动写转换器。参考https://blog.csdn.net/qq_42937522/article/details/110310826\n      WRITE_DATES_AS_TIMESTAMPS: true\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
 				}
 			]
 		}

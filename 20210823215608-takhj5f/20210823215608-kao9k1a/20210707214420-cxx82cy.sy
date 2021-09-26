@@ -4,7 +4,8 @@
 	"Properties": {
 		"id": "20210707214420-cxx82cy",
 		"title": "402.时间",
-		"type": "doc"
+		"type": "doc",
+		"updated": "20210926005353"
 	},
 	"Children": [
 		{
@@ -3849,19 +3850,14 @@
 			"ID": "20210707214420-zntch81",
 			"Type": "NodeCodeBlock",
 			"IsFencedCodeBlock": true,
-			"CodeBlockFenceChar": 96,
-			"CodeBlockFenceLen": 3,
-			"CodeBlockOpenFence": "YGBg",
-			"CodeBlockInfo": "amF2YQ==",
-			"CodeBlockCloseFence": "YGBg",
 			"Properties": {
-				"id": "20210707214420-zntch81"
+				"id": "20210707214420-zntch81",
+				"updated": "20210926005353"
 			},
 			"Children": [
 				{
 					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				},
 				{
 					"Type": "NodeCodeBlockFenceInfoMarker",
@@ -3869,45 +3865,204 @@
 				},
 				{
 					"Type": "NodeCodeBlockCode",
-					"Data": "LocalDateTime localDateTime = LocalDateTime.now();\nSystem.out.println(localDateTime);// 2019-10-05T18:56:54.511646\n\n// 1 预定义的标准格式\nDateTimeFormatter formatter1 = DateTimeFormatter.ISO_LOCAL_DATE_TIME;\n// format\nString format1 = formatter1.format(localDateTime);\nSystem.out.println(format1);// 2019-10-05T18:56:54.511646，此时使用默认的，若是ISO_LOCAL_DATE则只有年月日，其他同理\n// parse\nTemporalAccessor parse1 = formatter1.parse(\"2019-10-05T18:55:25.737715\");\nSystem.out.println(parse1);// {},ISO resolved to 2019-10-05T18:55:25.737715，接口中内容多，可以指定Field\n\n\n// 2 预定义的标准格式\nDateTimeFormatter formatter2 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM);// 只列举一个\n// format\nString format2 = formatter2.format(localDateTime.atZone(ZoneId.of(\"+8\")));\nSystem.out.println(format2);// 2019-10-5 19:38:48\n//parse\nTemporalAccessor parse2 = formatter2.parse(\"2019-10-5 19:38:48\");\nSystem.out.println(parse2);// {},ISO resolved to 2019-10-05T19:38:48\n\n\n// 3 指定字符串格式，常用\nDateTimeFormatter formatter3 = DateTimeFormatter.ofPattern(\"yyyy-MM-dd HH:mm:ss\");\n// format\nString format3 = formatter3.format(localDateTime.atZone(ZoneId.of(\"+8\")));\nSystem.out.println(format3);// 2019-10-05 19:43:34\n//parse\nTemporalAccessor parse3 = formatter3.parse(\"2019-10-05 19:43:04\");\nSystem.out.println(parse3);// {},ISO resolved to 2019-10-05T19:43:04\n"
+					"Data": "LocalDateTime localDateTime = LocalDateTime.now();\nSystem.out.println(localDateTime);// 2019-10-05T18:56:54.511646\n\n// 1 预定义的标准格式\nDateTimeFormatter formatter1 = DateTimeFormatter.ISO_LOCAL_DATE_TIME;\n// format\nString format1 = formatter1.format(localDateTime);\nSystem.out.println(format1);// 2019-10-05T18:56:54.511646，此时使用默认的，若是ISO_LOCAL_DATE则只有年月日，其他同理\n// parse\nTemporalAccessor parse1 = formatter1.parse(\"2019-10-05T18:55:25.737715\");\nSystem.out.println(parse1);// {},ISO resolved to 2019-10-05T18:55:25.737715，接口中内容多，可以指定Field\n\n\n// 2 预定义的标准格式\nDateTimeFormatter formatter2 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM);// 只列举一个\n// format\nString format2 = formatter2.format(localDateTime.atZone(ZoneId.of(\"+8\")));\nSystem.out.println(format2);// 2019-10-5 19:38:48\n//parse\nTemporalAccessor parse2 = formatter2.parse(\"2019-10-5 19:38:48\");\nSystem.out.println(parse2);// {},ISO resolved to 2019-10-05T19:38:48\n\n\n// 3 指定字符串格式，常用\nDateTimeFormatter formatter3 = DateTimeFormatter.ofPattern(\"yyyy-MM-dd HH:mm:ss\");\n// format\nString format3 = formatter3.format(localDateTime.atZone(ZoneId.of(\"+8\")));\nSystem.out.println(format3);// 2019-10-05 19:43:34\n//parse\nTemporalAccessor parse3 = formatter3.parse(\"2019-10-05 19:43:04\");\nSystem.out.println(parse3);// {},ISO resolved to 2019-10-05T19:43:04\nLocalDateTime parse4 = LocalDateTime.from(parse3);\n"
 				},
 				{
 					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```",
-					"CodeBlockFenceLen": 3
+					"Data": "```"
 				}
 			]
 		},
 		{
 			"ID": "20210707214420-jgmb7g1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210707214420-jgmb7g1",
+				"updated": "20210707214420"
+			}
+		},
+		{
+			"ID": "20210925234006-txphzxv",
 			"Type": "NodeHeading",
 			"HeadingLevel": 2,
 			"Properties": {
-				"id": "20210707214420-jgmb7g1"
+				"id": "20210925234006-txphzxv",
+				"updated": "20210925234008"
 			},
 			"Children": [
 				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "## "
-				},
-				{
 					"Type": "NodeText",
-					"Data": "其它 API"
+					"Data": "============="
 				}
 			]
+		},
+		{
+			"ID": "20210925234006-58368ww",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210925234006-58368ww",
+				"updated": "20210925234058"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "时区有关"
+				}
+			]
+		},
+		{
+			"ID": "20210925234104-7uv6if9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925234104-7uv6if9",
+				"updated": "20210925234111"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "参考资料："
+				}
+			]
+		},
+		{
+			"ID": "20210925234111-hsi66ua",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210925234111-hsi66ua",
+				"updated": "20210925234112"
+			},
+			"Children": [
+				{
+					"ID": "20210925234112-cwui8x0",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210925234112-cwui8x0"
+					},
+					"Children": [
+						{
+							"ID": "20210925234113-d4zbasx",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210925234113-d4zbasx",
+								"updated": "20210925234127"
+							},
+							"Children": [
+								{
+									"Type": "NodeLink",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "java 8 中的 ZoneOffset 与 ZoneId"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://juejin.cn/post/6897143007108136973"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20210925234559-pkbqq3u",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210925234559-pkbqq3u"
+					},
+					"Children": [
+						{
+							"ID": "20210925234559-2x5rbtv",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210925234559-2x5rbtv",
+								"updated": "20210925234612"
+							},
+							"Children": [
+								{
+									"Type": "NodeLink",
+									"Data": "span",
+									"Children": [
+										{
+											"Type": "NodeOpenBracket"
+										},
+										{
+											"Type": "NodeLinkText",
+											"Data": "java 的 ZoneOffset 与 ZoneId"
+										},
+										{
+											"Type": "NodeCloseBracket"
+										},
+										{
+											"Type": "NodeOpenParen"
+										},
+										{
+											"Type": "NodeLinkDest",
+											"Data": "https://www.jianshu.com/p/fb2dff6c04e9"
+										},
+										{
+											"Type": "NodeCloseParen"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " 🔥"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210925235025-jg0dzof",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925235025-jg0dzof",
+				"updated": "20210925235025"
+			}
+		},
+		{
+			"ID": "20210925235027-ktdry6e",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925235027-ktdry6e",
+				"updated": "20210925235027"
+			}
 		},
 		{
 			"ID": "20210707214420-1mikauu",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
 			"Properties": {
-				"id": "20210707214420-1mikauu"
+				"id": "20210707214420-1mikauu",
+				"updated": "20210707214420"
 			},
 			"Children": [
-				{
-					"Type": "NodeHeadingC8hMarker",
-					"Data": "### "
-				},
 				{
 					"Type": "NodeText",
 					"Data": "ZoneId"
@@ -3917,27 +4072,18 @@
 		{
 			"ID": "20210707214420-8zipn10",
 			"Type": "NodeList",
-			"ListData": {
-				"Tight": true,
-				"BulletChar": 42,
-				"Padding": 4,
-				"Marker": "Kg==",
-				"Num": -1
-			},
+			"ListData": {},
 			"Properties": {
-				"id": "20210707214420-8zipn10"
+				"id": "20210707214420-8zipn10",
+				"updated": "20210707214420"
 			},
 			"Children": [
 				{
 					"ID": "20210707214420-l0lr61o",
 					"Type": "NodeListItem",
-					"Data": "*",
 					"ListData": {
-						"Tight": true,
 						"BulletChar": 42,
-						"Padding": 4,
-						"Marker": "Kg==",
-						"Num": -1
+						"Marker": "Kg=="
 					},
 					"Properties": {
 						"id": "20210707214420-l0lr61o"
@@ -3952,19 +4098,17 @@
 							"Children": [
 								{
 									"Type": "NodeCodeSpan",
-									"CodeMarkerLen": 1,
+									"Data": "code",
 									"Children": [
 										{
-											"Type": "NodeCodeSpanOpenMarker",
-											"Data": "`"
+											"Type": "NodeCodeSpanOpenMarker"
 										},
 										{
 											"Type": "NodeCodeSpanContent",
 											"Data": "ZoneId"
 										},
 										{
-											"Type": "NodeCodeSpanCloseMarker",
-											"Data": "`"
+											"Type": "NodeCodeSpanCloseMarker"
 										}
 									]
 								},
@@ -3979,13 +4123,9 @@
 				{
 					"ID": "20210707214420-t9ypugi",
 					"Type": "NodeListItem",
-					"Data": "*",
 					"ListData": {
-						"Tight": true,
 						"BulletChar": 42,
-						"Padding": 4,
-						"Marker": "Kg==",
-						"Num": -1
+						"Marker": "Kg=="
 					},
 					"Properties": {
 						"id": "20210707214420-t9ypugi"
@@ -4007,13 +4147,7 @@
 						{
 							"ID": "20210707214420-q1pagos",
 							"Type": "NodeList",
-							"ListData": {
-								"Tight": true,
-								"BulletChar": 42,
-								"Padding": 4,
-								"Marker": "Kg==",
-								"Num": -1
-							},
+							"ListData": {},
 							"Properties": {
 								"id": "20210707214420-q1pagos"
 							},
@@ -4021,13 +4155,9 @@
 								{
 									"ID": "20210707214420-u0rg5m9",
 									"Type": "NodeListItem",
-									"Data": "*",
 									"ListData": {
-										"Tight": true,
 										"BulletChar": 42,
-										"Padding": 4,
-										"Marker": "Kg==",
-										"Num": -1
+										"Marker": "Kg=="
 									},
 									"Properties": {
 										"id": "20210707214420-u0rg5m9"
@@ -4051,13 +4181,9 @@
 								{
 									"ID": "20210707214420-qanvmyj",
 									"Type": "NodeListItem",
-									"Data": "*",
 									"ListData": {
-										"Tight": true,
 										"BulletChar": 42,
-										"Padding": 4,
-										"Marker": "Kg==",
-										"Num": -1
+										"Marker": "Kg=="
 									},
 									"Properties": {
 										"id": "20210707214420-qanvmyj"
@@ -4083,6 +4209,169 @@
 					]
 				}
 			]
+		},
+		{
+			"ID": "20210925235048-67cics5",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210925235048-67cics5",
+				"updated": "20210925235113"
+			},
+			"Children": [
+				{
+					"ID": "20210925235051-bq0jd7v",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210925235051-bq0jd7v",
+						"updated": "20210925235113"
+					},
+					"Children": [
+						{
+							"ID": "20210925235051-nz4cfbr",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210925235051-nz4cfbr",
+								"updated": "20210925235056"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "获取当前默认时区："
+								}
+							]
+						},
+						{
+							"ID": "20210925235057-qikjegq",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"Properties": {
+								"id": "20210925235057-qikjegq",
+								"updated": "20210925235113"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```"
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "ZoneId zoneId = ZoneId.systemDefault();\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210925233946-ehd403r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925233946-ehd403r",
+				"updated": "20210925233946"
+			}
+		},
+		{
+			"ID": "20210925233947-zhhcyv1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210925233947-zhhcyv1",
+				"updated": "20210925233952"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "ZoneOffset"
+				}
+			]
+		},
+		{
+			"ID": "20210925233953-prz9umr",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210925233953-prz9umr",
+				"updated": "20210925235432"
+			},
+			"Children": [
+				{
+					"ID": "20210925235116-8a26fwm",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210925235116-8a26fwm",
+						"updated": "20210925235432"
+					},
+					"Children": [
+						{
+							"ID": "20210925235116-c6tvx87",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210925235116-c6tvx87",
+								"updated": "20210925235335"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "获取当前时间偏移"
+								}
+							]
+						},
+						{
+							"ID": "20210925235142-zb0b3ci",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"Properties": {
+								"id": "20210925235142-zb0b3ci",
+								"updated": "20210925235432"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```"
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "ZoneOffset offset1 = ZonedDateTime.now().getOffset();\n// now()无参构造等于下面的\nZoneOffset offset2 = ZonedDateTime.now(ZoneId.systemDefault()).getOffset();\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210925233948-bdmteyj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925233948-bdmteyj",
+				"updated": "20210925233948"
+			}
 		},
 		{
 			"ID": "20210707214420-sygcg9s",
@@ -4273,6 +4562,388 @@
 							]
 						}
 					]
+				}
+			]
+		},
+		{
+			"ID": "20210925234039-tac5ezq",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925234039-tac5ezq",
+				"updated": "20210925234039"
+			}
+		},
+		{
+			"ID": "20210925234945-hlwpjw4",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925234945-hlwpjw4",
+				"updated": "20210925234945"
+			}
+		},
+		{
+			"ID": "20210925234945-hkom7jx",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210925234945-hkom7jx",
+				"updated": "20210925235037"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "转换 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210925235041-bjs67q9",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210925235041-bjs67q9",
+				"updated": "20210925235542"
+			},
+			"Children": [
+				{
+					"ID": "20210925235221-e88oerz",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210925235221-e88oerz",
+						"updated": "20210925235542"
+					},
+					"Children": [
+						{
+							"ID": "20210925235221-201pnd4",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210925235221-201pnd4",
+								"updated": "20210925235231"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "ZoneId -\u003e ZoneOffset"
+								}
+							]
+						},
+						{
+							"ID": "20210925235231-c6nxyl3",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"Properties": {
+								"id": "20210925235231-c6nxyl3",
+								"updated": "20210925235542"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```"
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "ZoneId zoneId = ZoneId.systemDefault();\nZoneOffset offset = ZonedDateTime.now(zoneId).getOffset();\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210925234945-y8pm4a0",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210925234945-y8pm4a0",
+				"updated": "20210925235913"
+			},
+			"Children": [
+				{
+					"ID": "20210925235815-00obibc",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210925235815-00obibc",
+						"updated": "20210925235913"
+					},
+					"Children": [
+						{
+							"ID": "20210925235815-qim8g9g",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210925235815-qim8g9g",
+								"updated": "20210925235829"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "无法从 ZoneOffset 转 ZoneId！！！"
+								}
+							]
+						},
+						{
+							"ID": "20210925235830-6175ie9",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210925235830-6175ie9",
+								"updated": "20210925235913"
+							},
+							"Children": [
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "由于夏令时等原因，虽然偏移一样，但是可能时区完全不一样！相反是可以的！"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210925234946-vjv7g9m",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925234946-vjv7g9m",
+				"updated": "20210925234946"
+			}
+		},
+		{
+			"ID": "20210926000012-kjkyuy5",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20210926000012-kjkyuy5",
+				"updated": "20210926000019"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "时间戳 🔥"
+				}
+			]
+		},
+		{
+			"ID": "20210926000020-xfsx1j9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210926000020-xfsx1j9",
+				"updated": "20210926000055"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "时间戳的获取也需要时区"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，因为存储的时间无法知道是那个ZoneId的！"
+				}
+			]
+		},
+		{
+			"ID": "20210926000140-lc4cmgg",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210926000140-lc4cmgg",
+				"updated": "20210926000155"
+			},
+			"Children": [
+				{
+					"ID": "20210926000142-h7qzpqb",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210926000142-h7qzpqb",
+						"updated": "20210926000155"
+					},
+					"Children": [
+						{
+							"ID": "20210926000142-q0dyqy3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210926000142-q0dyqy3",
+								"updated": "20210926000150"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "毫秒时间戳"
+								}
+							]
+						},
+						{
+							"ID": "20210926000150-mds817f",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"Properties": {
+								"id": "20210926000150-mds817f",
+								"updated": "20210926000155"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```"
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "long timestamp = localDateTime.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210926000012-w2jhvyb",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20210926000012-w2jhvyb",
+				"updated": "20210926000323"
+			},
+			"Children": [
+				{
+					"ID": "20210926000158-x3syoxn",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20210926000158-x3syoxn",
+						"updated": "20210926000323"
+					},
+					"Children": [
+						{
+							"ID": "20210926000158-378h6qg",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20210926000158-378h6qg",
+								"updated": "20210926000204"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "秒时间戳"
+								}
+							]
+						},
+						{
+							"ID": "20210926000204-q7dqgsy",
+							"Type": "NodeCodeBlock",
+							"IsFencedCodeBlock": true,
+							"Properties": {
+								"id": "20210926000204-q7dqgsy",
+								"updated": "20210926000323"
+							},
+							"Children": [
+								{
+									"Type": "NodeCodeBlockFenceOpenMarker",
+									"Data": "```"
+								},
+								{
+									"Type": "NodeCodeBlockFenceInfoMarker",
+									"CodeBlockInfo": "amF2YQ=="
+								},
+								{
+									"Type": "NodeCodeBlockCode",
+									"Data": "ZoneId zoneId = ZoneId.systemDefault();\nZoneOffset offset = ZonedDateTime.now(zoneId).getOffset();\nlong l = localDateTime.toEpochSecond(offset);\n"
+								},
+								{
+									"Type": "NodeCodeBlockFenceCloseMarker",
+									"Data": "```"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20210925234039-wre3t6p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210925234039-wre3t6p",
+				"updated": "20210925234039"
+			}
+		},
+		{
+			"ID": "20210926000326-dxyejmv",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20210926000326-dxyejmv",
+				"updated": "20210926000326"
+			}
+		},
+		{
+			"ID": "20210925234040-m5p1qnl",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20210925234040-m5p1qnl",
+				"updated": "20210925234043"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其他"
 				}
 			]
 		},
