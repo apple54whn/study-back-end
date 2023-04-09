@@ -1,0 +1,278 @@
+{
+	"ID": "20211119001728-275wh4z",
+	"Type": "NodeDocument",
+	"Properties": {
+		"id": "20211119001728-275wh4z",
+		"title": "606.骚操作",
+		"updated": "20211208222942"
+	},
+	"Children": [
+		{
+			"ID": "20211119001728-it7j7ne",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20211119001728-it7j7ne",
+				"updated": "20211208222942"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "AttributeConverter—不推荐"
+				}
+			]
+		},
+		{
+			"ID": "20211119001857-la4u44d",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20211119001857-la4u44d",
+				"updated": "20211119001906"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "List 和 JSON 转换"
+				}
+			]
+		},
+		{
+			"ID": "20211119001833-p8vg59m",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20211119001833-p8vg59m",
+				"updated": "20211119001849"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\n/**\n * 缺点：转换的不是强类型的\n */\n@Converter\npublic class ListAndJson implements AttributeConverter\u003cList\u003cObject\u003e, String\u003e {\n\n    @Autowired\n    private ObjectMapper mapper;\n\n    /**\n     * 序列化\n     * @param attribute\n     * @return\n     */\n    @Override\n    public String convertToDatabaseColumn(List\u003cObject\u003e attribute) {\n        try {\n            return mapper.writeValueAsString(attribute);\n        } catch (JsonProcessingException e) {\n            // 这里的异常发生很少，且对前端来说没有意义（传过来的数据就需要校验）所以可以记录日志。除非自定义抛出一个Http Exception 告知前端\n            e.printStackTrace();\n            throw new HttpException(9999);\n        }\n    }\n\n    /**\n     * 反序列化\n     * @param dbData\n     * @return\n     */\n    @Override\n    public List\u003cObject\u003e convertToEntityAttribute(String dbData) {\n        // 数据不能为null，否则_assertNotNull后抛出IllegalArgumentException\n        if (dbData == null){\n            return new ArrayList\u003c\u003e();\n        }\n\n        try {\n            return mapper.readValue(dbData, new TypeReference\u003cList\u003cObject\u003e\u003e() { });\n        } catch (JsonProcessingException e) {\n            e.printStackTrace();\n            throw new HttpException(9999);\n        }\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20211119001853-szfqg6p",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20211119001853-szfqg6p",
+				"updated": "20211119001853"
+			}
+		},
+		{
+			"ID": "20211119001914-fp1dcn2",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20211119001914-fp1dcn2",
+				"updated": "20211119001919"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "Map 和 JSON 转换"
+				}
+			]
+		},
+		{
+			"ID": "20211119001920-v1pqqrv",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20211119001920-v1pqqrv",
+				"updated": "20211119001928"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "\n/**\n * 缺点：转换的不是强类型的\n */\n@Converter\npublic class MapAndJson implements AttributeConverter\u003cMap\u003cString, Object\u003e, String\u003e {\n\n    @Autowired\n    private ObjectMapper mapper;\n\n    /**\n     * 序列化\n     * @param attribute\n     * @return\n     */\n    @Override\n    public String convertToDatabaseColumn(Map\u003cString, Object\u003e attribute) {\n        try {\n            return mapper.writeValueAsString(attribute);\n        } catch (JsonProcessingException e) {\n            // 这里的异常发生很少，且对前端来说没有意义（传过来的数据就需要校验）所以可以记录日志。除非自定义抛出一个Http Exception 告知前端\n            e.printStackTrace();\n            throw new HttpException(9999);\n        }\n    }\n\n    /**\n     * 反序列化\n     * @param dbData\n     * @return\n     */\n    @Override\n    @SuppressWarnings(\"unchecked\")\n    public Map\u003cString, Object\u003e convertToEntityAttribute(String dbData) {\n        // 数据不能为null，否则_assertNotNull后抛出IllegalArgumentException\n        if (dbData == null){\n            return new HashMap\u003c\u003e();\n        }\n\n        try {\n            return mapper.readValue(dbData, HashMap.class);\n        } catch (JsonProcessingException e) {\n            e.printStackTrace();\n            throw new HttpException(9999);\n        }\n    }\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20211119002123-30sqfsg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20211119002123-30sqfsg",
+				"updated": "20211119002123"
+			}
+		},
+		{
+			"ID": "20211119002124-pqum2rc",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20211119002124-pqum2rc",
+				"updated": "20211119002126"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用"
+				}
+			]
+		},
+		{
+			"ID": "20211119002127-jaoxiqb",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20211119002127-jaoxiqb",
+				"updated": "20211119002150"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "amF2YQ=="
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "// 这里的红线是 IDEA 问题。测试对象转map\n@Convert(converter = MapAndJson.class)\nprivate Map\u003cString, Object\u003e test;\n\n/* 规格 */\n@Convert(converter = ListAndJson.class)\nprivate List\u003cObject\u003e specs;\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20211119004718-oqjfexi",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20211119004718-oqjfexi",
+				"updated": "20211119004718"
+			}
+		},
+		{
+			"ID": "20211208222807-z69e536",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20211208222807-z69e536",
+				"updated": "20211208222928"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "用于"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "数据库中存储JSON（字符串）类型"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，但是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "实体类中是List或者Map"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，需要自动转换。"
+				}
+			]
+		},
+		{
+			"ID": "20211119004718-yp1hygg",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20211119004718-yp1hygg",
+				"updated": "20211208222931"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "但是"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "不够内聚"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，无法转换为强类型（具体类），只能为 Object，不太推荐！"
+				}
+			]
+		},
+		{
+			"ID": "20211208222934-g87e4ju",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20211208222934-g87e4ju",
+				"updated": "20211208222934"
+			}
+		}
+	]
+}
