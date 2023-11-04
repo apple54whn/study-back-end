@@ -1,5 +1,6 @@
 {
 	"ID": "20210707233642-lvh7bvi",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20210707233642-lvh7bvi",
@@ -65,42 +66,18 @@
 									"Data": "异常时把"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "所有信息"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "所有信息"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "都返回给客户端吗？许多老系统中发生异常，直接"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "暴露出数据库等各种错误，极其不安全"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "暴露出数据库等各种错误，极其不安全"
 								},
 								{
 									"Type": "NodeText",
@@ -137,64 +114,27 @@
 									"Data": "异常时返回给客户端"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "简单的信息"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "简单的信息"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "吗？如"
 								},
 								{
-									"Type": "NodeCodeSpan",
-									"CodeMarkerLen": 1,
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker",
-											"Data": "`"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "错误代码：11111，失败信息：操作失败"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker",
-											"Data": "`"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "错误代码：11111，失败信息：操作失败"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "，"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "无法区别具体的错误信息"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "无法区别具体的错误信息"
 								},
 								{
 									"Type": "NodeText",
@@ -227,21 +167,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "Service 层方法在执行过程中出现异常该不该捕获"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "Service 层方法在执行过程中出现异常该不该捕获"
 								},
 								{
 									"Type": "NodeText",
@@ -307,42 +235,18 @@
 									"Data": "无需 Service、Controller 来捕获异常，直接"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "在统一异常处理类中去捕获，并记录日志"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "在统一异常处理类中去捕获，并记录日志"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "，最后统一向用户返回"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "规范的响应信息"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "规范的响应信息"
 								},
 								{
 									"Type": "NodeText",
@@ -379,84 +283,36 @@
 									"Data": "此时在 Service 中的方法在编码时就可以"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "先校验判断"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "先校验判断"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "，有问题"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "直接抛出"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "直接抛出"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "具体的异常信息，"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "然后执行具体业务逻辑"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "然后执行具体业务逻辑"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "，"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "最后返回成功的信息"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "最后返回成功的信息"
 								},
 								{
 									"Type": "NodeText",
@@ -1088,22 +944,9 @@
 					"Data": "如使用 Postman 测试报错信息如下："
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"CodeMarkerLen": 1,
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker",
-							"Data": "`"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "org.springframework.http.converter.HttpMessageNotReadableException"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker",
-							"Data": "`"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "org.springframework.http.converter.HttpMessageNotReadableException"
 				},
 				{
 					"Type": "NodeText",
@@ -1356,22 +1199,9 @@
 					"Data": "使用 Postman 测试报错信息如下："
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"CodeMarkerLen": 1,
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker",
-							"Data": "`"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "org.springframework.http.converter.HttpMessageNotReadableException"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker",
-							"Data": "`"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "org.springframework.http.converter.HttpMessageNotReadableException"
 				},
 				{
 					"Type": "NodeText",
@@ -1703,63 +1533,27 @@
 									"Data": "在"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "Controller、Service、Dao 中程序员抛出自定义异常"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "Controller、Service、Dao 中程序员抛出自定义异常"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "；"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "SpringMVC 等框架抛出框架异常类型"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "SpringMVC 等框架抛出框架异常类型"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "。统一由"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "异常捕获类捕获异常"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "异常捕获类捕获异常"
 								},
 								{
 									"Type": "NodeText",
@@ -1798,21 +1592,9 @@
 									"Data": "捕获到"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "自定义异常则直接取出错误代码及错误信息"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "自定义异常则直接取出错误代码及错误信息"
 								}
 							]
 						}
@@ -1847,21 +1629,9 @@
 									"Data": "捕获到"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "非自定义异常类型首先从 Map 中找"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "非自定义异常类型首先从 Map 中找"
 								},
 								{
 									"Type": "NodeText",
@@ -1900,21 +1670,9 @@
 									"Data": "将"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "错误代码及错误信息以 JSON 格式响应给用户"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "错误代码及错误信息以 JSON 格式响应给用户"
 								}
 							]
 						}
@@ -1952,33 +1710,10 @@
 					"Data": "参考挺哥的"
 				},
 				{
-					"Type": "NodeLink",
-					"Children": [
-						{
-							"Type": "NodeOpenBracket",
-							"Data": "["
-						},
-						{
-							"Type": "NodeLinkText",
-							"Data": "语雀"
-						},
-						{
-							"Type": "NodeCloseBracket",
-							"Data": "]"
-						},
-						{
-							"Type": "NodeOpenParen",
-							"Data": "("
-						},
-						{
-							"Type": "NodeLinkDest",
-							"Data": "https://www.yuque.com/bravo1988/java/iodh7z"
-						},
-						{
-							"Type": "NodeCloseParen",
-							"Data": ")"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://www.yuque.com/bravo1988/java/iodh7z",
+					"TextMarkTextContent": "语雀"
 				}
 			]
 		},
@@ -2622,42 +2357,18 @@
 													"Data": "系统中异常包括两类："
 												},
 												{
-													"Type": "NodeStrong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "预期异常"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "预期异常"
 												},
 												{
 													"Type": "NodeText",
 													"Data": "和运行时异常"
 												},
 												{
-													"Type": "NodeStrong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "RuntimeException"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "RuntimeException"
 												},
 												{
 													"Type": "NodeText",
@@ -2694,21 +2405,9 @@
 													"Data": "系统的 dao、service、controller 出现都通过 throws Exception 向上抛出，最后由 SpringMVC"
 												},
 												{
-													"Type": "NodeStrong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "前端控制器交由异常处理器"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "前端控制器交由异常处理器"
 												},
 												{
 													"Type": "NodeText",
@@ -2745,21 +2444,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "自定义异常类(继承 Exception 或 RuntimeException)"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "自定义异常类(继承 Exception 或 RuntimeException)"
 								},
 								{
 									"Type": "NodeText",
@@ -2825,82 +2512,33 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "自定义异常处理器(实现 HandlerExceptionResolver)"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "自定义异常处理器(实现 HandlerExceptionResolver)"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "，并"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "在"
-										},
-										{
-											"Type": "NodeCodeSpan",
-											"CodeMarkerLen": 1,
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker",
-													"Data": "`"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "spring-config.xml"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker",
-													"Data": "`"
-												}
-											]
-										},
-										{
-											"Type": "NodeText",
-											"Data": "中配置或使用"
-										},
-										{
-											"Type": "NodeCodeSpan",
-											"CodeMarkerLen": 1,
-											"Children": [
-												{
-													"Type": "NodeCodeSpanOpenMarker",
-													"Data": "`"
-												},
-												{
-													"Type": "NodeCodeSpanContent",
-													"Data": "@Component"
-												},
-												{
-													"Type": "NodeCodeSpanCloseMarker",
-													"Data": "`"
-												}
-											]
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "在"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong code",
+									"TextMarkTextContent": "spring-config.xml"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "中配置或使用"
+								},
+								{
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong code",
+									"TextMarkTextContent": "@Component"
 								}
 							]
 						},

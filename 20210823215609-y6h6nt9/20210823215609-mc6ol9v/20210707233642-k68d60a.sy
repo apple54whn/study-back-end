@@ -1,5 +1,6 @@
 {
 	"ID": "20210707233642-k68d60a",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20210707233642-k68d60a",
@@ -31,33 +32,10 @@
 							"Data": "参考这篇"
 						},
 						{
-							"Type": "NodeLink",
-							"Children": [
-								{
-									"Type": "NodeOpenBracket",
-									"Data": "["
-								},
-								{
-									"Type": "NodeLinkText",
-									"Data": "博客"
-								},
-								{
-									"Type": "NodeCloseBracket",
-									"Data": "]"
-								},
-								{
-									"Type": "NodeOpenParen",
-									"Data": "("
-								},
-								{
-									"Type": "NodeLinkDest",
-									"Data": "https://www.baeldung.com/jackson-annotations"
-								},
-								{
-									"Type": "NodeCloseParen",
-									"Data": ")"
-								}
-							]
+							"Type": "NodeTextMark",
+							"TextMarkType": "a",
+							"TextMarkAHref": "https://www.baeldung.com/jackson-annotations",
+							"TextMarkTextContent": "博客"
 						}
 					]
 				}
@@ -324,21 +302,9 @@
 					"Data": "当我们序列化这个实体的一个实例时，我们将得到映射中的"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "所有键值作为标准的普通属性"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "所有键值作为标准的普通属性"
 				},
 				{
 					"Type": "NodeText",
@@ -611,43 +577,18 @@
 					"Data": "我们还可以使用"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"CodeMarkerLen": 1,
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker",
-							"Data": "`"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "@JsonPropertyOrder(alphabetic=true)"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker",
-							"Data": "`"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "@JsonPropertyOrder(alphabetic=true)"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "按"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "字母顺序"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "字母顺序"
 				},
 				{
 					"Type": "NodeText",
@@ -1250,86 +1191,36 @@
 					"Data": "设置@JsonIgnoreProperties注释的"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"CodeMarkerLen": 1,
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker",
-							"Data": "`"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "ignoreUnknown=true"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker",
-							"Data": "`"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "ignoreUnknown=true"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "。 定义可以在"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "反序列化"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "反序列化"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "期间仅忽略任何无法识别的属性的属性。如果为true，则所有无法识别的属性（即没有setter或builder接受它们）都将在没有警告的情况下被忽略（尽管仍会调用未知属性的处理程序）。"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "对序列化没有任何影响"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "对序列化没有任何影响"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "。即常用于"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"CodeMarkerLen": 1,
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker",
-							"Data": "`"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "RequesBody"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker",
-							"Data": "`"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "RequesBody"
 				}
 			]
 		},

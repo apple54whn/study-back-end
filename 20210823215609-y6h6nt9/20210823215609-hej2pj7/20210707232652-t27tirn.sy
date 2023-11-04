@@ -1,5 +1,6 @@
 {
 	"ID": "20210707232652-t27tirn",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20210707232652-t27tirn",
@@ -176,34 +177,9 @@
 					"Data": "总结：容器在启动应用的时候，会扫描当前应用每一个 jar 包里面 META-INF/services/javax.servlet."
 				},
 				{
-					"Type": "NodeMark",
-					"Children": [
-						{
-							"Type": "NodeMark2OpenMarker",
-							"Data": "=="
-						},
-						{
-							"Type": "NodeStrong",
-							"Children": [
-								{
-									"Type": "NodeStrongA6kOpenMarker",
-									"Data": "**"
-								},
-								{
-									"Type": "NodeText",
-									"Data": "ServletContainerInitializer"
-								},
-								{
-									"Type": "NodeStrongA6kCloseMarker",
-									"Data": "**"
-								}
-							]
-						},
-						{
-							"Type": "NodeMark2CloseMarker",
-							"Data": "=="
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "mark strong",
+					"TextMarkTextContent": "ServletContainerInitializer"
 				},
 				{
 					"Type": "NodeSoftBreak",
@@ -214,22 +190,9 @@
 					"Data": "指定的实现类，启动并运行这个实现类的方法；"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"CodeMarkerLen": 1,
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker",
-							"Data": "`"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "@HandlesTypes"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker",
-							"Data": "`"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "@HandlesTypes"
 				},
 				{
 					"Type": "NodeText",
@@ -378,21 +341,9 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "原理"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "原理"
 				}
 			]
 		},
@@ -563,60 +514,23 @@
 					"Data": "总结：以注解方式来启动 SpringMVC；"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "继承"
-						},
-						{
-							"Type": "NodeCodeSpan",
-							"CodeMarkerLen": 1,
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker",
-									"Data": "`"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "AbstractAnnotationConfigDispatcherServletInitializer"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker",
-									"Data": "`"
-								}
-							]
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "继承"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong code",
+					"TextMarkTextContent": "AbstractAnnotationConfigDispatcherServletInitializer"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "；"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "实现抽象方法"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "实现抽象方法"
 				},
 				{
 					"Type": "NodeText",
@@ -683,44 +597,18 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeCodeSpan",
-									"CodeMarkerLen": 1,
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker",
-											"Data": "`"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "@EnableWebMvc"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker",
-											"Data": "`"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "@EnableWebMvc"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "：开启 SpringMVC 定制配置功能；与"
 								},
 								{
-									"Type": "NodeCodeSpan",
-									"CodeMarkerLen": 1,
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker",
-											"Data": "`"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "\u003cmvc:annotation-driven/\u003e"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker",
-											"Data": "`"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "\u0026lt;mvc:annotation-driven/\u0026gt;"
 								},
 								{
 									"Type": "NodeText",
@@ -805,22 +693,9 @@
 													"Data": "实现"
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "WebMvcConfigurer"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "WebMvcConfigurer"
 												},
 												{
 													"Type": "NodeText",
@@ -859,22 +734,9 @@
 													"Data": "继承"
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "WebMvcConfigurerAdapter"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "WebMvcConfigurerAdapter"
 												},
 												{
 													"Type": "NodeText",
@@ -909,43 +771,19 @@
 											},
 											"Children": [
 												{
-													"Type": "NodeStrong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "实现"
-														},
-														{
-															"Type": "NodeCodeSpan",
-															"CodeMarkerLen": 1,
-															"Children": [
-																{
-																	"Type": "NodeCodeSpanOpenMarker",
-																	"Data": "`"
-																},
-																{
-																	"Type": "NodeCodeSpanContent",
-																	"Data": "WebMvcConfigurer"
-																},
-																{
-																	"Type": "NodeCodeSpanCloseMarker",
-																	"Data": "`"
-																}
-															]
-														},
-														{
-															"Type": "NodeText",
-															"Data": "接口"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "实现"
+												},
+												{
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong code",
+													"TextMarkTextContent": "WebMvcConfigurer"
+												},
+												{
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "接口"
 												}
 											]
 										}

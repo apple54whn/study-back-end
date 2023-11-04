@@ -1,5 +1,6 @@
 {
 	"ID": "20210708002704-4kzjd95",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20210708002704-4kzjd95",
@@ -199,21 +200,9 @@
 					"Data": "如果希望以 Jar 形式发布模块则尽量不要使用 JSP 相关知识，这是"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "因为 JSP 在内嵌的 Servlet 容器上运行有一些问题 (内嵌 Tomcat、 Jetty 不支持 Jar 形式运行 JSP"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "因为 JSP 在内嵌的 Servlet 容器上运行有一些问题 (内嵌 Tomcat、 Jetty 不支持 Jar 形式运行 JSP"
 				},
 				{
 					"Type": "NodeText",
@@ -348,21 +337,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "Thymeleaf"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "Thymeleaf"
 								}
 							]
 						}
@@ -421,21 +398,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "Beetl"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "Beetl"
 								},
 								{
 									"Type": "NodeText",
@@ -473,33 +438,10 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeLink",
-					"Children": [
-						{
-							"Type": "NodeOpenBracket",
-							"Data": "["
-						},
-						{
-							"Type": "NodeLinkText",
-							"Data": "官方文档查看更详细内容"
-						},
-						{
-							"Type": "NodeCloseBracket",
-							"Data": "]"
-						},
-						{
-							"Type": "NodeOpenParen",
-							"Data": "("
-						},
-						{
-							"Type": "NodeLinkDest",
-							"Data": "https://www.thymeleaf.org/"
-						},
-						{
-							"Type": "NodeCloseParen",
-							"Data": ")"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://www.thymeleaf.org/",
+					"TextMarkTextContent": "官方文档查看更详细内容"
 				}
 			]
 		},
@@ -663,66 +605,27 @@
 					"Data": "只要我们把HTML页面放在"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"CodeMarkerLen": 1,
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker",
-							"Data": "`"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "/templates"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker",
-							"Data": "`"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "/templates"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，thymeleaf就能自动渲染。在 IDEA 中输入 "
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"CodeMarkerLen": 1,
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker",
-							"Data": "`"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "html:5"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker",
-							"Data": "`"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "html:5"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "并按下 Tab 键即可生成如下。还需添加 "
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"CodeMarkerLen": 1,
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker",
-							"Data": "`"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "xmlns:th"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker",
-							"Data": "`"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "xmlns:th"
 				}
 			]
 		},
@@ -845,65 +748,27 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeCodeSpan",
-									"CodeMarkerLen": 1,
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker",
-											"Data": "`"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "th:text"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker",
-											"Data": "`"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "th:text"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "：改变当前元素里面的文本内容，转移特殊字符。"
 								},
 								{
-									"Type": "NodeCodeSpan",
-									"CodeMarkerLen": 1,
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker",
-											"Data": "`"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "th:utext"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker",
-											"Data": "`"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "th:utext"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "不转义。"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "th:任意html属性"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "th:任意html属性"
 								},
 								{
 									"Type": "NodeText",
@@ -936,22 +801,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeCodeSpan",
-									"CodeMarkerLen": 1,
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker",
-											"Data": "`"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "th:each"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker",
-											"Data": "`"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "th:each"
 								},
 								{
 									"Type": "NodeText",
@@ -1126,39 +978,14 @@
 											},
 											"Children": [
 												{
-													"Type": "NodeStrong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "Variable Expressions: "
-														},
-														{
-															"Type": "NodeCodeSpan",
-															"CodeMarkerLen": 1,
-															"Children": [
-																{
-																	"Type": "NodeCodeSpanOpenMarker",
-																	"Data": "`"
-																},
-																{
-																	"Type": "NodeCodeSpanContent",
-																	"Data": "${...}"
-																},
-																{
-																	"Type": "NodeCodeSpanCloseMarker",
-																	"Data": "`"
-																}
-															]
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "Variable Expressions: "
+												},
+												{
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong code",
+													"TextMarkTextContent": "${...}"
 												},
 												{
 													"Type": "NodeText",
@@ -1273,22 +1100,9 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "${#ctx}"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "${#ctx}"
 																				},
 																				{
 																					"Type": "NodeText",
@@ -1321,22 +1135,9 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "${#vars}"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "${#vars}"
 																				},
 																				{
 																					"Type": "NodeText",
@@ -1369,44 +1170,18 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "${#locale}"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "${#locale}"
 																				},
 																				{
 																					"Type": "NodeText",
 																					"Data": " : the context locale. 如"
 																				},
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "${#locale.country}"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "${#locale.country}"
 																				}
 																			]
 																		}
@@ -1435,22 +1210,9 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "${#request}"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "${#request}"
 																				},
 																				{
 																					"Type": "NodeText",
@@ -1483,22 +1245,9 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "${#response}"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "${#response}"
 																				},
 																				{
 																					"Type": "NodeText",
@@ -1531,22 +1280,9 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "${#session}"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "${#session}"
 																				},
 																				{
 																					"Type": "NodeText",
@@ -1579,22 +1315,9 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "${#servletContext}"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "${#servletContext}"
 																				},
 																				{
 																					"Type": "NodeText",
@@ -1635,43 +1358,18 @@
 																	"Data": "使用内置的"
 																},
 																{
-																	"Type": "NodeStrong",
-																	"Children": [
-																		{
-																			"Type": "NodeStrongA6kOpenMarker",
-																			"Data": "**"
-																		},
-																		{
-																			"Type": "NodeText",
-																			"Data": "工具"
-																		},
-																		{
-																			"Type": "NodeStrongA6kCloseMarker",
-																			"Data": "**"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "strong",
+																	"TextMarkTextContent": "工具"
 																},
 																{
 																	"Type": "NodeText",
 																	"Data": "对象（同上，放在"
 																},
 																{
-																	"Type": "NodeCodeSpan",
-																	"CodeMarkerLen": 1,
-																	"Children": [
-																		{
-																			"Type": "NodeCodeSpanOpenMarker",
-																			"Data": "`"
-																		},
-																		{
-																			"Type": "NodeCodeSpanContent",
-																			"Data": "${...}"
-																		},
-																		{
-																			"Type": "NodeCodeSpanCloseMarker",
-																			"Data": "`"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "code",
+																	"TextMarkTextContent": "${...}"
 																},
 																{
 																	"Type": "NodeText",
@@ -1716,22 +1414,9 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "#execInfo"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "#execInfo"
 																				},
 																				{
 																					"Type": "NodeText",
@@ -1764,22 +1449,9 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "#messages"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "#messages"
 																				},
 																				{
 																					"Type": "NodeText",
@@ -1812,22 +1484,9 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "#uris"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "#uris"
 																				},
 																				{
 																					"Type": "NodeText",
@@ -1860,22 +1519,9 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "#conversions"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "#conversions"
 																				},
 																				{
 																					"Type": "NodeText",
@@ -1908,22 +1554,9 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "#dates"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "#dates"
 																				},
 																				{
 																					"Type": "NodeText",
@@ -1956,22 +1589,9 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "#calendars"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "#calendars"
 																				},
 																				{
 																					"Type": "NodeText",
@@ -2004,22 +1624,9 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "#numbers"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "#numbers"
 																				},
 																				{
 																					"Type": "NodeText",
@@ -2052,22 +1659,9 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "#strings"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "#strings"
 																				},
 																				{
 																					"Type": "NodeText",
@@ -2100,22 +1694,9 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "#objects"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "#objects"
 																				},
 																				{
 																					"Type": "NodeText",
@@ -2148,22 +1729,9 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "#bools"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "#bools"
 																				},
 																				{
 																					"Type": "NodeText",
@@ -2196,22 +1764,9 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "#arrays"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "#arrays"
 																				},
 																				{
 																					"Type": "NodeText",
@@ -2244,22 +1799,9 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "#lists"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "#lists"
 																				},
 																				{
 																					"Type": "NodeText",
@@ -2292,22 +1834,9 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "#sets"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "#sets"
 																				},
 																				{
 																					"Type": "NodeText",
@@ -2340,22 +1869,9 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "#maps"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "#maps"
 																				},
 																				{
 																					"Type": "NodeText",
@@ -2388,22 +1904,9 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "#aggregates"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "#aggregates"
 																				},
 																				{
 																					"Type": "NodeText",
@@ -2436,22 +1939,9 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "#ids"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "#ids"
 																				},
 																				{
 																					"Type": "NodeText",
@@ -2496,66 +1986,27 @@
 													"Data": "Selection Variable Expressions: "
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "*{...}"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "*{...}"
 												},
 												{
 													"Type": "NodeText",
 													"Data": "：选择表达式：和"
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "${...}"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "${...}"
 												},
 												{
 													"Type": "NodeText",
 													"Data": "在功能上是一样；配合"
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "th:object"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "th:object"
 												},
 												{
 													"Type": "NodeText",
@@ -2625,22 +2076,9 @@
 													"Data": "Message Expressions: "
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "#{...}"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "#{...}"
 												},
 												{
 													"Type": "NodeText",
@@ -2673,65 +2111,27 @@
 											},
 											"Children": [
 												{
-													"Type": "NodeStrong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "Link URL Expressions"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "Link URL Expressions"
 												},
 												{
 													"Type": "NodeText",
 													"Data": ": "
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "@{...}"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "@{...}"
 												},
 												{
 													"Type": "NodeText",
 													"Data": "：定义URL；在需要参数时，放在"
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "()"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "()"
 												},
 												{
 													"Type": "NodeText",
@@ -2801,22 +2201,9 @@
 													"Data": "Fragment Expressions: "
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "~{...}"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "~{...}"
 												},
 												{
 													"Type": "NodeText",

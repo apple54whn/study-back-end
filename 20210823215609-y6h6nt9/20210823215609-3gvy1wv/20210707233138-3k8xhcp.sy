@@ -1,5 +1,6 @@
 {
 	"ID": "20210707233138-3k8xhcp",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20210707233138-3k8xhcp",
@@ -37,65 +38,27 @@
 					"Data": "之前使用"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"CodeMarkerLen": 1,
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker",
-							"Data": "`"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "DBUtils"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker",
-							"Data": "`"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "DBUtils"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "做的增删改查例子中，客户的业务层实现类存在的问题："
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "事务被自动控制了"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "事务被自动控制了"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "。换言之，我们使用了 connection 对象的 "
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"CodeMarkerLen": 1,
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker",
-							"Data": "`"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "setAutoCommit(true)"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker",
-							"Data": "`"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "setAutoCommit(true)"
 				},
 				{
 					"Type": "NodeText",
@@ -190,21 +153,9 @@
 					"Data": "AOP(Aspect Oriented Programming)："
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "面向切面编程"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "面向切面编程"
 				}
 			]
 		},
@@ -247,21 +198,9 @@
 									"Data": "作用："
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "在程序运行期间，不修改源码对已有方法进行增强"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "在程序运行期间，不修改源码对已有方法进行增强"
 								},
 								{
 									"Type": "NodeText",
@@ -434,21 +373,9 @@
 									"Data": "实现方式："
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "动态代理"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "动态代理"
 								}
 							]
 						}
@@ -543,42 +470,18 @@
 									"Data": "Pointcut("
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "切入点"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "切入点"
 								},
 								{
 									"Type": "NodeText",
 									"Data": ")：所谓切入点是指我们要对哪些 Joinpoint 进行拦截的定义。即"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "被增强的连接点"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "被增强的连接点"
 								}
 							]
 						}
@@ -611,42 +514,18 @@
 									"Data": "Advice("
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "通知"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "通知"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "/增强):   所谓通知是指拦截到 Joinpoint 之后所"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "要做的事情"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "要做的事情"
 								},
 								{
 									"Type": "NodeText",
@@ -695,44 +574,18 @@
 													"Data": "通知的类型：前置通知、后置通知、异常通知、最终通知、环绕通知。 根据"
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "method.invoke"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "method.invoke"
 												},
 												{
 													"Type": "NodeText",
 													"Data": "之前、之后、catch中、finally中，以及实现类重写的"
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "invoke"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "invoke"
 												},
 												{
 													"Type": "NodeText",
@@ -833,21 +686,9 @@
 									"Data": "Weaving(织入):   是指把增强应用到目标对象来创建新的代理对象的"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "过程"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "过程"
 								},
 								{
 									"Type": "NodeText",
@@ -914,42 +755,18 @@
 									"Data": "Aspect("
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "切面"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "切面"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "):   是"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "切入点和通知（引介）的结合"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "切入点和通知（引介）的结合"
 								},
 								{
 									"Type": "NodeText",
@@ -1218,22 +1035,9 @@
 					"Data": "## "
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"CodeMarkerLen": 1,
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker",
-							"Data": "`"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "@EnableAspectJAutoProxy"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker",
-							"Data": "`"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "@EnableAspectJAutoProxy"
 				}
 			]
 		},
@@ -1283,22 +1087,9 @@
 					"Data": "## "
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"CodeMarkerLen": 1,
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker",
-							"Data": "`"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "@Aspect"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker",
-							"Data": "`"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "@Aspect"
 				}
 			]
 		},
@@ -1314,57 +1105,19 @@
 					"Data": "添加"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeCodeSpan",
-							"CodeMarkerLen": 1,
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker",
-									"Data": "`"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "@Component"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker",
-									"Data": "`"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": "、"
-						},
-						{
-							"Type": "NodeCodeSpan",
-							"CodeMarkerLen": 1,
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker",
-									"Data": "`"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "@Aspect"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker",
-									"Data": "`"
-								}
-							]
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong code",
+					"TextMarkTextContent": "@Component"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "、"
+				},
+				{
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong code",
+					"TextMarkTextContent": "@Aspect"
 				},
 				{
 					"Type": "NodeText",
@@ -1450,21 +1203,9 @@
 					"Data": "注意：基于配置的AOP，"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "最终通知会在后置通知或异常通知之前执行"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "最终通知会在后置通知或异常通知之前执行"
 				},
 				{
 					"Type": "NodeText",
@@ -1480,66 +1221,27 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeCodeSpan",
-					"CodeMarkerLen": 1,
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker",
-							"Data": "`"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "ProceedingJoinPoint"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker",
-							"Data": "`"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "ProceedingJoinPoint"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "接口继承了"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"CodeMarkerLen": 1,
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker",
-							"Data": "`"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "JoinPoint"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker",
-							"Data": "`"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "JoinPoint"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "接口。比它多了"
 				},
 				{
-					"Type": "NodeCodeSpan",
-					"CodeMarkerLen": 1,
-					"Children": [
-						{
-							"Type": "NodeCodeSpanOpenMarker",
-							"Data": "`"
-						},
-						{
-							"Type": "NodeCodeSpanContent",
-							"Data": "proceed"
-						},
-						{
-							"Type": "NodeCodeSpanCloseMarker",
-							"Data": "`"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "code",
+					"TextMarkTextContent": "proceed"
 				},
 				{
 					"Type": "NodeText",
@@ -1582,22 +1284,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeCodeSpan",
-									"CodeMarkerLen": 1,
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker",
-											"Data": "`"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "Signature getSignature()"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker",
-											"Data": "`"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "Signature getSignature()"
 								},
 								{
 									"Type": "NodeText",
@@ -1642,22 +1331,9 @@
 											},
 											"Children": [
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "String getName()"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "String getName()"
 												},
 												{
 													"Type": "NodeText",
@@ -1694,22 +1370,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeCodeSpan",
-									"CodeMarkerLen": 1,
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker",
-											"Data": "`"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "Object[] getArgs()"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker",
-											"Data": "`"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "Object[] getArgs()"
 								},
 								{
 									"Type": "NodeText",
@@ -1742,22 +1405,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeCodeSpan",
-									"CodeMarkerLen": 1,
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker",
-											"Data": "`"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "Object getTarget()"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker",
-											"Data": "`"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "Object getTarget()"
 								},
 								{
 									"Type": "NodeText",
@@ -1790,22 +1440,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeCodeSpan",
-									"CodeMarkerLen": 1,
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker",
-											"Data": "`"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "Object getThis()"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker",
-											"Data": "`"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "Object getThis()"
 								},
 								{
 									"Type": "NodeText",
@@ -1874,21 +1511,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "抽取公共代码制作成通知"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "抽取公共代码制作成通知"
 								}
 							]
 						}
@@ -1951,43 +1576,18 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "切入点表达式"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "切入点表达式"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "的写法：关键字："
 								},
 								{
-									"Type": "NodeCodeSpan",
-									"CodeMarkerLen": 1,
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker",
-											"Data": "`"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "execution(表达式)"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker",
-											"Data": "`"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "execution(表达式)"
 								}
 							]
 						},
@@ -2030,22 +1630,9 @@
 													"Data": "表达式"
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "访问修饰符  返回值  包名.包名.包名...类名.方法名(参数列表)"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "访问修饰符  返回值  包名.包名.包名...类名.方法名(参数列表)"
 												}
 											]
 										}
@@ -2078,22 +1665,9 @@
 													"Data": "标准写法"
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "public void com.itheima.service.impl.AccountServiceImpl.saveAccount()"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "public void com.itheima.service.impl.AccountServiceImpl.saveAccount()"
 												}
 											]
 										}
@@ -2126,22 +1700,9 @@
 													"Data": "访问修饰符可以省略"
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "void com.itheima.service.impl.AccountServiceImpl.saveAccount()"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "void com.itheima.service.impl.AccountServiceImpl.saveAccount()"
 												}
 											]
 										}
@@ -2183,22 +1744,9 @@
 											},
 											"Children": [
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "* com.itheima.service.impl.AccountServiceImpl.saveAccount()"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "* com.itheima.service.impl.AccountServiceImpl.saveAccount()"
 												}
 											]
 										}
@@ -2231,22 +1779,9 @@
 													"Data": "包名可以使用通配符，表示任意包。但是有几级包，就需要写几个"
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "*."
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "*."
 												}
 											]
 										},
@@ -2258,22 +1793,9 @@
 											},
 											"Children": [
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "* *.*.*.*.AccountServiceImpl.saveAccount()"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "* *.*.*.*.AccountServiceImpl.saveAccount()"
 												}
 											]
 										}
@@ -2306,22 +1828,9 @@
 													"Data": "包名可以使用"
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "*.."
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "*.."
 												},
 												{
 													"Type": "NodeText",
@@ -2332,22 +1841,9 @@
 													"Data": "\n"
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "* *..AccountServiceImpl.saveAccount()"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "* *..AccountServiceImpl.saveAccount()"
 												}
 											]
 										}
@@ -2380,22 +1876,9 @@
 													"Data": "类名和方法名都可以使用"
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "*"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "*"
 												},
 												{
 													"Type": "NodeText",
@@ -2411,22 +1894,9 @@
 											},
 											"Children": [
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "* *..*.*()"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "* *..*.*()"
 												}
 											]
 										}
@@ -2669,22 +2139,9 @@
 													"Data": "全通配写法："
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "* *..*.*(..)"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "* *..*.*(..)"
 												}
 											]
 										}
@@ -2713,42 +2170,18 @@
 											},
 											"Children": [
 												{
-													"Type": "NodeStrong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "实际开发中切入点表达式的通常写法"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "实际开发中切入点表达式的通常写法"
 												},
 												{
 													"Type": "NodeText",
 													"Data": "："
 												},
 												{
-													"Type": "NodeStrong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "切到业务层实现类下的所有方法"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "切到业务层实现类下的所有方法"
 												}
 											]
 										},
@@ -2760,22 +2193,9 @@
 											},
 											"Children": [
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "* com.itheima.service.impl.*.*(..)"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "* com.itheima.service.impl.*.*(..)"
 												}
 											]
 										}
@@ -2848,22 +2268,9 @@
 									"Data": "在spirng-config.xml中添加AOP约束。在指南中搜索"
 								},
 								{
-									"Type": "NodeCodeSpan",
-									"CodeMarkerLen": 1,
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker",
-											"Data": "`"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "xmlns:aop"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker",
-											"Data": "`"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "xmlns:aop"
 								},
 								{
 									"Type": "NodeText",
@@ -2963,21 +2370,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "抽取公共代码制作成通知"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "抽取公共代码制作成通知"
 								}
 							]
 						}
@@ -3012,21 +2407,9 @@
 									"Data": "spring中基于XML的"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "AOP配置"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "AOP配置"
 								},
 								{
 									"Type": "NodeText",
@@ -3077,21 +2460,9 @@
 													"Data": "把"
 												},
 												{
-													"Type": "NodeStrong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "通知Bean也交给spring来管理"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "通知Bean也交给spring来管理"
 												}
 											]
 										}
@@ -3126,43 +2497,18 @@
 													"Data": "使用"
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "aop:config"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "aop:config"
 												},
 												{
 													"Type": "NodeText",
 													"Data": "标签表明开始"
 												},
 												{
-													"Type": "NodeStrong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "AOP的配置"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "AOP的配置"
 												}
 											]
 										}
@@ -3197,43 +2543,18 @@
 													"Data": "使用"
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "aop:aspect"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "aop:aspect"
 												},
 												{
 													"Type": "NodeText",
 													"Data": "标签表明配置"
 												},
 												{
-													"Type": "NodeStrong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "切面"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "切面"
 												}
 											]
 										},
@@ -3274,22 +2595,9 @@
 															},
 															"Children": [
 																{
-																	"Type": "NodeCodeSpan",
-																	"CodeMarkerLen": 1,
-																	"Children": [
-																		{
-																			"Type": "NodeCodeSpanOpenMarker",
-																			"Data": "`"
-																		},
-																		{
-																			"Type": "NodeCodeSpanContent",
-																			"Data": "id"
-																		},
-																		{
-																			"Type": "NodeCodeSpanCloseMarker",
-																			"Data": "`"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "code",
+																	"TextMarkTextContent": "id"
 																},
 																{
 																	"Type": "NodeText",
@@ -3322,22 +2630,9 @@
 															},
 															"Children": [
 																{
-																	"Type": "NodeCodeSpan",
-																	"CodeMarkerLen": 1,
-																	"Children": [
-																		{
-																			"Type": "NodeCodeSpanOpenMarker",
-																			"Data": "`"
-																		},
-																		{
-																			"Type": "NodeCodeSpanContent",
-																			"Data": "ref"
-																		},
-																		{
-																			"Type": "NodeCodeSpanCloseMarker",
-																			"Data": "`"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "code",
+																	"TextMarkTextContent": "ref"
 																},
 																{
 																	"Type": "NodeText",
@@ -3380,43 +2675,18 @@
 													"Data": "在"
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "aop:aspect"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "aop:aspect"
 												},
 												{
 													"Type": "NodeText",
 													"Data": "标签的内部使用对应标签来配置"
 												},
 												{
-													"Type": "NodeStrong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "通知的类型"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "通知的类型"
 												},
 												{
 													"Type": "NodeText",
@@ -3459,22 +2729,9 @@
 															},
 															"Children": [
 																{
-																	"Type": "NodeCodeSpan",
-																	"CodeMarkerLen": 1,
-																	"Children": [
-																		{
-																			"Type": "NodeCodeSpanOpenMarker",
-																			"Data": "`"
-																		},
-																		{
-																			"Type": "NodeCodeSpanContent",
-																			"Data": "aop:before"
-																		},
-																		{
-																			"Type": "NodeCodeSpanCloseMarker",
-																			"Data": "`"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "code",
+																	"TextMarkTextContent": "aop:before"
 																},
 																{
 																	"Type": "NodeText",
@@ -3519,43 +2776,18 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "method"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "method"
 																				},
 																				{
 																					"Type": "NodeText",
 																					"Data": "属性：用于指定Logger类中"
 																				},
 																				{
-																					"Type": "NodeStrong",
-																					"Children": [
-																						{
-																							"Type": "NodeStrongA6kOpenMarker",
-																							"Data": "**"
-																						},
-																						{
-																							"Type": "NodeText",
-																							"Data": "哪个方法是前置通知"
-																						},
-																						{
-																							"Type": "NodeStrongA6kCloseMarker",
-																							"Data": "**"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "strong",
+																					"TextMarkTextContent": "哪个方法是前置通知"
 																				}
 																			]
 																		}
@@ -3584,43 +2816,18 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "pointcut"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "pointcut"
 																				},
 																				{
 																					"Type": "NodeText",
 																					"Data": "属性：用于指定切入点表达式，该表达式的含义指的是对业务层中"
 																				},
 																				{
-																					"Type": "NodeStrong",
-																					"Children": [
-																						{
-																							"Type": "NodeStrongA6kOpenMarker",
-																							"Data": "**"
-																						},
-																						{
-																							"Type": "NodeText",
-																							"Data": "哪些方法增强"
-																						},
-																						{
-																							"Type": "NodeStrongA6kCloseMarker",
-																							"Data": "**"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "strong",
+																					"TextMarkTextContent": "哪些方法增强"
 																				}
 																			]
 																		}
@@ -3649,22 +2856,9 @@
 																			},
 																			"Children": [
 																				{
-																					"Type": "NodeCodeSpan",
-																					"CodeMarkerLen": 1,
-																					"Children": [
-																						{
-																							"Type": "NodeCodeSpanOpenMarker",
-																							"Data": "`"
-																						},
-																						{
-																							"Type": "NodeCodeSpanContent",
-																							"Data": "ponitcut-ref"
-																						},
-																						{
-																							"Type": "NodeCodeSpanCloseMarker",
-																							"Data": "`"
-																						}
-																					]
+																					"Type": "NodeTextMark",
+																					"TextMarkType": "code",
+																					"TextMarkTextContent": "ponitcut-ref"
 																				},
 																				{
 																					"Type": "NodeText",
@@ -3707,43 +2901,18 @@
 											},
 											"Children": [
 												{
-													"Type": "NodeStrong",
-													"Children": [
-														{
-															"Type": "NodeStrongA6kOpenMarker",
-															"Data": "**"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "切入点表达式"
-														},
-														{
-															"Type": "NodeStrongA6kCloseMarker",
-															"Data": "**"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "strong",
+													"TextMarkTextContent": "切入点表达式"
 												},
 												{
 													"Type": "NodeText",
 													"Data": "的写法：关键字："
 												},
 												{
-													"Type": "NodeCodeSpan",
-													"CodeMarkerLen": 1,
-													"Children": [
-														{
-															"Type": "NodeCodeSpanOpenMarker",
-															"Data": "`"
-														},
-														{
-															"Type": "NodeCodeSpanContent",
-															"Data": "execution(表达式)"
-														},
-														{
-															"Type": "NodeCodeSpanCloseMarker",
-															"Data": "`"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "code",
+													"TextMarkTextContent": "execution(表达式)"
 												}
 											]
 										},
@@ -3786,22 +2955,9 @@
 																	"Data": "表达式"
 																},
 																{
-																	"Type": "NodeCodeSpan",
-																	"CodeMarkerLen": 1,
-																	"Children": [
-																		{
-																			"Type": "NodeCodeSpanOpenMarker",
-																			"Data": "`"
-																		},
-																		{
-																			"Type": "NodeCodeSpanContent",
-																			"Data": "访问修饰符  返回值  包名.包名.包名...类名.方法名(参数列表)"
-																		},
-																		{
-																			"Type": "NodeCodeSpanCloseMarker",
-																			"Data": "`"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "code",
+																	"TextMarkTextContent": "访问修饰符  返回值  包名.包名.包名...类名.方法名(参数列表)"
 																}
 															]
 														}
@@ -3834,22 +2990,9 @@
 																	"Data": "标准写法"
 																},
 																{
-																	"Type": "NodeCodeSpan",
-																	"CodeMarkerLen": 1,
-																	"Children": [
-																		{
-																			"Type": "NodeCodeSpanOpenMarker",
-																			"Data": "`"
-																		},
-																		{
-																			"Type": "NodeCodeSpanContent",
-																			"Data": "public void com.itheima.service.impl.AccountServiceImpl.saveAccount()"
-																		},
-																		{
-																			"Type": "NodeCodeSpanCloseMarker",
-																			"Data": "`"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "code",
+																	"TextMarkTextContent": "public void com.itheima.service.impl.AccountServiceImpl.saveAccount()"
 																}
 															]
 														}
@@ -3882,22 +3025,9 @@
 																	"Data": "访问修饰符可以省略"
 																},
 																{
-																	"Type": "NodeCodeSpan",
-																	"CodeMarkerLen": 1,
-																	"Children": [
-																		{
-																			"Type": "NodeCodeSpanOpenMarker",
-																			"Data": "`"
-																		},
-																		{
-																			"Type": "NodeCodeSpanContent",
-																			"Data": "void com.itheima.service.impl.AccountServiceImpl.saveAccount()"
-																		},
-																		{
-																			"Type": "NodeCodeSpanCloseMarker",
-																			"Data": "`"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "code",
+																	"TextMarkTextContent": "void com.itheima.service.impl.AccountServiceImpl.saveAccount()"
 																}
 															]
 														}
@@ -3939,22 +3069,9 @@
 															},
 															"Children": [
 																{
-																	"Type": "NodeCodeSpan",
-																	"CodeMarkerLen": 1,
-																	"Children": [
-																		{
-																			"Type": "NodeCodeSpanOpenMarker",
-																			"Data": "`"
-																		},
-																		{
-																			"Type": "NodeCodeSpanContent",
-																			"Data": "* com.itheima.service.impl.AccountServiceImpl.saveAccount()"
-																		},
-																		{
-																			"Type": "NodeCodeSpanCloseMarker",
-																			"Data": "`"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "code",
+																	"TextMarkTextContent": "* com.itheima.service.impl.AccountServiceImpl.saveAccount()"
 																}
 															]
 														}
@@ -3987,22 +3104,9 @@
 																	"Data": "包名可以使用通配符，表示任意包。但是有几级包，就需要写几个"
 																},
 																{
-																	"Type": "NodeCodeSpan",
-																	"CodeMarkerLen": 1,
-																	"Children": [
-																		{
-																			"Type": "NodeCodeSpanOpenMarker",
-																			"Data": "`"
-																		},
-																		{
-																			"Type": "NodeCodeSpanContent",
-																			"Data": "*."
-																		},
-																		{
-																			"Type": "NodeCodeSpanCloseMarker",
-																			"Data": "`"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "code",
+																	"TextMarkTextContent": "*."
 																}
 															]
 														},
@@ -4014,22 +3118,9 @@
 															},
 															"Children": [
 																{
-																	"Type": "NodeCodeSpan",
-																	"CodeMarkerLen": 1,
-																	"Children": [
-																		{
-																			"Type": "NodeCodeSpanOpenMarker",
-																			"Data": "`"
-																		},
-																		{
-																			"Type": "NodeCodeSpanContent",
-																			"Data": "* *.*.*.*.AccountServiceImpl.saveAccount()"
-																		},
-																		{
-																			"Type": "NodeCodeSpanCloseMarker",
-																			"Data": "`"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "code",
+																	"TextMarkTextContent": "* *.*.*.*.AccountServiceImpl.saveAccount()"
 																}
 															]
 														}
@@ -4062,22 +3153,9 @@
 																	"Data": "包名可以使用"
 																},
 																{
-																	"Type": "NodeCodeSpan",
-																	"CodeMarkerLen": 1,
-																	"Children": [
-																		{
-																			"Type": "NodeCodeSpanOpenMarker",
-																			"Data": "`"
-																		},
-																		{
-																			"Type": "NodeCodeSpanContent",
-																			"Data": "*.."
-																		},
-																		{
-																			"Type": "NodeCodeSpanCloseMarker",
-																			"Data": "`"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "code",
+																	"TextMarkTextContent": "*.."
 																},
 																{
 																	"Type": "NodeText",
@@ -4088,22 +3166,9 @@
 																	"Data": "\n"
 																},
 																{
-																	"Type": "NodeCodeSpan",
-																	"CodeMarkerLen": 1,
-																	"Children": [
-																		{
-																			"Type": "NodeCodeSpanOpenMarker",
-																			"Data": "`"
-																		},
-																		{
-																			"Type": "NodeCodeSpanContent",
-																			"Data": "* *..AccountServiceImpl.saveAccount()"
-																		},
-																		{
-																			"Type": "NodeCodeSpanCloseMarker",
-																			"Data": "`"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "code",
+																	"TextMarkTextContent": "* *..AccountServiceImpl.saveAccount()"
 																}
 															]
 														}
@@ -4136,22 +3201,9 @@
 																	"Data": "类名和方法名都可以使用"
 																},
 																{
-																	"Type": "NodeCodeSpan",
-																	"CodeMarkerLen": 1,
-																	"Children": [
-																		{
-																			"Type": "NodeCodeSpanOpenMarker",
-																			"Data": "`"
-																		},
-																		{
-																			"Type": "NodeCodeSpanContent",
-																			"Data": "*"
-																		},
-																		{
-																			"Type": "NodeCodeSpanCloseMarker",
-																			"Data": "`"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "code",
+																	"TextMarkTextContent": "*"
 																},
 																{
 																	"Type": "NodeText",
@@ -4167,22 +3219,9 @@
 															},
 															"Children": [
 																{
-																	"Type": "NodeCodeSpan",
-																	"CodeMarkerLen": 1,
-																	"Children": [
-																		{
-																			"Type": "NodeCodeSpanOpenMarker",
-																			"Data": "`"
-																		},
-																		{
-																			"Type": "NodeCodeSpanContent",
-																			"Data": "* *..*.*()"
-																		},
-																		{
-																			"Type": "NodeCodeSpanCloseMarker",
-																			"Data": "`"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "code",
+																	"TextMarkTextContent": "* *..*.*()"
 																}
 															]
 														}
@@ -4425,22 +3464,9 @@
 																	"Data": "全通配写法："
 																},
 																{
-																	"Type": "NodeCodeSpan",
-																	"CodeMarkerLen": 1,
-																	"Children": [
-																		{
-																			"Type": "NodeCodeSpanOpenMarker",
-																			"Data": "`"
-																		},
-																		{
-																			"Type": "NodeCodeSpanContent",
-																			"Data": "* *..*.*(..)"
-																		},
-																		{
-																			"Type": "NodeCodeSpanCloseMarker",
-																			"Data": "`"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "code",
+																	"TextMarkTextContent": "* *..*.*(..)"
 																}
 															]
 														}
@@ -4469,42 +3495,18 @@
 															},
 															"Children": [
 																{
-																	"Type": "NodeStrong",
-																	"Children": [
-																		{
-																			"Type": "NodeStrongA6kOpenMarker",
-																			"Data": "**"
-																		},
-																		{
-																			"Type": "NodeText",
-																			"Data": "实际开发中切入点表达式的通常写法"
-																		},
-																		{
-																			"Type": "NodeStrongA6kCloseMarker",
-																			"Data": "**"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "strong",
+																	"TextMarkTextContent": "实际开发中切入点表达式的通常写法"
 																},
 																{
 																	"Type": "NodeText",
 																	"Data": "："
 																},
 																{
-																	"Type": "NodeStrong",
-																	"Children": [
-																		{
-																			"Type": "NodeStrongA6kOpenMarker",
-																			"Data": "**"
-																		},
-																		{
-																			"Type": "NodeText",
-																			"Data": "切到业务层实现类下的所有方法"
-																		},
-																		{
-																			"Type": "NodeStrongA6kCloseMarker",
-																			"Data": "**"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "strong",
+																	"TextMarkTextContent": "切到业务层实现类下的所有方法"
 																}
 															]
 														},
@@ -4516,22 +3518,9 @@
 															},
 															"Children": [
 																{
-																	"Type": "NodeCodeSpan",
-																	"CodeMarkerLen": 1,
-																	"Children": [
-																		{
-																			"Type": "NodeCodeSpanOpenMarker",
-																			"Data": "`"
-																		},
-																		{
-																			"Type": "NodeCodeSpanContent",
-																			"Data": "* com.itheima.service.impl.*.*(..)"
-																		},
-																		{
-																			"Type": "NodeCodeSpanCloseMarker",
-																			"Data": "`"
-																		}
-																	]
+																	"Type": "NodeTextMark",
+																	"TextMarkType": "code",
+																	"TextMarkTextContent": "* com.itheima.service.impl.*.*(..)"
 																}
 															]
 														}
@@ -4625,42 +3614,18 @@
 					"Data": "要想使用"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "注解的方式"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "注解的方式"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "使用Spring AOP就"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "必须要有源码"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "必须要有源码"
 				},
 				{
 					"Type": "NodeText",
@@ -4719,21 +3684,9 @@
 							"Type": "NodeTableCell",
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "\u003c aop:config\u003e"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "\u0026lt; aop:config\u0026gt;"
 								}
 							]
 						},
@@ -4759,21 +3712,9 @@
 							"Type": "NodeTableCell",
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "\u003c aop:aspect\u003e"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "\u0026lt; aop:aspect\u0026gt;"
 								}
 							]
 						},
@@ -4799,21 +3740,9 @@
 							"Type": "NodeTableCell",
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "\u003c aop:pointcut\u003e"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "\u0026lt; aop:pointcut\u0026gt;"
 								}
 							]
 						},
@@ -5028,21 +3957,9 @@
 							"Type": "NodeTableCell",
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "\u003c aop:declare-parents\u003e"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "\u0026lt; aop:declare-parents\u0026gt;"
 								}
 							]
 						},

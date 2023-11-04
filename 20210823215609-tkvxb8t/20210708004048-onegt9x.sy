@@ -1,5 +1,6 @@
 {
 	"ID": "20210708004048-onegt9x",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20210708004048-onegt9x",
@@ -57,21 +58,9 @@
 					"Data": "## "
 				},
 				{
-					"Type": "NodeStrikethrough",
-					"Children": [
-						{
-							"Type": "NodeStrikethrough2OpenMarker",
-							"Data": "~~"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "Redis 相比 Memchached 的区别、优势"
-						},
-						{
-							"Type": "NodeStrikethrough2CloseMarker",
-							"Data": "~~"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "s",
+					"TextMarkTextContent": "Redis 相比 Memchached 的区别、优势"
 				}
 			]
 		},
@@ -150,21 +139,9 @@
 									"Data": "无论什么版本，"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "工作线程只有一个"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "工作线程只有一个"
 								},
 								{
 									"Type": "NodeText",
@@ -1022,21 +999,9 @@
 									"Data": "AOF，每秒刷盘一次命令。aof日志可以得到所有命令，文件体积变大，需要 aof "
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "重写当前内存中指令"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "重写当前内存中指令"
 								},
 								{
 									"Type": "NodeText",
@@ -1284,21 +1249,9 @@
 									"Data": "Redis 默认是"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "弱一致性，异步的同步"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "弱一致性，异步的同步"
 								}
 							]
 						}
@@ -1327,21 +1280,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "锁不能用主从结构，可以采用 单实例、分片集群、redlock。逻辑上使用 redisson 即可！"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "锁不能用主从结构，可以采用 单实例、分片集群、redlock。逻辑上使用 redisson 即可！"
 								}
 							]
 						}
@@ -1677,30 +1618,10 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeLink",
-					"Data": "span",
-					"Children": [
-						{
-							"Type": "NodeOpenBracket"
-						},
-						{
-							"Type": "NodeLinkText",
-							"Data": "万字长文说透分布式锁"
-						},
-						{
-							"Type": "NodeCloseBracket"
-						},
-						{
-							"Type": "NodeOpenParen"
-						},
-						{
-							"Type": "NodeLinkDest",
-							"Data": "https://mp.weixin.qq.com/s/35aCS_5GqLyzZS3VobL6fg"
-						},
-						{
-							"Type": "NodeCloseParen"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "a",
+					"TextMarkAHref": "https://mp.weixin.qq.com/s/35aCS_5GqLyzZS3VobL6fg",
+					"TextMarkTextContent": "万字长文说透分布式锁"
 				}
 			]
 		},
@@ -1779,21 +1700,9 @@
 									"Data": "Redis "
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "单指令操作是原子的"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "单指令操作是原子的"
 								}
 							]
 						}
@@ -1826,21 +1735,9 @@
 									"Data": "pipleline 是一个"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "客户端的指令集合"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "客户端的指令集合"
 								},
 								{
 									"Type": "NodeText",
@@ -1877,21 +1774,9 @@
 									"Data": "Redis 事务执行时期是原子的，"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "失败的就是失败，其他继续执行，没有回滚，需要手动设置！和 MySQL 完全不一样"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "失败的就是失败，其他继续执行，没有回滚，需要手动设置！和 MySQL 完全不一样"
 								}
 							]
 						},
@@ -1903,21 +1788,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "在 6.0 后，由于 IO 多线程，所以发送到 Redis 服务器的命令可能是穿插的，但是！执行的时候，是根据 Redis 客户端来区分，来执行原子事务！"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "在 6.0 后，由于 IO 多线程，所以发送到 Redis 服务器的命令可能是穿插的，但是！执行的时候，是根据 Redis 客户端来区分，来执行原子事务！"
 								}
 							]
 						},
@@ -2092,21 +1965,9 @@
 					"Data": "以上问题，核心就是"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "避免对 DB 的无效、重复请求"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "避免对 DB 的无效、重复请求"
 				}
 			]
 		},
@@ -2127,21 +1988,9 @@
 					"Data": "🔥 布隆过滤器又是什么？"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "能手写个布隆过滤器吗"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "能手写个布隆过滤器吗"
 				},
 				{
 					"Type": "NodeText",
@@ -2424,42 +2273,18 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "分布式事务！慎重选择"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "分布式事务！慎重选择"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "，意义不大，性能太差！除非"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "读多写少"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "读多写少"
 								},
 								{
 									"Type": "NodeText",
@@ -2680,21 +2505,9 @@
 					"Data": "## "
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "Pika 知道吗？Tendis 和它的区别"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Pika 知道吗？Tendis 和它的区别"
 				},
 				{
 					"Type": "NodeText",

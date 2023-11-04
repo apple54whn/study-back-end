@@ -1,5 +1,6 @@
 {
 	"ID": "20210708004534-q37lfui",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20210708004534-q37lfui",
@@ -371,63 +372,27 @@
 					"Data": "哨兵（Sentinel） 是一个分布式系统，用于对"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "主从结构中的每台服务器"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "主从结构中的每台服务器"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "进行"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "监控"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "监控"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，当出现故障时通过"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "投票机制"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "投票机制"
 				},
 				{
 					"Type": "NodeText",
@@ -603,63 +568,27 @@
 					"Data": "注意："
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "哨兵也是一台 redis 服务器"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "哨兵也是一台 redis 服务器"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，只是"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "不提供数据服务"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "不提供数据服务"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "。通常哨兵配置数量为"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "单数！！！"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "单数！！！"
 				}
 			]
 		},
@@ -768,22 +697,9 @@
 									"Data": "配置三个哨兵（配置相同，端口不同）。参看 Redis 中的 "
 								},
 								{
-									"Type": "NodeCodeSpan",
-									"CodeMarkerLen": 1,
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker",
-											"Data": "`"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "sentinel.conf"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker",
-											"Data": "`"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "sentinel.conf"
 								}
 							]
 						},
@@ -861,43 +777,18 @@
 									"Data": "提示：复制并修改文件中"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "端口"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "端口"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "时可以直接使用 "
 								},
 								{
-									"Type": "NodeCodeSpan",
-									"CodeMarkerLen": 1,
-									"Children": [
-										{
-											"Type": "NodeCodeSpanOpenMarker",
-											"Data": "`"
-										},
-										{
-											"Type": "NodeCodeSpanContent",
-											"Data": "sed"
-										},
-										{
-											"Type": "NodeCodeSpanCloseMarker",
-											"Data": "`"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "code",
+									"TextMarkTextContent": "sed"
 								},
 								{
 									"Type": "NodeText",
@@ -1095,55 +986,19 @@
 							"Children": [
 								{
 									"Type": "NodeText",
-									"Data": "sentinel monitor "
-								},
-								{
-									"Type": "NodeBackslash",
-									"Children": [
-										{
-											"Type": "NodeBackslashContent",
-											"Data": "\u003c"
-										}
-									]
+									"Data": "sentinel monitor \u003c"
 								},
 								{
 									"Type": "NodeText",
-									"Data": "master-name\u003e "
-								},
-								{
-									"Type": "NodeBackslash",
-									"Children": [
-										{
-											"Type": "NodeBackslashContent",
-											"Data": "\u003c"
-										}
-									]
+									"Data": "master-name\u003e \u003c"
 								},
 								{
 									"Type": "NodeText",
-									"Data": "ip\u003e "
-								},
-								{
-									"Type": "NodeBackslash",
-									"Children": [
-										{
-											"Type": "NodeBackslashContent",
-											"Data": "\u003c"
-										}
-									]
+									"Data": "ip\u003e \u003c"
 								},
 								{
 									"Type": "NodeText",
-									"Data": "redis-port\u003e "
-								},
-								{
-									"Type": "NodeBackslash",
-									"Children": [
-										{
-											"Type": "NodeBackslashContent",
-											"Data": "\u003c"
-										}
-									]
+									"Data": "redis-port\u003e \u003c"
 								},
 								{
 									"Type": "NodeText",
@@ -1168,42 +1023,18 @@
 									"Data": "设置哨兵监听的"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "主服务器信息"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "主服务器信息"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "，最后的参数决定了最终"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "参与选举的服务器数量"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "参与选举的服务器数量"
 								},
 								{
 									"Type": "NodeText",
@@ -1226,29 +1057,11 @@
 							"Children": [
 								{
 									"Type": "NodeText",
-									"Data": "sentinel down-after-milliseconds "
-								},
-								{
-									"Type": "NodeBackslash",
-									"Children": [
-										{
-											"Type": "NodeBackslashContent",
-											"Data": "\u003c"
-										}
-									]
+									"Data": "sentinel down-after-milliseconds \u003c"
 								},
 								{
 									"Type": "NodeText",
-									"Data": "master-name\u003e "
-								},
-								{
-									"Type": "NodeBackslash",
-									"Children": [
-										{
-											"Type": "NodeBackslashContent",
-											"Data": "\u003c"
-										}
-									]
+									"Data": "master-name\u003e \u003c"
 								},
 								{
 									"Type": "NodeText",
@@ -1273,21 +1086,9 @@
 									"Data": "指定哨兵在监控 Redis 服务时，"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "判定 master 服务器挂掉的时间周期"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "判定 master 服务器挂掉的时间周期"
 								},
 								{
 									"Type": "NodeText",
@@ -1310,29 +1111,11 @@
 							"Children": [
 								{
 									"Type": "NodeText",
-									"Data": "sentinel parallel-syncs "
-								},
-								{
-									"Type": "NodeBackslash",
-									"Children": [
-										{
-											"Type": "NodeBackslashContent",
-											"Data": "\u003c"
-										}
-									]
+									"Data": "sentinel parallel-syncs \u003c"
 								},
 								{
 									"Type": "NodeText",
-									"Data": "master-name\u003e "
-								},
-								{
-									"Type": "NodeBackslash",
-									"Children": [
-										{
-											"Type": "NodeBackslashContent",
-											"Data": "\u003c"
-										}
-									]
+									"Data": "master-name\u003e \u003c"
 								},
 								{
 									"Type": "NodeText",
@@ -1357,21 +1140,9 @@
 									"Data": "指定"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "同时进行主从的 slave 数量"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "同时进行主从的 slave 数量"
 								},
 								{
 									"Type": "NodeText",
@@ -1394,29 +1165,11 @@
 							"Children": [
 								{
 									"Type": "NodeText",
-									"Data": "sentinel failover-timeout "
-								},
-								{
-									"Type": "NodeBackslash",
-									"Children": [
-										{
-											"Type": "NodeBackslashContent",
-											"Data": "\u003c"
-										}
-									]
+									"Data": "sentinel failover-timeout \u003c"
 								},
 								{
 									"Type": "NodeText",
-									"Data": "master-name\u003e "
-								},
-								{
-									"Type": "NodeBackslash",
-									"Children": [
-										{
-											"Type": "NodeBackslashContent",
-											"Data": "\u003c"
-										}
-									]
+									"Data": "master-name\u003e \u003c"
 								},
 								{
 									"Type": "NodeText",
@@ -1441,21 +1194,9 @@
 									"Data": "指定出现故障后，"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "故障切换的最大超时时间"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "故障切换的最大超时时间"
 								},
 								{
 									"Type": "NodeText",
@@ -1478,29 +1219,11 @@
 							"Children": [
 								{
 									"Type": "NodeText",
-									"Data": "sentinel notification-script "
-								},
-								{
-									"Type": "NodeBackslash",
-									"Children": [
-										{
-											"Type": "NodeBackslashContent",
-											"Data": "\u003c"
-										}
-									]
+									"Data": "sentinel notification-script \u003c"
 								},
 								{
 									"Type": "NodeText",
-									"Data": "master-name\u003e "
-								},
-								{
-									"Type": "NodeBackslash",
-									"Children": [
-										{
-											"Type": "NodeBackslashContent",
-											"Data": "\u003c"
-										}
-									]
+									"Data": "master-name\u003e \u003c"
 								},
 								{
 									"Type": "NodeText",

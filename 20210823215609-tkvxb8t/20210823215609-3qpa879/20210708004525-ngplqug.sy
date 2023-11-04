@@ -1,5 +1,6 @@
 {
 	"ID": "20210708004525-ngplqug",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20210708004525-ngplqug",
@@ -209,21 +210,9 @@
 					"Data": "为了解决这个问题，我们可以使用 Redis 提供的流水线特性：这个特性"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "允许客户端把任意多条 Redis 命令请求打包在一起，然后一次性地将它们全部发送给服务器，而服务器则会在流水线包含的所有命令请求都处理完毕之后，一次性地将它们的执行结果全部返回给客户端"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "允许客户端把任意多条 Redis 命令请求打包在一起，然后一次性地将它们全部发送给服务器，而服务器则会在流水线包含的所有命令请求都处理完毕之后，一次性地将它们的执行结果全部返回给客户端"
 				},
 				{
 					"Type": "NodeText",
@@ -282,42 +271,18 @@
 					"Data": "虽然 Redis 服务器并不会限制客户端在流水线中包含的命令数量，但是却会为"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "客户端的输入缓冲区"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "客户端的输入缓冲区"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "设置默认值为"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "1GB 的体积上限"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "1GB 的体积上限"
 				},
 				{
 					"Type": "NodeText",
@@ -382,42 +347,18 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "Redis 事务就是一个命令执行的队列"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Redis 事务就是一个命令执行的队列"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，将一系列预定义命令包装成一个整体（一个"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "队列"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "队列"
 				},
 				{
 					"Type": "NodeText",
@@ -543,21 +484,9 @@
 					"Data": "注意：加入事务的命令"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "暂时进入到任务队列中"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "暂时进入到任务队列中"
 				},
 				{
 					"Type": "NodeText",
@@ -699,21 +628,9 @@
 					"Data": "定义事务的过程中，命令格式及"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "语法输入错误"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "语法输入错误"
 				},
 				{
 					"Type": "NodeText",
@@ -792,42 +709,18 @@
 									"Data": "处理结果：如果定义的事务中所包含的命令存在语法错误，"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "整体事务中所有命令均不会执行"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "整体事务中所有命令均不会执行"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "，"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "包括那些语法正确的命令"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "包括那些语法正确的命令"
 								}
 							]
 						}
@@ -847,21 +740,9 @@
 					"Data": "定义事务的过程中，命令执"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "行出现错误"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "行出现错误"
 				},
 				{
 					"Type": "NodeText",
@@ -938,21 +819,9 @@
 									"Data": "处理结果："
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "能够正确运行的命令会执行，运行错误的命令不会被执行"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "能够正确运行的命令会执行，运行错误的命令不会被执行"
 								}
 							]
 						},
@@ -968,21 +837,9 @@
 									"Data": "注意："
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "已经执行完毕的命令对应的数据不会自动回滚，需要程序员自己在代码中实现回滚"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "已经执行完毕的命令对应的数据不会自动回滚，需要程序员自己在代码中实现回滚"
 								},
 								{
 									"Type": "NodeText",
@@ -1297,21 +1154,9 @@
 									"Data": "流水线的作用是将多个命令打包，然后"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "一并发送"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "一并发送"
 								},
 								{
 									"Type": "NodeText",
@@ -1348,21 +1193,9 @@
 									"Data": "事务的作用则是将多个命令打包，然后让服务器"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "一并执行"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "一并执行"
 								},
 								{
 									"Type": "NodeText",
@@ -1490,21 +1323,9 @@
 									"Data": "多个客户端有可能"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "同时操作同一组数据，并且该数据一旦被操作修改后，将不适用于继续操作"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "同时操作同一组数据，并且该数据一旦被操作修改后，将不适用于继续操作"
 								}
 							]
 						}
@@ -1537,21 +1358,9 @@
 									"Data": "在"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "操作之前锁定要操作的数据"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "操作之前锁定要操作的数据"
 								},
 								{
 									"Type": "NodeText",
@@ -1611,42 +1420,18 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "对 key 添加监视锁"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "对 key 添加监视锁"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "，"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "在执行 exec 前如果 key 发生了变化，终止事务执行"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "在执行 exec 前如果 key 发生了变化，终止事务执行"
 								}
 							]
 						},
@@ -1846,42 +1631,18 @@
 					"Data": "天猫双 11 热卖过程中，对已经售罄的货物追加补货，且补货完成。客户购买热情高涨，3 秒内将所有商品购 买完毕。本次补货已经将库存全部清空，如何避免"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "最后一件商品"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "最后一件商品"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "不被多人同时购买?【"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "超卖"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "超卖"
 				},
 				{
 					"Type": "NodeText",
@@ -1943,21 +1704,9 @@
 									"Data": "使用 watch 监控一个 key 有没有改变已经不能解决问题，此处要监控的是"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "具体数据"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "具体数据"
 								}
 							]
 						}
@@ -2047,21 +1796,9 @@
 									"Data": "使用 setnx 设置一个"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "公共锁，必须是同一把锁"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "公共锁，必须是同一把锁"
 								}
 							]
 						},
@@ -2104,21 +1841,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "利用 setnx 命令的返回值特征"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "利用 setnx 命令的返回值特征"
 								},
 								{
 									"Type": "NodeText",
@@ -2360,42 +2085,18 @@
 									"Data": "由于"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "锁操作由用户控制加锁解锁"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "锁操作由用户控制加锁解锁"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "，"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "必定会存在加锁后未解锁的风险"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "必定会存在加锁后未解锁的风险"
 								}
 							]
 						}
@@ -2428,21 +2129,9 @@
 									"Data": "需要解锁操作不能仅依赖用户控制，"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "系统级别要给出对应的保底处理方案"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "系统级别要给出对应的保底处理方案"
 								}
 							]
 						}
@@ -2498,21 +2187,9 @@
 							},
 							"Children": [
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "使用 expire 为锁 key 添加时间限定"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "使用 expire 为锁 key 添加时间限定"
 								},
 								{
 									"Type": "NodeText",
@@ -2665,21 +2342,9 @@
 													"Data": "锁时间设定推荐：最大耗时"
 												},
 												{
-													"Type": "NodeEmphasis",
-													"Children": [
-														{
-															"Type": "NodeEmA6kOpenMarker",
-															"Data": "*"
-														},
-														{
-															"Type": "NodeText",
-															"Data": "120%+平均网络延迟"
-														},
-														{
-															"Type": "NodeEmA6kCloseMarker",
-															"Data": "*"
-														}
-													]
+													"Type": "NodeTextMark",
+													"TextMarkType": "em",
+													"TextMarkTextContent": "120%+平均网络延迟"
 												},
 												{
 													"Type": "NodeText",

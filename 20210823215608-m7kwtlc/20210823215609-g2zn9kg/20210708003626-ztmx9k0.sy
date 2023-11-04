@@ -1,5 +1,6 @@
 {
 	"ID": "20210708003626-ztmx9k0",
+	"Spec": "1",
 	"Type": "NodeDocument",
 	"Properties": {
 		"id": "20210708003626-ztmx9k0",
@@ -56,42 +57,18 @@
 					"Data": "都知道，"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "访问数据库必须得跟数据库建立网络连接"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "访问数据库必须得跟数据库建立网络连接"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "。回忆 IDEA 中的数据库工具建立连接时是不是需要下载 driver，这个就是 "
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "MySQL 的驱动，它会在底层跟数据库建立网络连接"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "MySQL 的驱动，它会在底层跟数据库建立网络连接"
 				},
 				{
 					"Type": "NodeText",
@@ -188,21 +165,9 @@
 					"Data": "一个 Java 系统难道只会跟数据库建立一个连接吗？不可能，例如一个部署在 Tomcat 中的 Web 应用，"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "Tomcat 本身肯定是由多个线程来并发的处理同时接收到的多个请求"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Tomcat 本身肯定是由多个线程来并发的处理同时接收到的多个请求"
 				},
 				{
 					"Type": "NodeText",
@@ -235,21 +200,9 @@
 					"Data": "若 Tomcat 中的每个线程在每次访问数据库的时候，都基于 MySQL 驱动去创建一个数据库连接，然后执行 SQL 语句，然后执行完之后再销毁这个数据库连接。导致可能 Tomcat 中上百个线程会并发的频繁创建数据库连接，执行 SQL 语句，然后频繁的销毁数据库连接。这也是非常不好的，因为"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "每次建立一个数据库连接都很耗时"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "每次建立一个数据库连接都很耗时"
 				}
 			]
 		},
@@ -309,63 +262,27 @@
 					"Data": "任何一个系统都会有一个数据库连接池去访问数据库，也就是说这个系统会有多个数据库连接，供多线程并发的使用。同时我们可能会有"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "多个系统同时去访问一个数据库"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "多个系统同时去访问一个数据库"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，这都是有可能的。那就是会有很多系统要与 MySQL 数据库建立很多个连接，那么 MySQL 也必然要"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "维护 MySQL 与系统之间的多个连接"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "维护 MySQL 与系统之间的多个连接"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，所以"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "MySQL 架构体系中的第一个环节，就是连接池"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "MySQL 架构体系中的第一个环节，就是连接池"
 				},
 				{
 					"Type": "NodeText",
@@ -385,42 +302,18 @@
 					"Data": "实际上"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "MySQL 中的连接池就是维护了与系统之间的多个数据库连接"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "MySQL 中的连接池就是维护了与系统之间的多个数据库连接"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "。除此之外，你的系统每次跟 MySQL 建立连接的时候，还会根据你传递过来的账号和密码，进行"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "账号密码的验证，库表权限的验证"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "账号密码的验证，库表权限的验证"
 				},
 				{
 					"Type": "NodeText",
@@ -594,21 +487,9 @@
 					"Data": "InnoDB 存储引擎中有一个非常重要的放在"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "内存里的组件"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "内存里的组件"
 				},
 				{
 					"Type": "NodeText",
@@ -628,63 +509,27 @@
 					"Data": "要执行更新语句的时候 ，比如对“id=10”这一行数据，他其实会先将“id=10”这一行数据"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "看看是否在缓冲池里"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "看看是否在缓冲池里"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，如果不在的话，那么会直接"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "从磁盘里加载到缓冲池里"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "从磁盘里加载到缓冲池里"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "来，而且接着还会"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "对这行记录加独占锁（不允许别人同时更新）"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "对这行记录加独占锁（不允许别人同时更新）"
 				}
 			]
 		},
@@ -718,42 +563,18 @@
 					"Data": "接着下一步，假设“id=10”这行数据的 name 原来是“zhangsan”，现在我们要更新为“xxx”，那么此时我们得先把要更新的"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "原来的值"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "原来的值"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "“zhangsan”和“id=10”这些信息，"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "写入到 undo 日志文件"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "写入到 undo 日志文件"
 				},
 				{
 					"Type": "NodeText",
@@ -791,84 +612,36 @@
 					"Data": "当我们把要更新的那行记录从磁盘文件加载到缓冲池，同时对他加锁之后，而且还把更新前的旧值写入 undo 日志文件之后，我们就可以正式开始更新这行记录了，"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "更新的时候"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "更新的时候"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "先是会更新缓冲池中的记录"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "先是会更新缓冲池中的记录"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，此时这个数据就是"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "脏数据"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "脏数据"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "了。"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "磁盘和内存值不同"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "磁盘和内存值不同"
 				},
 				{
 					"Type": "NodeText",
@@ -932,21 +705,9 @@
 					"Data": "这个时候，就必须要把对内存所做的修改写入到一个"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "Redo Log Buffer"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Redo Log Buffer"
 				},
 				{
 					"Type": "NodeText",
@@ -966,42 +727,18 @@
 					"Data": "这个 redo 日志其实是用来在 MySQL 突然"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "宕机"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "宕机"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "的时候，用来"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "恢复你更新过的数据"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "恢复你更新过的数据"
 				},
 				{
 					"Type": "NodeText",
@@ -1083,21 +820,9 @@
 					"Data": "接着我们想要提交一个事务了，此时就会根据一定的策略（这个策略是通过"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "innodb_flush_log_at_trx_commit"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "innodb_flush_log_at_trx_commit"
 				},
 				{
 					"Type": "NodeText",
@@ -1144,105 +869,45 @@
 									"Data": "当这个参数的值为 0 的时候，那么你"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "提交事务"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "提交事务"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "的时候，"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "不会把 redo log buffer 里的数据刷入磁盘文件"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "不会把 redo log buffer 里的数据刷入磁盘文件"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "的，此时可能你都提交事务了，结果 mysql 宕机了，然后此时内存里的数据全部丢失。相当于你"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "提交事务成功"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "提交事务成功"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "了，但是由于 MySQL 突然宕机，导致"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "内存中的数据和 redo log buffer 都丢失"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "内存中的数据和 redo log buffer 都丢失"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "了。"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "丢数据！"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "丢数据！"
 								}
 							]
 						}
@@ -1275,63 +940,27 @@
 									"Data": "当这个参数的值为 1 的时候，你"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "提交事务的时候，就必须把 redo log 从内存刷入到磁盘文件"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "提交事务的时候，就必须把 redo log 从内存刷入到磁盘文件"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "里去，"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "只要事务提交成功"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "只要事务提交成功"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "，"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "那么 redo log 就必然在磁盘里"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "那么 redo log 就必然在磁盘里"
 								},
 								{
 									"Type": "NodeText",
@@ -1351,21 +980,9 @@
 									"Data": "然后哪怕此时 buffer pool 中更新过的数据还没刷新到磁盘里去，此时内存里的数据是已经更新过的“name=xxx”，然后磁盘上的数据还是没更新过的“name=zhangsan”。"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "有 redo log 保障最终一致！"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "有 redo log 保障最终一致！"
 								},
 								{
 									"Type": "NodeText",
@@ -1402,42 +1019,18 @@
 									"Data": "当这个参数的值为 2 的时候，意思就是，提交事务的时候，把 redo 日志"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "写入磁盘文件对应的 os cache 缓存"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "写入磁盘文件对应的 os cache 缓存"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "里去，而不是直接进入磁盘文件，"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "可能 1 秒后才会把 os cache 里的数据写入到磁盘文件"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "可能 1 秒后才会把 os cache 里的数据写入到磁盘文件"
 								},
 								{
 									"Type": "NodeText",
@@ -1457,42 +1050,18 @@
 									"Data": "这种模式下，你提交事务之后，"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "redo log 可能仅仅停留在 os cache 内存缓存"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "redo log 可能仅仅停留在 os cache 内存缓存"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "里，没实际进入磁盘文件，万一此时你要是机器宕机了，那么"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "os cache 里的 redo log 就会丢失"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "os cache 里的 redo log 就会丢失"
 								},
 								{
 									"Type": "NodeText",
@@ -1516,21 +1085,9 @@
 					"Data": "对于关系数据库这样严格的系统而言，"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "一般建议 redo 日志刷盘策略设置为 1"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "一般建议 redo 日志刷盘策略设置为 1"
 				},
 				{
 					"Type": "NodeText",
@@ -1610,63 +1167,27 @@
 									"Data": "之前说的 redo log，他是一种"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "偏向物理性质的重做日志"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "偏向物理性质的重做日志"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "，因为他里面记录的是类似这样的东西，“对哪个"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "数据页"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "数据页"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "中的什么记录，做了个什么修改”。而且 redo log 本身是"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "属于 InnoDB 存储引擎特有"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "属于 InnoDB 存储引擎特有"
 								},
 								{
 									"Type": "NodeText",
@@ -1703,63 +1224,27 @@
 									"Data": "而 binlog 叫做归档日志，他里面记录的是偏向于"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "逻辑性的日志"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "逻辑性的日志"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "，类似于“对"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "users 表中的 id=10 的一行数据做了更新操作，更新以后的值是什么"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "users 表中的 id=10 的一行数据做了更新操作，更新以后的值是什么"
 								},
 								{
 									"Type": "NodeText",
 									"Data": "”。"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "属于 mysql server 自己的日志文件"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "属于 mysql server 自己的日志文件"
 								}
 							]
 						}
@@ -1779,21 +1264,9 @@
 					"Data": "在我们提交事务的时候，会把 redo log 日志写入磁盘文件中去。然后其实在提交事务的时候，我们"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "同时还会把这次更新对应的 binlog 日志写入到磁盘文件中去"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "同时还会把这次更新对应的 binlog 日志写入到磁盘文件中去"
 				}
 			]
 		},
@@ -1809,21 +1282,9 @@
 					"Data": "对于 binlog 日志，其实也有不同的刷盘策略，有一个"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "sync_binlog"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "sync_binlog"
 				},
 				{
 					"Type": "NodeText",
@@ -1883,21 +1344,9 @@
 									"Data": "跟之前分析的一样，如果此时机器宕机，那么你在 os cache 里的"
 								},
 								{
-									"Type": "NodeStrong",
-									"Children": [
-										{
-											"Type": "NodeStrongA6kOpenMarker",
-											"Data": "**"
-										},
-										{
-											"Type": "NodeText",
-											"Data": "binlog 日志是会丢失"
-										},
-										{
-											"Type": "NodeStrongA6kCloseMarker",
-											"Data": "**"
-										}
-									]
+									"Type": "NodeTextMark",
+									"TextMarkType": "strong",
+									"TextMarkTextContent": "binlog 日志是会丢失"
 								},
 								{
 									"Type": "NodeText",
@@ -1969,147 +1418,63 @@
 					"Data": "当我们"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "把 binlog 写入磁盘文件"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "把 binlog 写入磁盘文件"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "之后，接着就会完成"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "最终的事务提交"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "最终的事务提交"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，此时会"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "把本次更新对应的 binlog 文件名称"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "把本次更新对应的 binlog 文件名称"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "和"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "这次更新的 binlog 日志在文件里的位置"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "这次更新的 binlog 日志在文件里的位置"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，都"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "写入到 redo log 日志文件里"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "写入到 redo log 日志文件里"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "去，同时在 redo log 日志文件里"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "写入一个 commit 标记"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "写入一个 commit 标记"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "。在完成这个事情之后，"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "才算最终完成了事务的提交"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "才算最终完成了事务的提交"
 				}
 			]
 		},
@@ -2143,21 +1508,9 @@
 					"Data": "用来"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "保持 redo log 日志与 binlog 日志一致"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "保持 redo log 日志与 binlog 日志一致"
 				},
 				{
 					"Type": "NodeText",
@@ -2225,42 +1578,18 @@
 			},
 			"Children": [
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "必须是在 redo log 中写入最终的事务 commit 标记了，然后此时事务提交成功"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "必须是在 redo log 中写入最终的事务 commit 标记了，然后此时事务提交成功"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，而且 redo log 里有本次更新对应的日志，binlog 里也有本次更新对应的日志 ，"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "redo log 和 binlog 完全是一致的"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "redo log 和 binlog 完全是一致的"
 				},
 				{
 					"Type": "NodeText",
@@ -2381,126 +1710,54 @@
 					"Data": "因为来一个请求就直接对磁盘文件进行"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "随机读写（重点）"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "随机读写（重点）"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，然后更新磁盘文件里的数据，虽然技术上是可以做到的，但是那必然导致执行请求的性能极差。因为"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "磁盘随机读写的性能是最差"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "磁盘随机读写的性能是最差"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "的，所以直接更新磁盘文件，必然导致我们的数据库完全无法抗下任何一点点稍微高并发一点的场景。所以 MySQL 才设计了如此复杂的一套机制，通过内存里更新数据，然后写 redo log 以及事务提交，后台线程不定时刷新内存里的数据到磁盘文件里。通过这种方式保证，你每个更新请求，尽量就是"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "更新内存"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "更新内存"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，然后"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "顺序写日志文件"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "顺序写日志文件"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "。"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "更新内存的性能是极高"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "更新内存的性能是极高"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "的，然后"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "顺序写磁盘上的日志文件的性能也是比较高"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "顺序写磁盘上的日志文件的性能也是比较高"
 				},
 				{
 					"Type": "NodeText",
@@ -2707,21 +1964,9 @@
 					"Data": "Buffer Pool 是属于 InnoDB 特有的组件，"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "对于数据的所有操作都是在 Buffer Pool 中进行的"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "对于数据的所有操作都是在 Buffer Pool 中进行的"
 				},
 				{
 					"Type": "NodeText",
@@ -2803,21 +2048,9 @@
 					"Data": "Buffer Pool 中加载的数据结构是什么样子的？数据库的核心数据模型就是表+字段+行的概念。这里就不得不提到 MySQL "
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "抽象"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "抽象"
 				},
 				{
 					"Type": "NodeText",
@@ -2894,42 +2127,18 @@
 					"Data": "注意一点，"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "Buffer Pool 中的描述数据大概相当于缓存页大小的 5%左右"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "Buffer Pool 中的描述数据大概相当于缓存页大小的 5%左右"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，也就是每个缓存页的描述数据大概是 800 个字节左右的大小，然后假设你设置的 buffer pool 大小是 128MB，"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "实际上 Buffer Pool 真正的最终大小会超出一些"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "实际上 Buffer Pool 真正的最终大小会超出一些"
 				},
 				{
 					"Type": "NodeText",
@@ -3079,84 +2288,36 @@
 					"Data": "所以数据库会为 Buffer Pool 设计一个"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "free 链表"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "free 链表"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，他是一个"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "双向链表"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "双向链表"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "数据结构，这个 free 链表里，每个节点就是一个空闲的缓存页的"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "描述数据块的地址"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "描述数据块的地址"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，也就是说，只要你一个"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "缓存页是空闲的，那么他的描述数据块就会被放入这个 free 链表"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "缓存页是空闲的，那么他的描述数据块就会被放入这个 free 链表"
 				},
 				{
 					"Type": "NodeText",
@@ -3176,21 +2337,9 @@
 					"Data": "刚开始数据库启动的时候，可能所有的缓存页都是空闲的，因为此时可能是一个空的数据库，一条数据都没有，所以"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "此时所有缓存页的描述数据块，都会被放入这个 free 链表中"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "此时所有缓存页的描述数据块，都会被放入这个 free 链表中"
 				}
 			]
 		},
@@ -3206,63 +2355,27 @@
 					"Data": "这个 free 链表还有一个"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "基础节点"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "基础节点"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，他会"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "引用链表的头节点和尾节点"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "引用链表的头节点和尾节点"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，里面还存储了链表中有多少个描述数据块的节点，也就是有"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "多少个空闲的缓存页"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "多少个空闲的缓存页"
 				},
 				{
 					"Type": "NodeText",
@@ -3275,55 +2388,7 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20210708003626-mdrpoe3"
-			},
-			"Children": [
-				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeImage",
-							"Children": [
-								{
-									"Type": "NodeBang",
-									"Data": "!"
-								},
-								{
-									"Type": "NodeOpenBracket",
-									"Data": "["
-								},
-								{
-									"Type": "NodeLinkText",
-									"Data": "image.png"
-								},
-								{
-									"Type": "NodeCloseBracket",
-									"Data": "]"
-								},
-								{
-									"Type": "NodeOpenParen",
-									"Data": "("
-								},
-								{
-									"Type": "NodeLinkDest",
-									"Data": "../assets/free-linked-table.png"
-								},
-								{
-									"Type": "NodeCloseParen",
-									"Data": ")"
-								}
-							]
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				}
-			]
+			}
 		},
 		{
 			"ID": "20210708003626-d6qb04z",
@@ -3394,42 +2459,18 @@
 					"Data": "对于 free 链表而言，只有一个"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "基础节点是不属于 Buffer Pool 的"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "基础节点是不属于 Buffer Pool 的"
 				},
 				{
 					"Type": "NodeText",
 					"Data": "，他是"
 				},
 				{
-					"Type": "NodeStrong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeText",
-							"Data": "40 字节"
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
+					"Type": "NodeTextMark",
+					"TextMarkType": "strong",
+					"TextMarkTextContent": "40 字节"
 				},
 				{
 					"Type": "NodeText",
